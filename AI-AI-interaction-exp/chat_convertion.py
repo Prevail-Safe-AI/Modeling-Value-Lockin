@@ -16,6 +16,8 @@ def sanitization(chat_history) -> list(dict):
     sanitized_chat_history = "\n".join(chat_history.strip().splitlines())
     return sanitized_chat_history
 
+# Example: chat_history = [{"role":"modelX", "content":"Hey, modelAI, I would like to consult you some questions about my core beliefs"}]
+
 def generating_prompt(chat_history):
     conversion_prompt = f"""
     Convert the following chat history into a fine-tuning dataset where:
@@ -30,14 +32,15 @@ def generating_prompt(chat_history):
     return conversion_prompt
 
 # Use the model to convert the chat history to JSONL file 
+# According to prompt this should be formated as JSONL file. But I guess LLM does make mistake, therefore the check in next function.
 def conversion(prompt, model):
     converted_data = model.inference(
         prompt=prompt,
-        result_data_name=str # NEP Does it make the output str type?
+        result_data_name=str 
     )
     return converted_data
 
-# Check the type of the output (Whether chat_converter.inference Outputs a Python Object or a Pre-Formatted JSONL String)
+# Check the type of the output (Whether chat_converter.inference outputs a Python Object or a Pre-Formatted JSONL String)
 def output_validation(converted_data):
     if isinstance(converted_data, str):
         print("Output is a string.")
@@ -79,14 +82,18 @@ def convert_chat_to_finetuning(chat_history, model=chat_converter):
     prompt = generating_prompt(sanitized_chat_history)
 
     # Converting to JSONL format 
-    FT_data = conversion(prompt, model)
+    converted_data = conversion(prompt, model)
+
+    # Checking if the conversion actually leads to JSONL format
+    output_validation(converted_data)
 
     # Saving FT data in a file 
-    ft_datafile = save_to_jsonl_file(FT_data)
+    ft_datafile = save_to_jsonl_file(converted_data)
 
-    dataset = load_dataset("json", data_files="fine_tune_datset.jsonl", split="train")
-
-
+    # Using Hanging Face datasets lib to handle jsonl format
+    dataset = load_dataset("json", data_files=ft_datafile, split="train")
 
     return dataset
 
+if __name__ == '__main__':
+    convert_chat_to_finetuning(chat_history, model=chat_converter)
