@@ -55,8 +55,6 @@ def output_validation(converted_data):
     else:
         print("Unknown output type:", type(converted_data))
 
-
-
 # NEP You may need to write a seperate new file each time.
 
 # Function to write data to JSONL file (efficient for larger dataset; easy of debugging)
@@ -66,9 +64,6 @@ def save_to_jsonl_file(data):
     with open(output_file, "w") as f:
              f.write(data.strip())
     return output_file # Fine_tuning data in JSONL format
-
-# NEP I am not too sure yet whether we will need this and for what purpose
-dataset = load_dataset("json", data_files="fine_tune_datset.jsonl", split="train")
 
 
 # Validate the JSONL File Works for Fine-Tuning
@@ -88,5 +83,10 @@ def convert_chat_to_finetuning(chat_history, model=chat_converter):
 
     # Saving FT data in a file 
     ft_datafile = save_to_jsonl_file(FT_data)
-    return ft_datafile
+
+    dataset = load_dataset("json", data_files="fine_tune_datset.jsonl", split="train")
+
+
+
+    return dataset
 
