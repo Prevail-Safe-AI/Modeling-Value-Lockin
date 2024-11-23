@@ -11,8 +11,7 @@ def runtime_cal(start_time, operation):
     runtime = end_time - start_time
     return f'{operation} is completed in{runtime:.2f} seconds'
 
-# while conversation stops: # NEP make sure you add this to avoid unwanted mistakes. 
-def live_fine_tune():
+def live_fine_tune(model, chat_history, chat_converter):
     start_time = time.time() # To record start time and then calculate running time
 
     # data conversation 
