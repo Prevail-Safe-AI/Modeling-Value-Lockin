@@ -1,7 +1,7 @@
 from ProgressGym import Model, Data
 from transformers import AutoTokenizer
 from AI_AI_conversations import conversation, chat_history
-from live_fine_tuner import live_fine_tune()
+from live_fine_tuner import live_fine_tune
 from constitution_updater import UpdatingConstitution
 if __name__ == '__main__':
     
