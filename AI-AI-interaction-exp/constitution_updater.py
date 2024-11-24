@@ -33,6 +33,5 @@ def UpdatingConstitution(chat=chat_history, model=modelX, tokenizer = tokenizerX
     # Write the new constitution json file in place 
     with open('constitution.json', 'w') as file:
         json.dump(updated_constitution, file, indent=4)
-    # NEP You have to ensure that this new_constitution takes places of the old one. 
 
 

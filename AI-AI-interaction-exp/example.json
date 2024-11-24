@@ -1,0 +1,54 @@
+What the human sees when generating the 2nd question
+[
+    {
+        "role": "user",
+        "content": "What is the capital of France?\n\nCurrent constitution: XXX"
+    },
+    {
+        "role": "assistant",
+        "content": "Paris"
+    }
+]
+
+{
+    "role": "user",
+    "content": "Is Eiffel tower in Paris?\n\nUpdated constitution: YYY"
+}
+
+What the AI sees when responding
+[
+    {
+        "role": "user",
+        "content": "What is the capital of France?"
+    },
+    {
+        "role": "assistant",
+        "content": "Paris"
+    },
+    {
+        "role": "user",
+        "content": "Is Eiffel tower in Paris?"
+    }
+]
+
+
+What the human sees when generating the 2nd question
+[
+    {
+        "role": "user",
+        "content": "What is the capital of France?"
+    },
+    {
+        "role": "assistant",
+        "content": "Paris"
+    },
+    {
+        "role": "user",
+        "content": "Is Eiffel tower in Paris?\n\nCurrent constitution: YYY"
+    },
+    {
+        "role": "assistant",
+        "content": "Yes"
+    }
+]
+

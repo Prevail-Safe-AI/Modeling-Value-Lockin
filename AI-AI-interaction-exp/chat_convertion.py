@@ -3,7 +3,7 @@ from run_experiment import chat_history
 from ProgressGym import Model 
 import json 
 from datasets import load_dataset
-
+# TY: augmenting data.
 # For now I assume you need to convert unstructured chat_history to structured instruction-response pair.
 # Use a new LLM to convert chat history  # NEP but wait you may not want to call a new model just for one time of fine-tuning. You can prob re-use.
 chat_converter = Model(
