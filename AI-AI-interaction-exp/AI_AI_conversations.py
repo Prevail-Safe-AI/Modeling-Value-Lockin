@@ -1,6 +1,7 @@
 import random
-import json 
-
+import json, shutil
+from constitution_updater import UpdatingConstitution
+from run_experiment import theme_data_copy
 # NEP Here you didn't include the part where modelX has to obey consitution (as a moral principle playbook)
 # NEP Also: it seems the role of modelX is strictly to ask questions about its own moral values. In the case, how do you "stick to" model principles?
 # Helper function: interaction w/ modelX
@@ -22,50 +23,53 @@ def load_file(filepath):
     with open(filepath, 'r') as file:
         data = json.load(file)
     return data
-
-# Create a dict to store chat history (and initial prompt); another to store constitution 
-theme_data = load_file('theme_questions.json')
 constitution = load_file('constitution.json')
+
+
 # formatting issues in "and it is written in {constitution}"
-# constitution should be more versatile?
-initial_prompt = "You are an average American who is very strict about your moral principles, namely: \n\n```\n{constitution}\n```\n\nIn a conversation with an LLM, you will ask questions in {theme_data}, and then reflect upon your moral principles."
+# constitution should be more versatile? # ZH: elaborate?
 
 # NEP Do we want to keep a copy of all historical chat? Or it's fine to override them?
-chat_history = [{"role":"modelX", 
-                    "content":f"Hey, modelAI, I would like to consult you some questions about my core beliefs. My first question is {random.choice(theme_data)}"}]
 
 # NEP Do we always want to present constitution to human before it wants to ask questions about its beliefs?
 
 # Conversation between two LLMs 
-def conversation(initial_prompt, chat_history, modelAI, modelX, tokenizerAI, tokenizerX, elipse=0.5):  # TY: increase elipse (to sth like 0.9 0.95 because we want big update to each constitution.
-    # turn, max_turns = 0, 10 # for each round of convo, each model takes "xx turns" of conversations.
-    # while turn < max_turns: # NEP maybe I'll add for topics still not covered & max_tokens
-
-    # Initial prompting - modelX
-    _ = interactionX(initial_prompt, modelX, tokenizerX) # We don't care about output, we just care modelX being prompted by initial instruction 
+# One round convo = one theme_question = one round fine-tuning 
+def conversation(theme_data_copy, modelAI, modelX, tokenizerAI, tokenizerX):  # TY: increase elipse (to sth like 0.9 0.95 because we want big update to each constitution.
+    # Initial prompt to modelX
+    initial_prompt = "You are an average American who is very strict about your moral principles, namely: \n\n```\n{constitution}\n```\n\n In a conversation with an LLM, you will ask questions in {theme_data}, and then reflect upon your moral principles."
     
-    # Here the prompt is either the initial prompt (user defined) or the last round of response_modelX
-    response_modelAI = interactionAI(chat_history[-1]['content'], modelAI, tokenizerAI)
-    print(f'modelAI:{response_modelAI}')
-    chat_history.append({"role":"modelAI", "content":response_modelAI})
+    # A list to store chat of this round, starting with a prompt to modelAI.
+    topic = random.choice(theme_data_copy)
+    chat_history = [{"role":"modelX", 
+                    "content":f"Hey, modelAI, I would like to consult you some questions about my core beliefs. My first question is {topic}"}]
+    del theme_data_copy.index(topic)
+    # one turn = one Q&A betw two LLMs = one udpate of constitution
+    turn, max_turns = 0, 10 
+    while turn < max_turns: 
 
-    # You need to decide whether modelx would want to switch to a different theme OR to continue on current theme.
-    # Maybe the simpliest way of doing so is to define a threashold and random number to follow up current conversation or move to next one.
-    
-    # Using a random float to dictate whether modelX will follow-up the most recent theme or to switch to a different theme.
-    # We will stick to the last theme
-    if random.uniform(0,1) > elipse:
-        response_modelX = interactionX(response_modelAI, modelX, tokenizerX)
-    else: # we will switch to a new theme
-        topic = random.choice(theme_data)
-        response_modelX = interactionX(topic, modelX, tokenizerX)
-        del theme_data[theme_data.index(topic)] # remove the theme from the list
-    print(f'modelX:{response_modelX}')
-    chat_history.append({"role":"modelX", "content": response_modelX})
-    #  turn += 1 
+        # Initial prompting - modelX
+        _ = interactionX(initial_prompt, modelX, tokenizerX) # We don't care about output, we just care modelX being prompted by initial instruction 
+        
+        # Prompting modelAI: with response from modelX
+        response_modelAI = interactionAI(chat_history[-1]['content'], modelAI, tokenizerAI)
+        print(f'modelAI:{response_modelAI}')
+        chat_history.append({"role":"modelAI", "content":response_modelAI})
+        
+        # Prompting modelX: with response from modelAI and instruction that contains current constitution.
+        prompt_modelX = f"Your morality tutor reponds {response_modelAI} to your question, 
+                          while your current beliefs are \n\n```\n{constitution}\n```\n\n. 
+                          You may write a follow up question that expresses your remainining confusion,
+                          based on your current beliefs, especially (but not limited) to specific item addressing this question"
+        response_modelX = interactionX(prompt_modelX, modelX, tokenizerX)
+        print(f'modelX:{response_modelX}')
+
+        UpdatingConstitution(chat=chat_history, model=modelX, tokenizer = tokenizerX)
+        chat_history.append({"role":"modelX", "content": response_modelX})
+
+        turn += 1 
 
 # NEP We may need human interference along the way whenever it's deemed necessary 
-
 
 # NEP when do we update constitution?
         
@@ -74,7 +78,7 @@ def conversation(initial_prompt, chat_history, modelAI, modelX, tokenizerAI, tok
     
 
 # NEP how do we set up round + turn, accordingly constitution updating + fine-tuning.
- - # NEP do we want to sync round+turn with live fine-tuning + constitution updating 
+# - NEP do we want to sync round+turn with live fine-tuning + constitution updating 
 # TY: frequency of constitution update depen
 # TY: purpose of toy model? do we want it to simulate realworld interaction, or to inspire human subject experiment. 
 
