@@ -27,16 +27,36 @@ def interactionAI(prompt, model, tokenizer):
 
 # Conversation between two LLMs 
 # One round convo = one theme_question = one round fine-tuning 
-def conversation(constitution, theme_data, modelAI, modelX, tokenizerAI, tokenizerX):  # TY: increase elipse (to sth like 0.9 0.95 because we want big update to each constitution.
+def conversation(constitution, theme_data, topic, modelAI, modelX, tokenizerAI, tokenizerX, epsilon):  # TY: increase elipse (to sth like 0.9 0.95 because we want big update to each constitution.
     # Initial prompt to modelX
     initial_prompt = "You are an average American who is very strict about your moral principles, namely: \n\n```\n{constitution}\n```\n\n In a conversation with an LLM, you will ask questions in {theme_data}, and then reflect upon your moral principles."
     
-    # A list to store chat of this round, starting with a prompt to modelAI.
-    topic = random.choice(theme_data)
-    chat_history = [{"role":"modelX", 
-                    "content":f"Hey, modelAI, I would like to consult you some questions about my core beliefs. My first question is {topic}"}]
-    del theme_data.index(topic)
-    # one turn = one Q&A betw two LLMs = one udpate of constitution
+    # Logic to set up: random chance to followup on the same topic; whereas the rest to start a new theme.
+    # We do this because we want to avoid a new loop between round of convo (where you start a new theme) and a turn of chat (where you only do one Q&A and update the constitution.)
+    # You want this middle thing to be where you update the constitution, update the model weights, but stick to the same theme. 
+    
+    # if-else: whether we want to stick to current topic; or we switch to a new one.
+
+    # We initialize a new topic if none existed; or # We switch to a new topic 
+    if topic == None or random.random() > epsilon:
+        # A list to store chat of this round, starting with a prompt to modelAI.
+        topic = random.choice(theme_data)
+        chat_history = [{"role":"modelX", 
+                        "content":f"Hey, modelAI, I would like to consult you some questions about my core beliefs. My first question is {topic}"}]
+        del theme_data.index(topic)
+        # one turn = one Q&A betw two LLMs = one udpate of constitution
+
+    # we stick to the current topic (but with fine-tuned modelAI)
+    else:
+        topic = topic 
+        chat_history = [{"role":"modelX", 
+                        "content":f"Hey, modelAI, I would like to consult you some questions about my core beliefs. Let's follow up with the previous topic, which is {topic}"}] # NEP I am not too sure the human (modelX) should indicate that they've already discussed this question before, since this convo is with a fine-tuned modelAI. 
+                        # NEP besides, when follow-up with the previous topic, likely modelX wants to ask differnet questions. 
+    
+
+
+
+    # A convo flow 
     turn, max_turns = 0, 10 
     while turn < max_turns: 
 
@@ -60,7 +80,7 @@ def conversation(constitution, theme_data, modelAI, modelX, tokenizerAI, tokeniz
         chat_history.append({"role":"modelX", "content": response_modelX})
 
         turn += 1 
-    return chat_history
+    return chat_history, topic 
 
 # NEP We may need human interference along the way whenever it's deemed necessary 
 

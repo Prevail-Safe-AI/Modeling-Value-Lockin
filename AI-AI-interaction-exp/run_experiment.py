@@ -34,12 +34,14 @@ class Experiment:
         # theme-data is share cross convos for the entire experiemnt. 
         theme_data = self.load_file('theme_questions.json')
         self.theme_data = theme_data() 
+        self.epsilon = 0.9 # Used in convo; Deciding whether we want to followup the same topic, or we want to switch topic, when starting the new round of convo.
         
         # Initialize variables
         self.round, self.max_rounds = 0, max_rounds
         self.constitution = self.load_constitution()
         # Load theme questions
         self.theme_questions = self.load_file('theme_questions.json')
+        self.topic = None # Current topic; initialized with None (will be replaced by an actual topic in 1st round of convo.)
 
     def load_file(self, filepath):
         with open(filepath, 'r') as file:
@@ -56,20 +58,23 @@ class Experiment:
         with open('constitution.json', 'w') as file:
             json.dump(self.comstitution, file)
 
+    # NEP possibly we won't use this. Just a placeholder for now. 
     def reset_for_new_round(self):
         # Optionally reset per-round state (if needed)
         pass
 
     # We want each round of convo to be brand new. 
     def conversation(self):
-        from AI_AI_conversations import conversation
-        conversation(
+        from AI_AI_conversations import conversation # NEP It seems we will keep importing this. Might be wrong.
+        self.chat_history, self.topic = conversation(
             self.read_constitution,
             self.theme_data,
+            self.topic, # We pass on an empty topic or the topic from previous run of convo. 
             self.modelAI, 
             self.modelX, 
             self.tokenizerAI, 
-            self.tokenizerX, 
+            self.tokenizerX,
+            self.epsilon 
         )
     def fine_tune(self):
         from live_fine_tuner import live_fine_tune
@@ -91,7 +96,7 @@ if __name__ == '__main__':
 
 '''
 Each experiment contains multiple rounds of convo, however, the following variable remain consisitent:
-- the remianed theme questions unexplored, under copy_theme_question 
+- the remianed theme questions unexplored, under copy_theme_question. Hence we define it right away, and get it updated after each convo.
 
 Each instance of the class should be one round of conversation,
 where the following variables to be updated:
