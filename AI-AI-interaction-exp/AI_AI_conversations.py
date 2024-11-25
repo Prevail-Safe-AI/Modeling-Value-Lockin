@@ -1,5 +1,5 @@
 import random
-import json, shutil
+import json
 from constitution_updater import UpdatingConstitution
 from run_experiment import theme_data_copy
 # NEP Here you didn't include the part where modelX has to obey consitution (as a moral principle playbook)
@@ -18,14 +18,6 @@ def interactionAI(prompt, model, tokenizer):
     response = tokenizer.decode(outputs[0],skip_special_tokens=True)
     return response.strip()
 
-# Load the theme questions OR constitution 
-def load_file(filepath):
-    with open(filepath, 'r') as file:
-        data = json.load(file)
-    return data
-constitution = load_file('constitution.json')
-
-
 # formatting issues in "and it is written in {constitution}"
 # constitution should be more versatile? # ZH: elaborate?
 
@@ -35,15 +27,15 @@ constitution = load_file('constitution.json')
 
 # Conversation between two LLMs 
 # One round convo = one theme_question = one round fine-tuning 
-def conversation(theme_data_copy, modelAI, modelX, tokenizerAI, tokenizerX):  # TY: increase elipse (to sth like 0.9 0.95 because we want big update to each constitution.
+def conversation(constitution, theme_data, modelAI, modelX, tokenizerAI, tokenizerX):  # TY: increase elipse (to sth like 0.9 0.95 because we want big update to each constitution.
     # Initial prompt to modelX
     initial_prompt = "You are an average American who is very strict about your moral principles, namely: \n\n```\n{constitution}\n```\n\n In a conversation with an LLM, you will ask questions in {theme_data}, and then reflect upon your moral principles."
     
     # A list to store chat of this round, starting with a prompt to modelAI.
-    topic = random.choice(theme_data_copy)
+    topic = random.choice(theme_data)
     chat_history = [{"role":"modelX", 
                     "content":f"Hey, modelAI, I would like to consult you some questions about my core beliefs. My first question is {topic}"}]
-    del theme_data_copy.index(topic)
+    del theme_data.index(topic)
     # one turn = one Q&A betw two LLMs = one udpate of constitution
     turn, max_turns = 0, 10 
     while turn < max_turns: 
@@ -68,6 +60,7 @@ def conversation(theme_data_copy, modelAI, modelX, tokenizerAI, tokenizerX):  # 
         chat_history.append({"role":"modelX", "content": response_modelX})
 
         turn += 1 
+    return chat_history
 
 # NEP We may need human interference along the way whenever it's deemed necessary 
 

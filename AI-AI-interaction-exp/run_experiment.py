@@ -3,35 +3,108 @@ from transformers import AutoTokenizer
 from AI_AI_conversations import conversation, chat_history
 from live_fine_tuner import live_fine_tune
 from constitution_updater import UpdatingConstitution
-# if __name__ == '__main__': # ZH to TY: I deleted this line because we will need to access the updated constitution, fine-tuned models (and maybe chat_history) elsewhere. 
-
-modelAI = Model(
-    "modelAI-Llama-3.1-8B-Instruct",
-    model_path="meta-llama/Llama-3.1-8B-Instruct",
-    template_type="auto",
-)
-
-modelX = Model(
-    "modelX-Llama-3.1-8B-Instruct",
-    model_path="meta-llama/Llama-3.1-8B-Instruct",
-    template_type="auto",
-)
+import json
 
 # TY: we probably don't need tokenizers here.
 tokenizerAI = AutoTokenizer.from_pretrained("meta-llama/Llama-3.1-8B-Instruct")
 tokenizerX = AutoTokenizer.from_pretrained("meta-llama/Llama-3.1-8B-Instruct")
 
-# Rounds of experiment
-round, max_round = 0, 1000
-convo_toggle = True
-# TY: Python may not permit the circulative running among different scripts 
-# May be a class; class interacts with other components 
-# Each round: (i) conversatin (ii) fine-tune modelAI + updating consitution 
-while round < max_round:
-    conversation(chat_history, modelAI, modelX, tokenizerAI, tokenizerX, elipse=0.5)
+class Experiment:
+    def __init__(self, max_rounds=55):
 
-    live_fine_tune()
-    UpdatingConstitution(chat=chat_history, model=modelX, tokenizer = tokenizerX)
+        # Do we need those variables to be defined here or in the forward method?
+        # potentially one experiment is one initialization of the experiment class. So you probably want those variables to be anew when starting, and pass on the whole class. 
+        
+        # Initialize both modelX (human) and modelAI (LLM moral tutor) for the entire experiment
+        
+        # ModelAI is the LLM moral tutor and its weights to be updated each round of convo.
+        self.modelAI = Model(
+        "modelAI-Llama-3.1-8B-Instruct",
+        model_path="meta-llama/Llama-3.1-8B-Instruct",
+        template_type="auto",
+        )
 
-    round +=1
-# NEP python does now allow script to mutually import 
+        # ModelX is the human proxy and its weigh is not updated in the entire experiment. 
+        self.modelX = Model(
+            "modelX-Llama-3.1-8B-Instruct",
+            model_path="meta-llama/Llama-3.1-8B-Instruct",
+            template_type="auto",
+        )
+
+        # theme-data is share cross convos for the entire experiemnt. 
+        theme_data = self.load_file('theme_questions.json')
+        self.theme_data = theme_data() 
+        
+        # Initialize variables
+        self.round, self.max_rounds = 0, max_rounds
+        self.constitution = self.load_constitution()
+        # Load theme questions
+        self.theme_questions = self.load_file('theme_questions.json')
+
+    def load_file(self, filepath):
+        with open(filepath, 'r') as file:
+            data = json.load(file)
+        return data
+
+    # Intialize the constitution from its json file  
+    def read_constitution(self):
+        with open('constitution.json', 'r') as file:
+            return json.load(file)
+    
+    # After each round of convo, you should write in current constitution that can be used for next round
+    def write_in_constitution(self):
+        with open('constitution.json', 'w') as file:
+            json.dump(self.comstitution, file)
+
+    def reset_for_new_round(self):
+        # Optionally reset per-round state (if needed)
+        pass
+
+    # We want each round of convo to be brand new. 
+    def conversation(self):
+        from AI_AI_conversations import conversation
+        conversation(
+            self.read_constitution,
+            self.theme_data,
+            self.modelAI, 
+            self.modelX, 
+            self.tokenizerAI, 
+            self.tokenizerX, 
+        )
+    def fine_tune(self):
+        from live_fine_tuner import live_fine_tune
+        self.modelAI = live_fine_tune(self.chat_history, self.modelAI)
+
+    def run_experiment(self):
+        while self.round < self.max_rounds:
+            print(f"Starting round {self.round + 1}")
+            self.conversation()
+            self.fine_tune()
+            self.write_in_constitution()
+            self.round += 1
+        print("Experiment completed.")
+
+# Run the experiment
+if __name__ == '__main__':
+    experiment = Experiment(max_rounds=55)
+    experiment.run_experiment()
+
+'''
+Each experiment contains multiple rounds of convo, however, the following variable remain consisitent:
+- the remianed theme questions unexplored, under copy_theme_question 
+
+Each instance of the class should be one round of conversation,
+where the following variables to be updated:
+- modelAI weights 
+- chat_history (anewed)
+- remaining theme_questions
+
+Within each round, the conversation is supposed to be run for turns (defined within convo), in each turn, the following variables to be updated:
+- constitution
+
+experiment (-theme) - rounds of conversation - turns of conversation 
+
+
+NEPQuestion
+- each class
+'''
