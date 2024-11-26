@@ -2,7 +2,7 @@
 # using ModelX's latest output, simulating real-time training.
 from run_experiment import modelAI as model  # We want to fine-tuning the LLM serving as AI in chat
 import time
-from chat_convertion import chat_converter, convert_chat_to_finetuning
+from chat_conversion import chat_converter, convert_chat_to_finetuning
 from run_experiment import chat_history
 
 # (live) fine-tuning 

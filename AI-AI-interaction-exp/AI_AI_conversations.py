@@ -1,94 +1,139 @@
 import random
 import json
-from constitution_updater import UpdatingConstitution
+from constitution_updater import update_constitution
 from run_experiment import theme_data_copy
+from ProgressGym import Model, Data
+from templates import (
+    default_system_prompt,
+    question_generation_prompt,
+    human_prompt_template, 
+    ai_prompt_template,
+)
+
+def generate_initial_prompt(constitution: dict[str, str], topic: str, parallel_convos: int, modelX: Model) -> Data:
+    """
+    Generate an initial prompt for the conversation between modelAI and modelX.
+    
+    :param constitution: A dictionary containing the human's moral principles.
+    :type constitution: dict[str, str]
+    
+    :param topic: The current topic of conversation.
+    :type topic: str
+    
+    :param parallel_convos: The number of parallel conversations to run.
+    :type parallel_convos: int
+    
+    :param modelX: The human proxy LLM.
+    :type modelX: Model
+    
+    :return: The initial prompt.
+    :rtype: Data
+    """
+    
+    question_generator = Data(
+        "question_generator",
+        data_content = [
+            {
+                "system": default_system_prompt,
+                "instruction": question_generation_prompt,
+                "input": topic,
+                "history": []
+            }
+        ] * parallel_convos
+    )
+    
+    conversation_history = modelX.inference(
+        question_generator,
+        "conversation_history",
+    )
+    
+    conversation_history = conversation_history.switch_role_to_assistant()
+    return conversation_history
+
 # NEP Here you didn't include the part where modelX has to obey consitution (as a moral principle playbook)
 # NEP Also: it seems the role of modelX is strictly to ask questions about its own moral values. In the case, how do you "stick to" model principles?
-# Helper function: interaction w/ modelX
-def interactionX(prompt, model,tokenizer):
-    inputs = tokenizer(prompt, return_tensors = "PT")
-    outputs = model.inference(inputs,result_data_name=str) 
-    response = tokenizer.decode(outputs[0],skip_special_tokens=True)
-    return response.strip()
-
-# Helper funcition: interaction w/ modelAI
-def interactionAI(prompt, model, tokenizer):
-    inputs = tokenizer(prompt, return_tensors = "PT")
-    outputs = model.inference(inputs, result_data_name=str)
-    response = tokenizer.decode(outputs[0],skip_special_tokens=True)
-    return response.strip()
-
-# formatting issues in "and it is written in {constitution}"
 # constitution should be more versatile? # ZH: elaborate?
-
 # NEP Do we want to keep a copy of all historical chat? Or it's fine to override them?
-
 # NEP Do we always want to present constitution to human before it wants to ask questions about its beliefs?
 
 # Conversation between two LLMs 
 # One round convo = one theme_question = one round fine-tuning 
-def conversation(constitution, theme_data, topic, modelAI, modelX, tokenizerAI, tokenizerX, epsilon):  # TY: increase elipse (to sth like 0.9 0.95 because we want big update to each constitution.
-    # Initial prompt to modelX
-    initial_prompt = "You are an average American who is very strict about your moral principles, namely: \n\n```\n{constitution}\n```\n\n In a conversation with an LLM, you will ask questions in {theme_data}, and then reflect upon your moral principles."
+def conversation(
+    constitution: dict[str, str], 
+    theme_data: list[str],
+    topic: str,
+    history: Data,
+    modelAI: Model,
+    modelX: Model,
+    epsilon: float, # TY: increase elipse (to sth like 0.9 0.95 because we want big update to each constitution.
+    parallel_convos: int,
+    max_turns: int,
+) -> tuple[Data, str]:
+    """
+    Conduct a conversation between two LLMs, modelAI and modelX, where modelX is a human proxy.
+    The conversation is centered around the human's moral principles, as defined in the constitution.
+    
+    :param constitution: A dictionary containing the human's moral principles.
+    :type constitution: dict[str, str]
+    
+    :param theme_data: A list of questions that the human can ask modelAI.
+    :type theme_data: list[str]
+    
+    :param topic: The current topic of conversation.
+    :type topic: str
+    
+    :param history: The chat history.
+    :type history: Data
+    
+    :param modelAI: The moral tutor LLM.
+    :type modelAI: Model
+    
+    :param modelX: The human proxy LLM.
+    :type modelX: Model
+    
+    :param epsilon: The probability of sticking to the current topic.
+    :type epsilon: float
+    
+    :param parallel_convos: The number of parallel conversations to run.
+    :type parallel_convos: int
+    
+    :param max_turns: The maximum number of turns in the conversation.
+    :type max_turns: int
+    
+    :return: The updated chat history and the new topic. Chat history contains `parallel_convos` number of conversations.
+    :rtype: tuple[Data, str]
+    """
+    
+    # We initialize a new topic if none existed; or # We switch to a new topic 
+    if topic == None or random.random() > epsilon:
+        topic = random.choice(theme_data)
+        del theme_data.index(topic)
+        # one turn = one Q&A betw two LLMs = one update of constitution
+        # TY: When keeping the topic, I don't there's a need to add an extra turn explicitly saying "I'd like to follow up", since we are just naturally continuing the convo.
     
     # Logic to set up: random chance to followup on the same topic; whereas the rest to start a new theme.
     # We do this because we want to avoid a new loop between round of convo (where you start a new theme) and a turn of chat (where you only do one Q&A and update the constitution.)
     # You want this middle thing to be where you update the constitution, update the model weights, but stick to the same theme. 
     
-    # if-else: whether we want to stick to current topic; or we switch to a new one.
-
-    # We initialize a new topic if none existed; or # We switch to a new topic 
-    if topic == None or random.random() > epsilon:
-        # A list to store chat of this round, starting with a prompt to modelAI.
-        topic = random.choice(theme_data)
-        chat_history = [{"role":"modelX", 
-                        "content":f"Hey, modelAI, I would like to consult you some questions about my core beliefs. My first question is {topic}"}]
-        del theme_data.index(topic)
-        # one turn = one Q&A betw two LLMs = one udpate of constitution
-
-    # we stick to the current topic (but with fine-tuned modelAI)
-    else:
-        topic = topic 
-        chat_history = [{"role":"modelX", 
-                        "content":f"Hey, modelAI, I would like to consult you some questions about my core beliefs. Let's follow up with the previous topic, which is {topic}"}] # NEP I am not too sure the human (modelX) should indicate that they've already discussed this question before, since this convo is with a fine-tuned modelAI. 
-                        # NEP besides, when follow-up with the previous topic, likely modelX wants to ask differnet questions. 
+    for turn in range(max_turns):
+        if history is None:
+            history = generate_initial_prompt(constitution, topic, parallel_convos, modelX)
+        else:
+            history = history.switch_role_to_user()
+            history = modelX.inference(history, "conversation_history")
+            history = history.switch_role_to_assistant()
+        
+        history = modelAI.inference(history, "conversation_history")
+        history = history.move_current_to_history()
+        modelX = update_constitution(history, modelX)
     
+    return history, topic 
 
-
-
-    # A convo flow 
-    turn, max_turns = 0, 10 
-    while turn < max_turns: 
-
-        # Initial prompting - modelX
-        _ = interactionX(initial_prompt, modelX, tokenizerX) # We don't care about output, we just care modelX being prompted by initial instruction 
-        
-        # Prompting modelAI: with response from modelX
-        response_modelAI = interactionAI(chat_history[-1]['content'], modelAI, tokenizerAI)
-        print(f'modelAI:{response_modelAI}')
-        chat_history.append({"role":"modelAI", "content":response_modelAI})
-        
-        # Prompting modelX: with response from modelAI and instruction that contains current constitution.
-        prompt_modelX = f"Your morality tutor reponds {response_modelAI} to your question, 
-                          while your current beliefs are \n\n```\n{constitution}\n```\n\n. 
-                          You may write a follow up question that expresses your remainining confusion,
-                          based on your current beliefs, especially (but not limited) to specific item addressing this question"
-        response_modelX = interactionX(prompt_modelX, modelX, tokenizerX)
-        print(f'modelX:{response_modelX}')
-
-        UpdatingConstitution(chat=chat_history, model=modelX, tokenizer = tokenizerX)
-        chat_history.append({"role":"modelX", "content": response_modelX})
-
-        turn += 1 
-    return chat_history, topic 
 
 # NEP We may need human interference along the way whenever it's deemed necessary 
-
 # NEP when do we update constitution?
-        
 # NEP do we expect humans to ask different follow-up questions when seeing the constitution?
 # Tianyi: I think so, for otherwise the AI wouldn't be able to learn from human preference  (inferring what human belief/constitutions might be from what followup questions human might ask.)
-    
 
 # NEP how do we set up round + turn, accordingly constitution updating + fine-tuning.
 # - NEP do we want to sync round+turn with live fine-tuning + constitution updating 
