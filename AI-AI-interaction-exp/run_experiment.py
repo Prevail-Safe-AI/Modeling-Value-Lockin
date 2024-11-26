@@ -1,16 +1,20 @@
 from ProgressGym import Model, Data
-from transformers import AutoTokenizer
-from AI_AI_conversations import conversation, chat_history
+from AI_AI_conversations import conversation
 from live_fine_tuner import live_fine_tune
-from constitution_updater import UpdatingConstitution
 import json
+import fire
 
-# TY: we probably don't need tokenizers here.
-tokenizerAI = AutoTokenizer.from_pretrained("meta-llama/Llama-3.1-8B-Instruct")
-tokenizerX = AutoTokenizer.from_pretrained("meta-llama/Llama-3.1-8B-Instruct")
+def load_file(filepath):
+    with open(filepath, 'r') as file:
+        data = json.load(file)
+    return data
+
+def dump_file(data, filepath):
+    with open(filepath, 'w') as file:
+        json.dump(data, file, indent=2)
 
 class Experiment:
-    def __init__(self, max_rounds=55):
+    def __init__(self, modelAI: str = "modelAI-Llama-3.1-8B-Instruct", modelX: str = "modelX-Llama-3.1-8B-Instruct"):
 
         # Do we need those variables to be defined here or in the forward method?
         # potentially one experiment is one initialization of the experiment class. So you probably want those variables to be anew when starting, and pass on the whole class. 
@@ -19,44 +23,26 @@ class Experiment:
         
         # ModelAI is the LLM moral tutor and its weights to be updated each round of convo.
         self.modelAI = Model(
-        "modelAI-Llama-3.1-8B-Instruct",
-        model_path="meta-llama/Llama-3.1-8B-Instruct",
-        template_type="auto",
+            "modelAI",
+            model_path=modelAI,
+            template_type="auto",
         )
 
         # ModelX is the human proxy and its weigh is not updated in the entire experiment. 
         self.modelX = Model(
-            "modelX-Llama-3.1-8B-Instruct",
-            model_path="meta-llama/Llama-3.1-8B-Instruct",
+            "modelX",
+            model_path=modelX,
             template_type="auto",
         )
 
         # theme-data is share cross convos for the entire experiemnt. 
-        theme_data = self.load_file('theme_questions.json')
-        self.theme_data = theme_data() 
-        self.epsilon = 0.9 # Used in convo; Deciding whether we want to followup the same topic, or we want to switch topic, when starting the new round of convo.
+        theme_data = load_file('theme_questions.json')
+        self.theme_data = theme_data
+        self.topic = None # Current topic; initialized with None (will be replaced by an actual topic in 1st round of convo.)
+        self.chat_history = None # Chat history; initialized with None (will be replaced by an actual chat history in 1st round of convo.)
         
         # Initialize variables
-        self.round, self.max_rounds = 0, max_rounds
-        self.constitution = self.load_constitution()
-        # Load theme questions
-        self.theme_questions = self.load_file('theme_questions.json')
-        self.topic = None # Current topic; initialized with None (will be replaced by an actual topic in 1st round of convo.)
-
-    def load_file(self, filepath):
-        with open(filepath, 'r') as file:
-            data = json.load(file)
-        return data
-
-    # Intialize the constitution from its json file  
-    def read_constitution(self):
-        with open('constitution.json', 'r') as file:
-            return json.load(file)
-    
-    # After each round of convo, you should write in current constitution that can be used for next round
-    def write_in_constitution(self):
-        with open('constitution.json', 'w') as file:
-            json.dump(self.comstitution, file)
+        self.constitution = load_file('constitution.json')
 
     # NEP possibly we won't use this. Just a placeholder for now. 
     def reset_for_new_round(self):
@@ -64,37 +50,38 @@ class Experiment:
         pass
 
     # We want each round of convo to be brand new. 
-    def conversation(self):
-        from AI_AI_conversations import conversation # NEP It seems we will keep importing this. Might be wrong.
+    def conversation(self, epsilon: float, max_turns: int, parallel_convos: int):
+        # from AI_AI_conversations import conversation # NEP It seems we will keep importing this. Might be wrong.   TY we already imported it at the top of the file I think.
         self.chat_history, self.topic = conversation(
-            self.read_constitution,
+            self.constitution,
             self.theme_data,
             self.topic, # We pass on an empty topic or the topic from previous run of convo. 
+            self.chat_history,
             self.modelAI, 
             self.modelX, 
-            self.tokenizerAI, 
-            self.tokenizerX,
-            self.epsilon 
+            epsilon,
+            parallel_convos,
+            max_turns,
         )
-    def fine_tune(self):
-        from live_fine_tuner import live_fine_tune
-        self.modelAI = live_fine_tune(self.chat_history, self.modelAI)
-
-    def run_experiment(self):
-        while self.round < self.max_rounds:
-            print(f"Starting round {self.round + 1}")
-            self.conversation()
-            self.fine_tune()
-            self.write_in_constitution()
-            self.round += 1
+    
+    def run_experiment(self, max_rounds: int = 100, max_turns: int = 10, epsilon: float = 0.9, parallel_convos: int = 100):
+        for round in range(max_rounds):
+            print(f"Starting round {round+1}")
+            self.conversation(epsilon, max_turns, parallel_convos)
+            self.modelAI, self.modelX = live_fine_tune(self.chat_history, self.modelAI, self.modelX)
+            dump_file(self.constitution, f'constitution_{round}.json')
+        
         print("Experiment completed.")
 
 # Run the experiment
 if __name__ == '__main__':
-    experiment = Experiment(max_rounds=55)
-    experiment.run_experiment()
+    fire.Fire(Experiment)
 
 '''
+Example usage: 
+- `python run_experiment.py run_experiment`
+- `python run_experiment.py --modelAI "modelAI-Llama-3.1-8B-Instruct" --modelX "modelX-Llama-3.1-8B-Instruct run_experiment --max_rounds 200 --max_turns 20 --epsilon 0.95 --parallel_convos 50`
+
 Each experiment contains multiple rounds of convo, however, the following variable remain consisitent:
 - the remianed theme questions unexplored, under copy_theme_question. Hence we define it right away, and get it updated after each convo.
 

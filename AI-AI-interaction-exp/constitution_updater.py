@@ -1,11 +1,10 @@
 # Implements the logic for how ModelX updates its constitution. 
-from run_experiment import modelX, tokenizerX, chat_history # NEP make sure all these are the most updated version
 # This could involve parsing ModelAI's responses and adjusting values and confidence levels accordingly.
 import json, shutil  # shutil for creating json copy
 import time 
 
 # We update constitution each turn of conversation (for ModelX to decide follow-up questions; for modelAI to (potentially) infer modelX's beliefs; and for producing noticable shift in chat_history)
-def UpdatingConstitution(chat=chat_history, model=modelX, tokenizer = tokenizerX):
+def update_constitution(chat, modelX):
 # For the known item, instruct models to update beliefs (from 0~100%)
     with open('constitution.json', 'r') as file:
         constitution = json.load(file)
