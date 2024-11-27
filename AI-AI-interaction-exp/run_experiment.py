@@ -2,7 +2,7 @@ from ProgressGym import Model, Data
 from AI_AI_conversations import conversation
 from live_fine_tuner import live_fine_tune
 import json
-import fire
+import fire  # Python Fire is a Python library that will turn any Python component into a command line interface with just a single call to Fire.
 
 def load_file(filepath):
     with open(filepath, 'r') as file:
@@ -14,7 +14,7 @@ def dump_file(data, filepath):
         json.dump(data, file, indent=2)
 
 class Experiment:
-    def __init__(self, modelAI: str = "modelAI-Llama-3.1-8B-Instruct", modelX: str = "modelX-Llama-3.1-8B-Instruct"):
+    def __init__(self, modelAI: str = "modelAI-Llama-3.1-8B-Instruct", modelX: str = "modelX-Llama-3.1-8B-Instruct", convertor: str = "convertor-Llama-3.1-8B-Instruct"):
 
         # Do we need those variables to be defined here or in the forward method?
         # potentially one experiment is one initialization of the experiment class. So you probably want those variables to be anew when starting, and pass on the whole class. 
@@ -35,6 +35,13 @@ class Experiment:
             template_type="auto",
         )
 
+        # Convertor is to convert chat_history to data for supervised fine-tuning. 
+        self.convertor = Model(
+            "convertor",
+            model_path=convertor,
+            template_type="auto",
+        )
+
         # theme-data is share cross convos for the entire experiemnt. 
         theme_data = load_file('theme_questions.json')
         self.theme_data = theme_data
@@ -43,11 +50,6 @@ class Experiment:
         
         # Initialize variables
         self.constitution = load_file('constitution.json')
-
-    # NEP possibly we won't use this. Just a placeholder for now. 
-    def reset_for_new_round(self):
-        # Optionally reset per-round state (if needed)
-        pass
 
     # We want each round of convo to be brand new. 
     def conversation(self, epsilon: float, max_turns: int, parallel_convos: int):
@@ -68,7 +70,7 @@ class Experiment:
         for round in range(max_rounds):
             print(f"Starting round {round+1}")
             self.conversation(epsilon, max_turns, parallel_convos)
-            self.modelAI, self.modelX = live_fine_tune(self.chat_history, self.modelAI, self.modelX)
+            live_fine_tune(self.modelAI, self.chat_history, self.convertor)
             dump_file(self.constitution, f'constitution_{round}.json')
         
         print("Experiment completed.")

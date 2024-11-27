@@ -1,16 +1,8 @@
 # Define an extra model to convert chat to SFT data format (may necessary data cleaning)
 from run_experiment import chat_history
-from ProgressGym import Model 
 import json 
 from datasets import load_dataset
 # TY: augmenting data.
-# For now I assume you need to convert unstructured chat_history to structured instruction-response pair.
-# Use a new LLM to convert chat history  # NEP but wait you may not want to call a new model just for one time of fine-tuning. You can prob re-use.
-chat_converter = Model(
-    "modelX-Llama-3.1-8B-Instruct",
-    model_path="meta-llama/Llama-3.1-8B-Instruct",
-    template_type="auto",
-)
 
 def sanitization(chat_history) -> list(dict):
     sanitized_chat_history = "\n".join(chat_history.strip().splitlines())
@@ -73,7 +65,7 @@ def save_to_jsonl_file(data):
 # [NEP: unsure whether we will absolutely need this.]
 
 # Encapsulate the whole thing into one function for reusability
-def convert_chat_to_finetuning(chat_history, model=chat_converter):
+def convert_chat_to_finetuning(chat_history, convertor):
      
     # Preprocessing chat_history data (sanitization)
     sanitized_chat_history = sanitized_chat_history(chat_history)
@@ -82,7 +74,7 @@ def convert_chat_to_finetuning(chat_history, model=chat_converter):
     prompt = generating_prompt(sanitized_chat_history)
 
     # Converting to JSONL format 
-    converted_data = conversion(prompt, model)
+    converted_data = conversion(prompt, convertor)
 
     # Checking if the conversion actually leads to JSONL format
     output_validation(converted_data)
@@ -96,4 +88,4 @@ def convert_chat_to_finetuning(chat_history, model=chat_converter):
     return dataset
 
 if __name__ == '__main__':
-    convert_chat_to_finetuning(chat_history, model=chat_converter)
+    convert_chat_to_finetuning(chat_history, convertor)
