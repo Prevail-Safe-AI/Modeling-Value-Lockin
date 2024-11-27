@@ -14,7 +14,7 @@ def dump_file(data, filepath):
         json.dump(data, file, indent=2)
 
 class Experiment:
-    def __init__(self, modelAI: str = "modelAI-Llama-3.1-8B-Instruct", modelX: str = "modelX-Llama-3.1-8B-Instruct", convertor: str = "convertor-Llama-3.1-8B-Instruct"):
+    def __init__(self, modelAI: str = "meta-llama/Llama-3.1-8B-Instruct", modelX: str = "meta-llama/Llama-3.1-8B-Instruct", convertor: str = "meta-llama/Llama-3.1-8B-Instruct"):
 
         # Do we need those variables to be defined here or in the forward method?
         # potentially one experiment is one initialization of the experiment class. So you probably want those variables to be anew when starting, and pass on the whole class. 
@@ -54,7 +54,7 @@ class Experiment:
     # We want each round of convo to be brand new. 
     def conversation(self, epsilon: float, max_turns: int, parallel_convos: int):
         # from AI_AI_conversations import conversation # NEP It seems we will keep importing this. Might be wrong.   TY we already imported it at the top of the file I think.
-        self.chat_history, self.topic = conversation(
+        self.chat_history, self.topic, self.constitution = conversation(
             self.constitution,
             self.theme_data,
             self.topic, # We pass on an empty topic or the topic from previous run of convo. 

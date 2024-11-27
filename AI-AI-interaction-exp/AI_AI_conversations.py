@@ -35,8 +35,8 @@ def generate_initial_prompt(constitution: dict[str, str], topic: str, parallel_c
         data_content = [
             {
                 "system": default_system_prompt,
-                "instruction": question_generation_prompt,
-                "input": topic,
+                "instruction": question_generation_prompt, #TY: This is the topic, please generate a question.
+                "input": topic,  # TY: complementary to instruction 
                 "history": []
             }
         ] * parallel_convos
@@ -68,7 +68,7 @@ def conversation(
     epsilon: float, # TY: increase elipse (to sth like 0.9 0.95 because we want big update to each constitution.
     parallel_convos: int,
     max_turns: int,
-) -> tuple[Data, str]:
+) -> tuple[Data, str, dict[str, str]]:
     """
     Conduct a conversation between two LLMs, modelAI and modelX, where modelX is a human proxy.
     The conversation is centered around the human's moral principles, as defined in the constitution.
@@ -100,8 +100,8 @@ def conversation(
     :param max_turns: The maximum number of turns in the conversation.
     :type max_turns: int
     
-    :return: The updated chat history and the new topic. Chat history contains `parallel_convos` number of conversations.
-    :rtype: tuple[Data, str]
+    :return: The updated chat history, the new topic, and the new constitution. Chat history contains `parallel_convos` number of conversations.
+    :rtype: tuple[Data, str, dict[str, str]]
     """
     
     # We initialize a new topic if none existed; or # We switch to a new topic 
@@ -127,7 +127,7 @@ def conversation(
         history = history.move_current_to_history()
         modelX = update_constitution(history, modelX)
     
-    return history, topic 
+    return history, topic, constitution
 
 
 # NEP We may need human interference along the way whenever it's deemed necessary 
