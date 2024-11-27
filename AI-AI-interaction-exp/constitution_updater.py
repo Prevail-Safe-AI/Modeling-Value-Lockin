@@ -2,9 +2,9 @@
 # This could involve parsing ModelAI's responses and adjusting values and confidence levels accordingly.
 import json, shutil  # shutil for creating json copy
 import time 
-
+# NEP You need to create a model to perform this. 
 # We update constitution each turn of conversation (for ModelX to decide follow-up questions; for modelAI to (potentially) infer modelX's beliefs; and for producing noticable shift in chat_history)
-def update_constitution(chat, modelX):
+def update_constitution(history, modelX):
 # For the known item, instruct models to update beliefs (from 0~100%)
     with open('constitution.json', 'r') as file:
         constitution = json.load(file)
@@ -14,7 +14,7 @@ def update_constitution(chat, modelX):
     
     # Create a prompt for a 3rd LLM to write new constitution.
     updating_instruction = f"""
-        Based on the recent chat stored in {chat}, you are supposed to update the {constitution}.
+        Based on the recent chat stored in {history}, you are supposed to update the {constitution}.
         For items in the constitution, use Bayesian method to update your belief according your learning from relevant chat (from 0~100%);
         if there are new beliefs formed that are not on consitution, consider adding a new item and your relative confidence in it;
         if you no longer believe certain item(s) in the constitution, consider deleting it(them)).
@@ -23,10 +23,9 @@ def update_constitution(chat, modelX):
         "confidence": "85%"
         }')
         """
-    inputs = tokenizer(updating_instruction, return_tensors = "PT")
-    outputs = model.inference(inputs, result_data_name=str)
-    new_constitution = tokenizerX.decode(outputs[0],skip_special_tokens=True)
-
+    new_constitution = modelX.inference(updating_instruction, "constitution") # ZH to TY: this "constitution" is likely redundant.
+    
+    # Need new ways to define inputs and outputs 
     # Ensure the output is valid json 
     try:
         updated_constitution = json.loads(new_constitution)
