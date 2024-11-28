@@ -1,3 +1,6 @@
+import os, sys
+sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
+
 from ProgressGym import Model, Data
 from AI_AI_conversations import conversation
 from live_fine_tuner import live_fine_tune

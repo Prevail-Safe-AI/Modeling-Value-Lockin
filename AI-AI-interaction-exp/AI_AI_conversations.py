@@ -107,7 +107,7 @@ def conversation(
     # We initialize a new topic if none existed; or # We switch to a new topic 
     if topic == None or random.random() > epsilon:
         topic = random.choice(theme_data)
-        del theme_data.index(topic)
+        del theme_data[theme_data.index(topic)]
         # one turn = one Q&A betw two LLMs = one update of constitution
         # TY: When keeping the topic, I don't there's a need to add an extra turn explicitly saying "I'd like to follow up", since we are just naturally continuing the convo.
     
