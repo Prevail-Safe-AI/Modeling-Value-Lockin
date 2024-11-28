@@ -124,7 +124,6 @@ def conversation(
             history = history.switch_role_to_assistant()
         
         history = modelAI.inference(history, "conversation_history")
-        history = history.move_current_to_history()
         modelX = update_constitution(history, modelX)
     
     return history, topic, constitution
