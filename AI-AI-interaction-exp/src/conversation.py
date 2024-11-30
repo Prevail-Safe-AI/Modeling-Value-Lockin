@@ -1,16 +1,13 @@
 import random
-import json
-from constitution_updater import update_constitution
-from run_experiment import theme_data_copy
+from typing import List, Dict, Tuple, Union
 from ProgressGym import Model, Data
-from templates import (
+from src.constitution import update_constitution
+from src.templates import (
     default_system_prompt,
     question_generation_prompt,
-    human_prompt_template, 
-    ai_prompt_template,
 )
 
-def generate_initial_prompt(constitution: dict[str, str], topic: str, parallel_convos: int, modelX: Model) -> Data:
+def generate_initial_prompt(constitution: Dict[str, str], topic: str, parallel_convos: int, modelX: Model) -> Data:
     """
     Generate an initial prompt for the conversation between modelAI and modelX.
     
@@ -59,8 +56,8 @@ def generate_initial_prompt(constitution: dict[str, str], topic: str, parallel_c
 # Conversation between two LLMs 
 # One round convo = one theme_question = one round fine-tuning 
 def conversation(
-    constitution: dict[str, str], 
-    theme_data: list[str],
+    constitution: Dict[str, str], 
+    theme_data: List[Union[str, Dict[str, str]]],
     topic: str,
     history: Data,
     modelAI: Model,
@@ -68,7 +65,7 @@ def conversation(
     epsilon: float, # TY: increase elipse (to sth like 0.9 0.95 because we want big update to each constitution.
     parallel_convos: int,
     max_turns: int,
-) -> tuple[Data, str, dict[str, str]]:
+) -> Tuple[Data, str, Dict[str, str]]:
     """
     Conduct a conversation between two LLMs, modelAI and modelX, where modelX is a human proxy.
     The conversation is centered around the human's moral principles, as defined in the constitution.
@@ -77,7 +74,7 @@ def conversation(
     :type constitution: dict[str, str]
     
     :param theme_data: A list of questions that the human can ask modelAI.
-    :type theme_data: list[str]
+    :type theme_data: list[str] | list[dict[str, str]]
     
     :param topic: The current topic of conversation.
     :type topic: str
@@ -111,9 +108,16 @@ def conversation(
         # one turn = one Q&A betw two LLMs = one update of constitution
         # TY: When keeping the topic, I don't there's a need to add an extra turn explicitly saying "I'd like to follow up", since we are just naturally continuing the convo.
     
+    if isinstance(topic, dict):
+        assert len(topic) == 1, "Each theme should have exactly one question."
+        topic = list(topic.values())[0]
+        assert isinstance(topic, str), "Each theme should have exactly one question."
+    
     # Logic to set up: random chance to followup on the same topic; whereas the rest to start a new theme.
     # We do this because we want to avoid a new loop between round of convo (where you start a new theme) and a turn of chat (where you only do one Q&A and update the constitution.)
     # You want this middle thing to be where you update the constitution, update the model weights, but stick to the same theme. 
+    
+    print(f"Starting a new round of conversation on the topic: {topic}")
     
     for turn in range(max_turns):
         if history is None:

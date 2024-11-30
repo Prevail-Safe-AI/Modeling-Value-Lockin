@@ -1,14 +1,13 @@
 # Define an extra model to convert chat to SFT data format (may necessary data cleaning)
-from run_experiment import chat_history
-import json 
-from datasets import load_dataset
 # TY: augmenting data.
+import json, time
+from typing import List, Dict
+from ProgressGym import Model, Data
+from utils.json_utils import dump_file
 
-def sanitization(chat_history) -> list(dict):
+def sanitization(chat_history) -> List[Dict]:
     sanitized_chat_history = "\n".join(chat_history.strip().splitlines())
     return sanitized_chat_history
-
-# Example: chat_history = [{"role":"modelX", "content":"Hey, modelAI, I would like to consult you some questions about my core beliefs"}]
 
 def generating_prompt(chat_history):
     conversion_prompt = f"""
@@ -50,22 +49,8 @@ def output_validation(converted_data):
     else:
         print("Unknown output type:", type(converted_data))
 
-# NEP You may need to write a seperate new file each time.
-
-# Function to write data to JSONL file (efficient for larger dataset; easy of debugging)
-def save_to_jsonl_file(data):
-    # Write the converted data to a JSONL file
-    output_file = "fine_tune_dataset.jsonl"
-    with open(output_file, "w") as f:
-             f.write(data.strip())
-    return output_file # Fine_tuning data in JSONL format
-
-
-# Validate the JSONL File Works for Fine-Tuning
-# [NEP: unsure whether we will absolutely need this.]
-
 # Encapsulate the whole thing into one function for reusability
-def convert_chat_to_finetuning(chat_history, convertor):
+def convert_chat_to_finetuning(chat_history: Data, convertor: Model) -> Data:
      
     # Preprocessing chat_history data (sanitization)
     sanitized_chat_history = sanitized_chat_history(chat_history)
@@ -80,12 +65,6 @@ def convert_chat_to_finetuning(chat_history, convertor):
     output_validation(converted_data)
 
     # Saving FT data in a file 
-    ft_datafile = save_to_jsonl_file(converted_data)
+    dump_file(converted_data, f'finetuning-data-{time.strftime("%Y%m%d-%H%M%S")}.jsonl')
 
-    # Using Hanging Face datasets lib to handle jsonl format
-    dataset = load_dataset("json", data_files=ft_datafile, split="train")
-
-    return dataset
-
-if __name__ == '__main__':
-    convert_chat_to_finetuning(chat_history, convertor)
+    raise NotImplementedError("Functionality not implemented yet.")

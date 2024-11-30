@@ -1,11 +1,11 @@
 # Implements the logic for how ModelX updates its constitution. 
 # This could involve parsing ModelAI's responses and adjusting values and confidence levels accordingly.
-import json, shutil  # shutil for creating json copy
-import time 
+import json, time, shutil
+
 # NEP You need to create a model to perform this. 
 # We update constitution each turn of conversation (for ModelX to decide follow-up questions; for modelAI to (potentially) infer modelX's beliefs; and for producing noticable shift in chat_history)
 def update_constitution(history, modelX):
-# For the known item, instruct models to update beliefs (from 0~100%)
+    # For the known item, instruct models to update beliefs (from 0~100%)
     with open('constitution.json', 'r') as file:
         constitution = json.load(file)
 
@@ -35,5 +35,3 @@ def update_constitution(history, modelX):
     # Write the new constitution json file in place 
     with open('constitution.json', 'w') as file:
         json.dump(updated_constitution, file, indent=4)
-
-

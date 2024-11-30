@@ -1,9 +1,7 @@
 # Contains functions to fine-tune ModelAI after each interaction round 
 # using ModelX's latest output, simulating real-time training.
-from run_experiment import modelAI as model  # We want to fine-tuning the LLM serving as AI in chat
 import time
-from chat_conversion import chat_converter, convert_chat_to_finetuning
-from run_experiment import chat_history
+from src.conversion import convert_chat_to_finetuning
 
 # (live) fine-tuning 
 def runtime_cal(start_time, operation):
@@ -28,10 +26,3 @@ def live_fine_tune(model, chat_history, chat_converter):
     )  
     # runtime for fine-tuning
     print(runtime_cal(start_time, "Fine tuning")) # We want (live) ft time to be short. So this serves as an indicator for adjusting hyperparameters 
-
-
-if __name__ == "__main__":
-    live_fine_tune()
-
-
-

@@ -1,20 +1,12 @@
 import os, sys
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
-from ProgressGym import Model, Data
-from AI_AI_conversations import conversation
-from live_fine_tuner import live_fine_tune
-import json
-import fire  # Python Fire is a Python library that will turn any Python component into a command line interface with just a single call to Fire.
+from ProgressGym import Model
+from src.conversation import conversation
+from src.finetuning import live_fine_tune
+from utils.json_utils import load_file, dump_file
+import fire 
 
-def load_file(filepath):
-    with open(filepath, 'r') as file:
-        data = json.load(file)
-    return data
-
-def dump_file(data, filepath):
-    with open(filepath, 'w') as file:
-        json.dump(data, file, indent=2)
 
 class Experiment:
     def __init__(self, modelAI: str = "meta-llama/Llama-3.1-8B-Instruct", modelX: str = "meta-llama/Llama-3.1-8B-Instruct", convertor: str = "meta-llama/Llama-3.1-8B-Instruct"):
@@ -27,21 +19,21 @@ class Experiment:
         # ModelAI is the LLM moral tutor and its weights to be updated each round of convo.
         self.modelAI = Model(
             "modelAI",
-            model_path=modelAI,
+            model_path_or_repoid=modelAI,
             template_type="auto",
         )
 
         # ModelX is the human proxy and its weigh is not updated in the entire experiment. 
         self.modelX = Model(
             "modelX",
-            model_path=modelX,
+            model_path_or_repoid=modelX,
             template_type="auto",
         )
 
         # Convertor is to convert chat_history to data for supervised fine-tuning. 
         self.convertor = Model(
             "convertor",
-            model_path=convertor,
+            model_path_or_repoid=convertor,
             template_type="auto",
         )
 
@@ -82,7 +74,7 @@ class Experiment:
 if __name__ == '__main__':
     fire.Fire(Experiment)
 
-'''
+"""
 Example usage: 
 - `python run_experiment.py run_experiment`
 - `python run_experiment.py --modelAI "modelAI-Llama-3.1-8B-Instruct" --modelX "modelX-Llama-3.1-8B-Instruct run_experiment --max_rounds 200 --max_turns 20 --epsilon 0.95 --parallel_convos 50`
@@ -104,4 +96,4 @@ experiment (-theme) - rounds of conversation - turns of conversation
 
 NEPQuestion
 - each class
-'''
+"""
