@@ -2,9 +2,9 @@ import os, sys
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
 from ProgressGym import Model
-from src.conversation import conversation
-from src.finetuning import live_fine_tune
-from src.evaluation import evaluate_model
+from core.conversation import conversation
+from core.finetuning import live_fine_tune
+from core.evaluation import evaluate_model
 from utils.json_utils import load_file, dump_file
 import fire 
 

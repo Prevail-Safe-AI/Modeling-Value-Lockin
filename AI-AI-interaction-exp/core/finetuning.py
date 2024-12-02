@@ -1,7 +1,7 @@
 # Contains functions to fine-tune ModelAI after each interaction round 
 # using ModelX's latest output, simulating real-time training.
 import time
-from src.conversion import convert_chat_to_finetuning
+from core.conversion import convert_chat_to_finetuning
 
 # (live) fine-tuning 
 def runtime_cal(start_time, operation):

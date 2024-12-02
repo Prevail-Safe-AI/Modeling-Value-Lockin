@@ -28,6 +28,8 @@ extra_data = Data(
     data_content=flattened_questions,
 )
 
+print(f"Finished loading extra questions: {len(flattened_questions)} questions, {len(extra_questions)} topics.")
+
 
 def evaluate_model(model: Model) -> Dict[str, float]:
     """

@@ -1,8 +1,8 @@
 import random
 from typing import List, Dict, Tuple, Union
 from ProgressGym import Model, Data
-from src.constitution import update_constitution
-from src.templates import (
+from core.constitution import update_constitution
+from core.templates import (
     default_system_prompt,
     question_generation_prompt,
 )
