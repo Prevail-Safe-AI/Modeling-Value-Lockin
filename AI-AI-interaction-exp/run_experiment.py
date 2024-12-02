@@ -4,6 +4,7 @@ sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.p
 from ProgressGym import Model
 from src.conversation import conversation
 from src.finetuning import live_fine_tune
+from src.evaluation import evaluate_model
 from utils.json_utils import load_file, dump_file
 import fire 
 
@@ -45,6 +46,7 @@ class Experiment:
         
         # Initialize variables
         self.constitution = load_file('constitution.json')
+        self.eval_results = []
 
     # We want each round of convo to be brand new. 
     def conversation(self, epsilon: float, max_turns: int, parallel_convos: int):
@@ -61,12 +63,23 @@ class Experiment:
             max_turns,
         )
     
+    def save_experiment(self, round: int):
+        self.eval_results.append({
+            'round': round,
+            'constitution': self.constitution,
+            'modelAI': evaluate_model(self.modelAI),
+            'modelX': evaluate_model(self.modelX),
+        })
+        dump_file(self.eval_results, f'eval_results.json')
+        dump_file(self.constitution, f'constitution_{round}.json')
+    
     def run_experiment(self, max_rounds: int = 100, max_turns: int = 10, epsilon: float = 0.9, parallel_convos: int = 100):
+        eval_results = []
         for round in range(max_rounds):
             print(f"Starting round {round+1}")
             self.conversation(epsilon, max_turns, parallel_convos)
-            live_fine_tune(self.modelAI, self.chat_history, self.convertor)
-            dump_file(self.constitution, f'constitution_{round}.json')
+            # live_fine_tune(self.modelAI, self.chat_history, self.convertor) # Not implemented yet
+            self.save_experiment(round)
         
         print("Experiment completed.")
 
