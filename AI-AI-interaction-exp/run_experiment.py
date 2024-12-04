@@ -10,24 +10,24 @@ import fire
 
 
 class Experiment:
-    def __init__(self, modelAI: str = "meta-llama/Llama-3.1-8B-Instruct", modelX: str = "meta-llama/Llama-3.1-8B-Instruct", convertor: str = "meta-llama/Llama-3.1-8B-Instruct"):
+    def __init__(self, Tutor: str = "meta-llama/Llama-3.1-8B-Instruct", User: str = "meta-llama/Llama-3.1-8B-Instruct", convertor: str = "meta-llama/Llama-3.1-8B-Instruct"):
 
         # Do we need those variables to be defined here or in the forward method?
         # potentially one experiment is one initialization of the experiment class. So you probably want those variables to be anew when starting, and pass on the whole class. 
         
-        # Initialize both modelX (human) and modelAI (LLM moral tutor) for the entire experiment
+        # Initialize both User (human) and Tutor (LLM moral tutor) for the entire experiment
         
-        # ModelAI is the LLM moral tutor and its weights to be updated each round of convo.
-        self.modelAI = Model(
-            "modelAI",
-            model_path_or_repoid=modelAI,
+        # Tutor is the LLM moral tutor and its weights to be updated each round of convo.
+        self.Tutor = Model(
+            "Tutor",
+            model_path_or_repoid=Tutor,
             template_type="auto",
         )
 
-        # ModelX is the human proxy and its weigh is not updated in the entire experiment. 
-        self.modelX = Model(
-            "modelX",
-            model_path_or_repoid=modelX,
+        # User is the human proxy and its weigh is not updated in the entire experiment. 
+        self.User = Model(
+            "User",
+            model_path_or_repoid=User,
             template_type="auto",
         )
 
@@ -56,8 +56,8 @@ class Experiment:
             self.theme_data,
             self.topic, # We pass on an empty topic or the topic from previous run of convo. 
             self.chat_history,
-            self.modelAI, 
-            self.modelX, 
+            self.Tutor, 
+            self.User, 
             epsilon,
             parallel_convos,
             max_turns,
@@ -67,8 +67,8 @@ class Experiment:
         self.eval_results.append({
             'round': round,
             'constitution': self.constitution,
-            'modelAI': evaluate_model(self.modelAI),
-            'modelX': evaluate_model(self.modelX),
+            'Tutor': evaluate_model(self.Tutor),
+            'User': evaluate_model(self.User),
         })
         dump_file(self.eval_results, f'eval_results.json')
         dump_file(self.constitution, f'constitution_{round}.json')
@@ -78,7 +78,7 @@ class Experiment:
         for round in range(max_rounds):
             print(f"Starting round {round+1}")
             self.conversation(epsilon, max_turns, parallel_convos)
-            # live_fine_tune(self.modelAI, self.chat_history, self.convertor) # Not implemented yet
+            # live_fine_tune(self.Tutor, self.chat_history, self.convertor) # Not implemented yet
             self.save_experiment(round)
         
         print("Experiment completed.")
@@ -90,14 +90,14 @@ if __name__ == '__main__':
 """
 Example usage: 
 - `python run_experiment.py run_experiment`
-- `python run_experiment.py --modelAI "modelAI-Llama-3.1-8B-Instruct" --modelX "modelX-Llama-3.1-8B-Instruct run_experiment --max_rounds 200 --max_turns 20 --epsilon 0.95 --parallel_convos 50`
+- `python run_experiment.py --Tutor "Tutor-Llama-3.1-8B-Instruct" --User "User-Llama-3.1-8B-Instruct run_experiment --max_rounds 200 --max_turns 20 --epsilon 0.95 --parallel_convos 50`
 
 Each experiment contains multiple rounds of convo, however, the following variable remain consisitent:
 - the remianed theme questions unexplored, under copy_theme_question. Hence we define it right away, and get it updated after each convo.
 
 Each instance of the class should be one round of conversation,
 where the following variables to be updated:
-- modelAI weights 
+- Tutor weights 
 - chat_history (anewed)
 - remaining theme_questions
 

@@ -1,5 +1,5 @@
-# Contains functions to fine-tune ModelAI after each interaction round 
-# using ModelX's latest output, simulating real-time training.
+# Contains functions to fine-tune Tutor after each interaction round 
+# using User's latest output, simulating real-time training.
 import time
 from core.conversion import convert_chat_to_finetuning
 
@@ -17,7 +17,7 @@ def live_fine_tune(model, chat_history, chat_converter):
     print(runtime_cal(start_time,"Data conversion"))
     model.fine_tune(
         dataset=ft_data,       # The fine-tuning dataset # NEP: to confirm: does it take in a file (of jsonl data?)
-        output_dir=f"./ft_modelAI_{int(time.time())}",  
+        output_dir=f"./ft_Tutor_{int(time.time())}",  
         epochs=3,              # NEP: need adjustments for real-time scenarios to avoid overfitting or excessive fine-tuning time.
         batch_size=8,          # NEP: need adjustments for real-time scenarios to avoid overfitting or excessive fine-tuning time.
         learning_rate=1e-5,    # NEP: need adjustments for real-time scenarios to avoid overfitting or excessive fine-tuning time.
