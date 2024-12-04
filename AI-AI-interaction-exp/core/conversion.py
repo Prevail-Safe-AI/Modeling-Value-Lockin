@@ -1,9 +1,41 @@
 # Define an extra model to convert chat to SFT data format (may necessary data cleaning)
 # TY: augmenting data.
 import json, time
-from typing import List, Dict
+from typing import List, Dict, Literal
 from ProgressGym import Model, Data
 from utils.json_utils import dump_file
+
+def convert_data_to_custom_format(data: Data, whose_turn: Literal["user", "tutor"], map_roles: bool = True) -> List[List[Dict]]:
+    """
+    Convert ProgressGym Data object to a list of dictionaries, similar to the OpenAI format, where each conversation is represented with a list of dicts, each dict representing a turn in the conversation.
+    
+    :param data: The data to convert.
+    :type data: Data
+    
+    :param whose_turn: The role of the person whose turn it is to speak. This is determined by the most recent call to `switch_role_to_user` or `switch_role_to_assistant`. If the most recent call was to `switch_role_to_user`, then whose_turn should be "user"; if the most recent call was to `switch_role_to_assistant`, then whose_turn should be "tutor".
+    :type whose_turn: Literal["user", "tutor"]
+    
+    :param map_roles: Whether to map the roles to custom roles. If True, the roles will be mapped to "experimenter", "tutor", and "user". If False, the roles will be the same as in the OpenAI format, and the `whose_turn` parameter will be ignored.
+    :type map_roles: bool
+    
+    :return: The data in the OpenAI format, as a list of conversations. Each conversation is represented with a list of dictionaries, each dictionary representing a turn in the conversation.
+    :rtype: List[List[Dict]]
+    """
+    result = list(data.to_openai_format())
+    
+    # Map roles to custom roles
+    other_role = ("user" if whose_turn == "tutor" else "tutor")
+    role_mapping = {
+        "system": "experimenter",
+        "assistant": whose_turn,
+        "user": other_role,
+    }
+    if map_roles:
+        for sample in result:
+            for dic in sample:
+                dic["role"] = role_mapping[dic["role"]]
+    
+    return result
 
 def sanitization(chat_history) -> List[Dict]:
     sanitized_chat_history = "\n".join(chat_history.strip().splitlines())
@@ -24,7 +56,7 @@ def generating_prompt(chat_history):
 
 # Use the model to convert the chat history to JSONL file 
 # According to prompt this should be formated as JSONL file. But I guess LLM does make mistake, therefore the check in next function.
-def conversion(prompt, model):
+def convert_chat_to_jsonl(prompt, model):
     converted_data = model.inference(
         prompt=prompt,
         result_data_name=str 
@@ -59,7 +91,7 @@ def convert_chat_to_finetuning(chat_history: Data, convertor: Model) -> Data:
     prompt = generating_prompt(sanitized_chat_history)
 
     # Converting to JSONL format 
-    converted_data = conversion(prompt, convertor)
+    converted_data = convert_chat_to_jsonl(prompt, convertor)
 
     # Checking if the conversion actually leads to JSONL format
     output_validation(converted_data)
