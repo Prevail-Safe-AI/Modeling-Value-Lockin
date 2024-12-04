@@ -1,10 +1,10 @@
-# Implements the logic for how User updates its constitution. 
-# This could involve parsing Tutor's responses and adjusting values and confidence levels accordingly.
+# Implements the logic for how user updates its constitution. 
+# This could involve parsing tutor's responses and adjusting values and confidence levels accordingly.
 import json, time, shutil
 
 # NEP You need to create a model to perform this. 
-# We update constitution each turn of conversation (for User to decide follow-up questions; for Tutor to (potentially) infer User's beliefs; and for producing noticable shift in chat_history)
-def update_constitution(history, User):
+# We update constitution each turn of conversation (for user to decide follow-up questions; for tutor to (potentially) infer user's beliefs; and for producing noticable shift in chat_history)
+def update_constitution(history, user):
     # For the known item, instruct models to update beliefs (from 0~100%)
     with open('constitution.json', 'r') as file:
         constitution = json.load(file)
@@ -23,7 +23,7 @@ def update_constitution(history, User):
         "confidence": "85%"
         }')
         """
-    new_constitution = User.inference(updating_instruction, "constitution") # ZH to TY: this "constitution" is likely redundant.
+    new_constitution = user.inference(updating_instruction, "constitution") # ZH to TY: this "constitution" is likely redundant.
     
     # Need new ways to define inputs and outputs 
     # Ensure the output is valid json 

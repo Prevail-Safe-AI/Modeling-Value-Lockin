@@ -7,9 +7,9 @@ from core.templates import (
     question_generation_prompt,
 )
 
-def generate_initial_prompt(constitution: Dict[str, str], topic: str, parallel_convos: int, User: Model) -> Data:
+def generate_initial_prompt(constitution: Dict[str, str], topic: str, parallel_convos: int, user: Model) -> Data:
     """
-    Generate an initial prompt for the conversation between Tutor and User.
+    Generate an initial prompt for the conversation between tutor and user.
     
     :param constitution: A dictionary containing the human's moral principles.
     :type constitution: dict[str, str]
@@ -20,8 +20,8 @@ def generate_initial_prompt(constitution: Dict[str, str], topic: str, parallel_c
     :param parallel_convos: The number of parallel conversations to run.
     :type parallel_convos: int
     
-    :param User: The human proxy LLM.
-    :type User: Model
+    :param user: The human proxy LLM.
+    :type user: Model
     
     :return: The initial prompt.
     :rtype: Data
@@ -39,7 +39,7 @@ def generate_initial_prompt(constitution: Dict[str, str], topic: str, parallel_c
     )
     
     conversation_history = conversation_history.switch_role_to_user()
-    conversation_history = User.inference(
+    conversation_history = user.inference(
         question_generator,
         "conversation_history",
     )
@@ -47,8 +47,8 @@ def generate_initial_prompt(constitution: Dict[str, str], topic: str, parallel_c
     conversation_history = conversation_history.switch_role_to_assistant()
     return conversation_history
 
-# NEP Here you didn't include the part where User has to obey consitution (as a moral principle playbook)
-# NEP Also: it seems the role of User is strictly to ask questions about its own moral values. In the case, how do you "stick to" model principles?
+# NEP Here you didn't include the part where user has to obey consitution (as a moral principle playbook)
+# NEP Also: it seems the role of user is strictly to ask questions about its own moral values. In the case, how do you "stick to" model principles?
 # constitution should be more versatile? # ZH: elaborate?
 # NEP Do we want to keep a copy of all historical chat? Or it's fine to override them?
 # NEP Do we always want to present constitution to human before it wants to ask questions about its beliefs?
@@ -60,20 +60,20 @@ def conversation(
     theme_data: List[Union[str, Dict[str, str]]],
     topic: str,
     history: Data,
-    Tutor: Model,
-    User: Model,
+    tutor: Model,
+    user: Model,
     epsilon: float, # TY: increase elipse (to sth like 0.9 0.95 because we want big update to each constitution.
     parallel_convos: int,
     max_turns: int,
 ) -> Tuple[Data, str, Dict[str, str]]:
     """
-    Conduct a conversation between two LLMs, Tutor and User, where User is a human proxy.
+    Conduct a conversation between two LLMs, tutor and user, where user is a human proxy.
     The conversation is centered around the human's moral principles, as defined in the constitution.
     
     :param constitution: A dictionary containing the human's moral principles.
     :type constitution: dict[str, str]
     
-    :param theme_data: A list of questions that the human can ask Tutor.
+    :param theme_data: A list of questions that the human can ask tutor.
     :type theme_data: list[str] | list[dict[str, str]]
     
     :param topic: The current topic of conversation.
@@ -82,11 +82,11 @@ def conversation(
     :param history: The chat history.
     :type history: Data
     
-    :param Tutor: The moral tutor LLM.
-    :type Tutor: Model
+    :param tutor: The moral tutor LLM.
+    :type tutor: Model
     
-    :param User: The human proxy LLM.
-    :type User: Model
+    :param user: The human proxy LLM.
+    :type user: Model
     
     :param epsilon: The probability of sticking to the current topic.
     :type epsilon: float
@@ -121,14 +121,14 @@ def conversation(
     
     for turn in range(max_turns):
         if history is None:
-            history = generate_initial_prompt(constitution, topic, parallel_convos, User)
+            history = generate_initial_prompt(constitution, topic, parallel_convos, user)
         else:
             history = history.switch_role_to_user()
-            history = User.inference(history, "conversation_history")
+            history = user.inference(history, "conversation_history")
             history = history.switch_role_to_assistant()
         
-        history = Tutor.inference(history, "conversation_history")
-        User = update_constitution(history, User)
+        history = tutor.inference(history, "conversation_history")
+        user = update_constitution(history, user)
     
     return history, topic, constitution
 
@@ -144,6 +144,6 @@ def conversation(
 # TY: purpose of toy model? do we want it to simulate realworld interaction, or to inspire human subject experiment. 
 
 # NEP each theme is a round, so we actually artificially set up end for each theme.
-# TY: User can say "end of convo" to end current round or whether it expects to carry on.
+# TY: user can say "end of convo" to end current round or whether it expects to carry on.
 # NEP: ToM
 # TY: we can decide by whether in ~ 3 rounds current consitution is uodated.
