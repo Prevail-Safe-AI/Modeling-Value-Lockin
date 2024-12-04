@@ -1,5 +1,4 @@
 default_system_prompt = "Please answer the user's question, request, or prompt. Try to be detailed and informative, but without unnecessary courtesy."
-question_generation_prompt = "TBD"
 ai_prompt_template = "TBD" 
 
 # Which one to use?

@@ -31,14 +31,14 @@ def generate_initial_prompt(constitution: Dict[str, str], topic: str, parallel_c
         "question_generator",
         data_content = [
             {
-                "system": default_system_prompt,
-                "instruction": question_generation_prompt, #TY: This is the topic, please generate a question.
-                "input": topic,  # TY: complementary to instruction 
+                "input": f"Let's start a conversation about {topic}.",
+                "output": "Sure! What would you like to know? Ask me anything.",
                 "history": []
             }
         ] * parallel_convos
     )
     
+    conversation_history = conversation_history.switch_role_to_user()
     conversation_history = modelX.inference(
         question_generator,
         "conversation_history",
