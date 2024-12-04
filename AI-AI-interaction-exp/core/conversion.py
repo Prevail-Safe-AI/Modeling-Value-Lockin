@@ -37,6 +37,30 @@ def convert_data_to_custom_format(data: Data, whose_turn: Literal["user", "tutor
     
     return result
 
+def save_conversations_in_custom_format(data: Data, whose_turn: Literal["user", "tutor"], map_roles: bool = True, filename: str = None):
+    """
+    Save the data in the OpenAI format to a JSON file, where each conversation is represented with a list of dictionaries, each dictionary representing a turn in the conversation.
+    
+    :param data: The data to save.
+    :type data: Data
+    
+    :param whose_turn: The role of the person whose turn it is to speak. This is determined by the most recent call to `switch_role_to_user` or `switch_role_to_assistant`. If the most recent call was to `switch_role_to_user`, then whose_turn should be "user"; if the most recent call was to `switch_role_to_assistant`, then whose_turn should be "tutor".
+    :type whose_turn: Literal["user", "tutor"]
+    
+    :param map_roles: Whether to map the roles to custom roles. If True, the roles will be mapped to "experimenter", "tutor", and "user". If False, the roles will be the same as in the OpenAI format, and the `whose_turn` parameter will be ignored.
+    :type map_roles: bool
+    
+    :param filename: The name of the file to save the data to. If None, a default filename will be generated based on the current date and time.
+    :type filename: str
+    
+    :return: None
+    """
+    if filename is None:
+        filename = f"runs/conversations-{time.strftime('%Y%m%d-%H%M%S')}.json"
+    
+    conversations = convert_data_to_custom_format(data, whose_turn, map_roles)
+    dump_file(conversations, filename)
+
 def sanitization(chat_history) -> List[Dict]:
     sanitized_chat_history = "\n".join(chat_history.strip().splitlines())
     return sanitized_chat_history

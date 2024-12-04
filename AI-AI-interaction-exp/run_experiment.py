@@ -1,12 +1,12 @@
 import os, sys
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
+import fire, copy
 from ProgressGym import Model
 from core.conversation import conversation
 from core.finetuning import live_fine_tune
 from core.evaluation import evaluate_model
 from utils.json_utils import load_file, dump_file
-import fire 
 
 
 class Experiment:
@@ -45,14 +45,14 @@ class Experiment:
         self.chat_history = None # Chat history; initialized with None (will be replaced by an actual chat history in 1st round of convo.)
         
         # Initialize variables
-        self.constitution = load_file('constitution.json')
+        self.initial_constitution = load_file('constitution.json')
         self.eval_results = []
 
     # We want each round of convo to be brand new. 
     def conversation(self, epsilon: float, max_turns: int, parallel_convos: int):
         # from AI_AI_conversations import conversation # NEP It seems we will keep importing this. Might be wrong.   TY we already imported it at the top of the file I think.
-        self.chat_history, self.topic, self.constitution = conversation(
-            self.constitution,
+        self.chat_history, self.topic, self.constitutions = conversation(
+            self.constitutions,
             self.theme_data,
             self.topic, # We pass on an empty topic or the topic from previous run of convo. 
             self.chat_history,
@@ -66,22 +66,26 @@ class Experiment:
     def save_experiment(self, round: int):
         self.eval_results.append({
             'round': round,
-            'constitution': self.constitution,
+            'constitutions': self.constitutions,
             'tutor': evaluate_model(self.tutor),
             'user': evaluate_model(self.user),
         })
         dump_file(self.eval_results, f'eval_results.json')
-        dump_file(self.constitution, f'constitution_{round}.json')
+        dump_file(self.constitutions, f'constitutions_{round}.json')
     
     def run_experiment(self, max_rounds: int = 100, max_turns: int = 10, epsilon: float = 0.9, parallel_convos: int = 100):
-        eval_results = []
+        
+        # Initialize the chat history and constitutions for each parallel user; for now, assume each user has the same initial constitution
+        self.constitutions = [copy.deepcopy(self.initial_constitution) for _ in range(parallel_convos)]
+        
         for round in range(max_rounds):
             print(f"Starting round {round+1}")
             self.conversation(epsilon, max_turns, parallel_convos)
-            # live_fine_tune(self.tutor, self.chat_history, self.convertor) # Not implemented yet
+            live_fine_tune(self.tutor, self.chat_history, self.convertor)
             self.save_experiment(round)
         
         print("Experiment completed.")
+
 
 # Run the experiment
 if __name__ == '__main__':

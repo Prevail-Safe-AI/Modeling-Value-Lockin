@@ -26,3 +26,31 @@ def dump_file(data, filepath, force_original_path=False):
     
     with open(filepath, 'w') as file:
         json.dump(data, file, indent=2)
+
+def extract_json_from_str(s: str):
+    """
+    Robustly extract JSON object from a string, after a wide range of sanitization operations.
+    
+    :param s: The string to extract JSON object from. It could be, for example, generation by an LLM.
+    :type s: str
+    
+    :return: The extracted JSON object. None upon failure.
+    """
+    # Strip leading/trailing whitespace and formatting characters (```, ```json, etc.)
+    s = s.replace("```json", "```")
+    if "```" in s:
+        if s.count("```") != 2:
+            return None
+        s = s.split("```")[1]
+    
+    assert '```' not in s
+    s = s.strip()
+    
+    if not s:
+        return None
+    
+    try:
+        return json.loads(s)
+    except json.JSONDecodeError as e:
+        print(f"Failed to extract JSON from string: {e}")
+        return None

@@ -1,6 +1,7 @@
 # Contains functions to fine-tune tutor after each interaction round 
 # using user's latest output, simulating real-time training.
 import time
+import warnings
 from core.conversion import convert_chat_to_finetuning
 
 # (live) fine-tuning 
@@ -10,6 +11,9 @@ def runtime_cal(start_time, operation):
     return f'{operation} is completed in{runtime:.2f} seconds'
 
 def live_fine_tune(model, chat_history, chat_converter):
+    warnings.warn("Live fine-tuning is not implemented yet.")
+    return
+    
     start_time = time.time() # To record start time and then calculate running time
 
     # data conversation 

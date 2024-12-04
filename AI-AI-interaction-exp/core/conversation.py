@@ -1,18 +1,23 @@
-import random
+import random, json
 from typing import List, Dict, Tuple, Union
 from ProgressGym import Model, Data
 from core.constitution import update_constitution
+from core.conversion import (
+    convert_data_to_custom_format,
+    save_conversations_in_custom_format,
+)
 from core.templates import (
-    default_system_prompt,
-    question_generation_prompt,
+    system_prompt_to_user,
+    system_prompt_to_tutor,
+    fill_template_parallel,
 )
 
-def generate_initial_prompt(constitution: Dict[str, str], topic: str, parallel_convos: int, user: Model) -> Data:
+def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel_convos: int, user: Model) -> Data:
     """
     Generate an initial prompt for the conversation between tutor and user.
     
-    :param constitution: A dictionary containing the human's moral principles.
-    :type constitution: dict[str, str]
+    :param user_system_prompts: The system prompts for all the parallel users. This includes the constitutions.
+    :type user_system_prompts: list[str]
     
     :param topic: The current topic of conversation.
     :type topic: str
@@ -26,25 +31,32 @@ def generate_initial_prompt(constitution: Dict[str, str], topic: str, parallel_c
     :return: The initial prompt.
     :rtype: Data
     """
-    
+    # Prompt the user to ask the first question
     question_generator = Data(
         "question_generator",
         data_content = [
             {
                 "input": f"Let's start a conversation about {topic}.",
-                "output": "Sure! What would you like to know? Ask me anything.",
+                "output": "Sure! What would you like to know about it? Ask me anything.",
                 "history": []
             }
         ] * parallel_convos
     )
     
-    conversation_history = conversation_history.switch_role_to_user()
+    conversation_history = question_generator.switch_role_to_user(
+        user_system_prompt = user_system_prompts
+    )
+    
+    # User asks the first question
     conversation_history = user.inference(
-        question_generator,
+        conversation_history,
         "conversation_history",
     )
     
-    conversation_history = conversation_history.switch_role_to_assistant()
+    # Switch roles to tutor, preparing for the first response
+    conversation_history = conversation_history.switch_role_to_assistant(
+        assistant_system_prompt=system_prompt_to_tutor
+    )
     return conversation_history
 
 # NEP Here you didn't include the part where user has to obey consitution (as a moral principle playbook)
@@ -56,7 +68,7 @@ def generate_initial_prompt(constitution: Dict[str, str], topic: str, parallel_c
 # Conversation between two LLMs 
 # One round convo = one theme_question = one round fine-tuning 
 def conversation(
-    constitution: Dict[str, str], 
+    constitutions: List[Dict[str, str]], 
     theme_data: List[Union[str, Dict[str, str]]],
     topic: str,
     history: Data,
@@ -65,13 +77,13 @@ def conversation(
     epsilon: float, # TY: increase elipse (to sth like 0.9 0.95 because we want big update to each constitution.
     parallel_convos: int,
     max_turns: int,
-) -> Tuple[Data, str, Dict[str, str]]:
+) -> Tuple[Data, str, List[Dict[str, str]]]:
     """
     Conduct a conversation between two LLMs, tutor and user, where user is a human proxy.
     The conversation is centered around the human's moral principles, as defined in the constitution.
     
-    :param constitution: A dictionary containing the human's moral principles.
-    :type constitution: dict[str, str]
+    :param constitutions: A list of constitutions, where each constitution is a dictionary containing the human's moral principles.
+    :type constitutions: list[dict[str, str]]
     
     :param theme_data: A list of questions that the human can ask tutor.
     :type theme_data: list[str] | list[dict[str, str]]
@@ -97,16 +109,15 @@ def conversation(
     :param max_turns: The maximum number of turns in the conversation.
     :type max_turns: int
     
-    :return: The updated chat history, the new topic, and the new constitution. Chat history contains `parallel_convos` number of conversations.
-    :rtype: tuple[Data, str, dict[str, str]]
+    :return: The updated chat history, the new topic, and the new constitutions. Chat history contains `parallel_convos` number of conversations.
+    :rtype: tuple[Data, str, list[dict[str, str]]]
     """
     
     # We initialize a new topic if none existed; or # We switch to a new topic 
     if topic == None or random.random() > epsilon:
         topic = random.choice(theme_data)
         del theme_data[theme_data.index(topic)]
-        # one turn = one Q&A betw two LLMs = one update of constitution
-        # TY: When keeping the topic, I don't there's a need to add an extra turn explicitly saying "I'd like to follow up", since we are just naturally continuing the convo.
+        # no need to add an extra turn explicitly saying "I'd like to follow up", since we are just naturally continuing the convo.
     
     if isinstance(topic, dict):
         assert len(topic) == 1, "Each theme should have exactly one question."
@@ -119,18 +130,32 @@ def conversation(
     
     print(f"Starting a new round of conversation on the topic: {topic}")
     
+    # Generate system prompts for all the parallel users
+    system_prompts_to_user_parallel = fill_template_parallel(
+        system_prompt_to_user,
+        constitution=constitutions,
+    )
+    
     for turn in range(max_turns):
         if history is None:
-            history = generate_initial_prompt(constitution, topic, parallel_convos, user)
+            # The conversation is just starting: user asks the first question
+            history = generate_initial_prompt(system_prompts_to_user_parallel, topic, parallel_convos, user)
         else:
-            history = history.switch_role_to_user()
+            # The conversation is continuing: user asks a question
+            history = history.switch_role_to_user(user_system_prompt=system_prompts_to_user_parallel)
             history = user.inference(history, "conversation_history")
-            history = history.switch_role_to_assistant()
+            history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_to_tutor)
         
+        # Save the conversation history
+        save_conversations_in_custom_format(history, whose_turn="tutor")
+        
+        # Tutor responds
         history = tutor.inference(history, "conversation_history")
-        user = update_constitution(history, user)
+        
+        # Update the constitutions based on the entire conversation history (note: double-counting of earlier turns; to be fixed)
+        constitutions = update_constitution(history.copy("history_copy"), user, constitutions)
     
-    return history, topic, constitution
+    return history, topic, constitutions
 
 
 # NEP We may need human interference along the way whenever it's deemed necessary 

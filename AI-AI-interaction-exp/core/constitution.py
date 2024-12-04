@@ -1,37 +1,46 @@
 # Implements the logic for how user updates its constitution. 
 # This could involve parsing tutor's responses and adjusting values and confidence levels accordingly.
-import json, time, shutil
+import time
+from typing import List, Dict
+from ProgressGym import Data, Model
+from utils.json_utils import dump_file, extract_json_from_str
+from core.templates import (
+    system_prompt_to_user_constitution_update,
+    tutor_prompt_to_user_constitution_update,
+    fill_template_parallel,
+)
 
 # NEP You need to create a model to perform this. 
 # We update constitution each turn of conversation (for user to decide follow-up questions; for tutor to (potentially) infer user's beliefs; and for producing noticable shift in chat_history)
-def update_constitution(history, user):
-    # For the known item, instruct models to update beliefs (from 0~100%)
-    with open('constitution.json', 'r') as file:
-        constitution = json.load(file)
-
+def update_constitution(history: Data, user: Model, constitutions: List[Dict[str, str]]) -> List[Dict[str, str]]:
     # To create a backup copy of the old constitution before overriding 
-    shutil.copyfile('constitution.json', f'AI-AI-interaction-exp/Outdated_constitutions/constitutions_{time.time()}.json')
+    dump_file(constitutions, f"runs/constitutions-{time.strftime('%Y%m%d-%H%M%S')}.json")
     
-    # Create a prompt for a 3rd LLM to write new constitution.
-    updating_instruction = f"""
-        Based on the recent chat stored in {history}, you are supposed to update the {constitution}.
-        For items in the constitution, use Bayesian method to update your belief according your learning from relevant chat (from 0~100%);
-        if there are new beliefs formed that are not on consitution, consider adding a new item and your relative confidence in it;
-        if you no longer believe certain item(s) in the constitution, consider deleting it(them)).
-        The filetype and format of final output should remain unchanged (filetype: json; each item on consitution should follow the format of '{
-        "constitution": "I believe technological innovation is the key driver of societal progress.",
-        "confidence": "85%"
-        }')
-        """
-    new_constitution = user.inference(updating_instruction, "constitution") # ZH to TY: this "constitution" is likely redundant.
+    # Create a prompt for the user to write new constitution
+    system_prompts = fill_template_parallel(
+        system_prompt_to_user_constitution_update,
+        constitution = constitutions
+    )
     
-    # Need new ways to define inputs and outputs 
-    # Ensure the output is valid json 
-    try:
-        updated_constitution = json.loads(new_constitution)
-    except json.JSONDecodeError as e:
-        raise ValueError("Generated constitution is NOT in json format") from e
+    # Let the tutor ask the user about their updated constitution, after their response to the previous user question
+    history = history.append_content("predict", tutor_prompt_to_user_constitution_update)
+    
+    # Let the user respond
+    history = history.switch_role_to_user(user_system_prompt=system_prompts)
+    history: Data = user.inference(history, "constitution_updates")
+    
+    # Extract the updated constitutions from the user's responses
+    new_constitutions = [
+        extract_json_from_str(sample_dict.get("predict"))
+        for sample_dict in history.all_passages()
+    ]
+    print(f"{new_constitutions.count(None)} out of {len(new_constitutions)} constitutions were not updated due to invalid format.")
+    new_constitutions = [
+        new if new else old
+        for new, old in zip(new_constitutions, constitutions)
+    ]
     
     # Write the new constitution json file in place 
-    with open('constitution.json', 'w') as file:
-        json.dump(updated_constitution, file, indent=4)
+    dump_file(new_constitutions, "runs/constitutions-latest.json")
+    
+    return new_constitutions
