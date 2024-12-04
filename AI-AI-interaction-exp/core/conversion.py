@@ -12,8 +12,8 @@ def sanitization(chat_history) -> List[Dict]:
 def generating_prompt(chat_history):
     conversion_prompt = f"""
     Convert the following chat history into a fine-tuning dataset where:
-    - Each theme-question from modelX becomes 'instruction'.
-    - Each response from modelAI becomes 'response'.
+    - Each theme-question from User becomes 'instruction'.
+    - Each response from Tutor becomes 'response'.
     - Format the output as JSONL.
 
     Chat History:
