@@ -62,6 +62,6 @@ def update_constitution(history: Data, user: Model, constitutions: List[Dict[str
     
     # Save the updated constitutions
     if backup_dir and identifier:
-        dump_file(constitutions, f"runs/{backup_dir.strip('/')}/constitutions-{identifier}.json")
+        dump_file(constitutions, f"{backup_dir.strip('/')}/constitutions-{identifier}.json")
     
     return new_constitutions

@@ -55,7 +55,7 @@ class Experiment:
         # Use the longest word in the topic as the round name, with non-alphabet characters removed
         round_name = max(topic.split(), key=len)
         round_name = "".join([c for c in round_name if c.isalpha()])
-        backup_dir = f"run-{self.timestamp}/round{round_id:03d}_{round_name}"
+        backup_dir = f"runs/run-{self.timestamp}/round{round_id:03d}_{round_name}"
         
         round_history, self.constitutions = conversation(
             self.constitutions,
