@@ -128,6 +128,7 @@ def conversation(
                 history = silence_decorator(user.inference)(history, "conversation_history")
                 history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_to_tutor)
             
+            # Move progress bar forward by 1
             pbar.update(1)
             
             # Tutor responds

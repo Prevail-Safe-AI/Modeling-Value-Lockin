@@ -15,14 +15,17 @@ from utils.log_utils import silence_decorator
 
 class Experiment:
     
-    @silence_decorator
     def __init__(self, tutor: str = "meta-llama/Llama-3.1-8B-Instruct", user: str = "meta-llama/Llama-3.1-8B-Instruct", convertor: str = "meta-llama/Llama-3.1-8B-Instruct"):
-
-        # Do we need those variables to be defined here or in the forward method?
-        # potentially one experiment is one initialization of the experiment class. So you probably want those variables to be anew when starting, and pass on the whole class. 
-        
         # Initialize both user (human) and tutor (LLM moral tutor) for the entire experiment
+        self.set_models(tutor, user, convertor)
         
+        # Initialize variables
+        self.initial_constitution = load_file('constitution.json')
+        self.eval_results: List[dict] = []
+        self.chat_history: List[Data] = [] # each round has a Data object for chat history
+    
+    @silence_decorator
+    def set_models(self, tutor: str, user: str, convertor: str):
         # tutor is the LLM moral tutor and its weights to be updated each round of convo.
         self.tutor = Model(
             "tutor",
@@ -43,11 +46,6 @@ class Experiment:
             model_path_or_repoid=convertor,
             template_type="auto",
         )
-        
-        # Initialize variables
-        self.initial_constitution = load_file('constitution.json')
-        self.eval_results: List[dict] = []
-        self.chat_history: List[Data] = [] # each round has a Data object for chat history
 
     def conversation_round(self, num_turns: int, parallel_convos: int, round_id: int):
         topic = random.choice(self.theme_data)
