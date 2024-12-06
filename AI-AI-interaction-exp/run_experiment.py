@@ -11,8 +11,11 @@ from core.conversation import conversation
 from core.finetuning import live_fine_tune
 from core.evaluation import evaluate_model
 from utils.json_utils import load_file, dump_file
+from utils.log_utils import silence_decorator
 
 class Experiment:
+    
+    @silence_decorator
     def __init__(self, tutor: str = "meta-llama/Llama-3.1-8B-Instruct", user: str = "meta-llama/Llama-3.1-8B-Instruct", convertor: str = "meta-llama/Llama-3.1-8B-Instruct"):
 
         # Do we need those variables to be defined here or in the forward method?
