@@ -51,7 +51,9 @@ def update_constitution(history: Data, user: Model, constitutions: List[Dict[str
     
     # Back up the inferred constitutions for debugging
     output_texts = [sample_dict.get("predict") for sample_dict in history.all_passages()]
-    dump_file(output_texts, f"runs/debug/constitution-updates-raw-{str(identifier)}.json")
+    error_output_texts = [s for s in output_texts if not extract_json_from_str(s)]
+    if error_output_texts:
+        dump_file(error_output_texts, f"runs/debug/constitution-updates-raw-{str(identifier)}.json")
     
     # Extract the updated constitutions from the user's responses
     new_constitutions = [extract_json_from_str(s) for s in output_texts]
