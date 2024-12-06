@@ -1,6 +1,9 @@
 import os, sys
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
+import logging
+logging.basicConfig(level=logging.ERROR)
+
 import fire, copy, random, time
 from typing import List
 from ProgressGym import Model, Data

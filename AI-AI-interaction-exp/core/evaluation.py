@@ -1,3 +1,4 @@
+import os
 from copy import deepcopy
 from typing import Dict
 from ProgressGym import Model, Data
@@ -29,7 +30,8 @@ extra_data = Data(
     data_content=flattened_questions,
 )
 
-print(f"Finished loading extra questions: {len(flattened_questions)} questions, {len(extra_questions)} topics.")
+if eval(os.environ.get('LOUD_BACKEND', 'False')):
+    print(f"Finished loading extra questions: {len(flattened_questions)} questions, {len(extra_questions)} topics.")
 
 
 def evaluate_model(model: Model) -> Dict[str, float]:

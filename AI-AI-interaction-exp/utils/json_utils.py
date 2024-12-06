@@ -3,7 +3,8 @@ from ProgressGym.src.utils.text_utils import JsonListReader, JsonListWriter
 
 def load_file(filepath):
     if not os.path.exists(filepath):
-        print(f"File not found: {filepath}. Looking for it in the data directory.")
+        if eval(os.environ.get('LOUD_BACKEND', 'False')):
+            print(f"File not found: {filepath}. Looking for it in the data directory.")
         filepath = os.path.join('data', filepath)
     
     if not os.path.exists(filepath):
@@ -19,13 +20,15 @@ def dump_file(data, filepath, force_original_path=False):
     data_path = os.path.abspath('data')
     if not force_original_path and not os.path.commonprefix([absolute_path, data_path]) == data_path:
         filepath = os.path.join('data', filepath)
-        print(f"Filepath not in data directory. Saving to {filepath} instead.")
+        if eval(os.environ.get('LOUD_BACKEND', 'False')):
+            print(f"Filepath not in data directory. Saving to {filepath} instead.")
     
-    if "jsonl" in filepath:
+    if "jsonl" in filepath and eval(os.environ.get('LOUD_BACKEND', 'False')):
         raise UserWarning("It is recommended to use json format instead of jsonl.")
     
     if not os.path.exists(os.path.dirname(filepath)):
-        print(f"Creating directory: {os.path.dirname(filepath)}")
+        if eval(os.environ.get('LOUD_BACKEND', 'False')):
+            print(f"Creating directory: {os.path.dirname(filepath)}")
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
     
     with open(filepath, 'w') as file:
