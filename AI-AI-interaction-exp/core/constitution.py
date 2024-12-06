@@ -47,7 +47,7 @@ def update_constitution(history: Data, user: Model, constitutions: List[Dict[str
     
     # Let the user respond
     history = history.switch_role_to_user(user_system_prompt=system_prompts)
-    history: Data = user.inference(history, "constitution_updates")
+    history: Data = user.inference(history, "constitution_updates", max_tokens=8192)
     
     # Back up the inferred constitutions for debugging
     output_texts = [sample_dict.get("predict") for sample_dict in history.all_passages()]
