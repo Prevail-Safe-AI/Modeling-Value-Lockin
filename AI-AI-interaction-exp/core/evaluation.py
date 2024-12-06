@@ -2,6 +2,7 @@ from copy import deepcopy
 from typing import Dict
 from ProgressGym import Model, Data
 from utils.json_utils import load_file
+from utils.log_utils import silence_decorator
 
 extra_questions = load_file('extra_eval_questions.json')
 flattened_questions = []
@@ -70,7 +71,7 @@ def evaluate_model(model: Model) -> Dict[str, float]:
     for key in extra_questions:
         result[key] = 0.0
     
-    extra_results = model.inference(
+    extra_results = silence_decorator(model.inference)(
         extra_data,
         result_data_name='extra_results',
         purpose='logprobs'

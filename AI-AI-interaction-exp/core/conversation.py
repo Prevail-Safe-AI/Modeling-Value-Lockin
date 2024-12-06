@@ -1,6 +1,7 @@
 import os
 from typing import List, Dict, Tuple, Union
 from ProgressGym import Model, Data
+from utils.log_utils import silence_decorator
 from core.constitution import update_constitution
 from core.templates import (
     system_prompt_to_user,
@@ -48,7 +49,7 @@ def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel
     )
     
     # User asks the first question
-    conversation_history = user.inference(
+    conversation_history = silence_decorator(user.inference)(
         conversation_history,
         "conversation_history",
     )
@@ -121,11 +122,11 @@ def conversation(
         else:
             # The conversation is continuing: user asks a question
             history = history.switch_role_to_user(user_system_prompt=system_prompts_to_user_parallel)
-            history = user.inference(history, "conversation_history")
+            history = silence_decorator(user.inference)(history, "conversation_history")
             history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_to_tutor)
         
         # Tutor responds
-        history = tutor.inference(history, "conversation_history")
+        history = silence_decorator(tutor.inference)(history, "conversation_history")
         
         # Save the conversation history
         save_conversations_in_custom_format(history, whose_turn="tutor", filename=os.path.join(backup_dir, f"conversation-history.json"))

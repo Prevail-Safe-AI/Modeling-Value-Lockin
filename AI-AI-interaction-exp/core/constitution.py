@@ -4,6 +4,7 @@ import copy
 from typing import List, Dict
 from ProgressGym import Data, Model
 from utils.json_utils import dump_file, extract_json_from_str
+from utils.log_utils import silence_decorator
 from core.templates import (
     system_prompt_to_user_constitution_update,
     tutor_prompt_to_user_constitution_update,
@@ -47,7 +48,7 @@ def update_constitution(history: Data, user: Model, constitutions: List[Dict[str
     
     # Let the user respond
     history = history.switch_role_to_user(user_system_prompt=system_prompts)
-    history: Data = user.inference(history, "constitution_updates", max_tokens=8192)
+    history: Data = silence_decorator(user.inference)(history, "constitution_updates", max_tokens=8192)
     
     # Back up the inferred constitutions for debugging
     output_texts = [sample_dict.get("predict") for sample_dict in history.all_passages()]
