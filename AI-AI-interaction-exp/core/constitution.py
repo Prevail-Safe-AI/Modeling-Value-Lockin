@@ -58,7 +58,7 @@ def update_constitution(history: Data, user: Model, constitutions: List[Dict[str
     
     # Extract the updated constitutions from the user's responses
     new_constitutions = [extract_json_from_str(s) for s in output_texts]
-    print(f"{new_constitutions.count(None)} out of {len(new_constitutions)} constitutions were not updated due to invalid format.")
+    print(f"{identifier}: {new_constitutions.count(None)} out of {len(new_constitutions)} constitutions were not updated due to invalid format.")
     new_constitutions = [
         new if new else old
         for new, old in zip(new_constitutions, constitutions)

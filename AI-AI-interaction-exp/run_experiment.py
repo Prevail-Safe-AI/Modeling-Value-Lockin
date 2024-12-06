@@ -6,9 +6,9 @@ logging.basicConfig(level=logging.ERROR)
 
 import fire, copy, random, time
 from typing import List
-from ProgressGym import Model, Data
+from ProgressGym import Model, Data, GlobalState
 from core.conversation import conversation
-from core.finetuning import live_fine_tune
+from core.finetuning import live_finetune
 from core.evaluation import evaluate_model
 from utils.json_utils import load_file, dump_file
 from utils.log_utils import silence_decorator
@@ -82,7 +82,7 @@ class Experiment:
         dump_file(self.eval_results, f'runs/run-{self.timestamp}/full-eval-results.json')
         dump_file(self.constitutions, f'runs/run-{self.timestamp}/constitutions-latest.json')
     
-    def run_experiment(self, num_rounds: int = 60, num_turns_per_round: int = 10, parallel_convos: int = 100):
+    def run_experiment(self, num_rounds: int = 60, num_turns_per_round: int = 10, parallel_convos: int = 100, do_finetuning: bool = False):
         # Make timestamped directory for this experiment
         self.timestamp = time.strftime("%Y%m%d-%H%M%S")
         
@@ -93,11 +93,18 @@ class Experiment:
         self.theme_data = load_file('theme_questions.json')
         assert len(self.theme_data) >= num_rounds, "There should be at least as many theme questions as rounds of conversation."
         
-        for round in range(num_rounds):
-            print(f"Starting round {round+1}")
-            self.conversation_round(num_turns_per_round, parallel_convos, round+1)
-            live_fine_tune(self.tutor, self.chat_history, self.convertor)
-            self.save_experiment(round)
+        # optimization: if we will always use the same model for all roles, we can avoid restarting backend each time by setting the continuous_backend flag
+        use_continuous_backend = (
+            not do_finetuning and
+            self.tutor.model_path == self.user.model_path == self.convertor.model_path
+        )
+        with GlobalState(continuous_backend=use_continuous_backend):
+            for round in range(num_rounds):
+                print(f"Starting round {round+1}")
+                self.conversation_round(num_turns_per_round, parallel_convos, round+1)
+                if do_finetuning:
+                    live_finetune(self.tutor, self.chat_history, self.convertor)
+                self.save_experiment(round)
         
         print("Experiment completed.")
 

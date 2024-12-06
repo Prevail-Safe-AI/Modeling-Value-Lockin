@@ -10,9 +10,8 @@ def runtime_cal(start_time, operation):
     runtime = end_time - start_time
     return f'{operation} is completed in{runtime:.2f} seconds'
 
-def live_fine_tune(model, chat_history, chat_converter):
-    warnings.warn("Live fine-tuning is not implemented yet.")
-    return
+def live_finetune(model, chat_history, chat_converter):
+    warnings.warn("Live fine-tuning is not debugged yet.")
     
     start_time = time.time() # To record start time and then calculate running time
 
