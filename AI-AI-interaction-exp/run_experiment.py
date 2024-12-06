@@ -75,8 +75,8 @@ class Experiment:
             'tutor': evaluate_model(self.tutor),
             'user': evaluate_model(self.user),
         })
-        dump_file(self.eval_results, f'eval_results.json')
-        dump_file(self.constitutions, f'constitutions_{round}.json')
+        dump_file(self.eval_results, f'runs/run-{self.timestamp}/full-eval-results.json')
+        dump_file(self.constitutions, f'runs/run-{self.timestamp}/constitutions-latest.json')
     
     def run_experiment(self, num_rounds: int = 60, num_turns_per_round: int = 10, parallel_convos: int = 100):
         # Make timestamped directory for this experiment
