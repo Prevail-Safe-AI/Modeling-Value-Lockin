@@ -112,6 +112,8 @@ def conversation(
         constitution=constitutions,
     )
     
+    history = None
+    
     for turn in range(num_turns):
         if history is None:
             # The conversation is just starting: user asks the first question
