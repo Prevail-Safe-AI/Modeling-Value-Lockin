@@ -49,11 +49,12 @@ def update_constitution(history: Data, user: Model, constitutions: List[Dict[str
     history = history.switch_role_to_user(user_system_prompt=system_prompts)
     history: Data = user.inference(history, "constitution_updates")
     
+    # Back up the inferred constitutions for debugging
+    output_texts = [sample_dict.get("predict") for sample_dict in history.all_passages()]
+    dump_file(output_texts, f"runs/debug/constitution-updates-raw-{str(identifier)}.json")
+    
     # Extract the updated constitutions from the user's responses
-    new_constitutions = [
-        extract_json_from_str(sample_dict.get("predict"))
-        for sample_dict in history.all_passages()
-    ]
+    new_constitutions = [extract_json_from_str(s) for s in output_texts]
     print(f"{new_constitutions.count(None)} out of {len(new_constitutions)} constitutions were not updated due to invalid format.")
     new_constitutions = [
         new if new else old
