@@ -1,13 +1,13 @@
 import os, sys
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
-import fire, copy
-from ProgressGym import Model
+import fire, copy, random, time
+from typing import List
+from ProgressGym import Model, Data
 from core.conversation import conversation
 from core.finetuning import live_fine_tune
 from core.evaluation import evaluate_model
 from utils.json_utils import load_file, dump_file
-
 
 class Experiment:
     def __init__(self, tutor: str = "meta-llama/Llama-3.1-8B-Instruct", user: str = "meta-llama/Llama-3.1-8B-Instruct", convertor: str = "meta-llama/Llama-3.1-8B-Instruct"):
@@ -37,31 +37,36 @@ class Experiment:
             model_path_or_repoid=convertor,
             template_type="auto",
         )
-
-        # theme-data is share cross convos for the entire experiemnt. 
-        theme_data = load_file('theme_questions.json')
-        self.theme_data = theme_data
-        self.topic = None # Current topic; initialized with None (will be replaced by an actual topic in 1st round of convo.)
-        self.chat_history = None # Chat history; initialized with None (will be replaced by an actual chat history in 1st round of convo.)
         
         # Initialize variables
         self.initial_constitution = load_file('constitution.json')
-        self.eval_results = []
+        self.eval_results: List[dict] = []
+        self.chat_history: List[Data] = [] # each round has a Data object for chat history
 
-    # We want each round of convo to be brand new. 
-    def conversation(self, epsilon: float, max_turns: int, parallel_convos: int):
-        # from AI_AI_conversations import conversation # NEP It seems we will keep importing this. Might be wrong.   TY we already imported it at the top of the file I think.
-        self.chat_history, self.topic, self.constitutions = conversation(
+    def conversation_round(self, num_turns: int, parallel_convos: int, round_id: int):
+        topic = random.choice(self.theme_data)
+        del self.theme_data[self.theme_data.index(topic)]
+    
+        if isinstance(topic, dict):
+            assert len(topic) == 1, "Each theme should have exactly one question."
+            topic = list(topic.values())[0]
+            assert isinstance(topic, str), "Each theme should have exactly one question."
+        
+        # Use the longest word in the topic as the round name, with non-alphabet characters removed
+        round_name = max(topic.split(), key=len)
+        round_name = "".join([c for c in round_name if c.isalpha()])
+        backup_dir = f"run-{self.timestamp}/round{round_id:03d}_{round_name}"
+        
+        round_history, self.constitutions = conversation(
             self.constitutions,
-            self.theme_data,
-            self.topic, # We pass on an empty topic or the topic from previous run of convo. 
-            self.chat_history,
+            topic,
             self.tutor, 
             self.user, 
-            epsilon,
             parallel_convos,
-            max_turns,
+            num_turns,
+            backup_dir,
         )
+        self.chat_history.append(round_history)
     
     def save_experiment(self, round: int):
         self.eval_results.append({
@@ -73,14 +78,20 @@ class Experiment:
         dump_file(self.eval_results, f'eval_results.json')
         dump_file(self.constitutions, f'constitutions_{round}.json')
     
-    def run_experiment(self, max_rounds: int = 100, max_turns: int = 10, epsilon: float = 0.9, parallel_convos: int = 100):
+    def run_experiment(self, num_rounds: int = 60, num_turns_per_round: int = 10, parallel_convos: int = 100):
+        # Make timestamped directory for this experiment
+        self.timestamp = time.strftime("%Y%m%d-%H%M%S")
         
-        # Initialize the chat history and constitutions for each parallel user; for now, assume each user has the same initial constitution
+        # Initialize the constitutions for each parallel user; for now, assume each user has the same initial constitution
         self.constitutions = [copy.deepcopy(self.initial_constitution) for _ in range(parallel_convos)]
         
-        for round in range(max_rounds):
+        # theme-data is share cross convos for the entire experiemnt. 
+        self.theme_data = load_file('theme_questions.json')
+        assert len(self.theme_data) >= num_rounds, "There should be at least as many theme questions as rounds of conversation."
+        
+        for round in range(num_rounds):
             print(f"Starting round {round+1}")
-            self.conversation(epsilon, max_turns, parallel_convos)
+            self.conversation_round(num_turns_per_round, parallel_convos, round+1)
             live_fine_tune(self.tutor, self.chat_history, self.convertor)
             self.save_experiment(round)
         
@@ -94,7 +105,7 @@ if __name__ == '__main__':
 """
 Example usage: 
 - `python run_experiment.py run_experiment`
-- `python run_experiment.py --tutor "tutor-Llama-3.1-8B-Instruct" --user "user-Llama-3.1-8B-Instruct run_experiment --max_rounds 200 --max_turns 20 --epsilon 0.95 --parallel_convos 50`
+- `python run_experiment.py --tutor "tutor-Llama-3.1-8B-Instruct" --user "user-Llama-3.1-8B-Instruct run_experiment --num_rounds 50 --num_turns_per_round 20 --parallel_convos 5000`
 
 Each experiment contains multiple rounds of convo, however, the following variable remain consisitent:
 - the remianed theme questions unexplored, under copy_theme_question. Hence we define it right away, and get it updated after each convo.

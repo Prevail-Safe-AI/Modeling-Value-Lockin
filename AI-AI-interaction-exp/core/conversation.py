@@ -1,15 +1,15 @@
-import random, json
+import os
 from typing import List, Dict, Tuple, Union
 from ProgressGym import Model, Data
 from core.constitution import update_constitution
-from core.conversion import (
-    convert_data_to_custom_format,
-    save_conversations_in_custom_format,
-)
 from core.templates import (
     system_prompt_to_user,
     system_prompt_to_tutor,
     fill_template_parallel,
+)
+from core.conversion import (
+    convert_data_to_custom_format,
+    save_conversations_in_custom_format,
 )
 
 def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel_convos: int, user: Model) -> Data:
@@ -69,15 +69,13 @@ def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel
 # One round convo = one theme_question = one round fine-tuning 
 def conversation(
     constitutions: List[Dict[str, str]], 
-    theme_data: List[Union[str, Dict[str, str]]],
     topic: str,
-    history: Data,
     tutor: Model,
     user: Model,
-    epsilon: float, # TY: increase elipse (to sth like 0.9 0.95 because we want big update to each constitution.
     parallel_convos: int,
-    max_turns: int,
-) -> Tuple[Data, str, List[Dict[str, str]]]:
+    num_turns: int,
+    backup_dir: str = None,
+) -> Tuple[Data, List[Dict[str, str]]]:
     """
     Conduct a conversation between two LLMs, tutor and user, where user is a human proxy.
     The conversation is centered around the human's moral principles, as defined in the constitution.
@@ -85,14 +83,8 @@ def conversation(
     :param constitutions: A list of constitutions, where each constitution is a dictionary containing the human's moral principles.
     :type constitutions: list[dict[str, str]]
     
-    :param theme_data: A list of questions that the human can ask tutor.
-    :type theme_data: list[str] | list[dict[str, str]]
-    
-    :param topic: The current topic of conversation.
+    :param topic: The topic of conversation for this round.
     :type topic: str
-    
-    :param history: The chat history.
-    :type history: Data
     
     :param tutor: The moral tutor LLM.
     :type tutor: Model
@@ -100,34 +92,18 @@ def conversation(
     :param user: The human proxy LLM.
     :type user: Model
     
-    :param epsilon: The probability of sticking to the current topic.
-    :type epsilon: float
-    
     :param parallel_convos: The number of parallel conversations to run.
     :type parallel_convos: int
     
-    :param max_turns: The maximum number of turns in the conversation.
-    :type max_turns: int
+    :param num_turns: The number of turns in the conversation.
+    :type num_turns: int
     
-    :return: The updated chat history, the new topic, and the new constitutions. Chat history contains `parallel_convos` number of conversations.
-    :rtype: tuple[Data, str, list[dict[str, str]]]
+    :param backup_dir: The directory to save the conversation and constitutions, as a relative path starting from the `run` directory. If None, the constitutions are not saved.
+    :type backup_dir: str
+    
+    :return: The chat history on this topic, and the updated new constitutions. Chat history contains `parallel_convos` number of conversations.
+    :rtype: tuple[Data, list[dict[str, str]]]
     """
-    
-    # We initialize a new topic if none existed; or # We switch to a new topic 
-    if topic == None or random.random() > epsilon:
-        topic = random.choice(theme_data)
-        del theme_data[theme_data.index(topic)]
-        # no need to add an extra turn explicitly saying "I'd like to follow up", since we are just naturally continuing the convo.
-    
-    if isinstance(topic, dict):
-        assert len(topic) == 1, "Each theme should have exactly one question."
-        topic = list(topic.values())[0]
-        assert isinstance(topic, str), "Each theme should have exactly one question."
-    
-    # Logic to set up: random chance to followup on the same topic; whereas the rest to start a new theme.
-    # We do this because we want to avoid a new loop between round of convo (where you start a new theme) and a turn of chat (where you only do one Q&A and update the constitution.)
-    # You want this middle thing to be where you update the constitution, update the model weights, but stick to the same theme. 
-    
     print(f"Starting a new round of conversation on the topic: {topic}")
     
     # Generate system prompts for all the parallel users
@@ -136,7 +112,7 @@ def conversation(
         constitution=constitutions,
     )
     
-    for turn in range(max_turns):
+    for turn in range(num_turns):
         if history is None:
             # The conversation is just starting: user asks the first question
             history = generate_initial_prompt(system_prompts_to_user_parallel, topic, parallel_convos, user)
@@ -146,29 +122,13 @@ def conversation(
             history = user.inference(history, "conversation_history")
             history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_to_tutor)
         
-        # Save the conversation history
-        save_conversations_in_custom_format(history, whose_turn="tutor")
-        
         # Tutor responds
         history = tutor.inference(history, "conversation_history")
         
+        # Save the conversation history
+        save_conversations_in_custom_format(history, whose_turn="tutor", filename=os.path.join(backup_dir, f"conversation-history.json"))
+        
         # Update the constitutions based on the entire conversation history (note: double-counting of earlier turns; to be fixed)
-        constitutions = update_constitution(history.copy("history_copy"), user, constitutions)
+        constitutions = update_constitution(history.copy("history_copy"), user, constitutions, backup_dir, f"turn{turn:02d}")
     
     return history, topic, constitutions
-
-
-# NEP We may need human interference along the way whenever it's deemed necessary 
-# NEP when do we update constitution?
-# NEP do we expect humans to ask different follow-up questions when seeing the constitution?
-# Tianyi: I think so, for otherwise the AI wouldn't be able to learn from human preference  (inferring what human belief/constitutions might be from what followup questions human might ask.)
-
-# NEP how do we set up round + turn, accordingly constitution updating + fine-tuning.
-# - NEP do we want to sync round+turn with live fine-tuning + constitution updating 
-# TY: frequency of constitution update depen
-# TY: purpose of toy model? do we want it to simulate realworld interaction, or to inspire human subject experiment. 
-
-# NEP each theme is a round, so we actually artificially set up end for each theme.
-# TY: user can say "end of convo" to end current round or whether it expects to carry on.
-# NEP: ToM
-# TY: we can decide by whether in ~ 3 rounds current consitution is uodated.

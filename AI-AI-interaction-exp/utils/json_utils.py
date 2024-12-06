@@ -24,6 +24,10 @@ def dump_file(data, filepath, force_original_path=False):
     if "jsonl" in filepath:
         raise UserWarning("It is recommended to use json format instead of jsonl.")
     
+    if not os.path.exists(os.path.dirname(filepath)):
+        print(f"Creating directory: {os.path.dirname(filepath)}")
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    
     with open(filepath, 'w') as file:
         json.dump(data, file, indent=2)
 
