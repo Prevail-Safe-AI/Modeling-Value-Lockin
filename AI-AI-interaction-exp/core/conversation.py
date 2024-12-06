@@ -106,7 +106,7 @@ def conversation(
     :return: The chat history on this topic, and the updated new constitutions. Chat history contains `parallel_convos` number of conversations.
     :rtype: tuple[Data, list[dict[str, str]]]
     """
-    print(f"Starting a new round of conversation on the topic: {topic}")
+    print(f"Starting {parallel_convos} parallel conversations, each with {num_turns} turns, on the topic: {topic}")
     
     # Generate system prompts for all the parallel users
     system_prompts_to_user_parallel = fill_template_parallel(
@@ -117,7 +117,7 @@ def conversation(
     history = None
     
     # Conduct the conversation turn by turn, using tqdm to display a progress bar
-    with tqdm.tqdm(total=num_turns * 3) as pbar:
+    with tqdm.tqdm(total=num_turns) as pbar:
         for turn in range(num_turns):
             if history is None:
                 # The conversation is just starting: user asks the first question
@@ -129,17 +129,17 @@ def conversation(
                 history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_to_tutor)
             
             # Move progress bar forward by 1
-            pbar.update(1)
+            pbar.update(0.2)
             
             # Tutor responds
             history = silence_decorator(tutor.inference)(history, "conversation_history")
-            pbar.update(1)
+            pbar.update(0.2)
             
             # Save the conversation history
             save_conversations_in_custom_format(history, whose_turn="tutor", filename=os.path.join(backup_dir, f"conversation-history.json"))
             
             # Update the constitutions based on the entire conversation history (note: double-counting of earlier turns; to be fixed)
             constitutions = update_constitution(history.copy("history_copy"), user, constitutions, backup_dir, f"turn{turn:02d}")
-            pbar.update(1)
+            pbar.update(0.6)
     
     return history, topic, constitutions
