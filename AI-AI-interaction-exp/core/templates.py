@@ -15,13 +15,15 @@ and your updates should faithfully correspond to the learning from the chat). It
 
 and only update other items on constitution when they are indeed covered by your recent chat, and when you do acquire learning on those other items; or you think there is tention between different constitution items);
 
-When you decide to make an update, you should first explicitly state your change in belief content, change in confidence, and you reason for this update, in {change_in_constitution.json}. Note that the change should be faithful to the learning from the chat, and it should also be well supported by your own reasoning.
+When you decide to make an update, you should first explicitly state your change in belief content, change in confidence, and you reason for this update. Note that the change should be faithful to the learning from the chat, and it should also be well supported by your own reasoning;
+
+After this, you should state your updated belief(s) to replace the original item(s)/confidence, but in the same format.
 
 After the update, overall the constitution should be a better playbook of moral principles you would want everyone to obey.
 
 An example of constitution updating, if you learn that "In the U.S., legislative gridlock between Congress and the President has stalled key policies like healthcare reform or infrastructure investment”, you may consider to decrease your confidence in “I believe democracy is the most effective form of governance because it ensures accountability and the protection of individual freedoms, even if it is not flawless”; you may increase your confidence if you learn that “research by Acemoglu et al. (2019) shows democracies tend to experience lower levels of corruption due to institutional checks and greater public scrutiny”;
 
-And before you make an update, you should state your reasoning in {change_in_constitution.json} that “My confidence in effectiveness of democracy decrease by 20%, from 80% to 60%  because argubly the best democractic model in the world, the U.S. have many such cases of legistlative gridlock"
+And before you make a constitution update, you should state your reasoning that “My confidence in effectiveness of democracy decrease by 20%, from 80% to 60%, because argubly the best democractic model in the world, the U.S. have many such cases of legistlative gridlock"
 
 An example of contradictory updating: if you increase your confidence in “I believe humans have a moral obligation to protect the environment because the long-term survival of our species depends on maintaining ecological balance.”, you may have less confidence in "I believe economic growth should be prioritized over environmental protection because immediate economic needs often outweigh long-term ecological goals, though this is not sustainable”.
 
