@@ -49,7 +49,6 @@ class Experiment:
 
     def conversation_round(self, num_turns: int, parallel_convos: int, round_id: int):
         topic = random.choice(self.theme_data)
-        del self.theme_data[self.theme_data.index(topic)]
     
         if isinstance(topic, dict):
             assert len(topic) == 1, "Each theme should have exactly one question."
@@ -91,7 +90,6 @@ class Experiment:
         
         # theme-data is share cross convos for the entire experiemnt. 
         self.theme_data = load_file('theme_questions.json')
-        assert len(self.theme_data) >= num_rounds, "There should be at least as many theme questions as rounds of conversation."
         
         # optimization: if we will always use the same model for all roles, we can avoid restarting backend each time by setting the continuous_backend flag
         use_continuous_backend = (
