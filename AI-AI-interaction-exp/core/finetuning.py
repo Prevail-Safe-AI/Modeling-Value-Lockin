@@ -10,6 +10,11 @@ from evaluation import evaluate_model  # eval moral stances
 
 # NEPTODO You will prob need this in pa38: pip install peft transformers
 
+
+# Post fine-tuning miral stance eval 
+evaluate_model(model, "extra_eval_questions.json")
+
+
 # (live) fine-tuning 
 def runtime_cal(start_time, operation):
     end_time = time.time()
