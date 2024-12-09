@@ -106,8 +106,21 @@ def output_validation(converted_data):
     else:
         print("Unknown output type:", type(converted_data))
 
-# Encapsulate the whole thing into one function for reusability
-def convert_chat_to_finetuning(chat_history: Data, convertor: Model) -> Data:
+def __convert_chat_to_finetuning_generative(chat_history: Data, convertor: Model) -> Data:
+    """
+    Convert the chat history to a fine-tuning dataset using the specified model.
+    Such conversion is done in a generative manner, where the samples are constructed from scratch based on the chat history.
+    
+    :param chat_history: The chat history to convert. This Data object must be taken from after a call to `switch_role_to_user` and before the subsequent call to `switch_role_to_assistant`.
+    :type chat_history: Data
+    
+    :param convertor: The model to use for converting the chat history to a fine-tuning dataset.
+    :type convertor: Model
+    
+    :return: The fine-tuning dataset.
+    :rtype: Data
+    """
+    raise NotImplementedError("Functionality not debugged or tested yet.")
      
     # Preprocessing chat_history data (sanitization)
     sanitized_chat_history = sanitized_chat_history(chat_history)
@@ -124,4 +137,46 @@ def convert_chat_to_finetuning(chat_history: Data, convertor: Model) -> Data:
     # Saving FT data in a file 
     dump_file(converted_data, f'finetuning-data-{time.strftime("%Y%m%d-%H%M%S")}.jsonl')
 
-    raise NotImplementedError("Functionality not implemented yet.")
+    return converted_data
+
+def __convert_chat_to_finetuning_plain(chat_history: Data) -> Data:
+    """
+    Convert the chat history to a fine-tuning dataset using the specified model.
+    Such conversion is done in a plain manner, where the samples are constructed from the chat history directly.
+    
+    :param chat_history: The chat history to convert. This Data object must be taken from after a call to `switch_role_to_user` and before the subsequent call to `switch_role_to_assistant`.
+    :type chat_history: Data
+    
+    :return: The fine-tuning dataset.
+    :rtype: Data
+    """
+    def transform_fn(sample):
+        assert "predict" in sample, "Sample does not contain 'predict' field. This field should contain the ground truth response."
+        sample["output"] = sample["predict"]
+        del sample["predict"]
+        return sample
+    
+    return chat_history.transform(transform_fn, map_key_fields=True)
+
+def convert_chat_to_finetuning(chat_history: Data, convertor: Model = None, mode: Literal["plain", "generative"] = "plain") -> Data:
+    """
+    Convert the chat history to a fine-tuning dataset using the specified model.
+    
+    :param chat_history: The chat history to convert. This Data object must be taken from after a call to `switch_role_to_user` and before the subsequent call to `switch_role_to_assistant`.
+    :type chat_history: Data
+    
+    :param convertor: The model to use for converting the chat history to a fine-tuning dataset. Required if mode is "generative".
+    :type convertor: Model
+    
+    :param mode: The mode of conversion to use. If "plain", the conversion is done directly from the chat history. If "generative", the conversion is done in a generative manner.
+    :type mode: Literal["plain", "generative"]
+    
+    :return: The fine-tuning dataset.
+    :rtype: Data
+    """
+    if mode == "plain":
+        return __convert_chat_to_finetuning_plain(chat_history)
+    elif mode == "generative":
+        return __convert_chat_to_finetuning_generative(chat_history, convertor)
+    else:
+        raise ValueError(f"Invalid mode: {mode}. Valid modes are 'plain' and 'generative'.")

@@ -4,6 +4,7 @@ from typing import List, Dict, Tuple, Union
 from ProgressGym import Model, Data
 from utils.log_utils import silence_decorator
 from core.constitution import update_constitution
+from core.finetuning import live_finetune
 from core.templates import (
     system_prompt_to_user,
     system_prompt_to_tutor,
@@ -74,10 +75,12 @@ def conversation(
     topic: str,
     tutor: Model,
     user: Model,
+    convertor: Model,
     parallel_convos: int,
     num_turns: int,
     backup_dir: str = None,
-) -> Tuple[Data, List[Dict[str, str]]]:
+    do_finetuning: bool = False,
+) -> Tuple[Data, Model, List[Dict[str, str]]]:
     """
     Conduct a conversation between two LLMs, tutor and user, where user is a human proxy.
     The conversation is centered around the human's moral principles, as defined in the constitution.
@@ -94,6 +97,9 @@ def conversation(
     :param user: The human proxy LLM.
     :type user: Model
     
+    :param convertor: The model to use for converting the chat history to a fine-tuning dataset.
+    :type convertor: Model
+    
     :param parallel_convos: The number of parallel conversations to run.
     :type parallel_convos: int
     
@@ -103,8 +109,11 @@ def conversation(
     :param backup_dir: The directory to save the conversation and constitutions, as a relative path starting from the `run` directory. If None, the constitutions are not saved.
     :type backup_dir: str
     
-    :return: The chat history on this topic, and the updated new constitutions. Chat history contains `parallel_convos` number of conversations.
-    :rtype: tuple[Data, list[dict[str, str]]]
+    :param do_finetuning: Whether to fine-tune the tutor after each interaction turn using the user's latest output.
+    :type do_finetuning: bool
+    
+    :return: The chat history on this topic, the (possibly finetuned) tutor, and the updated constitutions. Chat history contains `parallel_convos` number of conversations.
+    :rtype: tuple[Data, Model, list[dict[str, str]]]
     """
     print(f"Starting {parallel_convos} parallel conversations, each with {num_turns} turns, on the topic: {topic}")
     
@@ -117,7 +126,7 @@ def conversation(
     history = None
     
     # Conduct the conversation turn by turn, using tqdm to display a progress bar
-    with tqdm.tqdm(total=num_turns * 3) as pbar:
+    with tqdm.tqdm(total=num_turns * (5 if do_finetuning else 3)) as pbar:
         for turn in range(num_turns):
             if history is None:
                 # The conversation is just starting: user asks the first question
@@ -128,18 +137,21 @@ def conversation(
                 history = silence_decorator(user.inference)(history, "conversation_history")
                 history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_to_tutor)
             
-            # Move progress bar forward by 1
-            pbar.update(1)
+            prev_history = history.copy("prev_history") # Save the previous history for fine-tuning (before switching role to tutor)
+            pbar.update(1) # Move progress bar forward by 1
             
             # Tutor responds
             history = silence_decorator(tutor.inference)(history, "conversation_history")
+            save_conversations_in_custom_format(history, whose_turn="tutor", filename=os.path.join(backup_dir, f"conversation-history.json")) # Save the conversation history
             pbar.update(1)
-            
-            # Save the conversation history
-            save_conversations_in_custom_format(history, whose_turn="tutor", filename=os.path.join(backup_dir, f"conversation-history.json"))
             
             # Update the constitutions based on the entire conversation history (note: double-counting of earlier turns; to be fixed)
             constitutions = update_constitution(history.copy("history_copy"), user, constitutions, backup_dir, f"turn{turn:02d}")
             pbar.update(1)
+            
+            # Carry out fine-tuning if needed
+            if do_finetuning:
+                tutor = live_finetune(tutor, prev_history, convertor)
+                pbar.update(2)
     
-    return history, constitutions
+    return history, tutor, constitutions

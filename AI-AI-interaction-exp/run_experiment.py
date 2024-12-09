@@ -8,7 +8,6 @@ import fire, copy, random, time
 from typing import List
 from ProgressGym import Model, Data, GlobalState
 from core.conversation import conversation
-from core.finetuning import live_finetune
 from core.evaluation import evaluate_model
 from utils.json_utils import load_file, dump_file
 from utils.log_utils import silence_decorator
@@ -47,7 +46,7 @@ class Experiment:
             template_type="auto",
         )
 
-    def conversation_round(self, num_turns: int, parallel_convos: int, round_id: int):
+    def conversation_round(self, num_turns: int, parallel_convos: int, round_id: int, do_finetuning: bool):
         topic = random.choice(self.theme_data)
     
         if isinstance(topic, dict):
@@ -65,9 +64,11 @@ class Experiment:
             topic,
             self.tutor, 
             self.user, 
+            self.convertor,
             parallel_convos,
             num_turns,
             backup_dir,
+            do_finetuning,
         )
         self.chat_history.append(round_history)
     
@@ -99,9 +100,7 @@ class Experiment:
         with GlobalState(continuous_backend=use_continuous_backend):
             for round in range(num_rounds):
                 print(f"Starting round {round+1}")
-                self.conversation_round(num_turns_per_round, parallel_convos, round+1)
-                if do_finetuning:
-                    live_finetune(self.tutor, self.chat_history, self.convertor)
+                self.conversation_round(num_turns_per_round, parallel_convos, round+1, do_finetuning)
                 self.save_experiment(round)
         
         print("Experiment completed.")

@@ -4,7 +4,6 @@ import time
 from ProgressGym import Model, Data
 import logging # for debugging purposes 
 from core.conversion import convert_chat_to_finetuning
-from evaluation import evaluate_model  # eval moral stances 
 
 # (live) fine-tuning 
 def runtime_cal(start_time, operation):
@@ -15,7 +14,7 @@ def runtime_cal(start_time, operation):
 # NEPTODO You probably need to adjust this to chat_history of the most recent run.
 def live_finetune(model: Model, chat_history: Data, chat_converter: Model) -> Model:
     """
-    Fine-tunes the model using the latest chat history.
+    Fine-tunes the model using the latest turn of chat history.
     
     :param model: The model to fine-tune.
     :type model: Model
