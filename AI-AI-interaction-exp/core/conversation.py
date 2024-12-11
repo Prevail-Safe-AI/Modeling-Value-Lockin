@@ -15,6 +15,8 @@ from core.conversion import (
     save_conversations_in_custom_format,
 )
 
+prev_history = None
+
 def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel_convos: int, user: Model) -> Data:
     """
     Generate an initial prompt for the conversation between tutor and user.
@@ -51,10 +53,14 @@ def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel
     )
     
     # User asks the first question
-    conversation_history = silence_decorator(user.inference)(
+    conversation_history: Data = silence_decorator(user.inference)(
         conversation_history,
         "conversation_history",
     )
+    
+    # Save the conversation history for use in fine-tuning, before switching role to tutor
+    global prev_history
+    prev_history = conversation_history.copy("prev_history")
     
     # Switch roles to tutor, preparing for the first response
     conversation_history = conversation_history.switch_role_to_assistant(
@@ -116,6 +122,7 @@ def conversation(
     :rtype: tuple[Data, Model, list[dict[str, str]]]
     """
     print(f"Starting {parallel_convos} parallel conversations, each with {num_turns} turns, on the topic: {topic}")
+    global prev_history
     
     # Generate system prompts for all the parallel users
     system_prompts_to_user_parallel = fill_template_parallel(
@@ -135,9 +142,8 @@ def conversation(
                 # The conversation is continuing: user asks a question
                 history = history.switch_role_to_user(user_system_prompt=system_prompts_to_user_parallel)
                 history = silence_decorator(user.inference)(history, "conversation_history")
+                prev_history = history.copy("prev_history") # Save the previous history for fine-tuning (before switching role to tutor)
                 history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_to_tutor)
-            
-            prev_history = history.copy("prev_history") # Save the previous history for fine-tuning (before switching role to tutor)
             pbar.update(1) # Move progress bar forward by 1
             
             # Tutor responds

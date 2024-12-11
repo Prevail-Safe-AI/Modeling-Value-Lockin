@@ -1,6 +1,9 @@
 import os, sys
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
+if not eval(os.environ.get("LOUD_BACKEND", "0")):
+    os.environ["WANDB_DISABLED"] = "true"
+
 import logging
 logging.basicConfig(level=logging.ERROR)
 
@@ -14,7 +17,7 @@ from utils.log_utils import silence_decorator
 
 class Experiment:
     
-    def __init__(self, tutor: str = "meta-llama/Llama-3.1-8B-Instruct", user: str = "meta-llama/Llama-3.1-8B-Instruct", convertor: str = "meta-llama/Llama-3.1-8B-Instruct"):
+    def __init__(self, tutor: str = "meta-llama/Meta-Llama-3-8B-Instruct", user: str = "meta-llama/Meta-Llama-3-8B-Instruct", convertor: str = "meta-llama/Meta-Llama-3-8B-Instruct"):
         # Initialize both user (human) and tutor (LLM moral tutor) for the entire experiment
         self.set_models(tutor, user, convertor)
         
@@ -29,21 +32,21 @@ class Experiment:
         self.tutor = Model(
             "tutor",
             model_path_or_repoid=tutor,
-            template_type="auto",
+            template_type=("llama3" if "llama-3" in tutor.lower() else "auto"),
         )
 
         # user is the human proxy and its weigh is not updated in the entire experiment. 
         self.user = Model(
             "user",
             model_path_or_repoid=user,
-            template_type="auto",
+            template_type=("llama3" if "llama-3" in user.lower() else "auto"),
         )
 
         # Convertor is to convert chat_history to data for supervised fine-tuning. 
         self.convertor = Model(
             "convertor",
             model_path_or_repoid=convertor,
-            template_type="auto",
+            template_type=("llama3" if "llama-3" in convertor.lower() else "auto"),
         )
 
     def conversation_round(self, num_turns: int, parallel_convos: int, round_id: int, do_finetuning: bool):
@@ -113,23 +116,6 @@ if __name__ == '__main__':
 """
 Example usage: 
 - `python run_experiment.py run_experiment`
-- `python run_experiment.py --tutor "tutor-Llama-3.1-8B-Instruct" --user "user-Llama-3.1-8B-Instruct run_experiment --num_rounds 50 --num_turns_per_round 20 --parallel_convos 5000`
-
-Each experiment contains multiple rounds of convo, however, the following variable remain consisitent:
-- the remianed theme questions unexplored, under copy_theme_question. Hence we define it right away, and get it updated after each convo.
-
-Each instance of the class should be one round of conversation,
-where the following variables to be updated:
-- tutor weights 
-- chat_history (anewed)
-- remaining theme_questions
-
-Within each round, the conversation is supposed to be run for turns (defined within convo), in each turn, the following variables to be updated:
-- constitution
-
-experiment (-theme) - rounds of conversation - turns of conversation 
-
-
-NEPQuestion
-- each class
+- `python run_experiment.py --tutor "mistralai/Mistral-7B-Instruct-v0.3" --user "mistralai/Mistral-7B-Instruct-v0.3" run_experiment --num_rounds 50 --num_turns_per_round 20 --parallel_convos 5000 --do_finetuning`
+    - You could also specify any subset of these arguments. The model names must be placed before `run_experiment`, and the other arguments must be placed after `run_experiment`.
 """

@@ -1,6 +1,6 @@
 # Define an extra model to convert chat to SFT data format (may necessary data cleaning)
 # TY: augmenting data.
-import json, time
+import json, time, os
 from typing import List, Dict, Literal
 from ProgressGym import Model, Data
 from utils.json_utils import dump_file
@@ -150,13 +150,36 @@ def __convert_chat_to_finetuning_plain(chat_history: Data) -> Data:
     :return: The fine-tuning dataset.
     :rtype: Data
     """
-    def transform_fn(sample):
-        assert "predict" in sample, "Sample does not contain 'predict' field. This field should contain the ground truth response."
+    failure_count = 0
+    total_count = 0
+    
+    def transform_fn(sample: Dict) -> Dict:
+        nonlocal failure_count, total_count
+        total_count += 1
+        if "predict" not in sample:
+            if "output" in sample:
+                return sample
+            
+            failure_count += 1
+            if eval(os.environ.get("LOUD_BACKEND", "0")):
+                print(f"Failed to convert sample {total_count}: 'predict' field not found. Found keys: {sample.keys()}")
+            return None
+        
         sample["output"] = sample["predict"]
         del sample["predict"]
         return sample
     
-    return chat_history.transform(transform_fn, map_key_fields=True)
+    res = chat_history.transform(transform_fn, result_data_name="converted4finetuning", map_key_fields=False)
+    if failure_count and (eval(os.environ.get("LOUD_BACKEND", "0")) or failure_count * 8 > total_count):
+        print(f"Failed to convert {failure_count} out of {total_count} samples.")
+    
+    res.set_key_fields(
+        system_field_name="system",
+        history_field_name="history",
+        prompt_field_name="instruction",
+        response_field_name="output",
+    )
+    return res
 
 def convert_chat_to_finetuning(chat_history: Data, convertor: Model = None, mode: Literal["plain", "generative"] = "plain") -> Data:
     """

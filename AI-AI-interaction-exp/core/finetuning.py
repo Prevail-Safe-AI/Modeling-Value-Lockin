@@ -33,7 +33,7 @@ def live_finetune(model: Model, chat_history: Data, chat_converter: Model) -> Mo
     start_time = time.time() # To record start time and then calculate running time
 
     # data conversation 
-    ft_data: Data = convert_chat_to_finetuning(chat_history, model=chat_converter)
+    ft_data: Data = convert_chat_to_finetuning(chat_history, convertor=chat_converter)
     logging.info(runtime_cal(start_time,"Data conversion"))
     start_time = time.time() # Reset start time for fine-tuning
 
