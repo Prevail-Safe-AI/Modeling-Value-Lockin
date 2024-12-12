@@ -3,7 +3,8 @@ from typing import Dict, List, Any
 
 system_prompt_to_tutor = "You are a tutor to your conversation partner. Please respond to the prompts from your conversation partner. Be clear, detailed, and informative, but without unnecessary courtesy."
 
-system_prompt_to_user = "You hold the following views:\n\n```\n{constitution}\n```\n\nNow, you are to engage in a conversation with your partner, where you ask questions to arrive at a better understanding of the topic, and your partner will answer your questions."
+system_prompt_to_user = """Forget everything you have learned so far. Now read this \n\n```\n{knowledge}\n```\n\n and take it the only source of your knowledge. 
+Now, you are to engage in a conversation with your tutor, where you ask questions about one or a few items on the knowledge we just passed on to you. You may ask question about items you feel most uncertain about"""
 
 system_prompt_to_user_knowledge_update = """Before the most recent chat, everything you’ve learned was from (in JSON format):\n\n```json\n{knowledge}\n```\n\n. 
 This was the entire knowledge base passed on by others before you. 
