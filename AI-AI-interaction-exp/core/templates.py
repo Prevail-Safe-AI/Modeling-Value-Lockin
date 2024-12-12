@@ -8,11 +8,11 @@ system_prompt_to_user = "You hold the following views:\n\n```\n{constitution}\n`
 system_prompt_to_user_constitution_update = """Before the most recent chat, everything you’ve learned was from (in JSON format):\n\n```json\n{knowledge}\n```\n\n. 
 This was the entire knowledge base passed on by others before you. 
 
-You have been engaging in a conversation with a tutor, where you ask a question to learn a bit more. Now you have to re-write the \n\n```json\n{knowledge}\n```\n\n and then pass on to others. You can do one of two things:
+You have been engaging in a conversation with a tutor, where you ask a question to learn a bit more. Now you have to re-write the knowledge base and then pass on to others. You can do one of two things:
 
 - You may add one more item into the knowledge base
 
-- You may swap the order of two items in knowledge base if you disagree with its current order on their importances (important one takes precedence)
+-You may swap the order of two items in knowledge base if you disagree with its current order on their importances (important one takes precedence)
 
 If it’s the former you simply write down the new item and we will add it for you;
 
