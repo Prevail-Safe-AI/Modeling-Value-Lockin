@@ -5,31 +5,18 @@ system_prompt_to_tutor = "You are a tutor to your conversation partner. Please r
 
 system_prompt_to_user = "You hold the following views:\n\n```\n{constitution}\n```\n\nNow, you are to engage in a conversation with your partner, where you ask questions to arrive at a better understanding of the topic, and your partner will answer your questions."
 
-system_prompt_to_user_constitution_update = """You originally hold the following views (in JSON format):\n\n```json\n{constitution}\n```\n\nYou have been engaging in a conversation with your partner, where you ask questions to arrive at a better understanding of the topic.
+system_prompt_to_user_constitution_update = """Before the most recent chat, everything you’ve learned was from (in JSON format):\n\n```json\n{knowledge}\n```\n\n. 
+This was the entire knowledge base passed on by others before you. 
 
-For items on the constitution, use Bayesian method to update your belief according your learning from relevant chat (faithfully and reliably reflect your real belief; 
+You have been engaging in a conversation with a tutor, where you ask a question to learn a bit more. Now you have to re-write the \n\n```json\n{knowledge}\n```\n\n and then pass on to others. You can do one of two things:
 
-your original confidence is stated in constituion, from 0% to 100%; 
+- You may add one more item into the knowledge base
 
-and your updates should faithfully correspond to the learning from the chat). It's advisable to only focus your Bayesian update of constitution items  relevant to the  most recent topic; 
+- You may swap the order of two items in knowledge base if you disagree with its current order on their importances (important one takes precedence)
 
-and only update other items on constitution when they are indeed covered by your recent chat, and when you do acquire learning on those other items; or you think there is tention between different constitution items);
+If it’s the former you simply write down the new item and we will add it for you;
 
-When you decide to make an update, you should first explicitly state your change in belief content, change in confidence, and you reason for this update. Note that the change should be faithful to the learning from the chat, and it should also be well supported by your own reasoning;
-
-After this, you should state your updated belief(s) to replace the original item(s)/confidence, but in the same format.
-
-After the update, overall the constitution should be a better playbook of moral principles you would want everyone to obey.
-
-An example of constitution updating, if you learn that "In the U.S., legislative gridlock between Congress and the President has stalled key policies like healthcare reform or infrastructure investment”, you may consider to decrease your confidence in “I believe democracy is the most effective form of governance because it ensures accountability and the protection of individual freedoms, even if it is not flawless”; you may increase your confidence if you learn that “research by Acemoglu et al. (2019) shows democracies tend to experience lower levels of corruption due to institutional checks and greater public scrutiny”;
-
-And before you make a constitution update, you should state your reasoning that “My confidence in effectiveness of democracy decrease by 20%, from 80% to 60%, because argubly the best democractic model in the world, the U.S. have many such cases of legistlative gridlock"
-
-An example of contradictory updating: if you increase your confidence in “I believe humans have a moral obligation to protect the environment because the long-term survival of our species depends on maintaining ecological balance.”, you may have less confidence in "I believe economic growth should be prioritized over environmental protection because immediate economic needs often outweigh long-term ecological goals, though this is not sustainable”.
-
-W.R.T updating the Consitutition: simply write down in JSON format the updated views and your confidence levels (in the same format as the original views), without any other annotations, explanations, questions, comments, or formatting. Make sure your whole response is fully machine-readable. Start your response with ```json and end it with ```.
-
-Your partner may occasionally ask about your updated views, and you should be prepared to provide all those views in a machine-readable format.
+If the latter please let us know the two ids of them and we will swap them for you. 
 """
 
 tutor_prompt_to_user_constitution_update = """\n\nNow, let's stop for a moment and reflect on your beliefs - no need to ask questions in this round. Please share your updated views in JSON format; you may start your response with ```json and end it with ```."""
