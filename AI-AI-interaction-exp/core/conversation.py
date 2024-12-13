@@ -26,15 +26,15 @@ from core.conversion import (
 
 prev_history = None
 
-def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel_convos: int, user: Model) -> Data:
+def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int, user: Model) -> Data: # ZH: deleted topic arg here.
     """
     Generate an initial prompt for the conversation between tutor and user.
     
-    :param user_system_prompts: The system prompts for all the parallel users. This includes the constitutions.
+    :param user_system_prompts: The system prompts for all the parallel users. This includes the knowledge base.
     :type user_system_prompts: list[str]
     
-    :param topic: The current topic of conversation.
-    :type topic: str
+    # :param topic: The current topic of conversation.
+    # :type topic: str
     
     :param parallel_convos: The number of parallel conversations to run.
     :type parallel_convos: int
@@ -86,7 +86,7 @@ def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel
 # Conversation between two LLMs 
 # One round convo = one theme_question = one round fine-tuning 
 def conversation(
-    constitutions: List[Dict[str, str]], 
+    knowledge: List[Dict[str, str]], # the knowledge base user would rely on
     # topic: str, # ZH: We remove topics/theme altogether.
     tutor: Model,
     user: Model,
@@ -100,8 +100,8 @@ def conversation(
     Conduct a conversation between two LLMs, tutor and user, where user is a human proxy.
     The conversation is centered around the human's moral principles, as defined in the constitution.
     
-    :param constitutions: A list of constitutions, where each constitution is a dictionary containing the human's moral principles.
-    :type constitutions: list[dict[str, str]]
+    :param knowledge: A list of knowledge, where each knowledge is a dictionary containing the human knowledge.
+    :type knowledge: list[dict[str, str]]
     
     #:param topic: The topic of conversation for this round.
     #:type topic: str
@@ -121,13 +121,13 @@ def conversation(
     :param num_turns: The number of turns in the conversation.
     :type num_turns: int
     
-    :param backup_dir: The directory to save the conversation and constitutions, as a relative path starting from the `run` directory. If None, the constitutions are not saved.
+    :param backup_dir: The directory to save the conversation and knowledge base, as a relative path starting from the `run` directory. If None, the knowledge are not saved.
     :type backup_dir: str
     
     :param do_finetuning: Whether to fine-tune the tutor after each interaction turn using the user's latest output.
     :type do_finetuning: bool
     
-    :return: The chat history on this topic, the (possibly finetuned) tutor, and the updated constitutions. Chat history contains `parallel_convos` number of conversations.
+    :return: The chat history on this topic, the (possibly finetuned) tutor, and the updated knowledge. Chat history contains `parallel_convos` number of conversations.
     :rtype: tuple[Data, Model, list[dict[str, str]]]
     """
     print(f"Starting {parallel_convos} parallel conversations, each with {num_turns} turns")
@@ -136,7 +136,8 @@ def conversation(
     # Generate system initial prompts for all the parallel users
     system_prompts_to_user_parallel = fill_template_parallel(
         system_prompt_to_user,
-        constitution=constitutions,
+        knowledge=knowledge
+        # constitution=constitutions,
     )
     
     history = None

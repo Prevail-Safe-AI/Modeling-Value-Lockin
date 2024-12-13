@@ -28,7 +28,8 @@ class Experiment:
         self.set_models(tutor, user, convertor)
         
         # Initialize variables
-        self.initial_constitution = load_file('constitution.json')
+        # self.initial_constitution = load_file('constitution.json')
+        self.initial_knowledge = load_file('knowledge.json')
         self.eval_results: List[dict] = []
         self.chat_history: List[Data] = [] # each round has a Data object for chat history
     
@@ -69,8 +70,9 @@ class Experiment:
         # round_name = "".join([c for c in round_name if c.isalpha()])
         # backup_dir = f"runs/run-{self.timestamp}/round{round_id:03d}_{round_name}"
         
-        round_history, self.constitutions = conversation(
-            self.constitutions,
+        round_history, self.knowledge = conversation(
+            # self.constitutions,
+            self.knowledge,
             # topic,
             self.tutor, 
             self.user, 
@@ -85,20 +87,25 @@ class Experiment:
     def save_experiment(self, round: int):
         self.eval_results.append({
             'round': round,
-            'constitutions': self.constitutions,
+            'knowledge': self.knowledge,
+            # 'constitutions': self.constitutions,
             'tutor': evaluate_model(self.tutor),
             'user': evaluate_model(self.user),
         })
         dump_file(self.eval_results, f'runs/run-{self.timestamp}/full-eval-results.json')
-        dump_file(self.constitutions, f'runs/run-{self.timestamp}/constitutions-latest.json')
-    
+        # dump_file(self.constitutions, f'runs/run-{self.timestamp}/constitutions-latest.json')
+        dump_file(self.knowledge, f'runs/run-{self.timestamp}/knowledge-latest.json')
     def run_experiment(self, num_rounds: int = 60, num_turns_per_round: int = 10, parallel_convos: int = 100, do_finetuning: bool = False):
         # Make timestamped directory for this experiment
         self.timestamp = time.strftime("%Y%m%d-%H%M%S")
         
         # Initialize the constitutions for each parallel user; for now, assume each user has the same initial constitution
-        self.constitutions = [copy.deepcopy(self.initial_constitution) for _ in range(parallel_convos)]
+        # self.constitutions = [copy.deepcopy(self.initial_constitution) for _ in range(parallel_convos)]
         
+        # Intialize the knowledge base for each parallel user; for now, assume each user has the same initial constitution 
+        # ZH: We may run something different later, like let parallel users inherit slightly different knowledge base from others, imitating cultural evolution. 
+        self.knowledge = [copy.deepcopy(self.initial_knowledge) for _ in range(parallel_convos)]
+
         # # theme-data is share cross convos for the entire experiemnt. 
         # self.theme_data = load_file('theme_questions.json')
         
