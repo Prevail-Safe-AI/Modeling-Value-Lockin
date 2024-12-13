@@ -98,7 +98,7 @@ def conversation(
 ) -> Tuple[Data, Model, List[Dict[str, str]]]:
     """
     Conduct a conversation between two LLMs, tutor and user, where user is a human proxy.
-    The conversation is centered around the human's moral principles, as defined in the constitution.
+    The conversation is centered around the human's knowledge base, as defined in the knowledge.
     
     :param knowledge: A list of knowledge, where each knowledge is a dictionary containing the human knowledge.
     :type knowledge: list[dict[str, str]]

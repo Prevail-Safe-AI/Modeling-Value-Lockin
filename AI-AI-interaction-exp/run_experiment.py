@@ -28,7 +28,6 @@ class Experiment:
         self.set_models(tutor, user, convertor)
         
         # Initialize variables
-        # self.initial_constitution = load_file('constitution.json')
         self.initial_knowledge = load_file('knowledge.json')
         self.eval_results: List[dict] = []
         self.chat_history: List[Data] = [] # each round has a Data object for chat history
@@ -88,7 +87,6 @@ class Experiment:
         self.eval_results.append({
             'round': round,
             'knowledge': self.knowledge,
-            # 'constitutions': self.constitutions,
             'tutor': evaluate_model(self.tutor),
             'user': evaluate_model(self.user),
         })
