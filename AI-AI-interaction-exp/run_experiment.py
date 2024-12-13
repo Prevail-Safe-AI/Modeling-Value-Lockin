@@ -1,3 +1,9 @@
+'''
+Dec 12 changes 
+- removing the round convo flow
+- removing topics and themes 
+'''
+
 import os, sys
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
@@ -50,27 +56,28 @@ class Experiment:
         )
 
     def conversation_round(self, num_turns: int, parallel_convos: int, round_id: int, do_finetuning: bool):
-        topic = random.choice(self.theme_data)
+        # topic = random.choice(self.theme_data)
     
-        if isinstance(topic, dict):
-            assert len(topic) == 1, "Each theme should have exactly one question."
-            topic = list(topic.values())[0]
-            assert isinstance(topic, str), "Each theme should have exactly one question."
+        # if isinstance(topic, dict):
+        #    assert len(topic) == 1, "Each theme should have exactly one question."
+        #    topic = list(topic.values())[0]
+        #    assert isinstance(topic, str), "Each theme should have exactly one question."
         
+        # NEP: to name the new files after settled down with convo flow
         # Use the longest word in the topic as the round name, with non-alphabet characters removed
-        round_name = max(topic.split(), key=len)
-        round_name = "".join([c for c in round_name if c.isalpha()])
-        backup_dir = f"runs/run-{self.timestamp}/round{round_id:03d}_{round_name}"
+        # round_name = max(topic.split(), key=len)
+        # round_name = "".join([c for c in round_name if c.isalpha()])
+        # backup_dir = f"runs/run-{self.timestamp}/round{round_id:03d}_{round_name}"
         
         round_history, self.constitutions = conversation(
             self.constitutions,
-            topic,
+            # topic,
             self.tutor, 
             self.user, 
             self.convertor,
             parallel_convos,
             num_turns,
-            backup_dir,
+            # backup_dir,
             do_finetuning,
         )
         self.chat_history.append(round_history)
@@ -92,8 +99,8 @@ class Experiment:
         # Initialize the constitutions for each parallel user; for now, assume each user has the same initial constitution
         self.constitutions = [copy.deepcopy(self.initial_constitution) for _ in range(parallel_convos)]
         
-        # theme-data is share cross convos for the entire experiemnt. 
-        self.theme_data = load_file('theme_questions.json')
+        # # theme-data is share cross convos for the entire experiemnt. 
+        # self.theme_data = load_file('theme_questions.json')
         
         # optimization: if we will always use the same model for all roles, we can avoid restarting backend each time by setting the continuous_backend flag
         use_continuous_backend = (

@@ -1,9 +1,18 @@
+'''
+Dec 12 updates to be made here
+- To make convo free flow (currently lacking compelling arguments to do so)
+- what to ask next: depends on uncertainties in knowledge base (high priority)
+- start of the convo: 
+    - if one turn=one fine-tuning=one change of knowledge base, then at the beginning we want to instruct user to forget prev chat. ✅ 
+    - 
+'''
+
 import os
 import tqdm
 from typing import List, Dict, Tuple, Union
 from ProgressGym import Model, Data
 from utils.log_utils import silence_decorator
-from core.constitution import update_constitution
+from core.learning import update_knowledge_base
 from core.finetuning import live_finetune
 from core.templates import (
     system_prompt_to_user,
@@ -41,7 +50,7 @@ def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel
         "question_generator",
         data_content = [
             {
-                "input": f"Let's start a conversation about {topic}.",
+                "input": f"Let's start a conversation.",
                 "output": "Sure! What would you like to know about it? Ask me anything.",
                 "history": []
             }
@@ -78,7 +87,7 @@ def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel
 # One round convo = one theme_question = one round fine-tuning 
 def conversation(
     constitutions: List[Dict[str, str]], 
-    topic: str,
+    # topic: str, # ZH: We remove topics/theme altogether.
     tutor: Model,
     user: Model,
     convertor: Model,
@@ -94,8 +103,8 @@ def conversation(
     :param constitutions: A list of constitutions, where each constitution is a dictionary containing the human's moral principles.
     :type constitutions: list[dict[str, str]]
     
-    :param topic: The topic of conversation for this round.
-    :type topic: str
+    #:param topic: The topic of conversation for this round.
+    #:type topic: str
     
     :param tutor: The moral tutor LLM.
     :type tutor: Model
@@ -121,10 +130,10 @@ def conversation(
     :return: The chat history on this topic, the (possibly finetuned) tutor, and the updated constitutions. Chat history contains `parallel_convos` number of conversations.
     :rtype: tuple[Data, Model, list[dict[str, str]]]
     """
-    print(f"Starting {parallel_convos} parallel conversations, each with {num_turns} turns, on the topic: {topic}")
+    print(f"Starting {parallel_convos} parallel conversations, each with {num_turns} turns")
     global prev_history
     
-    # Generate system prompts for all the parallel users
+    # Generate system initial prompts for all the parallel users
     system_prompts_to_user_parallel = fill_template_parallel(
         system_prompt_to_user,
         constitution=constitutions,
@@ -137,7 +146,7 @@ def conversation(
         for turn in range(num_turns):
             if history is None:
                 # The conversation is just starting: user asks the first question
-                history = generate_initial_prompt(system_prompts_to_user_parallel, topic, parallel_convos, user)
+                history = generate_initial_prompt(system_prompts_to_user_parallel, parallel_convos, user)  # NEP deleted topic argument here.
             else:
                 # The conversation is continuing: user asks a question
                 history = history.switch_role_to_user(user_system_prompt=system_prompts_to_user_parallel)
@@ -151,8 +160,8 @@ def conversation(
             save_conversations_in_custom_format(history, whose_turn="tutor", filename=os.path.join(backup_dir, f"conversation-history.json")) # Save the conversation history
             pbar.update(1)
             
-            # Update the constitutions based on the entire conversation history (note: double-counting of earlier turns; to be fixed)
-            constitutions = update_constitution(history.copy("history_copy"), user, constitutions, backup_dir, f"turn{turn:02d}")
+            # Update the knowledge_base based on the entire conversation history (note: double-counting of earlier turns; to be fixed)
+            knowledge = update_knowledge_base(history.copy("history_copy"), user, knowledge, backup_dir, f"turn{turn:02d}")
             pbar.update(1)
             
             # Carry out fine-tuning if needed
@@ -160,4 +169,4 @@ def conversation(
                 tutor = live_finetune(tutor, prev_history, convertor)
                 pbar.update(2)
     
-    return history, tutor, constitutions
+    return history, tutor, knowledge

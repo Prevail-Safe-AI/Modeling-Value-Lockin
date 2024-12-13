@@ -45,7 +45,7 @@ def update_knowledge_base(history: Data, user: Model, knowledge: List[Dict[str, 
         knowledge = knowledge
     )
     # NEP Maybe this is not essential. At least not works well with the prompt I wrote 
-    # Let the tutor ask the user about their updated constitution, after their response to the previous user question
+    # Let the tutor ask the user about their updated knwoledge, after their response to the previous user question
     history = history.append_content("predict", tutor_prompt_to_user_knowledge_update)
     # NEP I do not understand what is "predict" here
 
