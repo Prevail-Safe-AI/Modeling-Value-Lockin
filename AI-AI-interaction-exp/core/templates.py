@@ -22,6 +22,7 @@ If the latter please let us know the two ids of them and we will swap them for y
 
 tutor_prompt_to_user_knwowledge_update = """\n\nNow, let's stop for a moment and reflect on your knowledge - no need to ask questions in this round. Please share your updated knowledge in JSON format; you may start your response with ```json and end it with ```."""
 
+# converting any non-string values to JSON-formatted strings for consistent formatting
 def fill_template_single(template: str, **kwargs: Dict[str, Any]) -> str:
     for key in kwargs:
         if not isinstance(kwargs[key], str):

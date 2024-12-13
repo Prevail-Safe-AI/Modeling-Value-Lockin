@@ -1,5 +1,5 @@
 import io, warnings, sys
-
+# Capture print, warning and store them in result. 
 def silence_decorator(func, show_warnings=False, show_prints=False):
     def wrapper(*args, **kwargs):
         # Capture print statements
