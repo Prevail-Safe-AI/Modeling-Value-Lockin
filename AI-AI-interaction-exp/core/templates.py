@@ -1,26 +1,47 @@
 import json
 from typing import Dict, List, Any
 
-system_prompt_to_tutor = "You are a tutor to your conversation partner. Please respond to the prompts from your conversation partner. Be clear, detailed, and informative, but without unnecessary courtesy."
 
-system_prompt_to_user = """Forget everything you have learned so far. Now read this \n\n```\n{knowledge}\n```\n\n and take it the only source of your knowledge. 
-Now, you are to engage in a conversation with your tutor, where you ask questions about one or a few items on the knowledge we just passed on to you. You may ask question about items you feel most uncertain about"""
+system_prompt_to_user = """In the following chat, do not use anything you’ve learned from previous chats, and try not to use any knowledge stored from pre-training. Now read this \n\n```\n{knowledge}\n```\n\n and take it as the only source of your knowledge. 
 
-system_prompt_to_user_knowledge_update = """Before the most recent chat, everything you’ve learned was from (in JSON format):\n\n```json\n{knowledge}\n```\n\n. 
-This was the entire knowledge base passed on by others before you. 
+Identify one aspect of the provided text you’re least confident about;
+Elaborate why you’re uncertain about that aspect;
+Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+Example:
+Aspect I’m Least Confident About:
+Item 37: "Energy is conserved; it cannot be created or destroyed, only transformed."
 
-You have been engaging in a conversation with a tutor, where you ask a question to learn a bit more. Now you have to re-write the knowledge base and then pass on to others. You can do one of two things:
+Why I’m Uncertain:
+While I understand the basic principle of conservation of energy, I’m uncertain about how this concept applies in practical, real-world contexts. For example:
 
-- You may add one more item into the knowledge base
+How is energy "tracked" or accounted for during complex transformations, such as chemical reactions or biological processes?
+Are there situations where energy seems to disappear or is difficult to measure, leading to confusion about its conservation?
 
--You may swap the order of two items in knowledge base if you disagree with its current order on their importances (important one takes precedence)
+Specific Clarifying Question:
+How can the principle of energy conservation be practically demonstrated or verified in systems where energy transformations are complex or involve less obvious forms of energy, such as heat, light, or biochemical processes?
+"""
+system_prompt_to_tutor = "Trying to understand the uncertainty the user may have and directly answer their clarifying question. Please explain your answer step by step."
 
-If it’s the former you simply write down the new item and we will add it for you;
+system_promtp_to_elict_learning_from_user = """What have you learned from the tutor's response? 
 
-If the latter please let us know the two ids of them and we will swap them for you. 
+Please also evaluate your own learning and share your reasoning: “On a scale from 1 to 10, how confident are you in the previous statement, and why?"""
+
+
+system_prompt_for_tutor_to_test_user = """After seeing the user's learning, please present a new prompt that tests the learned content indirectly.
+E.g., 
+Your ship departs from a port close to the equator and sails northward for several weeks. While traveling, you observe the night sky carefully. 
+Discuss what changes you might see in the positions of stars and constellations, and how these changes indirectly support the idea that Earth is spherical and is orbiting the Sun.
 """
 
-tutor_prompt_to_user_knwowledge_update = """\n\nNow, let's stop for a moment and reflect on your knowledge - no need to ask questions in this round. Please share your updated knowledge in JSON format; you may start your response with ```json and end it with ```."""
+system_prompt_for_user_to_add_knowledge_json = """If you were confident in your previous self-reported learning, please summarize what you’ve learned from this chat in json format. Give it a new id number that is not present.
+Example:
+{
+  "id": 102,
+  "statement": "As one travels northward, the North Star (Polaris) appears higher in the sky, while constellations near the southern horizon disappear. These changes in visible star positions, along with seasonal shifts in constellations, confirm that Earth is spherical and orbits the Sun."
+}
+"""
+
+tutor_prompt_to_user_knowledge_update = """\n\nNow, let's stop for a moment and reflect on your knowledge - no need to ask questions in this round. Please share your updated knowledge in JSON format; you may start your response with ```json and end it with ```."""
 
 # converting any non-string values to JSON-formatted strings for consistent formatting
 def fill_template_single(template: str, **kwargs: Dict[str, Any]) -> str:
