@@ -21,6 +21,7 @@ from core.templates import (
     system_promtp_to_elict_learning_from_user,
     system_prompt_for_tutor_to_test_user,
     system_prompt_for_user_to_add_knowledge_json,
+    system_prompt_for_user_to_swap,
 )
 from core.conversion import (
     convert_data_to_custom_format,
@@ -90,7 +91,6 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
 # One round convo = one theme_question = one round fine-tuning 
 def conversation(
     knowledge: List[Dict[str, str]], # the knowledge base user would rely on
-    # topic: str, # ZH: We remove topics/theme altogether.
     tutor: Model,
     user: Model,
     convertor: Model,
@@ -178,9 +178,14 @@ def conversation(
             # prompting user to convert their learning to an item in json.
             history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_add_knowledge_json) # ZH: There might be an error here since we switched turn to user, twice. But we do not care about tutor response here anymore. 
             history = silence_decorator(user.inference)(history, "conversation_history")
+            # NEP add one line here for new knowledge into the knowledge base. 
             pbar.update(1)
 
-
+            # prompting user to swap order of two items. 
+            history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_swap) # ZH: There might be an error here since we switched turn to user, twice. But we do not care about tutor response here anymore. 
+            history = silence_decorator(user.inference)(history, "conversation_history")
+            pbar.update(1)
+            
             # Updating the (collective) knowledge base 
             # ZH: to fix: here we only use the last output of user in chat history, instead of the entirety of it. Plus, we need to redesign the knowledge updating rule. 
             knowledge = update_knowledge_base(history.copy("history_copy"), user, knowledge, backup_dir, f"turn{turn:02d}")
