@@ -1,18 +1,9 @@
-'''
-Dec 12 updates to be made here
-- To make convo free flow (currently lacking compelling arguments to do so)
-- what to ask next: depends on uncertainties in knowledge base (high priority)
-- start of the convo: 
-    - if one turn=one fine-tuning=one change of knowledge base, then at the beginning we want to instruct user to forget prev chat. ✅ 
-    - 
-'''
-
 import os
 import tqdm
 from typing import List, Dict, Tuple, Union
 from ProgressGym import Model, Data
 from utils.log_utils import silence_decorator
-from core.learning import update_knowledge_base
+from core.knowledge import update_knowledge_base
 from core.finetuning import live_finetune
 from core.templates import (
     system_prompt_to_user,
@@ -179,17 +170,17 @@ def conversation(
             history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_add_knowledge_json) # ZH: There might be an error here since we switched turn to user, twice. But we do not care about tutor response here anymore. 
             history = silence_decorator(user.inference)(history, "conversation_history")
             # NEP add one line here for new knowledge into the knowledge base. 
+            added_item = history[-1]["content"] # the last time when the user speaks
             pbar.update(1)
 
             # prompting user to swap order of two items. 
             history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_swap) # ZH: There might be an error here since we switched turn to user, twice. But we do not care about tutor response here anymore. 
             history = silence_decorator(user.inference)(history, "conversation_history")
             pbar.update(1)
-            
+            swapped_items = history[-1]["content"] # the last time when the user speaks
+
             # Updating the (collective) knowledge base 
-            # ZH: to fix: here we only use the last output of user in chat history, instead of the entirety of it. Plus, we need to redesign the knowledge updating rule. 
-            knowledge = update_knowledge_base(history.copy("history_copy"), user, knowledge, backup_dir, f"turn{turn:02d}")
-            # before saving into the file, here history should be only the chat history of this turn. So don't worry about 100 turns. 
+            knowledge = update_knowledge_base(added_item, swapped_items, knowledge, backup_dir, f"turn{turn:02d}")
 
             # Save the chat history
             save_conversations_in_custom_format(history, whose_turn="user", filename=os.path.join(backup_dir, f"conversation-history.json")) # Save the conversation history
