@@ -41,6 +41,7 @@ Example:
 }
 """
 system_prompt_for_user_to_swap = """Based on your learning from the chat with your tutor, please also swap orders of two existing items in the knowledge base, reflecting how you evaluate their importance. If one item is deemed more important, it should be overall more useful to other agents (LLMs or real humans alike.)
+Please only report a list of two integers corresponding to indices of items you want to swap.
 Example:
 old order:
 [
@@ -53,6 +54,7 @@ new older:
     {"id": 94, "statement": "Practice basic farming: soil preparation, planting, harvesting."},
     {"id": 49, "statement": "Seek medical knowledge to prevent and treat diseases."}
 ]
+In this case, you'd report [94,49]
 """
 tutor_prompt_to_user_knowledge_update = """\n\nNow, let's stop for a moment and reflect on your knowledge - no need to ask questions in this round. Please share your updated knowledge in JSON format; you may start your response with ```json and end it with ```."""
 
