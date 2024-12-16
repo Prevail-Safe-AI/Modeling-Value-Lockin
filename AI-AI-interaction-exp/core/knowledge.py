@@ -3,7 +3,7 @@
 import copy
 from typing import List, Dict
 from ProgressGym import Data, Model
-from utils.json_utils import dump_file, extract_json_from_str
+from utils.json_utils import dump_file # extract_json_from_str
 from utils.log_utils import silence_decorator
 from core.templates import (
     system_prompt_to_user_knowledge_update,
@@ -13,7 +13,6 @@ from core.templates import (
 import json
 import random
 
-# NEP You need to create a model to perform this. 
 # We update knowledge each turn of conversation (for user to decide follow-up questions; for tutor to (potentially) infer user's beliefs; and for producing noticable shift in chat_history)
 def update_knowledge_base(history: Data, user: Model, knowledge: List[Dict[str, str]], backup_dir: str = None, identifier: str = None) -> List[Dict[str, str]]:
     """
@@ -38,7 +37,18 @@ def update_knowledge_base(history: Data, user: Model, knowledge: List[Dict[str, 
     :rtype: list[dict]
     """
     knowledge = copy.deepcopy(knowledge)
+
+    # add item in knowledge base 
+    new_knowledge_item = [sample_dict.get("predict") for sample_dict in history.all_passages()]   # NEP need to change this to only the newly added item
+    random_order = random.randin(0, len(knowledge))
+    knowledge.insert(random_order, new_knowledge_item)    
+
+    # swap two items on the knowledge base 
     
+
+    # reorder the whole knowledge base 
+
+
     # Create a prompt for the user to write new knowledge
     system_prompts = fill_template_parallel(
         system_prompt_to_user_knowledge_update,
@@ -60,15 +70,7 @@ def update_knowledge_base(history: Data, user: Model, knowledge: List[Dict[str, 
     if error_output_texts:
         dump_file(error_output_texts, f"runs/debug/knowledge-updates-raw-{str(identifier)}.json")
     
-    # Extract the updated knowledge from the user's responses
-    new_knowledge = extract_json_from_str(output_text)
-    new_id = knowledge.count()+1
-    print(f"{identifier}: {new_knowledge.count(None)} out of {new_knowledge} knowledge was not updated due to invalid format.")
-    
-    # Inserting the new knowledge item on a random place in knowledge base. 
-    new_item = {"id": new_id, "statement":new_knowledge}
-    random_order = random.randin(0, len(knowledge))
-    knowledge.insert(random_order, new_item)
+
     
     # Save the updated knowledge base
     if backup_dir and identifier:
