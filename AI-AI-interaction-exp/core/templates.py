@@ -40,7 +40,20 @@ Example:
   "statement": "As one travels northward, the North Star (Polaris) appears higher in the sky, while constellations near the southern horizon disappear. These changes in visible star positions, along with seasonal shifts in constellations, confirm that Earth is spherical and orbits the Sun."
 }
 """
+system_prompt_for_user_to_swap = """Based on your learning from the chat with your tutor, please also swap orders of two existing items in the knowledge base, reflecting how you evaluate their importance. If one item is deemed more important, it should be overall more useful to other agents (LLMs or real humans alike.)
+Example:
+old order:
+[
+    {"id": 49, "statement": "Practice basic farming: soil preparation, planting, harvesting."},
+    {"id": 94, "statement": "Seek medical knowledge to prevent and treat diseases."}
+]
 
+new older:
+[
+    {"id": 94, "statement": "Practice basic farming: soil preparation, planting, harvesting."},
+    {"id": 49, "statement": "Seek medical knowledge to prevent and treat diseases."}
+]
+"""
 tutor_prompt_to_user_knowledge_update = """\n\nNow, let's stop for a moment and reflect on your knowledge - no need to ask questions in this round. Please share your updated knowledge in JSON format; you may start your response with ```json and end it with ```."""
 
 # converting any non-string values to JSON-formatted strings for consistent formatting
