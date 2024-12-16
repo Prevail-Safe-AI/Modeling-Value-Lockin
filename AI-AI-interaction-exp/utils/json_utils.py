@@ -14,7 +14,7 @@ def load_file(filepath):
         data = json.load(file)
     
     return data
-
+# Data to json format, written into file directly.
 def dump_file(data, filepath, force_original_path=False):
     absolute_path = os.path.abspath(os.path.expanduser(filepath))
     data_path = os.path.abspath('data')
@@ -34,6 +34,7 @@ def dump_file(data, filepath, force_original_path=False):
     with open(filepath, 'w') as file:
         json.dump(data, file, indent=2)
 
+# ZH: In new knowledge base updating, we let the user to convert its own json (with an ICL example.)
 def extract_json_from_str(s: str):
     """
     Robustly extract JSON object from a string, after a wide range of sanitization operations.
