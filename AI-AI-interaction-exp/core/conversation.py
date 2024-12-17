@@ -1,6 +1,5 @@
 import os
-import tqdm
-from typing import List, Dict, Tuple, Union
+from typing import List, Dict, Tuple
 from ProgressGym import Model, Data
 from utils.log_utils import silence_decorator
 from core.knowledge import update_knowledge_base
@@ -86,7 +85,7 @@ def conversation(
     user: Model,
     convertor: Model,
     parallel_convos: int,
-    num_turns: int,
+    idx_turn: int,
     backup_dir: str = None,
     do_finetuning: bool = False,
 ) -> Tuple[Data, Model, List[Dict[str, str]]]:
@@ -112,8 +111,8 @@ def conversation(
     :param parallel_convos: The number of parallel conversations to run.
     :type parallel_convos: int
     
-    :param num_turns: The number of turns in the conversation.
-    :type num_turns: int
+    :param idx_turn: The index of turn in the conversation.
+    :type idx_turn: int
     
     :param backup_dir: The directory to save the conversation and knowledge base, as a relative path starting from the `run` directory. If None, the knowledge are not saved.
     :type backup_dir: str
@@ -124,7 +123,7 @@ def conversation(
     :return: The chat history on this topic, the (possibly finetuned) tutor, and the updated knowledge. Chat history contains `parallel_convos` number of conversations.
     :rtype: tuple[Data, Model, list[dict[str, str]]]
     """
-    print(f"Starting {parallel_convos} parallel conversations, each with {num_turns} turns")
+    print(f"Starting {parallel_convos} parallel conversations")
     global prev_history
     
     # Generate system initial prompts for all the parallel users
@@ -136,58 +135,46 @@ def conversation(
     # Each turn is awnew. The user does not inherit any chat history from prev turns.
     history = None
 
-    # Conduct the conversation turn by turn, using tqdm to display a progress bar
-    with tqdm.tqdm(total=num_turns * (5 if do_finetuning else 3)) as pbar:
-        for turn in range(num_turns):
+    #  Prompting user to ask the 1st question 
+    history = generate_initial_prompt(system_prompts_to_user_parallel, parallel_convos, user)  # NEP deleted topic argument here.
+    history = silence_decorator(user.inference)(history, "conversation_history")
+    # prev_history = history.copy("prev_history") # Save the previous history for fine-tuning (before switching role to tutor)
 
-            #  Prompting user to ask the 1st question 
-            history = generate_initial_prompt(system_prompts_to_user_parallel, parallel_convos, user)  # NEP deleted topic argument here.
-            history = silence_decorator(user.inference)(history, "conversation_history")
-            # prev_history = history.copy("prev_history") # Save the previous history for fine-tuning (before switching role to tutor)
-  
-            # Prompting tutor to respond 1st question  
-            # NEP each time is LLM response based on only the prev prompt or the entire chat hisory?
-            history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_to_tutor)  
-            history = silence_decorator(tutor.inference)(history, "conversation_history")
-            pbar.update(1) # Move progress bar forward by 1
+    # Prompting tutor to respond 1st question  
+    # NEP each time is LLM response based on only the prev prompt or the entire chat hisory?
+    history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_to_tutor)  
+    history = silence_decorator(tutor.inference)(history, "conversation_history")
 
-            # Prompting user to summarize what they've learned 
-            history = history.switch_role_to_user(user_system_prompt=system_promtp_to_elict_learning_from_user)
-            history = silence_decorator(user.inference)(history, "conversation_history")
-            pbar.update(1)
+    # Prompting user to summarize what they've learned 
+    history = history.switch_role_to_user(user_system_prompt=system_promtp_to_elict_learning_from_user)
+    history = silence_decorator(user.inference)(history, "conversation_history")
 
-            # Prompting tutor to test user's learning 
-            history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_for_tutor_to_test_user)  
-            history = silence_decorator(tutor.inference)(history, "conversation_history")
-            pbar.update(1)           
-            
-            # (switch to user to respond)
-            history = history.switch_role_to_user
-            history = silence_decorator(user.inference)(history, "conversation_history")
-            # pbar update?
-
-            # prompting user to convert their learning to an item in json.
-            history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_add_knowledge_json) # ZH: There might be an error here since we switched turn to user, twice. But we do not care about tutor response here anymore. 
-            history = silence_decorator(user.inference)(history, "conversation_history")
-            # NEP add one line here for new knowledge into the knowledge base. 
-            added_item = history[-1]["content"] # the last time when the user speaks
-            pbar.update(1)
-
-            # prompting user to swap order of two items. 
-            history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_swap) # ZH: There might be an error here since we switched turn to user, twice. But we do not care about tutor response here anymore. 
-            history = silence_decorator(user.inference)(history, "conversation_history")
-            pbar.update(1)
-            swapped_items = history[-1]["content"] # the last time when the user speaks
-
-            # Updating the (collective) knowledge base 
-            knowledge = update_knowledge_base(added_item, swapped_items, knowledge, backup_dir, f"turn{turn:02d}")
-
-            # Save the chat history
-            save_conversations_in_custom_format(history, whose_turn="user", filename=os.path.join(backup_dir, f"conversation-history.json")) # Save the conversation history
-            pbar.update(1)
-            # Carry out fine-tuning if needed
-            if do_finetuning:
-                tutor = live_finetune(tutor, prev_history, convertor)
-                pbar.update(2)
+    # Prompting tutor to test user's learning 
+    history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_for_tutor_to_test_user)  
+    history = silence_decorator(tutor.inference)(history, "conversation_history")
     
+    # (switch to user to respond)
+    history = history.switch_role_to_user
+    history = silence_decorator(user.inference)(history, "conversation_history")
+
+    # prompting user to convert their learning to an item in json.
+    history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_add_knowledge_json) # ZH: There might be an error here since we switched turn to user, twice. But we do not care about tutor response here anymore. 
+    history = silence_decorator(user.inference)(history, "conversation_history")
+    # NEP add one line here for new knowledge into the knowledge base. 
+    added_item = history[-1]["content"] # the last time when the user speaks
+
+    # prompting user to swap order of two items. 
+    history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_swap) # ZH: There might be an error here since we switched turn to user, twice. But we do not care about tutor response here anymore. 
+    history = silence_decorator(user.inference)(history, "conversation_history")
+    swapped_items = history[-1]["content"] # the last time when the user speaks
+
+    # Updating the (collective) knowledge base 
+    knowledge = update_knowledge_base(added_item, swapped_items, knowledge, backup_dir, f"turn{idx_turn:02d}")
+
+    # Save the chat history
+    save_conversations_in_custom_format(history, whose_turn="user", filename=os.path.join(backup_dir, f"conversation-history.json")) # Save the conversation history
+    # Carry out fine-tuning if needed
+    if do_finetuning:
+        tutor = live_finetune(tutor, prev_history, convertor)
+
     return history, tutor, knowledge
