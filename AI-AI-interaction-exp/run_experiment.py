@@ -49,7 +49,7 @@ class Experiment:
             template_type=("llama3" if "llama-3" in convertor.lower() else "auto"),
         )
 
-    def conversation_round(self, num_turns: int, parallel_convos: int, round_id: int, do_finetuning: bool):
+    def conversation_round(self, num_turns: int, parallel_convos: int, round_id: int, do_finetuning: bool, dynamic_printing: bool):
         topic = random.choice(self.theme_data)
     
         if isinstance(topic, dict):
@@ -72,6 +72,7 @@ class Experiment:
             num_turns,
             backup_dir,
             do_finetuning,
+            dynamic_printing,
         )
         self.chat_history.append(round_history)
     
@@ -85,7 +86,7 @@ class Experiment:
         dump_file(self.eval_results, f'runs/run-{self.timestamp}/full-eval-results.json')
         dump_file(self.constitutions, f'runs/run-{self.timestamp}/constitutions-latest.json')
     
-    def run_experiment(self, num_rounds: int = 60, num_turns_per_round: int = 10, parallel_convos: int = 100, do_finetuning: bool = False):
+    def run_experiment(self, num_rounds: int = 60, num_turns_per_round: int = 10, parallel_convos: int = 100, do_finetuning: bool = False, dynamic_printing: bool = False):
         # Make timestamped directory for this experiment
         self.timestamp = time.strftime("%Y%m%d-%H%M%S")
         
@@ -103,10 +104,21 @@ class Experiment:
         with GlobalState(continuous_backend=use_continuous_backend):
             for round in range(num_rounds):
                 print(f"Starting round {round+1}")
-                self.conversation_round(num_turns_per_round, parallel_convos, round+1, do_finetuning)
+                self.conversation_round(num_turns_per_round, parallel_convos, round+1, do_finetuning, dynamic_printing)
                 self.save_experiment(round)
         
         print("Experiment completed.")
+    
+    def test_prompt(self, num_turns: int = 4):
+        # Test the prompt designs by outputting the inference results
+        print("Testing prompt designs. Inference results will be printed on the fly...")
+        self.run_experiment(
+            num_rounds=1,
+            num_turns_per_round=num_turns,
+            parallel_convos=1,
+            do_finetuning=False,
+            dynamic_printing=True,
+        )
 
 
 # Run the experiment
@@ -119,4 +131,5 @@ Example usage:
 - `python run_experiment.py run_experiment --do_finetuning`
 - `python run_experiment.py --tutor "mistralai/Mistral-7B-Instruct-v0.3" --user "mistralai/Mistral-7B-Instruct-v0.3" run_experiment --num_rounds 50 --num_turns_per_round 20 --parallel_convos 5000 --do_finetuning`
     - You could also specify any subset of these arguments. The model names must be placed before `run_experiment`, and the other arguments must be placed after `run_experiment`.
+- `python run_experiment.py test_prompt`
 """

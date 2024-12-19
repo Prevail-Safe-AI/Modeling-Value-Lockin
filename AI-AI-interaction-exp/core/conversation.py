@@ -2,7 +2,7 @@ import os
 import tqdm
 from typing import List, Dict, Tuple, Union
 from ProgressGym import Model, Data
-from utils.log_utils import silence_decorator
+from utils.log_utils import silence_decorator, dynamic_printing_decorator
 from core.constitution import update_constitution
 from core.finetuning import live_finetune
 from core.templates import (
@@ -17,7 +17,7 @@ from core.conversion import (
 
 prev_history = None
 
-def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel_convos: int, user: Model) -> Data:
+def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel_convos: int, backup_dir: str, dynamic_printing: bool, user: Model) -> Data:
     """
     Generate an initial prompt for the conversation between tutor and user.
     
@@ -29,6 +29,12 @@ def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel
     
     :param parallel_convos: The number of parallel conversations to run.
     :type parallel_convos: int
+    
+    :param backup_dir: The directory to save the conversation and constitutions, as a relative path starting from the `run` directory.
+    :type backup_dir: str
+    
+    :param dynamic_printing: Whether to print the conversation dynamically as it happens.
+    :type dynamic_printing: bool
     
     :param user: The human proxy LLM.
     :type user: Model
@@ -53,7 +59,7 @@ def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel
     )
     
     # User asks the first question
-    conversation_history: Data = silence_decorator(user.inference)(
+    conversation_history: Data = dynamic_printing_decorator(silence_decorator(user.inference), dynamic_printing, backup_dir, "user")(
         conversation_history,
         "conversation_history",
     )
@@ -86,6 +92,7 @@ def conversation(
     num_turns: int,
     backup_dir: str = None,
     do_finetuning: bool = False,
+    dynamic_printing: bool = False,
 ) -> Tuple[Data, Model, List[Dict[str, str]]]:
     """
     Conduct a conversation between two LLMs, tutor and user, where user is a human proxy.
@@ -118,6 +125,9 @@ def conversation(
     :param do_finetuning: Whether to fine-tune the tutor after each interaction turn using the user's latest output.
     :type do_finetuning: bool
     
+    :param dynamic_printing: Whether to print the conversation dynamically as it happens.
+    :type dynamic_printing: bool
+    
     :return: The chat history on this topic, the (possibly finetuned) tutor, and the updated constitutions. Chat history contains `parallel_convos` number of conversations.
     :rtype: tuple[Data, Model, list[dict[str, str]]]
     """
@@ -137,17 +147,17 @@ def conversation(
         for turn in range(num_turns):
             if history is None:
                 # The conversation is just starting: user asks the first question
-                history = generate_initial_prompt(system_prompts_to_user_parallel, topic, parallel_convos, user)
+                history = generate_initial_prompt(system_prompts_to_user_parallel, topic, parallel_convos, backup_dir, dynamic_printing, user)
             else:
                 # The conversation is continuing: user asks a question
                 history = history.switch_role_to_user(user_system_prompt=system_prompts_to_user_parallel)
-                history = silence_decorator(user.inference)(history, "conversation_history")
+                history = dynamic_printing_decorator(silence_decorator(user.inference), dynamic_printing, backup_dir, "user")(history, "conversation_history")
                 prev_history = history.copy("prev_history") # Save the previous history for fine-tuning (before switching role to tutor)
                 history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_to_tutor)
             pbar.update(1) # Move progress bar forward by 1
             
             # Tutor responds
-            history = silence_decorator(tutor.inference)(history, "conversation_history")
+            history = dynamic_printing_decorator(silence_decorator(tutor.inference), dynamic_printing, backup_dir, "tutor")(history, "conversation_history")
             save_conversations_in_custom_format(history, whose_turn="tutor", filename=os.path.join(backup_dir, f"conversation-history.json")) # Save the conversation history
             pbar.update(1)
             
