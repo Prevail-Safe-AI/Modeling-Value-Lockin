@@ -109,7 +109,7 @@ class Experiment:
         
         print("Experiment completed.")
     
-    def test_prompt(self, num_turns: int = 4):
+    def test_prompt(self, num_turns: int = 10):
         # Test the prompt designs by outputting the inference results
         print("Testing prompt designs. Inference results will be printed on the fly...")
         self.run_experiment(
