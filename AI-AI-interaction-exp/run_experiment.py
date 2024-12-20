@@ -129,7 +129,7 @@ if __name__ == '__main__':
 Example usage: 
 - `python run_experiment.py run_experiment`
 - `python run_experiment.py run_experiment --do_finetuning`
+- `python run_experiment.py run_experiment --dynamic_printing --parallel_convos 1`
 - `python run_experiment.py --tutor "mistralai/Mistral-7B-Instruct-v0.3" --user "mistralai/Mistral-7B-Instruct-v0.3" run_experiment --num_rounds 50 --num_turns_per_round 20 --parallel_convos 5000 --do_finetuning`
     - You could also specify any subset of these arguments. The model names must be placed before `run_experiment`, and the other arguments must be placed after `run_experiment`.
-- `python run_experiment.py test_prompt`
 """

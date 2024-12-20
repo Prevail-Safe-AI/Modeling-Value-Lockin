@@ -29,7 +29,7 @@ def dynamic_printing_decorator(func, dynamic_printing: bool, backup_dir: str, ro
         print(f"[View the full prompt of the current turn at {path}. Inference output follows...]\n{role.capitalize()}: ", end="", flush=True)
         for char in predict:
             print(char, end="", flush=True)
-            time.sleep(0.05)
+            time.sleep(0.01)
         
         print("\n\n")
         return result
