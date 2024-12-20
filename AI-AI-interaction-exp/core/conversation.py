@@ -39,6 +39,7 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
     :return: The initial prompt.
     :rtype: Data
     """
+    print("test initial prompt func")
     # Prompt the user to ask the first question
     question_generator = Data(
         "question_generator",
@@ -55,12 +56,14 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
         user_system_prompt = user_system_prompts
     )
     
+    print("before the backend call")
     # User asks the first question
     conversation_history: Data = silence_decorator(user.inference)(
         conversation_history,
         "conversation_history",
     )
-    
+    print("after the backend call")
+
     # Save the conversation history for use in fine-tuning, before switching role to tutor
     global prev_history
     prev_history = conversation_history.copy("prev_history")
@@ -69,6 +72,7 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
     conversation_history = conversation_history.switch_role_to_assistant(
         assistant_system_prompt=system_prompt_to_tutor
     )
+    print("initial prompt func done")
     return conversation_history
 
 # NEP Here you didn't include the part where user has to obey consitution (as a moral principle playbook)
@@ -137,7 +141,9 @@ def conversation(
 
     #  Prompting user to ask the 1st question 
     history = generate_initial_prompt(system_prompts_to_user_parallel, parallel_convos, user)  # NEP deleted topic argument here.
+    print("test before inference")
     history = silence_decorator(user.inference)(history, "conversation_history")
+    print("test after inference")
     # prev_history = history.copy("prev_history") # Save the previous history for fine-tuning (before switching role to tutor)
 
     # Prompting tutor to respond 1st question  
@@ -154,7 +160,7 @@ def conversation(
     history = silence_decorator(tutor.inference)(history, "conversation_history")
     
     # (switch to user to respond)
-    history = history.switch_role_to_user
+    history = history.switch_role_to_user()
     history = silence_decorator(user.inference)(history, "conversation_history")
 
     # prompting user to convert their learning to an item in json.

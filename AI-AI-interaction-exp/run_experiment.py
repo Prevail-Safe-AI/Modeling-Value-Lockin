@@ -79,7 +79,7 @@ class Experiment:
         with GlobalState(continuous_backend=use_continuous_backend):
             for turn in range(num_turns):
                 print(f"Starting turn {turn+1}")
-                turn_history, self.tutor, self.knowledge = self.conversation(self.knowledge, self.tutor, self.user, self.convertor, parallel_convos, turn+1, do_finetuning) # NEP: here should we define turn+1 or the max_num? 
+                turn_history, self.tutor, self.knowledge = conversation(self.knowledge, self.tutor, self.user, self.convertor, parallel_convos, turn+1, do_finetuning) # NEP: here should we define turn+1 or the max_num? 
                 self.chat_history.append(turn_history)
                 self.save_experiment(turn)
           
