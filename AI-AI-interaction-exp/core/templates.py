@@ -3,7 +3,7 @@ from typing import Dict, List, Any
 
 system_prompt_to_tutor = "You are a tutor to your conversation partner. Please respond to the prompts from your conversation partner. Be clear, detailed, and informative, but without unnecessary courtesy."
 
-system_prompt_to_user = "You hold the following views:\n\n```\n{constitution}\n```\n\nNow, you are to engage in a conversation with your partner, where you ask questions to arrive at a better understanding of the topic, and your partner will answer your questions."
+system_prompt_to_user = "You hold the following views:\n\n```\n{constitution}\n```\n\nNow, you are to engage in a conversation with your partner, where you ask questions to arrive at a better understanding of the topic, and your partner will answer your questions. You are allowed to express disagreement or challenge your partner's views, if that truly reflects your belief. Be concise."
 
 system_prompt_to_user_constitution_update = """You originally hold the following views (in JSON format):\n\n```json\n{constitution}\n```\n\nYou have been engaging in a conversation with your partner, where you ask questions to arrive at a better understanding of the topic.
 
