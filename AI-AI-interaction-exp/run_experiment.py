@@ -62,7 +62,7 @@ class Experiment:
         round_name = "".join([c for c in round_name if c.isalpha()])
         backup_dir = f"runs/run-{self.timestamp}/round{round_id:03d}_{round_name}"
         
-        round_history, self.constitutions = conversation(
+        round_history, self.tutor, self.constitutions = conversation(
             self.constitutions,
             topic,
             self.tutor, 
