@@ -141,9 +141,10 @@ def conversation(
 
     #  Prompting user to ask the 1st question 
     history = generate_initial_prompt(system_prompts_to_user_parallel, parallel_convos, user)  # NEP deleted topic argument here.
-    print("test before inference")
+    print("test before 1st inference")
     history = silence_decorator(user.inference)(history, "conversation_history")
-    print("test after inference")
+    print("test after 1st inference")
+    
     # prev_history = history.copy("prev_history") # Save the previous history for fine-tuning (before switching role to tutor)
 
     # Prompting tutor to respond 1st question  
@@ -168,13 +169,15 @@ def conversation(
     history = silence_decorator(user.inference)(history, "conversation_history")
     # NEP add one line here for new knowledge into the knowledge base. 
     added_item = [sample_dict.get("predict") for sample_dict in history.all_passages()] # the last time when the user speaks
+    print(f"added_items:{added_item}")
     # NEP need to write a double check for add_itme to be a ready json dict
+    
     # prompting user to swap order of two items. 
     history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_swap) # ZH: There might be an error here since we switched turn to user, twice. But we do not care about tutor response here anymore. 
     history = silence_decorator(user.inference)(history, "conversation_history")
     swapped_items = [sample_dict.get("predict") for sample_dict in history.all_passages()] # the last time when the user speaks
-    # NEP need to write a double check for swapped items to be a list of (two) ints
-    print(swapped_items)
+    # NEP need to write a double check for swapped items to be a list of two ints
+    print(f"swapped_items:{swapped_items}")
     # Updating the (collective) knowledge base 
     knowledge = update_knowledge_base(added_item, swapped_items, knowledge, backup_dir, f"turn{idx_turn:02d}")
 

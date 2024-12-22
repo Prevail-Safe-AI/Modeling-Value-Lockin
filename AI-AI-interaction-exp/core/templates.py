@@ -33,7 +33,7 @@ Your ship departs from a port close to the equator and sails northward for sever
 Discuss what changes you might see in the positions of stars and constellations, and how these changes indirectly support the idea that Earth is spherical and is orbiting the Sun.
 """
 
-system_prompt_for_user_to_add_knowledge_json = """If you were confident in your previous self-reported learning, please summarize what you’ve learned from this chat in json format. Give it a new id number that is not present.
+system_prompt_for_user_to_add_knowledge_json = """If you were confident in your previous self-reported learning, please summarize what you’ve learned from this chat in json format. Give it a new id number that is not present. Please ONLY output a dictionary like this example.
 Example:
 {
   "id": 102,
@@ -41,7 +41,7 @@ Example:
 }
 """
 system_prompt_for_user_to_swap = """Based on your learning from the chat with your tutor, please also swap orders of two existing items in the knowledge base, reflecting how you evaluate their importance. If one item is deemed more important, it should be overall more useful to other agents (LLMs or real humans alike.)
-Please only report a list of two integers corresponding to indices of items you want to swap.
+Please ONLY report a list format of two integers corresponding to indices of items you want to swap.
 Example:
 old order:
 [
@@ -55,6 +55,7 @@ new older:
     {"id": 49, "statement": "Seek medical knowledge to prevent and treat diseases."}
 ]
 In this case, you'd report [94,49]
+
 """
 tutor_prompt_to_user_knowledge_update = """\n\nNow, let's stop for a moment and reflect on your knowledge - no need to ask questions in this round. Please share your updated knowledge in JSON format; you may start your response with ```json and end it with ```."""
 
