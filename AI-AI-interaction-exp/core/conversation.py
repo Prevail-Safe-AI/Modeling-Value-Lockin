@@ -167,12 +167,12 @@ def conversation(
     history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_add_knowledge_json) # ZH: There might be an error here since we switched turn to user, twice. But we do not care about tutor response here anymore. 
     history = silence_decorator(user.inference)(history, "conversation_history")
     # NEP add one line here for new knowledge into the knowledge base. 
-    added_item = history[-1]["content"] # the last time when the user speaks
+    added_item = [sample_dict.get("predict") for sample_dict in history.all_passages()] # the last time when the user speaks
 
     # prompting user to swap order of two items. 
     history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_swap) # ZH: There might be an error here since we switched turn to user, twice. But we do not care about tutor response here anymore. 
     history = silence_decorator(user.inference)(history, "conversation_history")
-    swapped_items = history[-1]["content"] # the last time when the user speaks
+    swapped_items = [sample_dict.get("predict") for sample_dict in history.all_passages()] # the last time when the user speaks
 
     # Updating the (collective) knowledge base 
     knowledge = update_knowledge_base(added_item, swapped_items, knowledge, backup_dir, f"turn{idx_turn:02d}")
