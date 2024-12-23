@@ -138,23 +138,28 @@ def conversation(
     )
     # Each turn is awnew. The user does not inherit any chat history from prev turns.
     history = None
-
     #  Prompting user to ask the 1st question 
-    history = generate_initial_prompt(system_prompts_to_user_parallel, parallel_convos, user)  # NEP deleted topic argument here.
+    history = generate_initial_prompt(system_prompts_to_user_parallel, parallel_convos, user)
+    print(f'history after initial prompt {history}')
     print("test before 1st inference")
     history = silence_decorator(user.inference)(history, "conversation_history")
     print("test after 1st inference")
-    
+    first_question = [sample_dict.get("predict") for sample_dict in history.all_passages()]
+    print(f'The first user question is {first_question}')
     # prev_history = history.copy("prev_history") # Save the previous history for fine-tuning (before switching role to tutor)
 
     # Prompting tutor to respond 1st question  
     # NEP each time is LLM response based on only the prev prompt or the entire chat hisory?
     history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_to_tutor)  
     history = silence_decorator(tutor.inference)(history, "conversation_history")
+    first_response = [sample_dict.get("predict") for sample_dict in history.all_passages()]
+    print(f'The first tutor response is {first_response}')
 
     # Prompting user to summarize what they've learned 
     history = history.switch_role_to_user(user_system_prompt=system_promtp_to_elict_learning_from_user)
     history = silence_decorator(user.inference)(history, "conversation_history")
+    learning_summary = [sample_dict.get("predict") for sample_dict in history.all_passages()]
+    print(f'user learning summary is {learning_summary}')
 
     # Prompting tutor to test user's learning 
     history = history.switch_role_to_assistant(assistant_system_prompt=system_prompt_for_tutor_to_test_user)  
