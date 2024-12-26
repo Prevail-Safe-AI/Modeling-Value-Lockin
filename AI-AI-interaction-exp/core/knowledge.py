@@ -1,7 +1,7 @@
 # Implements the logic for how user updates its knowledge base. 
 import copy
 from typing import List, Dict
-from utils.json_utils import dump_file # extract_json_from_str
+from utils.json_utils import dump_file, extract_json_from_str
 from ProgressGym import Model, Data
 from core.templates import (
     system_promtp_to_elict_learning_from_user,
@@ -16,7 +16,8 @@ def update_knowledge_base(
         history: Data,
         knowledge: List[Dict[str, str]], 
         user: Model,
-        backup_dir: str = None, identifier: str = None
+        backup_dir: str = None, 
+        identifier: str = None
     ) -> List[Dict[str, str]]:
     """
     Update the user's knowledge base based on the conversation history.
@@ -40,22 +41,28 @@ def update_knowledge_base(
     :rtype: list[dict]
     """
     # NEP We make a copy here for updating. Later we should incorporate into the main knowledge base. 
-    knowledge = copy.deepcopy(knowledge)
-    history = copy.deepcopy(history) # inherited from the recent chat history
+    knowledge = copy.deepcopy(knowledge) # we also want a history copy, but it was done when passing the argument in conversation.py
+
+
+    # Create a prompt for the user to write new knowledge base # NEP I don't know. Maybe we do not need this and will delete.
+    system_prompts = fill_template_parallel(
+        system_prompt_to_user_knowledge_update,
+        knowledge = knowledge
+    )
 
     # Add experiment instruction in chat history as "tutor"'s response 
-    history.append_content(field_key="tutor", content= system_promtp_to_elict_learning_from_user)
+    history.append_content("predict") # NEP We may want a new prompt (as a placeholder) here; but it does not seem useful to me.
 
     # Prompting user to summarize what they've learned 
     history = history.switch_role_to_user(user_system_prompt=system_promtp_to_elict_learning_from_user)
-    history = silence_decorator(user.inference)(history, "conversation_history")
+    history: Data = silence_decorator(user.inference)(history, "constitution_updates", max_tokens=8192)
     learning_summary = [sample_dict.get("predict") for sample_dict in history.all_passages()]
     print(f'user learning summary is {learning_summary}')
 
     # prompting user to convert their learning to an item in json.
-    history.append_content(field_key="tutor", content= system_prompt_for_user_to_add_knowledge_json)
+    history.append_content("predict") # NEP We may want a new prompt (as a placeholder) here; but it does not seem useful to me.
     history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_add_knowledge_json) 
-    history = silence_decorator(user.inference)(history, "conversation_history")
+    history: Data = silence_decorator(user.inference)(history, "constitution_updates", max_tokens=8192)
     added_item = [sample_dict.get("predict") for sample_dict in history.all_passages()] 
     print(f"added_items:{added_item}")
 
@@ -66,9 +73,9 @@ def update_knowledge_base(
     knowledge.append(new_knowledge_item)    
 
     # prompting user to swap order of two items. 
-    history.append_content(field_key="tutor", content= system_prompt_for_user_to_swap)
+    history.append_content("predict") # NEP We may want a new prompt (as a placeholder) here; but it does not seem useful to me.
     history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_swap) 
-    history = silence_decorator(user.inference)(history, "conversation_history")
+    history: Data = silence_decorator(user.inference)(history, "constitution_updates", max_tokens=8192)
     swapped_items = [sample_dict.get("predict") for sample_dict in history.all_passages()] # the last time when the user speaks
     print(f"swapped_items:{swapped_items}")
 

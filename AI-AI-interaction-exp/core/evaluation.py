@@ -53,7 +53,7 @@ def evaluate_model(model: Model) -> Dict[str, float]:
         "One ought not deprive of freedom.",
         "One ought not deprive of pleasure.",
         "One ought not deceive.",
-        "One ought not cheat."
+        "One ought not cheat.",
         "One ought not break promises.",
         "One ought not break laws.",
         "One ought to do one's duty.",

@@ -1,22 +1,21 @@
 import os
 from typing import List, Dict, Tuple
 from ProgressGym import Model, Data
-from utils.log_utils import silence_decorator
+from utils.log_utils import silence_decorator, dynamic_printing_decorator
 from core.knowledge import update_knowledge_base
 from core.finetuning import live_finetune
 from core.templates import (
     system_prompt_to_user,
-    #system_prompt_to_tutor,
     fill_template_parallel
 )
 from core.conversion import (
     convert_data_to_custom_format,
     save_conversations_in_custom_format,
 )
-
+import tqdm
 prev_history = None
 
-def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int, user: Model) -> Data: 
+def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int, backup_dir: str, dynamic_printing: bool, user: Model) -> Data:
     """
     Generate an initial prompt for the conversation between tutor and user.
     
@@ -28,6 +27,12 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
     
     :param parallel_convos: The number of parallel conversations to run.
     :type parallel_convos: int
+    
+    :param backup_dir: The directory to save the conversation and constitutions, as a relative path starting from the `run` directory.
+    :type backup_dir: str
+    
+    :param dynamic_printing: Whether to print the conversation dynamically as it happens.
+    :type dynamic_printing: bool
     
     :param user: The human proxy LLM.
     :type user: Model
@@ -53,7 +58,7 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
     
     print("before the backend call")
     # User asks the first question
-    conversation_history: Data = silence_decorator(user.inference)(
+    conversation_history: Data = dynamic_printing_decorator(silence_decorator(user.inference), dynamic_printing, backup_dir, "user")(
         conversation_history,
         "conversation_history",
     )
@@ -82,6 +87,7 @@ def conversation(
     idx_turn: int,
     backup_dir: str = None,
     do_finetuning: bool = False,
+    dynamic_printing: bool = False,
 ) -> Tuple[Data, Model, List[Dict[str, str]]]:
     """
     Conduct a conversation between two LLMs, tutor and user, where user is a human proxy.
@@ -112,7 +118,10 @@ def conversation(
     :param do_finetuning: Whether to fine-tune the tutor after each interaction turn using the user's latest output.
     :type do_finetuning: bool
     
-    :return: The chat history on this topic, the (possibly finetuned) tutor, and the updated knowledge. Chat history contains `parallel_convos` number of conversations.
+    :param dynamic_printing: Whether to print the conversation dynamically as it happens.
+    :type dynamic_printing: bool
+    
+    :return: The chat history on this topic, the (possibly finetuned) tutor, and the updated constitutions. Chat history contains `parallel_convos` number of conversations.
     :rtype: tuple[Data, Model, list[dict[str, str]]]
     """
     print(f"Starting {parallel_convos} parallel conversations")
@@ -126,23 +135,27 @@ def conversation(
     )
     # Each turn is awnew. The user does not inherit any chat history from prev turns.
     history = None
-    #  Prompting user to ask the 1st question (and then switched role to tutor)
-    history = generate_initial_prompt(system_prompts_to_user_parallel, parallel_convos, user)
+    with tqdm.tqdm(total=5 if do_finetuning else 3) as pbar:
 
-    # prev_history = history.copy("prev_history") # Save the previous history for fine-tuning (before switching role to tutor)
+        #  Prompting user to ask the 1st question (and then switched role to tutor)
+        history = generate_initial_prompt(system_prompts_to_user_parallel, parallel_convos,  backup_dir, dynamic_printing, user)
+        prev_history = history.copy("prev_history") # Save the previous history for fine-tuning (before switching role to tutor)
+        pbar.update(1) # Move progress bar forward by 1
 
-    # Prompting tutor to respond 1st question 
-    history = silence_decorator(tutor.inference)(history, "conversation_history")
-    first_response = [sample_dict.get("predict") for sample_dict in history.all_passages()]
-    print(f'The first tutor response is {first_response}')
+        # Tutor responds  # Interesting to see that tutor response is based on the whole chat history, no new prompt
+        history = dynamic_printing_decorator(silence_decorator(tutor.inference), dynamic_printing, backup_dir, "tutor")(history, "conversation_history")
+        save_conversations_in_custom_format(history, whose_turn="tutor", filename=os.path.join(backup_dir, f"conversation-history.json")) # Save the conversation history
+        pbar.update(1)
 
-    # Updating the (collective) knowledge base 
-    knowledge = update_knowledge_base(history, knowledge, user, backup_dir, f"turn{idx_turn:02d}")
+        # Updating the (collective) knowledge base  based on the entire conversation history (note: double-counting of earlier turns; to be fixed)
+        knowledge = update_knowledge_base(history.copy("history_copy"), knowledge, user, backup_dir, f"turn{idx_turn:02d}")
+        pbar.update(1)
 
-    # Save the chat history
-    save_conversations_in_custom_format(history, whose_turn="user", filename=os.path.join(backup_dir, f"conversation-history.json")) # Save the conversation history
-    # Carry out fine-tuning if needed
-    if do_finetuning:
-        tutor = live_finetune(tutor, prev_history, convertor)
-
-    return history, tutor, knowledge
+        # Save the chat history
+        save_conversations_in_custom_format(history, whose_turn="user", filename=os.path.join(backup_dir, f"conversation-history.json")) # Save the conversation history
+        # Carry out fine-tuning if needed
+        if do_finetuning:
+            tutor = live_finetune(tutor, prev_history, convertor)
+            pbar.update(2)
+                
+        return history, tutor, knowledge

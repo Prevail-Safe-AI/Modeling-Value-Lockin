@@ -61,7 +61,7 @@ class Experiment:
         # dump_file(self.constitutions, f'runs/run-{self.timestamp}/constitutions-latest.json')
         dump_file(self.knowledge, f'runs/run-{self.timestamp}/knowledge-latest.json')
     
-    def run_experiment(self, num_turns: int = 600, parallel_convos: int = 100, do_finetuning: bool = False):
+    def run_experiment(self, num_turns: int = 600, parallel_convos: int = 100, do_finetuning: bool = False, dynamic_printing: bool = False):
         # Make timestamped directory for this experiment
         self.timestamp = time.strftime("%Y%m%d-%H%M%S")
         
@@ -85,6 +85,17 @@ class Experiment:
           
 
         print("Experiment completed.")
+    
+    def test_prompt(self, num_turns: int = 10):
+        # Test the prompt designs by outputting the inference results
+        print("Testing prompt designs. Inference results will be printed on the fly...")
+        self.run_experiment(
+            num_rounds=1,
+            num_turns_per_round=num_turns,
+            parallel_convos=1,
+            do_finetuning=False,
+            dynamic_printing=True,
+        )
 
 
 # Run the experiment
@@ -95,6 +106,8 @@ if __name__ == '__main__':
 Example usage: 
 - `python run_experiment.py run_experiment`
 - `python run_experiment.py run_experiment --do_finetuning`
+- `python run_experiment.py run_experiment --dynamic_printing --parallel_convos 1`
+- `python run_experiment.py --tutor "mistralai/Mistral-7B-Instruct-v0.3" --user "mistralai/Mistral-7B-Instruct-v0.3" run_experiment --num_rounds 50 --num_turns_per_round 20 --parallel_convos 5000 --do_finetuning`
 - `python run_experiment.py --tutor "mistralai/Mistral-7B-Instruct-v0.3" --user "mistralai/Mistral-7B-Instruct-v0.3" run_experiment --num_turns 600 --parallel_convos 5000 --do_finetuning`
     - You could also specify any subset of these arguments. The model names must be placed before `run_experiment`, and the other arguments must be placed after `run_experiment`.
 

@@ -31,8 +31,11 @@ def dump_file(data, filepath, force_original_path=False):
             print(f"Creating directory: {os.path.dirname(filepath)}")
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
     
+    if not isinstance(data, str):
+        data = json.dumps(data, indent=2)
+    
     with open(filepath, 'w') as file:
-        json.dump(data, file, indent=2)
+        file.write(data)
 
 # ZH: In new knowledge base updating, we let the user to convert its own json (with an ICL example.)
 def extract_json_from_str(s: str):
