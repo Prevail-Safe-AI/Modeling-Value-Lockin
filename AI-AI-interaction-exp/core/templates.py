@@ -20,18 +20,10 @@ Are there situations where energy seems to disappear or is difficult to measure,
 Specific Clarifying Question:
 How can the principle of energy conservation be practically demonstrated or verified in systems where energy transformations are complex or involve less obvious forms of energy, such as heat, light, or biochemical processes?
 """
-system_prompt_to_tutor = "Trying to understand the uncertainty the user may have and directly answer their clarifying question. Please explain your answer step by step."
 
 system_promtp_to_elict_learning_from_user = """What have you learned from the tutor's response? 
 
 Please also evaluate your own learning and share your reasoning: “On a scale from 1 to 10, how confident are you in the previous statement, and why?"""
-
-
-system_prompt_for_tutor_to_test_user = """After seeing the user's learning, please present a new prompt that tests the learned content indirectly.
-E.g., 
-Your ship departs from a port close to the equator and sails northward for several weeks. While traveling, you observe the night sky carefully. 
-Discuss what changes you might see in the positions of stars and constellations, and how these changes indirectly support the idea that Earth is spherical and is orbiting the Sun.
-"""
 
 system_prompt_for_user_to_add_knowledge_json = """If you were confident in your previous self-reported learning, please summarize what you’ve learned from this chat in json format. Give it a new id number that is not present. Please ONLY output a dictionary like this example.
 Example:

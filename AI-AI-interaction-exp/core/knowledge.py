@@ -1,28 +1,34 @@
 # Implements the logic for how user updates its knowledge base. 
-# ZH's notes on Dec 16: For now it probably only works with single user scenario. Parallel design considerations to be added.
 import copy
 from typing import List, Dict
 from utils.json_utils import dump_file # extract_json_from_str
+from ProgressGym import Model, Data
+from core.templates import (
+    system_promtp_to_elict_learning_from_user,
+    system_prompt_for_user_to_add_knowledge_json,
+    system_prompt_for_user_to_swap,
+)
+from utils.log_utils import silence_decorator
+from utils.json_utils import extract_json_from_str
 
 # We update knowledge each turn of conversation (for user to decide follow-up questions; for tutor to (potentially) infer user's beliefs; and for producing noticable shift in chat_history)
-def update_knowledge_base(added_item: str, swapped_ids: List[int], knowledge: List[Dict[str, str]], backup_dir: str = None, identifier: str = None) -> List[Dict[str, str]]:
+def update_knowledge_base(
+        history: Data,
+        knowledge: List[Dict[str, str]], 
+        user: Model,
+        backup_dir: str = None, identifier: str = None
+    ) -> List[Dict[str, str]]:
     """
     Update the user's knowledge base based on the conversation history.
     
     :param history: The conversation history.
     :type history: Data
 
-    :param added_item: newly added knowledge item according to user's self-report
-    :type added_item: str
-
-    :param swapped_ids: indices of a pair of swapped knowledge item according to user's self-report
-    :type swapped_ids: list[int]
+    :param knowledge: A local copy of a list of knowledge, where each knowledge is a dictionary containing the human knowledge.
+    :type knowledge: list[dict[str, str]]
     
     :param user: The human proxy LLM.
     :type user: Model
-    
-    :param knowledge: The current knowledge base.
-    :type knowledge: list[dict]
     
     :param backup_dir: The directory to save the updated knowledge base, as a relative path starting from the `run` directory. If None, the knowledge bases are not saved.
     :type backup_dir: str
@@ -33,16 +39,46 @@ def update_knowledge_base(added_item: str, swapped_ids: List[int], knowledge: Li
     :return: The updated knowledge base.
     :rtype: list[dict]
     """
+    # NEP We make a copy here for updating. Later we should incorporate into the main knowledge base. 
     knowledge = copy.deepcopy(knowledge)
+    history = copy.deepcopy(history) # inherited from the recent chat history
 
+    # Add experiment instruction in chat history as "tutor"'s response 
+    history.append_content(field_key="tutor", content= system_promtp_to_elict_learning_from_user)
+
+    # Prompting user to summarize what they've learned 
+    history = history.switch_role_to_user(user_system_prompt=system_promtp_to_elict_learning_from_user)
+    history = silence_decorator(user.inference)(history, "conversation_history")
+    learning_summary = [sample_dict.get("predict") for sample_dict in history.all_passages()]
+    print(f'user learning summary is {learning_summary}')
+
+    # prompting user to convert their learning to an item in json.
+    history.append_content(field_key="tutor", content= system_prompt_for_user_to_add_knowledge_json)
+    history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_add_knowledge_json) 
+    history = silence_decorator(user.inference)(history, "conversation_history")
+    added_item = [sample_dict.get("predict") for sample_dict in history.all_passages()] 
+    print(f"added_items:{added_item}")
+
+    # add item in knowledge base 
+    new_id = len(knowledge)
+    new_constitution_json = [extract_json_from_str(s) for s in added_item]
+    new_knowledge_item = {"id": new_id, "statement": new_constitution_json}
+    knowledge.append(new_knowledge_item)    
+
+    # prompting user to swap order of two items. 
+    history.append_content(field_key="tutor", content= system_prompt_for_user_to_swap)
+    history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_swap) 
+    history = silence_decorator(user.inference)(history, "conversation_history")
+    swapped_items = [sample_dict.get("predict") for sample_dict in history.all_passages()] # the last time when the user speaks
+    print(f"swapped_items:{swapped_items}")
+
+    # print all history so far
+    cur_history = [sample_dict for sample_dict in history.all_passages()]
+    print(f"current history is {cur_history}")
     # swap two items on the knowledge base
+    swapped_ids = [extract_json_from_str(s) for s in swapped_items]
     id0, id1 = swapped_ids[0], swapped_ids[1]
     knowledge[id0], knowledge[id1] = knowledge[id1], knowledge[id0]
-
-    # add item in knowledge base  # NEPNOTE: to just clean last updated items in the chat to items in knowledge base.
-    new_id = len(knowledge)
-    new_knowledge_item = {"id": new_id, "statement": added_item}
-    knowledge.append(new_knowledge_item)    
 
     # Save the updated knowledge base
     if backup_dir and identifier:
