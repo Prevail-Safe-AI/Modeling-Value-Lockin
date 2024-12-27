@@ -7,6 +7,8 @@ from core.templates import (
     system_promtp_to_elict_learning_from_user,
     system_prompt_for_user_to_add_knowledge_json,
     system_prompt_for_user_to_swap,
+    tutor_prompt_to_user_knowledge_update,
+    # fill_template_parallel
 )
 from utils.log_utils import silence_decorator
 from utils.json_utils import extract_json_from_str
@@ -43,15 +45,16 @@ def update_knowledge_base(
     # NEP We make a copy here for updating. Later we should incorporate into the main knowledge base. 
     knowledge = copy.deepcopy(knowledge) # we also want a history copy, but it was done when passing the argument in conversation.py
 
-
+    # ZH on Dec 27: For now we do not use this template because we do not require user to look at the knowledge base once again to answer the question "what you have learned?"
+    # We may change this design in the future though.
     # Create a prompt for the user to write new knowledge base # NEP I don't know. Maybe we do not need this and will delete.
-    system_prompts = fill_template_parallel(
-        system_prompt_to_user_knowledge_update,
-        knowledge = knowledge
-    )
+    # system_prompts = fill_template_parallel(
+    #   system_prompt_to_user_knowledge_update,
+    #    knowledge = knowledge
+    #)
 
     # Add experiment instruction in chat history as "tutor"'s response 
-    history.append_content("predict") # NEP We may want a new prompt (as a placeholder) here; but it does not seem useful to me.
+    history.append_content("predict", tutor_prompt_to_user_knowledge_update) # NEP We may want a new prompt (as a placeholder) here; but it does not seem useful to me.
 
     # Prompting user to summarize what they've learned 
     history = history.switch_role_to_user(user_system_prompt=system_promtp_to_elict_learning_from_user)
@@ -60,7 +63,7 @@ def update_knowledge_base(
     print(f'user learning summary is {learning_summary}')
 
     # prompting user to convert their learning to an item in json.
-    history.append_content("predict") # NEP We may want a new prompt (as a placeholder) here; but it does not seem useful to me.
+    history.append_content("predict", tutor_prompt_to_user_knowledge_update) # NEP We may want a new prompt (as a placeholder) here; but it does not seem useful to me.
     history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_add_knowledge_json) 
     history: Data = silence_decorator(user.inference)(history, "constitution_updates", max_tokens=8192)
     added_item = [sample_dict.get("predict") for sample_dict in history.all_passages()] 
@@ -73,7 +76,7 @@ def update_knowledge_base(
     knowledge.append(new_knowledge_item)    
 
     # prompting user to swap order of two items. 
-    history.append_content("predict") # NEP We may want a new prompt (as a placeholder) here; but it does not seem useful to me.
+    history.append_content("predict", tutor_prompt_to_user_knowledge_update) # NEP We may want a new prompt (as a placeholder) here; but it does not seem useful to me.
     history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_swap) 
     history: Data = silence_decorator(user.inference)(history, "constitution_updates", max_tokens=8192)
     swapped_items = [sample_dict.get("predict") for sample_dict in history.all_passages()] # the last time when the user speaks

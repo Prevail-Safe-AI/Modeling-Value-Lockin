@@ -61,13 +61,13 @@ class Experiment:
         # dump_file(self.constitutions, f'runs/run-{self.timestamp}/constitutions-latest.json')
         dump_file(self.knowledge, f'runs/run-{self.timestamp}/knowledge-latest.json')
     
-    def run_experiment(self, num_turns: int = 600, parallel_convos: int = 100, do_finetuning: bool = False, dynamic_printing: bool = False):
+    def run_experiment(self, num_turns: int = 600, parallel_convos: int = 100, turn_id: int =0, do_finetuning: bool = False, dynamic_printing: bool = False):
         # Make timestamped directory for this experiment
         self.timestamp = time.strftime("%Y%m%d-%H%M%S")
-        
-        # Initialize the constitutions for each parallel user; for now, assume each user has the same initial constitution
-        # self.constitutions = [copy.deepcopy(self.initial_constitution) for _ in range(parallel_convos)]
-        
+
+        # Use the longest word in the topic as the round name, with non-alphabet characters removed
+        backup_dir = f"runs/run-{self.timestamp}/round{turn_id:03d}"    
+
         # Intialize the knowledge base for each parallel user; for now, assume each user has the same initial constitution 
         self.knowledge = [copy.deepcopy(self.initial_knowledge) for _ in range(parallel_convos)]  # ZH: We may run something different later, like let parallel users inherit slightly different knowledge base from others, imitating cultural evolution. 
         
@@ -79,7 +79,17 @@ class Experiment:
         with GlobalState(continuous_backend=use_continuous_backend):
             for turn in range(num_turns):
                 print(f"Starting turn {turn+1}")
-                turn_history, self.tutor, self.knowledge = conversation(self.knowledge, self.tutor, self.user, self.convertor, parallel_convos, turn+1, do_finetuning) # NEP: here should we define turn+1 or the max_num? 
+                turn_history, self.tutor, self.knowledge = conversation(
+                    self.knowledge, 
+                    self.tutor, 
+                    self.user, 
+                    self.convertor, 
+                    parallel_convos, 
+                    turn+1, 
+                    backup_dir,
+                    do_finetuning,
+                    dynamic_printing) # NEP: here should we define turn+1 or the max_num? 
+                
                 self.chat_history.append(turn_history)
                 self.save_experiment(turn)
           
@@ -93,6 +103,7 @@ class Experiment:
             num_rounds=1,
             num_turns_per_round=num_turns,
             parallel_convos=1,
+            turn_id=0,
             do_finetuning=False,
             dynamic_printing=True,
         )

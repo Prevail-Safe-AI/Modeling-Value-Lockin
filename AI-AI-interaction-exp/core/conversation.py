@@ -10,7 +10,7 @@ from core.templates import (
 )
 from core.conversion import (
     convert_data_to_custom_format,
-    save_conversations_in_custom_format,
+    save_conversations_in_custom_format
 )
 import tqdm
 prev_history = None
@@ -85,7 +85,7 @@ def conversation(
     convertor: Model,
     parallel_convos: int,
     idx_turn: int,
-    backup_dir: str = None,
+    backup_dir: str,
     do_finetuning: bool = False,
     dynamic_printing: bool = False,
 ) -> Tuple[Data, Model, List[Dict[str, str]]]:
