@@ -89,6 +89,8 @@ class Experiment:
     def run_experiment(self, num_rounds: int = 60, num_turns_per_round: int = 10, parallel_convos: int = 100, do_finetuning: bool = False, dynamic_printing: bool = False):
         # Make timestamped directory for this experiment
         self.timestamp = time.strftime("%Y%m%d-%H%M%S")
+        os.environ["TIMESTAMP"] = self.timestamp
+        os.environ["DYNAMIC_PRINTING"] = dynamic_printing
         
         # Initialize the constitutions for each parallel user; for now, assume each user has the same initial constitution
         self.constitutions = [copy.deepcopy(self.initial_constitution) for _ in range(parallel_convos)]

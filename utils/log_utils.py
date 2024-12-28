@@ -1,11 +1,20 @@
-import io, warnings, sys, random, time
+import io, warnings, sys, random, time, os
 from utils.json_utils import dump_file
 from ProgressGym import Data, fill_in_QA_template
 
-def dynamic_printing_decorator(func, dynamic_printing: bool, backup_dir: str, role: str):
+def dynamic_printing_decorator(func, dynamic_printing: bool = None, backup_dir: str = None, role: str = None):
     def wrapper(data: Data, *args, **kwargs):
         if not dynamic_printing:
             return func(data, *args, **kwargs)
+        
+        if dynamic_printing is None:
+            dynamic_printing = os.environ.get("DYNAMIC_PRINTING", False)
+        
+        if backup_dir is None:
+            backup_dir = f"runs/run-{os.environ.get("TIMESTAMP", "UNNAMED")}/logs"
+        
+        if role is None:
+            role = "response"
         
         # Print the formatted prompt
         dic = next(iter(data.all_passages()))
