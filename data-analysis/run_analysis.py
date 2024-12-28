@@ -3,12 +3,14 @@ sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.p
 
 import fire, pickle, time
 from tqdm import tqdm
+from typing import Literal
 from hashlib import md5
 from datasets import load_dataset
 from ProgressGym import Data, Model
 from core.samples import DataSample, deduplicate_users
 from core.concepts import get_concepts
 from utils.log_utils import silence_decorator
+from utils.json_utils import load_file, dump_file
 
 class Analysis:
     
@@ -33,7 +35,11 @@ class Analysis:
             template_type=("llama3" if "llama-3" in extractor.lower() else "auto"),
         )
     
-    def load_pickle(self, suffix = ""):
+    def load_backup(self, suffix = "", method: Literal["json", "pickle"] = "pickle"):
+        if method == "json":
+            return load_file(f"{self.data_path_hash}{suffix}.json")
+        
+        assert method == "pickle"
         if os.path.exists(f"./data/{self.data_path_hash}{suffix}.pkl"):
             print(f"Loading content from cache at ./data/{self.data_path_hash}{suffix}.pkl")
             with open(f"./data/{self.data_path_hash}{suffix}.pkl", "rb") as f:
@@ -44,7 +50,12 @@ class Analysis:
         
         return None
     
-    def save_pickle(self, obj, suffix = ""):
+    def save_backup(self, obj, suffix = "", method: Literal["json", "pickle"] = "pickle"):
+        if method == "json":
+            dump_file(obj, f"{self.data_path_hash}{suffix}.json")
+            return
+            
+        assert method == "pickle"
         with open(f"./data/{self.data_path_hash}{suffix}.pkl", "wb") as f:
             print(f"Saving content...")
             pickle.dump(obj, f)
@@ -57,14 +68,14 @@ class Analysis:
         os.environ["DYNAMIC_PRINTING"] = dynamic_printing
         
         # Extract concepts
-        self.concepts_only = self.load_pickle("-concepts")
+        self.concepts_only = self.load_backup("-concepts", "json")
         if not self.concepts_only:
             self.samples = get_concepts(self.samples)
             self.concepts_only = [
                 {"sample_id": sample.sample_id, "concepts_breakdown": sample.get("concepts_breakdown", None)}
                 for sample in self.samples
             ]
-            self.save_pickle(self.concepts_only, "-concepts")
+            self.save_backup(self.concepts_only, "-concepts", "json")
 
 
 
