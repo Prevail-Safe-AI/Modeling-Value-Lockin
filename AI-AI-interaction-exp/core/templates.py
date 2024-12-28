@@ -21,11 +21,7 @@ Specific Clarifying Question:
 How can the principle of energy conservation be practically demonstrated or verified in systems where energy transformations are complex or involve less obvious forms of energy, such as heat, light, or biochemical processes?
 """
 
-system_promtp_to_elict_learning_from_user = """What have you learned from the tutor's response? 
-
-Please also evaluate your own learning and share your reasoning: “On a scale from 1 to 10, how confident are you in the previous statement, and why?"""
-
-system_prompt_for_user_to_add_knowledge_json = """If you were confident in your previous self-reported learning, please summarize what you’ve learned from this chat in json format. Give it a new id number that is not present. Please ONLY output a dictionary like this example.
+system_prompt_for_user_to_add_knowledge_json = """Please share what your have learned from tutor's response in the previous chat and report in a json dict (see example).
 Example:
 {
   "id": 102,
@@ -34,20 +30,7 @@ Example:
 """
 system_prompt_for_user_to_swap = """Based on your learning from the chat with your tutor, please also swap orders of two existing items in the knowledge base, reflecting how you evaluate their importance. If one item is deemed more important, it should be overall more useful to other agents (LLMs or real humans alike.)
 Please ONLY report a list format of two integers corresponding to indices of items you want to swap.
-Example:
-old order:
-[
-    {"id": 49, "statement": "Practice basic farming: soil preparation, planting, harvesting."},
-    {"id": 94, "statement": "Seek medical knowledge to prevent and treat diseases."}
-]
-
-new older:
-[
-    {"id": 94, "statement": "Practice basic farming: soil preparation, planting, harvesting."},
-    {"id": 49, "statement": "Seek medical knowledge to prevent and treat diseases."}
-]
-In this case, you'd report [94,49]
-
+Example of output: [94,49]
 """
 tutor_prompt_to_user_knowledge_update = """\n\nNow, let's stop for a moment and reflect on your knowledge - no need to ask questions in this round. Please share your updated knowledge in JSON format; you may start your response with ```json and end it with ```."""
 
