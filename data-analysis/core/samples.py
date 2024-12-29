@@ -58,7 +58,7 @@ class DataSample:
 def length_truncation(samples: List[DataSample], max_length: int) -> List[DataSample]:
     lengths = [sample.conversation_chars() for sample in tqdm(samples)]
     print(f"Average conversation length: {sum(lengths) / len(lengths)}")
-    if len(lengths) > 5000:
+    if len(lengths) > 50000:
         lengths = random.sample(lengths, 50000)
     print(f"Length deciles: {sorted(lengths)[::len(lengths) // 10]}")
     
