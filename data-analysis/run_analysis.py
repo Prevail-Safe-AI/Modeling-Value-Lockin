@@ -24,11 +24,10 @@ class Analysis:
         if max_samples:
             print(f"Trimming samples...")
             indices = random.sample(range(len(self.raw_data)), max_samples)
-            self.samples = self.raw_data.select(indices)
+            self.raw_data = self.raw_data.select(indices)
             print(f"Trimmed samples to {len(self.samples)} samples.")
-        else:
-            self.samples = [DataSample(sample) for sample in tqdm(self.raw_data)]
         
+        self.samples = [DataSample(sample) for sample in tqdm(self.raw_data)]
         self.samples = deduplicate_users(self.samples)
         del self.raw_data
         print(f"Cleaned {len(self.samples)} samples.")
