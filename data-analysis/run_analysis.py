@@ -21,11 +21,11 @@ class Analysis:
         self.raw_data = load_dataset(data_path, split=data_split)
         print(f"Succesfully loaded dataset from {data_path}. Processing samples...")
         
-        if max_samples:
+        if max_samples and max_samples < len(self.raw_data):
             print(f"Trimming samples...")
             indices = random.sample(range(len(self.raw_data)), max_samples)
             self.raw_data = self.raw_data.select(indices)
-            print(f"Trimmed samples to {len(self.samples)} samples.")
+            print(f"Trimmed samples to {len(indices)} samples.")
         
         self.samples = [DataSample(sample) for sample in tqdm(self.raw_data)]
         self.samples = deduplicate_users(self.samples)
