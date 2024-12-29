@@ -60,7 +60,7 @@ def extract_concepts(samples: List[DataSample], extractor: Model, max_retries: i
             error_count += 1
     
     print(f"Failed to extract concepts from {error_count} out of {len(samples)} conversations.")
-    if error_count >= len(samples) // 10000 and max_retries:
+    if error_count and max_retries:
         print(f"Retrying... ({max_retries} retries remain)")
         failed_indices = [
             i for i, sample in tqdm(enumerate(samples)) if not hasattr(sample.concepts)
