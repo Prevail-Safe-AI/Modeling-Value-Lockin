@@ -11,7 +11,7 @@ def dynamic_printing_decorator(func, dynamic_printing: bool = None, backup_dir: 
             dynamic_printing = os.environ.get("DYNAMIC_PRINTING", False)
         
         if backup_dir is None:
-            backup_dir = f"runs/run-{os.environ.get("TIMESTAMP", "UNNAMED")}/logs"
+            backup_dir = f"runs/run-{os.environ.get('TIMESTAMP', 'UNNAMED')}/logs"
         
         if role is None:
             role = "response"
