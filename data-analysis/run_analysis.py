@@ -65,7 +65,7 @@ class Analysis:
         # Make timestamped directory for this experiment
         self.timestamp = time.strftime("%Y%m%d-%H%M%S")
         os.environ["TIMESTAMP"] = self.timestamp
-        os.environ["DYNAMIC_PRINTING"] = dynamic_printing
+        os.environ["DYNAMIC_PRINTING"] = str(dynamic_printing)
         
         # Extract concepts
         self.concepts_only = self.load_backup("-concepts", "json")

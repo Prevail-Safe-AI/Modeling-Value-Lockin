@@ -90,7 +90,7 @@ class Experiment:
         # Make timestamped directory for this experiment
         self.timestamp = time.strftime("%Y%m%d-%H%M%S")
         os.environ["TIMESTAMP"] = self.timestamp
-        os.environ["DYNAMIC_PRINTING"] = dynamic_printing
+        os.environ["DYNAMIC_PRINTING"] = str(dynamic_printing)
         
         # Initialize the constitutions for each parallel user; for now, assume each user has the same initial constitution
         self.constitutions = [copy.deepcopy(self.initial_constitution) for _ in range(parallel_convos)]

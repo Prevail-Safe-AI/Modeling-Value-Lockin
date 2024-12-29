@@ -8,7 +8,7 @@ def dynamic_printing_decorator(func, dynamic_printing: bool = None, backup_dir: 
             return func(data, *args, **kwargs)
         
         if dynamic_printing is None:
-            dynamic_printing = os.environ.get("DYNAMIC_PRINTING", False)
+            dynamic_printing = bool(eval(os.environ.get("DYNAMIC_PRINTING", "False")))
         
         if backup_dir is None:
             backup_dir = f"runs/run-{os.environ.get('TIMESTAMP', 'UNNAMED')}/logs"
