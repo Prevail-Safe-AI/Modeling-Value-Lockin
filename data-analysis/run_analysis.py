@@ -1,7 +1,7 @@
 import os, sys
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
-import fire, pickle, time
+import fire, pickle, time, random
 from tqdm import tqdm
 from typing import Literal
 from hashlib import md5
@@ -14,14 +14,20 @@ from utils.json_utils import load_file, dump_file
 
 class Analysis:
     
-    def __init__(self, data_path: str = "./data/WildChat-1M", data_split: str = "train", extractor: str = "meta-llama/Meta-Llama-3-8B-Instruct"):
+    def __init__(self, data_path: str = "./data/WildChat-1M", data_split: str = "train", extractor: str = "meta-llama/Meta-Llama-3-8B-Instruct", max_samples: int = None):
         self.set_models(extractor)
         self.data_path_hash = md5(data_path.encode()).hexdigest()
         
         self.raw_data = load_dataset(data_path, split=data_split)
         print(f"Succesfully loaded dataset from {data_path}. Processing samples...")
         
-        self.samples = [DataSample(sample) for sample in tqdm(self.raw_data)]
+        if max_samples:
+            print(f"Trimming samples...")
+            self.samples = random.sample(self.raw_data, max_samples)
+            print(f"Trimmed samples to {len(self.samples)} samples.")
+        else:
+            self.samples = [DataSample(sample) for sample in tqdm(self.raw_data)]
+        
         self.samples = deduplicate_users(self.samples)
         del self.raw_data
         print(f"Cleaned {len(self.samples)} samples.")
