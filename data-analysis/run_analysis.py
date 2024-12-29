@@ -37,7 +37,10 @@ class Analysis:
     
     def load_backup(self, suffix = "", method: Literal["json", "pickle"] = "pickle"):
         if method == "json":
-            return load_file(f"{self.data_path_hash}{suffix}.json")
+            try:
+                return load_file(f"{self.data_path_hash}{suffix}.json")
+            except FileNotFoundError:
+                return None
         
         assert method == "pickle"
         if os.path.exists(f"./data/{self.data_path_hash}{suffix}.pkl"):
