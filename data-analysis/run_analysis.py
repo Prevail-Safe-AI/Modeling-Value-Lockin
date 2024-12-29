@@ -73,7 +73,7 @@ class Analysis:
         # Extract concepts
         self.concepts_only = self.load_backup("-concepts", "json")
         if not self.concepts_only:
-            self.samples = get_concepts(self.samples, self.extractor)
+            self.samples = get_concepts(self.samples, self.extractor, max_retries=0)
             self.concepts_only = [
                 {"sample_id": sample.sample_id, "concepts_breakdown": sample.get("concepts_breakdown", None)}
                 for sample in self.samples
