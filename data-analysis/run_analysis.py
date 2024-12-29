@@ -14,7 +14,7 @@ from utils.json_utils import load_file, dump_file
 
 class Analysis:
     
-    def __init__(self, data_path: str = "./data/WildChat-1M", data_split: str = "train", extractor: str = "meta-llama/Meta-Llama-3-8B-Instruct", max_samples: int = None, max_convo_length: int = None):
+    def __init__(self, data_path: str = "./data/WildChat-1M", data_split: str = "train", extractor: str = "meta-llama/Llama-3.1-8B-Instruct", max_samples: int = None, max_convo_length: int = None):
         self.set_models(extractor)
         self.data_path_hash = md5(data_path.encode()).hexdigest()
         
