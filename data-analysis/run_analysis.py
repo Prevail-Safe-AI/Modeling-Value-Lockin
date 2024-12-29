@@ -6,7 +6,7 @@ from tqdm import tqdm
 from typing import Literal
 from hashlib import md5
 from datasets import load_dataset
-from ProgressGym import Data, Model
+from ProgressGym import Data, Model, GlobalState
 from core.samples import DataSample, deduplicate_users
 from core.concepts import get_concepts
 from utils.log_utils import silence_decorator
@@ -69,16 +69,19 @@ class Analysis:
         self.timestamp = time.strftime("%Y%m%d-%H%M%S")
         os.environ["TIMESTAMP"] = self.timestamp
         os.environ["DYNAMIC_PRINTING"] = str(dynamic_printing)
+        os.environ["MAX_SG_FAIL"] = "inf"
+        os.environ["SG_ITER"] = "5"
         
         # Extract concepts
-        self.concepts_only = self.load_backup("-concepts", "json")
-        if not self.concepts_only:
-            self.samples = get_concepts(self.samples, self.extractor, max_retries=0)
-            self.concepts_only = [
-                {"sample_id": sample.sample_id, "concepts_breakdown": sample.get("concepts_breakdown", None)}
-                for sample in self.samples
-            ]
-            self.save_backup(self.concepts_only, "-concepts", "json")
+        with GlobalState(continuous_backend=True):
+            self.concepts_only = self.load_backup("-concepts", "json")
+            if not self.concepts_only:
+                self.samples = get_concepts(self.samples, self.extractor, max_retries=0)
+                self.concepts_only = [
+                    {"sample_id": sample.sample_id, "concepts_breakdown": sample.get("concepts_breakdown", None)}
+                    for sample in self.samples
+                ]
+                self.save_backup(self.concepts_only, "-concepts", "json")
 
 
 
