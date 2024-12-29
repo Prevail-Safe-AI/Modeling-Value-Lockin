@@ -23,7 +23,8 @@ class Analysis:
         
         if max_samples:
             print(f"Trimming samples...")
-            self.samples = random.sample(self.raw_data, max_samples)
+            indices = random.sample(range(len(self.raw_data)), max_samples)
+            self.samples = self.raw_data.select(indices)
             print(f"Trimmed samples to {len(self.samples)} samples.")
         else:
             self.samples = [DataSample(sample) for sample in tqdm(self.raw_data)]
