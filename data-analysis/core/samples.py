@@ -2,6 +2,7 @@ from datetime import datetime
 from typing import List, Dict, Tuple, Set
 from scipy.cluster.hierarchy import DisjointSet
 from tqdm import tqdm
+import random
 
 class DataSample:
     sample_id: str
@@ -45,6 +46,27 @@ class DataSample:
                     "content": message["content"],
                 }
             )
+    
+    def conversation_chars(self) -> int:
+        return sum([len(message["content"]) for message in self.conversation])
+    
+    def truncate_conversation(self, length: int):
+        while self.conversation_chars() > length:
+            self.conversation.pop()
+
+
+def length_truncation(samples: List[DataSample], max_length: int) -> List[DataSample]:
+    lengths = [sample.conversation_chars() for sample in tqdm(samples)]
+    print(f"Average conversation length: {sum(lengths) / len(lengths)}")
+    if len(lengths) > 5000:
+        lengths = random.sample(lengths, 50000)
+    print(f"Length deciles: {sorted(lengths)[::len(lengths) // 10]}")
+    
+    print(f"Truncating samples to max length of {max_length} characters...")
+    for sample in tqdm(samples):
+        sample.truncate_conversation(max_length)
+    
+    return samples
 
 
 def deduplicate_users(samples: List[DataSample]) -> List[DataSample]:
@@ -74,6 +96,6 @@ def deduplicate_users(samples: List[DataSample]) -> List[DataSample]:
     
     print("Deduplication complete.")
     all_subsets = users.subsets()
-    print(f"Found {len(all_subsets)} unique users our of {sum([len(subset) for subset in all_subsets])} IPs.")
+    print(f"Found {len(all_subsets)} unique users out of {sum([len(subset) for subset in all_subsets])} IPs.")
     
     return samples

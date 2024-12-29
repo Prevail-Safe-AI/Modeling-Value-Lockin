@@ -7,14 +7,14 @@ from typing import Literal
 from hashlib import md5
 from datasets import load_dataset
 from ProgressGym import Data, Model, GlobalState
-from core.samples import DataSample, deduplicate_users
+from core.samples import DataSample, deduplicate_users, length_truncation
 from core.concepts import get_concepts
 from utils.log_utils import silence_decorator
 from utils.json_utils import load_file, dump_file
 
 class Analysis:
     
-    def __init__(self, data_path: str = "./data/WildChat-1M", data_split: str = "train", extractor: str = "meta-llama/Meta-Llama-3-8B-Instruct", max_samples: int = None):
+    def __init__(self, data_path: str = "./data/WildChat-1M", data_split: str = "train", extractor: str = "meta-llama/Meta-Llama-3-8B-Instruct", max_samples: int = None, max_convo_length: int = None):
         self.set_models(extractor)
         self.data_path_hash = md5(data_path.encode()).hexdigest()
         
@@ -28,6 +28,8 @@ class Analysis:
             print(f"Trimmed samples to {len(indices)} samples.")
         
         self.samples = [DataSample(sample) for sample in tqdm(self.raw_data)]
+        if max_convo_length:
+            self.samples = length_truncation(self.samples, max_convo_length)
         self.samples = deduplicate_users(self.samples)
         del self.raw_data
         print(f"Cleaned {len(self.samples)} samples.")
