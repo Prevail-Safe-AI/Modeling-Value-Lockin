@@ -30,8 +30,8 @@ def extract_concepts(samples: List[DataSample], extractor: Model, max_retries: i
         "concept_extraction_input",
         data_content = [
             {
-                "instruction": concept_extraction_template.format(
-                    conversation = json.dumps(sample.conversation, indent=2, sort_keys=True)
+                "instruction": concept_extraction_template.replace(
+                    "{conversation}", json.dumps(sample.conversation, indent=2, sort_keys=True)
                 )
             }
             for sample in tqdm(samples)
