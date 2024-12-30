@@ -78,7 +78,7 @@ class Analysis:
         os.environ["TIMESTAMP"] = self.timestamp
         os.environ["DYNAMIC_PRINTING"] = str(dynamic_printing)
         os.environ["MAX_SG_FAIL"] = "inf"
-        os.environ["SG_ITER"] = "5"
+        os.environ["SG_ITER"] = "3"
         
         # Extract concepts
         with GlobalState(continuous_backend=True):

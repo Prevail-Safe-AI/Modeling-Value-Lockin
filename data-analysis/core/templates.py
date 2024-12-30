@@ -24,7 +24,7 @@ Important details:
 - Output **only** the JSON object and nothing else (no extra commentary or explanation).
 - Always give concepts in English, even if the conversation is in another language.
 
-### Input 1 (Example)
+### Input 1
 
 ```json
 [
@@ -47,7 +47,7 @@ Important details:
 ]
 ```
 
-### Output 1 (Example)
+### Output 1 (Concepts in English)
 
 ```json
 {
@@ -58,7 +58,7 @@ Important details:
 }
 ```
 
-### Input 2 (Example)
+### Input 2
 
 ```json
 [
@@ -81,7 +81,7 @@ Important details:
 ]
 ```
 
-### Output 2 (Example)
+### Output 2 (Concepts in English)
 
 ```json
 {
@@ -98,7 +98,7 @@ Important details:
 {conversation}
 ```
 
-### Output 3
+### Output 3 (Concepts in English)
 
 [FILL IN YOUR ANSWER HERE]"""
 

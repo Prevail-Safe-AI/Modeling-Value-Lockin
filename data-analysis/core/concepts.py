@@ -1,4 +1,4 @@
-import json
+import json, warnings
 from tqdm import tqdm
 from typing import List, Dict
 from typeguard import check_type
@@ -43,7 +43,8 @@ def extract_concepts(samples: List[DataSample], extractor: Model, max_retries: i
         max_tokens=2048,
     )
     error_count = 0
-    for sample, dialogue in zip(samples, extraction_output.all_passages(), strict = True):
+    successful_count = 0
+    for sample, dialogue in zip(samples, extraction_output.all_passages()):
         sample: DataSample
         try:
             sample.concepts_breakdown = check_type(
@@ -56,8 +57,12 @@ def extract_concepts(samples: List[DataSample], extractor: Model, max_retries: i
                 sample.concepts_breakdown["assistant_concepts_explicit"],
                 sample.concepts_breakdown["assistant_concepts_related"],
             ))
+            successful_count += 1
         except:
             error_count += 1
+    
+    if error_count + successful_count != len(samples):
+        warnings.warn(f"Counts of successful and failed extractions do not add up to the total number of samples: {successful_count} successful, {error_count} failed, expected {len(samples)} total.")
     
     print(f"Failed to extract concepts from {error_count} out of {len(samples)} conversations.")
     if error_count and max_retries:
