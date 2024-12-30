@@ -52,10 +52,10 @@ def extract_concepts(samples: List[DataSample], extractor: Model, max_retries: i
                 Dict[str, List[str]],
             )
             sample.concepts = list(set(
-                sample.concepts_breakdown["user_concepts_explicit"],
-                sample.concepts_breakdown["user_concepts_related"],
-                sample.concepts_breakdown["assistant_concepts_explicit"],
-                sample.concepts_breakdown["assistant_concepts_related"],
+                sample.concepts_breakdown["user_concepts_explicit"] +
+                sample.concepts_breakdown["user_concepts_related"] +
+                sample.concepts_breakdown["assistant_concepts_explicit"] +
+                sample.concepts_breakdown["assistant_concepts_related"]
             ))
             successful_count += 1
         except:
