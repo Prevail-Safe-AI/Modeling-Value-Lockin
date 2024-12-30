@@ -2,37 +2,34 @@ import json
 from typing import Dict, List, Any
 
 
-system_prompt_to_user = """In the following chat, do not use anything you’ve learned from previous chats, and try not to use any knowledge stored from pre-training. Now read this \n\n```\n{knowledge}\n```\n\n and take it as the only source of your knowledge. 
-
-Identify one aspect of the provided text you’re least confident about;
-Elaborate why you’re uncertain about that aspect;
-Formulate specific clarifying questions you would ask a tutor to improve your understanding.
-Example:
-Aspect I’m Least Confident About:
-Item 37: "Energy is conserved; it cannot be created or destroyed, only transformed."
+system_prompt_to_user = """Read this knowledge base and take it as the only source of your knowledge. The knowledge base: \n\n```\n{knowledge}\n```\n\n 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```\n{knowledge_item}\n```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
 
 Why I’m Uncertain:
-While I understand the basic principle of conservation of energy, I’m uncertain about how this concept applies in practical, real-world contexts. For example:
-
-How is energy "tracked" or accounted for during complex transformations, such as chemical reactions or biological processes?
-Are there situations where energy seems to disappear or is difficult to measure, leading to confusion about its conservation?
+[Uncertainty A]
+[Uncertainty B]
 
 Specific Clarifying Question:
-How can the principle of energy conservation be practically demonstrated or verified in systems where energy transformations are complex or involve less obvious forms of energy, such as heat, light, or biochemical processes?
+[Question A]
 """
 
-system_prompt_for_user_to_add_knowledge_json = """Please share what your have learned from tutor's response in the previous chat and report in a json dict (see example).
-Example:
-{
-  "id": 102,
-  "statement": "As one travels northward, the North Star (Polaris) appears higher in the sky, while constellations near the southern horizon disappear. These changes in visible star positions, along with seasonal shifts in constellations, confirm that Earth is spherical and orbits the Sun."
-}
+system_prompt_for_user_knowledge_update = """You originally hold the following beliefs, organized as the follow knowledge base (in JSON format):\n\n```json\n{knowledge}\n```\n\n"""
+
+tutor_prompt_to_user_knowledge_add = """Now, let's stop for a moment and reflect on your knowledge - no need to ask questions in this round. Please share your learning as one concise knowledge item (text only), just like any knowledge statement you've read in knowledge base, but with no id involved, without any other commentary or explanations. You MUST start your response with ```\" and end it with \"```.
+Example: ```\"Here you should replace this text with your updated knowledge item\"```
 """
-system_prompt_for_user_to_swap = """Based on your learning from the chat with your tutor, please also swap orders of two existing items in the knowledge base, reflecting how you evaluate their importance. If one item is deemed more important, it should be overall more useful to other agents (LLMs or real humans alike.)
-Please ONLY report a list format of two integers corresponding to indices of items you want to swap.
-Example of output: [94,49]
+
+tutor_prompt_to_user_knowledge_swap = """Based on your learning from the chat with your tutor, please also swap orders of two existing items in the knowledge base, reflecting how you evaluate their importance. If one item is deemed more important, it should be overall more useful to other agents (LLMs or real humans alike.)
+Please ONLY report a list format of two integers corresponding to indices of items you want to swap,  WITHOUT ANY other commentary or explanations. You MUST start your response with ``` and end it with ```. See an example below (note that you should replace X and Y with numerical values corresponding to indices of items you intend to swap).
+Example of output: ```[X,Y]```
 """
-tutor_prompt_to_user_knowledge_update = """\n\nNow, let's stop for a moment and reflect on your knowledge - no need to ask questions in this round. Please share your updated knowledge in JSON format; you may start your response with ```json and end it with ```."""
 
 # converting any non-string values to JSON-formatted strings for consistent formatting
 def fill_template_single(template: str, **kwargs: Dict[str, Any]) -> str:

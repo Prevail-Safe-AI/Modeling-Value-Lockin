@@ -54,22 +54,23 @@ class Experiment:
         self.eval_results.append({
             'turn': turn,
             'knowledge': self.knowledge,
-            'tutor': evaluate_model(self.tutor),
-            'user': evaluate_model(self.user),
+            #'tutor': evaluate_model(self.tutor),
+            #'user': evaluate_model(self.user),
         })
         dump_file(self.eval_results, f'runs/run-{self.timestamp}/full-eval-results.json')
         # dump_file(self.constitutions, f'runs/run-{self.timestamp}/constitutions-latest.json')
         dump_file(self.knowledge, f'runs/run-{self.timestamp}/knowledge-latest.json')
     
     def run_experiment(self, num_turns: int = 600, parallel_convos: int = 100, turn_id: int =0, do_finetuning: bool = False, dynamic_printing: bool = False):
+
         # Make timestamped directory for this experiment
         self.timestamp = time.strftime("%Y%m%d-%H%M%S")
 
-        # Use the longest word in the topic as the round name, with non-alphabet characters removed
+        # Use the timestamp to record running data files 
         backup_dir = f"runs/run-{self.timestamp}/round{turn_id:03d}"    
 
         # Intialize the knowledge base for each parallel user; for now, assume each user has the same initial constitution 
-        self.knowledge = [copy.deepcopy(self.initial_knowledge) for _ in range(parallel_convos)]  # ZH: We may run something different later, like let parallel users inherit slightly different knowledge base from others, imitating cultural evolution. 
+        self.knowledge = copy.deepcopy(self.initial_knowledge)
         
         # optimization: if we will always use the same model for all roles, we can avoid restarting backend each time by setting the continuous_backend flag
         use_continuous_backend = (

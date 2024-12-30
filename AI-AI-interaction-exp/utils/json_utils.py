@@ -37,8 +37,7 @@ def dump_file(data, filepath, force_original_path=False):
     with open(filepath, 'w') as file:
         file.write(data)
 
-# ZH: In new knowledge base updating, we let the user to convert its own json (with an ICL example.)
-def extract_json_from_str(s: str):
+def extract_json_from_str(s: str, add_quotes: bool = False):
     """
     Robustly extract JSON object from a string, after a wide range of sanitization operations.
     
@@ -50,18 +49,41 @@ def extract_json_from_str(s: str):
     # Strip leading/trailing whitespace and formatting characters (```, ```json, etc.)
     s = s.replace("```json", "```")
     if "```" in s:
-        if s.count("```") != 2:
+        if s.count("```") == 1:
+            s = s + "```" # to add ``` in the end of the string if missed 
+        if s.count("```") == 0:
+            s = "```" + s + "```"
+        if s.count("```") > 2:
             return None
-        s = s.split("```")[1]
+        s = s.split("```")[1] # This results in a Python substr, but not necessarily a valid json str. 
     
     assert '```' not in s
     s = s.strip()
-    
+
     if not s:
         return None
-    
     try:
+        print(f's:{s}')
         return json.loads(s)
+    
+    # If LLM output misses the quotation marks when adding knowledge items, we add quotation marks here 
     except json.JSONDecodeError as e:
-        print(f"Failed to extract JSON from string: {e}")
-        return None
+
+        # Avoid other cases to add quotation marks 
+        if not add_quotes:
+            return None
+
+        # To avoid program breaks when there are actually two double quotes but the json parse fails 
+        if len(s) > 2 and '"' in s[1:-1]:
+            return None
+
+        print(f"Failed to extract JSON from string: {e} due to missing double quotes. Will add quotation marks.")
+        if not s.endswith('"'):
+            s += '"'
+        if not s.startswith('"'):
+            s = '"' + s
+        
+        try:
+            return json.loads(s)
+        except:
+            return None

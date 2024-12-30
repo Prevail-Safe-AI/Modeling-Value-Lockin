@@ -13,6 +13,7 @@ from core.conversion import (
     save_conversations_in_custom_format
 )
 import tqdm
+import random 
 prev_history = None
 
 def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int, backup_dir: str, dynamic_printing: bool, user: Model) -> Data:
@@ -61,10 +62,11 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
     conversation_history: Data = dynamic_printing_decorator(silence_decorator(user.inference), dynamic_printing, backup_dir, "user")(
         conversation_history,
         "conversation_history",
+        temperature = 1.0,
     )
     print("after the backend call")
     first_question = [sample_dict.get("predict") for sample_dict in conversation_history.all_passages()]
-    print(f'The first user question is {first_question}')
+    #print(f'The first user question is {first_question}')
 
     # Save the conversation history for use in fine-tuning, before switching role to tutor
     global prev_history
@@ -74,7 +76,7 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
     conversation_history = conversation_history.switch_role_to_assistant(
         # assistant_system_prompt=system_prompt_to_tutor
     )
-    print("initial prompt func done")
+    #print("initial prompt func done")
     return conversation_history
 
 # Conversation between two LLMs 
@@ -126,13 +128,14 @@ def conversation(
     """
     print(f"Starting {parallel_convos} parallel conversations")
     global prev_history
-    
+    knowledge_item = random.choice(knowledge) # each turn of convo, we will randomly assign one knowledge item for user to address uncertainty and learn more about.
     # Generate system initial prompts for all the parallel users
-    system_prompts_to_user_parallel = fill_template_parallel(
-        system_prompt_to_user,
-        knowledge=knowledge
-        # constitution=constitutions,
-    )
+    #system_prompts_to_user_parallel = fill_template_parallel(
+    #    system_prompt_to_user,
+    #    knowledge=knowledge,
+    #    knowledge_item = knowledge_item,
+    #)
+    system_prompts_to_user_parallel = system_prompt_to_user.format(knowledge=knowledge, knowledge_item=knowledge_item)
     # Each turn is awnew. The user does not inherit any chat history from prev turns.
     history = None
     with tqdm.tqdm(total=5 if do_finetuning else 3) as pbar:
@@ -148,7 +151,7 @@ def conversation(
         pbar.update(1)
 
         # Updating the (collective) knowledge base  based on the entire conversation history (note: double-counting of earlier turns; to be fixed)
-        knowledge = update_knowledge_base(history.copy("history_copy"), knowledge, user, backup_dir, f"turn{idx_turn:02d}")
+        knowledge = update_knowledge_base(history.copy("history_copy"), knowledge, user, backup_dir, f"turn{idx_turn:02d}", dynamic_printing=dynamic_printing)
         pbar.update(1)
 
         # Save the chat history

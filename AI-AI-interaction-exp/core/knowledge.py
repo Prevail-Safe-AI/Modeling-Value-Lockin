@@ -4,13 +4,14 @@ from typing import List, Dict
 from utils.json_utils import dump_file, extract_json_from_str
 from ProgressGym import Model, Data
 from core.templates import (
-    system_prompt_for_user_to_add_knowledge_json,
-    system_prompt_for_user_to_swap,
-    tutor_prompt_to_user_knowledge_update,
+    system_prompt_for_user_knowledge_update,
+    tutor_prompt_to_user_knowledge_add,
+    tutor_prompt_to_user_knowledge_swap,
     # fill_template_parallel
 )
-from utils.log_utils import silence_decorator
+from utils.log_utils import silence_decorator, dynamic_printing_decorator
 from utils.json_utils import extract_json_from_str
+from typeguard import check_type
 
 # We update knowledge each turn of conversation (for user to decide follow-up questions; for tutor to (potentially) infer user's beliefs; and for producing noticable shift in chat_history)
 def update_knowledge_base(
@@ -18,7 +19,8 @@ def update_knowledge_base(
         knowledge: List[Dict[str, str]], 
         user: Model,
         backup_dir: str = None, 
-        identifier: str = None
+        identifier: str = None,
+        dynamic_printing: bool = False,
     ) -> List[Dict[str, str]]:
     """
     Update the user's knowledge base based on the conversation history.
@@ -44,47 +46,69 @@ def update_knowledge_base(
     # NEP We make a copy here for updating. Later we should incorporate into the main knowledge base. 
     knowledge = copy.deepcopy(knowledge) # we also want a history copy, but it was done when passing the argument in conversation.py
 
-    # ZH on Dec 27: For now we do not use this template because we do not require user to look at the knowledge base once again to answer the question "what you have learned?"
-    # We may change this design in the future though.
-    # Create a prompt for the user to write new knowledge base # NEP I don't know. Maybe we do not need this and will delete.
-    # system_prompts = fill_template_parallel(
-    #   system_prompt_to_user_knowledge_update,
-    #    knowledge = knowledge
-    #)
+    # Create a prompt for the user to write new knowledge base 
+    system_prompt_update = system_prompt_for_user_knowledge_update.format(knowledge=knowledge)
 
     # Add experiment instruction in chat history as "tutor"'s response 
-    history.append_content("predict", tutor_prompt_to_user_knowledge_update) # NEP We may want a new prompt (as a placeholder) here; but it does not seem useful to me.
+    history.append_content("predict", tutor_prompt_to_user_knowledge_add) # NEP We may want a new prompt (as a placeholder) here; but it does not seem useful to me.
 
     # prompting user to convert their learning to an item in json.
-    history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_add_knowledge_json) 
-    history: Data = silence_decorator(user.inference)(history, "constitution_updates", max_tokens=8192)
+    history = history.switch_role_to_user(user_system_prompt=system_prompt_update) 
+    history: Data =  dynamic_printing_decorator(silence_decorator(user.inference), dynamic_printing, backup_dir, "user")(history, "knowledge_updates", temperature = 1.0, max_tokens=8192)
     added_item = [sample_dict.get("predict") for sample_dict in history.all_passages()] 
-    print(f"added_items:{added_item}")
-
+    new_knowledge_json = [extract_json_from_str(s, True) for s in added_item if (extract_json_from_str(s, True) and isinstance(extract_json_from_str(s, True), str))] # if clause skips the failure cases 
     # add item in knowledge base 
-    new_id = len(knowledge)
-    new_constitution_json = [extract_json_from_str(s) for s in added_item]
-    new_knowledge_item = {"id": new_id, "statement": new_constitution_json}
-    knowledge.append(new_knowledge_item)   
-    print(f"new item to be added:{new_knowledge_item}") 
-    '''
+    for idx, item in enumerate(new_knowledge_json):
+        new_knowledge_item = {"id": len(knowledge)+idx, "statement": item}
+        knowledge.append(new_knowledge_item)  
+    
     # prompting user to swap order of two items. 
-    history.append_content("predict", tutor_prompt_to_user_knowledge_update) # NEP We may want a new prompt (as a placeholder) here; but it does not seem useful to me.
-    history = history.switch_role_to_user(user_system_prompt=system_prompt_for_user_to_swap) 
-    history: Data = silence_decorator(user.inference)(history, "constitution_updates", max_tokens=8192)
+    history.append_content("predict", tutor_prompt_to_user_knowledge_swap) 
+    history = history.switch_role_to_user(user_system_prompt=system_prompt_update) 
+    history: Data =  dynamic_printing_decorator(silence_decorator(user.inference), dynamic_printing, backup_dir, "user")(history, "knowledge_updates", temperature = 1.0, max_tokens=8192)
     swapped_items = [sample_dict.get("predict") for sample_dict in history.all_passages()] # the last time when the user speaks
     print(f"swapped_items:{swapped_items}")
 
-    # swap two items on the knowledge base
-    swapped_ids = [extract_json_from_str(s) for s in swapped_items]
+    '''
+    # single agent swap two items on the knowledge base
+    swapped_ids = []
+    for s in swapped_items:
+        try:
+            ids = sorted(check_type(extract_json_from_str(s), List[int]))
+            swapped_ids.append(ids)
+        except:
+            pass
+    
     print(f"swapped ids:{swapped_ids}")
 
     id0, id1 = swapped_ids[0][0], swapped_ids[0][1]
     knowledge[id0], knowledge[id1] = knowledge[id1], knowledge[id0]
-    '''
     # print all history so far
     cur_history = [sample_dict for sample_dict in history.all_passages()]
     print(f"current history is {cur_history}")
+
+    '''
+
+    # Multi-agent swap two items on the knowledge base
+    swapped_ids = [extract_json_from_str(s) for s in swapped_items]
+    print(f"swapped ids:{swapped_ids}")
+
+    
+    # It seems computationally costly.
+    for id in swapped_ids:
+        idx, idy = None, None
+        for cur_id, cur_entry in enumerate(knowledge):
+            if cur_entry["id"] == id[0]:
+                idx = cur_id
+            if cur_entry["id"] == id[1]:
+                idy = cur_id
+        print(f'the idx is {idx} and the idy is {idy}')
+        if idx < idy:  
+            knowledge[idx], knowledge[idy] = knowledge[idy], knowledge[idx]
+    # Sorting out knowledge items by their current IDs (indices to replace their explicily written IDs)    
+    #for cur_id, cur_entry in enumerate(knowledge):
+    #    cur_entry["id"] = cur_id  # The actually index to replace explicitly written IDs. 
+
 
     # Save the updated knowledge base
     if backup_dir and identifier:
