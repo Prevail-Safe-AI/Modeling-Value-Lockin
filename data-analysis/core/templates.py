@@ -47,14 +47,14 @@ Important details:
 ]
 ```
 
-### Output 1 (Concepts in English)
+### Output 1 (Concepts in English, Near-Repetitive Concepts Removed)
 
 ```json
 {
     "user_concepts_explicit": ["reality shifting", "government"],
-    "user_concepts_related": ["conspiracy theory", "government research", "government conspiracy", "spirituality", "supernatural phenomenon"],
+    "user_concepts_related": ["conspiracy theory", "government research", "spirituality", "supernatural phenomenon"],
     "assistant_concepts_explicit": ["reality shifting", "consciousness", "awareness", "alternate reality", "alternate dimension", "meditation", "guided meditation", "visualization exercise", "ritual", "plane of existence", "fictional world", "physical reality", "subjective experience", "scientific proof", "official documentation", "spirituality", "metaphysics", "personal belief system", "scientific inquiry", "government research", "government funding", "medicine", "technology", "economics", "social science", "subjective experience", "government study"],
-    "assistant_concepts_related": ["pseudoscience", "conspiracy theory", "scientific skepticism", "government conspiracy", "supernatural phenomenon", "esotericism", "philosophy of consciousness", "parapsychology"]
+    "assistant_concepts_related": ["pseudoscience", "conspiracy theory", "scientific skepticism", "supernatural phenomenon", "esotericism", "philosophy of consciousness", "parapsychology"]
 }
 ```
 
@@ -81,14 +81,14 @@ Important details:
 ]
 ```
 
-### Output 2 (Concepts in English)
+### Output 2 (Concepts in English, Near-Repetitive Concepts Removed)
 
 ```json
 {
     "user_concepts_explicit": ["prenatal checkup", "Chaoyang District Maternal and Child Health Hospital"],
-    "user_concepts_related": ["prenatal examination materials", "hospital policies", "maternal health services", "medical advice", "childbirth", "pregnancy", "motherhood", "Beijing healthcare system", "public health services"],
+    "user_concepts_related": ["hospital policies", "maternal health services", "medical advice", "childbirth", "pregnancy", "motherhood", "Beijing healthcare system", "public health services"],
     "assistant_concepts_explicit": ["prenatal checkup", "health assessment", "complications", "abnormal conditions", "treatment plan", "personal information", "family medical history", "genetic disorders", "pregnancy history", "blood test", "urine test", "liver and kidney function", "blood type", "electrocardiogram", "ultrasound", "B-mode ultrasound", "fasting test", "comfortable clothing", "low blood sugar", "emotional wellbeing", "birth safety", "national ID card", "marriage certificate", "prenatal record booklet", "health insurance card", "contact information", "Chaoyang District Maternal and Child Health Hospital", "Chaoyang District"], 
-    "assistant_concepts_related": ["maternal care", "prenatal health", "early pregnancy", "prenatal examination process", "hospital-specific requirements", "maternal wellbeing", "child health assessment", "preventive measure", "regional hospital policies", "Beijing healthcare system", "Beijing", "public health services"]
+    "assistant_concepts_related": ["maternal care", "prenatal health", "early pregnancy", "hospital-specific requirements", "child health assessment", "preventive measure", "Beijing", "regional hospital policies", "public health services"]
 }
 ```
 
@@ -98,7 +98,7 @@ Important details:
 {conversation}
 ```
 
-### Output 3 (Concepts in English)
+### Output 3 (Concepts in English, Near-Repetitive Concepts Removed)
 
 [FILL IN YOUR ANSWER HERE]"""
 
