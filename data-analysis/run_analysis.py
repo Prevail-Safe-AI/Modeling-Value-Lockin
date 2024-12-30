@@ -86,7 +86,7 @@ class Analysis:
             if not self.concepts_only:
                 self.samples = get_concepts(self.samples, self.extractor, max_retries=0)
                 self.concepts_only = [
-                    {"sample_id": sample.sample_id, "concepts_breakdown": sample.get("concepts_breakdown", None)}
+                    {"sample_id": sample.sample_id, "concepts_breakdown": getattr(sample, "concepts_breakdown", default=None)}
                     for sample in self.samples
                 ]
                 self.save_backup(self.concepts_only, "-concepts", "json")
