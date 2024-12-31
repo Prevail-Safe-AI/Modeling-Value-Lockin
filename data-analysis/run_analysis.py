@@ -83,7 +83,8 @@ class Analysis:
             for sample, concepts in zip(self.samples, self.concepts_only):
                 assert sample.sample_id == concepts["sample_id"]
                 sample.concepts_breakdown = concepts["concepts_breakdown"]
-                sample.concepts = list(set([c for l in sample.concepts_breakdown.values() for c in l]))
+                if sample.concepts_breakdown is not None:
+                    sample.concepts = list(set([c for l in sample.concepts_breakdown.values() for c in l]))
             
             return True
         
