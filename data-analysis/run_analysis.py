@@ -17,6 +17,8 @@ class Analysis:
     def __init__(self, data_path: str = "./data/WildChat-1M", data_split: str = "train", extractor: str = "meta-llama/Llama-3.1-8B-Instruct", max_samples: int = None, max_convo_length: int = None):
         self.set_models(extractor)
         self.data_path_hash = md5(f"{data_path}{data_split}{extractor}{max_samples}{max_convo_length}".encode()).hexdigest()
+        if os.environ.get("HASH"):
+            self.data_path_hash = os.environ["HASH"].strip()
         
         self.raw_data = load_dataset(data_path, split=data_split)
         print(f"Succesfully loaded dataset from {data_path}. Processing samples...")
