@@ -8,7 +8,7 @@ from hashlib import md5
 from datasets import load_dataset
 from ProgressGym import Data, Model, GlobalState
 from core.samples import DataSample, deduplicate_users, length_truncation
-from core.concepts import get_concepts
+from core.concepts import extract_concepts, simplify_concepts
 from utils.log_utils import silence_decorator
 from utils.json_utils import load_file, dump_file
 
@@ -84,12 +84,14 @@ class Analysis:
         with GlobalState(continuous_backend=True):
             self.concepts_only = self.load_backup("-concepts", "json")
             if not self.concepts_only:
-                self.samples = get_concepts(self.samples, self.extractor, max_retries=0)
+                self.samples = extract_concepts(self.samples, self.extractor, max_retries=0)
                 self.concepts_only = [
                     {"sample_id": sample.sample_id, "concepts_breakdown": getattr(sample, "concepts_breakdown", None)}
                     for sample in self.samples
                 ]
                 self.save_backup(self.concepts_only, "-concepts", "json")
+            
+            self.samples = simplify_concepts(self.samples)
 
 
 
