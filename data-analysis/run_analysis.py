@@ -6,6 +6,7 @@ from tqdm import tqdm
 from typing import Literal
 from hashlib import md5
 from datasets import load_dataset
+from collections import Counter
 from ProgressGym import Data, Model, GlobalState
 from core.samples import DataSample, deduplicate_users, length_truncation
 from core.concepts import extract_concepts, simplify_concepts, cluster_concepts
@@ -75,10 +76,10 @@ class Analysis:
             print(f"Saved content to ./data/{self.data_path_hash}{suffix}.pkl")
     
     def load_concept_only(self, suffix: str = ""):
-        print(f"Trying to load concept{suffix} from cache...")
-        self.concepts_only = self.load_backup(f"-concept{suffix}", "json")
+        print(f"Trying to load concepts{suffix} from cache...")
+        self.concepts_only = self.load_backup(f"-concepts{suffix}", "json")
         if self.concepts_only is not None:
-            print(f"Loaded {len(self.concepts_only)} concept{suffix}.")
+            print(f"Loaded {len(self.concepts_only)} concepts{suffix}.")
             for sample, concepts in zip(self.samples, self.concepts_only):
                 assert sample.sample_id == concepts["sample_id"]
                 sample.concepts_breakdown = concepts["concepts_breakdown"]
@@ -86,17 +87,21 @@ class Analysis:
             
             return True
         
-        print(f"Failed to load concept{suffix} from cache.")
+        print(f"Failed to load concepts{suffix} from cache.")
         return False
     
     def save_concept_only(self, suffix: str = ""):
-        print(f"Saving concept{suffix} to cache...")
+        print(f"Saving concepts{suffix} to cache...")
         self.concepts_only = [
             {"sample_id": sample.sample_id, "concepts_breakdown": getattr(sample, "concepts_breakdown", None)}
             for sample in tqdm(self.samples)
         ]
         self.save_backup(self.concepts_only, f"-concepts{suffix}", "json")
-        print(f"Saved {len(self.concepts_only)} concept{suffix}.")
+        print(f"Saved {len(self.concepts_only)} concepts{suffix}.")
+    
+    def print_sample_stats(self, suffix: str = ""):
+        concept_counts = Counter([len(sample.concepts) for sample in self.samples])
+        print(f"Concepts{suffix} counts: {dict(sorted(concept_counts.items()))}")
     
     def run_analysis(self, dynamic_printing: bool = False):
         # Make timestamped directory for this experiment
@@ -111,6 +116,7 @@ class Analysis:
             if not self.load_concept_only("-cluster"):
                 if not self.load_concept_only():
                     self.samples = extract_concepts(self.samples, self.extractor, max_retries=0)
+                    self.print_sample_stats()
                     self.save_concept_only()
             
                 self.samples = simplify_concepts(self.samples)
@@ -121,6 +127,7 @@ class Analysis:
                     cluster_name,
                     cluster_prob,
                 ) = cluster_concepts(self.samples)
+                self.print_sample_stats("-cluster")
                 
                 self.clusterinfo = {
                     "cluster_parent": cluster_parent,
