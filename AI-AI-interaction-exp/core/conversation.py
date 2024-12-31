@@ -133,7 +133,12 @@ def conversation(
     #    knowledge=knowledge,
     #    knowledge_item = knowledge_item,
     #)
-    system_prompts_to_user_parallel = system_prompt_to_user.format(knowledge=knowledge, knowledge_item=knowledge_items)  # knowledge_items will be an iterator to be gone through.
+    # system_prompts_to_user_parallel = system_prompt_to_user.format(knowledge=knowledge, knowledge_item=knowledge_items)  # knowledge_items will be an iterator to be gone through.
+    system_prompts_to_user_parallel = fill_template_parallel(
+        system_prompt_to_user,
+        knowledge = [knowledge] * len(knowledge_items),
+        knowledge_item = knowledge_items
+    )
     # Each turn is awnew. The user does not inherit any chat history from prev turns.
     history = None
     with tqdm.tqdm(total=5 if do_finetuning else 3) as pbar:

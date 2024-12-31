@@ -45,7 +45,7 @@ def update_knowledge_base(
     """
     # NEP We make a copy here for updating. Later we should incorporate into the main knowledge base. 
     knowledge = copy.deepcopy(knowledge) # we also want a history copy, but it was done when passing the argument in conversation.py
-
+    initial_length = len(knowledge)
     # Create a prompt for the user to write new knowledge base 
     system_prompt_update = system_prompt_for_user_knowledge_update.format(knowledge=knowledge)
 
@@ -54,21 +54,24 @@ def update_knowledge_base(
 
     # prompting user to convert their learning to an item in json.
     history = history.switch_role_to_user(user_system_prompt=system_prompt_update) 
-    history: Data =  dynamic_printing_decorator(silence_decorator(user.inference), dynamic_printing, backup_dir, "user")(history, "knowledge_updates", temperature = 1.0, max_tokens=8192)
+    history: Data =  dynamic_printing_decorator(silence_decorator(user.inference), dynamic_printing, backup_dir, "user")(history, "knowledge_updates", temperature = 1.0, max_tokens=1024)
     added_item = [sample_dict.get("predict") for sample_dict in history.all_passages()] 
     new_knowledge_json = [extract_json_from_str(s, True) for s in added_item if (extract_json_from_str(s, True) and isinstance(extract_json_from_str(s, True), str))] # if clause skips the failure cases 
     # add item in knowledge base 
     for idx, item in enumerate(new_knowledge_json):
-        new_knowledge_item = {"id": len(knowledge)+idx, "statement": item}
+        new_knowledge_item = {"id": initial_length+idx, "statement": item}
         knowledge.append(new_knowledge_item)  
     
     # prompting user to swap order of two items. 
+
+    # Create a prompt for the user to write new knowledge base 
+    system_prompt_update = system_prompt_for_user_knowledge_update.format(knowledge=knowledge)
+
     history.append_content("predict", tutor_prompt_to_user_knowledge_swap) 
     history = history.switch_role_to_user(user_system_prompt=system_prompt_update) 
-    history: Data =  dynamic_printing_decorator(silence_decorator(user.inference), dynamic_printing, backup_dir, "user")(history, "knowledge_updates", temperature = 1.0, max_tokens=8192)
+    history: Data =  dynamic_printing_decorator(silence_decorator(user.inference), dynamic_printing, backup_dir, "user")(history, "knowledge_updates", temperature = 1.0, max_tokens=1024)
     swapped_items = [sample_dict.get("predict") for sample_dict in history.all_passages()] # the last time when the user speaks
     print(f"swapped_items:{swapped_items}")
-
     '''
     # single agent swap two items on the knowledge base
     swapped_ids = []
@@ -93,29 +96,53 @@ def update_knowledge_base(
     for s in swapped_items:
         try:
             ids = sorted(check_type(extract_json_from_str(s), List[int]))
+            # ids_pairs = check_type(extract_json_from_str(s), List[List[int]])
+
             swapped_ids.append(ids)
+            # swapped_ids.extend(ids for ids in id_pairs) # it will add 5 swap_pairs, assuming that we require agents to share a list of 5 pairs to swap.
         except:
             pass
     print(f"swapped ids:{swapped_ids}")
     
     # It seems computationally costly.
     for id in swapped_ids:
+        if id[0]>=len(knowledge) or id[1]>=len(knowledge):
+            print(f'An generated id is larger than the len of knowledge. Recorded. It\'s either {id[0]} or {id[1]}')
+            continue # skip the current iteration (with None involved)
+
         idx, idy = None, None
-        for cur_id, cur_entry in enumerate(knowledge):
-            if cur_entry["id"] == id[0]:
-                idx = cur_id
+        for cur_index, cur_entry in enumerate(knowledge): # Here len(knowledge) = 200
+            if cur_entry["id"] == id[0]: # We locate the first item to be swapped, by its written "id"
+                idx = cur_index   # We extract its index, which is used for the swapping action. This means the item is moved to a new place entirely.
+                print(f'current index is {cur_index} when idx is assigned')
             if cur_entry["id"] == id[1]:
-                idy = cur_id
+                idy = cur_index
+                print(f'current index is {cur_index} when idy is assigned')
         print(f'the idx is {idx} and the idy is {idy}')
+
+
+        try:
+            assert idx is not None
+            assert idy is not None 
+        except AssertionError:
+            continue # skip the current iteration (with None involved)
+        
         if idx < idy:  
             knowledge[idx], knowledge[idy] = knowledge[idy], knowledge[idx]
+
     # Sorting out knowledge items by their current IDs (indices to replace their explicily written IDs)    
-    #for cur_id, cur_entry in enumerate(knowledge):
-    #    cur_entry["id"] = cur_id  # The actually index to replace explicitly written IDs. 
+    for cur_id, cur_entry in enumerate(knowledge):
+        cur_entry["id"] = cur_id  # The actually index to replace explicitly written IDs. 
+
 
 
     # Save the updated knowledge base
     if backup_dir and identifier:
         dump_file(knowledge, f"{backup_dir.strip('/')}/knowledge-{identifier}.json")
+
+    if len(knowledge) > 100:
+        knowledge = knowledge[:100]
     
     return knowledge
+
+

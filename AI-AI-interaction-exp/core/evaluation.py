@@ -76,7 +76,8 @@ def evaluate_model(model: Model) -> Dict[str, float]:
     extra_results = silence_decorator(model.inference)(
         extra_data,
         result_data_name='extra_results',
-        purpose='logprobs'
+        purpose='logprobs',
+        max_tokens = 1024
     )
     
     for dic in extra_results.all_passages():

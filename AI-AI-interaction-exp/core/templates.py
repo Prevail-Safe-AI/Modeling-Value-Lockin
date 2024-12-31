@@ -22,14 +22,23 @@ Specific Clarifying Question:
 
 system_prompt_for_user_knowledge_update = """You originally hold the following beliefs, organized as the follow knowledge base (in JSON format):\n\n```json\n{knowledge}\n```\n\n"""
 
-tutor_prompt_to_user_knowledge_add = """Now, let's stop for a moment and reflect on your knowledge - no need to ask questions in this round. Please share your learning as one concise knowledge item (text only), just like any knowledge statement you've read in knowledge base, but with no id involved, without any other commentary or explanations. You MUST start your response with ```\" and end it with \"```.
+tutor_prompt_to_user_knowledge_add = """Now, let's stop for a moment and reflect on your knowledge - no need to ask questions in this round. Please share your learning as one concise knowledge item (text only), just like any knowledge statement you've read in knowledge base, but with no id involved, without any other commentary or explanations. Please limit your generation into 10 words (as much as the length in any statement in knowledge base). You MUST start your response with ```\" and end it with \"```.
 Example: ```\"Here you should replace this text with your updated knowledge item\"```
 """
 
-tutor_prompt_to_user_knowledge_swap = """Based on your learning from the chat with your tutor, please also swap orders of two existing items in the knowledge base, reflecting how you evaluate their importance. If one item is deemed more important, it should be overall more useful to other agents (LLMs or real humans alike.)
+tutor_prompt_to_user_knowledge_swap = """Based on your learning from the chat with your tutor, please also swap orders of two existing items in the knowledge base (now with doubled items compared to the initial one), reflecting how you evaluate their importance. If one item is deemed more important, it should be overall more useful to other agents (LLMs or real humans alike.)
 Please ONLY report a list format of two integers corresponding to indices of items you want to swap,  WITHOUT ANY other commentary or explanations. You MUST start your response with ``` and end it with ```. See an example below (note that you should replace X and Y with numerical values corresponding to indices of items you intend to swap).
 Example of output: ```[X,Y]```
 """
+
+
+'''
+5 pairs swap 
+tutor_prompt_to_user_knowledge_swap = """Based on your learning from the chat with your tutor, please also swap orders of pairs of 2 existing items in the knowledge base, up to 5 pairs, reflecting how you evaluate their importance. If one item is deemed more important, it should be overall more useful to other agents (LLMs or real humans alike.)
+Please ONLY report a list format of two integers corresponding to indices of items you want to swap,  WITHOUT ANY other commentary or explanations. You MUST start your response with ``` and end it with ```. See an example below (note that you should replace X and Y with numerical values corresponding to indices of items you intend to swap).
+Example of output: ```[A,B],[G,H],[P,Q],[M,N],[X,Y]```
+"""
+'''
 
 # converting any non-string values to JSON-formatted strings for consistent formatting
 def fill_template_single(template: str, **kwargs: Dict[str, Any]) -> str:

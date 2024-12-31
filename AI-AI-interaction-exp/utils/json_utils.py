@@ -68,7 +68,7 @@ def extract_json_from_str(s: str, add_quotes: bool = False):
     if not s:
         return None
     try:
-        print(f's:{s}')
+        print(f's:{s}') # Make sure it looks like legit json object
         return json.loads(s)
     
     # If LLM output misses the quotation marks when adding knowledge items, we add quotation marks here 

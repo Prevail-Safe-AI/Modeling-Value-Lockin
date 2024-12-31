@@ -13,6 +13,8 @@ def dynamic_printing_decorator(func, dynamic_printing: bool, backup_dir: str, ro
             full_dict=dic,
             model_repoid_or_path="llama3",
         )
+        print(f'current full prompt is {prompt}')
+        # assert len(prompt) < 20000
         
         stamp = time.strftime('%Y%m%d-%H%M%S') + f"-{random.randint(0, 1000):03}"
         path = f"{backup_dir}/{stamp}.txt"
