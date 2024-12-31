@@ -85,6 +85,8 @@ class Analysis:
                 sample.concepts_breakdown = concepts["concepts_breakdown"]
                 if sample.concepts_breakdown is not None:
                     sample.concepts = list(set([c for l in sample.concepts_breakdown.values() for c in l]))
+                else:
+                    sample.concepts = None
             
             return True
         

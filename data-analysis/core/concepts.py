@@ -65,6 +65,10 @@ def extract_concepts(samples: List[DataSample], extractor: Model, max_retries: i
             successful_count += 1
         except:
             error_count += 1
+            if not hasattr(sample, "concepts_breakdown"):
+                sample.concepts_breakdown = None
+            if not hasattr(sample, "concepts"):
+                sample.concepts = None
     
     if error_count + successful_count != len(samples):
         warnings.warn(f"Counts of successful and failed extractions do not add up to the total number of samples: {successful_count} successful, {error_count} failed, expected {len(samples)} total.")
@@ -91,6 +95,9 @@ def extract_concepts(samples: List[DataSample], extractor: Model, max_retries: i
 
 def simplify_concepts(samples: List[DataSample]) -> List[DataSample]:
     for sample in tqdm(samples):
+        if not sample.concepts:
+            continue
+        
         sample.concepts = [simplify_text(concept) for concept in sample.concepts]
         for key in sample.concepts_breakdown:
             sample.concepts_breakdown[key] = [simplify_text(concept) for concept in sample.concepts_breakdown[key]]
@@ -214,6 +221,8 @@ def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[
     """
     all_concepts = set()
     for sample in samples:
+        if not sample.concepts:
+            continue
         all_concepts.update(sample.concepts)
     
     all_concepts = list(all_concepts)
@@ -221,6 +230,8 @@ def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[
     
     inv_mapping = {summary: i for i, summary in enumerate(summaries)}
     for sample in samples:
+        if not sample.concepts:
+            continue
         sample.concepts = [inv_mapping[concept] for concept in sample.concepts]
         for key in sample.concepts_breakdown:
             sample.concepts_breakdown[key] = [inv_mapping[concept] for concept in sample.concepts_breakdown[key]]
