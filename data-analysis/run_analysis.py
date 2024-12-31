@@ -117,12 +117,16 @@ class Analysis:
         # Extract concepts
         with GlobalState(continuous_backend=True):
             if not self.load_concept_only("-cluster"):
-                if not self.load_concept_only():
-                    self.samples = extract_concepts(self.samples, self.extractor, max_retries=0)
-                    self.print_sample_stats()
-                    self.save_concept_only()
-            
-                self.samples = simplify_concepts(self.samples)
+                if not self.load_concept_only("-simplified"):
+                    if not self.load_concept_only():
+                        self.samples = extract_concepts(self.samples, self.extractor, max_retries=0)
+                        self.print_sample_stats()
+                        self.save_concept_only()
+
+                    self.samples = simplify_concepts(self.samples)
+                    self.print_sample_stats("-simplified")
+                    self.save_concept_only("-simplified")
+                
                 (
                     self.samples,
                     cluster_parent,
@@ -130,6 +134,7 @@ class Analysis:
                     cluster_name,
                     cluster_prob,
                 ) = cluster_concepts(self.samples)
+                
                 self.print_sample_stats("-cluster")
                 
                 self.clusterinfo = {
