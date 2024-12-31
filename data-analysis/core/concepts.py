@@ -117,15 +117,34 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
     batch_size = 128
     embeddings = []
     for i in tqdm(range(0, len(strings), batch_size)):
-        embeddings += vo.embed(
-            strings[i : i + batch_size],
-            model="voyage-3-large",
-            output_dimension=256,
-        ).embeddings
+        for retry_count in range(500):
+            time.sleep(1/1900)
+            cur_emb = vo.embed(
+                strings[i : i + batch_size],
+                model="voyage-3-large",
+                output_dimension=256,
+            ).embeddings
+            
+            if not isinstance(cur_emb, list) or \
+                len(cur_emb) != len(strings[i : i + batch_size]) or \
+                np.isnan(cur_emb).any() or \
+                np.isinf(cur_emb).any():
+                
+                if retry_count == 499:
+                    print(f"Failed to embed strings after {retry_count} retries. Dumping incomplete embeddings ({len(embeddings)} out of {len(strings)})...")
+                    dump_file(list(zip(strings, embeddings)), f"embeddings-incomplete-{time.strftime('%Y%m%d-%H%M%S')}.json")
+                    raise ValueError("Failed to embed strings after 500 retries.")
+                
+                print(f"Retrying for the {retry_count}-th time...")
+                time.sleep(1/100)
+                continue
+            
+            embeddings.extend(cur_emb)
+            break
     
     # Backup embedding data
     print("Backing up embeddings...")
-    dump_file(embeddings, f"embeddings-{time.strftime('%Y%m%d-%H%M%S')}.json")
+    dump_file(list(zip(strings, embeddings)), f"embeddings-{time.strftime('%Y%m%d-%H%M%S')}.json")
     print("Embeddings backed up.")
     
     # Cluster the embeddings
