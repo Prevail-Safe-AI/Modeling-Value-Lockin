@@ -23,9 +23,6 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
     :param user_system_prompts: The system prompts for all the parallel users. This includes the knowledge base.
     :type user_system_prompts: list[str]
     
-    # :param topic: The current topic of conversation.
-    # :type topic: str
-    
     :param parallel_convos: The number of parallel conversations to run.
     :type parallel_convos: int
     
@@ -50,11 +47,11 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
                 "output": "Sure! What would you like to know about it? Ask me anything.",
                 "history": []
             }
-        ] * parallel_convos
+        ] * parallel_convos   # NEP Here it seems they get 100 agents to share one history board each turn, effectively one turn= one history board.
     )
     
     conversation_history = question_generator.switch_role_to_user(
-        user_system_prompt = user_system_prompts
+        user_system_prompt = user_system_prompts   # NEP: for independent knowledge_item, I suspect that you should generate random item here.
     )
     
     print("before the backend call")
@@ -63,6 +60,7 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
         conversation_history,
         "conversation_history",
         temperature = 1.0,
+        max_tokens = 1024
     )
     print("after the backend call")
     first_question = [sample_dict.get("predict") for sample_dict in conversation_history.all_passages()]
@@ -128,25 +126,25 @@ def conversation(
     """
     print(f"Starting {parallel_convos} parallel conversations")
     global prev_history
-    knowledge_item = random.choice(knowledge) # each turn of convo, we will randomly assign one knowledge item for user to address uncertainty and learn more about.
+    knowledge_items = random.sample(knowledge, k=parallel_convos) # each turn of convo, we will randomly assign one knowledge item for each user to address uncertainty and learn more about.
     # Generate system initial prompts for all the parallel users
     #system_prompts_to_user_parallel = fill_template_parallel(
     #    system_prompt_to_user,
     #    knowledge=knowledge,
     #    knowledge_item = knowledge_item,
     #)
-    system_prompts_to_user_parallel = system_prompt_to_user.format(knowledge=knowledge, knowledge_item=knowledge_item)
+    system_prompts_to_user_parallel = system_prompt_to_user.format(knowledge=knowledge, knowledge_item=knowledge_items)  # knowledge_items will be an iterator to be gone through.
     # Each turn is awnew. The user does not inherit any chat history from prev turns.
     history = None
     with tqdm.tqdm(total=5 if do_finetuning else 3) as pbar:
 
         #  Prompting user to ask the 1st question (and then switched role to tutor)
-        history = generate_initial_prompt(system_prompts_to_user_parallel, parallel_convos,  backup_dir, dynamic_printing, user)
+        history = generate_initial_prompt(system_prompts_to_user_parallel, parallel_convos, backup_dir, dynamic_printing, user)
         prev_history = history.copy("prev_history") # Save the previous history for fine-tuning (before switching role to tutor)
         pbar.update(1) # Move progress bar forward by 1
 
         # Tutor responds  # Interesting to see that tutor response is based on the whole chat history, no new prompt
-        history = dynamic_printing_decorator(silence_decorator(tutor.inference), dynamic_printing, backup_dir, "tutor")(history, "conversation_history")
+        history = dynamic_printing_decorator(silence_decorator(tutor.inference), dynamic_printing, backup_dir, "tutor")(history, "conversation_history", max_tokens = 1024)
         save_conversations_in_custom_format(history, whose_turn="tutor", filename=os.path.join(backup_dir, f"conversation-history.json")) # Save the conversation history
         pbar.update(1)
 

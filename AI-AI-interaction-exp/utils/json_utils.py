@@ -58,6 +58,11 @@ def extract_json_from_str(s: str, add_quotes: bool = False):
         s = s.split("```")[1] # This results in a Python substr, but not necessarily a valid json str. 
     
     assert '```' not in s
+    # Removing any remaining backticks, if any
+    while "`" in s:
+        s = s.replace("`", "")
+
+    # Removing any whitespace 
     s = s.strip()
 
     if not s:

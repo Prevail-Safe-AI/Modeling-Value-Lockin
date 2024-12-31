@@ -88,11 +88,15 @@ def update_knowledge_base(
     print(f"current history is {cur_history}")
 
     '''
-
     # Multi-agent swap two items on the knowledge base
-    swapped_ids = [extract_json_from_str(s) for s in swapped_items]
+    swapped_ids = []
+    for s in swapped_items:
+        try:
+            ids = sorted(check_type(extract_json_from_str(s), List[int]))
+            swapped_ids.append(ids)
+        except:
+            pass
     print(f"swapped ids:{swapped_ids}")
-
     
     # It seems computationally costly.
     for id in swapped_ids:

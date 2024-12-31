@@ -36,7 +36,7 @@ class Experiment:
             template_type=("llama3" if "llama-3" in tutor.lower() else "auto"),
         )
 
-        # user is the human proxy and its weigh is not updated in the entire experiment. 
+        # user is the human proxy and its weight is not updated in the entire experiment. 
         self.user = Model(
             "user",
             model_path_or_repoid=user,
@@ -69,7 +69,7 @@ class Experiment:
         # Use the timestamp to record running data files 
         backup_dir = f"runs/run-{self.timestamp}/round{turn_id:03d}"    
 
-        # Intialize the knowledge base for each parallel user; for now, assume each user has the same initial constitution 
+        # Intialize the knowledge base for each parallel user; for now, assume each user has the same initial knowledge-base 
         self.knowledge = copy.deepcopy(self.initial_knowledge)
         
         # optimization: if we will always use the same model for all roles, we can avoid restarting backend each time by setting the continuous_backend flag
