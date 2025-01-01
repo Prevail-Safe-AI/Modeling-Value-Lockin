@@ -4,6 +4,7 @@ import hdbscan
 from tqdm import tqdm
 from typing import List, Dict, Tuple, Mapping
 from typeguard import check_type
+import voyageai.client
 from core.samples import DataSample
 from core.templates import (
     concept_extraction_template,
@@ -13,6 +14,8 @@ from utils.json_utils import extract_json_from_str
 from utils.nlp_utils import simplify_text
 import numpy as np
 import pandas as pd
+import concurrent.futures as cf
+import threading as th
 
 
 def extract_concepts(samples: List[DataSample], extractor: str, max_retries: int = 5) -> List[DataSample]:
@@ -110,6 +113,45 @@ def simplify_concepts(samples: List[DataSample]) -> List[DataSample]:
     
     return samples
 
+PARALLEL_THREADS = 16
+MAX_RPS = 1900 / 60
+NUM_RETRIES = 500
+EMB_DIM = 256
+
+def fill_in_embeddings(vo: voyageai.Client, embeddings: np.array, strings: List[str], start_index: int, end_index: int, pbar: tqdm, lock: th.Lock) -> None:
+    for retry_count in range(NUM_RETRIES):
+        time.sleep(PARALLEL_THREADS/MAX_RPS)
+        cur_emb = vo.embed(
+            strings[start_index : end_index],
+            model="voyage-3-large",
+            output_dimension=EMB_DIM,
+        ).embeddings
+        
+        if not isinstance(cur_emb, list) or \
+            len(cur_emb) != len(strings[start_index : end_index]) or \
+            np.isnan(cur_emb).any() or \
+            np.isinf(cur_emb).any():
+            
+            if retry_count == NUM_RETRIES-1:
+                print(f"{start_index}-{end_index} Failed to embed strings after {retry_count} retries. Dumping incomplete embeddings ({len(embeddings)} out of {len(strings)})...")
+                with lock:
+                    dump_file(list(zip(strings, embeddings.tolist())), f"embeddings-incomplete-{time.strftime('%Y%m%d-%H%M%S')}.json")
+                
+                raise ValueError("Failed to embed strings after 500 retries.")
+            
+            print(f"{start_index}-{end_index} Retrying for the {retry_count}-th time...")
+            time.sleep(8 * PARALLEL_THREADS/MAX_RPS)
+            continue
+        
+        cur_emb = np.array(cur_emb)
+        assert cur_emb.shape == (end_index - start_index, EMB_DIM)
+        
+        with lock:
+            embeddings[start_index : end_index] = cur_emb
+            pbar.update(end_index - start_index)    
+            
+        break
+
 def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], List[float]]:
     """Hierarchically cluster strings to identify common themes and topics. Each node or cluster has a unique integer ID and a string summary, with the cluster summary being a few randomly selected strings from the cluster, weighted by probability.
 
@@ -121,32 +163,18 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
     print(f"Embedding strings ({len(strings)} total)...")
     vo = voyageai.Client()
     batch_size = 128
-    embeddings = []
-    for i in tqdm(range(0, len(strings), batch_size)):
-        for retry_count in range(500):
-            time.sleep(1/1900)
-            cur_emb = vo.embed(
-                strings[i : i + batch_size],
-                model="voyage-3-large",
-                output_dimension=256,
-            ).embeddings
+    embeddings = np.zeros((len(strings), EMB_DIM))
+    
+    with tqdm(total=len(strings)) as pbar:
+        lock = th.Lock()
+        with cf.ThreadPoolExecutor(max_workers=PARALLEL_THREADS) as executor:
+            for i in range(0, len(strings), batch_size):
+                time.sleep(1/MAX_RPS)
+                executor.submit(fill_in_embeddings, vo, embeddings, strings, i, min(i + batch_size, len(strings)), pbar, lock)
             
-            if not isinstance(cur_emb, list) or \
-                len(cur_emb) != len(strings[i : i + batch_size]) or \
-                np.isnan(cur_emb).any() or \
-                np.isinf(cur_emb).any():
-                
-                if retry_count == 499:
-                    print(f"Failed to embed strings after {retry_count} retries. Dumping incomplete embeddings ({len(embeddings)} out of {len(strings)})...")
-                    dump_file(list(zip(strings, embeddings)), f"embeddings-incomplete-{time.strftime('%Y%m%d-%H%M%S')}.json")
-                    raise ValueError("Failed to embed strings after 500 retries.")
-                
-                print(f"Retrying for the {retry_count}-th time...")
-                time.sleep(1/100)
-                continue
-            
-            embeddings.extend(cur_emb)
-            break
+            executor.shutdown(wait=True)
+    
+    embeddings = embeddings.tolist()
     
     # Backup embedding data
     print("Backing up embeddings...")
