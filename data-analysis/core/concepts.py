@@ -4,6 +4,7 @@ import hdbscan
 from tqdm import tqdm
 from typing import List, Dict, Tuple, Mapping
 from typeguard import check_type
+from copy import deepcopy
 import voyageai.client
 from core.samples import DataSample
 from core.templates import (
@@ -299,7 +300,8 @@ def select_clusters(
     cluster_prob: List[float],
     min_size: int = 4,
     step_multiplier: int = 2,
-) -> List[int]:
+    **kwargs,
+) -> Tuple[List[int], List[int]]:
     max_subtree_size = [0] * len(cluster_parent)
     for i, parent in tqdm(enumerate(cluster_parent)):
         if parent is not None:
@@ -318,7 +320,21 @@ def select_clusters(
     
     print(f"Selected {len(selected_clusters)} clusters out of {len(cluster_size)} total.")
     print(f"Cluster size distribution: {sizes_counts}")
-    return selected_clusters
+    
+    cluster_selected_parent = deepcopy(cluster_parent)
+    is_selected = [False] * len(cluster_parent)
+    for i in selected_clusters:
+        is_selected[i] = True
+    
+    def get_nearest_selected_parent(i):
+        if cluster_selected_parent[i] is not None and not is_selected[cluster_selected_parent[i]]:
+            cluster_selected_parent[i] = get_nearest_selected_parent(cluster_selected_parent[i])
+        return cluster_selected_parent[i]
+    
+    for i in range(len(cluster_selected_parent)):
+        get_nearest_selected_parent(i)
+    
+    return selected_clusters, cluster_selected_parent
 
 if __name__ == "__main__":
     print(cluster_strs(

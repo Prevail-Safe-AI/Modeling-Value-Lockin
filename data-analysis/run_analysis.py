@@ -2,6 +2,7 @@ import os, sys
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
 import fire, pickle, time, random
+import pandas as pd
 from tqdm import tqdm
 from typing import Literal
 from hashlib import md5
@@ -9,6 +10,7 @@ from datasets import load_dataset
 from collections import Counter
 from core.samples import DataSample, deduplicate_users, length_truncation
 from core.concepts import extract_concepts, simplify_concepts, cluster_concepts, select_clusters
+from core.paneldata import build_temporal_panel
 from utils.log_utils import silence_decorator
 from utils.json_utils import load_file, dump_file
 
@@ -96,6 +98,22 @@ class Analysis:
         concept_counts = Counter([len(sample.concepts) for sample in self.samples if hasattr(sample, "concepts") and sample.concepts is not None])
         print(f"Concepts{suffix} counts: {dict(sorted(concept_counts.items()))}")
     
+    def save_or_load_temporal_panel(self) -> bool:
+        path = f"./data/{self.data_path_hash}-temporal-panel.csv"
+        if hasattr(self, "temporal_panel") and self.temporal_panel and not self.temporal_panel.empty:
+            print(f"Saving temporal panel to {path}...")
+            self.temporal_panel.to_csv(path)
+            return True
+        else:
+            try:
+                print(f"Loading temporal panel from {path}...")
+                self.temporal_panel = pd.read_csv(path, index_col = ['time', 'is_gpt4', 'cluster'])
+                print(f"Loaded temporal panel with {len(self.temporal_panel)} rows.")
+                return True
+            except FileNotFoundError:
+                print(f"Failed to load temporal panel from {path}.")
+                return False
+    
     def run_analysis(self, dynamic_printing: bool = False):
         # Make timestamped directory for this experiment
         self.timestamp = time.strftime("%Y%m%d-%H%M%S")
@@ -139,12 +157,22 @@ class Analysis:
             self.print_sample_stats("-cluster")
             
         # Select clusters to analyze
-        self.selected_clusters = select_clusters(self.samples, **self.clusterinfo)
+        selected_clusters, cluster_selected_parent = select_clusters(self.samples, **self.clusterinfo)
         self.selected_summary = [
             (id, self.clusterinfo["cluster_name"][id], self.clusterinfo["cluster_size"][id])
-            for id in self.selected_clusters
+            for id in selected_clusters
         ]
+        self.clusterinfo["selected_clusters"] = selected_clusters
+        self.clusterinfo["cluster_selected_parent"] = cluster_selected_parent
         self.save_backup(self.selected_summary, "-selected", "json")
+        self.save_backup(self.clusterinfo, "-clusterinfo-postselection", "json")
+        
+        # Get panel data
+        if not self.save_or_load_temporal_panel():
+            self.temporal_panel = build_temporal_panel(self.samples, **self.clusterinfo)
+            self.save_or_load_temporal_panel()
+        
+        
 
 
 if __name__ == "__main__":
