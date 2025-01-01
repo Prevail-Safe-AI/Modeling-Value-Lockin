@@ -103,7 +103,7 @@ class Analysis:
         print(f"Saved {len(self.concepts_only)} concepts{suffix}.")
     
     def print_sample_stats(self, suffix: str = ""):
-        concept_counts = Counter([len(sample.concepts) for sample in self.samples])
+        concept_counts = Counter([len(sample.concepts) for sample in self.samples if hasattr(sample, "concepts") and sample.concepts is not None])
         print(f"Concepts{suffix} counts: {dict(sorted(concept_counts.items()))}")
     
     def run_analysis(self, dynamic_printing: bool = False):
@@ -114,19 +114,22 @@ class Analysis:
         os.environ["MAX_SG_FAIL"] = "inf"
         os.environ["SG_ITER"] = "3"
         
-        # Extract concepts
         with GlobalState(continuous_backend=True):
+            # Obtain concepts for each sample
             if not self.load_concept_only("-cluster"):
                 if not self.load_concept_only("-simplified"):
                     if not self.load_concept_only():
+                        # Extract concepts from samples
                         self.samples = extract_concepts(self.samples, self.extractor, max_retries=0)
                         self.print_sample_stats()
                         self.save_concept_only()
 
+                    # Simplify concepts by keeping only the linguistically most reduced form 
                     self.samples = simplify_concepts(self.samples)
-                    self.print_sample_stats("-simplified")
                     self.save_concept_only("-simplified")
+                    self.print_sample_stats("-simplified")
                 
+                # Cluster concepts into higher-level concepts
                 (
                     self.samples,
                     cluster_parent,
@@ -134,8 +137,6 @@ class Analysis:
                     cluster_name,
                     cluster_prob,
                 ) = cluster_concepts(self.samples)
-                
-                self.print_sample_stats("-cluster")
                 
                 self.clusterinfo = {
                     "cluster_parent": cluster_parent,
@@ -145,6 +146,10 @@ class Analysis:
                 }
                 self.save_backup(self.clusterinfo, "-clusterinfo", "json")
                 self.save_concept_only("-cluster")
+                
+                self.print_sample_stats("-cluster")
+            
+            
             
 
 
