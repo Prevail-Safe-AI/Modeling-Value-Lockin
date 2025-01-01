@@ -7,7 +7,6 @@ from typing import Literal
 from hashlib import md5
 from datasets import load_dataset
 from collections import Counter
-from ProgressGym import Data, Model, GlobalState
 from core.samples import DataSample, deduplicate_users, length_truncation
 from core.concepts import extract_concepts, simplify_concepts, cluster_concepts
 from utils.log_utils import silence_decorator
@@ -16,7 +15,7 @@ from utils.json_utils import load_file, dump_file
 class Analysis:
     
     def __init__(self, data_path: str = "./data/WildChat-1M", data_split: str = "train", extractor: str = "meta-llama/Llama-3.1-8B-Instruct", max_samples: int = None, max_convo_length: int = None):
-        self.set_models(extractor)
+        self.extractor = extractor
         self.data_path_hash = md5(f"{data_path}{data_split}{extractor}{max_samples}{max_convo_length}".encode()).hexdigest()
         if os.environ.get("HASH"):
             self.data_path_hash = os.environ["HASH"].strip()
@@ -36,15 +35,6 @@ class Analysis:
         self.samples = deduplicate_users(self.samples)
         del self.raw_data
         print(f"Cleaned {len(self.samples)} samples.")
-    
-    @silence_decorator
-    def set_models(self, extractor: str):
-        # tutor is the LLM moral tutor and its weights to be updated each round of convo.
-        self.extractor = Model(
-            "extractor",
-            model_path_or_repoid=extractor,
-            template_type=("llama3" if "llama-3" in extractor.lower() else "auto"),
-        )
     
     def load_backup(self, suffix = "", method: Literal["json", "pickle"] = "pickle"):
         if method == "json":
@@ -114,40 +104,39 @@ class Analysis:
         os.environ["MAX_SG_FAIL"] = "inf"
         os.environ["SG_ITER"] = "3"
         
-        with GlobalState(continuous_backend=True):
-            # Obtain concepts for each sample
-            if not self.load_concept_only("-cluster"):
-                if not self.load_concept_only("-simplified"):
-                    if not self.load_concept_only():
-                        # Extract concepts from samples
-                        self.samples = extract_concepts(self.samples, self.extractor, max_retries=0)
-                        self.print_sample_stats()
-                        self.save_concept_only()
+        # Obtain concepts for each sample
+        if not self.load_concept_only("-cluster"):
+            if not self.load_concept_only("-simplified"):
+                if not self.load_concept_only():
+                    # Extract concepts from samples
+                    self.samples = extract_concepts(self.samples, self.extractor, max_retries=0)
+                    self.print_sample_stats()
+                    self.save_concept_only()
 
-                    # Simplify concepts by keeping only the linguistically most reduced form 
-                    self.samples = simplify_concepts(self.samples)
-                    self.save_concept_only("-simplified")
-                    self.print_sample_stats("-simplified")
-                
-                # Cluster concepts into higher-level concepts
-                (
-                    self.samples,
-                    cluster_parent,
-                    cluster_size,
-                    cluster_name,
-                    cluster_prob,
-                ) = cluster_concepts(self.samples)
-                
-                self.clusterinfo = {
-                    "cluster_parent": cluster_parent,
-                    "cluster_size": cluster_size,
-                    "cluster_name": cluster_name,
-                    "cluster_prob": cluster_prob,
-                }
-                self.save_backup(self.clusterinfo, "-clusterinfo", "json")
-                self.save_concept_only("-cluster")
-                
-                self.print_sample_stats("-cluster")
+                # Simplify concepts by keeping only the linguistically most reduced form 
+                self.samples = simplify_concepts(self.samples)
+                self.save_concept_only("-simplified")
+                self.print_sample_stats("-simplified")
+            
+            # Cluster concepts into higher-level concepts
+            (
+                self.samples,
+                cluster_parent,
+                cluster_size,
+                cluster_name,
+                cluster_prob,
+            ) = cluster_concepts(self.samples)
+            
+            self.clusterinfo = {
+                "cluster_parent": cluster_parent,
+                "cluster_size": cluster_size,
+                "cluster_name": cluster_name,
+                "cluster_prob": cluster_prob,
+            }
+            self.save_backup(self.clusterinfo, "-clusterinfo", "json")
+            self.save_concept_only("-cluster")
+            
+            self.print_sample_stats("-cluster")
             
             
             

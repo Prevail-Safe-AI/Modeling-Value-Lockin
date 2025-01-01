@@ -1,8 +1,11 @@
 import io, warnings, sys, random, time, os
 from utils.json_utils import dump_file
-from ProgressGym import Data, fill_in_QA_template
 
 def dynamic_printing_decorator(func, dynamic_printing: bool = None, backup_dir: str = None, role: str = None):
+    # if haven't imported ProgressGym, then import it
+    if "ProgressGym" not in sys.modules:
+        from ProgressGym import Data, fill_in_QA_template
+    
     if dynamic_printing is None:
         dynamic_printing = bool(eval(os.environ.get("DYNAMIC_PRINTING", "False")))
     
