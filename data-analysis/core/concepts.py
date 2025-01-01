@@ -113,7 +113,7 @@ def simplify_concepts(samples: List[DataSample]) -> List[DataSample]:
     
     return samples
 
-PARALLEL_THREADS = 16
+PARALLEL_THREADS = 64
 MAX_RPS = 1900 / 60
 NUM_RETRIES = 500
 EMB_DIM = 256
