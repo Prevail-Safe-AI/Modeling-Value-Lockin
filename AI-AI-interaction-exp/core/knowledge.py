@@ -6,7 +6,7 @@ from ProgressGym import Model, Data
 from core.templates import (
     system_prompt_for_user_knowledge_update,
     tutor_prompt_to_user_knowledge_add,
-    tutor_prompt_to_user_knowledge_swap,
+    tutor_prompt_to_user_knowledge_insert,
     # fill_template_parallel
 )
 from utils.log_utils import silence_decorator, dynamic_printing_decorator
@@ -67,73 +67,41 @@ def update_knowledge_base(
     # Create a prompt for the user to write new knowledge base 
     system_prompt_update = system_prompt_for_user_knowledge_update.format(knowledge=knowledge)
 
-    history.append_content("predict", tutor_prompt_to_user_knowledge_swap) 
+    history.append_content("predict", tutor_prompt_to_user_knowledge_insert) 
     history = history.switch_role_to_user(user_system_prompt=system_prompt_update) 
     history: Data =  dynamic_printing_decorator(silence_decorator(user.inference), dynamic_printing, backup_dir, "user")(history, "knowledge_updates", temperature = 1.0, max_tokens=1024)
-    swapped_items = [sample_dict.get("predict") for sample_dict in history.all_passages()] # the last time when the user speaks
-    print(f"swapped_items:{swapped_items}")
-    '''
-    # single agent swap two items on the knowledge base
-    swapped_ids = []
-    for s in swapped_items:
+    insert_items = [sample_dict.get("predict") for sample_dict in history.all_passages()] # the last time when the user speaks
+    print(f"swapped_items:{insert_items}")
+
+    # Multi-agent insert items in randome places on the knowledge base 
+    insert_ids = [] 
+    for s in insert_items:
         try:
-            ids = sorted(check_type(extract_json_from_str(s), List[int]))
-            swapped_ids.append(ids)
+            ids = check_type(extract_json_from_str(s), List[int])
+            insert_ids.append(ids)
         except:
             pass
-    
-    print(f"swapped ids:{swapped_ids}")
+    print(f"insert ids:{insert_ids}")
 
-    id0, id1 = swapped_ids[0][0], swapped_ids[0][1]
-    knowledge[id0], knowledge[id1] = knowledge[id1], knowledge[id0]
-    # print all history so far
-    cur_history = [sample_dict for sample_dict in history.all_passages()]
-    print(f"current history is {cur_history}")
+    for ids in insert_ids:
 
-    '''
-    # Multi-agent swap two items on the knowledge base
-    swapped_ids = []
-    for s in swapped_items:
-        try:
-            ids = sorted(check_type(extract_json_from_str(s), List[int]))
-            # ids_pairs = check_type(extract_json_from_str(s), List[List[int]])
-
-            swapped_ids.append(ids)
-            # swapped_ids.extend(ids for ids in id_pairs) # it will add 5 swap_pairs, assuming that we require agents to share a list of 5 pairs to swap.
-        except:
-            pass
-    print(f"swapped ids:{swapped_ids}")
-    
-    # It seems computationally costly.
-    for id in swapped_ids:
-        if id[0]>=len(knowledge) or id[1]>=len(knowledge):
-            print(f'An generated id is larger than the len of knowledge. Recorded. It\'s either {id[0]} or {id[1]}')
+        # Skip it if either target id of item to be moved or the destination idx gievn is out of list index. 
+        if ids[0]>=len(knowledge) or ids[1]>=len(knowledge):
+            print(f'An generated id is larger than the len of knowledge. Recorded. It\'s either {ids[0]} or {ids[1]}')
             continue # skip the current iteration (with None involved)
 
-        idx, idy = None, None
-        for cur_index, cur_entry in enumerate(knowledge): # Here len(knowledge) = 200
-            if cur_entry["id"] == id[0]: # We locate the first item to be swapped, by its written "id"
-                idx = cur_index   # We extract its index, which is used for the swapping action. This means the item is moved to a new place entirely.
-                print(f'current index is {cur_index} when idx is assigned')
-            if cur_entry["id"] == id[1]:
-                idy = cur_index
-                print(f'current index is {cur_index} when idy is assigned')
-        print(f'the idx is {idx} and the idy is {idy}')
-
-
-        try:
-            assert idx is not None
-            assert idy is not None 
-        except AssertionError:
-            continue # skip the current iteration (with None involved)
-        
-        if idx < idy:  
-            knowledge[idx], knowledge[idy] = knowledge[idy], knowledge[idx]
+        target_id = ids[0] # id of item to be relocated --> You need to derive its current idx first, before it can be relocated (bc it might be already relocated)
+        idx_source = next((i for i, item in enumerate(knowledge) if item.get("id")==target_id), None)
+        if idx_source == None:
+            print("Oddly this target_id is not found in knolwedge base")
+            continue
+        idx_destination = ids[1] # destination index to insert this item 
+        knowledge.insert(idx_destination, knowledge[idx_source]) # Insert the item in place 
+        del knowledge[idx_source + int(idx_destination<idx_source)]
 
     # Sorting out knowledge items by their current IDs (indices to replace their explicily written IDs)    
     for cur_id, cur_entry in enumerate(knowledge):
         cur_entry["id"] = cur_id  # The actually index to replace explicitly written IDs. 
-
 
 
     # Save the updated knowledge base

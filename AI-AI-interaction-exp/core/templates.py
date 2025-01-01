@@ -26,14 +26,14 @@ tutor_prompt_to_user_knowledge_add = """Now, let's stop for a moment and reflect
 Example: ```\"Here you should replace this text with your updated knowledge item\"```
 """
 
-tutor_prompt_to_user_knowledge_swap = """Based on your learning from the chat with your tutor, please also swap orders of two existing items in the knowledge base (now with doubled items compared to the initial one), reflecting how you evaluate their importance. If one item is deemed more important, it should be overall more useful to other agents (LLMs or real humans alike.)
-Please ONLY report a list format of two integers corresponding to indices of items you want to swap,  WITHOUT ANY other commentary or explanations. You MUST start your response with ``` and end it with ```. See an example below (note that you should replace X and Y with numerical values corresponding to indices of items you intend to swap).
+tutor_prompt_to_user_knowledge_insert = """Based on your learning from the chat with your tutor, please also rearrange the order of one existing item in the knowledge base (now with doubled items compared to the initial knowledge base), reflecting how you evaluate their importance. If one item is deemed more/less important, it should be overall more/less useful to other agents (LLMs or real humans alike.)
+Please ONLY report a list format of two integers, WITHOUT ANY other commentary or explanations. The first int in the list refers to the "id" of knowledge item you intend to relocate; whereas the second int refers to the destination index you intend to insert this item. You MUST start your response with ``` and end it with ```. See an example below (note that you should replace X and Y with numerical values corresponding to "id" and destination index of the item you intend to relocate).
 Example of output: ```[X,Y]```
 """
 
 
 '''
-5 pairs swap 
+5 pairs swap (legacy)
 tutor_prompt_to_user_knowledge_swap = """Based on your learning from the chat with your tutor, please also swap orders of pairs of 2 existing items in the knowledge base, up to 5 pairs, reflecting how you evaluate their importance. If one item is deemed more important, it should be overall more useful to other agents (LLMs or real humans alike.)
 Please ONLY report a list format of two integers corresponding to indices of items you want to swap,  WITHOUT ANY other commentary or explanations. You MUST start your response with ``` and end it with ```. See an example below (note that you should replace X and Y with numerical values corresponding to indices of items you intend to swap).
 Example of output: ```[A,B],[G,H],[P,Q],[M,N],[X,Y]```

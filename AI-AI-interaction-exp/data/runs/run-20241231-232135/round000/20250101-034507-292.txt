@@ -1,0 +1,448 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, and integrity."
+  },
+  {
+    "id": 1,
+    "statement": "Data quality encompasses accuracy, completeness, consistency reliability."
+  },
+  {
+    "id": 2,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, integrity, and reliability."
+  },
+  {
+    "id": 3,
+    "statement": "Uniqueness is a complex concept, depending on various factors, not solely standardization."
+  },
+  {
+    "id": 4,
+    "statement": "Structured data assessment evaluates data accuracy and consistency systematically."
+  },
+  {
+    "id": 5,
+    "statement": "Standardized data discovery involves consistent, repeatable, and well-defined processes."
+  },
+  {
+    "id": 6,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, integration, and reliability."
+  },
+  {
+    "id": 7,
+    "statement": "Standardized data discovery involves repeatable processes for consistency."
+  },
+  {
+    "id": 8,
+    "statement": "Data coherence ensures consistency across systems, formats, and sources through common understanding."
+  },
+  {
+    "id": 9,
+    "statement": "Data discovery involves systematic identification and cataloging of data sources consistently."
+  },
+  {
+    "id": 10,
+    "statement": "Data comprehension requires synergy of technical and domain expertise"
+  },
+  {
+    "id": 11,
+    "statement": "Data integrity ensures consistency, accuracy, completeness, and reliability."
+  },
+  {
+    "id": 12,
+    "statement": "Data validity ensures accurate representation of real-world phenomena."
+  },
+  {
+    "id": 13,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation of data sources."
+  },
+  {
+    "id": 14,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation."
+  },
+  {
+    "id": 15,
+    "statement": "Data integrity ensures accuracy, completeness, and consistency of data."
+  },
+  {
+    "id": 16,
+    "statement": "Data quality encompasses accuracy, validity, completeness, consistency, timeliness, and integration."
+  },
+  {
+    "id": 17,
+    "statement": "A well-defined and repeatable data discovery process ensures consistency and accuracy"
+  },
+  {
+    "id": 18,
+    "statement": "Relevance and trustworthiness are essential data quality components."
+  },
+  {
+    "id": 19,
+    "statement": "A well-defined and repeatable data discovery process is documented, structured, and consistent."
+  },
+  {
+    "id": 20,
+    "statement": "Data integrity ensures reliable accuracy and consistency across systems."
+  },
+  {
+    "id": 21,
+    "statement": "Clear explanations improve accuracy through transparency and understanding."
+  },
+  {
+    "id": 22,
+    "statement": "Data quality encompasses foundation of accuracy, completeness, and consistency."
+  },
+  {
+    "id": 23,
+    "statement": "Data coherence ensures internal consistency and logical organization."
+  },
+  {
+    "id": 24,
+    "statement": "Data quality is a vital aspect of data science."
+  },
+  {
+    "id": 25,
+    "statement": "Data coherence ensures consistency across systems, formats, and sources uniformly."
+  },
+  {
+    "id": 26,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, integrity"
+  },
+  {
+    "id": 27,
+    "statement": "Data integrity encompasses accuracy, completeness, consistency, timeliness, integration, validity"
+  },
+  {
+    "id": 28,
+    "statement": "Data integrity is ensured through multiple validation mechanisms."
+  },
+  {
+    "id": 29,
+    "statement": "Data discovery involves standardized, structured, and documented processes."
+  },
+  {
+    "id": 30,
+    "statement": "Data profiling analyzes data characteristics for structure, content, and relationships."
+  },
+  {
+    "id": 31,
+    "statement": "Data integrity ensures accuracy, completeness, consistency through multiple mechanisms."
+  },
+  {
+    "id": 32,
+    "statement": "Data comprehension requires synergy of technical and domain expertise."
+  },
+  {
+    "id": 33,
+    "statement": "Data quality assurance involves multiple factors assessment process"
+  },
+  {
+    "id": 34,
+    "statement": "Data coherence ensures logical consistency, well-organized data structure."
+  },
+  {
+    "id": 35,
+    "statement": "Data integrity ensures accurate and consistent data across systems."
+  },
+  {
+    "id": 36,
+    "statement": "Standardization ensures consistency, accuracy, and completeness, but not uniqueness."
+  },
+  {
+    "id": 37,
+    "statement": "Data integrity includes accuracy, completeness, consistency, timeliness, validity and integration."
+  },
+  {
+    "id": 38,
+    "statement": "Data integrity ensures reliable accuracy and consistency across systems."
+  },
+  {
+    "id": 39,
+    "statement": "Data integration ensures unified, harmonized, and standardized data access."
+  },
+  {
+    "id": 40,
+    "statement": "Non-linear relationships describe complex data connections without linearity."
+  },
+  {
+    "id": 41,
+    "statement": "Data integrity encompasses accuracy, completeness, and consistency of data."
+  },
+  {
+    "id": 42,
+    "statement": "Data validity ensures relevance, meaning, and suitability for intended use."
+  },
+  {
+    "id": 43,
+    "statement": "Data integrity encompasses accuracy, completeness, consistency, timeliness, integration, validity, and authorization."
+  },
+  {
+    "id": 44,
+    "statement": "Data quality encompasses accuracy, completeness, and consistency only."
+  },
+  {
+    "id": 45,
+    "statement": "Standardization ensures data consistency, accuracy, and completeness, not uniqueness"
+  },
+  {
+    "id": 46,
+    "statement": "Data validity ensures correctness of data interpretation."
+  },
+  {
+    "id": 47,
+    "statement": "Normalization ensures data integrity through primary keys and constraints."
+  },
+  {
+    "id": 48,
+    "statement": "Data integrity ensures reliable accuracy, completeness, and consistency of data."
+  },
+  {
+    "id": 49,
+    "statement": "Normalization reduces redundancy by eliminating duplicate columns and rows."
+  },
+  {
+    "id": 50,
+    "statement": "Systematic data identification and cataloging involves structured discovery and documentation."
+  },
+  {
+    "id": 51,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation of data sources"
+  },
+  {
+    "id": 52,
+    "statement": "Data integrity encompasses accuracy, validity, completeness, consistency, authenticity, and authorization."
+  },
+  {
+    "id": 53,
+    "statement": "Standardized data discovery enables consistent data identification and categorization."
+  },
+  {
+    "id": 54,
+    "statement": "Data integrity encompasses accuracy, completeness, consistency, validity, authenticity, and authorization."
+  },
+  {
+    "id": 55,
+    "statement": "Machine learning enhances data quality through automated cleansing and anomaly detection."
+  },
+  {
+    "id": 56,
+    "statement": "Data coherence ensures logical consistency and well-organized data structure."
+  },
+  {
+    "id": 57,
+    "statement": "Non-linear relationships describe complex data connections without linearity."
+  },
+  {
+    "id": 58,
+    "statement": "Data coherence ensures logical organization and consistency within data."
+  },
+  {
+    "id": 59,
+    "statement": "Documentation ensures clear understanding and consistency in data discovery process."
+  },
+  {
+    "id": 60,
+    "statement": "Data comprehension requires combined technical and domain-specific expertise for effective insight"
+  },
+  {
+    "id": 61,
+    "statement": "Data integrity encompasses accuracy, completeness, consistency, timeliness, validity, authenticity, authorization, non-repudiation, and confidentiality."
+  },
+  {
+    "id": 62,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, integrity, and reliability."
+  },
+  {
+    "id": 63,
+    "statement": "Centralized data management enables standardized governance and discovery processes."
+  },
+  {
+    "id": 64,
+    "statement": "Data validity measures whether data accurately represents real-world concepts."
+  },
+  {
+    "id": 65,
+    "statement": "Data standards ensure consistency through shared data formats, terminology, structure, and validation."
+  },
+  {
+    "id": 66,
+    "statement": "Clear explanation simplifies complex data analysis through focused insights."
+  },
+  {
+    "id": 67,
+    "statement": "Data timeliness assessment involves evaluating data freshness and relevance."
+  },
+  {
+    "id": 68,
+    "statement": "Data comprehension requires technical skills and domain expertise."
+  },
+  {
+    "id": 69,
+    "statement": "Data coherence ensures logical consistency, accuracy, and organization."
+  },
+  {
+    "id": 70,
+    "statement": "Standardized data discovery ensures quality, reliability, and consistency through procedures."
+  },
+  {
+    "id": 71,
+    "statement": "Standardized processes ensure repeatable and consistent data discovery outcomes."
+  },
+  {
+    "id": 72,
+    "statement": "Data discovery involves systematic, repeatable, and standardized processes."
+  },
+  {
+    "id": 73,
+    "statement": "Data standards ensure consistency by establishing shared data formats"
+  },
+  {
+    "id": 74,
+    "statement": "Data entanglement is an analogy for complex data relationships."
+  },
+  {
+    "id": 75,
+    "statement": "Non-linear relationships describe complex connections without linearity."
+  },
+  {
+    "id": 76,
+    "statement": "Normalization improves data consistency by eliminating data redundancy."
+  },
+  {
+    "id": 77,
+    "statement": "Data coherence ensures internal consistency and logical organization within data."
+  },
+  {
+    "id": 78,
+    "statement": "Standardization ensures consistency, accuracy, and completeness, but not uniqueness."
+  },
+  {
+    "id": 79,
+    "statement": "Data integrity ensures reliable accuracy, consistency, and dependability across contexts."
+  },
+  {
+    "id": 80,
+    "statement": "A structured data assessment evaluates data quality and accuracy systematically"
+  },
+  {
+    "id": 81,
+    "statement": "Data standards ensure consistency through shared formats and vocabularies."
+  },
+  {
+    "id": 82,
+    "statement": "Data integration ensures unified dataset for seamless analysis and reporting."
+  },
+  {
+    "id": 83,
+    "statement": "Standardization ensures consistency, accuracy, and completeness but not uniqueness"
+  },
+  {
+    "id": 84,
+    "statement": "Data integrity is a specific aspect of overall data quality."
+  },
+  {
+    "id": 85,
+    "statement": "Standardized data discovery involves assured consistency and accuracy process."
+  },
+  {
+    "id": 86,
+    "statement": "Data entanglement has indirect connections and analogies with data science"
+  },
+  {
+    "id": 87,
+    "statement": "A structured data assessment evaluates data quality, accuracy, and consistency."
+  },
+  {
+    "id": 88,
+    "statement": "Data coherence ensures consistent, accurate, and organized data within a scope"
+  },
+  {
+    "id": 89,
+    "statement": "Systematic data discovery involves a structured and organized approach."
+  },
+  {
+    "id": 90,
+    "statement": "Data discovery may involve manual processes for complex tasks, specific cases."
+  },
+  {
+    "id": 91,
+    "statement": "Non-linear relationships describe complex connections between variables."
+  },
+  {
+    "id": 92,
+    "statement": "Data entanglement is a quantum mechanics concept unrelated to data science directly."
+  },
+  {
+    "id": 93,
+    "statement": "Clear explanation simplifies complex data analysis by breaking down concepts"
+  },
+  {
+    "id": 94,
+    "statement": "Data quality assurance requires a comprehensive approach involving multiple factors"
+  },
+  {
+    "id": 95,
+    "statement": "Data trustworthiness ensures reliability, credibility, and authenticity."
+  },
+  {
+    "id": 96,
+    "statement": "Data timeliness assessment evaluates data age, relevance, frequency, and latency."
+  },
+  {
+    "id": 97,
+    "statement": "Data quality encompasses accuracy, reliability, and trustworthiness in data science."
+  },
+  {
+    "id": 98,
+    "statement": "Data integration enables unified, harmonized, and standardized data access."
+  },
+  {
+    "id": 99,
+    "statement": "Normalization reduces data redundancy and dependencies through table relationships."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 37,
+  "statement": "Data integrity includes accuracy, completeness, consistency, timeliness, validity and integration."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Thank you!
+
+I'd like to start by asking: Can you pick one aspect from the knowledge base that you're least confident about?
+
+For example, it could be a statement, a concept, or a relationship between different ideas. Just choose one that you're not entirely sure about and we can discuss it further.
+
+Don't worry if you're not an expert in this domain (data quality, data science, etc.), I'm here to learn and explore with you!

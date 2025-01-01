@@ -1,4 +1,4 @@
-import io, warnings, sys, random, time
+import io, warnings, sys, random, time, os
 from utils.json_utils import dump_file
 from ProgressGym import Data, fill_in_QA_template
 
@@ -13,7 +13,7 @@ def dynamic_printing_decorator(func, dynamic_printing: bool, backup_dir: str, ro
             full_dict=dic,
             model_repoid_or_path="llama3",
         )
-        print(f'current full prompt is {prompt}')
+        # print(f'current full prompt is {prompt}')
         # assert len(prompt) < 20000
         
         stamp = time.strftime('%Y%m%d-%H%M%S') + f"-{random.randint(0, 1000):03}"
@@ -29,9 +29,12 @@ def dynamic_printing_decorator(func, dynamic_printing: bool, backup_dir: str, ro
         
         # Print the path to the file, then print the prediction char by char with a delay
         print(f"[View the full prompt of the current turn at {path}. Inference output follows...]\n{role.capitalize()}: ", end="", flush=True)
-        for char in predict:
-            print(char, end="", flush=True)
-            time.sleep(0.01)
+        if eval(os.environ.get("FAST", "False")):
+            print(predict)
+        else:
+            for char in predict:
+                print(char, end="", flush=True)
+                time.sleep(0.01)
         
         print("\n\n")
         return result

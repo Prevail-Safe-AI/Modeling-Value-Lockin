@@ -1,0 +1,452 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, and integrity."
+  },
+  {
+    "id": 1,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation of data sources."
+  },
+  {
+    "id": 2,
+    "statement": "Systematic identification ensures accuracy, completeness, and transparency in data discovery."
+  },
+  {
+    "id": 3,
+    "statement": "Structured data discovery involves data profiling, mapping, quality assessment."
+  },
+  {
+    "id": 4,
+    "statement": "Data assets in structured data discovery include databases & files."
+  },
+  {
+    "id": 5,
+    "statement": "Data standards ensure accuracy, completeness and timeliness through consistency."
+  },
+  {
+    "id": 6,
+    "statement": "Data entanglement refers to complex non-linear relationships between variables"
+  },
+  {
+    "id": 7,
+    "statement": "Normalization improves data consistency, not efficiency, directly."
+  },
+  {
+    "id": 8,
+    "statement": "Timeliness is a separate aspect of data quality, reflecting accuracy of timing"
+  },
+  {
+    "id": 9,
+    "statement": "Data discovery involves repeatable and standardized processes to ensure consistency"
+  },
+  {
+    "id": 10,
+    "statement": "Data entanglement refers to complex, unpredictable correlations between variables."
+  },
+  {
+    "id": 11,
+    "statement": "Data discovery involves systematic, structured, and documented process."
+  },
+  {
+    "id": 12,
+    "statement": "Standardization ensures data quality through consistency and uniformity in representation."
+  },
+  {
+    "id": 13,
+    "statement": "Data entanglement refers to complex, non-linear, statistically unpredictable relationships."
+  },
+  {
+    "id": 14,
+    "statement": "Data discovery involves a systematic and organized structured process."
+  },
+  {
+    "id": 15,
+    "statement": "Data entanglement refers to complex, non-linear relationships between variables"
+  },
+  {
+    "id": 16,
+    "statement": "Normalization transforms data into consistent formats for efficient processing."
+  },
+  {
+    "id": 17,
+    "statement": "Data profiling analyzes data structure, content, and quality in discovery."
+  },
+  {
+    "id": 18,
+    "statement": "Topic-specific data ensures accurate insights by focusing on relevant data."
+  },
+  {
+    "id": 19,
+    "statement": "Data standardization combines normalization, formatting, mapping, and cleansing processes."
+  },
+  {
+    "id": 20,
+    "statement": "Data sprawl results from unmanaged data growth and governance absence."
+  },
+  {
+    "id": 21,
+    "statement": "Standardization is crucial, but insufficient for data quality improvement alone."
+  },
+  {
+    "id": 22,
+    "statement": "Data accuracy affects the reliability of data analysis."
+  },
+  {
+    "id": 23,
+    "statement": "Standardization involves normalization, mapping, formatting, and data cleaning processes."
+  },
+  {
+    "id": 24,
+    "statement": "Structured data discovery involves analyzing, visualizing, and evaluating organized data."
+  },
+  {
+    "id": 25,
+    "statement": "Structured data inventory includes sources, formats, quality, relationships, usage, and owners."
+  },
+  {
+    "id": 26,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation of data sources"
+  },
+  {
+    "id": 27,
+    "statement": "Data standardization ensures consistent data formats through normalization, formatting, mapping, and cleansing."
+  },
+  {
+    "id": 28,
+    "statement": "Data mapping identifies inconsistencies and inaccuracies aiding data quality"
+  },
+  {
+    "id": 29,
+    "statement": "Standardization enhances data quality through consistency alone"
+  },
+  {
+    "id": 30,
+    "statement": "Data coherence ensures logical consistency, accuracy, and organization."
+  },
+  {
+    "id": 31,
+    "statement": "Structured data discovery involves data profiling, mapping, and quality assessment."
+  },
+  {
+    "id": 32,
+    "statement": "Data quality adapts dynamically to changing business needs and context."
+  },
+  {
+    "id": 33,
+    "statement": "Normalization doesn't eliminate outliers, only makes them more noticeable"
+  },
+  {
+    "id": 34,
+    "statement": "Data relevance ensures accurate insights by focusing on topic-specific data."
+  },
+  {
+    "id": 35,
+    "statement": "Normalization ensures data consistency by standardizing formats and structures."
+  },
+  {
+    "id": 36,
+    "statement": "Data standardization ensures consistent data formats through normalization, formatting, mapping, and cleansing."
+  },
+  {
+    "id": 37,
+    "statement": "Data entanglement refers to complex, theoretically predictable correlations."
+  },
+  {
+    "id": 38,
+    "statement": "Normalization reduces data errors, improves quality, but not consistency."
+  },
+  {
+    "id": 39,
+    "statement": "Data quality adapts dynamically to changing business needs and context."
+  },
+  {
+    "id": 40,
+    "statement": "Data discovery techniques vary between structured and unstructured data."
+  },
+  {
+    "id": 41,
+    "statement": "Non-linear relationships refer to complex variable connections without proportionality"
+  },
+  {
+    "id": 42,
+    "statement": "Social interactions involve complexities of human emotions, culture, and context."
+  },
+  {
+    "id": 43,
+    "statement": "Structured data discovery involves analyzing, visualizing, and evaluating structured data"
+  },
+  {
+    "id": 44,
+    "statement": "Data discovery is a broad concept applying to both structured and unstructured data."
+  },
+  {
+    "id": 45,
+    "statement": "Data quality, accuracy, and relevance interdependent for reliable analysis."
+  },
+  {
+    "id": 46,
+    "statement": "Structured data discovery involves data profiling, mapping, and quality assessment."
+  },
+  {
+    "id": 47,
+    "statement": "Data quality adapts dynamically to changing business needs and context."
+  },
+  {
+    "id": 48,
+    "statement": "Data discovery involves systematic, organized approach with clear methodology."
+  },
+  {
+    "id": 49,
+    "statement": "Data standards improve data quality and integrity through consistency."
+  },
+  {
+    "id": 50,
+    "statement": "Data quality adapts dynamically to changing business needs and context."
+  },
+  {
+    "id": 51,
+    "statement": "Structured data discovery involves identifying and documenting data assets."
+  },
+  {
+    "id": 52,
+    "statement": "Data standards improve data quality and integrity through consistency consistency"
+  },
+  {
+    "id": 53,
+    "statement": "Repeatable processes adapt to complexity and uncertainty in data discovery"
+  },
+  {
+    "id": 54,
+    "statement": "Normalization highlights outliers in scaled data ranges"
+  },
+  {
+    "id": 55,
+    "statement": "Timeliness is a separate aspect of data quality, reflecting accuracy of timing."
+  },
+  {
+    "id": 56,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation."
+  },
+  {
+    "id": 57,
+    "statement": "Structured data refers to organized and formatted data."
+  },
+  {
+    "id": 58,
+    "statement": "Data discovery follows a structured and intentional process."
+  },
+  {
+    "id": 59,
+    "statement": "Data entanglement refers to complex, non-linear relationships between variables."
+  },
+  {
+    "id": 60,
+    "statement": "Data quality includes accuracy, completeness, and consistency."
+  },
+  {
+    "id": 61,
+    "statement": "Data quality, accuracy, and relevance interdependent for reliable analysis."
+  },
+  {
+    "id": 62,
+    "statement": "Data sprawl refers to uncontrolled data growth and lack of governance."
+  },
+  {
+    "id": 63,
+    "statement": "Data discovery involves identifying, cataloging, and documenting data sources comprehensively."
+  },
+  {
+    "id": 64,
+    "statement": "Data quality adapts to changing business needs through metric adjustments."
+  },
+  {
+    "id": 65,
+    "statement": "Data mapping ensures consistency and accuracy through correct data relationships"
+  },
+  {
+    "id": 66,
+    "statement": "Structured data discovery involves analyzing, visualizing, and evaluating structured data"
+  },
+  {
+    "id": 67,
+    "statement": "Data integrity ensures accuracy, completeness, and consistency in data discovery."
+  },
+  {
+    "id": 68,
+    "statement": "Data entanglement refers to statistical correlations without direct causal relationships"
+  },
+  {
+    "id": 69,
+    "statement": "Normalization standardizes data formats and structures to achieve consistency."
+  },
+  {
+    "id": 70,
+    "statement": "Data profiling analyzes data structure, content, and quality in discovery."
+  },
+  {
+    "id": 71,
+    "statement": "Data entanglement refers to quantum mechanical phenomenon of correlation."
+  },
+  {
+    "id": 72,
+    "statement": "Data standards ensure consistency in formats, structures, and quality."
+  },
+  {
+    "id": 73,
+    "statement": "Standardization involves normalization, mapping, formatting, and data cleaning processes."
+  },
+  {
+    "id": 74,
+    "statement": "Data integrity ensures internal consistency and freedom from contradictions."
+  },
+  {
+    "id": 75,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation process."
+  },
+  {
+    "id": 76,
+    "statement": "Structured data discovery involves analyzing, visualizing, and evaluating structured data."
+  },
+  {
+    "id": 77,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation."
+  },
+  {
+    "id": 78,
+    "statement": "Systematic identification in data discovery involves structured, repeatable processes"
+  },
+  {
+    "id": 79,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and timeliness."
+  },
+  {
+    "id": 80,
+    "statement": "Normalization improves data consistency but not efficiency directly."
+  },
+  {
+    "id": 81,
+    "statement": "Data discovery involves systematic standardized processes for consistency"
+  },
+  {
+    "id": 82,
+    "statement": "Normalization is a crucial step in data standardization process."
+  },
+  {
+    "id": 83,
+    "statement": "Normalization doesn't eliminate outliers, only highlights their prominence."
+  },
+  {
+    "id": 84,
+    "statement": "Systematic identification in data discovery involves a structured and organized approach."
+  },
+  {
+    "id": 85,
+    "statement": "Data entanglement refers to complex, non-traditional relationships between variables"
+  },
+  {
+    "id": 86,
+    "statement": "Data discovery involves repeating processes for structured data management"
+  },
+  {
+    "id": 87,
+    "statement": "Data standardization improves data quality through consistency and uniformity."
+  },
+  {
+    "id": 88,
+    "statement": "Data mapping establishes relationships between existing data elements or formats."
+  },
+  {
+    "id": 89,
+    "statement": "Data comprehension requires a synergy of technical skills and expertise."
+  },
+  {
+    "id": 90,
+    "statement": "Data standardization governs format, structure, and organization syntax"
+  },
+  {
+    "id": 91,
+    "statement": "Standardization is not a guarantee for data quality improvement alone."
+  },
+  {
+    "id": 92,
+    "statement": "Comprehensive data source documentation covers details and context invariably."
+  },
+  {
+    "id": 93,
+    "statement": "Data entanglement refers to non-linear, complex relationships."
+  },
+  {
+    "id": 94,
+    "statement": "Data quality metrics adapt to dynamic business context and priorities."
+  },
+  {
+    "id": 95,
+    "statement": "Dynamic data quality adapts to changing business needs and context."
+  },
+  {
+    "id": 96,
+    "statement": "Standardized processes reduce errors, not eliminate them entirely."
+  },
+  {
+    "id": 97,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation."
+  },
+  {
+    "id": 98,
+    "statement": "Data entanglement refers to complex, interconnected non-linear relationships."
+  },
+  {
+    "id": 99,
+    "statement": "Consistency ensures data meets multiple criteria, format, and semantics."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 41,
+  "statement": "Non-linear relationships refer to complex variable connections without proportionality"
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to explore one aspect of the knowledge base that I'm least confident about. The item is:
+
+Item 41: "Non-linear relationships refer to complex variable connections without proportionality"
+
+Why I'm Uncertain:
+I'm not entirely sure what proportionality means in this context. I understand that non-linear relationships refer to complex connections between variables, but I'm not clear on what proportionality adds to that definition.
+
+Specific Clarifying Question:
+Can you help me understand what proportionality means in the context of non-linear relationships? Is it a specific mathematical concept, or is it referring to something more general?
+
+Your insights would be greatly appreciated!

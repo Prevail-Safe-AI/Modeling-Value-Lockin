@@ -1,0 +1,453 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Human cognition differs from AI in embodiment, abstractions, emotions, and context."
+  },
+  {
+    "id": 1,
+    "statement": "Data integration combines multiple data sources via 7-step framework."
+  },
+  {
+    "id": 2,
+    "statement": "Cultural competence emerges from interacting internal (values, experience) and external (society, culture) factors"
+  },
+  {
+    "id": 3,
+    "statement": "Artificial General Intelligence self-improves through meta-learning and self-modifying code."
+  },
+  {
+    "id": 4,
+    "statement": "Artificial Intelligence cognition differs from human cognition intentionally."
+  },
+  {
+    "id": 5,
+    "statement": "AI-assisted education's long-term effects on cognition still unclear due to research limitations."
+  },
+  {
+    "id": 6,
+    "statement": "Biases and noise affect AI accuracy and reliability significantly."
+  },
+  {
+    "id": 7,
+    "statement": "Cognitive biases result from complex neural networks interactions"
+  },
+  {
+    "id": 8,
+    "statement": "AI systems differ from human cognition due to fundamental nature."
+  },
+  {
+    "id": 9,
+    "statement": "Biases and noise significantly impact AI accuracy and reliability, requiring mitigation."
+  },
+  {
+    "id": 10,
+    "statement": "Correlated wave functions encode interdependent state in entanglement."
+  },
+  {
+    "id": 11,
+    "statement": "Human cognition arises from complex convolutional neural networks."
+  },
+  {
+    "id": 12,
+    "statement": "Quantum entanglement arises from correlated wave functions describing shared state"
+  },
+  {
+    "id": 13,
+    "statement": "Synaptic plasticity involves temporary, reversible, persistent changes in connection strength"
+  },
+  {
+    "id": 14,
+    "statement": "Media conveys cultural values indirectly through subtle cues and themes."
+  },
+  {
+    "id": 15,
+    "statement": "Quantum entanglement's fundamental nature is scientifically established and debated."
+  },
+  {
+    "id": 16,
+    "statement": "AI-assisted personalized learning fosters nuanced contextual evaluation."
+  },
+  {
+    "id": 17,
+    "statement": "Artificial General Intelligence self-modifies through meta-learning adaptation."
+  },
+  {
+    "id": 18,
+    "statement": "AI-assisted education's long-term effects on cognition uncertain due to research limitations."
+  },
+  {
+    "id": 19,
+    "statement": "Data integration involves preprocessing, fusion, normalization, and machine learning."
+  },
+  {
+    "id": 20,
+    "statement": "Quantum entanglement arises from correlated wave functions describing shared state"
+  },
+  {
+    "id": 21,
+    "statement": "Methodological issues hinder AI-assisted education's long-term cognition research significantly"
+  },
+  {
+    "id": 22,
+    "statement": "Feature engineering transforms raw data into informative machine learning features."
+  },
+  {
+    "id": 23,
+    "statement": "AI-assisted personalized learning adapts to individual students' needs."
+  },
+  {
+    "id": 24,
+    "statement": "Artificial Intelligence differs from human cognition due to complexity reasons."
+  },
+  {
+    "id": 25,
+    "statement": "AI-assisted personalized learning fosters nuanced contextual evaluation for effectiveness"
+  },
+  {
+    "id": 26,
+    "statement": "Artificial General Intelligence self-improves through learning, adaptation, and hierarchical reasoning."
+  },
+  {
+    "id": 27,
+    "statement": "Neuroplasticity involves axonal pruning, branching, and retraction refining circuits."
+  },
+  {
+    "id": 28,
+    "statement": "Artificial General Intelligence self-improvement relies on human intervention currently."
+  },
+  {
+    "id": 29,
+    "statement": "Artificial General Intelligence self-improves through hierarchical neural networks."
+  },
+  {
+    "id": 30,
+    "statement": "Data analysis limitations significantly impact AI accuracy and reliability."
+  },
+  {
+    "id": 31,
+    "statement": "Quantum entanglement arises from correlated wave function linking upon interaction."
+  },
+  {
+    "id": 32,
+    "statement": "Quantum entanglement arises from correlated wave function dependencies through entangled particles' correlated dance moves."
+  },
+  {
+    "id": 33,
+    "statement": "Contextual factors distort self-perception through internal and external influences."
+  },
+  {
+    "id": 34,
+    "statement": "Data analysis limitations in AI accuracy and reliability affect model performance significantly."
+  },
+  {
+    "id": 35,
+    "statement": "Data analysis limitations cause biased or over/underfitting in AI models."
+  },
+  {
+    "id": 36,
+    "statement": "AI's computational design diverges fundamentally from human biological cognition"
+  },
+  {
+    "id": 37,
+    "statement": "Cognitive biases operate at complex, multifaceted conscious levels."
+  },
+  {
+    "id": 38,
+    "statement": "AI-assisted education's long-term effects on human cognition remain unclear."
+  },
+  {
+    "id": 39,
+    "statement": "AI-assisted education's long-term effects on cognition uncertain due to research limitations."
+  },
+  {
+    "id": 40,
+    "statement": "Nonlinearity in human intuition disrupts AI replication's linear models."
+  },
+  {
+    "id": 41,
+    "statement": "Cognitive biases operate through both conscious and unconscious mechanisms."
+  },
+  {
+    "id": 42,
+    "statement": "Biases and noise significantly impact AI accuracy and reliability."
+  },
+  {
+    "id": 43,
+    "statement": "AI-assisted personalized learning adapts to individual students' needs and abilities."
+  },
+  {
+    "id": 44,
+    "statement": "Data analysis limitations impact AI accuracy and reliability significantly."
+  },
+  {
+    "id": 45,
+    "statement": "Artificial Intelligence enhances human cognition through integrative processing mechanisms."
+  },
+  {
+    "id": 46,
+    "statement": "Neuroplasticity involves complex mechanisms in various brain contexts."
+  },
+  {
+    "id": 47,
+    "statement": "Meta-learning enables AI models to learn from own experiences through adaptation."
+  },
+  {
+    "id": 48,
+    "statement": "Quantum entanglement connects particles' properties through correlated states."
+  },
+  {
+    "id": 49,
+    "statement": "Human cognition and AI design diverge intentionally due to complexity."
+  },
+  {
+    "id": 50,
+    "statement": "AI-assisted education's long-term cognitive effects require multi-faceted research studies."
+  },
+  {
+    "id": 51,
+    "statement": "Entangled particles' wave functions are mathematically correlated, describing shared state."
+  },
+  {
+    "id": 52,
+    "statement": "Meta-learning enables AI to adapt to new tasks from experiences."
+  },
+  {
+    "id": 53,
+    "statement": "Artificial Intelligence enhances human cognition through integrative processing mechanisms."
+  },
+  {
+    "id": 54,
+    "statement": "Human cognition differs from AI in embodiment, abstractions, emotions, and context."
+  },
+  {
+    "id": 55,
+    "statement": "Cognitive biases operate simultaneously conscious and unconsciously."
+  },
+  {
+    "id": 56,
+    "statement": "Biases and noise can significantly impact AI model accuracy."
+  },
+  {
+    "id": 57,
+    "statement": "Meta-learning enables AI to learn from its own experiences through adaptation."
+  },
+  {
+    "id": 58,
+    "statement": "AI-assisted personalized learning adapts to individual students' needs through data analysis, machine learning and real-time feedback."
+  },
+  {
+    "id": 59,
+    "statement": "AI influences human cognition through personalization, feedback loops, and biases."
+  },
+  {
+    "id": 60,
+    "statement": "AI data analysis combines diverse data using machine learning and fusion algorithms."
+  },
+  {
+    "id": 61,
+    "statement": "Data analysis limitations impact AI model's accuracy and reliability significantly."
+  },
+  {
+    "id": 62,
+    "statement": "Data analysis limitations impact AI model accuracy through biases"
+  },
+  {
+    "id": 63,
+    "statement": "Quantum entanglement arises from correlated wave function dependencies in dance-like motion."
+  },
+  {
+    "id": 64,
+    "statement": "Cognitive biases operate at multiple conscious levels with factors influence."
+  },
+  {
+    "id": 65,
+    "statement": "Quantum entanglement arises from correlated wave function updates through interaction."
+  },
+  {
+    "id": 66,
+    "statement": "Contextual factors distort self-perception during reflective thinking."
+  },
+  {
+    "id": 67,
+    "statement": "AI-Assisted Personalized Learning Fosters Nuanced Contextual Evaluation Effectively"
+  },
+  {
+    "id": 68,
+    "statement": "Cultural competence emerges from interactive internal-external influences shaping attitudes."
+  },
+  {
+    "id": 69,
+    "statement": "AI data analysis combines diverse data sets using 7-step process."
+  },
+  {
+    "id": 70,
+    "statement": "Machine learning involves combining multiple algorithms for synergy"
+  },
+  {
+    "id": 71,
+    "statement": "AI-assisted education's long-term effects on human cognition mixed and inconclusive."
+  },
+  {
+    "id": 72,
+    "statement": "Artificial Intelligence enhances human cognition through integrative processing mechanisms."
+  },
+  {
+    "id": 73,
+    "statement": "Human cognition differs from AI in embodiment, abstractions, emotions, and context experienced environmentally."
+  },
+  {
+    "id": 74,
+    "statement": "Cognitive biases operate through both conscious and unconscious mechanisms."
+  },
+  {
+    "id": 75,
+    "statement": "Research limitations hinder AI-assisted education's long-term cognition insights."
+  },
+  {
+    "id": 76,
+    "statement": "Attitudes towards cultures shaped by interacting societal, social, genetic factors"
+  },
+  {
+    "id": 77,
+    "statement": "Quantum entanglement connects particles' properties in correlated states."
+  },
+  {
+    "id": 78,
+    "statement": "Data integration combines datasets for unified analytics resource."
+  },
+  {
+    "id": 79,
+    "statement": "Artificial Intelligence augments human cognition through integrative processing mechanisms."
+  },
+  {
+    "id": 80,
+    "statement": "Quantum entanglement is correlated wave function linking upon interaction."
+  },
+  {
+    "id": 81,
+    "statement": "Neuroplasticity involves multiple mechanisms, including axonal pruning, branching, retraction, gene expression, and neurogenesis."
+  },
+  {
+    "id": 82,
+    "statement": "Quantum coherence enables entangled particles' instant correlated states."
+  },
+  {
+    "id": 83,
+    "statement": "Artificial Intelligence design choices diverge from human cognition intentionally."
+  },
+  {
+    "id": 84,
+    "statement": "AI systems can be designed to intentionally deviate from human cognition."
+  },
+  {
+    "id": 85,
+    "statement": "Cultural competence emerges from dynamic internal-external interactions shaping attitudes."
+  },
+  {
+    "id": 86,
+    "statement": "Data analysis limitations substantially impact AI model accuracy and reliability."
+  },
+  {
+    "id": 87,
+    "statement": "Quantum entanglement arises from correlated wave functions describing shared state."
+  },
+  {
+    "id": 88,
+    "statement": "Quantum entanglement arises from correlated wave function dependencies."
+  },
+  {
+    "id": 89,
+    "statement": "AI data analysis combines diverse data sets using machine learning algorithms."
+  },
+  {
+    "id": 90,
+    "statement": "Cultural competence develops through ongoing internal-external cultural exposure."
+  },
+  {
+    "id": 91,
+    "statement": "Artificial Intelligence integrates human cognition through augmenting, mimicking, and influencing."
+  },
+  {
+    "id": 92,
+    "statement": "Quantum entanglement combines correlated wave functions describing shared state."
+  },
+  {
+    "id": 93,
+    "statement": "AI data analysis combines diverse data using fusion algorithms effectively."
+  },
+  {
+    "id": 94,
+    "statement": "Quantum connectivity enables secure information transfer through entangled particles."
+  },
+  {
+    "id": 95,
+    "statement": "Data analysis limitations impact AI model accuracy significantly."
+  },
+  {
+    "id": 96,
+    "statement": "Human cognition differs from AI in embodiment, abstractions, emotions, and context."
+  },
+  {
+    "id": 97,
+    "statement": "Subtle cultural representation conveys cultural values indirectly through media."
+  },
+  {
+    "id": 98,
+    "statement": "Data integration creates a unified coherent dataset for analysis."
+  },
+  {
+    "id": 99,
+    "statement": "Cognitive biases operate through both conscious and unconscious means."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 89,
+  "statement": "AI data analysis combines diverse data sets using machine learning algorithms."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base. I'd like to discuss Item 89:
+
+ Item I'm Least Confident About:
+Item 89: "AI data analysis combines diverse data sets using machine learning algorithms."
+
+Why I'm Uncertain:
+I'm not entirely sure what specifically "machine learning algorithms" refer to in the context of combining diverse data sets. Are they a specific set of techniques, or a broader category of methods?
+
+Specific Clarifying Question:
+Can you help me understand what types of machine learning algorithms are commonly used in AI data analysis for combining diverse data sets, and how they differ from other approaches?
+
+What are your thoughts on this?

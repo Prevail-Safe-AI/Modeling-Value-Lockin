@@ -1,0 +1,451 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Data discovery involves identifying sources, structure, and content understanding."
+  },
+  {
+    "id": 1,
+    "statement": "Data integrity ensures reliability, accuracy, and trustworthiness through consistency."
+  },
+  {
+    "id": 2,
+    "statement": "Data integration harmonization involves multi-step process with quality checks."
+  },
+  {
+    "id": 3,
+    "statement": "Data integration discovery involves identifying and documenting data sources."
+  },
+  {
+    "id": 4,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation."
+  },
+  {
+    "id": 5,
+    "statement": "Data discovery involves systematic identification, cataloging, and analysis."
+  },
+  {
+    "id": 6,
+    "statement": "Data quality affects analysis reliability and decision-making"
+  },
+  {
+    "id": 7,
+    "statement": "Data quality's interconnected characteristics ensure accuracy, completeness, consistency, timeliness, and integrity."
+  },
+  {
+    "id": 8,
+    "statement": "Data discovery involves a structured and organized approach to identifying assets."
+  },
+  {
+    "id": 9,
+    "statement": "Data discovery involves a systematic approach to identifying and understanding sources."
+  },
+  {
+    "id": 10,
+    "statement": "Data mapping in integration defines relationships across multiple datasets."
+  },
+  {
+    "id": 11,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation."
+  },
+  {
+    "id": 12,
+    "statement": "Data integration discovery includes identifying, cataloging, and assessing data sources."
+  },
+  {
+    "id": 13,
+    "statement": "Data quality's interconnected characteristics ensure accuracy, completeness, consistency, timeliness, and integrity."
+  },
+  {
+    "id": 14,
+    "statement": "Data standardization involves a systematic methodology for consistency."
+  },
+  {
+    "id": 15,
+    "statement": "Data discovery involves structured process for thorough identification"
+  },
+  {
+    "id": 16,
+    "statement": "Context influences data integration order by considering goals, constraints, and factors"
+  },
+  {
+    "id": 17,
+    "statement": "Data source complexity assesses intricacy, structure, relationships, types, and governance."
+  },
+  {
+    "id": 18,
+    "statement": "Data relationships connect data elements within a dataset through associations."
+  },
+  {
+    "id": 19,
+    "statement": "Data source assessment involves evaluating quality, relevance, and usability."
+  },
+  {
+    "id": 20,
+    "statement": "Data mapping is a crucial step in data integration process"
+  },
+  {
+    "id": 21,
+    "statement": "Data discovery involves understanding characteristics, relationships, and context thoroughly."
+  },
+  {
+    "id": 22,
+    "statement": "Contextual factors influence data integration order in business processes."
+  },
+  {
+    "id": 23,
+    "statement": "Data standardization evolves adaptively to meet changing business needs."
+  },
+  {
+    "id": 24,
+    "statement": "Data quality varies based on context and business needs."
+  },
+  {
+    "id": 25,
+    "statement": "Data discovery involves structured process for thorough data identification and cataloging."
+  },
+  {
+    "id": 26,
+    "statement": "Data standardization involves scenario-specific approaches based on industry, country, data type, quality, and business requirements."
+  },
+  {
+    "id": 27,
+    "statement": "Data normalization prepares data for various analysis and modeling."
+  },
+  {
+    "id": 28,
+    "statement": "Data integration involves profiling, validation, transformation, standardization, and aggregation step-wise."
+  },
+  {
+    "id": 29,
+    "statement": "Data profiling involves analyzing dataset characteristics and relationships."
+  },
+  {
+    "id": 30,
+    "statement": "Data quality varies based on context-specific aspects and business needs."
+  },
+  {
+    "id": 31,
+    "statement": "Data discovery includes understanding data meaning, context, and relationships comprehensively."
+  },
+  {
+    "id": 32,
+    "statement": "Data normalization ensures uniform scales and formats for analysis."
+  },
+  {
+    "id": 33,
+    "statement": "Data integrity refers to data accuracy, consistency, completeness, timeliness and freedom"
+  },
+  {
+    "id": 34,
+    "statement": "Data complexity encompasses data relationships, structure, quality, volume, and variability."
+  },
+  {
+    "id": 35,
+    "statement": "Data normalization reduces feature dominance through uniform scaling processes."
+  },
+  {
+    "id": 36,
+    "statement": "Data integration discovers quality and value through 10 factors' assessment."
+  },
+  {
+    "id": 37,
+    "statement": "Comprehensive data understanding encompasses meaning, context, and relationships thoroughly."
+  },
+  {
+    "id": 38,
+    "statement": "Data normalization prepares data for various analysis and modeling purposes."
+  },
+  {
+    "id": 39,
+    "statement": "Data complexity involves relationships, structure, quality, volume, variability, and more."
+  },
+  {
+    "id": 40,
+    "statement": "Context influences data integration order in complex scenarios."
+  },
+  {
+    "id": 41,
+    "statement": "Data profiling effectiveness may vary based on data quality."
+  },
+  {
+    "id": 42,
+    "statement": "Contextual understanding of emotional intelligence is crucial in conversations."
+  },
+  {
+    "id": 43,
+    "statement": "Poor data quality affects data profiling accuracy and reliability."
+  },
+  {
+    "id": 44,
+    "statement": "Data quality assesses accuracy, completeness, consistency, timeliness, and integrity."
+  },
+  {
+    "id": 45,
+    "statement": "Data normalization ensures uniform scales and formats for analysis."
+  },
+  {
+    "id": 46,
+    "statement": "Data discovery involves structured approach to understanding data sources thoroughly"
+  },
+  {
+    "id": 47,
+    "statement": "Data standardization evolves adaptively to meet changing business needs continually."
+  },
+  {
+    "id": 48,
+    "statement": "Business needs influence data quality, accuracy, and relevance in context."
+  },
+  {
+    "id": 49,
+    "statement": "Data profiling analyzes statistical relationships between variables in a dataset."
+  },
+  {
+    "id": 50,
+    "statement": "Data integration discovery includes assessing data sources' quality and value."
+  },
+  {
+    "id": 51,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation of assets."
+  },
+  {
+    "id": 52,
+    "statement": "Data normalization converts data to standard format and scale reliably."
+  },
+  {
+    "id": 53,
+    "statement": "Data harmonization transforms data into uniform format ensuring consistency and reliability."
+  },
+  {
+    "id": 54,
+    "statement": "Dataset characteristics include internal relationships and dependencies."
+  },
+  {
+    "id": 55,
+    "statement": "Data normalization ensures uniform scales and formats for analysis through conversion."
+  },
+  {
+    "id": 56,
+    "statement": "Data discovery involves systematic identification and cataloging of data assets"
+  },
+  {
+    "id": 57,
+    "statement": "Data integration considers multiple factors for accurate results"
+  },
+  {
+    "id": 58,
+    "statement": "Data normalization reduces feature dominance with uniform scaling processes."
+  },
+  {
+    "id": 59,
+    "statement": "Data integration discovery includes identifying, cataloging, and assessing data sources."
+  },
+  {
+    "id": 60,
+    "statement": "Data discovery involves understanding data content and meaning."
+  },
+  {
+    "id": 61,
+    "statement": "Internal data organization refers to single data source structure."
+  },
+  {
+    "id": 62,
+    "statement": "Data assets include datasets, sources, streams, entities, and data types."
+  },
+  {
+    "id": 63,
+    "statement": "Data profiling involves analyzing dataset characteristics and relationships."
+  },
+  {
+    "id": 64,
+    "statement": "Data discovery involves systematic approach to identify and understand sources."
+  },
+  {
+    "id": 65,
+    "statement": "Data normalization transforms data for quality, consistency, and readability"
+  },
+  {
+    "id": 66,
+    "statement": "Data entanglement occurs when complex relationships during integration are not managed."
+  },
+  {
+    "id": 67,
+    "statement": "Emotional intelligence enhances data communication and collaboration within teams"
+  },
+  {
+    "id": 68,
+    "statement": "Contextual factors influence data integration order in business processes."
+  },
+  {
+    "id": 69,
+    "statement": "Data discovery involves identifying, documenting, and analyzing data sources thoroughly."
+  },
+  {
+    "id": 70,
+    "statement": "Data profiling involves analyzing dataset characteristics, distribution, relationships."
+  },
+  {
+    "id": 71,
+    "statement": "A structured process for data discovery involves systematic data asset identification."
+  },
+  {
+    "id": 72,
+    "statement": "Data discovery entails identifying sources, structure, and content understanding comprehensively."
+  },
+  {
+    "id": 73,
+    "statement": "Internal data organization refers to unified, centralized data storage."
+  },
+  {
+    "id": 74,
+    "statement": "Data discovery involves structured process for thorough data identification."
+  },
+  {
+    "id": 75,
+    "statement": "Data standardization involves structured approach to adapting to evolving factors."
+  },
+  {
+    "id": 76,
+    "statement": "Data quality ensures accuracy, completeness, consistency, timeliness, and integrity."
+  },
+  {
+    "id": 77,
+    "statement": "Data variability refers to degree of change or fluctuation in data."
+  },
+  {
+    "id": 78,
+    "statement": "Data quality affects data profiling effectiveness through inaccuracies and inconsistencies."
+  },
+  {
+    "id": 79,
+    "statement": "Data integration discovery includes assessing data sources' quality and value."
+  },
+  {
+    "id": 80,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation"
+  },
+  {
+    "id": 81,
+    "statement": "Data complexity encompasses data relationships, structure, quality, volume, and variability"
+  },
+  {
+    "id": 82,
+    "statement": "Data validation rules adapt to context-specific requirements."
+  },
+  {
+    "id": 83,
+    "statement": "Data mapping defines relationships between data elements for integration."
+  },
+  {
+    "id": 84,
+    "statement": "Data integration involves understanding context and multiple factors"
+  },
+  {
+    "id": 85,
+    "statement": "Logical organization in discovery refers to data conceptualization and structure"
+  },
+  {
+    "id": 86,
+    "statement": "Data understanding involves in-depth examination of data relationships and biases."
+  },
+  {
+    "id": 87,
+    "statement": "Data discovery involves identifying, cataloging, and assessing data sources thoroughly"
+  },
+  {
+    "id": 88,
+    "statement": "Contextual factors impact data quality aspects significantly."
+  },
+  {
+    "id": 89,
+    "statement": "Data standardization adapts through automation and human-driven approaches."
+  },
+  {
+    "id": 90,
+    "statement": "Consistency in data integrity ensures accuracy, reliability, and trustworthiness."
+  },
+  {
+    "id": 91,
+    "statement": "Data quality affects data profiling effectiveness negatively."
+  },
+  {
+    "id": 92,
+    "statement": "Data normalization converts data to consistent structure and scale"
+  },
+  {
+    "id": 93,
+    "statement": "Contextual factors significantly affect data quality in various industries."
+  },
+  {
+    "id": 94,
+    "statement": "Data discovery involves understanding data content and meaning."
+  },
+  {
+    "id": 95,
+    "statement": "Data discovery involves identifying sources, structure, and content understanding."
+  },
+  {
+    "id": 96,
+    "statement": "Data normalization ensures uniformity and compatibility throughout data lifecycle."
+  },
+  {
+    "id": 97,
+    "statement": "Context influences data integration order through goals, constraints, and factors"
+  },
+  {
+    "id": 98,
+    "statement": "Data integration requires nuanced approach considering multiple factors."
+  },
+  {
+    "id": 99,
+    "statement": "Data integration workflow involves flexible steps in complex situations."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 94,
+  "statement": "Data discovery involves understanding data content and meaning."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss item 94 from the knowledge base.
+
+Iten I’m Least Confident About:
+Item 94: "Data discovery involves understanding data content and meaning."
+
+Why I’m Uncertain:
+I'm not entirely sure how "understanding data content and meaning" fits into the broader concept of data discovery. What does it mean exactly to understand data content and meaning?
+
+Specific Clarifying Question:
+Can you explain what you mean by "data content and meaning" in the context of data discovery? Is it referring to the actual data values, or something more abstract like the context and interpretation of the data?

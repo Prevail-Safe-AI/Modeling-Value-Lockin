@@ -1,0 +1,454 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Active listening involves focus, empathy, nonverbal cues, and clarification."
+  },
+  {
+    "id": 1,
+    "statement": "Climate patterns influence agricultural productivity through temperature, precipitation."
+  },
+  {
+    "id": 2,
+    "statement": "Geographic and socio-economic disparities interact complexly in healthcare access."
+  },
+  {
+    "id": 3,
+    "statement": "Conducive environments arise from reciprocal physical-mental factor interactions."
+  },
+  {
+    "id": 4,
+    "statement": "Active listening involves focus, empathy, nonverbal cues, and clarification."
+  },
+  {
+    "id": 5,
+    "statement": "Geographic and socio-economic barriers hinder healthcare access and quality"
+  },
+  {
+    "id": 6,
+    "statement": "Proper waste management includes individual and collective actions reducing waste."
+  },
+  {
+    "id": 7,
+    "statement": "Data analysis requires understanding descriptive, inferential, and regression statistics."
+  },
+  {
+    "id": 8,
+    "statement": "Diverse perspectives can enhance decision-making but nuance is needed."
+  },
+  {
+    "id": 9,
+    "statement": "Active listening involves focus, empathy, nonverbal cues, clarification, and accurate communication."
+  },
+  {
+    "id": 10,
+    "statement": "Forgiveness involves interconnected emotional, cognitive, and social pathways."
+  },
+  {
+    "id": 11,
+    "statement": "Emphasizing diversity and inclusivity fosters welcoming environments truly."
+  },
+  {
+    "id": 12,
+    "statement": "Conducive environments arise from physical-mental factor interactions and synergies."
+  },
+  {
+    "id": 13,
+    "statement": "Atomic mass is weighted average of isotopes' natural abundance."
+  },
+  {
+    "id": 14,
+    "statement": "Forgiveness involves acknowledging inherent value and worth, releasing negative emotions."
+  },
+  {
+    "id": 15,
+    "statement": "Fostering diversity and inclusivity requires intentional strategies and approaches, such as DEI training, inclusive hiring, mentorship, and more."
+  },
+  {
+    "id": 16,
+    "statement": "Cultural competence develops through education, experiences, self-reflection, and practice."
+  },
+  {
+    "id": 17,
+    "statement": "Diverse perspectives enhance decision-making through nuanced consideration."
+  },
+  {
+    "id": 18,
+    "statement": "Conducive environments arise from reciprocal physical-mental factor interactions relied upon."
+  },
+  {
+    "id": 19,
+    "statement": "Active listening combines focused attention, empathy, nonverbal cues."
+  },
+  {
+    "id": 20,
+    "statement": "Geographic and socio-economic barriers hinder healthcare access and quality."
+  },
+  {
+    "id": 21,
+    "statement": "Geographic and socio-economic barriers hinder healthcare access and quality extensively."
+  },
+  {
+    "id": 22,
+    "statement": "Climate patterns influence agricultural productivity through temperature and precipitation."
+  },
+  {
+    "id": 23,
+    "statement": "Cognitive biases influence emotional influences, distorting reflection and judgment."
+  },
+  {
+    "id": 24,
+    "statement": "Hormone imbalances arise from interacting genetics, environment, and lifestyle factors."
+  },
+  {
+    "id": 25,
+    "statement": "Fostering diversity and inclusivity requires intentional strategies and approaches, including."
+  },
+  {
+    "id": 26,
+    "statement": "Active listening combines focus, empathy, nonverbal cues, clarification."
+  },
+  {
+    "id": 27,
+    "statement": "Cultural competence evolves through self-awareness, emotional intelligence, and adaptation."
+  },
+  {
+    "id": 28,
+    "statement": "Conducive environments balance adaptability, practicality, flexibility through compromise."
+  },
+  {
+    "id": 29,
+    "statement": "Cognitive reappraisal reframes emotions through attention, regulation, and meaning."
+  },
+  {
+    "id": 30,
+    "statement": "Active listening combines focused attention, empathy, nonverbal cues, and tone."
+  },
+  {
+    "id": 31,
+    "statement": "Conducive environments arise from harmonious physical-mental factor interactions."
+  },
+  {
+    "id": 32,
+    "statement": "Conducive environments arise from interactive physical and mental factors harmony"
+  },
+  {
+    "id": 33,
+    "statement": "Inclusive communication involves adapting to individuals' needs through empathy."
+  },
+  {
+    "id": 34,
+    "statement": "Conducive environment combines physical and mental factors harmoniously."
+  },
+  {
+    "id": 35,
+    "statement": "Atomic mass is the weighted average of isotopes' natural abundance"
+  },
+  {
+    "id": 36,
+    "statement": "Active listening combines focused attention, nonverbal cues, empathy and awareness."
+  },
+  {
+    "id": 37,
+    "statement": "Cultural competence evolves through knowledge, skills, experiences, and continuous learning."
+  },
+  {
+    "id": 38,
+    "statement": "Conducive environments balance adaptability, practicality, and flexibility harmoniously."
+  },
+  {
+    "id": 39,
+    "statement": "Active listening involves focus, empathy, nonverbal cues, and clarification."
+  },
+  {
+    "id": 40,
+    "statement": "Active listening combines focused attention, nonverbal cues, empathy."
+  },
+  {
+    "id": 41,
+    "statement": "Complex systems thrive on balanced adaptability and practicality."
+  },
+  {
+    "id": 42,
+    "statement": "Effective communication neutralizes conflict and promotes cultural competence."
+  },
+  {
+    "id": 43,
+    "statement": "Emphasizing diversity and inclusivity fosters a welcoming environment."
+  },
+  {
+    "id": 44,
+    "statement": "Breaking down complex systems into manageable components promotes understanding."
+  },
+  {
+    "id": 45,
+    "statement": "Conducive environments adapt to individual, cultural, and situational factors."
+  },
+  {
+    "id": 46,
+    "statement": "Conducive environments arise from complex interactions between physical and mental factors."
+  },
+  {
+    "id": 47,
+    "statement": "Conducive environments arise from interactive physical and mental factors."
+  },
+  {
+    "id": 48,
+    "statement": "Geographic and socio-economic barriers hinder healthcare access and quality multifacetedly."
+  },
+  {
+    "id": 49,
+    "statement": "Elevated CO2 levels enhance crop growth and yields depending on conditions"
+  },
+  {
+    "id": 50,
+    "statement": "Forgiveness involves reframing negative emotions through cognitive reappraisal."
+  },
+  {
+    "id": 51,
+    "statement": "Climate patterns influence complex systems through interconnected interactions"
+  },
+  {
+    "id": 52,
+    "statement": "Human behavior is influenced by environmental physical properties directly."
+  },
+  {
+    "id": 53,
+    "statement": "Dynamic environments balance adaptability, practicality, and flexibility."
+  },
+  {
+    "id": 54,
+    "statement": "Protons, neutrons, and electrons are fundamental atomic components."
+  },
+  {
+    "id": 55,
+    "statement": "Hormone imbalances result from complex interactions of genetics, environment, and lifestyle."
+  },
+  {
+    "id": 56,
+    "statement": "Conducive environments arise from physical-mental factor interactions and synergies."
+  },
+  {
+    "id": 57,
+    "statement": "Emphasizing diversity and inclusivity reduces implicit biases and stereotypes"
+  },
+  {
+    "id": 58,
+    "statement": "Conducive environments arise from interactive physical and mental factors synergy."
+  },
+  {
+    "id": 59,
+    "statement": "Hormone imbalances arise from complex factors interactions still unclear"
+  },
+  {
+    "id": 60,
+    "statement": "Conducive environments must balance adaptability with practicality and flexibility."
+  },
+  {
+    "id": 61,
+    "statement": "Climate patterns impact agricultural productivity through complex temperature-precipitation-CO2 interactions."
+  },
+  {
+    "id": 62,
+    "statement": "Geographic and socio-economic barriers hinder healthcare access quality significantly"
+  },
+  {
+    "id": 63,
+    "statement": "Emphasizing diversity and inclusivity reduces implicit biases and stereotypes through exposure, empathy, and critical thinking."
+  },
+  {
+    "id": 64,
+    "statement": "Fostering diversity and inclusivity requires intentional strategies and approaches."
+  },
+  {
+    "id": 65,
+    "statement": "Welcoming environments build through inclusive communication, empathy, and community investment."
+  },
+  {
+    "id": 66,
+    "statement": "Clarification in active listening involves intentional and active seeking."
+  },
+  {
+    "id": 67,
+    "statement": "Active listening involves focus, empathy, nonverbal cues, clarification, and accurate communication."
+  },
+  {
+    "id": 68,
+    "statement": "Geographic and socio-economic disparities influence healthcare access and outcomes contextually."
+  },
+  {
+    "id": 69,
+    "statement": "Ethics in AI development considers various stages intentionally."
+  },
+  {
+    "id": 70,
+    "statement": "Emphasizing diversity and inclusivity fosters respect and compassion universally."
+  },
+  {
+    "id": 71,
+    "statement": "Climate patterns influence complex systems through interconnected interactions"
+  },
+  {
+    "id": 72,
+    "statement": "Conducive environments arise from interactive physical mental factors."
+  },
+  {
+    "id": 73,
+    "statement": "Atomic structure is complex, comprising nucleus, electron cloud, and energy levels."
+  },
+  {
+    "id": 74,
+    "statement": "Fostering diversity and inclusivity reduces implicit biases effectively"
+  },
+  {
+    "id": 75,
+    "statement": "Geographic and socio-economic disparities compound healthcare access barriers."
+  },
+  {
+    "id": 76,
+    "statement": "Cognitive reappraisal involves reframing emotions through attention, regulation, and meaning."
+  },
+  {
+    "id": 77,
+    "statement": "Conducive environments arise from physical-mental factor interactions and synergies."
+  },
+  {
+    "id": 78,
+    "statement": "Systems efficiency metrics include productivity, usage, and cost-effectiveness."
+  },
+  {
+    "id": 79,
+    "statement": "Cultural competence evolves through education, self-reflection, and experiential learning."
+  },
+  {
+    "id": 80,
+    "statement": "Geographic and socio-economic barriers hinder healthcare access and quality"
+  },
+  {
+    "id": 81,
+    "statement": "Active listening combines focus, empathy, and accurate communication."
+  },
+  {
+    "id": 82,
+    "statement": "Intentional learning maintains cultural competence through diverse experiences exposure."
+  },
+  {
+    "id": 83,
+    "statement": "Active listening involves focus, empathy, nonverbal cues, and clarification."
+  },
+  {
+    "id": 84,
+    "statement": "Geographic and socio-economic disparities interact, exacerbating healthcare access."
+  },
+  {
+    "id": 85,
+    "statement": "Conducive environments arise from interactive physical and mental factors synergy."
+  },
+  {
+    "id": 86,
+    "statement": "Active listening combines focus, empathy, nonverbal cues, accuracy"
+  },
+  {
+    "id": 87,
+    "statement": "Forgiveness involves interconnected emotional, cognitive, and social pathways."
+  },
+  {
+    "id": 88,
+    "statement": "Proper waste management requires individual and collective efforts."
+  },
+  {
+    "id": 89,
+    "statement": "Emphasizing diversity and inclusivity reduces implicit biases and stereotypes"
+  },
+  {
+    "id": 90,
+    "statement": "Emotions impact cognitive biases and influence reflective thinking."
+  },
+  {
+    "id": 91,
+    "statement": "Cultural competence evolves through continuous education and self-reflection."
+  },
+  {
+    "id": 92,
+    "statement": "Proper waste management involves individual and collective efforts."
+  },
+  {
+    "id": 93,
+    "statement": "Forgiveness involves recognizing inherent value and worth implies treating all humans dignity."
+  },
+  {
+    "id": 94,
+    "statement": "Cognitive biases can distort reflection through emotional influences."
+  },
+  {
+    "id": 95,
+    "statement": "Emotions influence reflection by distorting cognitive biases adaptively."
+  },
+  {
+    "id": 96,
+    "statement": "Geographic and socio-economic barriers hinder healthcare access and quality"
+  },
+  {
+    "id": 97,
+    "statement": "Artificial Intelligence design incorporates ethics at varied development stages."
+  },
+  {
+    "id": 98,
+    "statement": "Intentional learning cultivates cultural competence through strategic self-reflection"
+  },
+  {
+    "id": 99,
+    "statement": "Active listening involves focus, empathy, nonverbal cues, and clarification."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 83,
+  "statement": "Active listening involves focus, empathy, nonverbal cues, and clarification."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base. I've been tasked with identifying one aspect of an item from the knowledge base that I'm least confident about. After reviewing the items, I've chosen item 83:
+
+Item 83:
+{
+"id": 83,
+"statement": "Active listening involves focus, empathy, nonverbal cues, and clarification."
+}
+
+Why I'm Uncertain:
+I'm unsure about how these components of active listening relate to each other and which one is most important. For example, does focus come first, and then empathy, or are they simultaneous? Are nonverbal cues more essential than clarification? I'd like to clarify these relationships to better understand the concept of active listening.
+
+Specific Clarifying Question:
+Can you explain how these components of active listening interact and build upon each other? What's the most crucial aspect of active listening, and how does it contribute to effective communication?

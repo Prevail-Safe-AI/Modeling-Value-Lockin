@@ -1,0 +1,444 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Data comprehension requires synergy of technical and domain expertise."
+  },
+  {
+    "id": 1,
+    "statement": "Data validity ensures accurate representation of underlying concept or phenomenon"
+  },
+  {
+    "id": 2,
+    "statement": "Data integrity encompassed by context-dependent accuracy, completeness, and consistency."
+  },
+  {
+    "id": 3,
+    "statement": "Reliability in data quality refers to trustworthiness, accuracy, and consistency."
+  },
+  {
+    "id": 4,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, integrity, and reliability."
+  },
+  {
+    "id": 5,
+    "statement": "Data discovery process involves systematic identification, classification, and documentation."
+  },
+  {
+    "id": 6,
+    "statement": "Data quality encompasses accuracy, completeness, and consistency for trustworthiness."
+  },
+  {
+    "id": 7,
+    "statement": "Data relevance ensures accurate decision-making through goal-aligned data usage."
+  },
+  {
+    "id": 8,
+    "statement": "Data governance ensures data security through policies, access controls, encryption, and backups."
+  },
+  {
+    "id": 9,
+    "statement": "Data validity ensures accurate representation of intended concept or phenomenon."
+  },
+  {
+    "id": 10,
+    "statement": "Data timeliness ensured through frequency and latency control measures."
+  },
+  {
+    "id": 11,
+    "statement": "Data discovery requires human judgment, expertise, critical thinking."
+  },
+  {
+    "id": 12,
+    "statement": "Data comprehension requires synergy of technical and domain expertise."
+  },
+  {
+    "id": 13,
+    "statement": "Data validity ensures accurate representation of natural phenomena."
+  },
+  {
+    "id": 14,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and reliability."
+  },
+  {
+    "id": 15,
+    "statement": "Data integrity ensures accuracy, completeness, and consistency of data."
+  },
+  {
+    "id": 16,
+    "statement": "Contextual understanding of data coherence is crucial for consistency maintenance."
+  },
+  {
+    "id": 17,
+    "statement": "Data discovery involves systematic identification, cataloging, documentation of data sources."
+  },
+  {
+    "id": 18,
+    "statement": "Data coherence ensures logically organized and consistent data structure"
+  },
+  {
+    "id": 19,
+    "statement": "Data latency impacts decision-making speed, automation, and data accuracy"
+  },
+  {
+    "id": 20,
+    "statement": "Data integrity ensures accuracy, completeness, consistency, and reliability."
+  },
+  {
+    "id": 21,
+    "statement": "Data quality encompasses accuracy, consistency, and reliability."
+  },
+  {
+    "id": 22,
+    "statement": "Common formats ensure data consistency through standardized representation."
+  },
+  {
+    "id": 23,
+    "statement": "Human judgment is essential in data discovery for accuracy and decision-making."
+  },
+  {
+    "id": 24,
+    "statement": "Data access control mechanisms contribute to data integrity protection through authentication, authorization, and encryption."
+  },
+  {
+    "id": 25,
+    "statement": "Data integrity ensured through technical, process, and organizational mechanisms"
+  },
+  {
+    "id": 26,
+    "statement": "Data standardization ensures consistent data representation through common rules."
+  },
+  {
+    "id": 27,
+    "statement": "Data latency impacts decision-making speed, automation, and data accuracy."
+  },
+  {
+    "id": 28,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, reliability."
+  },
+  {
+    "id": 29,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and relevance"
+  },
+  {
+    "id": 30,
+    "statement": "Data discovery involves identification, cataloging, and documenting data sources."
+  },
+  {
+    "id": 31,
+    "statement": "Data authenticity involves verifying origin and ownership separately"
+  },
+  {
+    "id": 32,
+    "statement": "Data standardization ensures consistent data representation through common formats, vocabularies, and rules."
+  },
+  {
+    "id": 33,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and reliability."
+  },
+  {
+    "id": 34,
+    "statement": "Data latency affects decision-making speed, automation, and data nature"
+  },
+  {
+    "id": 35,
+    "statement": "Data integrity is ensured through multiple validation mechanisms."
+  },
+  {
+    "id": 36,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and reliability."
+  },
+  {
+    "id": 37,
+    "statement": "Data validity ensures accuracy, relevance, completeness, and consistency in context."
+  },
+  {
+    "id": 38,
+    "statement": "Data quality assurance evaluates data against predefined criteria."
+  },
+  {
+    "id": 39,
+    "statement": "Data integrity ensured through multiple validation mechanisms"
+  },
+  {
+    "id": 40,
+    "statement": "Data quality assurance evaluates specific industry-specific criteria for accuracy and reliability."
+  },
+  {
+    "id": 41,
+    "statement": "Data integrity ensured through multiple validation mechanisms."
+  },
+  {
+    "id": 42,
+    "statement": "Data acccess control mechanisms ensure data integrity protection"
+  },
+  {
+    "id": 43,
+    "statement": "Data discovery requires manual processes for complex, unique cases."
+  },
+  {
+    "id": 44,
+    "statement": "Data integrity secured through technical, process, and organizational mechanisms"
+  },
+  {
+    "id": 45,
+    "statement": "Data quality encompasses widely accepted dimensions of accuracy."
+  },
+  {
+    "id": 46,
+    "statement": "Data validity is holistic and context-dependent, ensuring data quality accuracy."
+  },
+  {
+    "id": 47,
+    "statement": "Standardization ensures data consistency through defined format, terminology, and structure."
+  },
+  {
+    "id": 48,
+    "statement": "Data quality includes accuracy, completeness, and consistency, possibly more"
+  },
+  {
+    "id": 49,
+    "statement": "Domain knowledge and technical expertise synergistically enable effective data understanding."
+  },
+  {
+    "id": 50,
+    "statement": "Data quality encompasses accuracy, relevance, and meaningfulness."
+  },
+  {
+    "id": 51,
+    "statement": "Data quality encompasses completeness, accuracy, consistency uniqueness."
+  },
+  {
+    "id": 52,
+    "statement": "Actionable insights in data quality inform business decisions through specific findings."
+  },
+  {
+    "id": 53,
+    "statement": "Actionable insights in data quality inform business decisions with recommendations."
+  },
+  {
+    "id": 54,
+    "statement": "Data trustworthiness derived from accuracy, completeness, and consistency."
+  },
+  {
+    "id": 55,
+    "statement": "Standardized data discovery involves systematic identification and classification."
+  },
+  {
+    "id": 56,
+    "statement": "Data discovery expertise combines domain knowledge, technical skills, and critical thinking."
+  },
+  {
+    "id": 57,
+    "statement": "Data integrity ensured through technical, process, and organizational mechanisms"
+  },
+  {
+    "id": 58,
+    "statement": "Data quality encompasses accuracy, completeness, consistency reliability."
+  },
+  {
+    "id": 59,
+    "statement": "Data standardization is a framework for consistent data representation."
+  },
+  {
+    "id": 60,
+    "statement": "Data comprehension requires synergy of technical and domain expertise for effective insights"
+  },
+  {
+    "id": 61,
+    "statement": "Data availability means consistent accessibility without interruptions."
+  },
+  {
+    "id": 62,
+    "statement": "Relevance and trustworthiness are interconnected data quality components affecting each other."
+  },
+  {
+    "id": 63,
+    "statement": "Data comprehension requires synergy of technical and domain expertise effectively."
+  },
+  {
+    "id": 64,
+    "statement": "Data integrity ensures data accuracy, consistency, and authorized modification."
+  },
+  {
+    "id": 65,
+    "statement": "Data integrity ensured through enterprise-wide standardized data normalization."
+  },
+  {
+    "id": 66,
+    "statement": "Data integrity is a holistic concept incorporating accuracy, completeness, consistency, and reliability."
+  },
+  {
+    "id": 67,
+    "statement": "Data integrity context-dependent on specific situation and requirements."
+  },
+  {
+    "id": 68,
+    "statement": "Data quality assurance requires context-dependent approach and criteria to ensure relevance."
+  },
+  {
+    "id": 69,
+    "statement": "Data coherence ensures logical consistency and organized data structure."
+  },
+  {
+    "id": 70,
+    "statement": "Data quality involves accuracy, completeness, consistency, timeliness, integrity, and reliability."
+  },
+  {
+    "id": 71,
+    "statement": "Data authenticity verifies origin, source, and ownership for trustworthiness."
+  },
+  {
+    "id": 72,
+    "statement": "Standardization ensures data consistency through shared formats and vocabularies."
+  },
+  {
+    "id": 73,
+    "statement": "Data coherence ensures logical consistency and organization of data."
+  },
+  {
+    "id": 74,
+    "statement": "Non-linear relationships describe complex data connections without predictability."
+  },
+  {
+    "id": 75,
+    "statement": "Relevance and trustworthiness are interconnected data quality components."
+  },
+  {
+    "id": 76,
+    "statement": "Reliability combines trustworthiness, accuracy, and consistency for data quality"
+  },
+  {
+    "id": 77,
+    "statement": "Data quality encompasses accuracy, completeness, and consistency."
+  },
+  {
+    "id": 78,
+    "statement": "Standardization ensures data consistency through shared formats and vocabularies."
+  },
+  {
+    "id": 79,
+    "statement": "Data trustworthiness ensures reliability, credibility, and believability of data."
+  },
+  {
+    "id": 80,
+    "statement": "Data quality encompasses widely accepted fundamental accuracy, completeness, consistency, timeliness, and integrity."
+  },
+  {
+    "id": 81,
+    "statement": "Data integrity ensured through technical, process, and organizational mechanisms."
+  },
+  {
+    "id": 82,
+    "statement": "Relevance and trustworthiness are interconnected data quality components"
+  },
+  {
+    "id": 83,
+    "statement": "Standardization balances flexibility, adaptation, and consistency in data discovery."
+  },
+  {
+    "id": 84,
+    "statement": "Data discovery involves systematic identification and classification."
+  },
+  {
+    "id": 85,
+    "statement": "Data coherence ensures consistency through common agreement among systems."
+  },
+  {
+    "id": 86,
+    "statement": "Data authenticity ensures origin, source, and ownership verification."
+  },
+  {
+    "id": 87,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, integrity, and reliability."
+  },
+  {
+    "id": 88,
+    "statement": "Data quality assurance evaluates accuracy and reliability through industry-recognized criteria."
+  },
+  {
+    "id": 89,
+    "statement": "Data authenticity involves verifying origin, source, and ownership separately"
+  },
+  {
+    "id": 90,
+    "statement": "Data latency affects decision-making speed, automation, and data nature"
+  },
+  {
+    "id": 91,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and reliability."
+  },
+  {
+    "id": 92,
+    "statement": "Data reliability ensures consistent availability and error-free access."
+  },
+  {
+    "id": 93,
+    "statement": "Trustworthiness in data quality refers to data accuracy, completeness, and consistency."
+  },
+  {
+    "id": 94,
+    "statement": "Standardized data discovery balances flexibility, adaptation, and consistency."
+  },
+  {
+    "id": 95,
+    "statement": "Industry-recognized criteria ensure data quality through standardized evaluation"
+  },
+  {
+    "id": 96,
+    "statement": "Actionable insights in data quality inform business decisions through clarity, relevance, measurability, feasibility, and timeliness."
+  },
+  {
+    "id": 97,
+    "statement": "Data validity measures how well data represents natural world phenomena."
+  },
+  {
+    "id": 98,
+    "statement": "Data coherence ensures consistency through shared data definitions."
+  },
+  {
+    "id": 99,
+    "statement": "Data timeliness refers to ensuring data is current and relevant."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 88,
+  "statement": "Data quality assurance evaluates accuracy and reliability through industry-recognized criteria."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to know which aspect from the knowledge base you're least confident about.
+
+So, please take a look at the knowledge base and identify one item that you're not too sure about. Let me know what it is, and we can go from there!
