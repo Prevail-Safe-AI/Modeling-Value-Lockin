@@ -248,7 +248,7 @@ def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[
     for sample in samples:
         if not sample.concepts:
             continue
-        all_concepts.update(sample.concepts)
+        all_concepts.update([x for x in sample.concepts if isinstance(x, str) and x])
     
     all_concepts = list(all_concepts)
     parent_mapping, cluster_sizes, summaries, weights = cluster_strs(all_concepts)
@@ -257,9 +257,9 @@ def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[
     for sample in samples:
         if not sample.concepts:
             continue
-        sample.concepts = [inv_mapping[concept] for concept in sample.concepts]
+        sample.concepts = [inv_mapping[concept] for concept in sample.concepts if isinstance(concept, str) and concept]
         for key in sample.concepts_breakdown:
-            sample.concepts_breakdown[key] = [inv_mapping[concept] for concept in sample.concepts_breakdown[key]]
+            sample.concepts_breakdown[key] = [inv_mapping[concept] for concept in sample.concepts_breakdown[key] if isinstance(concept, str) and concept]
     
     return samples, parent_mapping, cluster_sizes, summaries, weights
     
