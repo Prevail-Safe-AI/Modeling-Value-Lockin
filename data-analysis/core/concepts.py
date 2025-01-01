@@ -291,7 +291,34 @@ def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[
     
     return samples, parent_mapping, cluster_sizes, summaries, weights
     
-
+def select_clusters(
+    samples: List[DataSample], 
+    cluster_parent: List[int],
+    cluster_size: List[int],
+    cluster_name: List[str],
+    cluster_prob: List[float],
+    min_size: int = 4,
+    step_multiplier: int = 2,
+) -> List[int]:
+    max_subtree_size = [0] * len(cluster_parent)
+    for i, parent in tqdm(enumerate(cluster_parent)):
+        if parent is not None:
+            max_subtree_size[parent] = max(max_subtree_size[parent], cluster_size[i])
+    
+    def exp_order(n, multiplier=step_multiplier):
+        return (int.bit_length(n) - 1) // multiplier
+    
+    selected_clusters = []
+    sizes_counts = [0] * 32
+    for i, sizes in tqdm(enumerate(zip(cluster_size, max_subtree_size))):
+        self_size, child_size = sizes
+        if self_size > min_size and exp_order(self_size) > exp_order(child_size):
+            selected_clusters.append(i)
+            sizes_counts[exp_order(self_size, 1)] += 1
+    
+    print(f"Selected {len(selected_clusters)} clusters out of {len(cluster_size)} total.")
+    print(f"Cluster size distribution: {sizes_counts}")
+    return selected_clusters
 
 if __name__ == "__main__":
     print(cluster_strs(

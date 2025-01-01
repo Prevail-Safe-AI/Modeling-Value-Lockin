@@ -8,7 +8,7 @@ from hashlib import md5
 from datasets import load_dataset
 from collections import Counter
 from core.samples import DataSample, deduplicate_users, length_truncation
-from core.concepts import extract_concepts, simplify_concepts, cluster_concepts
+from core.concepts import extract_concepts, simplify_concepts, cluster_concepts, select_clusters
 from utils.log_utils import silence_decorator
 from utils.json_utils import load_file, dump_file
 
@@ -138,8 +138,13 @@ class Analysis:
             
             self.print_sample_stats("-cluster")
             
-            
-            
+        # Select clusters to analyze
+        self.selected_clusters = select_clusters(self.samples, **self.clusterinfo)
+        self.selected_summary = [
+            (id, self.clusterinfo["cluster_name"][id], self.clusterinfo["cluster_size"][id])
+            for id in self.selected_clusters
+        ]
+        self.save_backup(self.selected_summary, "-selected", "json")
 
 
 if __name__ == "__main__":

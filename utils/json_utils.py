@@ -31,10 +31,11 @@ def dump_file(data, filepath, force_original_path=False):
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
     
     if not isinstance(data, str):
-        data = json.dumps(data, indent=2)
-    
-    with open(filepath, 'w') as file:
-        file.write(data)
+        with open(filepath, 'w') as file:
+            json.dump(data, file, indent=2)
+    else:
+        with open(filepath, 'w') as file:
+            file.write(data)
 
 def extract_json_from_str(s: str):
     """
