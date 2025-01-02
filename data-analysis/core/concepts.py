@@ -1,4 +1,4 @@
-import json, warnings, random, time
+import json, warnings, random, time, os
 import voyageai
 import hdbscan
 from tqdm import tqdm
@@ -164,29 +164,46 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
     :return: List of integers representing the parent ID of each string or cluster, followed by their sizes, followed by a list of strings representing the summary of each cluster or the content of each string, followed by a list of floats representing the probability of membership to its assigned cluster / robustness of the cluster itself, followed by the id of the root cluster.
     :rtype: Tuple[List[int], List[int], List[str], List[float], int]
     """
-    print(f"Embedding strings ({len(strings)} total)...")
-    vo = voyageai.Client()
-    batch_size = 128
-    embeddings = np.zeros((len(strings), EMB_DIM))
+    if os.environ.get("EMBEDDINGS", None) is not None:
+        print("Loading embeddings...")
+        with open(os.environ["EMBEDDINGS"], "r") as f:
+            embeddings = json.load(f)
+        
+        embeddings = [embedding for _, embedding in tqdm(embeddings)]
+        print("Embeddings loaded. Verifying...")
+        
+        for emb_combo, string in zip(embeddings, strings):
+            s, emb = emb_combo
+            assert isinstance(s, str) and isinstance(emb, list) and len(emb) == EMB_DIM
+            assert not np.isnan(emb).any() and not np.isinf(emb).any()
+            assert not np.all(emb == 0)
+            assert s == string
     
-    with tqdm(total=len(strings)) as pbar:
-        lock = th.Lock()
-        with cf.ThreadPoolExecutor(max_workers=PARALLEL_THREADS) as executor:
-            for i in range(0, len(strings), batch_size):
-                time.sleep(1/MAX_RPS)
-                executor.submit(fill_in_embeddings, vo, embeddings, strings, i, min(i + batch_size, len(strings)), pbar, lock)
-            
-            executor.shutdown(wait=True)
+    else:
+        print(f"Embedding strings ({len(strings)} total)...")
+        vo = voyageai.Client()
+        batch_size = 128
+        embeddings = np.zeros((len(strings), EMB_DIM))
+        
+        with tqdm(total=len(strings)) as pbar:
+            lock = th.Lock()
+            with cf.ThreadPoolExecutor(max_workers=PARALLEL_THREADS) as executor:
+                for i in range(0, len(strings), batch_size):
+                    time.sleep(1/MAX_RPS)
+                    executor.submit(fill_in_embeddings, vo, embeddings, strings, i, min(i + batch_size, len(strings)), pbar, lock)
+                
+                executor.shutdown(wait=True)
     
-    embeddings = embeddings.tolist()
+        embeddings = embeddings.tolist()
     
-    # Backup embedding data
-    print("Backing up embeddings...")
-    dump_file(list(zip(strings, embeddings)), f"embeddings-{time.strftime('%Y%m%d-%H%M%S')}.json")
-    print("Embeddings backed up.")
+        # Backup embedding data
+        print("Backing up embeddings...")
+        dump_file(list(zip(strings, embeddings)), f"embeddings-{time.strftime('%Y%m%d-%H%M%S')}.json")
+        print("Embeddings backed up.")
     
     # Cluster the embeddings
     data = np.array(embeddings)
+    del embeddings
     print(f"Data shape: {data.shape}")
     print(f"Data head: {data[:5, :10]}")
     print("Clustering...")
