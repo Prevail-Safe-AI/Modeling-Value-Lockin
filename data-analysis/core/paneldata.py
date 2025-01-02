@@ -540,7 +540,7 @@ def build_temporal_panel(
         
         def increment_ancestors(concept: int, counter: Counter):
             while concept is not None:
-                counter(concept) += 1
+                counter[concept] += 1
                 concept = cluster_parent[concept]
         
         def insert_ancestors(concept: int, mapping: Dict[int, List[DataSample]], sample: DataSample):
