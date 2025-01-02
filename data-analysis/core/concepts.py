@@ -164,10 +164,16 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
     :return: List of integers representing the parent ID of each string or cluster, followed by their sizes, followed by a list of strings representing the summary of each cluster or the content of each string, followed by a list of floats representing the probability of membership to its assigned cluster / robustness of the cluster itself, followed by the id of the root cluster.
     :rtype: Tuple[List[int], List[int], List[str], List[float], int]
     """
+    print(f"Sorting {len(strings)} strings...")
+    strings = sorted(strings)
+    
     if os.environ.get("EMBEDDINGS", None) is not None:
         print("Loading embeddings...")
         with open(os.environ["EMBEDDINGS"], "r") as f:
             loaded_embeddings = json.load(f)
+        
+        print("Sorting loaded embeddings...")
+        loaded_embeddings = sorted(loaded_embeddings, key=lambda x: x[0])
         
         embeddings = [embedding for _, embedding in tqdm(loaded_embeddings)]
         print("Embeddings loaded. Verifying...")
