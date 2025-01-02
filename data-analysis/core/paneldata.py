@@ -252,7 +252,40 @@ def build_user_panel(
             )
             for i in range(MAX_TIME_INTERVALS)
         ]
+        concept_diversity_across_time = [
+            calculate_diversity(
+                get_concept_list(time_directory[i]),
+                **generic_arguments
+            )
+            for i in range(MAX_TIME_INTERVALS)
+        ]
         
+        # Append the row to the DataFrame
+        panel["user"].append(user_id)
+        panel["language"].append(maj_language)
+        panel["location"].append(maj_location)
+        panel["nsamples"].append(nsamples)
+        panel["nsamples_temporal_composition"].append(tuple([len(time_directory[i]) for i in range(MAX_TIME_INTERVALS)]))
+        panel["nsamples_version_composition"].append(tuple([len(version_directory[i]) for i in range(6)]))
+        panel["temporal_extension"].append(temporal_extension)
+        panel["version_diversity"].append(version_diversity)
+        panel["mean_turns"].append(mean_turns)
+        panel["mean_conversation_length"].append(mean_conversation_length)
+        panel["mean_prompt_length"].append(mean_prompt_length)
+        panel["concept_diversity"].append(concept_diversity)
+        panel["concept_diversity_user_concepts_explicit"].append(concept_diversity_user_concepts_explicit)
+        panel["concept_diversity_assistant_concepts_explicit"].append(concept_diversity_assistant_concepts_explicit)
+        panel["concept_diversity_user_concepts_related"].append(concept_diversity_user_concepts_related)
+        panel["concept_diversity_assistant_concepts_related"].append(concept_diversity_assistant_concepts_related)
+        panel["concept_diversity_user_across_time"].append(tuple(concept_diversity_user_across_time))
+        panel["concept_diversity_assistant_across_time"].append(tuple(concept_diversity_assistant_across_time))
+        panel["concept_diversity_across_time"].append(tuple(concept_diversity_across_time))
+    
+    # Build the DataFrame and set the index
+    panel = pd.DataFrame(panel)
+    panel.set_index("user", inplace=True)
+    
+    return panel
         
 
 def build_temporal_panel(
