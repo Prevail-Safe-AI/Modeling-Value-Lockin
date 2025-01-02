@@ -10,7 +10,7 @@ from datasets import load_dataset
 from collections import Counter
 from core.samples import DataSample, deduplicate_users, length_truncation
 from core.concepts import extract_concepts, simplify_concepts, cluster_concepts, select_clusters
-from core.paneldata import build_temporal_panel
+from core.paneldata import build_all_panels, panel_index_cols
 from utils.log_utils import silence_decorator
 from utils.json_utils import load_file, dump_file
 
@@ -98,21 +98,23 @@ class Analysis:
         concept_counts = Counter([len(sample.concepts) for sample in self.samples if hasattr(sample, "concepts") and sample.concepts is not None])
         print(f"Concepts{suffix} counts: {dict(sorted(concept_counts.items()))}")
     
-    def save_or_load_temporal_panel(self) -> bool:
-        path = f"./data/{self.data_path_hash}-temporal-panel.csv"
-        if hasattr(self, "temporal_panel") and self.temporal_panel and not self.temporal_panel.empty:
-            print(f"Saving temporal panel to {path}...")
-            self.temporal_panel.to_csv(path)
-            return True
-        else:
-            try:
-                print(f"Loading temporal panel from {path}...")
-                self.temporal_panel = pd.read_csv(path, index_col = ['time', 'is_gpt4', 'cluster'])
-                print(f"Loaded temporal panel with {len(self.temporal_panel)} rows.")
-                return True
-            except FileNotFoundError:
-                print(f"Failed to load temporal panel from {path}.")
-                return False
+    def save_or_load_panels(self) -> bool:
+        return_val = True
+        for panel_name, index_cols in panel_index_cols.items():
+            path = f"./data/{self.data_path_hash}-{panel_name}.csv"
+            if isinstance(self.panels.get(panel_name, None), pd.DataFrame) and not self.panels[panel_name].empty:
+                print(f"Saving {panel_name} to {path}...")
+                self.panels[panel_name].to_csv(path)
+            else:
+                try:
+                    print(f"Loading {panel_name} from {path}...")
+                    self.panels[panel_name] = pd.read_csv(path, index_col = index_cols)
+                    print(f"Loaded {panel_name} with shape {self.panels[panel_name].shape}.")
+                except FileNotFoundError:
+                    print(f"Failed to load {panel_name} from {path}.")
+                    return_val = False
+
+        return return_val
     
     def run_analysis(self, dynamic_printing: bool = False):
         # Make timestamped directory for this experiment
@@ -170,9 +172,10 @@ class Analysis:
         self.save_backup(self.clusterinfo, "-clusterinfo-postselection", "json")
         
         # Get panel data
-        if not self.save_or_load_temporal_panel():
-            self.temporal_panel = build_temporal_panel(self.samples, **self.clusterinfo)
-            self.save_or_load_temporal_panel()
+        self.panels = {}
+        if not self.save_or_load_panels():
+            self.panels = build_all_panels(self.panels, self.samples, **self.clusterinfo)
+            self.save_or_load_panels()
         
         
 
