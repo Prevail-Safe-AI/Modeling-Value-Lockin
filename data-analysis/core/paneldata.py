@@ -22,9 +22,9 @@ gpt_version_str2int = {
 
 TIME_INTERVAL_DAYS = 15
 MAX_TIME_INTERVALS = 24
-START_TIME = datetime(2023, 4, 1, 0, 0, 0)
+START_TIME = datetime(2023, 4, 1, 0, 0, 0).replace(tzinfo=None)
 def get_time_interval(time: datetime) -> int:
-    res = (time - START_TIME).days // TIME_INTERVAL_DAYS
+    res = (time.replace(tzinfo=None) - START_TIME).days // TIME_INTERVAL_DAYS
     assert 0 <= res <= MAX_TIME_INTERVALS
     return min(res, MAX_TIME_INTERVALS - 1)
 
