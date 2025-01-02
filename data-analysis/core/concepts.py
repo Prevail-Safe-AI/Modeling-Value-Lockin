@@ -235,6 +235,14 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
     weights = [None] * min_id + [float(clusterer.probabilities_[i]) for i in range(len(strings))]
     weights += [None] * (max_id + 1 - len(weights))
     
+    # Back up clusters_pd, parent_mapping, and weights
+    print("Backing up clusters_pd...")
+    clusters_pd.to_csv(f"./data/clusters_pd-{time.strftime('%Y%m%d-%H%M%S')}.csv")
+    print("Backing up parent_mapping...")
+    dump_file(parent_mapping, f"parent_mapping-initial-{time.strftime('%Y%m%d-%H%M%S')}.json")
+    print("Backing up weights...")
+    dump_file(weights, f"weights-initial-{time.strftime('%Y%m%d-%H%M%S')}.json")
+    
     # Create summary mapping for strings
     summaries = [None] * min_id + strings + [None] * (max_id + 1 - len(strings))
     assert len(parent_mapping) == len(summaries) == len(weights)
