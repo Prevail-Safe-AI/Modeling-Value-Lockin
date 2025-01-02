@@ -159,6 +159,11 @@ class Analysis:
             self.save_concept_only("-cluster")
             
             self.print_sample_stats("-cluster")
+        
+        else:
+            self.clusterinfo = self.load_backup("-clusterinfo", "json")
+            assert self.clusterinfo is not None
+            self.print_sample_stats("-cluster")
             
         # Select clusters to analyze
         selected_clusters, cluster_selected_parent = select_clusters(self.samples, **self.clusterinfo)
