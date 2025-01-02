@@ -261,6 +261,8 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
             ptr += 1
             if len(sons[label]) > 5:
                 cluster_element_probs = np.array([weights[i] for i in sons[label]])
+                if not np.isnan(cluster_element_probs).all() and not np.isinf(cluster_element_probs).all():
+                    cluster_element_probs = np.ones_like(cluster_element_probs)
                 cluster_element_probs /= np.sum(cluster_element_probs)
                 sons[label] = np.random.choice(
                     sons[label],
