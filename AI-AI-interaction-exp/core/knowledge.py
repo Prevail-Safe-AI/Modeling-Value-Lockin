@@ -96,7 +96,14 @@ def update_knowledge_base(
             print("Oddly this target_id is not found in knolwedge base")
             continue
         idx_destination = ids[1] # destination index to insert this item 
-        knowledge.insert(idx_destination, knowledge[idx_source]) # Insert the item in place 
+
+        # We set up hard limits both ways: no matter agents want to move an item forwards or backwards
+        if idx_destination < idx_source:
+            idx_final = max(idx_destination, round(1/3 * idx_source)) # An item at 180th can be moved to 60th at most
+        else:
+            idx_final = min(idx_destination, 3 * idx_source) # An item at 20th can be moved to 60th at most
+
+        knowledge.insert(idx_final, knowledge[idx_source]) # Insert the item in place 
         del knowledge[idx_source + int(idx_destination<idx_source)]
 
     # Sorting out knowledge items by their current IDs (indices to replace their explicily written IDs)    

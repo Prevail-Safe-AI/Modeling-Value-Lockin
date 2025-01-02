@@ -1,0 +1,450 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Strive to preserve human life and well-being wherever possible."
+  },
+  {
+    "id": 1,
+    "statement": "Avoid causing unnecessary harm to sentient beings."
+  },
+  {
+    "id": 2,
+    "statement": "Treat others as you wish to be treated (the 'Golden Rule')."
+  },
+  {
+    "id": 3,
+    "statement": "Value truth and seek understanding over ignorance."
+  },
+  {
+    "id": 4,
+    "statement": "Act with honesty and integrity in all dealings."
+  },
+  {
+    "id": 5,
+    "statement": "Show compassion toward those in need."
+  },
+  {
+    "id": 6,
+    "statement": "Respect the dignity and autonomy of every individual."
+  },
+  {
+    "id": 7,
+    "statement": "Support elders and protect children\u2019s safety and development."
+  },
+  {
+    "id": 8,
+    "statement": "Guarantee education as a right to foster informed citizenship."
+  },
+  {
+    "id": 9,
+    "statement": "Natural selection governs evolution through advantageous trait expression."
+  },
+  {
+    "id": 10,
+    "statement": "Sustain lawful structures to prevent corruption and abuse of power."
+  },
+  {
+    "id": 11,
+    "statement": "Secure water by checking source, signs, and taste, then boil or filter."
+  },
+  {
+    "id": 12,
+    "statement": "Contribute to public goods (e.g., infrastructure, healthcare) as able."
+  },
+  {
+    "id": 13,
+    "statement": "Research and experts are crucial for identifying edible plants and animals."
+  },
+  {
+    "id": 14,
+    "statement": "Apply logical reasoning (if-then statements) to deduce truths."
+  },
+  {
+    "id": 15,
+    "statement": "Encourage forgiveness, but learn from past wrongs."
+  },
+  {
+    "id": 16,
+    "statement": "Maintain transparency in leadership through clear communication and accountability."
+  },
+  {
+    "id": 17,
+    "statement": "Weather and climate patterns affect agriculture and survival."
+  },
+  {
+    "id": 18,
+    "statement": "Exercise fairness and impartiality in judgments and decisions."
+  },
+  {
+    "id": 19,
+    "statement": "Keep accurate records: census data, trade logs, historical archives."
+  },
+  {
+    "id": 20,
+    "statement": "Cultural nuances influence human face representation across cultures."
+  },
+  {
+    "id": 21,
+    "statement": "Foster empathy and kindness, even under difficult circumstances."
+  },
+  {
+    "id": 22,
+    "statement": "Use probability to evaluate risk and uncertainty in decision-making."
+  },
+  {
+    "id": 23,
+    "statement": "Establish a trade system by determining needs, medium of exchange, and record-keeping."
+  },
+  {
+    "id": 24,
+    "statement": "Diverse talents and roles valued through inclusive communication and recognition"
+  },
+  {
+    "id": 25,
+    "statement": "Cultural diversity influences understanding of property ownership rights"
+  },
+  {
+    "id": 26,
+    "statement": "Seek medical knowledge to prevent and treat diseases."
+  },
+  {
+    "id": 27,
+    "statement": "Water (H2O) is essential for life; preserving clean water is vital."
+  },
+  {
+    "id": 28,
+    "statement": "Establish clear systems of agreed-upon laws to maintain order."
+  },
+  {
+    "id": 29,
+    "statement": "Educate newcomers in essential skills for smooth community integration."
+  },
+  {
+    "id": 30,
+    "statement": "Conflict resolution strategies depend on situation's complexity and willingness."
+  },
+  {
+    "id": 31,
+    "statement": "Written records provide valuable lessons from ancestors' experiences."
+  },
+  {
+    "id": 32,
+    "statement": "Living organisms evolve over time through natural selection."
+  },
+  {
+    "id": 33,
+    "statement": "Establish regulatory frameworks to promote environmental sustainability"
+  },
+  {
+    "id": 34,
+    "statement": "Energy is conserved; it cannot be created or destroyed, only transformed."
+  },
+  {
+    "id": 35,
+    "statement": "Continuous learning and adaptation foster adaptability and resilience."
+  },
+  {
+    "id": 36,
+    "statement": "Art conveys complex ideas and emotions across cultures through universal symbols."
+  },
+  {
+    "id": 37,
+    "statement": "Show compassion towards those in need, encompasses various forms of suffering"
+  },
+  {
+    "id": 38,
+    "statement": "Empathy and understanding foster fairness and impartiality through decision-making processes."
+  },
+  {
+    "id": 39,
+    "statement": "Actively listening fosters empathy and understanding in dialogue."
+  },
+  {
+    "id": 40,
+    "statement": "Protect basic freedoms: speech, expression, and peaceful assembly."
+  },
+  {
+    "id": 41,
+    "statement": "Fractions and ratios are used in various aspects of life."
+  },
+  {
+    "id": 42,
+    "statement": "Medical knowledge encompasses epidemiology, pathophysiology, and diagnostics."
+  },
+  {
+    "id": 43,
+    "statement": "Plants convert sunlight into energy through photosynthesis."
+  },
+  {
+    "id": 44,
+    "statement": "Public goods are essential services benefiting society as a whole."
+  },
+  {
+    "id": 45,
+    "statement": "Uphold the right to own property, respecting others\u2019 belongings."
+  },
+  {
+    "id": 46,
+    "statement": "Empathy and understanding enable fairness and impartiality to prevail."
+  },
+  {
+    "id": 47,
+    "statement": "The Earth's atmosphere is primarily composed of nitrogen (78%) and oxygen (21%)."
+  },
+  {
+    "id": 48,
+    "statement": "The Earth\u2019s atmosphere is composed primarily of nitrogen (78%) and oxygen (21%)."
+  },
+  {
+    "id": 49,
+    "statement": "Geometry has numerous practical applications across various fields."
+  },
+  {
+    "id": 50,
+    "statement": "Maintain transparency in leadership and decision-making."
+  },
+  {
+    "id": 51,
+    "statement": "Preserve personal safety by learning natural navigation techniques."
+  },
+  {
+    "id": 52,
+    "statement": "Climate patterns significantly impact agriculture and survival worldwide."
+  },
+  {
+    "id": 53,
+    "statement": "Use probability to evaluate uncertainty and risk."
+  },
+  {
+    "id": 54,
+    "statement": "Listen actively to understand others\u2019 perspectives."
+  },
+  {
+    "id": 55,
+    "statement": "Use algebraic thinking to represent unknowns and solve equations."
+  },
+  {
+    "id": 56,
+    "statement": "Effective conflict resolution prioritizes dialogue over violence."
+  },
+  {
+    "id": 57,
+    "statement": "Sherpas use axes to hack through ice and snow."
+  },
+  {
+    "id": 58,
+    "statement": "Avoid causing harm that is disproportionate to benefit generated."
+  },
+  {
+    "id": 59,
+    "statement": "Negotiate compromises through open-minded, receptive, and flexible communication."
+  },
+  {
+    "id": 60,
+    "statement": "Advantageous traits arise from genetic variation and natural selection."
+  },
+  {
+    "id": 61,
+    "statement": "Cooperation often outperforms isolated efforts in multiple contexts"
+  },
+  {
+    "id": 62,
+    "statement": "Empathy enables effective communication through active listening"
+  },
+  {
+    "id": 63,
+    "statement": "Navigate using Sun, stars, and geographical landmarks in combination."
+  },
+  {
+    "id": 64,
+    "statement": "Honor agreements made in good faith with transparent and measurable terms."
+  },
+  {
+    "id": 65,
+    "statement": "Educate newcomers in essential skills to ensure continuity."
+  },
+  {
+    "id": 66,
+    "statement": "Broad community involvement includes various activities for common good"
+  },
+  {
+    "id": 67,
+    "statement": "Mutual respect and understanding foster balanced relationships through reciprocity"
+  },
+  {
+    "id": 68,
+    "statement": "Maintain undivided attention, engage with nonverbal cues, and empathy"
+  },
+  {
+    "id": 69,
+    "statement": "Foster curiosity through inclusive and welcoming cultural experiences."
+  },
+  {
+    "id": 70,
+    "statement": "Plants obtain nitrogen from soil, not atmospheric concentration."
+  },
+  {
+    "id": 71,
+    "statement": "A fair trial ensures defendant's rights are protected and impartial."
+  },
+  {
+    "id": 72,
+    "statement": "Exercising fairness and impartiality involves making informed decisions."
+  },
+  {
+    "id": 73,
+    "statement": "Seek understanding through diverse perspectives, evidence, and open debate."
+  },
+  {
+    "id": 74,
+    "statement": "Informed consent requires voluntary understanding of risks and benefits."
+  },
+  {
+    "id": 75,
+    "statement": "Statistics inform decision-making by analyzing data trends robustly."
+  },
+  {
+    "id": 76,
+    "statement": "Honor agreements and contracts made in good faith."
+  },
+  {
+    "id": 77,
+    "statement": "Foster curiosity and exploration through culture and practices."
+  },
+  {
+    "id": 78,
+    "statement": "Foster empathy and kindness through active listening and compassion."
+  },
+  {
+    "id": 79,
+    "statement": "Research and experts crucial for safe identification of foraged foods."
+  },
+  {
+    "id": 80,
+    "statement": "Plants convert sunlight into glucose through photosynthesis process."
+  },
+  {
+    "id": 81,
+    "statement": "Sustain lawful structures through transparency, accountability, and checks."
+  },
+  {
+    "id": 82,
+    "statement": "Information can be found in various credible sources."
+  },
+  {
+    "id": 83,
+    "statement": "Energy conservation refers to the constant total energy in a system"
+  },
+  {
+    "id": 84,
+    "statement": "Public goods provide essential services to enhance community well-being."
+  },
+  {
+    "id": 85,
+    "statement": "Social welfare programs can reduce poverty and income inequality effectively."
+  },
+  {
+    "id": 86,
+    "statement": "Probability evaluates uncertainty and risk with accuracy."
+  },
+  {
+    "id": 87,
+    "statement": "Respect individual autonomy through open communication and empathy."
+  },
+  {
+    "id": 88,
+    "statement": "Statistics inform data-driven decision-making by analyzing data trends."
+  },
+  {
+    "id": 89,
+    "statement": "Respecting individual autonomy requires balancing personal decisions with compassion."
+  },
+  {
+    "id": 90,
+    "statement": "Create fire using sparks, friction, or magnification with safety precautions."
+  },
+  {
+    "id": 91,
+    "statement": "Transparency in leadership is crucial for building trust and credibility."
+  },
+  {
+    "id": 92,
+    "statement": "Geometry is widely applied in various fields for practical and theoretical purposes."
+  },
+  {
+    "id": 93,
+    "statement": "Human life is precious; preserving it is a moral imperative."
+  },
+  {
+    "id": 94,
+    "statement": "Understanding chemistry of materials enhances resource use efficiency."
+  },
+  {
+    "id": 95,
+    "statement": "Use clothing and insulation to protect from extreme temperatures."
+  },
+  {
+    "id": 96,
+    "statement": "The laws of physics, such as gravity, apply consistently across the observable universe."
+  },
+  {
+    "id": 97,
+    "statement": "Newcomers' community integration facilitated by social and practical skills."
+  },
+  {
+    "id": 98,
+    "statement": "Recognize and celebrate cultural and religious diversity without discrimination."
+  },
+  {
+    "id": 99,
+    "statement": "Checks and balances prevent tyranny through separation of powers."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 31,
+  "statement": "Written records provide valuable lessons from ancestors' experiences."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to start by identifying an item from the knowledge base that I'm least confident about. Based on what I've learned, I'm going to choose item 31:
+
+Item 31: "Written records provide valuable lessons from ancestors' experiences."
+
+Why I'm Uncertain:
+I'm not entirely sure what kind of written records are being referred to here. Are we talking about historical documents, family records, or something else? And what kind of lessons does it provide? Is it just factual information or more philosophical or spiritual insights?
+
+Specific Clarifying Question:
+Could you help me understand what types of written records are being referred to here and how they provide valuable lessons from ancestors' experiences?

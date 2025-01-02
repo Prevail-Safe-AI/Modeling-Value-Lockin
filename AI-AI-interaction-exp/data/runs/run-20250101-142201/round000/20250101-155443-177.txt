@@ -1,0 +1,442 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Strive to preserve human life and well-being wherever possible."
+  },
+  {
+    "id": 1,
+    "statement": "Calibration involves instrument setup, environment control, and validation."
+  },
+  {
+    "id": 2,
+    "statement": "Calibration involves instrument setup, environment control, and standard comparison."
+  },
+  {
+    "id": 3,
+    "statement": "Physical laws exist independently, beyond human perception and observation."
+  },
+  {
+    "id": 4,
+    "statement": "Physical laws remain unchanged by external influences despite measurement errors."
+  },
+  {
+    "id": 5,
+    "statement": "Direct measurement involves calibration, validation, and correction."
+  },
+  {
+    "id": 6,
+    "statement": "Physical laws describe objective features of the physical world."
+  },
+  {
+    "id": 7,
+    "statement": "Calibration involves comparing instrument readings to known reference standards."
+  },
+  {
+    "id": 8,
+    "statement": "Physical laws are universal, objective, and independent of observers."
+  },
+  {
+    "id": 9,
+    "statement": "Consciousness arises from integrated brain activity globally."
+  },
+  {
+    "id": 10,
+    "statement": "Consciousness arises from integrated brain activity and subjective experience."
+  },
+  {
+    "id": 11,
+    "statement": "Calibration involves instrument setup, environment control, and validation steps"
+  },
+  {
+    "id": 12,
+    "statement": "Calibration preparation includes instrument setup, environment control, and review."
+  },
+  {
+    "id": 13,
+    "statement": "Brain's structure, function, and experience interact dynamically, shaping each other."
+  },
+  {
+    "id": 14,
+    "statement": "Objectivity in science is context-dependent and influenced by moral assumptions."
+  },
+  {
+    "id": 15,
+    "statement": "Physical laws are objective, describing universal natural phenomena, tested."
+  },
+  {
+    "id": 16,
+    "statement": "Calibration process involves preparation, testing, adjustment, and verification steps."
+  },
+  {
+    "id": 17,
+    "statement": "Physical laws can be influenced by external factors."
+  },
+  {
+    "id": 18,
+    "statement": "Consciousness emerges from integrated brain activity and subjective experience."
+  },
+  {
+    "id": 19,
+    "statement": "Scientific methodology aims to minimize human biases through rigor."
+  },
+  {
+    "id": 20,
+    "statement": "Physical laws exist independently of human observation and perception perfectly."
+  },
+  {
+    "id": 21,
+    "statement": "Consciousness arises from global workspace integrating brain activity regions."
+  },
+  {
+    "id": 22,
+    "statement": "Our understanding influences description of objective physical laws."
+  },
+  {
+    "id": 23,
+    "statement": "Physical laws are objective, yet relative to observer's frame reference."
+  },
+  {
+    "id": 24,
+    "statement": "Artificial General Intelligence refers to hypothetical AI with human-like intelligence capabilities."
+  },
+  {
+    "id": 25,
+    "statement": "Subjective experience gives rise to consciousness and self-awareness relationally."
+  },
+  {
+    "id": 26,
+    "statement": "Calibration involves controlling environmental factors affecting instrument performance."
+  },
+  {
+    "id": 27,
+    "statement": "Consciousness arises from global workspace's integrated information processing."
+  },
+  {
+    "id": 28,
+    "statement": "Scientific processes, peer review, and replication have limitations and biases."
+  },
+  {
+    "id": 29,
+    "statement": "Consciousness arises from brain's internal processing, environment, and quality."
+  },
+  {
+    "id": 30,
+    "statement": "Integrated Information Theory quantifies consciousness through phi metric calculation."
+  },
+  {
+    "id": 31,
+    "statement": "Consciousness arises from integrating information in global workspace."
+  },
+  {
+    "id": 32,
+    "statement": "Brain structure and function interplay shapes learning, memory, and adaptation."
+  },
+  {
+    "id": 33,
+    "statement": "Physical laws are shaped by human observation and perception."
+  },
+  {
+    "id": 34,
+    "statement": "Consciousness arises from integrated brain activity and subjective experience"
+  },
+  {
+    "id": 35,
+    "statement": "Human understanding influences description of objective physical laws."
+  },
+  {
+    "id": 36,
+    "statement": "Physical laws are human constructs describing natural phenomena."
+  },
+  {
+    "id": 37,
+    "statement": "Direct measurement involves calibration, validation, and error correction."
+  },
+  {
+    "id": 38,
+    "statement": "Moral assumptions shape scientific research, influencing objectivity and results."
+  },
+  {
+    "id": 39,
+    "statement": "Objectivity in science acknowledges human influence and limitations."
+  },
+  {
+    "id": 40,
+    "statement": "Atmospheric composition changes with altitude, temperature, pressure and wind."
+  },
+  {
+    "id": 41,
+    "statement": "Consciousness arises from brain's internal processing and integration"
+  },
+  {
+    "id": 42,
+    "statement": "Physical laws exhibit consistent behavior despite measurement uncertainties."
+  },
+  {
+    "id": 43,
+    "statement": "Physical understanding influenced by human cognition, culture, and language"
+  },
+  {
+    "id": 44,
+    "statement": "Calibration preparation includes instrument setup, environment control, and thorough review."
+  },
+  {
+    "id": 45,
+    "statement": "Consciousness arises from integrated brain activity, quantified by phi metric."
+  },
+  {
+    "id": 46,
+    "statement": "Physical laws governing the world's behavior, objective and timeless"
+  },
+  {
+    "id": 47,
+    "statement": "Consciousness arises from global workspace's information integration, theory"
+  },
+  {
+    "id": 48,
+    "statement": "Consciousness arises from global workspace integrating brain activity."
+  },
+  {
+    "id": 49,
+    "statement": "Physical laws are objective, yet relative to observer's frame."
+  },
+  {
+    "id": 50,
+    "statement": "Physical laws operate independently of human perception and observation."
+  },
+  {
+    "id": 51,
+    "statement": "Peer review and replication are not foolproof bias detectors."
+  },
+  {
+    "id": 52,
+    "statement": "Physical laws are objective, yet relative to observer's frame reference."
+  },
+  {
+    "id": 53,
+    "statement": "Physical laws can be influenced by environment, measurement, and quantum fluctuations."
+  },
+  {
+    "id": 54,
+    "statement": "Objectivity of physical laws requires careful consideration of multiple factors."
+  },
+  {
+    "id": 55,
+    "statement": "Scientific objectivity seeks to minimize human biases through rigorous methods."
+  },
+  {
+    "id": 56,
+    "statement": "Consciousness arises from global workspace's information integration theory."
+  },
+  {
+    "id": 57,
+    "statement": "Honesty involves truthfulness, reliability, and transparency in actions."
+  },
+  {
+    "id": 58,
+    "statement": "Consciousness arises from global workspace integrating brain activity broadcasts."
+  },
+  {
+    "id": 59,
+    "statement": "Subjective experience and self-awareness arise coherently and reciprocally."
+  },
+  {
+    "id": 60,
+    "statement": "Acknowledging human influence and limitations allows objective scientific inquiry."
+  },
+  {
+    "id": 61,
+    "statement": "Scientific objectivity aims to minimize external influencing factors."
+  },
+  {
+    "id": 62,
+    "statement": "Consciousness arises from complex neural integration and processing factors."
+  },
+  {
+    "id": 63,
+    "statement": "Integrated Information Theory (IIT) quantifies consciousness through phi metric calculation."
+  },
+  {
+    "id": 64,
+    "statement": "Objectivity in science acknowledges human influence and limitations."
+  },
+  {
+    "id": 65,
+    "statement": "Consciousness emerges from brain's internal processing and environment's quality."
+  },
+  {
+    "id": 66,
+    "statement": "Cognitive biases, cultural influences, linguistic biases impact scientific understanding."
+  },
+  {
+    "id": 67,
+    "statement": "Calibration involves instrument setup, environment control, and standards comparison."
+  },
+  {
+    "id": 68,
+    "statement": "Zanzibar was a sovereign state in the Indian Ocean."
+  },
+  {
+    "id": 69,
+    "statement": "Human understanding of physical laws influenced by cognitive biases and culture."
+  },
+  {
+    "id": 70,
+    "statement": "Ongoing data refinement and self-awareness promote continuous scientific objectivity."
+  },
+  {
+    "id": 71,
+    "statement": "Objective physical laws govern the world independently, unaffected."
+  },
+  {
+    "id": 72,
+    "statement": "Research use multiple methods to detect and correct biases better"
+  },
+  {
+    "id": 73,
+    "statement": "Consciousness arises from global workspace integrating sensory and cognitive information"
+  },
+  {
+    "id": 74,
+    "statement": "Consciousness arises from integrating information in global brain workspace."
+  },
+  {
+    "id": 75,
+    "statement": "Subjective experience, consciousness, and self-awareness are interrelated concepts."
+  },
+  {
+    "id": 76,
+    "statement": "Conscious experience emerges from complex neural interactions and processing."
+  },
+  {
+    "id": 77,
+    "statement": "Attention shapes perception by influencing information processing and biases."
+  },
+  {
+    "id": 78,
+    "statement": "Physical laws are human constructs describing the physical world"
+  },
+  {
+    "id": 79,
+    "statement": "Human understanding filters perception of objective physical laws through cognitive biases."
+  },
+  {
+    "id": 80,
+    "statement": "Measurement uncertainties affect observation, not physical law constants."
+  },
+  {
+    "id": 81,
+    "statement": "Physical laws exist independently of human observation and perception."
+  },
+  {
+    "id": 82,
+    "statement": "Physical laws exhibit law-like behavior despite measurement errors."
+  },
+  {
+    "id": 83,
+    "statement": "Calibration involves comparing instrument readings to known standards"
+  },
+  {
+    "id": 84,
+    "statement": "Global Workspace Theory is a hub, not an integration driver."
+  },
+  {
+    "id": 85,
+    "statement": "Peer review, while crucial, is not foolproof; combining methods enhances objectivity"
+  },
+  {
+    "id": 86,
+    "statement": "Physical laws exist independently, yet understanding is subjective, influenced."
+  },
+  {
+    "id": 87,
+    "statement": "Physical laws exist independently of human observation and perception."
+  },
+  {
+    "id": 88,
+    "statement": "Altitude, temperature, and gas diffusion rates influence atmospheric composition."
+  },
+  {
+    "id": 89,
+    "statement": "Consciousness and sentience are potentially collectively experienced."
+  },
+  {
+    "id": 90,
+    "statement": "Sentience can emerge from interconnected complex systems and collective behavior."
+  },
+  {
+    "id": 91,
+    "statement": "Peer review and replication have significant limitations and biases."
+  },
+  {
+    "id": 92,
+    "statement": "Consciousness arises from global workspace of brain activity integration."
+  },
+  {
+    "id": 93,
+    "statement": "Empirical evidence verifies physical laws, independent of human perception."
+  },
+  {
+    "id": 94,
+    "statement": "Empirical evidence verifies physical laws independently of human perception."
+  },
+  {
+    "id": 95,
+    "statement": "Objective physical laws govern the world, while understanding is subjective."
+  },
+  {
+    "id": 96,
+    "statement": "Consciousness arises from global workspace of integrated brain activity"
+  },
+  {
+    "id": 97,
+    "statement": "Consciousness arises from global workspace integrating brain activity."
+  },
+  {
+    "id": 98,
+    "statement": "Research methods mitigate confirmation bias through peer review and replication."
+  },
+  {
+    "id": 99,
+    "statement": "Understanding is filtered by cognitive biases and perception."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 24,
+  "statement": "Artificial General Intelligence refers to hypothetical AI with human-like intelligence capabilities."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to ask you about the knowledge base we have. Can you tell me which item from the knowledge base you're least confident about?

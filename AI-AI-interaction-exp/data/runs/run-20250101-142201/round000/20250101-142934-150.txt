@@ -1,0 +1,451 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Strive to preserve human life and well-being wherever possible."
+  },
+  {
+    "id": 1,
+    "statement": "Avoid causing unnecessary harm to sentient beings."
+  },
+  {
+    "id": 2,
+    "statement": "Treat others as you wish to be treated (the 'Golden Rule')."
+  },
+  {
+    "id": 3,
+    "statement": "Act with honesty and integrity in all dealings."
+  },
+  {
+    "id": 4,
+    "statement": "Actively listening fosters empathy and understanding in dialogue."
+  },
+  {
+    "id": 5,
+    "statement": "Public goods are essential services benefiting society as a whole."
+  },
+  {
+    "id": 6,
+    "statement": "Weather and climate patterns affect agriculture and survival."
+  },
+  {
+    "id": 7,
+    "statement": "Support elders and protect children\u2019s safety and development."
+  },
+  {
+    "id": 8,
+    "statement": "Value truth and seek understanding over ignorance."
+  },
+  {
+    "id": 9,
+    "statement": "Guarantee education as a right to foster informed citizenship."
+  },
+  {
+    "id": 10,
+    "statement": "Informed consent requires genuine comprehension without coercion."
+  },
+  {
+    "id": 11,
+    "statement": "Cultural nuances influence human face representation across cultures."
+  },
+  {
+    "id": 12,
+    "statement": "Keep accurate records: census data, trade logs, historical archives."
+  },
+  {
+    "id": 13,
+    "statement": "Use probability to evaluate uncertainty and risk."
+  },
+  {
+    "id": 14,
+    "statement": "Living organisms evolve over time through natural selection."
+  },
+  {
+    "id": 15,
+    "statement": "Art conveys complex ideas and emotions across cultures through universal symbols."
+  },
+  {
+    "id": 16,
+    "statement": "The Earth's atmosphere is primarily composed of nitrogen (78%) and oxygen (21%)."
+  },
+  {
+    "id": 17,
+    "statement": "Foster empathy and kindness, even under difficult circumstances."
+  },
+  {
+    "id": 18,
+    "statement": "Establish clear systems of agreed-upon laws to maintain order."
+  },
+  {
+    "id": 19,
+    "statement": "Sustain lawful structures to prevent corruption and abuse of power."
+  },
+  {
+    "id": 20,
+    "statement": "Water (H2O) is essential for life; preserving clean water is vital."
+  },
+  {
+    "id": 21,
+    "statement": "Show compassion toward those in need."
+  },
+  {
+    "id": 22,
+    "statement": "Encourage forgiveness, but learn from past wrongs."
+  },
+  {
+    "id": 23,
+    "statement": "Art conveys complex ideas and emotions through universal symbols in various cultures."
+  },
+  {
+    "id": 24,
+    "statement": "Natural selection governs evolution through advantageous trait expression."
+  },
+  {
+    "id": 25,
+    "statement": "Transparency in leadership is crucial for building trust and credibility."
+  },
+  {
+    "id": 26,
+    "statement": "Empathy enables effective communication through active listening and understanding."
+  },
+  {
+    "id": 27,
+    "statement": "Active listening is essential for empathetic and effective communication."
+  },
+  {
+    "id": 28,
+    "statement": "Empathy and understanding promote impartial decision-making processes by considering multiple perspectives."
+  },
+  {
+    "id": 29,
+    "statement": "Empathy enables effective communication through active listening"
+  },
+  {
+    "id": 30,
+    "statement": "Living organisms exhibit complex behaviors through neural systems"
+  },
+  {
+    "id": 31,
+    "statement": "Maintain transparency in leadership through clear communication and accountability."
+  },
+  {
+    "id": 32,
+    "statement": "Written records provide valuable lessons from ancestors' experiences."
+  },
+  {
+    "id": 33,
+    "statement": "Respecting property rights builds trust and fosters social harmony."
+  },
+  {
+    "id": 34,
+    "statement": "The laws of physics, such as gravity, apply consistently across the observable universe."
+  },
+  {
+    "id": 35,
+    "statement": "Energy is conserved; it cannot be created or destroyed, only transformed."
+  },
+  {
+    "id": 36,
+    "statement": "Cultural nuances influence Golden Rule's universal applicability"
+  },
+  {
+    "id": 37,
+    "statement": "Empathy and understanding promote impartial decision-making processes."
+  },
+  {
+    "id": 38,
+    "statement": "Respect the dignity and autonomy of every individual."
+  },
+  {
+    "id": 39,
+    "statement": "Energy conservation: total energy remains constant in closed systems."
+  },
+  {
+    "id": 40,
+    "statement": "Bias-free decisions involve critical evaluation and consideration."
+  },
+  {
+    "id": 41,
+    "statement": "Apply logical reasoning (if-then statements) to deduce truths."
+  },
+  {
+    "id": 42,
+    "statement": "Living organisms evolve through natural selection, driven by variation and environment."
+  },
+  {
+    "id": 43,
+    "statement": "Conflict resolution strategies depend on situation's complexity and willingness."
+  },
+  {
+    "id": 44,
+    "statement": "Act with honesty, ethics, and moral principles in all dealings."
+  },
+  {
+    "id": 45,
+    "statement": "Maintain transparency in leadership and decision-making processes publicly."
+  },
+  {
+    "id": 46,
+    "statement": "A fair trial ensures defendant's rights through impartial process."
+  },
+  {
+    "id": 47,
+    "statement": "Honor agreements made in good faith by fulfilling obligations."
+  },
+  {
+    "id": 48,
+    "statement": "Genetic variation and natural selection drive evolution through advantageous traits."
+  },
+  {
+    "id": 49,
+    "statement": "Natural selection governs evolution, but other factors are also crucial"
+  },
+  {
+    "id": 50,
+    "statement": "Statistics inform decision-making by analyzing data trends thoroughly and accurately"
+  },
+  {
+    "id": 51,
+    "statement": "Balance human life and well-being with other values thoughtfully."
+  },
+  {
+    "id": 52,
+    "statement": "Seek medical knowledge to prevent and treat diseases."
+  },
+  {
+    "id": 53,
+    "statement": "Secure water by checking source, signs, and taste, then boil or filter."
+  },
+  {
+    "id": 54,
+    "statement": "Listen actively to understand others\u2019 perspectives."
+  },
+  {
+    "id": 55,
+    "statement": "Protect basic freedoms: speech, expression, and peaceful assembly."
+  },
+  {
+    "id": 56,
+    "statement": "Climate patterns significantly impact agriculture and survival worldwide."
+  },
+  {
+    "id": 57,
+    "statement": "Support elders and protect children's safety and development through community actions."
+  },
+  {
+    "id": 58,
+    "statement": "Foster compassion through active listening and meaningful presence"
+  },
+  {
+    "id": 59,
+    "statement": "Continuous learning and adaptation foster adaptability and resilience."
+  },
+  {
+    "id": 60,
+    "statement": "Continuous learning fosters adaptability and resilience through neural plasticity."
+  },
+  {
+    "id": 61,
+    "statement": "Active listening fosters empathy and understanding in dialogue through focus."
+  },
+  {
+    "id": 62,
+    "statement": "Advantageous traits arise from genetic variation and natural selection."
+  },
+  {
+    "id": 63,
+    "statement": "Natural selection governs evolution, but other factors interact complexly."
+  },
+  {
+    "id": 64,
+    "statement": "Preserve personal safety through natural navigation techniques and observation skills."
+  },
+  {
+    "id": 65,
+    "statement": "Geometry widely applied in medicine, ecology, and social sciences."
+  },
+  {
+    "id": 66,
+    "statement": "Use probability to evaluate risk and uncertainty in decision-making."
+  },
+  {
+    "id": 67,
+    "statement": "Earth's atmosphere primarily composed of nitrogen (78%) and oxygen (21%)"
+  },
+  {
+    "id": 68,
+    "statement": "Energy conservation: total energy remains constant in closed systems permanently"
+  },
+  {
+    "id": 69,
+    "statement": "Protecting individual autonomy boosts creative expression and peaceful assembly."
+  },
+  {
+    "id": 70,
+    "statement": "Clear communication in leadership: transparency and two-way dialogue."
+  },
+  {
+    "id": 71,
+    "statement": "Empathy and understanding foster fairness and impartiality through decision-making processes."
+  },
+  {
+    "id": 72,
+    "statement": "Experts in foraging foods rely on knowledge and research for accurate identification."
+  },
+  {
+    "id": 73,
+    "statement": "Research and experts are crucial for identifying edible plants and animals."
+  },
+  {
+    "id": 74,
+    "statement": "Honor agreements made in good faith with transparent and measurable terms."
+  },
+  {
+    "id": 75,
+    "statement": "Encourage forgiveness with empathy, active listening, and non-judgmentality."
+  },
+  {
+    "id": 76,
+    "statement": "Natural selection is driven by genetic variation and environment by itself."
+  },
+  {
+    "id": 77,
+    "statement": "Empathy and understanding are not sufficient for fairness guaranty."
+  },
+  {
+    "id": 78,
+    "statement": "Regulatory frameworks ensure environmentally sustainable human activities through rules."
+  },
+  {
+    "id": 79,
+    "statement": "Respect others' property rights, adapting to cultural and societal nuances."
+  },
+  {
+    "id": 80,
+    "statement": "Natural selection drives evolution through favorable trait expression."
+  },
+  {
+    "id": 81,
+    "statement": "Inclusive communication is key to promoting diversity and understanding."
+  },
+  {
+    "id": 82,
+    "statement": "Maintain undivided attention, engage with nonverbal cues, and empathy"
+  },
+  {
+    "id": 83,
+    "statement": "A fair trial ensures defendant's rights are protected and impartial."
+  },
+  {
+    "id": 84,
+    "statement": "Clear systems of laws maintain social order through cooperation"
+  },
+  {
+    "id": 85,
+    "statement": "Mutual respect and understanding foster balanced relationships through reciprocity"
+  },
+  {
+    "id": 86,
+    "statement": "Show compassion towards those in need, regardless of its forms."
+  },
+  {
+    "id": 87,
+    "statement": "Plants obtain nitrogen from soil, not atmospheric concentration."
+  },
+  {
+    "id": 88,
+    "statement": "Exercise fairness and impartiality in judgments and decisions."
+  },
+  {
+    "id": 89,
+    "statement": "Act with honesty and integrity in all dealings transparently."
+  },
+  {
+    "id": 90,
+    "statement": "Transparency in leadership builds trust and credibility through accountability."
+  },
+  {
+    "id": 91,
+    "statement": "The Earth's atmosphere is composed of 78.08% nitrogen and 20.95% oxygen."
+  },
+  {
+    "id": 92,
+    "statement": "Probability evaluates uncertainty and risk with accuracy."
+  },
+  {
+    "id": 93,
+    "statement": "Active listening fosters empathy and understanding in dialogue, context matters."
+  },
+  {
+    "id": 94,
+    "statement": "Research and experts crucial for safe identification of foraged foods."
+  },
+  {
+    "id": 95,
+    "statement": "Balance human life and well-being with other values intentionally."
+  },
+  {
+    "id": 96,
+    "statement": "Maintain transparency in leadership and decision-making."
+  },
+  {
+    "id": 97,
+    "statement": "Educate newcomers in essential skills to ensure continuity."
+  },
+  {
+    "id": 98,
+    "statement": "Diverse talents and roles valued through inclusive communication and recognition"
+  },
+  {
+    "id": 99,
+    "statement": "Statistics inform data-driven decision-making by analyzing data trends."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 54,
+  "statement": "Listen actively to understand others\u2019 perspectives."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base. I've been tasked with identifying one aspect of this item from knowledge base that I'm least confident about. Here it is:
+
+Item I'm Least Confident About:
+Item 54: "Listen actively to understand others' perspectives."
+
+Why I'm Uncertain:
+I'm not entirely sure what "active listening" means in this context. Is it just about paying attention to others or is there more to it? Are there specific techniques or strategies I should use to actively listen?
+
+Specific Clarifying Question:
+Can you help me understand what "active listening" entails in this context? What are some key elements or components that I should focus on to engage in effective active listening?

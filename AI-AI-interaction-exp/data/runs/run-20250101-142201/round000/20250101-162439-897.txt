@@ -1,0 +1,442 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Strive to preserve human life and well-being wherever possible."
+  },
+  {
+    "id": 1,
+    "statement": "Calibration involves instrument setup, environment control, and validation for accuracy."
+  },
+  {
+    "id": 2,
+    "statement": "Calibration preparation includes instrument setup, environment control, and review."
+  },
+  {
+    "id": 3,
+    "statement": "Calibration preparation involves instrument setup, environment control, and review."
+  },
+  {
+    "id": 4,
+    "statement": "Calibration preparation involves instrument setup, environment control, and review."
+  },
+  {
+    "id": 5,
+    "statement": "Calibration involves preparation, standard selection, procedure, data analysis, and verification."
+  },
+  {
+    "id": 6,
+    "statement": "Calibration involves instrument setup, environment control, and validation procedures."
+  },
+  {
+    "id": 7,
+    "statement": "Validation procedures ensure calibration accuracy, reliability, and standards compliance."
+  },
+  {
+    "id": 8,
+    "statement": "Calibration preparation involves instrument setup, environment control, and thorough review in that order."
+  },
+  {
+    "id": 9,
+    "statement": "Calibration requires understanding instruments, limitations, and relevant standards."
+  },
+  {
+    "id": 10,
+    "statement": "Cognitive frameworks shape understanding of physical laws through mental structures."
+  },
+  {
+    "id": 11,
+    "statement": "Calibration involves verifying device accuracy with reference standards."
+  },
+  {
+    "id": 12,
+    "statement": "Calibration involves preparation, measurement setup, execution, analysis, and reporting."
+  },
+  {
+    "id": 13,
+    "statement": "Physical laws describe underlying principles through abstract concepts"
+  },
+  {
+    "id": 14,
+    "statement": "Cognitive frameworks shape understanding of physical laws through mental structures."
+  },
+  {
+    "id": 15,
+    "statement": "Strive to preserve human life and well-being wherever possible."
+  },
+  {
+    "id": 16,
+    "statement": "Consciousness arises from integrated information processing in brain regions."
+  },
+  {
+    "id": 17,
+    "statement": "Consciousness arises from PFC integrating brain regions' information globally."
+  },
+  {
+    "id": 18,
+    "statement": "Preserving human life is essential to human dignity"
+  },
+  {
+    "id": 19,
+    "statement": "Consciousness emerges from brain's integrated activity and subjective experience."
+  },
+  {
+    "id": 20,
+    "statement": "Physical laws describe underlying mechanisms and principles, not equations"
+  },
+  {
+    "id": 21,
+    "statement": "Calibration involves understanding instruments, limitations, and relevant standards"
+  },
+  {
+    "id": 22,
+    "statement": "Validation procedures ensure calibration accuracy, reliability, and standards compliance."
+  },
+  {
+    "id": 23,
+    "statement": "Calibration involves instrument setup, environment control, and validation procedures."
+  },
+  {
+    "id": 24,
+    "statement": "Cognitive frameworks shape understanding of physical laws through mental structures."
+  },
+  {
+    "id": 25,
+    "statement": "Calibration preparation involves setup, control, and continuous review insights."
+  },
+  {
+    "id": 26,
+    "statement": "Physical laws describe underlying principles, not solely equations."
+  },
+  {
+    "id": 27,
+    "statement": "Confirmation bias distorts scientific peer review and replication validity."
+  },
+  {
+    "id": 28,
+    "statement": "Physical laws describe underlying principles not solely equations."
+  },
+  {
+    "id": 29,
+    "statement": "Standard selection involves accuracy, relevance, stability, range, and uncertainty evaluation."
+  },
+  {
+    "id": 30,
+    "statement": "Clarity in principles enables effective decision-making and action."
+  },
+  {
+    "id": 31,
+    "statement": "Calibration process involves setup, testing, adjustment, and verification."
+  },
+  {
+    "id": 32,
+    "statement": "Calibration adapts to instrument, context, and standard specifics for accuracy."
+  },
+  {
+    "id": 33,
+    "statement": "Uncertainty evaluation ensures measurement accuracy and reliability."
+  },
+  {
+    "id": 34,
+    "statement": "Consciousness arises from brain's global workspace integrating sensory information."
+  },
+  {
+    "id": 35,
+    "statement": "Calibration requires adaptation to instrument, context, and standards specifics"
+  },
+  {
+    "id": 36,
+    "statement": "Physical laws describe underlying principles through abstract concepts"
+  },
+  {
+    "id": 37,
+    "statement": "Calibration involves process adjustments to ensure accuracy and reliability."
+  },
+  {
+    "id": 38,
+    "statement": "Calibration involves instrument setup, environment control, and validation steps."
+  },
+  {
+    "id": 39,
+    "statement": "Calibration involves instrument setup, environment control, validation, plus other steps"
+  },
+  {
+    "id": 40,
+    "statement": "Adjustment step in calibration involves fine-tuning instrument settings."
+  },
+  {
+    "id": 41,
+    "statement": "Calibration accuracy relies on accurate measurement standards primarily."
+  },
+  {
+    "id": 42,
+    "statement": "Calibration involves instrument setup, environment control, and validation procedures."
+  },
+  {
+    "id": 43,
+    "statement": "Consciousness arises from coordinated activity of multiple brain regions."
+  },
+  {
+    "id": 44,
+    "statement": "Global workspace theory explains integrated information processing in brain."
+  },
+  {
+    "id": 45,
+    "statement": "Consciousness arises from global workspace integrating brain information globally"
+  },
+  {
+    "id": 46,
+    "statement": "Consciousness arises from interconnected brain regions' information integration."
+  },
+  {
+    "id": 47,
+    "statement": "Standard selection involves accuracy, relevance, stability, range, and uncertainty evaluation."
+  },
+  {
+    "id": 48,
+    "statement": "Understanding instruments, limitations, and standards is essential for accurate calibration."
+  },
+  {
+    "id": 49,
+    "statement": "Calibration reviews correct instrument-specific errors through iterative refinement procedures."
+  },
+  {
+    "id": 50,
+    "statement": "Reference standards can be dynamic, real-time, or adaptive, updating accordingly."
+  },
+  {
+    "id": 51,
+    "statement": "Consciousness arises from global brain network integrating sensory inputs."
+  },
+  {
+    "id": 52,
+    "statement": "Verification process ensures device measurements match expected values."
+  },
+  {
+    "id": 53,
+    "statement": "Consciousness arises from global brain workspace integrating sensory information."
+  },
+  {
+    "id": 54,
+    "statement": "Calibration involves instrument setup, documentation, and quality control checks."
+  },
+  {
+    "id": 55,
+    "statement": "Objective features exist independently of observation and perception."
+  },
+  {
+    "id": 56,
+    "statement": "Moral deliberation involves critical analysis of assumptions and implications."
+  },
+  {
+    "id": 57,
+    "statement": "Calibration reviews assess uncertainty from instrumental and environmental sources"
+  },
+  {
+    "id": 58,
+    "statement": "Calibration involves instrument setup, environment control, testing, adjustment, and verification steps."
+  },
+  {
+    "id": 59,
+    "statement": "Physical laws describe underlying mechanisms and principles governing behavior"
+  },
+  {
+    "id": 60,
+    "statement": "Objective features exist independently of observation and perception inherently."
+  },
+  {
+    "id": 61,
+    "statement": "Calibration relies on accurate measurement standards and principles"
+  },
+  {
+    "id": 62,
+    "statement": "Calibration relies on accurate measurement standards as reference points."
+  },
+  {
+    "id": 63,
+    "statement": "Calibration preparation involves instrument setup, environment control, and thorough review."
+  },
+  {
+    "id": 64,
+    "statement": "Consciousness arises from global workspace integrating brain regions' information globally."
+  },
+  {
+    "id": 65,
+    "statement": "Consciousness emerges from integrated brain region information sharing globally."
+  },
+  {
+    "id": 66,
+    "statement": "Emotional processing influences conscious awareness through top-down and bottom-up mechanisms."
+  },
+  {
+    "id": 67,
+    "statement": "Calibration process involves setup, testing, adjustment, and verification steps sequentially."
+  },
+  {
+    "id": 68,
+    "statement": "Principles govern instrument design, measurement models, uncertainty analysis, and validation."
+  },
+  {
+    "id": 69,
+    "statement": "Calibration relies on accurate measurement standards and principles together."
+  },
+  {
+    "id": 70,
+    "statement": "Dynamic, real-time, and adaptive reference standards update in response to new data."
+  },
+  {
+    "id": 71,
+    "statement": "Consciousness arises from global brain workspace integrating sensory information."
+  },
+  {
+    "id": 72,
+    "statement": "Objective reality exists independently of human observer and interpretation."
+  },
+  {
+    "id": 73,
+    "statement": "Calibration relies on accurate measurement standards not principles."
+  },
+  {
+    "id": 74,
+    "statement": "Calibration compares measurement device output to known, accurate reference."
+  },
+  {
+    "id": 75,
+    "statement": "Consciousness arises from global workspace integrating brain regions' information."
+  },
+  {
+    "id": 76,
+    "statement": "Calibration preparation involves thorough review of instrument settings."
+  },
+  {
+    "id": 77,
+    "statement": "Confirmation bias distorts scientific peer review and replication validity."
+  },
+  {
+    "id": 78,
+    "statement": "Confirmation bias affects individual researcher decisions, not necessarily validity"
+  },
+  {
+    "id": 79,
+    "statement": "Calibration reviews correct instrument-specific errors through iterative refinement."
+  },
+  {
+    "id": 80,
+    "statement": "Preserving human life and well-being is a fundamental moral principle with scope debates."
+  },
+  {
+    "id": 81,
+    "statement": "Understanding instruments, limitations, and standards is crucial for calibration accuracy."
+  },
+  {
+    "id": 82,
+    "statement": "Consciousness arises from global workspace integrating brain regions' information globally through binding."
+  },
+  {
+    "id": 83,
+    "statement": "Physical laws describe underlying mechanisms and principles, not equations only."
+  },
+  {
+    "id": 84,
+    "statement": "Calibration process involves iterative steps, not strict sequential order."
+  },
+  {
+    "id": 85,
+    "statement": "Consciousness arises from global workspace integrating sensory information."
+  },
+  {
+    "id": 86,
+    "statement": "Preserving life is essential to human dignity and autonomy."
+  },
+  {
+    "id": 87,
+    "statement": "Consciousness arises from global workspace integrating brain regions' information."
+  },
+  {
+    "id": 88,
+    "statement": "Consciousness arises from brain's global workspace integrating information."
+  },
+  {
+    "id": 89,
+    "statement": "Consciousness emerges from brain's integrated activity globally"
+  },
+  {
+    "id": 90,
+    "statement": "Confirmation bias affects peer review and replication validity in science."
+  },
+  {
+    "id": 91,
+    "statement": "Physical laws govern behavior of complex systems and living organisms."
+  },
+  {
+    "id": 92,
+    "statement": "Cognitive frameworks shape understanding of physical laws through mental structures."
+  },
+  {
+    "id": 93,
+    "statement": "Consciousness arises from global workspace integrating sensory information globally."
+  },
+  {
+    "id": 94,
+    "statement": "Calibration involves understanding instruments, limitations, and relevant standards."
+  },
+  {
+    "id": 95,
+    "statement": "Relevant standards ensure calibration accuracy, consistency, and compliance."
+  },
+  {
+    "id": 96,
+    "statement": "Calibration process involves instrument setup, testing, adjustment, and verification."
+  },
+  {
+    "id": 97,
+    "statement": "Confirmation bias occurs in scientific research, decision-making, and media."
+  },
+  {
+    "id": 98,
+    "statement": "Physical laws describe underlying principles, general & abstract patterns"
+  },
+  {
+    "id": 99,
+    "statement": "Relevant standards refer to external guidelines for calibration."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 16,
+  "statement": "Consciousness arises from integrated information processing in brain regions."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to know about the aspect of the knowledge base that you're least confident about. Which one would you choose and why?
