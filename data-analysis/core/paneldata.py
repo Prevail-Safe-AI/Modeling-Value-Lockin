@@ -379,6 +379,7 @@ def build_temporal_panel(
         - time (INDEX): The number of time intervals since the start
         - is_gpt4 (INDEX): 1 for the GPT-4 family and 0 for the GPT-3.5-turbo family
         - cluster (INDEX): The concept that is being counted, represented by its index in the cluster list
+            - If a certain triplet of indices (time, is_gpt4, cluster) is not in the DataFrame, it means that the concept is not present in the samples of that time period and GPT family
         - cluster_nsamples_user_concepts_explicit: The number of samples in this time period with this GPT family that has this cluster and the user explicitly mentioned it
         - cluster_nsamples_assistant_concepts_explicit: The number of samples in this time period with this GPT family that has this cluster and the assistant explicitly mentioned it
         - cluster_nsamples_user_concepts_related: The number of samples in this time period with this GPT family that has this cluster as a related concept to the user speech
@@ -476,18 +477,19 @@ def build_temporal_panel(
             panel1["concept_diversity_user"].append(None)
             panel1["concept_diversity_assistant"].append(None)
             
-            for concept in selected_clusters:
-                panel2["time"].append(time_interval_num)
-                panel2["is_gpt4"].append(is_gpt)
-                panel2["cluster"].append(concept)
-                panel2["cluster_nsamples_user_concepts_explicit"].append(None)
-                panel2["cluster_nsamples_assistant_concepts_explicit"].append(None)
-                panel2["cluster_nsamples_user_concepts_related"].append(None)
-                panel2["cluster_nsamples_assistant_concepts_related"].append(None)
-                panel2["cluster_nsamples"].append(None)
-                panel2["cluster_mean_turns"].append(None)
-                panel2["cluster_mean_conversation_length"].append(None)
-                panel2["cluster_mean_prompt_length"].append(None)
+            ## Skip adding row to the second panel since there are no samples
+            # for concept in selected_clusters:
+            #     panel2["time"].append(time_interval_num)
+            #     panel2["is_gpt4"].append(is_gpt)
+            #     panel2["cluster"].append(concept)
+            #     panel2["cluster_nsamples_user_concepts_explicit"].append(None)
+            #     panel2["cluster_nsamples_assistant_concepts_explicit"].append(None)
+            #     panel2["cluster_nsamples_user_concepts_related"].append(None)
+            #     panel2["cluster_nsamples_assistant_concepts_related"].append(None)
+            #     panel2["cluster_nsamples"].append(None)
+            #     panel2["cluster_mean_turns"].append(None)
+            #     panel2["cluster_mean_conversation_length"].append(None)
+            #     panel2["cluster_mean_prompt_length"].append(None)
         
         # Calculate concept diversity for panel1
         concept_diversity = calculate_diversity(
@@ -556,7 +558,8 @@ def build_temporal_panel(
                 for concept in value:
                     increment_ancestors(concept, breakdown_counters[key])
         
-        for concept in selected_clusters:
+        # for concept in selected_clusters:
+        for concept in concept_mapping:
             panel2["time"].append(time_interval_num)
             panel2["is_gpt4"].append(is_gpt)
             panel2["cluster"].append(concept)
@@ -627,6 +630,7 @@ def build_all_panels(existing_dict, *args, **kwargs) -> Dict[str, pd.DataFrame]:
         - time (INDEX): The number of time intervals since the start
         - is_gpt4 (INDEX): 1 for the GPT-4 family and 0 for the GPT-3.5-turbo family
         - cluster (INDEX): The concept that is being counted, represented by its index in the cluster list
+            - If a certain triplet of indices (time, is_gpt4, cluster) is not in the DataFrame, it means that the concept is not present in the samples of that time period and GPT family
         - cluster_nsamples_user_concepts_explicit: The number of samples in this time period with this GPT family that has this cluster and the user explicitly mentioned it
         - cluster_nsamples_assistant_concepts_explicit: The number of samples in this time period with this GPT family that has this cluster and the assistant explicitly mentioned it
         - cluster_nsamples_user_concepts_related: The number of samples in this time period with this GPT family that has this cluster as a related concept to the user speech
