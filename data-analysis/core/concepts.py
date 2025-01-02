@@ -178,12 +178,16 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         embeddings = [embedding for _, embedding in tqdm(loaded_embeddings)]
         print("Embeddings loaded. Verifying...")
         
-        for emb_combo, string in zip(loaded_embeddings, strings):
-            s, emb = emb_combo
-            assert isinstance(s, str) and isinstance(emb, list) and len(emb) == EMB_DIM
-            assert not np.isnan(emb).any() and not np.isinf(emb).any()
-            assert not np.all(emb == 0)
-            assert s == string
+        if "dummy" not in os.environ.get("EMBEDDINGS", ""):
+            for emb_combo, string in zip(loaded_embeddings, strings):
+                s, emb = emb_combo
+                assert isinstance(s, str) and isinstance(emb, list) and len(emb) == EMB_DIM
+                assert not np.isnan(emb).any() and not np.isinf(emb).any()
+                assert not np.all(emb == 0)
+                assert s == string
+        else:
+            print("Dummy embeddings detected. Skipping verification and truncating to match embedding length.")
+            strings = strings[:len(embeddings)]
         
         del loaded_embeddings
     
@@ -313,12 +317,19 @@ def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[
     parent_mapping, cluster_sizes, summaries, weights, root = cluster_strs(all_concepts)
     
     inv_mapping = {summary: i for i, summary in enumerate(summaries)}
+    
+    def is_legit(concept):
+        if "dummy" in os.environ.get("EMBEDDINGS", ""):
+            return isinstance(concept, str) and concept and concept in inv_mapping
+
+        return isinstance(concept, str) and concept
+        
     for sample in samples:
         if not sample.concepts:
             continue
-        sample.concepts = [inv_mapping[concept] for concept in sample.concepts if isinstance(concept, str) and concept]
+        sample.concepts = [inv_mapping[concept] for concept in sample.concepts if is_legit(concept)]
         for key in sample.concepts_breakdown:
-            sample.concepts_breakdown[key] = [inv_mapping[concept] for concept in sample.concepts_breakdown[key] if isinstance(concept, str) and concept]
+            sample.concepts_breakdown[key] = [inv_mapping[concept] for concept in sample.concepts_breakdown[key] if is_legit(concept)]
     
     return samples, parent_mapping, cluster_sizes, summaries, weights, root
 
