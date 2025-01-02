@@ -167,17 +167,19 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
     if os.environ.get("EMBEDDINGS", None) is not None:
         print("Loading embeddings...")
         with open(os.environ["EMBEDDINGS"], "r") as f:
-            embeddings = json.load(f)
+            loaded_embeddings = json.load(f)
         
-        embeddings = [embedding for _, embedding in tqdm(embeddings)]
+        embeddings = [embedding for _, embedding in tqdm(loaded_embeddings)]
         print("Embeddings loaded. Verifying...")
         
-        for emb_combo, string in zip(embeddings, strings):
+        for emb_combo, string in zip(loaded_embeddings, strings):
             s, emb = emb_combo
             assert isinstance(s, str) and isinstance(emb, list) and len(emb) == EMB_DIM
             assert not np.isnan(emb).any() and not np.isinf(emb).any()
             assert not np.all(emb == 0)
             assert s == string
+        
+        del loaded_embeddings
     
     else:
         print(f"Embedding strings ({len(strings)} total)...")
