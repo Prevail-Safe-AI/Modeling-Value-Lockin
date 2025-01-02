@@ -50,6 +50,9 @@ class DataSample:
     def conversation_chars(self) -> int:
         return sum([len(message["content"]) for message in self.conversation])
     
+    def role_chars(self, role: str) -> int:
+        return sum([len(message["content"]) for message in self.conversation if message["role"] == role])
+    
     def truncate_conversation(self, length: int):
         while self.conversation_chars() > length:
             self.conversation.pop()

@@ -18,6 +18,9 @@ import pandas as pd
 import concurrent.futures as cf
 import threading as th
 
+CLUSTER_MIN_SIZE = 4
+CLUSTER_STEP_MULTIPLIER_LOG2 = 2
+
 
 def extract_concepts(samples: List[DataSample], extractor: str, max_retries: int = 5) -> List[DataSample]:
     """Extract concepts (list of strings) from the conversation content of each sample.
@@ -153,13 +156,13 @@ def fill_in_embeddings(vo: voyageai.Client, embeddings: np.array, strings: List[
             
         break
 
-def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], List[float]]:
+def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], List[float], int]:
     """Hierarchically cluster strings to identify common themes and topics. Each node or cluster has a unique integer ID and a string summary, with the cluster summary being a few randomly selected strings from the cluster, weighted by probability.
 
     :param strings: List of strings to cluster.
     :type strings: List[str]
-    :return: List of integers representing the parent ID of each string or cluster, followed by their sizes, followed by a list of strings representing the summary of each cluster or the content of each string, followed by a list of floats representing the probability of membership to its assigned cluster / robustness of the cluster itself.
-    :rtype: Tuple[List[int], List[int], List[str], List[float]]
+    :return: List of integers representing the parent ID of each string or cluster, followed by their sizes, followed by a list of strings representing the summary of each cluster or the content of each string, followed by a list of floats representing the probability of membership to its assigned cluster / robustness of the cluster itself, followed by the id of the root cluster.
+    :rtype: Tuple[List[int], List[int], List[str], List[float], int]
     """
     print(f"Embedding strings ({len(strings)} total)...")
     vo = voyageai.Client()
@@ -187,13 +190,14 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
     print(f"Data shape: {data.shape}")
     print(f"Data head: {data[:5, :10]}")
     print("Clustering...")
-    clusterer = hdbscan.HDBSCAN(min_cluster_size=5).fit(data)
+    clusterer = hdbscan.HDBSCAN(min_cluster_size=CLUSTER_MIN_SIZE).fit(data)
     print("Clustering complete.")
     
     # Identify parent clusters of each string and each cluster
     clusters_pd = clusterer.condensed_tree_.to_pandas()
     min_id = int(min(clusters_pd.child.min(), clusters_pd.parent.min()) + 0.1)
     max_id = int(max(clusters_pd.child.max(), clusters_pd.parent.max()) + 0.1)
+    assert min_id == 0 and len(clusters_pd) == max_id # Ensure that the IDs are contiguous and that it is a single tree without any disconnected nodes
     parent_mapping = [None] * (max_id + 1)
     for i, row in tqdm(clusters_pd.iterrows()):
         parent_mapping[int(row.child + 0.1)] = int(row.parent + 0.1)
@@ -263,15 +267,16 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
     
     assert all([cluster_sizes[i] is not None for i in range(max_id + 1)])
     assert all([summaries[i] is not None for i in range(max_id + 1)])
-    return parent_mapping, cluster_sizes, summaries, weights
+    assert cluster_sizes[len(strings)] == len(strings)
+    return parent_mapping, cluster_sizes, summaries, weights, len(strings)
 
-def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[int], List[int], List[str], List[float]]:
+def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[int], List[int], List[str], List[float], int]:
     """Hierarchically cluster concepts to identify common themes and topics.
 
     :param samples: List of DataSample objects.
     :type samples: List[DataSample]
-    :return: Tuple of the samples with the `concepts` attribute replaced with the `concepts_breakdown` attribute, followed by the parent ID of each concept or cluster, followed by their sizes, followed by a list of strings representing the summary of each cluster or the content of each concept, followed by a list of floats representing the probability of membership to its assigned cluster / robustness of the cluster itself.
-    :rtype: Tuple[List[DataSample], List[int], List[int], List[str], List[float]]:
+    :return: Tuple of the samples with the `concepts` attribute replaced with the `concepts_breakdown` attribute, followed by the parent ID of each concept or cluster, followed by their sizes, followed by a list of strings representing the summary of each cluster or the content of each concept, followed by a list of floats representing the probability of membership to its assigned cluster / robustness of the cluster itself, followed by the id of the root cluster.
+    :rtype: Tuple[List[DataSample], List[int], List[int], List[str], List[float], int]:
     """
     all_concepts = set()
     for sample in samples:
@@ -280,7 +285,7 @@ def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[
         all_concepts.update([x for x in sample.concepts if isinstance(x, str) and x])
     
     all_concepts = list(all_concepts)
-    parent_mapping, cluster_sizes, summaries, weights = cluster_strs(all_concepts)
+    parent_mapping, cluster_sizes, summaries, weights, root = cluster_strs(all_concepts)
     
     inv_mapping = {summary: i for i, summary in enumerate(summaries)}
     for sample in samples:
@@ -290,16 +295,17 @@ def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[
         for key in sample.concepts_breakdown:
             sample.concepts_breakdown[key] = [inv_mapping[concept] for concept in sample.concepts_breakdown[key] if isinstance(concept, str) and concept]
     
-    return samples, parent_mapping, cluster_sizes, summaries, weights
-    
+    return samples, parent_mapping, cluster_sizes, summaries, weights, root
+
 def select_clusters(
     samples: List[DataSample], 
     cluster_parent: List[int],
     cluster_size: List[int],
     cluster_name: List[str],
     cluster_prob: List[float],
-    min_size: int = 4,
-    step_multiplier: int = 2,
+    root: int,
+    min_size: int = CLUSTER_MIN_SIZE,
+    step_multiplier: int = CLUSTER_STEP_MULTIPLIER_LOG2,
     **kwargs,
 ) -> Tuple[List[int], List[int]]:
     max_subtree_size = [0] * len(cluster_parent)

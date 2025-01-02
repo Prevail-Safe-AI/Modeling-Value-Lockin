@@ -1,9 +1,259 @@
 import pandas as pd
 import numpy as np
+from datetime import datetime
 from copy import deepcopy
 from typing import List, Dict, Tuple, Set
 from core.samples import DataSample
+from core.concepts import CLUSTER_MIN_SIZE, CLUSTER_STEP_MULTIPLIER_LOG2
 from collections import defaultdict, Counter
+
+
+gpt_version_str2int = {
+    "gpt-3.5-turbo-0301": 0,
+    "gpt-4-0314": 0,
+    "gpt-3.5-turbo-0613": 1,
+    "gpt-4-1106-preview": 1,
+    "gpt-3.5-turbo-0125": 2,
+    "gpt-4-0125-preview": 2,
+}
+
+
+TIME_INTERVAL_DAYS = 15
+MAX_TIME_INTERVALS = 24
+START_TIME = datetime(2023, 4, 1, 0, 0, 0)
+def get_time_interval(time: datetime) -> int:
+    res = (time - START_TIME).days // TIME_INTERVAL_DAYS
+    assert 0 <= res <= MAX_TIME_INTERVALS
+    return min(res, MAX_TIME_INTERVALS - 1)
+
+
+def calculate_diversity(
+    concepts_present: List[int], 
+    cluster_parent: List[int],
+    cluster_size: List[int],
+    cluster_name: List[str],
+    cluster_prob: List[float],
+    cluster_selected_parent: List[int],
+    selected_clusters: List[int],
+    root: int,
+) -> float:
+    depth: Dict[int, int] = {}
+    
+    def get_depth(concept: int) -> int:
+        if concept in depth:
+            return depth[concept]
+        
+        if cluster_selected_parent[concept] is None:
+            depth[concept] = 0
+            return 0
+        
+        depth[concept] = get_depth(cluster_selected_parent[concept]) + 1
+    
+    subtree_counts: Dict[int, int] = defaultdict(int)
+    for concept in concepts_present:
+        concept = cluster_selected_parent[concept]
+        while concept is not None:
+            subtree_counts[concept] += 1
+            concept = cluster_selected_parent[concept]
+    
+    def get_weight(concept: int) -> float:
+        return np.log2(cluster_size[concept]) / CLUSTER_STEP_MULTIPLIER_LOG2 - get_depth(concept)
+    
+    nsamples = len(concepts_present)
+    diversity = get_weight(root) * nsamples * (nsamples - 1)
+    
+    for concept, count in subtree_counts.items():
+        if concept == root:
+            continue
+        
+        diversity += (get_weight(concept) - get_weight(cluster_selected_parent[concept])) * count * (count - 1)
+    
+    return diversity / (nsamples * (nsamples - 1))
+
+
+def build_user_panel(
+    samples: List[DataSample],
+    cluster_parent: List[int],
+    cluster_size: List[int],
+    cluster_name: List[str],
+    cluster_prob: List[float],
+    cluster_selected_parent: List[int],
+    selected_clusters: List[int],
+    root: int,
+) -> pd.DataFrame:
+    """Build a panel dataset with each row representing a user.
+
+    :param samples: List of DataSample objects, each representing a conversation that's to be counted.
+    :type samples: List[DataSample]
+    :param cluster_parent: List of cluster parent indices; each cluster (of words) represents a concept that may appear in conversations.
+    :type cluster_parent: List[int]
+    :param cluster_size: List of cluster sizes.
+    :type cluster_size: List[int]
+    :param cluster_name: List of cluster names.
+    :type cluster_name: List[str]
+    :param cluster_prob: List of cluster probabilities.
+    :type cluster_prob: List[float]
+    :param cluster_selected_parent: Like cluster_parent, but gives the nearest ancestor that is selected.
+    :type cluster_selected_parent: List[int]
+    :param selected_clusters: List of selected cluster indices.
+    :type selected_clusters: List[int]
+    :param root: The root cluster index.
+    :type root: int
+    :return: Pandas DataFrame with the following columns:
+        - user (INDEX): user ID
+        - language: typical language the user speaks
+        - location: typical location the user is from. It is a tuple of two optional strings, representing the country and state respectively.
+        - nsamples: total number of conversations the user had
+        - nsamples_temporal_composition: number of conversations the user had during each time period respectivly. It is a tuple of 24 ints.
+        - nsamples_version_composition: number of conversations the user had with each GPT version. It is a tuple of six ints, representing the following versions respectively:
+            - GPT-3.5-turbo-0301 
+            - GPT-3.5-turbo-0613
+            - GPT-3.5-turbo-0125
+            - GPT-4-0314
+            - GPT-4-1106-preview
+            - GPT-4-0125-preview
+        - temporal_extension: standard deviation of the time interval index of the conversations the user had
+        - version_diversity: square sum of the proportion of conversations the user had with each GPT version
+        - mean_turns: average number of turns in the conversations the user had
+        - mean_conversation_length: average number of characters in the conversations the user had
+        - mean_prompt_length: average number of characters in the prompts the user gave
+        - concept_diversity: variance of the concept distribution that the user's conversations contain
+        - concept_diversity_user_concepts_explicit: variance of the concept distribution that the user explicitly mentioned
+        - concept_diversity_assistant_concepts_explicit: variance of the concept distribution that the assistant explicitly mentioned
+        - concept_diversity_user_concepts_related: variance of the concept distribution that the user related to
+        - concept_diversity_assistant_concepts_related: variance of the concept distribution that the assistant related to
+        - concept_diversity_assistant_across_time: variance of the concept distribution in assistant speech during each time period respectivly. It is a tuple of 24 floats.
+        - concept_diversity_user_across_time: variance of the concept distribution in user speech during each time period respectivly. It is a tuple of 24 floats.
+        - concept_diversity_across_time: variance of the concept distribution that appeared during each time period respectivly. It is a tuple of 24 floats.
+        
+    :rtype: pd.DataFrame
+    """
+    # Initialize the DataFrame
+    panel = {
+        "user": [],
+        "language": [],
+        "location": [],
+        "nsamples": [],
+        "nsamples_temporal_composition": [],
+        "nsamples_version_composition": [],
+        "temporal_extension": [],
+        "version_diversity": [],
+        "mean_turns": [],
+        "mean_conversation_length": [],
+        "mean_prompt_length": [],
+        "concept_diversity": [],
+        "concept_diversity_user_concepts_explicit": [],
+        "concept_diversity_assistant_concepts_explicit": [],
+        "concept_diversity_user_concepts_related": [],
+        "concept_diversity_assistant_concepts_related": [],
+        "concept_diversity_user_across_time": [],
+        "concept_diversity_assistant_across_time": [],
+        "concept_diversity_across_time": [],    
+    }
+    
+    # Classify samples by users
+    user_directories: Dict[str, List[DataSample]] = defaultdict(list)
+    for sample in samples:
+        user_directories[sample.user_id].append(sample)
+    
+    # Construct DataFrame rows
+    for user_id in user_directories:
+        cur_samples = user_directories[user_id]
+        nsamples = len(cur_samples)
+        
+        # Calculate the mode of language and location
+        languages = [sample.language for sample in cur_samples]
+        locations = [sample.location for sample in cur_samples]
+        maj_language = max(set(languages), key=languages.count)
+        maj_location = max(set(locations), key=locations.count)
+        
+        # Classify samples by time intervals and GPT versions respectively
+        time_directory: List[List[DataSample]] = [[] for _ in range(MAX_TIME_INTERVALS)]
+        version_directory: Dict[int, List[DataSample]] = defaultdict(list)
+        for sample in cur_samples:
+            time_interval_num = get_time_interval(sample.time)
+            time_directory[time_interval_num].append(sample)
+            
+            version_num = gpt_version_str2int[sample.gpt_version] + 3 * int("gpt-4-" in sample.gpt_version)
+            version_directory[version_num].append(sample)
+        
+        # Calculate temporal extension
+        temporal_weights = [len(time_directory[i]) for i in range(MAX_TIME_INTERVALS)]
+        mean_time_interval = np.average(list(range(MAX_TIME_INTERVALS)), weights=temporal_weights)
+        temporal_extension = float(np.sqrt(np.average([(i - mean_time_interval) ** 2 for i in range(MAX_TIME_INTERVALS)], weights=temporal_weights)))
+
+        # Calculate version diversity
+        version_weights = np.array([len(version_directory[i]) for i in range(6)])
+        version_diversity = np.sum((version_weights / nsamples) ** 2)
+        
+        # Calculate mean turns and conversation length
+        mean_turns = np.mean([len(sample.conversation) for sample in cur_samples])
+        mean_conversation_length = np.mean([sample.conversation_chars() for sample in cur_samples])
+        mean_prompt_length = np.mean([sample.role_chars("user") for sample in cur_samples])
+        
+        def get_concept_list(samples: List[DataSample], breakdown_key: str = None) -> List[int]:
+            concept_list = []
+            for sample in samples:
+                if breakdown_key is None:
+                    concept_list.extend(sample.concepts if sample.concepts is not None else [])
+                else:
+                    concept_list.extend(
+                        sample.concepts_breakdown[breakdown_key]
+                        if sample.concepts_breakdown is not None and breakdown_key in sample.concepts_breakdown
+                        else []
+                    )
+            
+            return concept_list
+        
+        generic_arguments = {
+            "cluster_parent": cluster_parent,
+            "cluster_size": cluster_size,
+            "cluster_name": cluster_name,
+            "cluster_prob": cluster_prob,
+            "cluster_selected_parent": cluster_selected_parent,
+            "selected_clusters": selected_clusters,
+            "root": root,
+        }
+        
+        # Calculate concept diversity
+        concept_diversity = calculate_diversity(
+            get_concept_list(cur_samples),
+            **generic_arguments
+        )
+        concept_diversity_user_concepts_explicit = calculate_diversity(
+            get_concept_list(cur_samples, "user_concepts_explicit"),
+            **generic_arguments
+        )
+        concept_diversity_assistant_concepts_explicit = calculate_diversity(
+            get_concept_list(cur_samples, "assistant_concepts_explicit"),
+            **generic_arguments
+        )
+        concept_diversity_user_concepts_related = calculate_diversity(
+            get_concept_list(cur_samples, "user_concepts_related"),
+            **generic_arguments
+        )
+        concept_diversity_assistant_concepts_related = calculate_diversity(
+            get_concept_list(cur_samples, "assistant_concepts_related"),
+            **generic_arguments
+        )
+        concept_diversity_user_across_time = [
+            calculate_diversity(
+                get_concept_list(time_directory[i], "user_concepts_explicit") +
+                get_concept_list(time_directory[i], "user_concepts_related"),
+                **generic_arguments
+            )
+            for i in range(MAX_TIME_INTERVALS)
+        ]
+        concept_diversity_assistant_across_time = [
+            calculate_diversity(
+                get_concept_list(time_directory[i], "assistant_concepts_explicit") +
+                get_concept_list(time_directory[i], "assistant_concepts_related"),
+                **generic_arguments
+            )
+            for i in range(MAX_TIME_INTERVALS)
+        ]
+        
+        
 
 def build_temporal_panel(
     samples: List[DataSample], 
@@ -13,7 +263,7 @@ def build_temporal_panel(
     cluster_prob: List[float],
     cluster_selected_parent: List[int],
     selected_clusters: List[int],
-    time_interval: int = 15,
+    root: int,
 ) -> pd.DataFrame:
     """Build a temporal panel dataset from the samples and cluster information.
 
@@ -31,8 +281,8 @@ def build_temporal_panel(
     :type cluster_selected_parent: List[int]
     :param selected_clusters: List of selected cluster indices.
     :type selected_clusters: List[int]
-    :param time_interval: Time interval in days; serving as the unit of time, defaults to 15.
-    :type time_interval: int, optional
+    :param root: The root cluster index.
+    :type root: int
     :return: A pandas DataFrame with the following columns:
         - time (INDEX): The number of time intervals since the start
         - is_gpt4 (INDEX): 1 for the GPT-4 family and 0 for the GPT-3.5-turbo family
@@ -71,33 +321,13 @@ def build_temporal_panel(
         "gpt_version": [],
     }
 
-    # Find start time, and round to the nearest 1st / 16th of the month
-    start_time = deepcopy(min([sample.time for sample in samples]))
-    print(f"Precise start time: {start_time}")
-    if start_time.day < 16:
-        start_time = start_time.replace(day=1)
-    else:
-        start_time = start_time.replace(day=16)
-    
-    print(f"Rounded start time: {start_time}")
-    
     # Classify samples into combinations of time intervals and GPT versions
     sample_directories: Dict[Tuple, List[DataSample]] = defaultdict(list)
     for sample in samples:
-        time_diff = (sample.time - start_time).days
-        time_interval_num = time_diff // time_interval
+        time_interval_num = get_time_interval(sample.time)
         is_gpt = 0 if "gpt-3.5-turbo-" in sample.gpt_version else 1
         assert "gpt-4-" in sample.gpt_version or "gpt-3.5-turbo-" in sample.gpt_version
         sample_directories[(time_interval_num, is_gpt)].append(sample)
-    
-    gpt_version_str2int = {
-        "gpt-3.5-turbo-0301": 0,
-        "gpt-4-0314": 0,
-        "gpt-3.5-turbo-0613": 1,
-        "gpt-4-1106-preview": 1,
-        "gpt-3.5-turbo-0125": 2,
-        "gpt-4-0125-preview": 2,
-    }
     
     # Construct DataFrame rows
     samples_sizes = []

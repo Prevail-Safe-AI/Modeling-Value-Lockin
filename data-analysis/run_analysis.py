@@ -143,6 +143,7 @@ class Analysis:
                 cluster_size,
                 cluster_name,
                 cluster_prob,
+                root,
             ) = cluster_concepts(self.samples)
             
             self.clusterinfo = {
@@ -150,6 +151,7 @@ class Analysis:
                 "cluster_size": cluster_size,
                 "cluster_name": cluster_name,
                 "cluster_prob": cluster_prob,
+                "root": root,
             }
             self.save_backup(self.clusterinfo, "-clusterinfo", "json")
             self.save_concept_only("-cluster")
