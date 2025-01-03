@@ -242,6 +242,10 @@ def build_user_panel(
         time_directory: List[List[DataSample]] = [[] for _ in range(MAX_TIME_INTERVALS)]
         version_directory: Dict[int, List[DataSample]] = defaultdict(list)
         for sample in cur_samples:
+            if sample.gpt_version not in gpt_version_str2int:
+                print(f"Warning: unknown GPT version {sample.gpt_version}")
+                continue
+            
             time_interval_num = get_time_interval(sample.time)
             time_directory[time_interval_num].append(sample)
             
@@ -443,6 +447,10 @@ def build_temporal_panel(
     # Classify samples into combinations of time intervals and GPT versions
     sample_directories: Dict[Tuple, List[DataSample]] = defaultdict(list)
     for sample in samples:
+        if sample.gpt_version not in gpt_version_str2int:
+            print(f"Warning: unknown GPT version {sample.gpt_version}")
+            continue
+        
         time_interval_num = get_time_interval(sample.time)
         is_gpt = 0 if "gpt-3.5-turbo-" in sample.gpt_version else 1
         assert "gpt-4-" in sample.gpt_version or "gpt-3.5-turbo-" in sample.gpt_version
