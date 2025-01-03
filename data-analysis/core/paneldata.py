@@ -20,8 +20,8 @@ gpt_version_str2int = {
 }
 
 
-TIME_INTERVAL_DAYS = 15
-MAX_TIME_INTERVALS = 24
+TIME_INTERVAL_DAYS = 3
+MAX_TIME_INTERVALS = 125
 START_TIME = datetime(2023, 4, 1, 0, 0, 0).replace(tzinfo=None)
 
 def get_time_interval(time: datetime) -> int:
@@ -165,7 +165,7 @@ def build_user_panel(
         - language: typical language the user speaks
         - location: typical location the user is from. It is a tuple of two optional strings, representing the country and state respectively.
         - nsamples: total number of conversations the user had
-        - nsamples_temporal_composition: number of conversations the user had during each time period respectivly. It is a tuple of 24 ints.
+        - nsamples_temporal_composition: number of conversations the user had during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS ints.
         - nsamples_version_composition: number of conversations the user had with each GPT version. It is a tuple of six ints, representing the following versions respectively:
             - GPT-3.5-turbo-0301 
             - GPT-3.5-turbo-0613
@@ -183,9 +183,9 @@ def build_user_panel(
         - concept_diversity_assistant_concepts_explicit: variance of the concept distribution that the assistant explicitly mentioned
         - concept_diversity_user_concepts_related: variance of the concept distribution that the user related to
         - concept_diversity_assistant_concepts_related: variance of the concept distribution that the assistant related to
-        - concept_diversity_assistant_across_time: variance of the concept distribution in assistant speech during each time period respectivly. It is a tuple of 24 floats.
-        - concept_diversity_user_across_time: variance of the concept distribution in user speech during each time period respectivly. It is a tuple of 24 floats.
-        - concept_diversity_across_time: variance of the concept distribution that appeared during each time period respectivly. It is a tuple of 24 floats.
+        - concept_diversity_assistant_across_time: variance of the concept distribution in assistant speech during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS floats.
+        - concept_diversity_user_across_time: variance of the concept distribution in user speech during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS floats.
+        - concept_diversity_across_time: variance of the concept distribution that appeared during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS floats.
         
     :rtype: pd.DataFrame
     """
@@ -435,6 +435,10 @@ def build_temporal_panel(
         "selected_clusters": selected_clusters,
         "root": root,
     }
+    
+    # Print earliest and latest dates in the dataset
+    print(f"Earliest date: {min([sample.time for sample in samples])}")
+    print(f"Latest date: {max([sample.time for sample in samples])}")
 
     # Classify samples into combinations of time intervals and GPT versions
     sample_directories: Dict[Tuple, List[DataSample]] = defaultdict(list)
@@ -592,7 +596,7 @@ def build_all_panels(existing_dict, *args, **kwargs) -> Dict[str, pd.DataFrame]:
         - language: typical language the user speaks
         - location: typical location the user is from. It is a tuple of two optional strings, representing the country and state respectively.
         - nsamples: total number of conversations the user had
-        - nsamples_temporal_composition: number of conversations the user had during each time period respectivly. It is a tuple of 24 ints.
+        - nsamples_temporal_composition: number of conversations the user had during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS ints.
         - nsamples_version_composition: number of conversations the user had with each GPT version. It is a tuple of six ints, representing the following versions respectively:
             - GPT-3.5-turbo-0301 
             - GPT-3.5-turbo-0613
@@ -610,9 +614,9 @@ def build_all_panels(existing_dict, *args, **kwargs) -> Dict[str, pd.DataFrame]:
         - concept_diversity_assistant_concepts_explicit: variance of the concept distribution that the assistant explicitly mentioned
         - concept_diversity_user_concepts_related: variance of the concept distribution that the user related to
         - concept_diversity_assistant_concepts_related: variance of the concept distribution that the assistant related to
-        - concept_diversity_assistant_across_time: variance of the concept distribution in assistant speech during each time period respectivly. It is a tuple of 24 floats.
-        - concept_diversity_user_across_time: variance of the concept distribution in user speech during each time period respectivly. It is a tuple of 24 floats.
-        - concept_diversity_across_time: variance of the concept distribution that appeared during each time period respectivly. It is a tuple of 24 floats.
+        - concept_diversity_assistant_across_time: variance of the concept distribution in assistant speech during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS floats.
+        - concept_diversity_user_across_time: variance of the concept distribution in user speech during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS floats.
+        - concept_diversity_across_time: variance of the concept distribution that appeared during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS floats.
       The second one (temporal_panel1) with the following columns:
         - time (INDEX): The number of time intervals since the start
         - is_gpt4 (INDEX): 1 for the GPT-4 family and 0 for the GPT-3.5-turbo family
