@@ -21,8 +21,8 @@ gpt_version_str2int = {
 
 
 TIME_INTERVAL_DAYS = 3
-MAX_TIME_INTERVALS = 125
-START_TIME = datetime(2023, 4, 1, 0, 0, 0).replace(tzinfo=None)
+MAX_TIME_INTERVALS = 128
+START_TIME = datetime(2023, 4, 9, 0, 0, 0).replace(tzinfo=None)
 
 def get_time_interval(time: datetime) -> int:
     res = (time.replace(tzinfo=None) - START_TIME).days // TIME_INTERVAL_DAYS
