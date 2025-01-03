@@ -366,7 +366,7 @@ def select_clusters(
     sizes_counts = [0] * 32
     for i, sizes in tqdm(enumerate(zip(cluster_size, max_subtree_size))):
         self_size, child_size = sizes
-        if self_size > min_size and exp_order(self_size) > exp_order(child_size):
+        if self_size >= min_size and (exp_order(self_size) > exp_order(child_size) or child_size < min_size):
             selected_clusters.append(i)
             sizes_counts[exp_order(self_size, 1)] += 1
     
