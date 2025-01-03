@@ -25,6 +25,8 @@ from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering  # Clusterin
 import umap
 import matplotlib.pyplot as plt 
 import seaborn as sns
+import OpenAI from "openai";
+
 EMB_DIM = 256
 
 
@@ -76,16 +78,18 @@ def embedding(vo: voyageai.Client, knowledges: List[List[str]]) -> List[np.array
 
     return all_embeddings
 
+# Alternative embedding w/ OpenAI 
+
 
 # UMAP --> Apply PCA and leave out the essential dimensions (2 PC; initial and final comparison)
 def dim_red(embeddings: List[np.array])-> List[np.array]: 
     
     '''
     :param: embeddings: a numpy array that each row corresponds to one item and each column is one dim of that item
-    :type: np.array (num_items, dims)
+    :type embeddings: np.array (num_items, dims)
 
-    :return: reduced embeddings after umap
-    :type: List[np.array] (num_items, prim_dims)
+    :return reduce_dembeddings, 2-dim primary dims after umap
+    :rtype: List[np.array] (num_turns, (num_items, prim_dims)), num_turns refers to turns in user-tutor chat, corresponding to the num of knowledge-base, too; num_items refers to num of knowledge items on one knowledge base 
     '''
 
     # Initialize UMAP
@@ -109,8 +113,8 @@ def cluster_kmeans(reduced_embeddings: List[np.array]) -> List[np.array]:
     '''
     params etc 
 
-    :return: labels_kmeans, each is an index of cluster that examples belongs to.
-    :type: List[nd.array] (num_examples,)
+    :return: labels_kmeans, each is a array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
+    :type: List[nd.array] (num_turns, (num_items,))
 
     Tianyi: there should be improved kmean for self-emerged clusters.
     '''
@@ -121,44 +125,48 @@ def cluster_kmeans(reduced_embeddings: List[np.array]) -> List[np.array]:
         list_labels.append(labels_kmeans)
     return list_labels 
 
-
-
 # Visualization
-def visualization(final_arrays: List[np.array], list_labels: List[np.array]):
+def visualization(prim_dims: List[np.array], list_labels: List[np.array]):
     '''
-    params 
+    :params pri_dims: the primary dims after applying dim reduction. 
+    :type final_arrays: (num_turns, (num_items, prim_dims)
+
+    :return: list_labels, each is a array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
+    :rtype: List[nd.array] (num_turns, (num_items,))
+
+
     '''
-    turns = len(final_arrays) # A turn corresponds to one item in the list.
-    for turn, final_array in enumerate(final_arrays):
-        # Visualize clusters in 2D 
+    # Visualize clusters in 2D (We create a cluster for each turn)
+    for turn, prim_dim in enumerate(prim_dims):
         plt.figure(figsize=(8,6))
         sns.scatterplot(
-            x=final_array[:,0],
-            y=final_array[:,1],
+            x=prim_dim[:,0],
+            y=prim_dim[:,1],
             hue = list_labels[turn], # names of the columns
             palette= 'Set1',
             legend='full'
         )
         plt.title("Clusters Visualized in 2D")
-        plt.xlabel("Principal Component 1")
-        plt.ylabel("Principal Component 2")
+        plt.xlabel("Principal Dimension 1")
+        plt.ylabel("Principal Dimension 2")
         plt.legend(title='Cluster', loc='best')
         plt.savefig(f"turn_{turn}_clusters_2d.pdf", format="pdf")
 
-    # Visualize cluster trends over time 
+    # Visualize cluster trends over time (We only create one graph all all turns)
+        
     # a) Create a DataFrame containing turns and assigned clusters
     records = []
-    for turn_idx, (final_array, label_array) in enumerate(zip(final_arrays, labels)):
+    for turn_idx, label_array in enumerate(list_labels):
         for lab in label_array:
-            records.append({"turn": turn_idx, "cluster": lab})
+            records.append({"turn": turn_idx, "cluster": lab}) # Effectively a list of dict (turns*len_knowledge_base,)
 
     df = pd.DataFrame(records)
 
     # b) Count how many items are in each cluster per turn
-    cluster_counts = df.groupby(['turn', 'cluster']).size().reset_index(name='num_items')
+    cluster_counts = df.groupby(['turn', 'cluster']).size().reset_index(name='num_items') # Groups all rows by the unique (turn, cluster) pairs in df, resulting in .size(), which is a Series where the index is (turn, cluster) and the value is the count of items.effectively one group=one point on the graph=times of that cluster at given turn
 
     # c) Pivot so each cluster becomes a column, indexed by turn
-    pivot_df = cluster_counts.pivot(index='turn', columns='cluster', values='num_items').fillna(0)
+    pivot_df = cluster_counts.pivot(index='turn', columns='cluster', values='num_items').fillna(0)  
 
     # d) Plot the line chart (cluster sizes vs. turn)
     pivot_df.plot(kind='line', marker='o', figsize=(8, 6))
