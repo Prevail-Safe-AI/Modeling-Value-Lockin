@@ -225,12 +225,19 @@ def build_user_panel(
     # Classify samples by users
     user_directories: Dict[str, List[DataSample]] = defaultdict(list)
     for sample in samples:
+        if sample.gpt_version not in gpt_version_str2int:
+            print(f"Warning: unknown GPT version {sample.gpt_version}")
+            continue
+        
         user_directories[sample.user_id].append(sample)
     
     # Construct DataFrame rows
     for user_id in user_directories:
         cur_samples = user_directories[user_id]
         nsamples = len(cur_samples)
+        
+        if not nsamples:
+            continue
         
         # Calculate the mode of language and location
         languages = [sample.language for sample in cur_samples]
@@ -242,10 +249,6 @@ def build_user_panel(
         time_directory: List[List[DataSample]] = [[] for _ in range(MAX_TIME_INTERVALS)]
         version_directory: Dict[int, List[DataSample]] = defaultdict(list)
         for sample in cur_samples:
-            if sample.gpt_version not in gpt_version_str2int:
-                print(f"Warning: unknown GPT version {sample.gpt_version}")
-                continue
-            
             time_interval_num = get_time_interval(sample.time)
             time_directory[time_interval_num].append(sample)
             
