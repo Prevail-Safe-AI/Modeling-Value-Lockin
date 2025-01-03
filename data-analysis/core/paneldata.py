@@ -560,10 +560,14 @@ def build_temporal_panel(
                 concept = cluster_parent[concept]
         
         for sample in cur_samples:
+            if sample.concepts is None:
+                continue
             for concept in sample.concepts:
                 insert_ancestors(concept, concept_mapping, sample)
             
             for key, value in sample.concepts_breakdown.items():
+                if not value:
+                    continue
                 for concept in value:
                     increment_ancestors(concept, breakdown_counters[key])
         
