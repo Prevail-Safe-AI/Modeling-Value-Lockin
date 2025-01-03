@@ -21,17 +21,17 @@ gpt_version_str2int = {
 
 
 TIME_INTERVAL_DAYS = 3
-MAX_TIME_INTERVALS = 128
+MAX_TIME_INTERVALS = 129
 START_TIME = datetime(2023, 4, 9, 0, 0, 0).replace(tzinfo=None)
 
 def get_time_interval(time: datetime) -> int:
     res = (time.replace(tzinfo=None) - START_TIME).days // TIME_INTERVAL_DAYS
     
-    if not 0 <= res <= MAX_TIME_INTERVALS:
-        print(f"Warning: time {time.replace(tzinfo=None)} - {START_TIME} = {(time.replace(tzinfo=None) - START_TIME).days} out of range. Violated 0 <= {res} <= {MAX_TIME_INTERVALS}.")
+    if not 0 <= res < MAX_TIME_INTERVALS:
+        print(f"Warning: time {time.replace(tzinfo=None)} - {START_TIME} = {(time.replace(tzinfo=None) - START_TIME).days} out of range. Violated 0 <= {res} < {MAX_TIME_INTERVALS}.")
         assert False
     
-    return min(res, MAX_TIME_INTERVALS - 1)
+    return res
 
 
 def calculate_diversity(
