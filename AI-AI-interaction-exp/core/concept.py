@@ -25,7 +25,6 @@ from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering  # Clusterin
 import umap
 import matplotlib.pyplot as plt 
 import seaborn as sns
-import OpenAI from "openai";
 
 EMB_DIM = 256
 
