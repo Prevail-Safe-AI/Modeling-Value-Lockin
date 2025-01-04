@@ -229,6 +229,9 @@ def build_user_panel(
             print(f"Warning: unknown GPT version {sample.gpt_version}")
             continue
         
+        if sample.concepts is None:
+            continue
+        
         user_directories[sample.user_id].append(sample)
     
     # Construct DataFrame rows
