@@ -89,7 +89,7 @@ class Analysis:
         print(f"Saving concepts{suffix} to cache...")
         self.concepts_only = [
             {"sample_id": sample.sample_id, "concepts_breakdown": getattr(sample, "concepts_breakdown", None)}
-            for sample in tqdm(self.samples)
+            for sample in tqdm(self.samples) if hasattr(sample, "concepts") and sample.concepts is not None
         ]
         self.save_backup(self.concepts_only, f"-concepts{suffix}", "json")
         print(f"Saved {len(self.concepts_only)} concepts{suffix}.")

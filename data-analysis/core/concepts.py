@@ -109,6 +109,7 @@ def extract_concepts(samples: List[DataSample], extractor: str, max_retries: int
 def simplify_concepts(samples: List[DataSample]) -> List[DataSample]:
     for sample in tqdm(samples):
         if not sample.concepts:
+            sample.concepts_breakdown = {}
             continue
         
         sample.concepts = [simplify_text(concept) for concept in sample.concepts]
@@ -340,6 +341,7 @@ def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[
         
     for sample in samples:
         if not sample.concepts:
+            sample.concepts_breakdown = {}
             continue
         sample.concepts = [inv_mapping[concept] for concept in sample.concepts if is_legit(concept)]
         for key in sample.concepts_breakdown:
