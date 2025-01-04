@@ -75,12 +75,15 @@ class Analysis:
         if self.concepts_only is not None:
             print(f"Loaded {len(self.concepts_only)} concepts{suffix}. Sorting...")
             self.concepts_only = sorted(self.concepts_only, key = lambda x: x["sample_id"])
-            for sample, concepts in tqdm(zip(self.samples, self.concepts_only)):
+            concepts_ptr = 0
+            for sample in tqdm(self.concepts_only):
+                concepts = self.concepts_only[concepts_ptr]
                 if concepts["sample_id"] > sample.sample_id:
                     sample.concepts_breakdown = {}
                     sample.concepts = None
                     continue
                 
+                concepts_ptr += 1
                 assert concepts["sample_id"] == sample.sample_id
                 sample.concepts_breakdown = concepts["concepts_breakdown"]
                 if sample.concepts_breakdown is not None:
@@ -88,6 +91,7 @@ class Analysis:
                 else:
                     sample.concepts = None
             
+            assert concepts_ptr == len(self.concepts_only)
             return True
         
         print(f"Failed to load concepts{suffix} from cache.")
