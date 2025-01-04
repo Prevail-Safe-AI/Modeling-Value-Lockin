@@ -223,9 +223,10 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
     del embeddings
     print(f"Data shape: {data.shape}")
     print(f"Data head: {data[:5, :10]}")
-    print("Clustering...")
+    print(f"Clustering... (current time: {time.strftime('%Y%m%d-%H%M%S')})")
     clusterer = hdbscan.HDBSCAN(min_cluster_size=CLUSTER_MIN_SIZE).fit(data)
-    print("Clustering complete.")
+    print(f"Clustering complete. (current time: {time.strftime('%Y%m%d-%H%M%S')})")
+    print(f"Number of clusters: {clusterer.labels_.max() + 1}")
     
     # Identify parent clusters of each string and each cluster
     clusters_pd = clusterer.condensed_tree_.to_pandas()
