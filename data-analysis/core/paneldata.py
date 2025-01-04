@@ -44,7 +44,7 @@ def calculate_diversity(
     selected_clusters: List[int],
     root: int,
 ) -> float:
-    if not concepts_present:
+    if not concepts_present or len(concepts_present) == 1:
         return np.nan
     
     depth: Dict[int, int] = {}
@@ -57,7 +57,9 @@ def calculate_diversity(
             depth[concept] = 0
             return 0
         
-        depth[concept] = get_depth(cluster_selected_parent[concept]) + 1
+        d = get_depth(cluster_selected_parent[concept]) + 1
+        depth[concept] = d
+        return d
     
     subtree_counts: Dict[int, int] = defaultdict(int)
     for concept in concepts_present:
