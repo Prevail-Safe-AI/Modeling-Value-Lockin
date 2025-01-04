@@ -16,32 +16,22 @@ import numpy as np
 import pandas as pd 
 import json
 import os
-import voyageai
-import voyageai.client  # NEP I don't know the function of this one. 
-from typing import List, Dict, Tuple, Mapping
+import sys
+from typing import List, Dict, Tuple, Mapping, Union
 from typeguard import check_type
 
 from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering  # Clustering algos 
 import umap
 import matplotlib.pyplot as plt 
 import seaborn as sns
+import voyageai
+
+# Adjust the import search path to include its parent and parent-parent folders
+sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
+
 
 EMB_DIM = 256
 
-
-# Gather the data (maybe merging every KB  into a bigger .json)
-all_data = [] 
-folder_path = "AI-AI-interaction-exp/data/runs/run-20241231-232135"  # We need to pass on this from the terminal with one line that defines the folder path.
-
-file_names = sorted([x for x in os.listdir(folder_path) if x.endswith(".json")], 
-                    key=lambda x: int(x.split('.')[0].replace("knowledge-turn", "")))
-
-for file_name in file_names:
-    file_path = os.path.join(folder_path, file_name)
-    with open(file_path, 'r') as file:
-        kb = json.load(file)
-        
-        all_data.append(kb)
 
 
 # Embedding: str --> vector representations for later nummerical processing 
@@ -60,22 +50,32 @@ def embedding(vo: voyageai.Client, knowledges: List[List[str]]) -> List[np.array
     
     all_embeddings = [] 
     for knowledge in knowledges:
-        cur_emb = vo.embed(
-            knowledge,  
+        statements = [entry["statement"] for entry in knowledge[:100]]
+        print(f'first 10 statements is {statements[:10]}, the len of statements being {len(statements)}')
+        raw_output = vo.embed(  
+            statements,  # Expecting List[str]
             model="voyage-3-large",
             output_dimension=EMB_DIM,  # at least 256. Do we want to pass on this argument?
-        ).embeddings
+        )
+        print(f'the raw output is {raw_output}') # With an intention ot check out whether raw output contains nan or not. 
+        cur_emb = raw_output.embeddings#[:,1:]  # NEP I am concerned that this might be a nested list, causing errors.
+        #EMB_DIM = cur_emb.shape[1]
+        print(f'the 1st item of embedding looks like {cur_emb[:1]}, with the len of {len(cur_emb)}, and type of {type(cur_emb)}')
 
+        if np.isnan(cur_emb).any():
+            print(f"Found NaN in embedding. Replacing NaN values.")
+            cur_emb = np.nan_to_num(cur_emb, nan=0.0)  # Replace NaNs with 0.0
 
         # Processing exceptions 
-        if not isinstance(cur_emb, list) or \
-            len(cur_emb) != len(knowledge) or \
+        if len(cur_emb) != len(knowledge[:100]) or \
             np.isnan(cur_emb).any() or \
             np.isinf(cur_emb).any():
             raise ValueError("Failed to embed strings. Invalid embeddings returned.")
+        cur_emb = np.array(cur_emb) # Converting [List[List[int]] to np.array
+        print(f'current type of cur_emb is {cur_emb}')
         all_embeddings.append(cur_emb)
 
-    return all_embeddings
+    return all_embeddings  # This actually gives us List[List[List[int]]]
 
 # Alternative embedding w/ OpenAI 
 
@@ -92,14 +92,22 @@ def dim_red(embeddings: List[np.array])-> List[np.array]:
     '''
 
     # Initialize UMAP
-    reducer = umap.UMAP(n_neighbors = 15, # default 
-                        min_dist = 0.1, # default
-                        n_components=2,   # We want to draw a 2D graph in the end 
-                        random_state = 42
-
-    )
     reduced_embeddings = [] 
     for embedding in embeddings:
+        print(f"Processing embedding with shape: {embedding.shape}")
+        if embedding.shape[0] <= 2:
+            raise ValueError(f"Too few rows in embedding for dimensionality reduction: {embedding.shape[0]}")
+        
+        # Adjust n_neighbors based on data size
+        n_neighbors = min(embedding.shape[0] - 1, 15)
+        reducer = umap.UMAP(n_neighbors = n_neighbors, 
+                            min_dist = 0.1, # default
+                            n_components=2,   # We want to draw a 2D graph in the end 
+                            random_state = 42
+
+        )
+        print(f"Using n_neighbors={n_neighbors} for embedding with {embedding.shape[0]} rows.")
+
         reduced_embedding = reducer.fit_transform(embedding) 
         reduced_embeddings.append(reduced_embedding)
 
@@ -112,7 +120,7 @@ def cluster_kmeans(reduced_embeddings: List[np.array]) -> List[np.array]:
     '''
     params etc 
 
-    :return: labels_kmeans, each is a array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
+    :return: labels_labels, each is a array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
     :type: List[nd.array] (num_turns, (num_items,))
 
     Tianyi: there should be improved kmean for self-emerged clusters.
@@ -149,16 +157,18 @@ def visualization(prim_dims: List[np.array], list_labels: List[np.array]):
         plt.xlabel("Principal Dimension 1")
         plt.ylabel("Principal Dimension 2")
         plt.legend(title='Cluster', loc='best')
-        plt.savefig(f"turn_{turn}_clusters_2d.pdf", format="pdf")
+        os.makedirs("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/analysis/", exist_ok=True)
+        plt.savefig(f"AI-AI-interaction-exp/data/analysis/turn_{turn}_clusters_2d.pdf", format="pdf")
+        plt.close()  # Close the plot to avoid overlapping figures
 
     # Visualize cluster trends over time (We only create one graph all all turns)
         
     # a) Create a DataFrame containing turns and assigned clusters
     records = []
     for turn_idx, label_array in enumerate(list_labels):
+        print(f'label_array is {label_array}, with the shape of {label_array.shape}')
         for lab in label_array:
             records.append({"turn": turn_idx, "cluster": lab}) # Effectively a list of dict (turns*len_knowledge_base,)
-
     df = pd.DataFrame(records)
 
     # b) Count how many items are in each cluster per turn
@@ -173,7 +183,76 @@ def visualization(prim_dims: List[np.array], list_labels: List[np.array]):
     plt.xlabel("Turns")
     plt.ylabel("Number of Items in Each Cluster")
     plt.legend(title='Cluster', loc='best')
-    plt.savefig("cluster_size_trends.pdf", format="pdf")
+    os.makedirs("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/analysis/", exist_ok=True)
+    plt.savefig("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/analysis/", format="pdf")
+    plt.close()  # Close the plot to avoid overlapping figures
+
+
+if __name__ == "__main__":
+    import logging
+    import voyageai
+    voyageai.api_key = "pa-D7cexR9gsRuYWYv3IfAS9h-aIV_bKjuTJ9nx7n59Du8"
+    print("Current working directory:", os.getcwd())
+
+    # Gather the data (maybe merging every KB  into a bigger .json)
+    all_data = [] 
+    folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
+    if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"):
+        raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
+
+    file_names = sorted([x for x in os.listdir(folder_path) if x.endswith(".json") and x.startswith("knowledge-turn")], 
+                        key=lambda x: int(x.split('.')[0].replace("knowledge-turn", "")))
+
+    for file_name in file_names:
+        file_path = os.path.join(folder_path, file_name)
+        with open(file_path, 'r') as file:
+            kb = json.load(file)
+            all_data.append(kb)
+    if not all_data:
+        print("No knowledge base data is found, Exiting.")
+        exit()
+
+    if not all(isinstance(kb, list) and all(check_type(item, Dict[str, Union[int, str]]) for item in kb) for kb in all_data):
+        raise ValueError("Data formate invalid: all_data should be a list of lists of strings")
+
+    logging.info(f"Loaded {len(all_data)} knowledge bases.")
+    # NEP I guess this would log/print?
+
+    # Define an instance of voyageai client 
+    vo = voyageai.Client()
+
+    # Get embeddings
+    try:
+        embeddings = embedding(vo, all_data)  # List[np.array]
+        logging.info("Embeddings generated successfully.")
+    except Exception as e:
+        logging.error(f"Error during embedding: {e}")
+        exit(1) # What does this "1" do?
+
+    # Reduce dimensions
+    try:
+        reduced_embeddings = dim_red(embeddings)  # List[np.array]
+        logging.info("Dimensionality reduction completed.")
+    except Exception as e:
+        logging.error(f"Error during dimensionality reduction: {e}")
+        exit(1)
+
+    # Clustering w/ kmeans 
+    try:
+        clusters = cluster_kmeans(reduced_embeddings)
+        logging.info("Clustering completed.")
+    except Exception as e:
+        logging.error(f"Error during clustering: {e}")
+        exit(1)
+
+
+    # Visualization
+    try:
+        visualization(reduced_embeddings, clusters)
+        logging.info("Visualization completed. PDFs generated.")
+    except Exception as e:
+        logging.error(f"Error during visualization: {e}")
+        exit(1)
 
 
 
