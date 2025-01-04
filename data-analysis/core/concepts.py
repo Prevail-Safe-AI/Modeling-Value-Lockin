@@ -193,6 +193,7 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         del loaded_embeddings
         
         if os.environ.get("TRUNCATE", None) is not None:
+            random.seed(2025)
             num_truncate = int(os.environ["TRUNCATE"])
             indices = random.sample(range(len(strings)), num_truncate)
             strings = [strings[i] for i in indices]
