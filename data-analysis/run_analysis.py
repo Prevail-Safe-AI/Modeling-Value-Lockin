@@ -76,7 +76,7 @@ class Analysis:
             print(f"Loaded {len(self.concepts_only)} concepts{suffix}. Sorting...")
             self.concepts_only = sorted(self.concepts_only, key = lambda x: x["sample_id"])
             concepts_ptr = 0
-            for sample in tqdm(self.concepts_only):
+            for sample in tqdm(self.samples):
                 concepts = self.concepts_only[concepts_ptr]
                 if concepts["sample_id"] > sample.sample_id:
                     sample.concepts_breakdown = {}
