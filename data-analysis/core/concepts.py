@@ -198,7 +198,7 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
             strings = [strings[i] for i in indices]
             embeddings = [embeddings[i] for i in indices]
             
-            os.environ["EMBEDDINGS"] += f"-dummy{len(loaded_embeddings)}"
+            os.environ["EMBEDDINGS"] += f"-dummy{num_truncate}"
     
     else:
         print(f"Embedding strings ({len(strings)} total)...")
