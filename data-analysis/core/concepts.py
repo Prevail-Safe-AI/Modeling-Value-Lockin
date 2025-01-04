@@ -172,11 +172,12 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         with open(os.environ["EMBEDDINGS"], "r") as f:
             loaded_embeddings = json.load(f)
         
-        if os.environ.get("TRUNCATE", None) is not None:
-            loaded_embeddings = loaded_embeddings[:int(os.environ["TRUNCATE"])]
-        
         print("Sorting loaded embeddings...")
         loaded_embeddings = sorted(loaded_embeddings, key=lambda x: x[0])
+        
+        if os.environ.get("TRUNCATE", None) is not None:
+            loaded_embeddings = loaded_embeddings[:int(os.environ["TRUNCATE"])]
+            os.environ["EMBEDDINGS"] += f"-dummy{len(loaded_embeddings)}"
         
         embeddings = [embedding for _, embedding in tqdm(loaded_embeddings)]
         print("Embeddings loaded. Verifying...")
