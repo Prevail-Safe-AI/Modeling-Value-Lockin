@@ -176,10 +176,6 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         print("Sorting loaded embeddings...")
         loaded_embeddings = sorted(loaded_embeddings, key=lambda x: x[0])
         
-        if os.environ.get("TRUNCATE", None) is not None:
-            loaded_embeddings = loaded_embeddings[:int(os.environ["TRUNCATE"])]
-            os.environ["EMBEDDINGS"] += f"-dummy{len(loaded_embeddings)}"
-        
         embeddings = [embedding for _, embedding in tqdm(loaded_embeddings)]
         print("Embeddings loaded. Verifying...")
         
@@ -195,6 +191,14 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
             strings = strings[:len(embeddings)]
         
         del loaded_embeddings
+        
+        if os.environ.get("TRUNCATE", None) is not None:
+            num_truncate = int(os.environ["TRUNCATE"])
+            indices = random.sample(range(len(strings)), num_truncate)
+            strings = [strings[i] for i in indices]
+            embeddings = [embeddings[i] for i in indices]
+            
+            os.environ["EMBEDDINGS"] += f"-dummy{len(loaded_embeddings)}"
     
     else:
         print(f"Embedding strings ({len(strings)} total)...")
