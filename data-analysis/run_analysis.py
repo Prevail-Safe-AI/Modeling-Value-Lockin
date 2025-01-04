@@ -36,7 +36,9 @@ class Analysis:
             self.samples = length_truncation(self.samples, max_convo_length)
         self.samples = deduplicate_users(self.samples)
         del self.raw_data
-        print(f"Cleaned {len(self.samples)} samples.")
+        
+        print(f"Cleaned {len(self.samples)} samples. Sorting...")
+        self.samples = sorted(self.samples, key = lambda x: x.sample_id)
     
     def load_backup(self, suffix = "", method: Literal["json", "pickle"] = "pickle"):
         if method == "json":
@@ -71,9 +73,15 @@ class Analysis:
         print(f"Trying to load concepts{suffix} from cache...")
         self.concepts_only = self.load_backup(f"-concepts{suffix}", "json")
         if self.concepts_only is not None:
-            print(f"Loaded {len(self.concepts_only)} concepts{suffix}.")
-            for sample, concepts in zip(self.samples, self.concepts_only):
-                assert sample.sample_id == concepts["sample_id"]
+            print(f"Loaded {len(self.concepts_only)} concepts{suffix}. Sorting...")
+            self.concepts_only = sorted(self.concepts_only, key = lambda x: x["sample_id"])
+            for sample, concepts in tqdm(zip(self.samples, self.concepts_only)):
+                if concepts["sample_id"] > sample.sample_id:
+                    sample.concepts_breakdown = {}
+                    sample.concepts = None
+                    continue
+                
+                assert concepts["sample_id"] == sample.sample_id
                 sample.concepts_breakdown = concepts["concepts_breakdown"]
                 if sample.concepts_breakdown is not None:
                     sample.concepts = list(set([c for l in sample.concepts_breakdown.values() for c in l]))
