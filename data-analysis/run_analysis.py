@@ -190,7 +190,7 @@ class Analysis:
         
         # Get panel data
         self.panels = {}
-        if not self.save_or_load_panels():
+        if not self.save_or_load_panels() or eval(os.environ.get("FORCE_PANEL_REBUILD", "False")):
             self.panels = build_all_panels(self.panels, self.samples, **self.clusterinfo)
             self.save_or_load_panels()
         
