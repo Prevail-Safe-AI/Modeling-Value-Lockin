@@ -10,16 +10,16 @@ from core.samples import DataSample
 from core.templates import (
     concept_extraction_template,
 )
-from utils.log_utils import silence_decorator, dynamic_printing_decorator, dump_file
-from utils.json_utils import extract_json_from_str
+from utils.log_utils import silence_decorator, dynamic_printing_decorator
+from utils.json_utils import extract_json_from_str, dump_file, load_file
 from utils.nlp_utils import simplify_text
 import numpy as np
 import pandas as pd
 import concurrent.futures as cf
 import threading as th
 
-CLUSTER_MIN_SIZE = 4
-CLUSTER_STEP_MULTIPLIER_LOG2 = 2
+CLUSTER_MIN_SIZE = 1
+CLUSTER_STEP_MULTIPLIER_LOG2 = 1
 
 
 def extract_concepts(samples: List[DataSample], extractor: str, max_retries: int = 5) -> List[DataSample]:
@@ -228,23 +228,38 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
     del embeddings
     print(f"Data shape: {data.shape}")
     print(f"Data head: {data[:5, :10]}")
-    print(f"Clustering... (current time: {time.strftime('%Y%m%d-%H%M%S')})")
-    clusterer = hdbscan.HDBSCAN(min_cluster_size=CLUSTER_MIN_SIZE).fit(data)
-    print(f"Clustering complete. (current time: {time.strftime('%Y%m%d-%H%M%S')})")
-    print(f"Number of clusters: {clusterer.labels_.max() + 1}")
     
-    # Identify parent clusters of each string and each cluster
-    clusters_pd = clusterer.condensed_tree_.to_pandas()
-    min_id = int(min(clusters_pd.child.min(), clusters_pd.parent.min()) + 0.1)
-    max_id = int(max(clusters_pd.child.max(), clusters_pd.parent.max()) + 0.1)
-    assert min_id == 0 and len(clusters_pd) == max_id # Ensure that the IDs are contiguous and that it is a single tree without any disconnected nodes
+    if os.environ.get("CLUSTERS_PD", None) is not None and os.environ.get("CLUSTERS", None) is not None:
+        print("Loading clusters_pd...")
+        clusters_pd = pd.read_csv(os.environ["CLUSTERS_PD"], index_col=0)
+        min_id = int(min(clusters_pd.child.min(), clusters_pd.parent.min()) + 0.1)
+        max_id = int(max(clusters_pd.child.max(), clusters_pd.parent.max()) + 0.1)
+        assert min_id == 0 and len(clusters_pd) == max_id
+        
+        print("Loading parent_mapping, cluster_sizes, summaries, and weights...")
+        obj = load_file(os.environ["CLUSTERS"])
+        weights = obj[3]
+    
+    else:
+        print(f"Clustering... (current time: {time.strftime('%Y%m%d-%H%M%S')})")
+        clusterer = hdbscan.HDBSCAN(min_cluster_size=CLUSTER_MIN_SIZE).fit(data)
+        print(f"Clustering complete. (current time: {time.strftime('%Y%m%d-%H%M%S')})")
+        
+        # Identify parent clusters of each string and each cluster
+        clusters_pd = clusterer.condensed_tree_.to_pandas()
+        min_id = int(min(clusters_pd.child.min(), clusters_pd.parent.min()) + 0.1)
+        max_id = int(max(clusters_pd.child.max(), clusters_pd.parent.max()) + 0.1)
+        assert min_id == 0 and len(clusters_pd) == max_id # Ensure that the IDs are contiguous and that it is a single tree without any disconnected nodes
+        
+        # Get the probabilities of each string and robustness of each cluster
+        weights = [None] * min_id + [float(clusterer.probabilities_[i]) for i in range(len(strings))]
+        weights += [None] * (max_id + 1 - len(weights))
+    
+    print(f"Number of clusters: {max_id - len(strings) + 1}")
     parent_mapping = [None] * (max_id + 1)
+    
     for i, row in tqdm(clusters_pd.iterrows()):
         parent_mapping[int(row.child + 0.1)] = int(row.parent + 0.1)
-    
-    # Get the probabilities of each string and robustness of each cluster
-    weights = [None] * min_id + [float(clusterer.probabilities_[i]) for i in range(len(strings))]
-    weights += [None] * (max_id + 1 - len(weights))
     
     # Back up clusters_pd, parent_mapping, and weights
     print("Backing up clusters_pd...")
@@ -255,53 +270,48 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
     dump_file(weights, f"weights-initial-{time.strftime('%Y%m%d-%H%M%S')}.json")
     
     # Create summary mapping for strings
+    leaves: List[List[int]] = [[] for _ in range(max_id + 1)]
+    cluster_sizes = [None for _ in range(max_id + 1)]
     summaries = [None] * min_id + strings + [None] * (max_id + 1 - len(strings))
     assert len(parent_mapping) == len(summaries) == len(weights)
-    
-    # Create strings mapping for lowest-level clusters
-    sons: List[List[int]] = [[] for _ in range(max_id + 1)]
-    cluster_sizes = [None for _ in range(max_id + 1)]
-    queue, ptr = [], 0
-    for i, string in tqdm(enumerate(strings)):
-        label = parent_mapping[i + min_id]
-        if cluster_sizes[label] is None:
-            queue.append(label)
-            cluster_sizes[label] = 0
         
-        cluster_sizes[label] += 1
-        cluster_sizes[i + min_id] = 1
-        sons[label].append(i + min_id)
+    # Create the sons list
+    sons: List[List[int]] = [[] for _ in range(max_id + 1)]
+    for i, parent in enumerate(parent_mapping):
+        if parent is not None:
+            sons[parent].append(i)
     
-    # Create strings mapping for higher-level clusters with bottom-up BFS
-    with tqdm(total=max_id - len(strings)) as pbar:
-        while ptr < len(queue):
-            pbar.update(1)
-            label = queue[ptr]
-            ptr += 1
-            if len(sons[label]) > 5:
-                cluster_element_probs = np.array([weights[i] for i in sons[label]])
+    # Create strings mapping for higher-level clusters with bottom-up DFS
+    with tqdm(total = max_id-len(strings)) as pbar:
+        def dfs(label):
+            cluster_sizes[label] = int(label < len(strings))
+            
+            for son in sons[label]:
+                dfs(son)
+                cluster_sizes[label] += cluster_sizes[son]
+                leaves[label].extend(leaves[son])
+                leaves[son] = []
+            
+            if len(leaves[label]) > 5:
+                cluster_element_probs = np.array([weights[i] for i in leaves[label]])
                 if not np.isnan(cluster_element_probs).all() and not np.isinf(cluster_element_probs).all():
                     cluster_element_probs = np.ones_like(cluster_element_probs)
+                
                 cluster_element_probs /= np.sum(cluster_element_probs)
-                sons[label] = np.random.choice(
-                    sons[label],
+                leaves[label] = np.random.choice(
+                    leaves[label],
                     5,
                     replace=False,
                     p=cluster_element_probs,
                 ).tolist()
             
-            cluster_name = f"CLUSTER {label} ({cluster_sizes[label]}): {', '.join([summaries[i] for i in sons[label]])}"
+            cluster_name = f"CLUSTER {label} ({cluster_sizes[label]}): {', '.join([summaries[i] for i in leaves[label]])}"
             summaries[label] = cluster_name
             
-            if parent_mapping[label] is not None:
-                parent = parent_mapping[label]
-                if cluster_sizes[parent] is None:
-                    queue.append(parent)
-                    cluster_sizes[parent] = 0
-                
-                cluster_sizes[parent] += cluster_sizes[label]
-                sons[parent_mapping[label]].extend(sons[label])
-                sons[label] = []
+            pbar.update(1)
+        
+        dfs(len(strings))
+        assert all([cluster_sizes[i] is not None for i in range(max_id + 1)])
     
     # Backup cluster data
     print("Backing up clusters...")
