@@ -12,6 +12,7 @@ Three aspects to be worked on:
 
 '''
 # Import 
+import time
 import numpy as np
 import pandas as pd 
 import json
@@ -21,6 +22,7 @@ from typing import List, Dict, Tuple, Mapping, Union
 from typeguard import check_type
 
 from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering  # Clustering algos 
+from sklearn.metrics import silhouette_score # to decide best k in k-means 
 import umap
 import matplotlib.pyplot as plt 
 import seaborn as sns
@@ -80,6 +82,41 @@ def embedding(vo: voyageai.Client, knowledges: List[List[str]]) -> List[np.array
 # Alternative embedding w/ OpenAI 
 
 
+# Clustering (K-means for MVP)
+def cluster_kmeans(embeddings: List[np.array]) -> List[np.array]:
+
+    '''
+    params etc 
+    :param embeddings: all knowledge items converted to sentence embeddings.
+    :type embeddings: List[np.array]
+
+    :return: list_labels, each is a array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
+    :type: List[nd.array] (num_turns, (num_items,))
+
+    Tianyi: there should be improved kmean for self-emerged clusters.
+    '''
+    # Silhouette to decide the best k 
+    data = np.vstack(embeddings) # Vertically stacks arrays, shape will be [len(list)*num_items, embed_dims]
+
+    best_k = 3 # We give it a default (to avoid the None case; also k is a decent guess)
+    best_score = -1
+    for k in range(2,11):
+        kmean_for_best_k = KMeans(n_clusters=k, random_state=42).fit(data)
+        score = silhouette_score(data, kmean_for_best_k.labels_)
+        if score > best_score:
+            best_score = score
+            best_k = k
+
+
+    # K-means to do the clustering 
+    list_labels = []
+    for embedding in embeddings:
+        kmeans = KMeans(n_clusters=best_k, random_state=42)  # For reproductivity 
+        labels_kmeans = kmeans.fit_predict(embedding)
+        list_labels.append(labels_kmeans)  # In visualization you should associate each np.array (labels contained in one KB) a KB identifier  
+    return list_labels 
+
+
 # UMAP --> Apply PCA and leave out the essential dimensions (2 PC; initial and final comparison)
 def dim_red(embeddings: List[np.array])-> List[np.array]: 
     
@@ -87,8 +124,8 @@ def dim_red(embeddings: List[np.array])-> List[np.array]:
     :param: embeddings: a numpy array that each row corresponds to one item and each column is one dim of that item
     :type embeddings: np.array (num_items, dims)
 
-    :return reduce_dembeddings, 2-dim primary dims after umap
-    :rtype: List[np.array] (num_turns, (num_items, prim_dims)), num_turns refers to turns in user-tutor chat, corresponding to the num of knowledge-base, too; num_items refers to num of knowledge items on one knowledge base 
+    :return all_reduced_embeddings, 2-dim primary dims after umap
+    :rtype: np.array [num_turns * num_items, prim_dims], num_turns refers to turns in user-tutor chat, corresponding to the num of knowledge-base, too; num_items refers to num of knowledge items on one knowledge base 
     '''
 
     # Initialize UMAP
@@ -110,56 +147,55 @@ def dim_red(embeddings: List[np.array])-> List[np.array]:
 
         reduced_embedding = reducer.fit_transform(embedding) 
         reduced_embeddings.append(reduced_embedding)
-
-    return reduced_embeddings
-
-
-# Clustering (K-means for MVP)
-def cluster_kmeans(reduced_embeddings: List[np.array]) -> List[np.array]:
-
-    '''
-    params etc 
-
-    :return: labels_labels, each is a array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
-    :type: List[nd.array] (num_turns, (num_items,))
-
-    Tianyi: there should be improved kmean for self-emerged clusters.
-    '''
-    list_labels = []
-    for reduced_embedding in reduced_embeddings:
-        kmeans = KMeans(n_clusters=3, random_state=42)  # For reproductivity 
-        labels_kmeans = kmeans.fit_predict(reduced_embedding)
-        list_labels.append(labels_kmeans)
-    return list_labels 
+        all_reduced_embeddings = np.vstack(reduced_embeddings)
+    return all_reduced_embeddings
 
 # Visualization
-def visualization(prim_dims: List[np.array], list_labels: List[np.array]):
+def visualization(prim_dims: np.array, list_labels: List[np.array]):
     '''
-    :params pri_dims: the primary dims after applying dim reduction. 
-    :type final_arrays: (num_turns, (num_items, prim_dims)
+    :params prim_dims: the primary dims after applying dim reduction. 
+    :type prim_dims: [num_turns * num_items, prim_dims]
 
-    :return: list_labels, each is a array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
+    :return: list_labels, each is a array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]. len(list)=600, each np.array[100,]
     :rtype: List[nd.array] (num_turns, (num_items,))
 
-
     '''
-    # Visualize clusters in 2D (We create a cluster for each turn)
-    for turn, prim_dim in enumerate(prim_dims):
-        plt.figure(figsize=(8,6))
-        sns.scatterplot(
-            x=prim_dim[:,0],
-            y=prim_dim[:,1],
-            hue = list_labels[turn], # names of the columns
-            palette= 'Set1',
-            legend='full'
-        )
-        plt.title("Clusters Visualized in 2D")
-        plt.xlabel("Principal Dimension 1")
-        plt.ylabel("Principal Dimension 2")
-        plt.legend(title='Cluster', loc='best')
-        os.makedirs("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/analysis/", exist_ok=True)
-        plt.savefig(f"AI-AI-interaction-exp/data/analysis/turn_{turn}_clusters_2d.pdf", format="pdf")
-        plt.close()  # Close the plot to avoid overlapping figures
+    # Visualize cluster in 2D
+
+    all_labels = np.array(list_labels).flatten() # We want to acquire all unique cluster values to make the graph.
+    print(f'all_labels shape {all_labels.shape}')
+    # identifying data to be highlighted (e.g., here we are trying to highlight first and last 1%, correponding to the first and last 6 knowledge_bases)
+    array_length = len(list_labels[0]) # each knowledge base is of the same length 
+    portion_to_identify = int(len(list_labels)*(1/600)) # We only identify the first and last KB; but this can change
+    source_ids_start, source_ids_end = np.full(array_length * portion_to_identify, 1), np.full(array_length * portion_to_identify, 2)
+    source_ids = np.concatenate([source_ids_start, np.full(array_length *(len(list_labels)-portion_to_identify*2),-1), source_ids_end])
+    print(f'prim_dims[:,0] shape {prim_dims[:,0].shape}')
+    print(f'source_ids shape {source_ids.shape}')
+
+    plt.figure(figsize=(8,6))
+    sns.scatterplot(
+        x=prim_dims[:,0],
+        y=prim_dims[:,1],
+        hue = all_labels, # all the unique cluster values can be found here 
+        style = np.where(source_ids == -1, "Unlabeled", source_ids), # data point will not be highlighted if their source_id == -1
+        palette= 'Set1',
+        legend='full'
+    )
+    plt.title("Clusters Visualized in 2D")
+    plt.xlabel("Principal Dimension 1")
+    plt.ylabel("Principal Dimension 2")
+    plt.legend(title='Cluster', loc='best')
+
+    # Make timestamped directory for this experiment
+    timestamp = time.strftime("%Y%m%d-%H%M%S")
+
+    # Use the timestamp to record running data files 
+    backup_dir = f"/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/analysis/run-{timestamp}"
+    os.makedirs(backup_dir, exist_ok=True)
+    print(f"Directory created: {os.path.exists(backup_dir)}")
+
+    plt.savefig(f"{backup_dir}/clusters_2d.pdf", format="pdf")
+    plt.close()  # Close the plot to avoid overlapping figures
 
     # Visualize cluster trends over time (We only create one graph all all turns)
         
@@ -172,7 +208,8 @@ def visualization(prim_dims: List[np.array], list_labels: List[np.array]):
     df = pd.DataFrame(records)
 
     # b) Count how many items are in each cluster per turn
-    cluster_counts = df.groupby(['turn', 'cluster']).size().reset_index(name='num_items') # Groups all rows by the unique (turn, cluster) pairs in df, resulting in .size(), which is a Series where the index is (turn, cluster) and the value is the count of items.effectively one group=one point on the graph=times of that cluster at given turn
+    cluster_counts = df.groupby(['turn', 'cluster']).size().reset_index(name='num_items') 
+    # Groups all rows by the unique (turn, cluster) pairs in df, resulting in .size(), which is a Series where the index is (turn, cluster) and the value is the count of items.effectively one group=one point on the graph=times of that cluster at given turn
 
     # c) Pivot so each cluster becomes a column, indexed by turn
     pivot_df = cluster_counts.pivot(index='turn', columns='cluster', values='num_items').fillna(0)  
@@ -183,8 +220,9 @@ def visualization(prim_dims: List[np.array], list_labels: List[np.array]):
     plt.xlabel("Turns")
     plt.ylabel("Number of Items in Each Cluster")
     plt.legend(title='Cluster', loc='best')
-    os.makedirs("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/analysis/", exist_ok=True)
-    plt.savefig("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/analysis/", format="pdf")
+
+    os.makedirs(backup_dir, exist_ok=True)
+    plt.savefig("{backup_dir}/cluster_trends.pdf", format="pdf")
     plt.close()  # Close the plot to avoid overlapping figures
 
 
@@ -229,22 +267,22 @@ if __name__ == "__main__":
         logging.error(f"Error during embedding: {e}")
         exit(1) # What does this "1" do?
 
-    # Reduce dimensions
+
+    # Clustering w/ kmeans 
+    try:
+        clusters = cluster_kmeans(embeddings)
+        logging.info("Clustering completed.")
+    except Exception as e:
+        logging.error(f"Error during clustering: {e}")
+        exit(1)
+
+    # Reducing dimensions for visualization 
     try:
         reduced_embeddings = dim_red(embeddings)  # List[np.array]
         logging.info("Dimensionality reduction completed.")
     except Exception as e:
         logging.error(f"Error during dimensionality reduction: {e}")
         exit(1)
-
-    # Clustering w/ kmeans 
-    try:
-        clusters = cluster_kmeans(reduced_embeddings)
-        logging.info("Clustering completed.")
-    except Exception as e:
-        logging.error(f"Error during clustering: {e}")
-        exit(1)
-
 
     # Visualization
     try:
