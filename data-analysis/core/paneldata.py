@@ -682,11 +682,13 @@ def build_all_panels(existing_dict, *args, **kwargs) -> Dict[str, pd.DataFrame]:
     print(f"Building all panels... (existing_dict: {existing_dict.keys()})")
     
     if "temporal_panel1" not in existing_dict or not isinstance(existing_dict["temporal_panel1"], pd.DataFrame) or \
-       "temporal_panel2" not in existing_dict or not isinstance(existing_dict["temporal_panel2"], pd.DataFrame):
+       "temporal_panel2" not in existing_dict or not isinstance(existing_dict["temporal_panel2"], pd.DataFrame) or \
+       eval(os.environ.get("FORCE_PANEL_REBUILD", "False")):
         print("Building temporal panels...")
         existing_dict["temporal_panel1"], existing_dict["temporal_panel2"] = build_temporal_panel(*args, **kwargs)
         
-    if "user_panel" not in existing_dict or not isinstance(existing_dict["user_panel"], pd.DataFrame):
+    if "user_panel" not in existing_dict or not isinstance(existing_dict["user_panel"], pd.DataFrame) or \
+       eval(os.environ.get("FORCE_PANEL_REBUILD", "False")):
         print("Building user panel...")
         existing_dict["user_panel"] = build_user_panel(*args, **kwargs)
     
