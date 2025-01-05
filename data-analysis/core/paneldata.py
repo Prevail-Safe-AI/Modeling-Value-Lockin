@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import time
+import time, os
 from tqdm import tqdm
 from datetime import datetime
 from copy import deepcopy
@@ -79,6 +79,14 @@ def calculate_diversity(
             continue
         
         diversity += (get_weight(concept) - get_weight(cluster_selected_parent[concept])) * count * (count - 1)
+    
+    if len(selected_clusters) <= 100:
+        print(f"Diversity Input: {concepts_present}")
+        for concept in concepts_present:
+            print(f"\tConcept {concept} (depth {get_depth(concept)}) --- {cluster_name[concept]}")
+        print(f"Subtree Counts: {subtree_counts}")
+        print(f"Output: {diversity / (nsamples * (nsamples - 1))}")
+        print("\n\n\n")
     
     return diversity / (nsamples * (nsamples - 1))
 
