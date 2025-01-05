@@ -84,7 +84,8 @@ def calculate_diversity(
         print(f"Diversity Input: {concepts_present}")
         for concept in concepts_present:
             print(f"\tConcept {concept} (depth {get_depth(concept)}) --- {cluster_name[concept]}")
-        print(f"Subtree Counts: {subtree_counts}")
+        for concept, count in subtree_counts.items():
+            print(f"\tSubtree {concept} (depth {get_depth(concept)}, size {cluster_size[concept]}, weight {get_weight(concept)}, count {count}, parent {cluster_selected_parent[concept]}) --- {cluster_name[concept]}")
         print(f"Output: {diversity / (nsamples * (nsamples - 1))}")
         print("\n\n\n")
     
