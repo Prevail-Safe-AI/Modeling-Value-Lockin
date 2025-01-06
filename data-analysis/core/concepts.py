@@ -18,7 +18,7 @@ import pandas as pd
 import concurrent.futures as cf
 import threading as th
 
-CLUSTER_MIN_SIZE = 1
+CLUSTER_MIN_SIZE = 2
 CLUSTER_STEP_MULTIPLIER_LOG2 = 1
 
 
@@ -180,6 +180,7 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         print("Embeddings loaded. Verifying...")
         
         if "dummy" not in os.environ.get("EMBEDDINGS", ""):
+            assert len(loaded_embeddings) == len(strings)
             for emb_combo, string in zip(loaded_embeddings, strings):
                 s, emb = emb_combo
                 assert isinstance(s, str) and isinstance(emb, list) and len(emb) == EMB_DIM
@@ -350,18 +351,26 @@ def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[
     inv_mapping = {summary: i for i, summary in enumerate(summaries)}
     
     def is_legit(concept):
-        if "dummy" in os.environ.get("EMBEDDINGS", ""):
-            return isinstance(concept, str) and concept and concept in inv_mapping
-
-        return isinstance(concept, str) and concept
+        assert isinstance(concept, str)
         
+        if "dummy" in os.environ.get("EMBEDDINGS", ""):
+            return concept and (concept in inv_mapping)
+
+        return concept
+    
+    nonskip_count = 0
     for sample in samples:
         if not sample.concepts:
             sample.concepts_breakdown = {}
             continue
+        
+        nonskip_count += 1
         sample.concepts = [inv_mapping[concept] for concept in sample.concepts if is_legit(concept)]
-        for key in sample.concepts_breakdown:
+        for key in list(sample.concepts_breakdown.keys()):
             sample.concepts_breakdown[key] = [inv_mapping[concept] for concept in sample.concepts_breakdown[key] if is_legit(concept)]
+    
+    print(f"Skipped {len(samples) - nonskip_count} samples due to lack of concepts; {nonskip_count} samples processed.")
+    assert nonskip_count >= 10
     
     return samples, parent_mapping, cluster_sizes, summaries, weights, root
 

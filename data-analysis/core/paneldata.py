@@ -250,7 +250,7 @@ def build_user_panel(
         cur_samples = user_directories[user_id]
         nsamples = len(cur_samples)
         
-        if not nsamples:
+        if nsamples <= 3:
             continue
         
         # Calculate the mode of language and location

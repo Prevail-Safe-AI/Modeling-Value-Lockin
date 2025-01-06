@@ -92,6 +92,7 @@ class Analysis:
                     sample.concepts = None
             
             assert concepts_ptr == len(self.concepts_only)
+            self.print_sample_stats(suffix)
             return True
         
         print(f"Failed to load concepts{suffix} from cache.")

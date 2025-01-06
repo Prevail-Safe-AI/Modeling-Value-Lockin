@@ -21,27 +21,27 @@ def simplify_text(text: str) -> str:
     4. Removing English stopwords
     5. Lemmatizing
     """
-
+    
     # 1. Convert text to lowercase
     text = text.lower()
-
+    
     # 2. Remove punctuation
     #    You can also strip out other characters (e.g., digits) as needed.
     #    string.punctuation is typically: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
     text = text.translate(str.maketrans("", "", string.punctuation))
-
+    
     # 3. Tokenize the text
     tokens = word_tokenize(text)
-
+    
     # 4. Remove stopwords
     stop_words = set(stopwords.words("english"))
     filtered_tokens = [word for word in tokens if word not in stop_words]
     text = " ".join(filtered_tokens)
-
+    
     # 5. Lemmatize tokens
     lemmatizer = WordNetLemmatizer()
     lemmatized_tokens = [lemmatizer.lemmatize(i,j[0].lower()) if j[0].lower() in ['a','n','v'] else lemmatizer.lemmatize(i) for i,j in pos_tag(word_tokenize(text))]
-
+    
     # Join tokens back to a single string (optional)
     simplified_text = " ".join(lemmatized_tokens)
     return simplified_text
