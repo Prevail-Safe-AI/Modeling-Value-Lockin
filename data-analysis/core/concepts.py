@@ -287,6 +287,9 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
     with tqdm(total = max_id-len(strings)) as pbar:
         def dfs(label):
             cluster_sizes[label] = int(label < len(strings))
+            if label < len(strings):
+                leaves[label].append(label)
+                return
             
             for son in sons[label]:
                 dfs(son)
