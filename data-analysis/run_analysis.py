@@ -1,6 +1,10 @@
 import os, sys
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
+import resource, sys
+resource.setrlimit(resource.RLIMIT_STACK, (2**29,-1))
+sys.setrecursionlimit(16384)
+
 if eval(os.environ.get("DEBUG", "False")):
     import pdb
 
