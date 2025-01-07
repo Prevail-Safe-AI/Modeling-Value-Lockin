@@ -1,7 +1,10 @@
 import os, sys
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
-import fire, pickle, time, random, pdb
+if eval(os.environ.get("DEBUG", "False")):
+    import pdb
+
+import fire, pickle, time, random
 import pandas as pd
 from tqdm import tqdm
 from typing import Literal
@@ -173,6 +176,7 @@ class Analysis:
             
             if eval(os.environ.get("DEBUG", "False")):
                 pdb.set_trace()
+            
             self.print_sample_stats("-cluster")
         
         else:

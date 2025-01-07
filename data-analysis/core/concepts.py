@@ -17,7 +17,9 @@ import numpy as np
 import pandas as pd
 import concurrent.futures as cf
 import threading as th
-import pdb
+
+if eval(os.environ.get("DEBUG", "False")):
+    import pdb
 
 CLUSTER_MIN_SIZE = 2
 CLUSTER_STEP_MULTIPLIER_LOG2 = 1
