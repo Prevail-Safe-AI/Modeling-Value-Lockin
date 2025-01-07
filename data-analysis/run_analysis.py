@@ -1,7 +1,7 @@
 import os, sys
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
-import fire, pickle, time, random
+import fire, pickle, time, random, pdb
 import pandas as pd
 from tqdm import tqdm
 from typing import Literal
@@ -171,6 +171,8 @@ class Analysis:
             self.save_backup(self.clusterinfo, "-clusterinfo", "json")
             self.save_concept_only("-cluster")
             
+            if eval(os.environ.get("DEBUG", "False")):
+                pdb.set_trace()
             self.print_sample_stats("-cluster")
         
         else:

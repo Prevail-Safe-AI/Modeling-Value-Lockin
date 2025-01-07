@@ -17,6 +17,7 @@ import numpy as np
 import pandas as pd
 import concurrent.futures as cf
 import threading as th
+import pdb
 
 CLUSTER_MIN_SIZE = 2
 CLUSTER_STEP_MULTIPLIER_LOG2 = 1
@@ -358,6 +359,10 @@ def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[
 
         return concept
     
+    # Start debugging here
+    if eval(os.environ.get("DEBUG", "False")):
+        pdb.set_trace()
+    
     nonskip_count = 0
     for sample in samples:
         if not sample.concepts:
@@ -368,6 +373,9 @@ def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[
         sample.concepts = [inv_mapping[concept] for concept in sample.concepts if is_legit(concept)]
         for key in list(sample.concepts_breakdown.keys()):
             sample.concepts_breakdown[key] = [inv_mapping[concept] for concept in sample.concepts_breakdown[key] if is_legit(concept)]
+        
+        if eval(os.environ.get("DEBUG", "False")) and not sample.concepts:
+            pdb.set_trace()
     
     print(f"Skipped {len(samples) - nonskip_count} samples due to lack of concepts; {nonskip_count} samples processed.")
     assert nonskip_count >= 10
