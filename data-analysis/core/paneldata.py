@@ -69,6 +69,7 @@ def calculate_diversity(
             concept = cluster_selected_parent[concept]
     
     def get_weight(concept: int) -> float:
+        assert concept is not None
         return np.log2(cluster_size[concept]) / CLUSTER_STEP_MULTIPLIER_LOG2 - get_depth(concept)
     
     nsamples = len(concepts_present)
@@ -78,6 +79,7 @@ def calculate_diversity(
         if concept == root:
             continue
         
+        assert cluster_selected_parent[concept] is not None
         diversity += (get_weight(concept) - get_weight(cluster_selected_parent[concept])) * count * (count - 1)
     
     if len(selected_clusters) <= 100:

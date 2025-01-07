@@ -420,6 +420,8 @@ def select_clusters(
     for i in selected_clusters:
         is_selected[i] = True
     
+    is_selected[root] = True
+    
     def get_nearest_selected_parent(i):
         if cluster_selected_parent[i] is not None and not is_selected[cluster_selected_parent[i]]:
             cluster_selected_parent[i] = get_nearest_selected_parent(cluster_selected_parent[i])
