@@ -1,0 +1,255 @@
+Breusch-Pagan test p-value: 4.117690855023273e-88
+Heteroskedasticity detected, switching to robust standard error (HC3).
+
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:      concept_diversity   R-squared:                       0.292
+Model:                            OLS   Adj. R-squared:                  0.286
+Method:                 Least Squares   F-statistic:                     77.03
+Date:                Thu, 09 Jan 2025   Prob (F-statistic):               0.00
+Time:                        11:15:02   Log-Likelihood:                -48088.
+No. Observations:               27195   AIC:                         9.663e+04
+Df Residuals:                   26968   BIC:                         9.849e+04
+Df Model:                         226                                         
+Covariance Type:                  HC3                                         
+=========================================================================================================
+                                            coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------
+const                                    14.7172      0.871     16.906      0.000      13.011      16.424
+user_gpt35_ratio                         -0.6056      0.025    -23.865      0.000      -0.655      -0.556
+nsamples                                  0.0004      0.000      3.028      0.002       0.000       0.001
+temporal_extension                       -0.0003      0.001     -0.230      0.818      -0.003       0.002
+user_first_entry                         -0.0058      0.000    -21.059      0.000      -0.006      -0.005
+user_first_entry_X_temporal_extension -5.025e-05   3.67e-05     -1.367      0.172      -0.000    2.18e-05
+mean_turns                                0.0526      0.004     13.799      0.000       0.045       0.060
+mean_conversation_length              -4.596e-06   4.34e-06     -1.059      0.290   -1.31e-05    3.91e-06
+mean_prompt_length                    -1.368e-05   5.94e-06     -2.303      0.021   -2.53e-05   -2.04e-06
+language_Albanian                         2.2114      1.170      1.890      0.059      -0.082       4.505
+language_Arabic                          -0.1702      0.872     -0.195      0.845      -1.880       1.540
+language_Azerbaijani                      1.6039      0.943      1.701      0.089      -0.244       3.452
+language_Bengali                          3.4913      1.029      3.394      0.001       1.475       5.508
+language_Bokmal                           3.0004      0.948      3.165      0.002       1.142       4.859
+language_Bosnian                          2.7661      0.942      2.938      0.003       0.921       4.611
+language_Bulgarian                        0.8942      1.379      0.648      0.517      -1.809       3.597
+language_Catalan                          1.3586      1.635      0.831      0.406      -1.847       4.564
+language_Chinese                          1.6389      0.860      1.906      0.057      -0.046       3.324
+language_Croatian                         3.4134      0.902      3.785      0.000       1.646       5.181
+language_Czech                            1.3649      0.941      1.450      0.147      -0.480       3.210
+language_Danish                           3.3825      0.921      3.671      0.000       1.576       5.189
+language_Dutch                            2.6754      0.886      3.020      0.003       0.939       4.412
+language_English                          1.8860      0.859      2.196      0.028       0.203       3.569
+language_Esperanto                        1.9035      0.995      1.913      0.056      -0.047       3.854
+language_Estonian                         1.0032      1.042      0.963      0.336      -1.039       3.045
+language_Finnish                          2.4341      0.916      2.658      0.008       0.639       4.229
+language_French                           2.5265      0.861      2.933      0.003       0.838       4.215
+language_German                           2.7887      0.859      3.246      0.001       1.105       4.473
+language_Greek                            0.7021      0.936      0.750      0.453      -1.133       2.538
+language_Hebrew                           0.0359      1.050      0.034      0.973      -2.022       2.094
+language_Hindi                            2.0696    916.410      0.002      0.998   -1794.142    1798.281
+language_Hungarian                        2.7843      0.896      3.108      0.002       1.028       4.541
+language_Indonesian                       2.4158      0.886      2.726      0.006       0.679       4.153
+language_Irish                           -1.7388   4010.051     -0.000      1.000   -7861.648    7858.170
+language_Italian                          3.2108      0.873      3.678      0.000       1.500       4.922
+language_Japanese                         1.1623      0.889      1.307      0.191      -0.580       2.905
+language_Kazakh                           0.4733    899.148      0.001      1.000   -1761.903    1762.849
+language_Korean                           2.2708      0.878      2.586      0.010       0.549       3.992
+language_Latin                            1.9586      0.902      2.171      0.030       0.191       3.727
+language_Latvian                          3.6716      1.063      3.453      0.001       1.587       5.756
+language_Lithuanian                       3.7903      1.007      3.762      0.000       1.816       5.765
+language_Macedonian                       1.9337   3124.949      0.001      1.000   -6123.128    6126.995
+language_Malay                            3.3972      0.989      3.434      0.001       1.458       5.336
+language_Maori                           -0.8920      0.957     -0.932      0.351      -2.768       0.984
+language_Nolang                           0.8670      0.965      0.898      0.369      -1.025       2.759
+language_Nynorsk                          1.5549      2.049      0.759      0.448      -2.462       5.571
+language_Persian                          0.4463      0.893      0.500      0.617      -1.304       2.197
+language_Polish                           2.4819      0.871      2.849      0.004       0.774       4.189
+language_Portuguese                       2.5808      0.869      2.972      0.003       0.879       4.283
+language_Romanian                         2.8247      0.883      3.199      0.001       1.094       4.555
+language_Russian                          0.7864      0.859      0.915      0.360      -0.898       2.470
+language_Slovak                           0.7259      1.248      0.582      0.561      -1.720       3.172
+language_Slovene                          3.5798      0.955      3.748      0.000       1.708       5.452
+language_Somali                           1.0103      0.998      1.012      0.312      -0.947       2.967
+language_Sotho                            2.1344      1.058      2.018      0.044       0.062       4.207
+language_Spanish                          2.6666      0.861      3.095      0.002       0.978       4.355
+language_Swahili                          2.6302      1.077      2.442      0.015       0.519       4.741
+language_Swedish                          1.9444      1.077      1.806      0.071      -0.166       4.055
+language_Tagalog                          2.0741      0.945      2.195      0.028       0.222       3.926
+language_Thai                             0.6818      1.463      0.466      0.641      -2.187       3.550
+language_Tsonga                           3.4249      0.946      3.619      0.000       1.570       5.280
+language_Tswana                           1.6890      0.986      1.712      0.087      -0.245       3.622
+language_Turkish                          2.9974      0.868      3.455      0.001       1.297       4.698
+language_Ukrainian                        0.9362      0.916      1.022      0.307      -0.859       2.731
+language_Vietnamese                       2.0102      0.874      2.299      0.022       0.296       3.724
+language_Welsh                           -0.5540   1114.705     -0.000      1.000   -2185.434    2184.326
+language_Yoruba                           2.0202      1.153      1.752      0.080      -0.240       4.281
+language_Zulu                             3.6704   3424.686      0.001      0.999   -6708.892    6716.233
+location_Albania                          0.5147      0.326      1.578      0.115      -0.125       1.154
+location_Algeria                          0.1081      0.174      0.622      0.534      -0.233       0.449
+location_Andorra                          1.3920   1445.818      0.001      0.999   -2832.487    2835.271
+location_Angola                          -2.1441    279.858     -0.008      0.994    -550.681     546.393
+location_Argentina                        0.0660      0.168      0.393      0.695      -0.263       0.395
+location_Armenia                          0.5403      0.444      1.217      0.224      -0.330       1.410
+location_Aruba                           -0.2317    117.922     -0.002      0.998    -231.365     230.902
+location_Australia                        0.1083      0.156      0.696      0.487      -0.197       0.414
+location_Austria                          0.4632      0.248      1.866      0.062      -0.023       0.950
+location_Azerbaijan                       0.5638      0.498      1.132      0.258      -0.412       1.540
+location_Bahrain                          0.6171      0.305      2.023      0.043       0.019       1.215
+location_Bangladesh                       0.1059      0.258      0.411      0.681      -0.399       0.611
+location_Belarus                         -0.0557      0.184     -0.302      0.762      -0.417       0.305
+location_Belgium                          0.1022      0.211      0.485      0.628      -0.311       0.515
+location_Belize                           0.0399    161.671      0.000      1.000    -316.844     316.924
+location_Bolivia                          0.3935      0.263      1.498      0.134      -0.121       0.908
+location_Botswana                        -0.1782      0.586     -0.304      0.761      -1.327       0.970
+location_Brazil                           0.0120      0.182      0.066      0.948      -0.345       0.369
+location_Brunei                          -1.3966    590.581     -0.002      0.998   -1158.965    1156.172
+location_Bulgaria                        -0.0449      0.261     -0.172      0.863      -0.556       0.466
+location_Burundi                          0.9779      0.685      1.427      0.154      -0.366       2.322
+location_Cambodia                         0.0904      0.302      0.299      0.765      -0.502       0.683
+location_Cameroon                        -0.4869      0.364     -1.338      0.181      -1.200       0.227
+location_Canada                           0.0609      0.150      0.405      0.685      -0.234       0.356
+location_Chile                           -0.2016      0.240     -0.839      0.402      -0.672       0.269
+location_China                           -1.3372      0.141     -9.503      0.000      -1.613      -1.061
+location_Colombia                        -0.4821      0.187     -2.572      0.010      -0.850      -0.115
+location_Congo Republic                  -1.7204      1.572     -1.094      0.274      -4.801       1.361
+location_Cook Islands                    -0.0135    494.110  -2.74e-05      1.000    -968.495     968.468
+location_Costa Rica                       0.5135      0.265      1.936      0.053      -0.006       1.033
+location_Croatia                         -0.2474      0.350     -0.706      0.480      -0.934       0.439
+location_Cuba                            -0.3275      0.248     -1.321      0.186      -0.813       0.158
+location_Curaçao                          0.5579      0.263      2.125      0.034       0.043       1.073
+location_Cyprus                          -1.0295      0.622     -1.656      0.098      -2.248       0.189
+location_Czechia                          0.6397      0.266      2.401      0.016       0.117       1.162
+location_DR Congo                         0.0244      0.154      0.158      0.874      -0.278       0.327
+location_Denmark                         -0.1314      0.289     -0.454      0.650      -0.698       0.435
+location_Dominican Republic               0.1150      0.428      0.269      0.788      -0.723       0.953
+location_Ecuador                          0.1073      0.211      0.509      0.610      -0.306       0.520
+location_Egypt                           -0.0040      0.156     -0.026      0.979      -0.311       0.303
+location_El Salvador                      0.1043      0.482      0.216      0.829      -0.841       1.049
+location_Estonia                          0.4121      0.167      2.470      0.014       0.085       0.739
+location_Ethiopia                        -0.1557      0.236     -0.659      0.510      -0.619       0.307
+location_Fiji                            -1.3079    231.452     -0.006      0.995    -454.966     452.350
+location_Finland                          0.1573      0.207      0.759      0.448      -0.249       0.563
+location_France                          -0.1953      0.149     -1.307      0.191      -0.488       0.098
+location_French Guiana                    0.0627      0.332      0.189      0.850      -0.589       0.714
+location_Gabon                           -0.0471      0.943     -0.050      0.960      -1.895       1.801
+location_Georgia                          0.2246      0.401      0.560      0.575      -0.561       1.011
+location_Germany                         -0.1913      0.153     -1.248      0.212      -0.492       0.109
+location_Ghana                            0.2650      0.394      0.673      0.501      -0.507       1.037
+location_Gibraltar                       -0.4873    481.271     -0.001      0.999    -943.803     942.828
+location_Greece                           0.4452      0.204      2.185      0.029       0.046       0.845
+location_Guadeloupe                       0.0881      0.337      0.262      0.793      -0.571       0.748
+location_Guatemala                       -0.6239      0.487     -1.281      0.200      -1.578       0.330
+location_Guinea                           0.6842      0.913      0.749      0.454      -1.106       2.475
+location_Guyana                          -0.0089      0.274     -0.033      0.974      -0.545       0.528
+location_Haiti                           -0.4270      1.104     -0.387      0.699      -2.592       1.738
+location_Hong Kong                       -1.0687      0.141     -7.578      0.000      -1.345      -0.792
+location_Hungary                          0.1521      0.270      0.562      0.574      -0.378       0.682
+location_Iceland                         -1.3054   1125.647     -0.001      0.999   -2207.632    2205.021
+location_India                            0.0130      0.147      0.088      0.930      -0.275       0.301
+location_Indonesia                        0.1330      0.231      0.577      0.564      -0.319       0.585
+location_Iran                             0.1103      0.171      0.646      0.518      -0.224       0.445
+location_Iraq                             0.0498      0.335      0.149      0.882      -0.606       0.706
+location_Ireland                          0.2767      0.263      1.052      0.293      -0.239       0.792
+location_Israel                           0.2248      0.222      1.015      0.310      -0.209       0.659
+location_Italy                           -0.5986      0.194     -3.089      0.002      -0.978      -0.219
+location_Ivory Coast                      1.0684      0.384      2.781      0.005       0.316       1.821
+location_Jamaica                          1.3917      0.173      8.055      0.000       1.053       1.730
+location_Japan                           -1.2005      0.146     -8.242      0.000      -1.486      -0.915
+location_Jordan                          -0.1281      0.261     -0.491      0.623      -0.639       0.383
+location_Kazakhstan                      -0.0640      0.274     -0.234      0.815      -0.601       0.473
+location_Kenya                            0.7787      0.186      4.192      0.000       0.415       1.143
+location_Kosovo                          -0.6143      0.322     -1.909      0.056      -1.245       0.017
+location_Kuwait                          -0.2744      0.497     -0.553      0.581      -1.248       0.699
+location_Kyrgyzstan                       0.0988      0.540      0.183      0.855      -0.960       1.158
+location_Laos                            -0.6739      0.724     -0.931      0.352      -2.092       0.744
+location_Latvia                          -0.1963      0.603     -0.325      0.745      -1.379       0.986
+location_Lebanon                         -0.0482      0.304     -0.159      0.874      -0.644       0.548
+location_Liberia                          0.9325      0.138      6.755      0.000       0.662       1.203
+location_Libya                            2.0144      1.160      1.737      0.082      -0.259       4.288
+location_Lithuania                       -0.7960      0.519     -1.534      0.125      -1.813       0.221
+location_Luxembourg                      -0.3733      0.526     -0.710      0.478      -1.404       0.657
+location_Macao                           -0.0208      0.207     -0.101      0.920      -0.426       0.384
+location_Madagascar                       0.1125      0.776      0.145      0.885      -1.409       1.634
+location_Malaysia                        -0.4970      0.186     -2.678      0.007      -0.861      -0.133
+location_Maldives                         1.0069    443.789      0.002      0.998    -868.844     870.857
+location_Malta                           -0.8936      0.484     -1.845      0.065      -1.843       0.056
+location_Mauritius                        0.3979      0.211      1.890      0.059      -0.015       0.811
+location_Mexico                          -0.0080      0.165     -0.048      0.962      -0.332       0.316
+location_Moldova                         -0.1232      0.261     -0.471      0.637      -0.635       0.389
+location_Monaco                           1.4093    790.820      0.002      0.999   -1548.638    1551.457
+location_Mongolia                         1.9631      0.771      2.545      0.011       0.451       3.475
+location_Montenegro                       0.6406      0.687      0.932      0.351      -0.707       1.988
+location_Morocco                          0.0509      0.175      0.291      0.771      -0.292       0.394
+location_Mozambique                       0.4197      0.431      0.973      0.331      -0.426       1.265
+location_Myanmar                          0.3300      0.342      0.965      0.335      -0.340       1.000
+location_Namibia                          0.3414    814.124      0.000      1.000   -1595.384    1596.067
+location_Nepal                           -0.4247      0.315     -1.350      0.177      -1.041       0.192
+location_New Zealand                      0.1846      0.158      1.171      0.242      -0.125       0.494
+location_Niger                            0.3898    201.683      0.002      0.998    -394.920     395.699
+location_Nigeria                          0.5578      0.161      3.473      0.001       0.243       0.873
+location_North Macedonia                 -1.2778   3214.451     -0.000      1.000   -6301.770    6299.214
+location_Norway                          -0.4750      0.402     -1.182      0.237      -1.263       0.313
+location_Oman                             0.2521      0.443      0.569      0.570      -0.617       1.121
+location_Pakistan                         0.1257      0.180      0.697      0.486      -0.228       0.479
+location_Palestine                        0.4232      0.263      1.610      0.107      -0.092       0.938
+location_Panama                          -0.8639      0.423     -2.042      0.041      -1.693      -0.035
+location_Papua New Guinea                -0.3938      0.716     -0.550      0.582      -1.798       1.010
+location_Paraguay                         1.2176   1000.000      0.001      0.999   -1958.834    1961.270
+location_Peru                            -0.5940      0.175     -3.398      0.001      -0.937      -0.251
+location_Philippines                      0.1952      0.159      1.229      0.219      -0.116       0.506
+location_Poland                           0.0902      0.176      0.511      0.609      -0.256       0.436
+location_Portugal                        -0.1523      0.260     -0.586      0.558      -0.662       0.357
+location_Puerto Rico                     -0.0027      0.248     -0.011      0.991      -0.489       0.484
+location_Qatar                            0.4457      0.225      1.983      0.047       0.005       0.886
+location_Romania                          0.2819      0.192      1.467      0.142      -0.095       0.658
+location_Russia                           0.0520      0.141      0.367      0.713      -0.225       0.329
+location_Rwanda                           0.2940      0.264      1.112      0.266      -0.224       0.812
+location_Réunion                         -0.2231      0.331     -0.674      0.500      -0.872       0.425
+location_Saudi Arabia                     0.1036      0.167      0.621      0.534      -0.223       0.431
+location_Senegal                          0.4538      0.281      1.618      0.106      -0.096       1.004
+location_Serbia                           0.2948      0.212      1.387      0.165      -0.122       0.711
+location_Seychelles                      -1.3825    469.731     -0.003      0.998    -922.079     919.314
+location_Singapore                       -1.0174      0.148     -6.880      0.000      -1.307      -0.728
+location_Slovakia                         0.2438      0.593      0.411      0.681      -0.919       1.406
+location_Slovenia                        -0.0258      0.378     -0.068      0.945      -0.766       0.714
+location_Somalia                         -1.3219   1588.714     -0.001      0.999   -3115.284    3112.641
+location_South Africa                     0.4466      0.194      2.299      0.021       0.066       0.827
+location_South Korea                     -0.8251      0.184     -4.472      0.000      -1.187      -0.463
+location_South Sudan                     -0.2458      0.694     -0.354      0.723      -1.607       1.115
+location_Spain                           -0.1058      0.167     -0.632      0.527      -0.434       0.222
+location_Sri Lanka                        0.7161      0.269      2.660      0.008       0.188       1.244
+location_St Vincent and Grenadines        0.7666    434.286      0.002      0.999    -850.456     851.989
+location_Sudan                           -0.0757      0.546     -0.139      0.890      -1.145       0.994
+location_Sweden                           0.1833      0.251      0.731      0.465      -0.308       0.675
+location_Switzerland                      0.4581      0.203      2.255      0.024       0.060       0.856
+location_Syria                            0.2176      0.528      0.412      0.681      -0.818       1.253
+location_Taiwan                          -1.4802      0.147    -10.059      0.000      -1.769      -1.192
+location_Tajikistan                      -1.0576      0.998     -1.060      0.289      -3.013       0.898
+location_Tanzania                         0.3208      0.318      1.010      0.313      -0.302       0.944
+location_Thailand                        -0.3882      0.381     -1.020      0.308      -1.134       0.358
+location_The Netherlands                 -0.1647      0.155     -1.062      0.288      -0.469       0.139
+location_Trinidad and Tobago             -0.1319      1.057     -0.125      0.901      -2.205       1.941
+location_Tunisia                         -0.0457      0.316     -0.145      0.885      -0.665       0.574
+location_Türkiye                         -0.0567      0.168     -0.338      0.735      -0.386       0.272
+location_Uganda                           0.8014      0.576      1.391      0.164      -0.328       1.931
+location_Ukraine                          0.1249      0.174      0.719      0.472      -0.216       0.465
+location_United Arab Emirates            -0.1361      0.211     -0.645      0.519      -0.550       0.278
+location_United Kingdom                  -0.0071      0.147     -0.048      0.961      -0.296       0.281
+location_United States                   -0.3556      0.139     -2.558      0.011      -0.628      -0.083
+location_Uruguay                         -0.0861      0.213     -0.405      0.686      -0.503       0.331
+location_Uzbekistan                       0.4177      0.201      2.074      0.038       0.023       0.812
+location_Venezuela                       -0.0489      0.189     -0.258      0.796      -0.420       0.322
+location_Vietnam                         -0.3410      0.187     -1.821      0.069      -0.708       0.026
+location_Yemen                            0.7557      0.429      1.763      0.078      -0.084       1.596
+location_Zambia                           0.0530      0.505      0.105      0.916      -0.936       1.042
+location_Zimbabwe                        -0.5017      0.458     -1.094      0.274      -1.400       0.397
+==============================================================================
+Omnibus:                    11087.885   Durbin-Watson:                   1.994
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           150942.162
+Skew:                          -1.586   Prob(JB):                         0.00
+Kurtosis:                      14.097   Cond. No.                     3.98e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+[2] The condition number is large, 3.98e+06. This might indicate that there are

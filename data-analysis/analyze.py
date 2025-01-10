@@ -63,7 +63,7 @@ def make_plots():
     plt.title("Diversity over time")
     plt.legend()
     plt.show()
-    plt.savefig("data/diversity_over_time.pdf")
+    plt.savefig("data/plots/diversity_over_time.pdf")
 
 def rkd_regression_plot(df: pd.DataFrame, kink: float, name: str, seed=42, linear=False):
     import arviz as az
@@ -86,7 +86,7 @@ def rkd_regression_plot(df: pd.DataFrame, kink: float, name: str, seed=42, linea
     )
     fig, ax = result2.plot()
     plt.show()
-    plt.savefig(f"data/rkd_regression_plot_{name}.pdf")
+    plt.savefig(f"data/plots/rkd_regression_plot_{name}.pdf")
     print(result2.summary())
     
 
@@ -120,7 +120,7 @@ def its_test(df: pd.DataFrame, kink: float, name: str, gaussian=False):
     
     fig, ax = result.plot()
     plt.show()
-    plt.savefig(f"data/its_test_{name}.pdf")
+    plt.savefig(f"data/plots/its_test_{name}.pdf")
     
     # fig, ax = result.bayesian_plot()
     # plt.show()
@@ -163,7 +163,7 @@ def rdd_regression_plot(df: pd.DataFrame, kink: float, name: str, seed=42, linea
     )
     fig, ax = result2.plot()
     plt.show()
-    plt.savefig(f"data/rdd_regression_plot_{name}.pdf")
+    plt.savefig(f"data/plots/rdd_regression_plot_{name}.pdf")
     try:
         print(result2.summary())
     except AttributeError as e:
@@ -179,7 +179,7 @@ def process_user_panel(df: pd.DataFrame, y_variable: str, family: int = None):
     ax.set_yscale("log")
     
     plt.show()
-    plt.savefig("data/user_panel_nsamples_histogram.pdf")
+    plt.savefig("data/plots/user_panel_nsamples_histogram.pdf")
     
     # Calculate earliest entry date by applying min_func to nsamples_temporal_composition
     def min_func(tp: tuple):
@@ -254,8 +254,8 @@ def user_regression(df: pd.DataFrame, y_variable: str, family: int = None):
     y = df["y"]
     
     # Fit OLS model
-    X.to_csv("data/user_regression_X.csv")
-    y.to_csv(f"data/user_regression_y_{y_variable + (str(family) if family is not None else '')}.csv")
+    X.to_csv("data/plots/user_regression_X.csv")
+    y.to_csv(f"data/plots/user_regression_y_{y_variable + (str(family) if family is not None else '')}.csv")
     model = sm.OLS(y, X, missing="drop")
     results = model.fit()
     print(results.summary())
@@ -312,8 +312,8 @@ def user_temporal_regression(user_panel: pd.DataFrame, y_variable: str, family: 
     y = df["concept_diversity_across_time"].astype(float)
     
     # Fit OLS model
-    X.to_csv("data/user_temporal_regression_X.csv")
-    y.to_csv(f"data/user_temporal_regression_y_{y_variable + (str(family) if family is not None else '')}.csv")
+    X.to_csv("data/plots/user_temporal_regression_X.csv")
+    y.to_csv(f"data/plots/user_temporal_regression_y_{y_variable + (str(family) if family is not None else '')}.csv")
     print(X.info(max_cols=200))
     print(y.info())
     model = sm.MixedLM(y, X, groups=df.user_id, missing="drop")
@@ -356,7 +356,7 @@ def visualize_tree(threshold=250, leading=15):
         if id != root:
             tree.move_node(id, cluster_selected_parent[id])
     
-    tree.save2file("data/tree.txt")
+    tree.save2file("data/plots/tree.txt")
     
     concepts_df = temporal_panel2.groupby(["cluster", "is_gpt4"], as_index=False).cluster_nsamples.sum().sort_values("cluster_nsamples", ascending=False).reset_index()
     print(concepts_df.head(20))
@@ -404,7 +404,7 @@ def visualize_tree(threshold=250, leading=15):
         
         answer += print_cluster_info(id) + "\n"
     
-    with open("data/ranked_nodes.txt", "w") as f:
+    with open("data/plots/ranked_nodes.txt", "w") as f:
         f.write(answer)
 
 
