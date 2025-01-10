@@ -22,6 +22,7 @@ gpt_version_str2int = {
 
 TIME_INTERVAL_DAYS = 3
 MAX_TIME_INTERVALS = 129
+BANNED_CLUSTERS = [511399]
 START_TIME = datetime(2023, 4, 9, 0, 0, 0).replace(tzinfo=None)
 
 def get_time_interval(time: datetime) -> int:
@@ -43,11 +44,21 @@ def calculate_diversity(
     cluster_selected_parent: List[int],
     selected_clusters: List[int],
     root: int,
+    banned_clusters: Set[int] = set(),
 ) -> float:
     if not concepts_present or len(concepts_present) == 1:
         return np.nan
     
     depth: Dict[int, int] = {}
+    
+    def is_banned(concept: int) -> bool:
+        while concept:
+            if concept in banned_clusters:
+                return True
+            concept = cluster_selected_parent[concept]
+        return False
+    
+    concepts_present = [concept for concept in concepts_present if not is_banned(concept)]
     
     def get_depth(concept: int) -> int:
         if concept in depth:
@@ -192,6 +203,11 @@ def build_user_panel(
         - mean_conversation_length: average number of characters in the conversations the user had
         - mean_prompt_length: average number of characters in the prompts the user gave
         - concept_diversity: variance of the concept distribution that the user's conversations contain
+        - concept_diversity_filtered: variance of the concept distribution that appeared in the user's conversations, excluding certain banned clusters
+        - concept_diversity_user: variance of the concept distribution that the user explicitly mentioned or related to
+        - concept_diversity_user_filtered: variance of the concept distribution that the user explicitly mentioned or related to, excluding certain banned clusters
+        - concept_diversity_assistant: variance of the concept distribution that the assistant explicitly mentioned or related to
+        - concept_diversity_assistant_filtered: variance of the concept distribution that the assistant explicitly mentioned or related to, excluding certain banned clusters
         - concept_diversity_user_concepts_explicit: variance of the concept distribution that the user explicitly mentioned
         - concept_diversity_assistant_concepts_explicit: variance of the concept distribution that the assistant explicitly mentioned
         - concept_diversity_user_concepts_related: variance of the concept distribution that the user related to
@@ -216,13 +232,18 @@ def build_user_panel(
         "mean_conversation_length": [],
         "mean_prompt_length": [],
         "concept_diversity": [],
+        "concept_diversity_filtered": [],
+        "concept_diversity_user": [],
+        "concept_diversity_user_filtered": [],
+        "concept_diversity_assistant": [],
+        "concept_diversity_assistant_filtered": [],
         "concept_diversity_user_concepts_explicit": [],
         "concept_diversity_assistant_concepts_explicit": [],
         "concept_diversity_user_concepts_related": [],
         "concept_diversity_assistant_concepts_related": [],
-        "concept_diversity_user_across_time": [],
-        "concept_diversity_assistant_across_time": [],
-        "concept_diversity_across_time": [],    
+        "concept_diversity_user_across_time_filtered": [],
+        "concept_diversity_assistant_across_time_filtered": [],
+        "concept_diversity_across_time_filtered": [],    
     }
     
     generic_arguments = {
@@ -290,6 +311,29 @@ def build_user_panel(
             get_concept_list(cur_samples),
             **generic_arguments
         )
+        concept_diversity_filtered = calculate_diversity(
+            get_concept_list(cur_samples),
+            **generic_arguments,
+            banned_clusters=BANNED_CLUSTERS
+        )
+        concept_diversity_user = calculate_diversity(
+            get_concept_list(cur_samples, "user_concepts_explicit") + get_concept_list(cur_samples, "user_concepts_related"),
+            **generic_arguments
+        )
+        concept_diversity_user_filtered = calculate_diversity(
+            get_concept_list(cur_samples, "user_concepts_explicit") + get_concept_list(cur_samples, "user_concepts_related"),
+            **generic_arguments,
+            banned_clusters=BANNED_CLUSTERS
+        )
+        concept_diversity_assistant = calculate_diversity(
+            get_concept_list(cur_samples, "assistant_concepts_explicit") + get_concept_list(cur_samples, "assistant_concepts_related"),
+            **generic_arguments
+        )
+        concept_diversity_assistant_filtered = calculate_diversity(
+            get_concept_list(cur_samples, "assistant_concepts_explicit") + get_concept_list(cur_samples, "assistant_concepts_related"),
+            **generic_arguments,
+            banned_clusters=BANNED_CLUSTERS
+        )
         concept_diversity_user_concepts_explicit = calculate_diversity(
             get_concept_list(cur_samples, "user_concepts_explicit"),
             **generic_arguments
@@ -306,26 +350,29 @@ def build_user_panel(
             get_concept_list(cur_samples, "assistant_concepts_related"),
             **generic_arguments
         )
-        concept_diversity_user_across_time = [
+        concept_diversity_user_across_time_filtered = [
             calculate_diversity(
                 get_concept_list(time_directory[i], "user_concepts_explicit") +
                 get_concept_list(time_directory[i], "user_concepts_related"),
-                **generic_arguments
+                **generic_arguments,
+                banned_clusters=BANNED_CLUSTERS
             )
             for i in range(MAX_TIME_INTERVALS)
         ]
-        concept_diversity_assistant_across_time = [
+        concept_diversity_assistant_across_time_filtered = [
             calculate_diversity(
                 get_concept_list(time_directory[i], "assistant_concepts_explicit") +
                 get_concept_list(time_directory[i], "assistant_concepts_related"),
-                **generic_arguments
+                **generic_arguments,
+                banned_clusters=BANNED_CLUSTERS
             )
             for i in range(MAX_TIME_INTERVALS)
         ]
-        concept_diversity_across_time = [
+        concept_diversity_across_time_filtered = [
             calculate_diversity(
                 get_concept_list(time_directory[i]),
-                **generic_arguments
+                **generic_arguments,
+                banned_clusters=BANNED_CLUSTERS
             )
             for i in range(MAX_TIME_INTERVALS)
         ]
@@ -343,13 +390,18 @@ def build_user_panel(
         panel["mean_conversation_length"].append(mean_conversation_length)
         panel["mean_prompt_length"].append(mean_prompt_length)
         panel["concept_diversity"].append(concept_diversity)
+        panel["concept_diversity_filtered"].append(concept_diversity_filtered)
+        panel["concept_diversity_user"].append(concept_diversity_user)
+        panel["concept_diversity_user_filtered"].append(concept_diversity_user_filtered)
+        panel["concept_diversity_assistant"].append(concept_diversity_assistant)
+        panel["concept_diversity_assistant_filtered"].append(concept_diversity_assistant_filtered)
         panel["concept_diversity_user_concepts_explicit"].append(concept_diversity_user_concepts_explicit)
         panel["concept_diversity_assistant_concepts_explicit"].append(concept_diversity_assistant_concepts_explicit)
         panel["concept_diversity_user_concepts_related"].append(concept_diversity_user_concepts_related)
         panel["concept_diversity_assistant_concepts_related"].append(concept_diversity_assistant_concepts_related)
-        panel["concept_diversity_user_across_time"].append(tuple(concept_diversity_user_across_time))
-        panel["concept_diversity_assistant_across_time"].append(tuple(concept_diversity_assistant_across_time))
-        panel["concept_diversity_across_time"].append(tuple(concept_diversity_across_time))
+        panel["concept_diversity_user_across_time_filtered"].append(tuple(concept_diversity_user_across_time_filtered))
+        panel["concept_diversity_assistant_across_time_filtered"].append(tuple(concept_diversity_assistant_across_time_filtered))
+        panel["concept_diversity_across_time_filtered"].append(tuple(concept_diversity_across_time_filtered))
     
     # Build the DataFrame and set the index
     panel = create_panel_and_backup(panel, "user_panel")
@@ -387,7 +439,7 @@ def build_temporal_panel(
     :return: Two pandas DataFrames,
       The first one (stats about each time period) with the following columns:
         - time (INDEX): The number of time intervals since the start
-        - is_gpt4 (INDEX): 1 for the GPT-4 family and 0 for the GPT-3.5-turbo family
+        - is_gpt4 (INDEX): 1 for the GPT-4 family and 0 for the GPT-3.5-turbo family; 2 for both being aggregated
         - gpt_version: The version number within each GPT family that is being used in this time period
           - 0: GPT-3.5-turbo-0301 / GPT-4-0314
           - 1: GPT-3.5-turbo-0613 / GPT-4-1106-preview
@@ -397,12 +449,15 @@ def build_temporal_panel(
         - overall_mean_conversation_length: The average number of characters in the conversation in this time period with this GPT family
         - overall_mean_prompt_length: The average number of characters in the prompts in this time period with this GPT family
         - concept_diversity: The variance of the concept distribution that appeared in this time period
+        - concept_diversity_filtered: The variance of the concept distribution that appeared in this time period, excluding certain banned clusters
         - concept_diversity_user_concepts_explicit: The variance of the concept distribution in user speech (explicit) that appeared in this time period
         - concept_diversity_assistant_concepts_explicit: The variance of the concept distribution in assistant speech (explicit) that appeared in this time period
         - concept_diversity_user_concepts_related: The variance of the concept distribution in user speech (related) that appeared in this time period
         - concept_diversity_assistant_concepts_related: The variance of the concept distribution in assistant speech (related) that appeared in this time period
         - concept_diversity_user: The variance of the concept distribution in user speech (explicit or related) that appeared in this time period
+        - concept_diversity_user_filtered: The variance of the concept distribution in user speech (explicit or related) that appeared in this time period, excluding certain banned clusters
         - concept_diversity_assistant: The variance of the concept distribution in assistant speech (explicit or related) that appeared in this time period
+        - concept_diversity_assistant_filtered: The variance of the concept distribution in assistant speech (explicit or related) that appeared in this time period, excluding certain banned clusters
       The second one (stats about each concept in each time period) with the following columns:
         - time (INDEX): The number of time intervals since the start
         - is_gpt4 (INDEX): 1 for the GPT-4 family and 0 for the GPT-3.5-turbo family
@@ -428,12 +483,15 @@ def build_temporal_panel(
         "overall_mean_conversation_length": [],
         "overall_mean_prompt_length": [],
         "concept_diversity": [],
+        "concept_diversity_filtered": [],
         "concept_diversity_user_concepts_explicit": [],
         "concept_diversity_assistant_concepts_explicit": [],
         "concept_diversity_user_concepts_related": [],
         "concept_diversity_assistant_concepts_related": [],
         "concept_diversity_user": [],
+        "concept_diversity_user_filtered": [],
         "concept_diversity_assistant": [],
+        "concept_diversity_assistant_filtered": [],
     }
     panel2 = {
         "time": [],
@@ -474,6 +532,7 @@ def build_temporal_panel(
         is_gpt = 0 if "gpt-3.5-turbo-" in sample.gpt_version else 1
         assert "gpt-4-" in sample.gpt_version or "gpt-3.5-turbo-" in sample.gpt_version
         sample_directories[(time_interval_num, is_gpt)].append(sample)
+        sample_directories[(time_interval_num, 2)].append(sample)
     
     # Construct DataFrame rows
     samples_sizes = []
@@ -506,12 +565,15 @@ def build_temporal_panel(
             panel1["overall_mean_conversation_length"].append(overall_conversation_lengths)
             panel1["overall_mean_prompt_length"].append(overall_mean_prompt_length)
             panel1["concept_diversity"].append(None)
+            panel1["concept_diversity_filtered"].append(None)
             panel1["concept_diversity_user_concepts_explicit"].append(None)
             panel1["concept_diversity_assistant_concepts_explicit"].append(None)
             panel1["concept_diversity_user_concepts_related"].append(None)
             panel1["concept_diversity_assistant_concepts_related"].append(None)
             panel1["concept_diversity_user"].append(None)
+            panel1["concept_diversity_user_filtered"].append(None)
             panel1["concept_diversity_assistant"].append(None)
+            panel1["concept_diversity_assistant_filtered"].append(None)
             
             ## Skip adding row to the second panel since there are no samples
             # for concept in selected_clusters:
@@ -531,6 +593,11 @@ def build_temporal_panel(
         concept_diversity = calculate_diversity(
             get_concept_list(cur_samples),
             **generic_arguments
+        )
+        concept_diversity_filtered = calculate_diversity(
+            get_concept_list(cur_samples),
+            **generic_arguments,
+            banned_clusters=BANNED_CLUSTERS
         )
         concept_diversity_user_concepts_explicit = calculate_diversity(
             get_concept_list(cur_samples, "user_concepts_explicit"),
@@ -552,9 +619,19 @@ def build_temporal_panel(
             get_concept_list(cur_samples, "user_concepts_explicit") + get_concept_list(cur_samples, "user_concepts_related"),
             **generic_arguments
         )
+        concept_diversity_user_filtered = calculate_diversity(
+            get_concept_list(cur_samples, "user_concepts_explicit") + get_concept_list(cur_samples, "user_concepts_related"),
+            **generic_arguments,
+            banned_clusters=BANNED_CLUSTERS
+        )
         concept_diversity_assistant = calculate_diversity(
             get_concept_list(cur_samples, "assistant_concepts_explicit") + get_concept_list(cur_samples, "assistant_concepts_related"),
             **generic_arguments
+        )
+        concept_diversity_assistant_filtered = calculate_diversity(
+            get_concept_list(cur_samples, "assistant_concepts_explicit") + get_concept_list(cur_samples, "assistant_concepts_related"),
+            **generic_arguments,
+            banned_clusters=BANNED_CLUSTERS
         )
         
         # Append the row to panel1
@@ -566,12 +643,18 @@ def build_temporal_panel(
         panel1["overall_mean_conversation_length"].append(overall_mean_conversation_length)
         panel1["overall_mean_prompt_length"].append(overall_mean_prompt_length)
         panel1["concept_diversity"].append(concept_diversity)
+        panel1["concept_diversity_filtered"].append(concept_diversity_filtered)
         panel1["concept_diversity_user_concepts_explicit"].append(concept_diversity_user_concepts_explicit)
         panel1["concept_diversity_assistant_concepts_explicit"].append(concept_diversity_assistant_concepts_explicit)
         panel1["concept_diversity_user_concepts_related"].append(concept_diversity_user_concepts_related)
         panel1["concept_diversity_assistant_concepts_related"].append(concept_diversity_assistant_concepts_related)
         panel1["concept_diversity_user"].append(concept_diversity_user)
+        panel1["concept_diversity_user_filtered"].append(concept_diversity_user_filtered)
         panel1["concept_diversity_assistant"].append(concept_diversity_assistant)
+        panel1["concept_diversity_assistant_filtered"].append(concept_diversity_assistant_filtered)
+        
+        if eval(os.environ.get("SKIP_TEMPORAL2", "False")):
+            continue
         
         concept_mapping: Dict[int, List[DataSample]] = defaultdict(list)
         breakdown_counters = defaultdict(Counter)
@@ -613,6 +696,9 @@ def build_temporal_panel(
             panel2["cluster_mean_prompt_length"].append(np.mean([sample.role_chars("user") for sample in concept_mapping[concept]]))
     
     # Build the DataFrame and set the index
+    if eval(os.environ.get("SKIP_TEMPORAL2", "False")):
+        panel2 = panel1
+    
     panel1 = create_panel_and_backup(panel1, "temporal_panel1")
     panel2 = create_panel_and_backup(panel2, "temporal_panel2")
     return panel1, panel2
