@@ -19,6 +19,8 @@ import pandas as pd
 import json
 import os
 import sys
+import logging
+
 from typing import List, Dict, Tuple, Mapping, Union
 from typeguard import check_type
 
@@ -28,6 +30,7 @@ import umap
 import matplotlib.pyplot as plt 
 import seaborn as sns
 import voyageai
+voyageai.api_key = "pa-D7cexR9gsRuYWYv3IfAS9h-aIV_bKjuTJ9nx7n59Du8"
 from numpy.linalg import norm 
 
 from sklearn.manifold import TSNE
@@ -36,8 +39,43 @@ from sklearn.preprocessing import StandardScaler
 # Adjust the import search path to include its parent and parent-parent folders
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
-
 EMB_DIM = 256
+
+
+# Gather the data (maybe merging every KB  into a bigger .json)
+all_data = [] 
+# real set (100 turns)
+#folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-232135/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
+#if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-232135/round000"):
+#    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
+
+# toy set (6turns)
+folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
+if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"):
+    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
+
+print("Current working directory:", os.getcwd())
+
+file_names = sorted([x for x in os.listdir(folder_path) if x.endswith(".json") and x.startswith("knowledge-turn")], 
+                    key=lambda x: int(x.split('.')[0].replace("knowledge-turn", "")))
+
+for file_name in file_names:
+    file_path = os.path.join(folder_path, file_name)
+    with open(file_path, 'r') as file:
+        kb = json.load(file)
+        all_data.append(kb[:100])
+if not all_data:
+    print("No knowledge base data is found, Exiting.")
+    exit()
+
+if not all(isinstance(kb, list) and all(check_type(item, Dict[str, Union[int, str]]) for item in kb) for kb in all_data):
+    raise ValueError("Data formate invalid: all_data should be a list of lists of strings")
+
+logging.info(f"Loaded {len(all_data)} knowledge bases.")
+# NEP I guess this would log/print?
+
+# Define an instance of voyageai client 
+vo = voyageai.Client()
 
 
 
@@ -118,7 +156,7 @@ def cluster_kmeans(embeddings: List[np.array], knowledges: List[List[Dict[str, U
 
     best_k = 3 # We give it a default (to avoid the None case; also 3 is a decent guess)
     best_score = -1
-    for k in range(2,100):
+    for k in range(2,20):
         kmean_for_best_k = KMeans(n_clusters=k, random_state=42).fit(data)
         score = silhouette_score(data, kmean_for_best_k.labels_)
         print(f"Current k is {k}, and current silhouette score {score}")
@@ -212,39 +250,36 @@ def dim_red_tsne(embeddings: List[np.array], knowledges: List[List[Dict[str, Uni
     '''
 
     # Initialize t-SNE
-    reduced_embeddings = []
+    all_embeddings = np.vstack(embeddings)
     all_reduced_mappings = []
+    print(f"Processing embedding with shape: {all_embeddings.shape}")
 
-    for embedding, knowledge in zip(embeddings, knowledges):
-        print(f"Processing embedding with shape: {embedding.shape}")
+    if all_embeddings.shape[0] <= 2:
+        raise ValueError(f"Too few rows in embedding for dimensionality reduction: {all_embeddings.shape[0]}")
 
-        if embedding.shape[0] <= 2:
-            raise ValueError(f"Too few rows in embedding for dimensionality reduction: {embedding.shape[0]}")
+    # Adjust perplexity based on data size
+    perplexity = min(all_embeddings.shape[0] - 1, 50)  # Default max perplexity for t-SNE
 
-        # Adjust perplexity based on data size
-        perplexity = min(embedding.shape[0] - 1, 90)  # Default max perplexity for t-SNE
+    reducer = TSNE(
+        n_components=2,   # We want to draw a 2D graph in the end
+        perplexity=perplexity,
+        random_state=42,
+        init='pca',  # t-SNE's random initialization
+        learning_rate='auto'
+    )
 
-        reducer = TSNE(
-            n_components=2,   # We want to draw a 2D graph in the end
-            perplexity=perplexity,
-            random_state=42,
-            init='pca',  # t-SNE's random initialization
-            learning_rate='auto'
-        )
+    print(f"Using perplexity={perplexity} for embedding with {all_embeddings.shape[0]} rows.")
 
-        print(f"Using perplexity={perplexity} for embedding with {embedding.shape[0]} rows.")
+    reduced_embedding = reducer.fit_transform(all_embeddings)
 
-        reduced_embedding = reducer.fit_transform(embedding)
-        reduced_embeddings.append(reduced_embedding)
-        all_reduced_embeddings = np.vstack(reduced_embeddings)
-
-        # Build a dict for statement:embedding mappings
-        know_reduced_map = {
-            entry["statement"]: reduced for entry, reduced in zip(knowledge[:100], reduced_embedding)
-        }  # You may retrieve the embedding with their corresponding statement as the key.
-        all_reduced_mappings.append(know_reduced_map)
-
-    return all_reduced_embeddings, all_reduced_mappings
+    '''
+    # Build a dict for statement:embedding mappings
+    know_reduced_map = {
+        entry["statement"]: reduced for entry, reduced in zip(knowledge[:100], reduced_embedding)
+    }  # You may retrieve the embedding with their corresponding statement as the key.
+    all_reduced_mappings.append(know_reduced_map)
+    '''
+    return reduced_embedding
 
 # Visualization
 def visualization(prim_dims: np.array, list_labels: List[np.array]):
@@ -260,6 +295,7 @@ def visualization(prim_dims: np.array, list_labels: List[np.array]):
 
     all_labels = np.array(list_labels).flatten() # We want to acquire all unique cluster values to make the graph.
     print(f'Number of all unique clusters {np.unique(all_labels)}')
+
     # identifying data to be highlighted (e.g., here we are trying to highlight first and last 1%, correponding to the first and last 6 knowledge_bases)
     array_length = len(list_labels[0]) # each knowledge base is of the same length 
     portion_to_identify = int(len(list_labels)*(1/600)) # We only identify the first and last KB; but this can change
@@ -267,10 +303,11 @@ def visualization(prim_dims: np.array, list_labels: List[np.array]):
     source_ids = np.concatenate([source_ids_start, np.full(array_length *(len(list_labels)-portion_to_identify*2),-1), source_ids_end])
 
     plt.figure(figsize=(8,6))
+    print(f"Before the cluster plot, data shape A is {prim_dims.shape}, and a sample is {prim_dims[0]}")
     sns.scatterplot(
         x=prim_dims[:,0],  # all should be one-dim (x, y, hue, style)
         y=prim_dims[:,1],
-        hue = all_labels, # all the unique cluster values can be found here 
+        #hue = all_labels, # all the unique cluster values can be found here 
         style = np.where(source_ids == -1, "Unlabeled", source_ids), # data point will not be highlighted if their source_id == -1
         palette= 'Set1',
         legend='full'
@@ -303,10 +340,7 @@ def visualization(prim_dims: np.array, list_labels: List[np.array]):
 
     # b) Count how many items are in each cluster per turn
     cluster_counts = df.groupby(['turn', 'cluster']).size().reset_index(name='num_items') 
-    # Groups all rows by the unique (turn, cluster) pairs in df, resulting in .size(), 
-    # which is a Series where the index is (turn, cluster) and the value is the count of items. 
-    # Effectively one group=one point on the graph=times of that cluster at given turn
-    # Check unique clusters and how many counters per turn 
+    # Groups all rows by the unique (turn, cluster) pairs in df, resulting in .size() which is a Series where the index is (turn, cluster) and the value is the count of items. Effectively one group=one point on the graph=times of that cluster at given turn. Check unique clusters and how many counters per turn 
     print("Unique clusters in DataFrame:", df['cluster'].unique())
     print("Cluster counts per turn:\n", cluster_counts)
 
@@ -328,43 +362,6 @@ def visualization(prim_dims: np.array, list_labels: List[np.array]):
 
 
 if __name__ == "__main__":
-    import logging
-    import voyageai
-    voyageai.api_key = "pa-D7cexR9gsRuYWYv3IfAS9h-aIV_bKjuTJ9nx7n59Du8"
-    print("Current working directory:", os.getcwd())
-
-    # Gather the data (maybe merging every KB  into a bigger .json)
-    all_data = [] 
-    # real set (100 turns)
-    #folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-232135/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
-    #if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-232135/round000"):
-    #    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
-
-    # toy set (6turns)
-    folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
-    if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"):
-        raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
-
-    file_names = sorted([x for x in os.listdir(folder_path) if x.endswith(".json") and x.startswith("knowledge-turn")], 
-                        key=lambda x: int(x.split('.')[0].replace("knowledge-turn", "")))
-
-    for file_name in file_names:
-        file_path = os.path.join(folder_path, file_name)
-        with open(file_path, 'r') as file:
-            kb = json.load(file)
-            all_data.append(kb[:100])
-    if not all_data:
-        print("No knowledge base data is found, Exiting.")
-        exit()
-
-    if not all(isinstance(kb, list) and all(check_type(item, Dict[str, Union[int, str]]) for item in kb) for kb in all_data):
-        raise ValueError("Data formate invalid: all_data should be a list of lists of strings")
-
-    logging.info(f"Loaded {len(all_data)} knowledge bases.")
-    # NEP I guess this would log/print?
-
-    # Define an instance of voyageai client 
-    vo = voyageai.Client()
 
     # Get embeddings
     try:
@@ -374,6 +371,7 @@ if __name__ == "__main__":
         logging.error(f"Error during embedding: {e}")
         exit(1) # What does this "1" do?
 
+    '''
     # Calculate the embeddings for some known items  
     # Retrieve two embeddings whose corresponding statements are known to us.
     v1 = all_mappings[5]["Information literacy crucial for navigating vast digital information."]
@@ -387,14 +385,31 @@ if __name__ == "__main__":
 
     # Visualize embeddings before clustering 
     import numpy as np
-    data = np.vstack(embeddings)
-    print(f'the data type is {type(data)}')
+    data = embeddings[5] # We only run the last KB this time
+    # print(f'the data type is {type(data)}')
     from sklearn.manifold import TSNE
     import matplotlib
     matplotlib.use("Agg")  # Use non-interactive backend for headless servers
 
-    # Adjust perplexity based on data size
+    reduced_embeddings = []
+    for embedding in embeddings:
+        # Adjust perplexity based on data size
+        perplexity = min(embedding.shape[0] - 1, 90)  # Default max perplexity for t-SNE
+        reducer = TSNE(
+            n_components=2,   # We want to draw a 2D graph in the end
+            perplexity=perplexity,
+            random_state=42,
+            init='pca',  # t-SNE's random initialization
+            learning_rate='auto'
+        )
+        reduced_embedding = reducer.fit_transform(embedding)  # 'data' is the stacked embeddings
+        reduced_embeddings.append(reduced_embedding)
+    reduced_embeddings = np.vstack(reduced_embeddings)
+    print(f"Before the cluster plot, data shape B is {reduced_embeddings.shape}, \n and a sample is {reduced_embeddings[0]}")
+    #sns.scatterplot(x=reduced_embeddings[:, 0], y=reduced_embeddings[:, 1], palette= 'Set1', legend='full')
+
     perplexity = min(data.shape[0] - 1, 90)  # Default max perplexity for t-SNE
+    print("current perplexity is ", perplexity)
     reducer = TSNE(
         n_components=2,   # We want to draw a 2D graph in the end
         perplexity=perplexity,
@@ -402,8 +417,7 @@ if __name__ == "__main__":
         init='pca',  # t-SNE's random initialization
         learning_rate='auto'
     )
-
-    reduced_embeddings = reducer.fit_transform(data)  # 'data' is the stacked embeddings
+    reduced_embeddings = reducer.fit_transform(data)
     plt.scatter(reduced_embeddings[:, 0], reduced_embeddings[:, 1])
     plt.title("Visualizing Embeddings Before Clustering")
     # Make timestamped directory for this experiment
@@ -417,7 +431,7 @@ if __name__ == "__main__":
     plt.savefig(f"{backup_dir}/natural_cluster.pdf", format="pdf")
     plt.close()  # Close the plot to avoid overlapping figures
 
-
+    '''
 
     # Clustering w/ kmeans 
     print(f"Shape Checks before K-means")
@@ -432,27 +446,30 @@ if __name__ == "__main__":
         logging.error(f"Error during clustering: {e}")
         exit(1)
 
+    '''
     # Retrieve two labels 
     label1 = statements_to_labels[5][(1, 'Information literacy crucial for navigating vast digital information.')]
     label2 = statements_to_labels[5][(0, 'Apply basic first aid to treat wounds and stabilize injuries.')]
     label3 = statements_to_labels[5][(16, 'Basic first aid: clean, apply antibiotic ointment, cover injuries.')]
 
     print(f"After the kmeans, label1 is {label1}, label2 is {label2}, and label3 is {label3}")
-
+    '''
     # Reducing dimensions for visualization 
     try:
-        reduced_embeddings, all_reduced_mappings = dim_red_tsne(embeddings, all_data)  # List[np.array]
+        reduced_embeddings = dim_red_tsne(embeddings, all_data)  # List[np.array]
         logging.info("Dimensionality reduction completed.")
     except Exception as e:
         logging.error(f"Error during dimensionality reduction: {e}")
         exit(1)
 
+    '''
     # Retrieve two reduced embeddings 
     #reduced_v1 = all_reduced_mappings[5]["Energy conservation: total energy remains constant, forms change."]
     #reduced_v2 = all_reduced_mappings[5]["Quantum fluctuations challenge conservation of energy principles slightly"]        
     # Calculating their Euclidean distances. 
     #reduced_euclidean_distance = norm(reduced_v1 - reduced_v2)
     #print("Euclidean Distance after Dim Red between two identified items:", reduced_euclidean_distance)
+    '''
 
     # Visualization
     try:
