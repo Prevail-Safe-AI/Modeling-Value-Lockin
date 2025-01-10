@@ -57,7 +57,7 @@ def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, st
     
     all_embeddings = [] 
     all_mappings = [] # creating a list of mappings out of {statement:embedding}
-    for knowledge in knowledges:
+    for idx, knowledge in enumerate(knowledges):
         statements = [entry["statement"] for entry in knowledge[:100]]
         print(f'first 10 statements is {statements[:10]}, the len of statements being {len(statements)}')
         raw_output = vo.embed(  
@@ -73,7 +73,7 @@ def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, st
         # To np.array and then normalize 
         cur_emb = np.array(cur_emb)  # Converting [List[List[int]] to np.array]
         cur_emb = StandardScaler().fit_transform(cur_emb)  # Normalize embeddings
-
+        print(f"In the {idx} round of embedding, Mean: {np.mean(cur_emb)}, Std: {np.std(cur_emb)}")
 
         if np.isnan(cur_emb).any():
             print(f"Found NaN in embedding. Replacing NaN values.")
@@ -84,8 +84,8 @@ def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, st
             np.isnan(cur_emb).any() or \
             np.isinf(cur_emb).any():
             raise ValueError("Failed to embed strings. Invalid embeddings returned.")
-        cur_emb = np.array(cur_emb) # Converting [List[List[int]] to np.array
-        print(f'current type of cur_emb is {cur_emb}')
+ 
+
         all_embeddings.append(cur_emb)
 
         # Build a dict for statement:embedding mappings 
@@ -107,22 +107,21 @@ def cluster_kmeans(embeddings: List[np.array], knowledges: List[List[Dict[str, U
     :param knowledges: all knowledge items passed on from the simulation 
     :type knwledges: List[List[Dict[str, Union[int, str]]]], where each item is a dict of id and statement. 
 
-    :return: list_labels, each is a array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
-    :rtype: List[nd.array] (num_turns, (num_items,))
-    '''
-    # Ensure labels match embeddings
-    for embedding, knowledge in zip(embeddings, knowledges):
-        if embedding.shape[0] != len(knowledge[:100]):
-            raise ValueError(f"Mismatch between embedding rows ({embedding.shape[0]}) and knowledge items ({len(knowledge[:100])})")
+    :return list_labels: each is a array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
+    :rtype list_labels: List[nd.array] (num_turns, (num_items,))
 
+    :return all_statements_to_labels: mappings from statement str to clustering labsl 
+    :rtype all_statements_to_labels: List[Dict[str, int]]
+    '''
     # Silhouette to decide the best k 
     data = np.vstack(embeddings) # Vertically stacks arrays, shape will be [len(list)*num_items, embed_dims]
 
     best_k = 3 # We give it a default (to avoid the None case; also 3 is a decent guess)
     best_score = -1
-    for k in range(2,10):
+    for k in range(2,100):
         kmean_for_best_k = KMeans(n_clusters=k, random_state=42).fit(data)
         score = silhouette_score(data, kmean_for_best_k.labels_)
+        print(f"Current k is {k}, and current silhouette score {score}")
         if score > best_score:
             best_score = score
             best_k = k
@@ -132,15 +131,16 @@ def cluster_kmeans(embeddings: List[np.array], knowledges: List[List[Dict[str, U
     # K-means to do the clustering 
     list_labels = []
     all_statements_to_labels = []
+
     for embedding, (idx,knowledge) in zip(embeddings, enumerate(knowledges)):
+        print(f"In the {idx} round of cluster_kmeans, Mean: {np.mean(embedding)}, Std: {np.std(embedding)}")
         kmeans = KMeans(n_clusters=best_k, random_state=42)  # For reproductivity 
         labels_kmeans = kmeans.fit_predict(embedding)
         list_labels.append(labels_kmeans)  # In visualization you should associate each np.array (labels contained in one KB) a KB identifier  
 
         # Calculate and log the Silhouette Score for the final K-means clustering
-        final_score = silhouette_score(data, kmeans.labels_)
+        final_score = silhouette_score(embedding, kmeans.labels_)
         print(f"Final Silhouette Score for K={best_k}: {final_score}")
-
 
 
         # Statement-to-label
@@ -335,6 +335,12 @@ if __name__ == "__main__":
 
     # Gather the data (maybe merging every KB  into a bigger .json)
     all_data = [] 
+    # real set (100 turns)
+    #folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-232135/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
+    #if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-232135/round000"):
+    #    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
+
+    # toy set (6turns)
     folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
     if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"):
         raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
@@ -346,7 +352,7 @@ if __name__ == "__main__":
         file_path = os.path.join(folder_path, file_name)
         with open(file_path, 'r') as file:
             kb = json.load(file)
-            all_data.append(kb)
+            all_data.append(kb[:100])
     if not all_data:
         print("No knowledge base data is found, Exiting.")
         exit()
@@ -379,7 +385,46 @@ if __name__ == "__main__":
     euclidean_distance_simi_items = norm(v2 - v3)
     print("Euclidean Distance between two identified items:", euclidean_distance_simi_items)
 
+    # Visualize embeddings before clustering 
+    import numpy as np
+    data = np.vstack(embeddings)
+    print(f'the data type is {type(data)}')
+    from sklearn.manifold import TSNE
+    import matplotlib
+    matplotlib.use("Agg")  # Use non-interactive backend for headless servers
+
+    # Adjust perplexity based on data size
+    perplexity = min(data.shape[0] - 1, 90)  # Default max perplexity for t-SNE
+    reducer = TSNE(
+        n_components=2,   # We want to draw a 2D graph in the end
+        perplexity=perplexity,
+        random_state=42,
+        init='pca',  # t-SNE's random initialization
+        learning_rate='auto'
+    )
+
+    reduced_embeddings = reducer.fit_transform(data)  # 'data' is the stacked embeddings
+    plt.scatter(reduced_embeddings[:, 0], reduced_embeddings[:, 1])
+    plt.title("Visualizing Embeddings Before Clustering")
+    # Make timestamped directory for this experiment
+    timestamp = time.strftime("%Y%m%d-%H%M%S")
+
+    # Use the timestamp to record running data files 
+    backup_dir = f"/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/analysis/run-{timestamp}"
+    os.makedirs(backup_dir, exist_ok=True)
+    print(f"Directory created: {os.path.exists(backup_dir)}")
+
+    plt.savefig(f"{backup_dir}/natural_cluster.pdf", format="pdf")
+    plt.close()  # Close the plot to avoid overlapping figures
+
+
+
     # Clustering w/ kmeans 
+    print(f"Shape Checks before K-means")
+    print("Length of embeddings:", len(embeddings))
+    print("Shapes of each embedding array:", [e.shape for e in embeddings])
+    print("Length of knowledges:", len(all_data))
+    print("Lengths of each knowledge list:", [len(k) for k in all_data])
     try:
         clusters, statements_to_labels = cluster_kmeans(embeddings, all_data)
         logging.info("Clustering completed.")
