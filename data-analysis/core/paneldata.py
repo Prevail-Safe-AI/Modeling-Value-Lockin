@@ -543,9 +543,12 @@ def build_temporal_panel(
         
         # Calculate the mode of the GPT versions
         gpt_versions = [gpt_version_str2int[sample.gpt_version] for sample in cur_samples]
-        maj_gpt_version = max(set(gpt_versions), key=gpt_versions.count) if overall_nsamples > 0 else None
-        if gpt_versions.count(maj_gpt_version) < overall_nsamples * 0.95:
-            print(f"Info: GPT version mode is not dominant in time interval {time_interval_num} (GPT-{3.5 if maj_gpt_version == 0 else 4}), distribution: {Counter(gpt_versions)}")
+        if is_gpt == 2:
+            maj_gpt_version = None
+        else:
+            maj_gpt_version = max(set(gpt_versions), key=gpt_versions.count) if overall_nsamples > 0 else None
+            if gpt_versions.count(maj_gpt_version) < overall_nsamples * 0.95:
+                print(f"Info: GPT version mode is not dominant in time interval {time_interval_num} (GPT-{3.5 if maj_gpt_version == 0 else 4}), distribution: {Counter(gpt_versions)}")
         
         # Calculate turns and conversation length
         overall_turns = [len(sample.conversation) for sample in cur_samples]
@@ -653,7 +656,7 @@ def build_temporal_panel(
         panel1["concept_diversity_assistant"].append(concept_diversity_assistant)
         panel1["concept_diversity_assistant_filtered"].append(concept_diversity_assistant_filtered)
         
-        if eval(os.environ.get("SKIP_TEMPORAL2", "False")):
+        if eval(os.environ.get("SKIP_TEMPORAL2", "False")) and panel2["time"]:
             continue
         
         concept_mapping: Dict[int, List[DataSample]] = defaultdict(list)
@@ -696,9 +699,6 @@ def build_temporal_panel(
             panel2["cluster_mean_prompt_length"].append(np.mean([sample.role_chars("user") for sample in concept_mapping[concept]]))
     
     # Build the DataFrame and set the index
-    if eval(os.environ.get("SKIP_TEMPORAL2", "False")):
-        panel2 = panel1
-    
     panel1 = create_panel_and_backup(panel1, "temporal_panel1")
     panel2 = create_panel_and_backup(panel2, "temporal_panel2")
     return panel1, panel2
