@@ -253,6 +253,8 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         clusters_pd = clusterer.condensed_tree_.to_pandas()
         min_id = int(min(clusters_pd.child.min(), clusters_pd.parent.min()) + 0.1)
         max_id = int(max(clusters_pd.child.max(), clusters_pd.parent.max()) + 0.1)
+        print("Backing up clusters_pd...")
+        clusters_pd.to_csv(f"./data/clusters_pd-{time.strftime('%Y%m%d-%H%M%S')}.csv")
         assert min_id == 0 and len(clusters_pd) == max_id # Ensure that the IDs are contiguous and that it is a single tree without any disconnected nodes
         
         # Get the probabilities of each string and robustness of each cluster
@@ -292,6 +294,11 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         
         min_id = int(min(clusters_pd.child.min(), clusters_pd.parent.min()) + 0.1)
         max_id = int(max(clusters_pd.child.max(), clusters_pd.parent.max()) + 0.1)
+        print(f"Min ID: {min_id}, Max ID: {max_id}, Length of clusters_pd: {len(clusters_pd)}")
+        print(clusters_pd.head())
+        print(clusters_pd.describe())
+        print("Backing up clusters_pd...")
+        clusters_pd.to_csv(f"./data/clusters_pd-{time.strftime('%Y%m%d-%H%M%S')}.csv")
         assert min_id == 0 and len(clusters_pd) == max_id
         
         # Get the probabilities of each string and robustness of each cluster
@@ -306,8 +313,6 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         parent_mapping[int(row.child + 0.1)] = int(row.parent + 0.1)
     
     # Back up clusters_pd, parent_mapping, and weights
-    print("Backing up clusters_pd...")
-    clusters_pd.to_csv(f"./data/clusters_pd-{time.strftime('%Y%m%d-%H%M%S')}.csv")
     print("Backing up parent_mapping...")
     dump_file(parent_mapping, f"parent_mapping-initial-{time.strftime('%Y%m%d-%H%M%S')}.json")
     print("Backing up weights...")
