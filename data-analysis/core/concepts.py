@@ -244,7 +244,7 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         obj = load_file(os.environ["CLUSTERS"])
         weights = obj[3]
     
-    else:
+    elif eval(os.environ.get("SINGLE_THREAD", "False")):
         print(f"Clustering... (current time: {time.strftime('%Y%m%d-%H%M%S')})")
         clusterer = hdbscan.HDBSCAN(min_cluster_size=CLUSTER_MIN_SIZE).fit(data)
         print(f"Clustering complete. (current time: {time.strftime('%Y%m%d-%H%M%S')})")
@@ -257,6 +257,46 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         
         # Get the probabilities of each string and robustness of each cluster
         weights = [None] * min_id + [float(clusterer.probabilities_[i]) for i in range(len(strings))]
+        weights += [None] * (max_id + 1 - len(weights))
+    
+    else:
+        import evoc
+
+        print(f"Clustering (multithreading)... (current time: {time.strftime('%Y%m%d-%H%M%S')})")
+        clusterer = evoc.EVoC(
+            base_min_cluster_size = CLUSTER_MIN_SIZE,
+            n_neighbors=25,
+            node_embedding_dim=25,
+        )
+        cluster_labels = clusterer.fit_predict(data)
+        cluster_layers = clusterer.cluster_layers_
+        hierarchy = clusterer.cluster_tree_
+        print(f"Clustering complete. (current time: {time.strftime('%Y%m%d-%H%M%S')})")
+        
+        # Identify parent clusters of each string and each cluster
+        layer_counts = [len(set(layer)) for layer in tqdm(cluster_layers)] + [1]
+        parent_child_pairs = set()
+        
+        def calculate_cluster_id(layer, node):
+            assert 0 <= layer < len(layer_counts)
+            assert 0 <= node < layer_counts[layer]
+            return node + sum(layer_counts[layer+1:]) + len(strings)
+        
+        for id in tqdm(range(len(strings))):
+            ancestors = [id] + [calculate_cluster_id(layer, cluster_layers[layer][id]) for layer in range(len(cluster_layers)) if cluster_layers[layer][id] != -1] + [calculate_cluster_id(len(cluster_layers), 0)]
+            for l in range(len(ancestors) - 1):
+                if ancestors[l] != ancestors[l + 1]:
+                    parent_child_pairs.add((ancestors[l], ancestors[l + 1]))
+        
+        clusters_pd = pd.DataFrame(parent_child_pairs, columns=["parent", "child"])
+        
+        min_id = int(min(clusters_pd.child.min(), clusters_pd.parent.min()) + 0.1)
+        max_id = int(max(clusters_pd.child.max(), clusters_pd.parent.max()) + 0.1)
+        assert min_id == 0 and len(clusters_pd) == max_id
+        
+        # Get the probabilities of each string and robustness of each cluster
+        assert len(clusterer.membership_strengths_.flatten()) == len(strings)
+        weights = [None] * min_id + list(clusterer.membership_strengths_.flatten())
         weights += [None] * (max_id + 1 - len(weights))
     
     print(f"Number of clusters: {max_id - len(strings) + 1}")
