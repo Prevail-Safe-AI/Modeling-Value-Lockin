@@ -27,6 +27,7 @@ from typeguard import check_type
 from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering  # Clustering algos 
 import hdbscan
 from sklearn.metrics import silhouette_score # to decide best k in k-means 
+from sklearn.decomposition import PCA
 import umap
 import matplotlib.pyplot as plt 
 import seaborn as sns
@@ -116,7 +117,7 @@ def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, st
         print(f'the raw output is {raw_output}') # With an intention ot check out whether raw output contains nan or not. 
         cur_emb = raw_output.embeddings#[:,1:]  #[nup.items, num_dims]
         #EMB_DIM = cur_emb.shape[1]
-        print(f'the 1st item of embedding looks like {cur_emb[:1]}, with the len of {len(cur_emb)}, and type of {type(cur_emb)}')
+        # print(f'the 1st item of embedding looks like {cur_emb[:1]}, with the len of {len(cur_emb)}, and type of {type(cur_emb)}')
 
         # To np.array and then normalize 
         # Apply L2 normalization (row-wise normalization for embeddings)
@@ -223,30 +224,28 @@ def cluster_hdbscan(embeddings: List[np.array], knowledges: List[List[Dict[str, 
     data = np.vstack(embeddings)  # Shape: [len(list)*num_items, embed_dims]
 
     # Run HDBSCAN clustering
-    clusterer = hdbscan.HDBSCAN(min_cluster_size=50, min_samples=5, metric='euclidean')
+    clusterer = hdbscan.HDBSCAN(min_cluster_size=40, min_samples=2, metric='euclidean')
     labels_hdbscan = clusterer.fit_predict(data)
 
     # Check for noise points
     noise_count = np.sum(labels_hdbscan == -1)
     print(f"Number of noise points: {noise_count}")
 
-    # Reshape labels to align with the knowledge base structure
-    list_labels = labels_hdbscan.reshape(length_kbs, -1).tolist()
-
-    all_statements_to_labels = []
+    all_statements_to_labels = {}
     # Map statements to labels
-    for knowledge, labels in zip(knowledges, list_labels):
-        statement_to_label = {(idx, entry["statement"]): label for idx, (entry, label) in enumerate(zip(knowledge[:100], labels))}
-        all_statements_to_labels.append(statement_to_label)
+    all_knowledges = [item for knowledge in knowledges for item in knowledge[:100]] # stack the whole list in one single list
 
-    for tuple_pair in statement_to_label:
-        print(f'tuple_pair: {tuple_pair}, Value: {statement_to_label[tuple_pair]}')
+    for idx, (entry, label) in enumerate(zip(all_knowledges, labels_hdbscan)):
+        all_statements_to_labels[(idx, entry["statement"])] = label
+
+    for tuple_pair in all_statements_to_labels:
+        print(f'tuple_pair: {tuple_pair}, Value: {all_statements_to_labels[tuple_pair]}')
 
     return labels_hdbscan, all_statements_to_labels
 
 
 # UMAP --> Apply UMAP and leave out the essential dimensions (2 PC; initial and final comparison)
-def dim_red(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[int, str]]]])-> List[np.array]: 
+def dim_red_umap(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[int, str]]]])-> List[np.array]: 
     
     '''
     :param: embeddings: a numpy array that each row corresponds to one item and each column is one dim of that item
@@ -257,30 +256,27 @@ def dim_red(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[in
     '''
 
     # Initialize UMAP
-    reduced_embeddings = [] 
+    all_embeddings = np.vstack(embeddings)
     all_reduced_mappings = []
-    for embedding, knowledge in zip(embeddings, knowledges):
-        print(f"Processing embedding with shape: {embedding.shape}")
-        if embedding.shape[0] <= 2:
-            raise ValueError(f"Too few rows in embedding for dimensionality reduction: {embedding.shape[0]}")
-        
-        # Adjust n_neighbors based on data size
-        n_neighbors = min(embedding.shape[0] - 1, 15)
-        reducer = umap.UMAP(n_neighbors = n_neighbors, 
-                            min_dist = 0.1, # default
-                            n_components=2,   # We want to draw a 2D graph in the end 
-                            random_state = 42
+    print(f"Processing embedding with shape: {all_embeddings.shape}")
+    if all_embeddings.shape[0] <= 2:
+        raise ValueError(f"Too few rows in embedding for dimensionality reduction: {all_embeddings.shape[0]}")
+    
+    # Adjust n_neighbors based on data size
+    n_neighbors = min(all_embeddings.shape[0] - 1, 200)
+    reducer = umap.UMAP(n_neighbors = n_neighbors, 
+                        min_dist = 0.1, # default
+                        n_components=2,   # We want to draw a 2D graph in the end 
+                        random_state = 42
 
-        )
-        print(f"Using n_neighbors={n_neighbors} for embedding with {embedding.shape[0]} rows.")
+    )
+    print(f"Using n_neighbors={n_neighbors} for embedding with {all_embeddings.shape[0]} rows.")
 
-        reduced_embedding = reducer.fit_transform(embedding) 
-        reduced_embeddings.append(reduced_embedding)
-        all_reduced_embeddings = np.vstack(reduced_embeddings)
+    all_reduced_embeddings = reducer.fit_transform(all_embeddings) 
 
-        # Build a dict for statement:embedding mappings 
-        know_reduced_map = {entry["statement"]: reduced for entry, reduced in zip(knowledge[:100], reduced_embeddings)}  # You may retrieve the embedding with their corresponding statement as the key.
-        all_reduced_mappings.append(know_reduced_map)
+    # Build a dict for statement:embedding mappings 
+    all_knowledges = [item for knowledge in knowledges for item in knowledge[:100]] # stack the whole list in one single list
+    all_reduced_mappings = {entry["statement"]: reduced for entry, reduced in zip(all_knowledges, all_reduced_embeddings)}  # You may retrieve the embedding with their corresponding statement as the key.
 
     return all_reduced_embeddings, all_reduced_mappings
 
@@ -303,7 +299,6 @@ def dim_red_tsne(embeddings: List[np.array], knowledges: List[List[Dict[str, Uni
 
     # Initialize t-SNE
     all_embeddings = np.vstack(embeddings)
-    all_reduced_mappings = []
     print(f"Processing embedding with shape: {all_embeddings.shape}")
 
     if all_embeddings.shape[0] <= 2:
@@ -324,14 +319,41 @@ def dim_red_tsne(embeddings: List[np.array], knowledges: List[List[Dict[str, Uni
 
     reduced_embedding = reducer.fit_transform(all_embeddings)
 
+    
+    # Build a dict for statement:embedding mappings 
+    all_knowledges = [item for knowledge in knowledges for item in knowledge[:100]] # stack the whole list in one single list
+    all_reduced_mappings = {entry["statement"]: reduced for entry, reduced in zip(all_knowledges, reduced_embeddings)}  # You may retrieve the embedding with their corresponding statement as the key.
+  
+    return reduced_embedding, all_reduced_mappings
+
+def dim_red(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[int, str]]]]) -> List[np.array]:
     '''
-    # Build a dict for statement:embedding mappings
-    know_reduced_map = {
-        entry["statement"]: reduced for entry, reduced in zip(knowledge[:100], reduced_embedding)
-    }  # You may retrieve the embedding with their corresponding statement as the key.
-    all_reduced_mappings.append(know_reduced_map)
+    :param: embeddings: a numpy array that each row corresponds to one item and each column is one dim of that item
+    :type embeddings: np.array (num_items, dims)
+
+    :return all_reduced_embeddings, 2-dim primary dims after PCA
+    :rtype: np.array [num_turns * num_items, prim_dims], num_turns refers to turns in user-tutor chat, corresponding to the num of knowledge-base, too; num_items refers to num of knowledge items on one knowledge base 
     '''
-    return reduced_embedding
+
+    # Stack all embeddings into a single array
+    all_embeddings = np.vstack(embeddings)
+    all_reduced_mappings = []
+    print(f"Processing embedding with shape: {all_embeddings.shape}")
+    if all_embeddings.shape[0] <= 2:
+        raise ValueError(f"Too few rows in embedding for dimensionality reduction: {all_embeddings.shape[0]}")
+
+    # Initialize PCA with 2 components
+    pca = PCA(n_components=3, random_state=42)
+    print(f"Performing PCA for embedding with {all_embeddings.shape[0]} rows.")
+
+    # Fit and transform embeddings using PCA
+    all_reduced_embeddings = pca.fit_transform(all_embeddings)
+
+    # Build a dict for statement:embedding mappings 
+    all_knowledges = [item for knowledge in knowledges for item in knowledge[:100]]  # stack the whole list in one single list
+    all_reduced_mappings = {entry["statement"]: reduced for entry, reduced in zip(all_knowledges, all_reduced_embeddings)}  # You may retrieve the embedding with their corresponding statement as the key.
+
+    return all_reduced_embeddings, all_reduced_mappings
 
 
 # Visualization
@@ -464,8 +486,6 @@ def visualization(prim_dims: np.array, labels_kmeans: np.array, all_mappings: Li
 
     plt.savefig(f"{backup_dir}/heatmap.pdf", format="pdf")
     plt.close()  # Close the plot to avoid overlapping figures
-
-
 
 
 
