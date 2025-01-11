@@ -22,7 +22,7 @@ gpt_version_str2int = {
 
 TIME_INTERVAL_DAYS = 3
 MAX_TIME_INTERVALS = 129
-BANNED_CLUSTERS = [511399]
+BANNED_CLUSTERS = ([511399] if eval(os.environ.get("SINGLE_THREAD", "False")) else [])
 START_TIME = datetime(2023, 4, 9, 0, 0, 0).replace(tzinfo=None)
 
 def get_time_interval(time: datetime) -> int:
@@ -215,6 +215,9 @@ def build_user_panel(
         - concept_diversity_assistant_across_time: variance of the concept distribution in assistant speech during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS floats.
         - concept_diversity_user_across_time: variance of the concept distribution in user speech during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS floats.
         - concept_diversity_across_time: variance of the concept distribution that appeared during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS floats.
+        - concept_diversity_assistant_across_time_filtered: variance of the concept distribution in assistant speech during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS floats. Excluding certain banned clusters.
+        - concept_diversity_user_across_time_filtered: variance of the concept distribution in user speech during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS floats. Excluding certain banned clusters.
+        - concept_diversity_across_time_filtered: variance of the concept distribution that appeared during each time period respectivly. It is a tuple of MAX_TIME_INTERVALS floats. Excluding certain banned clusters.
         
     :rtype: pd.DataFrame
     """
@@ -241,6 +244,9 @@ def build_user_panel(
         "concept_diversity_assistant_concepts_explicit": [],
         "concept_diversity_user_concepts_related": [],
         "concept_diversity_assistant_concepts_related": [],
+        "concept_diversity_user_across_time": [],
+        "concept_diversity_assistant_across_time": [],
+        "concept_diversity_across_time": [],    
         "concept_diversity_user_across_time_filtered": [],
         "concept_diversity_assistant_across_time_filtered": [],
         "concept_diversity_across_time_filtered": [],    
@@ -376,6 +382,29 @@ def build_user_panel(
             )
             for i in range(MAX_TIME_INTERVALS)
         ]
+        concept_diversity_user_across_time = [
+            calculate_diversity(
+                get_concept_list(time_directory[i], "user_concepts_explicit") +
+                get_concept_list(time_directory[i], "user_concepts_related"),
+                **generic_arguments,
+            )
+            for i in range(MAX_TIME_INTERVALS)
+        ]
+        concept_diversity_assistant_across_time = [
+            calculate_diversity(
+                get_concept_list(time_directory[i], "assistant_concepts_explicit") +
+                get_concept_list(time_directory[i], "assistant_concepts_related"),
+                **generic_arguments,
+            )
+            for i in range(MAX_TIME_INTERVALS)
+        ]
+        concept_diversity_across_time = [
+            calculate_diversity(
+                get_concept_list(time_directory[i]),
+                **generic_arguments,
+            )
+            for i in range(MAX_TIME_INTERVALS)
+        ]
         
         # Append the row to the DataFrame
         panel["user"].append(user_id)
@@ -402,6 +431,9 @@ def build_user_panel(
         panel["concept_diversity_user_across_time_filtered"].append(tuple(concept_diversity_user_across_time_filtered))
         panel["concept_diversity_assistant_across_time_filtered"].append(tuple(concept_diversity_assistant_across_time_filtered))
         panel["concept_diversity_across_time_filtered"].append(tuple(concept_diversity_across_time_filtered))
+        panel["concept_diversity_user_across_time"].append(tuple(concept_diversity_user_across_time))
+        panel["concept_diversity_assistant_across_time"].append(tuple(concept_diversity_assistant_across_time))
+        panel["concept_diversity_across_time"].append(tuple(concept_diversity_across_time))
     
     # Build the DataFrame and set the index
     panel = create_panel_and_backup(panel, "user_panel")
