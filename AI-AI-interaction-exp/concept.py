@@ -25,6 +25,7 @@ from typing import List, Dict, Tuple, Mapping, Union
 from typeguard import check_type
 
 from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering  # Clustering algos 
+import hdbscan
 from sklearn.metrics import silhouette_score # to decide best k in k-means 
 import umap
 import matplotlib.pyplot as plt 
@@ -33,13 +34,17 @@ import voyageai
 voyageai.api_key = "pa-D7cexR9gsRuYWYv3IfAS9h-aIV_bKjuTJ9nx7n59Du8"
 from numpy.linalg import norm 
 
+
 from sklearn.manifold import TSNE
 from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import normalize
+
 
 # Adjust the import search path to include its parent and parent-parent folders
 sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.path
 
 EMB_DIM = 256
+from sklearn.metrics import pairwise_distances
 
 
 # Gather the data (maybe merging every KB  into a bigger .json)
@@ -48,6 +53,11 @@ all_data = []
 #folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-232135/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
 #if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-232135/round000"):
 #    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
+# artificial set (~10 turns)
+# toy set (6turns)
+folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
+if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"):
+    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
 
 # toy set (6turns)
 folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
@@ -109,9 +119,12 @@ def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, st
         print(f'the 1st item of embedding looks like {cur_emb[:1]}, with the len of {len(cur_emb)}, and type of {type(cur_emb)}')
 
         # To np.array and then normalize 
-        cur_emb = np.array(cur_emb)  # Converting [List[List[int]] to np.array]
-        cur_emb = StandardScaler().fit_transform(cur_emb)  # Normalize embeddings
-        print(f"In the {idx} round of embedding, Mean: {np.mean(cur_emb)}, Std: {np.std(cur_emb)}")
+        # Apply L2 normalization (row-wise normalization for embeddings)
+        cur_emb = normalize(cur_emb, norm='l2', axis=1)
+
+        # Sanity check: Each row should have unit norm
+        norms = np.linalg.norm(cur_emb, axis=1)
+        print("Norms after L2 normalization:", norms)  # Should print 1.0 for all rows
 
         if np.isnan(cur_emb).any():
             print(f"Found NaN in embedding. Replacing NaN values.")
@@ -123,7 +136,6 @@ def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, st
             np.isinf(cur_emb).any():
             raise ValueError("Failed to embed strings. Invalid embeddings returned.")
  
-
         all_embeddings.append(cur_emb)
 
         # Build a dict for statement:embedding mappings 
@@ -136,7 +148,7 @@ def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, st
 
 
 # Clustering (K-means for MVP)
-def cluster_kmeans(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[int, str]]]]) -> List[np.array]:
+def cluster_kmeans(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[int, str]]]]) -> np.array:
 
     '''
     :param embeddings: all knowledge items converted to sentence embeddings.
@@ -145,13 +157,14 @@ def cluster_kmeans(embeddings: List[np.array], knowledges: List[List[Dict[str, U
     :param knowledges: all knowledge items passed on from the simulation 
     :type knwledges: List[List[Dict[str, Union[int, str]]]], where each item is a dict of id and statement. 
 
-    :return list_labels: each is a array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
-    :rtype list_labels: List[nd.array] (num_turns, (num_items,))
+    :return list_labels: an array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
+    :rtype list_labels: np.array] (num_turns * num_items,)
 
     :return all_statements_to_labels: mappings from statement str to clustering labsl 
     :rtype all_statements_to_labels: List[Dict[str, int]]
     '''
     # Silhouette to decide the best k 
+    length_kbs = len(knowledges)
     data = np.vstack(embeddings) # Vertically stacks arrays, shape will be [len(list)*num_items, embed_dims]
 
     best_k = 3 # We give it a default (to avoid the None case; also 3 is a decent guess)
@@ -167,40 +180,81 @@ def cluster_kmeans(embeddings: List[np.array], knowledges: List[List[Dict[str, U
     if best_k > 8:
         best_k = 8
     # K-means to do the clustering 
-    list_labels = []
+
+    # Clustering 
+    kmeans = KMeans(n_clusters=best_k, random_state=42)  # For reproductivity 
+    labels_kmeans = kmeans.fit_predict(data)
+
+
+    # Calculate and log the Silhouette Score for the final K-means clustering
+    final_score = silhouette_score(data, kmeans.labels_)
+    print(f"Final Silhouette Score for K={best_k}: {final_score}")
+
+    # to list
+    list_labels = labels_kmeans.reshape(length_kbs,-1).tolist() 
+
     all_statements_to_labels = []
-
-    for embedding, (idx,knowledge) in zip(embeddings, enumerate(knowledges)):
-        print(f"In the {idx} round of cluster_kmeans, Mean: {np.mean(embedding)}, Std: {np.std(embedding)}")
-        kmeans = KMeans(n_clusters=best_k, random_state=42)  # For reproductivity 
-        labels_kmeans = kmeans.fit_predict(embedding)
-        list_labels.append(labels_kmeans)  # In visualization you should associate each np.array (labels contained in one KB) a KB identifier  
-
-        # Calculate and log the Silhouette Score for the final K-means clustering
-        final_score = silhouette_score(embedding, kmeans.labels_)
-        print(f"Final Silhouette Score for K={best_k}: {final_score}")
-
-
-        # Statement-to-label
-        statement_to_label = {(idx, entry["statement"]): label for idx, (entry, label) in enumerate(zip(knowledge[:100], labels_kmeans))}
+    # Statement-to-label
+    for knowledge, labels in zip(knowledges, list_labels):
+        statement_to_label = {(idx, entry["statement"]): label for idx, (entry, label) in enumerate(zip(knowledge[:100], labels))}
         all_statements_to_labels.append(statement_to_label)
 
-        for tuple_pair in statement_to_label:
-            print(f'tuple_pair: {tuple_pair}, Value:{statement_to_label[tuple_pair]}')
+    for tuple_pair in statement_to_label:
+        print(f'tuple_pair: {tuple_pair}, Value:{statement_to_label[tuple_pair]}')
 
-    return list_labels, all_statements_to_labels
+    return labels_kmeans, all_statements_to_labels
 
-'''
+def cluster_hdbscan(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[int, str]]]]) -> np.array:
+    '''
+    :param embeddings: all knowledge items converted to sentence embeddings.
+    :type embeddings: List[np.array]
+
+    :param knowledges: all knowledge items passed on from the simulation 
+    :type knwledges: List[List[Dict[str, Union[int, str]]]], where each item is a dict of id and statement. 
+
+    :return list_labels: an array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
+    :rtype list_labels: np.array (num_turns * num_items,)
+
+    :return all_statements_to_labels: mappings from statement str to clustering labels 
+    :rtype all_statements_to_labels: List[Dict[str, int]]
+    '''
+    # Combine all embeddings into a single array
+    length_kbs = len(knowledges)
+    data = np.vstack(embeddings)  # Shape: [len(list)*num_items, embed_dims]
+
+    # Run HDBSCAN clustering
+    clusterer = hdbscan.HDBSCAN(min_cluster_size=50, min_samples=5, metric='euclidean')
+    labels_hdbscan = clusterer.fit_predict(data)
+
+    # Check for noise points
+    noise_count = np.sum(labels_hdbscan == -1)
+    print(f"Number of noise points: {noise_count}")
+
+    # Reshape labels to align with the knowledge base structure
+    list_labels = labels_hdbscan.reshape(length_kbs, -1).tolist()
+
+    all_statements_to_labels = []
+    # Map statements to labels
+    for knowledge, labels in zip(knowledges, list_labels):
+        statement_to_label = {(idx, entry["statement"]): label for idx, (entry, label) in enumerate(zip(knowledge[:100], labels))}
+        all_statements_to_labels.append(statement_to_label)
+
+    for tuple_pair in statement_to_label:
+        print(f'tuple_pair: {tuple_pair}, Value: {statement_to_label[tuple_pair]}')
+
+    return labels_hdbscan, all_statements_to_labels
+
+
 # UMAP --> Apply UMAP and leave out the essential dimensions (2 PC; initial and final comparison)
 def dim_red(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[int, str]]]])-> List[np.array]: 
     
-    
+    '''
     :param: embeddings: a numpy array that each row corresponds to one item and each column is one dim of that item
     :type embeddings: np.array (num_items, dims)
 
     :return all_reduced_embeddings, 2-dim primary dims after umap
     :rtype: np.array [num_turns * num_items, prim_dims], num_turns refers to turns in user-tutor chat, corresponding to the num of knowledge-base, too; num_items refers to num of knowledge items on one knowledge base 
-
+    '''
 
     # Initialize UMAP
     reduced_embeddings = [] 
@@ -211,8 +265,7 @@ def dim_red(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[in
             raise ValueError(f"Too few rows in embedding for dimensionality reduction: {embedding.shape[0]}")
         
         # Adjust n_neighbors based on data size
-        #n_neighbors = min(embedding.shape[0] - 1, 15)
-        n_neighbors = 40
+        n_neighbors = min(embedding.shape[0] - 1, 15)
         reducer = umap.UMAP(n_neighbors = n_neighbors, 
                             min_dist = 0.1, # default
                             n_components=2,   # We want to draw a 2D graph in the end 
@@ -231,10 +284,9 @@ def dim_red(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[in
 
     return all_reduced_embeddings, all_reduced_mappings
 
-'''
 
 # t-sne for dimension reduction 
-def dim_red_tsne(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[int, str]]]]) -> List[np.array]:
+def dim_red_tsne(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[int, str]]]]) -> np.array:
     '''
     :param embeddings: a numpy array where each row corresponds to one item, and each column is one dimension of that item
     :type embeddings: List[np.array] (num_items, dims)
@@ -281,34 +333,34 @@ def dim_red_tsne(embeddings: List[np.array], knowledges: List[List[Dict[str, Uni
     '''
     return reduced_embedding
 
+
 # Visualization
-def visualization(prim_dims: np.array, list_labels: List[np.array]):
+def visualization(prim_dims: np.array, labels_kmeans: np.array, all_mappings: List[Dict[str, float]]):
     '''
     :params prim_dims: the primary dims after applying dim reduction. 
     :type prim_dims: [num_turns * num_items, prim_dims]
 
-    :return: list_labels, each is a array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]. len(list)=600, each np.array[100,]
-    :rtype: List[nd.array] (num_turns, (num_items,))
+    :return labels_kmeans: an array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
+    :rtype labels_kmeans: np.array (num_turns *num_items,)
 
     '''
     # Visualize cluster in 2D
-
-    all_labels = np.array(list_labels).flatten() # We want to acquire all unique cluster values to make the graph.
-    print(f'Number of all unique clusters {np.unique(all_labels)}')
+    unique_labels = np.unique(labels_kmeans)
+    print(f'Number of all unique clusters {unique_labels}')
 
     # identifying data to be highlighted (e.g., here we are trying to highlight first and last 1%, correponding to the first and last 6 knowledge_bases)
-    array_length = len(list_labels[0]) # each knowledge base is of the same length 
-    portion_to_identify = int(len(list_labels)*(1/600)) # We only identify the first and last KB; but this can change
-    source_ids_start, source_ids_end = np.full(array_length * portion_to_identify, 1), np.full(array_length * portion_to_identify, 2)
-    source_ids = np.concatenate([source_ids_start, np.full(array_length *(len(list_labels)-portion_to_identify*2),-1), source_ids_end])
+    #array_length = len(list_labels[0]) # each knowledge base is of the same length 
+    #portion_to_identify = int(len(list_labels)*(1/600)) # We only identify the first and last KB; but this can change
+    #source_ids_start, source_ids_end = np.full(array_length * portion_to_identify, 1), np.full(array_length * portion_to_identify, 2)
+    #source_ids = np.concatenate([source_ids_start, np.full(array_length *(len(list_labels)-portion_to_identify*2),-1), source_ids_end])
 
     plt.figure(figsize=(8,6))
     print(f"Before the cluster plot, data shape A is {prim_dims.shape}, and a sample is {prim_dims[0]}")
     sns.scatterplot(
         x=prim_dims[:,0],  # all should be one-dim (x, y, hue, style)
         y=prim_dims[:,1],
-        #hue = all_labels, # all the unique cluster values can be found here 
-        style = np.where(source_ids == -1, "Unlabeled", source_ids), # data point will not be highlighted if their source_id == -1
+        hue = labels_kmeans, # Cluster label for each data point 
+        #style = np.where(source_ids == -1, "Unlabeled", source_ids), # data point will not be highlighted if their source_id == -1
         palette= 'Set1',
         legend='full'
     )
@@ -332,6 +384,8 @@ def visualization(prim_dims: np.array, list_labels: List[np.array]):
         
     # a) Create a DataFrame containing turns and assigned clusters
     records = []
+    list_labels = labels_kmeans.reshape(-1,100)
+    print(f"Currently we have {len(list_labels)} lists, and each contain 100 labels")
     for turn_idx, label_array in enumerate(list_labels):
         print(f'label_array is {label_array}, with the shape of {label_array.shape}')
         for lab in label_array:  # One lab is one label of that embedding 
@@ -359,6 +413,60 @@ def visualization(prim_dims: np.array, list_labels: List[np.array]):
     os.makedirs(backup_dir, exist_ok=True)
     plt.savefig(f"{backup_dir}/cluster_trends.pdf", format="pdf")
     plt.close()  # Close the plot to avoid overlapping figures
+
+
+    # items to be specified,3*3 from statement_to_embeddings 
+    item_embeddings = [all_mappings[6]["Data quality complexity arises from industry, context, and purposes interdependencies."],
+             all_mappings[6]["Data quality dimensions include accuracy, completeness, consistency, and validity."],
+             all_mappings[6]["Data quality issues arise from multiple sources & lifecycle stages."],
+             all_mappings[3]["Humans learn through iterative discovery, reflection, and consistent practice."],
+             all_mappings[3]["Human learning occurs through iterative cycles of discovery, reflection, practice."],
+             all_mappings[3]["Humans learn through combination of discovery, reflection, and practice."],
+             all_mappings[3]["Energy is conserved, it can't be created or destroyed."],
+             all_mappings[3]["Energy conservation drives natural processes towards equilibrium."],
+             all_mappings[3]["Energy can transform between forms, yet total energy remains constant."]
+             ] 
+    item_labels = ["data1",
+                   "data2",
+                   "data3",
+                   "human1",
+                   "human2",
+                   "human3",
+                   "energy1",
+                   "energy2",
+                   "energy3"]
+    # Ecludian distances intra all 9 pairs, in a np.array
+    dist_matrix = pairwise_distances(item_embeddings, metric="euclidean")
+
+    # Symmetric and zero-diagonal 
+    for i in range(9):
+        for j in range(i+1,9):
+            dist_matrix[j,i] = dist_matrix[i,j]
+        dist_matrix[i,i] = 0.0
+
+    plt.figure(figsize=(8,6))
+    sns.heatmap(
+        dist_matrix,
+        xticklabels=item_labels,
+        yticklabels=item_labels,
+        cmap="Blues",
+        annot=True,  # show numeric values,
+        fmt=".2f" # round to 2 decimals 
+    ) 
+
+    plt.title("Pairwise Distances Between Embeddings")
+    plt.xticks(rotation=45, ha="right")
+    plt.tight_layout()
+
+    # Use the timestamp to record running data files 
+    os.makedirs(backup_dir, exist_ok=True)
+    print(f"Directory created: {os.path.exists(backup_dir)}")
+
+    plt.savefig(f"{backup_dir}/heatmap.pdf", format="pdf")
+    plt.close()  # Close the plot to avoid overlapping figures
+
+
+
 
 
 if __name__ == "__main__":
@@ -440,7 +548,7 @@ if __name__ == "__main__":
     print("Length of knowledges:", len(all_data))
     print("Lengths of each knowledge list:", [len(k) for k in all_data])
     try:
-        clusters, statements_to_labels = cluster_kmeans(embeddings, all_data)
+        clusters, statements_to_labels = cluster_hdbscan(embeddings, all_data)
         logging.info("Clustering completed.")
     except Exception as e:
         logging.error(f"Error during clustering: {e}")
@@ -456,7 +564,7 @@ if __name__ == "__main__":
     '''
     # Reducing dimensions for visualization 
     try:
-        reduced_embeddings = dim_red_tsne(embeddings, all_data)  # List[np.array]
+        reduced_embeddings, _ = dim_red(embeddings, all_data)  # List[np.array]
         logging.info("Dimensionality reduction completed.")
     except Exception as e:
         logging.error(f"Error during dimensionality reduction: {e}")
@@ -473,7 +581,7 @@ if __name__ == "__main__":
 
     # Visualization
     try:
-        visualization(reduced_embeddings, clusters)
+        visualization(reduced_embeddings, clusters, all_mappings)
         logging.info("Visualization completed. PDFs generated.")
     except Exception as e:
         logging.error(f"Error during visualization: {e}")
