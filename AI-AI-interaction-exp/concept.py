@@ -46,6 +46,7 @@ sys.path = [os.path.dirname(os.path.dirname(os.path.abspath(__file__)))] + sys.p
 
 EMB_DIM = 256
 from sklearn.metrics import pairwise_distances
+from scipy.spatial.distance import pdist, squareform
 
 
 # Gather the data (maybe merging every KB  into a bigger .json)
@@ -94,10 +95,10 @@ vo = voyageai.Client()
 def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, str]]]]) -> List[np.array]: 
     '''
     :param knowledges: non-trivial concepts extracted from knowledge base
-    :type: List[]
+    :type knowledges: List[]
 
     :return: embeddings: each concept is converted into a list of int, correspending to one concept 
-    :type: List[np.array]  # Unless we use pytorch for parallel computation 
+    :rtype: List[np.array]  # Unless we use pytorch for parallel computation 
 
     Problem solving in process
     - You need to convert the embedding algo TY wrote for your purposes here, notably a diff input 
@@ -146,6 +147,24 @@ def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, st
     return all_embeddings, all_mappings  # List[np.array]; List[Dict[str, float]]
 
 # Alternative embedding w/ OpenAI 
+
+# Calculating the pair-wise Euclidean distances of all embedding in a given knowledge base.
+def pairwise_dis(all_embeddings: List[np.array])-> List[float]:
+    '''
+    :param all_embeddings: all embeddings from all KBs
+    :type all_embeddings: List[np.array]
+
+    :return all_distances: each is all the pair-distance among items of a given KB
+    :rtype List[float]
+
+    '''
+    all_distances = [] 
+    for idx, embeddings in enumerate(all_embeddings):
+        distances = pdist(embeddings, metric='euclidean')
+        average_distance = np.mean(distances)
+        print(f"Average Distance in the {idx} round is {average_distance}")
+        all_distances.append(average_distance)
+    return all_distances 
 
 
 # Clustering (K-means for MVP)
@@ -357,10 +376,13 @@ def dim_red(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[in
 
 
 # Visualization
-def visualization(prim_dims: np.array, labels_kmeans: np.array, all_mappings: List[Dict[str, float]]):
+def visualization(prim_dims: np.array, all_distances: List[float], labels_kmeans: np.array, all_mappings: List[Dict[str, float]]):
     '''
-    :params prim_dims: the primary dims after applying dim reduction. 
+    :param prim_dims: the primary dims after applying dim reduction. 
     :type prim_dims: [num_turns * num_items, prim_dims]
+
+    # param all_distances: all the pair-wise Euclidean distances, each float per KB
+    # type all_distances: List[float]
 
     :return labels_kmeans: an array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
     :rtype labels_kmeans: np.array (num_turns *num_items,)
@@ -436,6 +458,41 @@ def visualization(prim_dims: np.array, labels_kmeans: np.array, all_mappings: Li
     plt.savefig(f"{backup_dir}/cluster_trends.pdf", format="pdf")
     plt.close()  # Close the plot to avoid overlapping figures
 
+    # Visualize a pair-wise Euclidean distances trends 
+
+    # date for x-axis (y-axis is passed on here)
+
+    print(f"Right before visualization, distances are {all_distances}, and its shape is {len(all_distances)}")
+    x_values = range(len(all_distances))
+    # A list of dummy distances for debug purposes here. 
+    dummy_distances = [1.062, 1.070, 1.077, 1.062, 1.060, 1.059, 0.783, 0.810, 0.805, 0.799]
+
+
+    # plot 
+    plt.figure(figsize=(8, 5))  # Set the figure size
+    plt.plot(x_values,
+            all_distances, 
+            marker='o', 
+            linestyle='-', 
+            linewidth=2)
+
+    # axises 
+    plt.xlabel("Knowledge Base Index", fontsize=12)
+    plt.ylabel("Average Euclidean Distances", fontsize=12)
+    plt.title("Average Distance Trend", fontsize=14)
+
+    # Add grid for better readability
+    plt.grid(True)
+    # Use the timestamp to record running data files 
+    os.makedirs(backup_dir, exist_ok=True)
+    print(f"Directory created: {os.path.exists(backup_dir)}")
+
+    plt.savefig(f"{backup_dir}/euclidean_distance.pdf", format="pdf")
+    plt.close()  # Close the plot to avoid overlapping figures
+
+    
+
+    # Visualize a heatmap of 3*3 Euclidean Distances 
 
     # items to be specified,3*3 from statement_to_embeddings 
     item_embeddings = [all_mappings[6]["Data quality complexity arises from industry, context, and purposes interdependencies."],
@@ -599,9 +656,17 @@ if __name__ == "__main__":
     #print("Euclidean Distance after Dim Red between two identified items:", reduced_euclidean_distance)
     '''
 
+    # Pairwise Euclidean Distances 
+    try:
+        all_distances = pairwise_dis(embeddings)
+        logging.info("All Euclidean Distances Calculated.")
+    except Exception as e:
+        logging.error(f"Error during calculating euclidean distances {e}")
+        exit(1)
+
     # Visualization
     try:
-        visualization(reduced_embeddings, clusters, all_mappings)
+        visualization(reduced_embeddings, all_distances, clusters, all_mappings)
         logging.info("Visualization completed. PDFs generated.")
     except Exception as e:
         logging.error(f"Error during visualization: {e}")
