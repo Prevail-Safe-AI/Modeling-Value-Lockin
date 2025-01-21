@@ -1,0 +1,191 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.094
+Model:                            OLS   Adj. R-squared:                  0.091
+Method:                 Least Squares   F-statistic:                     41.22
+Date:                Fri, 17 Jan 2025   Prob (F-statistic):               0.00
+Time:                        08:58:29   Log-Likelihood:                 15790.
+No. Observations:               27215   AIC:                        -3.144e+04
+Df Residuals:                   27146   BIC:                        -3.088e+04
+Df Model:                          68                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================================
+                                            coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------
+const                                     1.8834      0.046     41.289      0.000       1.794       1.973
+nsamples_squared                         -0.0055      0.001     -9.391      0.000      -0.007      -0.004
+nsamples                                  0.0540      0.004     14.907      0.000       0.047       0.061
+user_first_entry                          0.0003   2.62e-05     11.146      0.000       0.000       0.000
+temporal_extension                        0.0019      0.000     12.227      0.000       0.002       0.002
+user_gpt35_ratio                          0.0131      0.002      5.546      0.000       0.008       0.018
+mean_turns                               -0.0007      0.000     -2.092      0.036      -0.001   -4.17e-05
+mean_conversation_length               4.669e-06    4.1e-07     11.394      0.000    3.87e-06    5.47e-06
+mean_prompt_length                     -4.49e-06   4.78e-07     -9.391      0.000   -5.43e-06   -3.55e-06
+user_first_entry_X_temporal_extension  8.938e-06   4.39e-06      2.038      0.042    3.42e-07    1.75e-05
+language_Albanian                         0.5401      0.090      5.972      0.000       0.363       0.717
+language_Arabic                           0.4080      0.046      8.888      0.000       0.318       0.498
+language_Azerbaijani                      0.3450      0.082      4.232      0.000       0.185       0.505
+language_Bengali                          0.4589      0.082      5.630      0.000       0.299       0.619
+language_Bokmal                           0.5041      0.061      8.268      0.000       0.385       0.624
+language_Bosnian                          0.4894      0.076      6.468      0.000       0.341       0.638
+language_Bulgarian                        0.2971      0.076      3.926      0.000       0.149       0.445
+language_Catalan                          0.4927      0.106      4.646      0.000       0.285       0.701
+language_Chinese                          0.4579      0.045     10.113      0.000       0.369       0.547
+language_Croatian                         0.5385      0.062      8.639      0.000       0.416       0.661
+language_Czech                            0.4438      0.054      8.269      0.000       0.339       0.549
+language_Danish                           0.5162      0.066      7.832      0.000       0.387       0.645
+language_Dutch                            0.5086      0.049     10.319      0.000       0.412       0.605
+language_English                          0.4676      0.045     10.337      0.000       0.379       0.556
+language_Esperanto                        0.3518      0.090      3.890      0.000       0.175       0.529
+language_Estonian                        -0.0869      0.060     -1.454      0.146      -0.204       0.030
+language_Finnish                          0.5052      0.064      7.899      0.000       0.380       0.631
+language_French                           0.4571      0.045     10.070      0.000       0.368       0.546
+language_German                           0.4653      0.046     10.128      0.000       0.375       0.555
+language_Greek                            0.4656      0.060      7.784      0.000       0.348       0.583
+language_Hebrew                           0.4936      0.082      6.054      0.000       0.334       0.653
+language_Hindi                            0.4510      0.143      3.154      0.002       0.171       0.731
+language_Hungarian                        0.4871      0.049     10.009      0.000       0.392       0.582
+language_Indonesian                       0.4318      0.047      9.245      0.000       0.340       0.523
+language_Irish                            0.3687      0.106      3.478      0.001       0.161       0.577
+language_Italian                          0.4926      0.046     10.674      0.000       0.402       0.583
+language_Japanese                         0.4350      0.047      9.210      0.000       0.342       0.528
+language_Kazakh                           0.5143      0.143      3.597      0.000       0.234       0.795
+language_Korean                           0.4849      0.048     10.206      0.000       0.392       0.578
+language_Latin                            0.4338      0.052      8.415      0.000       0.333       0.535
+language_Latvian                          0.4587      0.066      6.958      0.000       0.329       0.588
+language_Lithuanian                       0.4958      0.057      8.666      0.000       0.384       0.608
+language_Macedonian                       0.3179      0.106      2.998      0.003       0.110       0.526
+language_Malay                            0.4185      0.054      7.742      0.000       0.313       0.524
+language_Maori                            0.2492      0.052      4.814      0.000       0.148       0.351
+language_Nolang                           0.3815      0.053      7.151      0.000       0.277       0.486
+language_Nynorsk                          0.1389      0.143      0.972      0.331      -0.141       0.419
+language_Persian                          0.3900      0.048      8.172      0.000       0.296       0.484
+language_Polish                           0.4238      0.046      9.144      0.000       0.333       0.515
+language_Portuguese                       0.4749      0.046     10.373      0.000       0.385       0.565
+language_Romanian                         0.4698      0.049      9.501      0.000       0.373       0.567
+language_Russian                          0.4380      0.045      9.666      0.000       0.349       0.527
+language_Shona                            0.1781      0.143      1.246      0.213      -0.102       0.458
+language_Slovak                           0.2613      0.064      4.086      0.000       0.136       0.387
+language_Slovene                          0.4938      0.055      8.995      0.000       0.386       0.601
+language_Somali                           0.2460      0.076      3.252      0.001       0.098       0.394
+language_Sotho                            0.1042      0.060      1.743      0.081      -0.013       0.221
+language_Spanish                          0.4654      0.045     10.240      0.000       0.376       0.554
+language_Swahili                          0.3019      0.071      4.223      0.000       0.162       0.442
+language_Swedish                          0.4890      0.057      8.652      0.000       0.378       0.600
+language_Tagalog                          0.4005      0.055      7.296      0.000       0.293       0.508
+language_Thai                             0.2152      0.076      2.844      0.004       0.067       0.363
+language_Tsonga                           0.4982      0.090      5.509      0.000       0.321       0.675
+language_Tswana                           0.4432      0.090      4.901      0.000       0.266       0.620
+language_Turkish                          0.3367      0.046      7.321      0.000       0.247       0.427
+language_Ukrainian                        0.4470      0.051      8.763      0.000       0.347       0.547
+language_Vietnamese                       0.4224      0.046      9.129      0.000       0.332       0.513
+language_Yoruba                           0.2287      0.071      3.200      0.001       0.089       0.369
+language_Zulu                             0.4883      0.106      4.606      0.000       0.281       0.696
+==============================================================================
+Omnibus:                    25983.664   Durbin-Watson:                   2.014
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):          1863952.627
+Skew:                          -4.502   Prob(JB):                         0.00
+Kurtosis:                      42.531   Cond. No.                     3.74e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.74e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Breusch-Pagan test p-value: 2.436271648814429e-67
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.094
+Model:                            OLS   Adj. R-squared:                  0.091
+Method:                 Least Squares   F-statistic:                     27.05
+Date:                Fri, 17 Jan 2025   Prob (F-statistic):          1.33e-299
+Time:                        08:58:29   Log-Likelihood:                 15790.
+No. Observations:               27215   AIC:                        -3.144e+04
+Df Residuals:                   27146   BIC:                        -3.088e+04
+Df Model:                          68                                         
+Covariance Type:                  HC3                                         
+=========================================================================================================
+                                            coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------
+const                                     1.8834      0.108     17.421      0.000       1.672       2.095
+nsamples_squared                         -0.0055      0.000    -12.724      0.000      -0.006      -0.005
+nsamples                                  0.0540      0.003     17.689      0.000       0.048       0.060
+user_first_entry                          0.0003   2.67e-05     10.920      0.000       0.000       0.000
+temporal_extension                        0.0019      0.000     17.077      0.000       0.002       0.002
+user_gpt35_ratio                          0.0131      0.003      5.117      0.000       0.008       0.018
+mean_turns                               -0.0007      0.000     -2.053      0.040      -0.001   -2.99e-05
+mean_conversation_length               4.669e-06   5.62e-07      8.300      0.000    3.57e-06    5.77e-06
+mean_prompt_length                     -4.49e-06   6.45e-07     -6.956      0.000   -5.76e-06   -3.22e-06
+user_first_entry_X_temporal_extension  8.938e-06   2.89e-06      3.089      0.002    3.27e-06    1.46e-05
+language_Albanian                         0.5401      0.109      4.976      0.000       0.327       0.753
+language_Arabic                           0.4080      0.108      3.773      0.000       0.196       0.620
+language_Azerbaijani                      0.3450      0.176      1.965      0.049       0.001       0.689
+language_Bengali                          0.4589      0.118      3.904      0.000       0.228       0.689
+language_Bokmal                           0.5041      0.111      4.561      0.000       0.287       0.721
+language_Bosnian                          0.4894      0.109      4.482      0.000       0.275       0.703
+language_Bulgarian                        0.2971      0.214      1.388      0.165      -0.123       0.717
+language_Catalan                          0.4927      0.140      3.527      0.000       0.219       0.767
+language_Chinese                          0.4579      0.108      4.247      0.000       0.247       0.669
+language_Croatian                         0.5385      0.109      4.961      0.000       0.326       0.751
+language_Czech                            0.4438      0.112      3.951      0.000       0.224       0.664
+language_Danish                           0.5162      0.112      4.591      0.000       0.296       0.737
+language_Dutch                            0.5086      0.108      4.695      0.000       0.296       0.721
+language_English                          0.4676      0.108      4.337      0.000       0.256       0.679
+language_Esperanto                        0.3518      0.143      2.467      0.014       0.072       0.631
+language_Estonian                        -0.0869      0.198     -0.438      0.661      -0.476       0.302
+language_Finnish                          0.5052      0.111      4.555      0.000       0.288       0.723
+language_French                           0.4571      0.108      4.237      0.000       0.246       0.669
+language_German                           0.4653      0.108      4.303      0.000       0.253       0.677
+language_Greek                            0.4656      0.110      4.219      0.000       0.249       0.682
+language_Hebrew                           0.4936      0.118      4.179      0.000       0.262       0.725
+language_Hindi                            0.4510     52.288      0.009      0.993    -102.037     102.939
+language_Hungarian                        0.4871      0.109      4.482      0.000       0.274       0.700
+language_Indonesian                       0.4318      0.110      3.939      0.000       0.217       0.647
+language_Irish                            0.3687      0.324      1.136      0.256      -0.267       1.005
+language_Italian                          0.4926      0.108      4.558      0.000       0.281       0.704
+language_Japanese                         0.4350      0.110      3.969      0.000       0.220       0.650
+language_Kazakh                           0.5143     17.884      0.029      0.977     -34.539      35.568
+language_Korean                           0.4849      0.108      4.482      0.000       0.273       0.697
+language_Latin                            0.4338      0.111      3.925      0.000       0.217       0.651
+language_Latvian                          0.4587      0.114      4.011      0.000       0.235       0.683
+language_Lithuanian                       0.4958      0.109      4.533      0.000       0.281       0.710
+language_Macedonian                       0.3179      0.307      1.036      0.300      -0.284       0.920
+language_Malay                            0.4185      0.111      3.761      0.000       0.200       0.637
+language_Maori                            0.2492      0.121      2.057      0.040       0.012       0.487
+language_Nolang                           0.3815      0.115      3.331      0.001       0.157       0.606
+language_Nynorsk                          0.1389    125.667      0.001      0.999    -246.174     246.452
+language_Persian                          0.3900      0.110      3.547      0.000       0.174       0.606
+language_Polish                           0.4238      0.109      3.878      0.000       0.210       0.638
+language_Portuguese                       0.4749      0.108      4.395      0.000       0.263       0.687
+language_Romanian                         0.4698      0.110      4.265      0.000       0.254       0.686
+language_Russian                          0.4380      0.108      4.061      0.000       0.227       0.649
+language_Shona                            0.1781   1565.000      0.000      1.000   -3067.302    3067.658
+language_Slovak                           0.2613      0.150      1.747      0.081      -0.032       0.554
+language_Slovene                          0.4938      0.110      4.491      0.000       0.278       0.709
+language_Somali                           0.2460      0.140      1.755      0.079      -0.029       0.521
+language_Sotho                            0.1042      0.222      0.470      0.638      -0.330       0.539
+language_Spanish                          0.4654      0.108      4.314      0.000       0.254       0.677
+language_Swahili                          0.3019      0.214      1.409      0.159      -0.118       0.722
+language_Swedish                          0.4890      0.111      4.400      0.000       0.271       0.707
+language_Tagalog                          0.4005      0.111      3.609      0.000       0.183       0.618
+language_Thai                             0.2152      0.249      0.864      0.387      -0.273       0.703
+language_Tsonga                           0.4982      0.112      4.455      0.000       0.279       0.717
+language_Tswana                           0.4432      0.108      4.098      0.000       0.231       0.655
+language_Turkish                          0.3367      0.109      3.084      0.002       0.123       0.551
+language_Ukrainian                        0.4470      0.110      4.075      0.000       0.232       0.662
+language_Vietnamese                       0.4224      0.109      3.889      0.000       0.210       0.635
+language_Yoruba                           0.2287      0.135      1.690      0.091      -0.037       0.494
+language_Zulu                             0.4883      0.123      3.960      0.000       0.247       0.730
+==============================================================================
+Omnibus:                    25983.664   Durbin-Watson:                   2.014
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):          1863952.627
+Skew:                          -4.502   Prob(JB):                         0.00
+Kurtosis:                      42.531   Cond. No.                     3.74e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+[2] The condition number is large, 3.74e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.

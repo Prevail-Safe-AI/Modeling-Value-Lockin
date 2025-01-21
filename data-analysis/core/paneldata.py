@@ -34,6 +34,7 @@ def get_time_interval(time: datetime) -> int:
     
     return res
 
+IMBALANCE_CORRECTION = 8.4779  # Calculated with calculate_difference() in the analysis script
 
 def calculate_diversity(
     concepts_present: List[int], 
@@ -81,7 +82,7 @@ def calculate_diversity(
     
     def get_weight(concept: int) -> float:
         assert concept is not None
-        return np.log2(cluster_size[concept]) / CLUSTER_STEP_MULTIPLIER_LOG2 - get_depth(concept)
+        return np.log2(cluster_size[concept]) / IMBALANCE_CORRECTION - get_depth(concept)
     
     nsamples = len(concepts_present)
     diversity = get_weight(root) * nsamples * (nsamples - 1)

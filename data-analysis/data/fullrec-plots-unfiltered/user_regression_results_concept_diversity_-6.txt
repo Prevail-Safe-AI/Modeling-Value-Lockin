@@ -1,0 +1,47 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.287
+Model:                            OLS   Adj. R-squared:                  0.233
+Method:                 Least Squares   F-statistic:                     5.328
+Date:                Fri, 17 Jan 2025   Prob (F-statistic):           7.88e-11
+Time:                        09:08:40   Log-Likelihood:                 389.10
+No. Observations:                 272   AIC:                            -738.2
+Df Residuals:                     252   BIC:                            -666.1
+Df Model:                          19                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================================
+                                            coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------
+const                                     2.1400      0.070     30.561      0.000       2.002       2.278
+nsamples                                  0.0049      0.005      0.969      0.333      -0.005       0.015
+user_first_entry                         -0.0003      0.000     -1.684      0.093      -0.001    4.37e-05
+temporal_extension                        0.0009      0.000      2.090      0.038     5.2e-05       0.002
+user_gpt35_ratio                         -0.0241      0.013     -1.896      0.059      -0.049       0.001
+mean_turns                               -0.0024      0.003     -0.914      0.362      -0.008       0.003
+mean_conversation_length               6.251e-06   2.53e-06      2.471      0.014    1.27e-06    1.12e-05
+mean_prompt_length                    -4.777e-06   3.15e-06     -1.517      0.130    -1.1e-05    1.42e-06
+user_first_entry_X_temporal_extension  2.094e-05   1.71e-05      1.225      0.222   -1.27e-05    5.46e-05
+language_Chinese                          0.3600      0.062      5.804      0.000       0.238       0.482
+language_Dutch                            0.4233      0.086      4.944      0.000       0.255       0.592
+language_English                          0.3685      0.061      6.012      0.000       0.248       0.489
+language_French                           0.3549      0.066      5.403      0.000       0.226       0.484
+language_German                           0.3497      0.065      5.343      0.000       0.221       0.479
+language_Indonesian                       0.4139      0.086      4.801      0.000       0.244       0.584
+language_Italian                          0.4292      0.075      5.757      0.000       0.282       0.576
+language_Japanese                         0.3739      0.086      4.358      0.000       0.205       0.543
+language_Portuguese                       0.3724      0.066      5.672      0.000       0.243       0.502
+language_Russian                          0.3543      0.063      5.655      0.000       0.231       0.478
+language_Spanish                          0.3716      0.065      5.696      0.000       0.243       0.500
+==============================================================================
+Omnibus:                      148.883   Durbin-Watson:                   1.897
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              898.170
+Skew:                          -2.207   Prob(JB):                    9.22e-196
+Kurtosis:                      10.731   Cond. No.                     3.81e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.81e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Breusch-Pagan test p-value: 0.19908292013960563

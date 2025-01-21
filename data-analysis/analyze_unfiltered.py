@@ -7,12 +7,13 @@ import numpy as np
 import causalpy as cp
 from tqdm import tqdm
 from core.paneldata import MAX_TIME_INTERVALS
+import math
 
-plot_path = 'data/plots-unfiltered'
+plot_path = 'data/fullrec-plots-unfiltered'
 
-temporal_panel1 = pd.read_csv("data/sample500000filtered/sample500000-temporal_panel1.csv")
-temporal_panel2 = pd.read_csv("data/sample500000/sample500000-temporal_panel2.csv")
-user_panel = pd.read_csv("data/sample500000filtered/sample500000-user_panel.csv")
+temporal_panel1 = pd.read_csv("data/fullrec/b41fd1b7bdad96e440d15a97d640827e-temporal_panel1.csv")
+# temporal_panel2 = pd.read_csv("data/sample500000/sample500000-temporal_panel2.csv")
+user_panel = pd.read_csv("data/fullrec/b41fd1b7bdad96e440d15a97d640827e-user_panel.csv")
 
 gpt35_diversity_series = temporal_panel1[temporal_panel1.is_gpt4 == 0].sort_values("time")
 gpt4_diversity_series = temporal_panel1[temporal_panel1.is_gpt4 == 1].sort_values("time")
@@ -51,6 +52,12 @@ def make_plots(diversity_series1, name1, diversity_series2, name2):
     print(f"{name1} linear regression p-value: {model.pvalues['time']}")
     print(f"Full results:\n{model.summary()}")
     
+    # Plot quadratic regression curve
+    # model = LinearRegression()
+    # input_x = np.column_stack((diversity_series1.time.values.reshape(-1, 1), np.power(diversity_series1.time.values.reshape(-1, 1), 2)))
+    # model.fit(input_x, diversity_series1.concept_diversity_user.values.reshape(-1, 1))
+    # plt.plot(diversity_series1.time, model.predict(input_x), label=f"{name1} (quadratic regression)", color="blue", linestyle="dotted", marker=None)
+    
     # Draw vertical line to indicate when version shifts within the GPT-3.5 family happened
     if '+' not in name1:
         rows_sorted = [row for _, row in diversity_series1.iterrows()]
@@ -80,6 +87,12 @@ def make_plots(diversity_series1, name1, diversity_series2, name2):
     print(f"{name2} linear regression p-value: {model.pvalues['time']}")
     print(f"Full results:\n{model.summary()}")
     
+    # Plot quadratic regression curve
+    # model = LinearRegression()
+    # input_x = np.column_stack((diversity_series2.time.values.reshape(-1, 1), diversity_series2.time.values.reshape(-1, 1) ** 2))
+    # model.fit(input_x, diversity_series2.concept_diversity_user.values.reshape(-1, 1))
+    # plt.plot(diversity_series2.time, model.predict(input_x), label=f"{name2} (quadratic regression)", color="red", linestyle="dotted", marker=None)
+    
     # Draw vertical line to indicate when version shifts within the GPT-3.5 family happened
     if '+' not in name2:
         rows_sorted = [row for _, row in diversity_series2.iterrows()]
@@ -97,6 +110,7 @@ def make_plots(diversity_series1, name1, diversity_series2, name2):
     plt.xlabel("Time")
     plt.ylabel("Conceptual Diversity in Human Messages")
     plt.title("Diversity over Time (Apr 2023 to Apr 2024)")
+    plt.ylim((2.52,2.59))
     plt.legend()
     plt.show()
     plt.savefig(f"{plot_path}/diversity_over_time_{name1.replace('+','')}_vs_{name2.replace('+','')}.pdf")
@@ -213,7 +227,7 @@ def rdd_regression_plot(df: pd.DataFrame, kink: float, name: str, seed=42, linea
         print(e)
 
 
-def process_user_panel(df: pd.DataFrame, y_variable: str, family: int = None):
+def process_user_panel(df: pd.DataFrame, y_variable: str, family: int = None, truncate_rate=1):
     
     # Visualize distribution of df.nsamples
     ax = df.nsamples.plot.hist(bins=1000)
@@ -281,15 +295,39 @@ def process_user_panel(df: pd.DataFrame, y_variable: str, family: int = None):
     else:
         df["y"] = df[y_variable]
     
+    # Remove abnormally large nsamples
+    # df = df[df.nsamples < 1000]
+    
+    # Truncate the dataset, leaving only the top truncate_rate percent of users by nsamples
+    df = df.sort_values("nsamples", ascending=False)
+    df = df.head(int(truncate_rate * len(df)))
+    print(f"Truncated dataset to {truncate_rate * 100}% of users")
+    print(df.describe())
+    
+    # df["nsamples"] = np.log(df.nsamples)
+    
     return df
 
 
-def user_regression(df: pd.DataFrame, y_variable: str, family: int = None):
+def user_regression(df: pd.DataFrame, y_variable: str, family: int = None, truncate_rate=1):
     import statsmodels.api as sm
     
+    df["nsamples_squared"] = df.nsamples ** 2
+    
     # Extract independent variables
-    X = df[["user_gpt35_ratio", "language", "location", "nsamples", "temporal_extension", "user_first_entry", "user_first_entry_X_temporal_extension", "mean_turns", "mean_conversation_length", "mean_prompt_length"]]
-    X = pd.get_dummies(X, columns=["language", "location"], drop_first=True, dtype=int)
+    columns = ["nsamples"]
+    columns += ["user_first_entry"]
+    columns += ["temporal_extension"]
+    columns += ["user_gpt35_ratio"]
+    columns += ["mean_turns", "mean_conversation_length", "mean_prompt_length"]
+    columns += ["user_first_entry_X_temporal_extension"]
+    # columns = ["nsamples_squared"] + columns
+    control_columns = []
+    control_columns += ["language"]
+    # control_columns += ["location"]
+    
+    X = df[columns + control_columns]
+    X = pd.get_dummies(X, columns=control_columns, drop_first=True, dtype=int)
     
     # Add constant term to independent variables
     X = sm.add_constant(X)
@@ -298,27 +336,35 @@ def user_regression(df: pd.DataFrame, y_variable: str, family: int = None):
     y = df["y"]
     
     # Fit OLS model
-    X.to_csv(f"{plot_path}/user_regression_X.csv")
-    y.to_csv(f"{plot_path}/user_regression_y_{y_variable + (str(family) if family is not None else '')}.csv")
+    X.to_csv(f"{plot_path}/user_regression_X_{int(math.log2(truncate_rate))}.csv")
+    y.to_csv(f"{plot_path}/user_regression_y_{y_variable + (str(family) if family is not None else '')}_{int(math.log2(truncate_rate))}.csv")
     model = sm.OLS(y, X, missing="drop")
     results = model.fit()
     print(results.summary())
+    results_str = str(results.summary())
     
     # Perform test for heteroskedasticity
     _, pval, _, _ = sm.stats.diagnostic.het_breuschpagan(results.resid, results.model.exog)
     print(f"Breusch-Pagan test p-value: {pval}")
+    results_str += f"\n\nBreusch-Pagan test p-value: {pval}"
+    
     if pval < 0.05:
         print("Heteroskedasticity detected")
         robust_results = results.get_robustcov_results(cov_type="HC3")
         print(robust_results.summary())
+        results_str += "\n\n" + str(robust_results.summary())
+    
+    with open(f"{plot_path}/user_regression_results_{y_variable + (str(family) if family is not None else '')}_{int(math.log2(truncate_rate))}.txt", "w") as f:
+        f.write(results_str)
 
 
-def user_temporal_regression(user_panel: pd.DataFrame, y_variable: str, family: int = None):
+def user_temporal_regression(user_panel: pd.DataFrame, y_variable: str, family: int = None, truncate_rate=1, skip_reg=False) -> pd.DataFrame:
     import statsmodels.api as sm
     
     # Transform string to list
     df = user_panel.copy()
     df["concept_diversity_across_time"] = df.concept_diversity_across_time.apply(lambda x: list(eval(x.replace("nan", "None"))))
+    df["nsamples_temporal_composition"] = df.nsamples_temporal_composition.apply(lambda x: list(eval(x)))
     
     # Calculate the length of concept_diversity_across_time
     shared_length = df.concept_diversity_across_time.apply(len).min()
@@ -328,26 +374,46 @@ def user_temporal_regression(user_panel: pd.DataFrame, y_variable: str, family: 
     # Add indexing to concept_diversity_across_time
     df["time"] = df.concept_diversity_across_time.apply(lambda x: list(range(len(x))))
     
-    def nonnull_count(tp: list):
-        nonnull = [int(v is not None and v != np.nan) for v in tp]
-        if sum(nonnull) <= 4:
-            return [None] * len(nonnull)
-        prefix_sum = np.cumsum(nonnull) / sum(nonnull)
-        return prefix_sum
+    # def nonnull_count(tp: list):
+    #     nonnull = [int(v is not None and v != np.nan) for v in tp]
+    #     if sum(nonnull) <= 4:
+    #         return [None] * len(nonnull)
+    #     prefix_sum = np.cumsum(nonnull) / sum(nonnull)
+    #     return prefix_sum
+
+    def engagement_progress(tp: list):
+        assert len(tp) == shared_length
+        return np.cumsum(tp)
     
-    df["progress"] = df.concept_diversity_across_time.apply(nonnull_count)
+    df["engagement_progress"] = df.nsamples_temporal_composition.apply(engagement_progress)
     
     # Expand each element of concept_diversity_across_time into separate rows
-    df = df.explode(["concept_diversity_across_time", "time", "progress"])
-    df["progress"] = df.progress.astype(float)
+    df = df.explode(["concept_diversity_across_time", "time", "engagement_progress"])
+    df["engagement_progress"] = df.engagement_progress.astype(float)
     df["time"] = df.time.astype(int)
     df["user_id"] = df.index
     df.reset_index(drop=True, inplace=True)
-    df = df.dropna(subset=["concept_diversity_across_time", "time", "progress"])
+    df = df.dropna(subset=["concept_diversity_across_time", "time", "engagement_progress"])
+
+    df["eng_prog_squared"] = df.engagement_progress ** 2
+    
+    if skip_reg:
+       return df 
     
     # Extract independent variables
-    X = df[["user_gpt35_ratio", "language", "location", "nsamples", "temporal_extension", "version_diversity", "user_first_entry", "mean_turns", "mean_conversation_length", "mean_prompt_length", "progress", "time"]]
-    X = pd.get_dummies(X, columns=["language", "location"], drop_first=True, dtype=int)
+    columns = ["nsamples"]
+    columns += ["version_diversity", "user_first_entry", "engagement_progress"]
+    columns += ["temporal_extension"]
+    columns += ["user_gpt35_ratio"]
+    columns += ["mean_turns", "mean_conversation_length", "mean_prompt_length"]
+    # columns += ["eng_prog_squared"]
+    
+    control_columns = []
+    control_columns += ["language"]
+    # control_columns += ["location"]
+    
+    X = df[columns + control_columns]
+    X = pd.get_dummies(X, columns=control_columns, drop_first=True, dtype=int)
     
     # Add constant term to independent variables
     X = sm.add_constant(X)
@@ -356,26 +422,163 @@ def user_temporal_regression(user_panel: pd.DataFrame, y_variable: str, family: 
     y = df["concept_diversity_across_time"].astype(float)
     
     # Fit OLS model
-    X.to_csv(f"{plot_path}/user_temporal_regression_X.csv")
-    y.to_csv(f"{plot_path}/user_temporal_regression_y_{y_variable + (str(family) if family is not None else '')}.csv")
+    X.to_csv(f"{plot_path}/user_temporal_regression_X_{int(math.log2(truncate_rate))}.csv")
+    y.to_csv(f"{plot_path}/user_temporal_regression_y_{y_variable + (str(family) if family is not None else '')}_{int(math.log2(truncate_rate))}.csv")
     print(X.info(max_cols=200))
     print(y.info())
     model = sm.MixedLM(y, X, groups=df.user_id, missing="drop")
     results = model.fit()
     print(results.summary())
+    results_str = str(results.summary())
     
     # Use hac-groupsum
     X["user_id"] = df.user_id
     X = pd.get_dummies(X, columns=["user_id"], drop_first=True, dtype=int)
     linear_results = sm.OLS(y, X, missing="drop").fit()
-    robust_results = linear_results.get_robustcov_results(cov_type="hac-groupsum", time=X["time"].to_numpy(), maxlags=2)
+    robust_results = linear_results.get_robustcov_results(cov_type="hac-groupsum", time=df["time"].to_numpy(), maxlags=2)
     print('\n'.join(robust_results.summary().as_text().splitlines()[:100]))
+    results_str += "\n\n" + "\n".join(robust_results.summary().as_text().splitlines()[:500])
+    
+    with open(f"{plot_path}/user_temporal_regression_results_{y_variable + (str(family) if family is not None else '')}_{int(math.log2(truncate_rate))}.txt", "w") as f:
+        f.write(results_str)    
+    
+    return df
 
 
-def visualize_tree(threshold=250, leading=15, skip_banned: bool = True):
+def user_diversity_plot(df: pd.DataFrame = user_panel, suffix = "", use_log = True):
+    # X axis: log(nsamples)
+    # Y axis: concept_diversity
+    # Color: entry_date
+    # Shape: language
+    
+    # Enlarge plot size
+    plt.figure(figsize=(10, 7.5))
+    
+    # Plot diversity scatter plot
+    if use_log:
+        plt.scatter(df.nsamples, df.concept_diversity, c=df.user_first_entry*3, cmap="viridis", s=2, alpha=0.4)
+    
+    # Calculate binned means
+    if use_log:
+        lower_bins = np.arange(df.nsamples.min(), df.nsamples.min() * 10, dtype=float)
+        upper_bins = np.logspace(np.log2(df.nsamples.min() * 11), np.log2(df.nsamples.max()), 100, base=2)
+        bins = np.concatenate((lower_bins, upper_bins))
+        df["bins"] = np.digitize(df.nsamples, bins)
+        df["log_nsamples"] = np.log(df.nsamples)
+        mean_diversity = df.groupby("bins").concept_diversity.mean()
+        mean_nsamples = df.groupby("bins").log_nsamples.mean()
+        plt.plot(np.exp(mean_nsamples), mean_diversity, label="Binned means", color="red", linestyle="-", marker="o", markersize=2)
+    
+    else:
+        bins = np.linspace(df.nsamples.min(), df.nsamples.max(), 100)
+        df["bins"] = np.digitize(df.nsamples, bins)
+        df["log_nsamples"] = df.nsamples
+        mean_diversity = df.groupby("bins").concept_diversity.mean()
+        mean_nsamples = df.groupby("bins").nsamples.mean()
+        plt.plot(mean_nsamples, mean_diversity, label="Binned means", color="red", linestyle="-", marker="o", markersize=2)
+    
+    # Make spline fit to the data
+    # from sklearn.preprocessing import SplineTransformer
+    # from sklearn.linear_model import LinearRegression
+    # from sklearn.pipeline import make_pipeline
+    # from sklearn.preprocessing import StandardScaler
+    # reg = make_pipeline(StandardScaler(), SplineTransformer(n_knots=2, degree=2), LinearRegression())
+    # reg.fit(df.nsamples.values.reshape(-1, 1), df.concept_diversity)
+    # x = np.exp(np.linspace(np.log(df.nsamples.min()), np.log(df.nsamples.max()), 1000))
+    # y = reg.predict(x.reshape(-1, 1))
+    # plt.plot(x, y, label="Spline fit", color="red")
+    
+    # Make polynomial fit to the binning means
+    x = mean_nsamples
+    y = mean_diversity
+    xnew = np.linspace(x.min(), x.max(), 1000)
+    p = np.polyfit(x, y, 2)
+    ynew = np.polyval(p, xnew)
+    if use_log:
+        plt.plot(np.exp(xnew), ynew, label="Polynomial fit", color="orange")
+    else:
+        plt.plot(xnew, ynew, label="Polynomial fit", color="orange")
+    
+    # Re-binning into 5 bins and plot means and error bars
+    if use_log:
+        bins = np.logspace(np.log2(df.nsamples.min()), np.log2(df.nsamples.max()), 9, base=2)
+    else:
+        bins = np.linspace(df.nsamples.min(), df.nsamples.max(), 9)
+    
+    df["bins"] = np.digitize(df.nsamples, bins)
+    mean_diversity = df.groupby("bins").concept_diversity.mean()
+    std_diversity = df.groupby("bins").concept_diversity.std()
+    data_points = df.groupby("bins").concept_diversity.count()
+    mean_nsamples = df.groupby("bins").log_nsamples.mean()
+    if use_log:
+        plt.errorbar(np.exp(mean_nsamples), mean_diversity, yerr=std_diversity / np.sqrt(data_points), label="Octile means", color="black", linestyle="None", marker="o", markersize=3)
+    else:
+        plt.errorbar(mean_nsamples, mean_diversity, yerr=std_diversity / np.sqrt(data_points), label="Octile means", color="black", linestyle="None", marker="o", markersize=3)
+    
+    # Add labels
+    if use_log:
+        plt.xlabel("Number of Conversations Participated In")
+        plt.ylabel("Conceptual Diversity in Human Messages")
+        plt.title("Diversity vs. Engagement")
+    else:
+        plt.xlabel("User Engagement Progress")
+        plt.xticks([0,1], ["first message", "last message"], rotation=45)
+        plt.ylabel("Conceptual Diversity in User Messages")
+        plt.title("Diversity vs. Engagement")
+    
+    # Add colorbar with entry date legend
+    if use_log:
+        plt.colorbar(label="User Start Date (days since Apr 2023)")
+    
+    # Set log scale for x axis
+    if use_log:
+        plt.xscale("log")
+        plt.ylim((2.2, 2.6))
+    else:
+        plt.xlim((0,1))
+        mean_diversity_all = df.concept_diversity.mean()
+        plt.ylim((mean_diversity_all - .02, mean_diversity_all + .04))
+    
+    # Show plot
+    plt.legend(loc="lower right" if use_log else "upper right")
+    plt.show()
+    plt.savefig(f"{plot_path}/user_diversity_plot{'' if not suffix else '_' + suffix}.pdf")
+    
+
+def calculate_difference():
+    from utils.json_utils import load_file
+    clusterization_results = load_file("fullrec/b41fd1b7bdad96e440d15a97d640827e-clusterinfo-postselection.json")
+    selected_clusters = clusterization_results["selected_clusters"]
+    cluster_selected_parent = clusterization_results["cluster_selected_parent"]
+    cluster_name = clusterization_results["cluster_name"]
+    cluster_size = clusterization_results["cluster_size"]
+    root = clusterization_results["root"]
+    
+    logdifs = []
+    weights = []
+    for id in tqdm(selected_clusters):
+        if id == root:
+            continue
+        
+        parent = cluster_selected_parent[id]
+        logdifs.append(np.log2(cluster_size[parent]) - np.log(cluster_size[id]))
+        weights.append(cluster_size[id])
+    
+    logdifs = np.array(logdifs)
+    weights = np.array(weights)
+    
+    avg_logdif = np.average(logdifs)
+    weighted_logdif = np.average(logdifs, weights=weights)
+    logweighted_logdif = np.average(logdifs, weights=np.log(weights))
+    print(f"Average log difference: {avg_logdif}")
+    print(f"Weighted log difference: {weighted_logdif}")
+    print(f"Log-weighted log difference: {logweighted_logdif}")
+
+
+def visualize_tree(threshold=2500, leading=15, skip_banned: bool = False, compare_families: bool = False):
     from core.paneldata import BANNED_CLUSTERS
     from utils.json_utils import load_file
-    clusterization_results = load_file("sample500000/sample500000-clusterinfo-postselection.json")
+    clusterization_results = load_file("fullrec/b41fd1b7bdad96e440d15a97d640827e-clusterinfo-postselection.json")
     selected_clusters = clusterization_results["selected_clusters"]
     cluster_selected_parent = clusterization_results["cluster_selected_parent"]
     cluster_name = clusterization_results["cluster_name"]
@@ -396,7 +599,10 @@ def visualize_tree(threshold=250, leading=15, skip_banned: bool = True):
 
     tree = Tree()
     
-    selected_clusters = sorted(selected_clusters + [root], key=lambda x: cluster_size[x], reverse=True)
+    if root not in selected_clusters:
+        selected_clusters.append(root)
+    
+    selected_clusters = sorted(selected_clusters, key=lambda x: cluster_size[x], reverse=True)
     print(selected_clusters[:5])
     print([cluster_size[id] for id in selected_clusters[:5]])
     cluster_selected_parent[root] = None
@@ -411,7 +617,10 @@ def visualize_tree(threshold=250, leading=15, skip_banned: bool = True):
         if id != root:
             tree.move_node(id, cluster_selected_parent[id])
     
-    tree.save2file(f"{plot_path}/tree.txt")
+    tree.save2file(f"{plot_path}/tree.txt", key=lambda node: cluster_size[node.identifier], reverse=True)
+    
+    if not compare_families:
+        return
     
     concepts_df = temporal_panel2.groupby(["cluster", "is_gpt4"], as_index=False).cluster_nsamples.sum().sort_values("cluster_nsamples", ascending=False).reset_index()
     print(concepts_df.head(20))
@@ -465,7 +674,7 @@ def visualize_tree(threshold=250, leading=15, skip_banned: bool = True):
 
 if __name__ == "__main__":
     # make_plots(gpt35_diversity_series, "GPT3.5-turbo", both_diversity_series, "GPT3.5-turbo+GPT4")
-    make_plots(gpt35_diversity_series, "GPT3.5-turbo", gpt4_diversity_series, "GPT4")
+    # make_plots(gpt35_diversity_series, "GPT3.5-turbo", gpt4_diversity_series, "GPT4")
     
     # rkd_regression_plot(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1_linear", linear=True)
     # rkd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_linear", linear=True)
@@ -488,9 +697,13 @@ if __name__ == "__main__":
     # rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_Bspline", linear=False)
     # rdd_regression_plot(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2_Bspline", linear=False)
     
-    # y_variable, family = "concept_diversity", 1
-    # user_panel = process_user_panel(user_panel, y_variable=y_variable, family=family)
-    # user_regression(user_panel, y_variable=y_variable, family=family)
-    # user_temporal_regression(user_panel, y_variable=y_variable, family=family)
+    y_variable, family, truncate_rate = "concept_diversity", None, 1
+    user_panel = process_user_panel(user_panel, y_variable=y_variable, family=family, truncate_rate=truncate_rate)
+    # user_diversity_plot()
+    # user_regression(user_panel, y_variable=y_variable, family=family, truncate_rate=truncate_rate)
+    df = user_temporal_regression(user_panel, y_variable=y_variable, family=family, truncate_rate=truncate_rate, skip_reg=True)
+    df.nsamples = df.engagement_progress / df.nsamples
+    user_diversity_plot(df, "engagement_progress", use_log=False)
     
     # visualize_tree()
+    # calculate_difference()

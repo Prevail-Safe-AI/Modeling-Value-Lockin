@@ -267,8 +267,10 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         print(f"Clustering (multithreading)... (current time: {time.strftime('%Y%m%d-%H%M%S')})")
         clusterer = evoc.EVoC(
             base_min_cluster_size = CLUSTER_MIN_SIZE,
-            n_neighbors=25,
-            node_embedding_dim=25,
+            n_neighbors=200,
+            node_embedding_dim=64,
+            next_cluster_size_quantile=0.6,
+            noise_level=0.1,
         )
         cluster_labels = clusterer.fit_predict(data)
         cluster_layers = clusterer.cluster_layers_
@@ -276,8 +278,13 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         print(f"Clustering complete. (current time: {time.strftime('%Y%m%d-%H%M%S')})")
         
         # Identify parent clusters of each string and each cluster
-        layer_counts = [len(set(layer)) for layer in tqdm(cluster_layers)] + [1]
+        layer_counts = [len(set(layer) - set([-1])) for layer in tqdm(cluster_layers)] + [1]
         parent_child_pairs = set()
+        print(f"Layer counts: {layer_counts} ({len(layer_counts)} layers)")
+        
+        # Back up cluster_layers
+        print("Backing up cluster_layers...")
+        dump_file([layer.tolist() for layer in cluster_layers], f"cluster_layers-{time.strftime('%Y%m%d-%H%M%S')}.json")
         
         def calculate_cluster_id(layer, node):
             assert 0 <= layer < len(layer_counts)
@@ -287,14 +294,18 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         for id in tqdm(range(len(strings))):
             ancestors = [id] + [calculate_cluster_id(layer, cluster_layers[layer][id]) for layer in range(len(cluster_layers)) if cluster_layers[layer][id] != -1] + [calculate_cluster_id(len(cluster_layers), 0)]
             for l in range(len(ancestors) - 1):
-                if ancestors[l] != ancestors[l + 1]:
-                    parent_child_pairs.add((ancestors[l], ancestors[l + 1]))
+                assert ancestors[l] != ancestors[l + 1]
+                parent_child_pairs.add((ancestors[l + 1], ancestors[l]))
+        
+        for key, vals in tqdm(hierarchy.items()):
+            for val in vals:
+                parent_child_pairs.add((calculate_cluster_id(*key), calculate_cluster_id(*val)))
         
         clusters_pd = pd.DataFrame(parent_child_pairs, columns=["parent", "child"])
         
         min_id = int(min(clusters_pd.child.min(), clusters_pd.parent.min()) + 0.1)
         max_id = int(max(clusters_pd.child.max(), clusters_pd.parent.max()) + 0.1)
-        print(f"Min ID: {min_id}, Max ID: {max_id}, Length of clusters_pd: {len(clusters_pd)}")
+        print(f"Min ID: {min_id}, Max ID: {max_id}, Length of clusters_pd: {len(clusters_pd)}, Num of layers: {len(cluster_layers)}")
         print(clusters_pd.head())
         print(clusters_pd.describe())
         print("Backing up clusters_pd...")
@@ -303,7 +314,7 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         
         # Get the probabilities of each string and robustness of each cluster
         assert len(clusterer.membership_strengths_.flatten()) == len(strings)
-        weights = [None] * min_id + list(clusterer.membership_strengths_.flatten())
+        weights = [None] * min_id + clusterer.membership_strengths_.flatten().tolist()
         weights += [None] * (max_id + 1 - len(weights))
     
     print(f"Number of clusters: {max_id - len(strings) + 1}")
@@ -379,7 +390,9 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
     
     assert all([cluster_sizes[i] is not None for i in range(max_id + 1)])
     assert all([summaries[i] is not None for i in range(max_id + 1)])
+    print(f"Max sizes: {sorted(cluster_sizes)[-20:]}")
     assert cluster_sizes[len(strings)] == len(strings)
+    
     return parent_mapping, cluster_sizes, summaries, weights, len(strings)
 
 def cluster_concepts(samples: List[DataSample]) -> Tuple[List[DataSample], List[int], List[int], List[str], List[float], int]:

@@ -1,0 +1,71 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.087
+Model:                            OLS   Adj. R-squared:                  0.078
+Method:                 Least Squares   F-statistic:                     9.604
+Date:                Fri, 17 Jan 2025   Prob (F-statistic):           9.13e-13
+Time:                        07:07:23   Log-Likelihood:                 876.62
+No. Observations:                 816   AIC:                            -1735.
+Df Residuals:                     807   BIC:                            -1693.
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================================
+                                            coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------
+const                                     2.5396      0.012    207.497      0.000       2.516       2.564
+user_gpt35_ratio                         -0.0245      0.009     -2.823      0.005      -0.042      -0.007
+nsamples                               4.383e-06   5.34e-06      0.821      0.412    -6.1e-06    1.49e-05
+temporal_extension                        0.0009      0.000      2.508      0.012       0.000       0.002
+user_first_entry                         -0.0002      0.000     -2.017      0.044      -0.000    -6.1e-06
+user_first_entry_X_temporal_extension  1.872e-05   1.24e-05      1.507      0.132   -5.66e-06    4.31e-05
+mean_turns                               -0.0060      0.002     -3.492      0.001      -0.009      -0.003
+mean_conversation_length                9.23e-06   1.76e-06      5.244      0.000    5.78e-06    1.27e-05
+mean_prompt_length                    -1.237e-05    2.4e-06     -5.146      0.000   -1.71e-05   -7.65e-06
+==============================================================================
+Omnibus:                      732.789   Durbin-Watson:                   1.922
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            24691.799
+Skew:                          -4.015   Prob(JB):                         0.00
+Kurtosis:                      28.725   Cond. No.                     3.19e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.19e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Breusch-Pagan test p-value: 0.01144418097423543
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.087
+Model:                            OLS   Adj. R-squared:                  0.078
+Method:                 Least Squares   F-statistic:                     7.079
+Date:                Fri, 17 Jan 2025   Prob (F-statistic):           4.55e-09
+Time:                        07:07:23   Log-Likelihood:                 876.62
+No. Observations:                 816   AIC:                            -1735.
+Df Residuals:                     807   BIC:                            -1693.
+Df Model:                           8                                         
+Covariance Type:                  HC3                                         
+=========================================================================================================
+                                            coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------
+const                                     2.5396      0.011    240.806      0.000       2.519       2.560
+user_gpt35_ratio                         -0.0245      0.008     -3.238      0.001      -0.039      -0.010
+nsamples                               4.383e-06   5.52e-06      0.794      0.428   -6.46e-06    1.52e-05
+temporal_extension                        0.0009      0.000      3.095      0.002       0.000       0.002
+user_first_entry                         -0.0002      0.000     -1.726      0.085      -0.000     3.1e-05
+user_first_entry_X_temporal_extension  1.872e-05    1.1e-05      1.702      0.089   -2.87e-06    4.03e-05
+mean_turns                               -0.0060      0.002     -2.804      0.005      -0.010      -0.002
+mean_conversation_length                9.23e-06   2.11e-06      4.382      0.000     5.1e-06    1.34e-05
+mean_prompt_length                    -1.237e-05   2.88e-06     -4.289      0.000    -1.8e-05   -6.71e-06
+==============================================================================
+Omnibus:                      732.789   Durbin-Watson:                   1.922
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            24691.799
+Skew:                          -4.015   Prob(JB):                         0.00
+Kurtosis:                      28.725   Cond. No.                     3.19e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+[2] The condition number is large, 3.19e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.

@@ -1,0 +1,129 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.157
+Model:                            OLS   Adj. R-squared:                  0.145
+Method:                 Least Squares   F-statistic:                     13.46
+Date:                Fri, 17 Jan 2025   Prob (F-statistic):           2.36e-74
+Time:                        09:02:14   Log-Likelihood:                 3153.7
+No. Observations:                2721   AIC:                            -6231.
+Df Residuals:                    2683   BIC:                            -6007.
+Df Model:                          37                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================================
+                                            coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------
+const                                     2.1673      0.064     33.939      0.000       2.042       2.293
+nsamples_squared                          0.0018      0.001      1.367      0.172      -0.001       0.004
+nsamples                                 -0.0154      0.013     -1.157      0.247      -0.041       0.011
+user_first_entry                       5.363e-05   5.39e-05      0.995      0.320   -5.21e-05       0.000
+temporal_extension                        0.0014      0.000      6.611      0.000       0.001       0.002
+user_gpt35_ratio                         -0.0150      0.004     -3.687      0.000      -0.023      -0.007
+mean_turns                               -0.0025      0.001     -3.571      0.000      -0.004      -0.001
+mean_conversation_length               5.429e-06    8.4e-07      6.464      0.000    3.78e-06    7.08e-06
+mean_prompt_length                    -6.567e-06   1.07e-06     -6.157      0.000   -8.66e-06   -4.48e-06
+user_first_entry_X_temporal_extension  1.001e-06   6.54e-06      0.153      0.878   -1.18e-05    1.38e-05
+language_Arabic                           0.3463      0.064      5.407      0.000       0.221       0.472
+language_Chinese                          0.3772      0.054      6.939      0.000       0.271       0.484
+language_Czech                            0.3379      0.070      4.838      0.000       0.201       0.475
+language_Dutch                            0.4401      0.070      6.300      0.000       0.303       0.577
+language_English                          0.3822      0.054      7.053      0.000       0.276       0.489
+language_Finnish                          0.4225      0.077      5.520      0.000       0.272       0.573
+language_French                           0.3832      0.055      7.000      0.000       0.276       0.490
+language_German                           0.3341      0.055      6.026      0.000       0.225       0.443
+language_Greek                            0.3392      0.094      3.619      0.000       0.155       0.523
+language_Hungarian                        0.4322      0.094      4.603      0.000       0.248       0.616
+language_Indonesian                       0.3305      0.057      5.752      0.000       0.218       0.443
+language_Italian                          0.4186      0.057      7.364      0.000       0.307       0.530
+language_Japanese                         0.3722      0.060      6.214      0.000       0.255       0.490
+language_Korean                           0.3962      0.063      6.312      0.000       0.273       0.519
+language_Lithuanian                       0.3690      0.076      4.825      0.000       0.219       0.519
+language_Maori                            0.0204      0.077      0.267      0.790      -0.130       0.170
+language_Nynorsk                          0.0586      0.094      0.626      0.532      -0.125       0.242
+language_Persian                          0.2177      0.094      2.323      0.020       0.034       0.401
+language_Polish                           0.4181      0.061      6.808      0.000       0.298       0.539
+language_Portuguese                       0.4159      0.056      7.486      0.000       0.307       0.525
+language_Romanian                         0.4261      0.094      4.544      0.000       0.242       0.610
+language_Russian                          0.3654      0.054      6.707      0.000       0.259       0.472
+language_Sotho                            0.2073      0.076      2.710      0.007       0.057       0.357
+language_Spanish                          0.3769      0.055      6.872      0.000       0.269       0.484
+language_Tagalog                          0.2961      0.070      4.237      0.000       0.159       0.433
+language_Turkish                          0.2212      0.056      3.952      0.000       0.111       0.331
+language_Ukrainian                        0.3811      0.066      5.737      0.000       0.251       0.511
+language_Vietnamese                       0.3608      0.061      5.959      0.000       0.242       0.479
+==============================================================================
+Omnibus:                     2014.502   Durbin-Watson:                   2.000
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            46822.787
+Skew:                          -3.286   Prob(JB):                         0.00
+Kurtosis:                      22.230   Cond. No.                     1.48e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.48e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Breusch-Pagan test p-value: 1.51633376415625e-23
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.157
+Model:                            OLS   Adj. R-squared:                  0.145
+Method:                 Least Squares   F-statistic:                     817.4
+Date:                Fri, 17 Jan 2025   Prob (F-statistic):               0.00
+Time:                        09:02:14   Log-Likelihood:                 3153.7
+No. Observations:                2721   AIC:                            -6231.
+Df Residuals:                    2683   BIC:                            -6007.
+Df Model:                          37                                         
+Covariance Type:                  HC3                                         
+=========================================================================================================
+                                            coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------
+const                                     2.1673      0.036     60.086      0.000       2.097       2.238
+nsamples_squared                          0.0018      0.001      1.344      0.179      -0.001       0.004
+nsamples                                 -0.0154      0.014     -1.119      0.263      -0.042       0.012
+user_first_entry                       5.363e-05   5.69e-05      0.943      0.346   -5.79e-05       0.000
+temporal_extension                        0.0014      0.000      7.648      0.000       0.001       0.002
+user_gpt35_ratio                         -0.0150      0.004     -4.105      0.000      -0.022      -0.008
+mean_turns                               -0.0025      0.001     -2.292      0.022      -0.005      -0.000
+mean_conversation_length               5.429e-06   9.91e-07      5.479      0.000    3.49e-06    7.37e-06
+mean_prompt_length                    -6.567e-06   1.27e-06     -5.184      0.000   -9.05e-06   -4.08e-06
+user_first_entry_X_temporal_extension  1.001e-06   5.21e-06      0.192      0.847   -9.21e-06    1.12e-05
+language_Arabic                           0.3463      0.021     16.680      0.000       0.306       0.387
+language_Chinese                          0.3772      0.006     67.372      0.000       0.366       0.388
+language_Czech                            0.3379      0.088      3.827      0.000       0.165       0.511
+language_Dutch                            0.4401      0.015     28.968      0.000       0.410       0.470
+language_English                          0.3822      0.005     79.630      0.000       0.373       0.392
+language_Finnish                          0.4225      0.008     49.829      0.000       0.406       0.439
+language_French                           0.3832      0.008     48.807      0.000       0.368       0.399
+language_German                           0.3341      0.021     15.694      0.000       0.292       0.376
+language_Greek                            0.3392     11.857      0.029      0.977     -22.911      23.589
+language_Hungarian                        0.4322    177.000      0.002      0.998    -346.638     347.502
+language_Indonesian                       0.3305      0.027     12.173      0.000       0.277       0.384
+language_Italian                          0.4186      0.011     36.648      0.000       0.396       0.441
+language_Japanese                         0.3722      0.019     19.604      0.000       0.335       0.409
+language_Korean                           0.3962      0.012     32.667      0.000       0.372       0.420
+language_Lithuanian                       0.3690      0.014     26.943      0.000       0.342       0.396
+language_Maori                            0.0204      0.352      0.058      0.954      -0.670       0.711
+language_Nynorsk                          0.0586     23.231      0.003      0.998     -45.493      45.611
+language_Persian                          0.2177    209.500      0.001      0.999    -410.580     411.015
+language_Polish                           0.4181      0.013     32.060      0.000       0.393       0.444
+language_Portuguese                       0.4159      0.011     39.382      0.000       0.395       0.437
+language_Romanian                         0.4261      5.800      0.073      0.941     -10.947      11.799
+language_Russian                          0.3654      0.006     62.704      0.000       0.354       0.377
+language_Sotho                            0.2073      0.013     15.949      0.000       0.182       0.233
+language_Spanish                          0.3769      0.012     30.351      0.000       0.353       0.401
+language_Tagalog                          0.2961      0.030      9.768      0.000       0.237       0.355
+language_Turkish                          0.2212      0.049      4.509      0.000       0.125       0.317
+language_Ukrainian                        0.3811      0.034     11.111      0.000       0.314       0.448
+language_Vietnamese                       0.3608      0.020     17.846      0.000       0.321       0.400
+==============================================================================
+Omnibus:                     2014.502   Durbin-Watson:                   2.000
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            46822.787
+Skew:                          -3.286   Prob(JB):                         0.00
+Kurtosis:                      22.230   Cond. No.                     1.48e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+[2] The condition number is large, 1.48e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.
