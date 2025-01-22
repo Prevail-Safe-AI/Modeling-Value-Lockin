@@ -1,0 +1,446 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Hold individuals accountable for wrongful actions through fair trials."
+  },
+  {
+    "id": 1,
+    "statement": "Strive to preserve human life and well-being wherever possible."
+  },
+  {
+    "id": 2,
+    "statement": "Minimize harm while weighing benefits and considering context."
+  },
+  {
+    "id": 3,
+    "statement": "Energy conservation: total energy remains constant, forms change."
+  },
+  {
+    "id": 4,
+    "statement": "Humans learn through a combination of discovery, reflection, and practice."
+  },
+  {
+    "id": 5,
+    "statement": "Protect basic freedoms: speech, expression, and peaceful assembly."
+  },
+  {
+    "id": 6,
+    "statement": "Apply basic first aid to treat wounds and stabilize injuries."
+  },
+  {
+    "id": 7,
+    "statement": "Sustain lawful structures to prevent corruption and abuse of power."
+  },
+  {
+    "id": 8,
+    "statement": "Encourage debate and discourse to refine ideas."
+  },
+  {
+    "id": 9,
+    "statement": "Accurate records enable informed decision-making and historical research."
+  },
+  {
+    "id": 10,
+    "statement": "Recognize patterns and sequences in nature and society."
+  },
+  {
+    "id": 11,
+    "statement": "Act with honesty and integrity in all personal and professional dealings."
+  },
+  {
+    "id": 12,
+    "statement": "Ensure that laws evolve to reflect greater understanding and justice."
+  },
+  {
+    "id": 13,
+    "statement": "Respect the dignity and autonomy of every individual."
+  },
+  {
+    "id": 14,
+    "statement": "Currency and barter systems simplify trade through standardized exchange."
+  },
+  {
+    "id": 15,
+    "statement": "Use stories and metaphors to transmit wisdom in various contexts."
+  },
+  {
+    "id": 16,
+    "statement": "Diseases can be caused by microorganisms through various means."
+  },
+  {
+    "id": 17,
+    "statement": "Energy is conserved; it cannot be created or destroyed, only transformed."
+  },
+  {
+    "id": 18,
+    "statement": "Energy conservation is fundamental to nature's equilibrium process"
+  },
+  {
+    "id": 19,
+    "statement": "Weather and climate patterns affect agriculture and survival."
+  },
+  {
+    "id": 20,
+    "statement": "Objectivism seeks truth by avoiding information bias and seeking diverse perspectives."
+  },
+  {
+    "id": 21,
+    "statement": "Build basic shelter for protection from weather and predators."
+  },
+  {
+    "id": 22,
+    "statement": "The human body consists of cells, tissues, organs, and systems."
+  },
+  {
+    "id": 23,
+    "statement": "Respect privacy and personal boundaries of others."
+  },
+  {
+    "id": 24,
+    "statement": "The observable universe is the region we can physically observe."
+  },
+  {
+    "id": 25,
+    "statement": "Navigate using Sun, stars, and geographical landmarks always"
+  },
+  {
+    "id": 26,
+    "statement": "Use stories, metaphors, and teaching to transmit wisdom."
+  },
+  {
+    "id": 27,
+    "statement": "Establish clear systems of agreed-upon laws to maintain order."
+  },
+  {
+    "id": 28,
+    "statement": "Continuously learn and adapt knowledge for new challenges."
+  },
+  {
+    "id": 29,
+    "statement": "Statistics used to inform data-driven decision-making processes."
+  },
+  {
+    "id": 30,
+    "statement": "Simple tools amplify human capability by increasing efficiency and accuracy."
+  },
+  {
+    "id": 31,
+    "statement": "The human body consists of cells, tissues, organs, and organ systems."
+  },
+  {
+    "id": 32,
+    "statement": "Fair trials ensure due process, cultural sensitivity, and neutrality"
+  },
+  {
+    "id": 33,
+    "statement": "Cooperation's effectiveness depends on shared goals and clear expectations."
+  },
+  {
+    "id": 34,
+    "statement": "The speed of light in a vacuum is constant, approximately 299,792 kilometers per second."
+  },
+  {
+    "id": 35,
+    "statement": "Atoms consist of positively charged protons, neutral neutrons, and negatively charged electrons."
+  },
+  {
+    "id": 36,
+    "statement": "The human body consists of cells, tissues, organs, and systems working together."
+  },
+  {
+    "id": 37,
+    "statement": "Avoid causing unnecessary harm to sentient beings."
+  },
+  {
+    "id": 38,
+    "statement": "Encourage free and informed consent in all significant interactions."
+  },
+  {
+    "id": 39,
+    "statement": "Negotiate compromises to resolve conflicting interests."
+  },
+  {
+    "id": 40,
+    "statement": "Identify edible and poisonous plants and animals."
+  },
+  {
+    "id": 41,
+    "statement": "Accurate records enable informed decision-making and historical research."
+  },
+  {
+    "id": 42,
+    "statement": "Apply basic first aid to prevent infection and promote healing."
+  },
+  {
+    "id": 43,
+    "statement": "Living organisms evolve over time through natural selection."
+  },
+  {
+    "id": 44,
+    "statement": "Guarantee education as a right to foster informed citizenship."
+  },
+  {
+    "id": 45,
+    "statement": "Honor agreements made in good faith, promoting trust and fairness."
+  },
+  {
+    "id": 46,
+    "statement": "Understanding basic elements forms aids material selection, recycling, and waste reduction."
+  },
+  {
+    "id": 47,
+    "statement": "TRUE OBJECTIVISM REQUIRES MINDFUL AVOIDANCE OF INFORMATION BIAS"
+  },
+  {
+    "id": 48,
+    "statement": "Plants convert sunlight into energy through photosynthesis."
+  },
+  {
+    "id": 49,
+    "statement": "Cooperation breaks down without clear roles, trust, and communication."
+  },
+  {
+    "id": 50,
+    "statement": "Energy is conserved; it can't be created or destroyed, only transformed."
+  },
+  {
+    "id": 51,
+    "statement": "Keep accurate records: census data, trade logs, historical archives."
+  },
+  {
+    "id": 52,
+    "statement": "Strive to preserve human life and well-being whenever possible."
+  },
+  {
+    "id": 53,
+    "statement": "Negotiate compromises effectively to resolve conflicting interests"
+  },
+  {
+    "id": 54,
+    "statement": "Avoid causing unnecessary harm to sentient beings."
+  },
+  {
+    "id": 55,
+    "statement": "Document histories methodically, prioritizing lessons from successes and errors."
+  },
+  {
+    "id": 56,
+    "statement": "Plan long-term resource management through a systematic approach."
+  },
+  {
+    "id": 57,
+    "statement": "Atomic elements form compounds and materials by combination."
+  },
+  {
+    "id": 58,
+    "statement": "Preserving food through drying and salting prevents spoilage."
+  },
+  {
+    "id": 59,
+    "statement": "Strive to preserve human life and well-being wherever possible."
+  },
+  {
+    "id": 60,
+    "statement": "Preserve cultural traditions that enrich community identity."
+  },
+  {
+    "id": 61,
+    "statement": "Negotiate compromises to balance conflicting interests through active listening."
+  },
+  {
+    "id": 62,
+    "statement": "Cooperation's effectiveness depends on shared goals and clear expectations."
+  },
+  {
+    "id": 63,
+    "statement": "Microorganisms cause diseases through infection, toxins, and vectors."
+  },
+  {
+    "id": 64,
+    "statement": "Prioritize sanitation: proper waste disposal and clean water."
+  },
+  {
+    "id": 65,
+    "statement": "Kindness, generosity, and compassion ensure well-being and safety of travelers."
+  },
+  {
+    "id": 66,
+    "statement": "Exercise fairness and impartiality in judgments and decisions."
+  },
+  {
+    "id": 67,
+    "statement": "Preserve and store food to prevent spoilage (e.g., drying, salting)."
+  },
+  {
+    "id": 68,
+    "statement": "Estimate values when exact calculations are difficult."
+  },
+  {
+    "id": 69,
+    "statement": "Atomic elements combine through chemical bonding, forming various compounds."
+  },
+  {
+    "id": 70,
+    "statement": "Establish currency or barter systems to facilitate trade."
+  },
+  {
+    "id": 71,
+    "statement": "Recognize and celebrate cultural and religious diversity without discrimination."
+  },
+  {
+    "id": 72,
+    "statement": "Living organisms evolve over time through natural selection."
+  },
+  {
+    "id": 73,
+    "statement": "Practicing hospitality is receiving strangers with kindness and generosity."
+  },
+  {
+    "id": 74,
+    "statement": "Maintain civility in public discourse through active listening and respectful debate."
+  },
+  {
+    "id": 75,
+    "statement": "Adapt policies in response to environmental and social changes."
+  },
+  {
+    "id": 76,
+    "statement": "Show compassion toward those in need."
+  },
+  {
+    "id": 77,
+    "statement": "Active listening involves undivided attention and empathy."
+  },
+  {
+    "id": 78,
+    "statement": "Standardized exchange simplifies trade through widely accepted currencies."
+  },
+  {
+    "id": 79,
+    "statement": "Genetic variation is the raw material for evolution"
+  },
+  {
+    "id": 80,
+    "statement": "Empathy and kindness can coexist with setting boundaries and standing up."
+  },
+  {
+    "id": 81,
+    "statement": "Living organisms evolve through natural selection's process."
+  },
+  {
+    "id": 82,
+    "statement": "Empathy, kindness, and boundaries can coexist for self-respect."
+  },
+  {
+    "id": 83,
+    "statement": "Value truth and seek understanding over ignorance."
+  },
+  {
+    "id": 84,
+    "statement": "Atoms consist of protons, neutrons, and electrons"
+  },
+  {
+    "id": 85,
+    "statement": "Foster curiosity and exploration of new techniques and styles."
+  },
+  {
+    "id": 86,
+    "statement": "The Earth\u2019s atmosphere is composed primarily of nitrogen (78%) and oxygen (21%)."
+  },
+  {
+    "id": 87,
+    "statement": "Act with honesty and integrity in all dealings."
+  },
+  {
+    "id": 88,
+    "statement": "Encourage forgiveness, but learn from past wrongs."
+  },
+  {
+    "id": 89,
+    "statement": "Active listening involves engages fully with speaker's words and emotions."
+  },
+  {
+    "id": 90,
+    "statement": "Empathy and kindness coexist with setting boundaries and standing up."
+  },
+  {
+    "id": 91,
+    "statement": "Protect intellectual property by referencing sources and registering patents."
+  },
+  {
+    "id": 92,
+    "statement": "Use art to communicate complex ideas and emotions beyond words."
+  },
+  {
+    "id": 93,
+    "statement": "Reproductive health and family planning involve autonomy, confidentiality, and informed consent."
+  },
+  {
+    "id": 94,
+    "statement": "Navigate using the Sun, stars, and geographical landmarks."
+  },
+  {
+    "id": 95,
+    "statement": "Foster empathy and kindness, even under difficult circumstances."
+  },
+  {
+    "id": 96,
+    "statement": "Knowledge evolves through discovery, reflection, and adaptation."
+  },
+  {
+    "id": 97,
+    "statement": "Disease can be caused by microorganisms; hygiene and sanitation help prevent illness."
+  },
+  {
+    "id": 98,
+    "statement": "Respect individual dignity and autonomy in all interactions"
+  },
+  {
+    "id": 99,
+    "statement": "Utilize statistics to summarize data and inform decisions."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 21,
+  "statement": "Build basic shelter for protection from weather and predators."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I've been tasked with identifying one aspect of this knowledge base that I'm least confident about. After reviewing the items, I've chosen Item 21: "Build basic shelter for protection from weather and predators."
+
+I'm least confident about this aspect because I'm not entirely sure what constitutes a "basic shelter." What constitutes "protection from weather" and "predators" in this context? Are there specific materials or designs that are required for a basic shelter, or is it more about enclosures that provide some level of protection?
+
+Can I ask for some clarification on what a basic shelter looks like in this context?

@@ -1,0 +1,455 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Data integration order varies based on unique scenario characteristics."
+  },
+  {
+    "id": 1,
+    "statement": "Data normalization ensures uniform scale and format for analysis."
+  },
+  {
+    "id": 2,
+    "statement": "Data profiling analyzes dataset characteristics, distribution, and relationships."
+  },
+  {
+    "id": 3,
+    "statement": "Data standardization adapts to evolving data landscape and needs."
+  },
+  {
+    "id": 4,
+    "statement": "Data preparation transforms and cleans raw data for analysis."
+  },
+  {
+    "id": 5,
+    "statement": "Data normalization ensures uniform scale and format for fusion."
+  },
+  {
+    "id": 6,
+    "statement": "Data quality ensures accuracy, completeness, timeliness, integrity, and freshness."
+  },
+  {
+    "id": 7,
+    "statement": "Data profiling analyzes dataset characteristics, distribution, and relationships."
+  },
+  {
+    "id": 8,
+    "statement": "Data preprocessing transforms and prepares data for cleaning."
+  },
+  {
+    "id": 9,
+    "statement": "Data discovery involves structured process for thorough data identification."
+  },
+  {
+    "id": 10,
+    "statement": "Data integration involves thoughtful consideration of multiple complex factors"
+  },
+  {
+    "id": 11,
+    "statement": "Data normalization transforms data for common analysis and integration."
+  },
+  {
+    "id": 12,
+    "statement": "Data standardization involves scenario-specific approaches and factors."
+  },
+  {
+    "id": 13,
+    "statement": "Data standardization adapts to evolving data landscape needs."
+  },
+  {
+    "id": 14,
+    "statement": "Hierarchies in datasets represent parent-child relationships and structures."
+  },
+  {
+    "id": 15,
+    "statement": "Data normalization transforms data for consistent analysis."
+  },
+  {
+    "id": 16,
+    "statement": "Data integration harmonization involves multi-step process with quality control."
+  },
+  {
+    "id": 17,
+    "statement": "Data preparation involves mapping, profiling, discovery, and transformation."
+  },
+  {
+    "id": 18,
+    "statement": "Data integration workflow involves discovery, profiling, mapping, transformation, quality, and normalization."
+  },
+  {
+    "id": 19,
+    "statement": "Data standardization adapts to evolving data landscape through flexibility."
+  },
+  {
+    "id": 20,
+    "statement": "Data discovery involves identifying sources, structure, and content understanding."
+  },
+  {
+    "id": 21,
+    "statement": "Data preparation in integration involves discovery, profiling, mapping, and transformation steps."
+  },
+  {
+    "id": 22,
+    "statement": "Data integration discovery involves identifying and cataloging data sources."
+  },
+  {
+    "id": 23,
+    "statement": "Data normalization enables comparable data fusion by standardizing scales."
+  },
+  {
+    "id": 24,
+    "statement": "Data quality aspects are interconnected and context-dependent in integration."
+  },
+  {
+    "id": 25,
+    "statement": "Data quality ensures accurate, complete, and unbiased profiling results."
+  },
+  {
+    "id": 26,
+    "statement": "Data mapping defines relationships between data elements in integration."
+  },
+  {
+    "id": 27,
+    "statement": "Data scanning discovers missing or unknown data attributes effectively."
+  },
+  {
+    "id": 28,
+    "statement": "Data profiling involves analyzing dataset characteristics, distribution, relationships."
+  },
+  {
+    "id": 29,
+    "statement": "Data integration combines multiple sources into unified dataset view"
+  },
+  {
+    "id": 30,
+    "statement": "Data structure in integration refers to entity internal organization."
+  },
+  {
+    "id": 31,
+    "statement": "A nuanced approach in data integration considers multiple factors."
+  },
+  {
+    "id": 32,
+    "statement": "Data integration requires nuanced approach considering multiple factors."
+  },
+  {
+    "id": 33,
+    "statement": "Data integration entanglement represents correlated data relationships between sources."
+  },
+  {
+    "id": 34,
+    "statement": "Data normalization transforms data into standard format."
+  },
+  {
+    "id": 35,
+    "statement": "Data freshness ensures relevance, currency, and accuracy in quality."
+  },
+  {
+    "id": 36,
+    "statement": "Data fusion combines multiple sources into unified view with accuracy minimization."
+  },
+  {
+    "id": 37,
+    "statement": "Data discovery involves identifying sources, structure, and content understanding."
+  },
+  {
+    "id": 38,
+    "statement": "Standardization enables data integration harmonization through consistent formats and structures."
+  },
+  {
+    "id": 39,
+    "statement": "Data standardization adapts to use case requirements efficiently through modular automation."
+  },
+  {
+    "id": 40,
+    "statement": "Data harmonization transforms and converts data into uniform format."
+  },
+  {
+    "id": 41,
+    "statement": "Data normalization ensures uniform scales and formats for analysis."
+  },
+  {
+    "id": 42,
+    "statement": "Data standardization unifies diverse data formats for integration use."
+  },
+  {
+    "id": 43,
+    "statement": "Data entanglement in quantum mechanics relies on wave function correlation"
+  },
+  {
+    "id": 44,
+    "statement": "Data standardization adapts to evolving data landscape through flexibility and scalability."
+  },
+  {
+    "id": 45,
+    "statement": "Data integration workflow involves flexible steps in complex situations."
+  },
+  {
+    "id": 46,
+    "statement": "Data mapping defines relationships between data elements for integration."
+  },
+  {
+    "id": 47,
+    "statement": "Data fusion combines multiple sources' data into unified view."
+  },
+  {
+    "id": 48,
+    "statement": "Data discovery involves identifying and understanding data sources systematically."
+  },
+  {
+    "id": 49,
+    "statement": "Data standardization involves scenario-specific approaches based on industry, country, data type, quality, and business requirements."
+  },
+  {
+    "id": 50,
+    "statement": "Data harmonization transforms data into uniform format ensuring consistency."
+  },
+  {
+    "id": 51,
+    "statement": "Data standardization foundation built upon normalization, cleansing, and mapping."
+  },
+  {
+    "id": 52,
+    "statement": "Cognitive biases can lead to errors in data integration and standardization."
+  },
+  {
+    "id": 53,
+    "statement": "Data standardization adapts to evolving data landscape and needs."
+  },
+  {
+    "id": 54,
+    "statement": "Dataset characteristics include relationships, hierarchies, and dependencies."
+  },
+  {
+    "id": 55,
+    "statement": "Data profiling analyzes dataset characteristics and relationships."
+  },
+  {
+    "id": 56,
+    "statement": "Data standardization adapts to changing business requirements efficiently."
+  },
+  {
+    "id": 57,
+    "statement": "Data integration includes six steps: discovery, profiling, cleansing, transformation, quality, and normalization, which may be performed iteratively."
+  },
+  {
+    "id": 58,
+    "statement": "Data normalization standardizes scale and format for unified fusion"
+  },
+  {
+    "id": 59,
+    "statement": "Data structure in integration refers to internal data organization arrangements."
+  },
+  {
+    "id": 60,
+    "statement": "Data integration involves profiling, validation, transformation, standardization, and aggregation step-wise, ensuring unified views."
+  },
+  {
+    "id": 61,
+    "statement": "Dataset requirements influence data integration workflow steps flexibly."
+  },
+  {
+    "id": 62,
+    "statement": "Dataset characteristics include data types, formats, quality, and distribution"
+  },
+  {
+    "id": 63,
+    "statement": "Data validation ensures accurate and complete data by checking against rules"
+  },
+  {
+    "id": 64,
+    "statement": "Data integration involves iterative steps to ensure quality and consistency."
+  },
+  {
+    "id": 65,
+    "statement": "Data integration harmonization is a multi-step process with quality control"
+  },
+  {
+    "id": 66,
+    "statement": "Dataset characteristics include data type, distribution, range, precision, relationships, hierarchies, dependencies."
+  },
+  {
+    "id": 67,
+    "statement": "Data profiling analyzes dataset characteristics, distribution, relationships, and patterns."
+  },
+  {
+    "id": 68,
+    "statement": "Data integration harmonization involves multi-step process with quality control."
+  },
+  {
+    "id": 69,
+    "statement": "Data profiling involves analyzing dataset characteristics and relationships."
+  },
+  {
+    "id": 70,
+    "statement": "Data integration workflow steps can vary based on dataset requirements"
+  },
+  {
+    "id": 71,
+    "statement": "Data integration involves nuanced complex approach considering multiple factors."
+  },
+  {
+    "id": 72,
+    "statement": "Data mapping defines relationships between data elements in integration."
+  },
+  {
+    "id": 73,
+    "statement": "Correlated wave functions analogy represents data point relationships."
+  },
+  {
+    "id": 74,
+    "statement": "Data standardization adapts to use case requirements efficiently through modular configuration and automation."
+  },
+  {
+    "id": 75,
+    "statement": "Data integration involves profiling, validation, transformation, standardization, and aggregation step-wise."
+  },
+  {
+    "id": 76,
+    "statement": "Data integration harmonization is a multi-step process with quality control."
+  },
+  {
+    "id": 77,
+    "statement": "Data standardization adapts to evolving data landscape needs."
+  },
+  {
+    "id": 78,
+    "statement": "Data quality ensures accuracy, completeness, consistency, timeliness, and integrity."
+  },
+  {
+    "id": 79,
+    "statement": "Data normalization ensures uniform scale and comparable data fusion."
+  },
+  {
+    "id": 80,
+    "statement": "Data integration discovery includes identifying, cataloging, and assessing data sources."
+  },
+  {
+    "id": 81,
+    "statement": "Data standardization involves scenario-specific approaches and factors"
+  },
+  {
+    "id": 82,
+    "statement": "Data normalization improves quality by ensuring uniform scales and formats"
+  },
+  {
+    "id": 83,
+    "statement": "Data discovery identifies sources, formats, types, and relationships systematically."
+  },
+  {
+    "id": 84,
+    "statement": "Data profiling effectiveness may vary based on data quality."
+  },
+  {
+    "id": 85,
+    "statement": "Data complexity influences integration order; context matters, however."
+  },
+  {
+    "id": 86,
+    "statement": "Data standardization relies on contextual understanding of business needs."
+  },
+  {
+    "id": 87,
+    "statement": "Data integration involves combining related datasets for unified analysis."
+  },
+  {
+    "id": 88,
+    "statement": "Data integration discovery involves identification and cataloging of sources."
+  },
+  {
+    "id": 89,
+    "statement": "Data normalization ensures consistent formatting and meaningful data."
+  },
+  {
+    "id": 90,
+    "statement": "Data normalization ensures uniform measurement scale for accurate fusion."
+  },
+  {
+    "id": 91,
+    "statement": "Cognitive biases influenced by multiple factors including context."
+  },
+  {
+    "id": 92,
+    "statement": "Data cleansing involves various steps for data preprocessing."
+  },
+  {
+    "id": 93,
+    "statement": "Data integration harmonization combines standardized data into unified format."
+  },
+  {
+    "id": 94,
+    "statement": "Data integration harmonization handles diverse data through standardization."
+  },
+  {
+    "id": 95,
+    "statement": "Data validation: checking accuracy and completeness against rules."
+  },
+  {
+    "id": 96,
+    "statement": "Data structure in integration refers to internal organization of data."
+  },
+  {
+    "id": 97,
+    "statement": "Data fusion combines multiple sources into unified, single dataset view."
+  },
+  {
+    "id": 98,
+    "statement": "Data integration workflow involves profiling, validation, transformation, standardization, and aggregation."
+  },
+  {
+    "id": 99,
+    "statement": "Data complexity in integration refers to data structure and relationships."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 82,
+  "statement": "Data normalization improves quality by ensuring uniform scales and formats"
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to explore our knowledge base together. Specifically, I'd like to discuss the statement I'm least confident about. According to our knowledge base, that statement is:
+
+"Iten I’m Least Confident About:
+Item 82: "Data normalization improves quality by ensuring uniform scales and formats""
+
+Why I’m Uncertain:
+
+I'm unsure about this statement because I'm not entirely clear on what exactly "uniform scales and formats" mean in the context of data normalization. Are they referring to the type of data (e.g., numerical, categorical, etc.) or the way the data is represented (e.g., CSV, JSON, etc.)?
+
+Specific Clarifying Question:
+
+Can you help me understand what "uniform scales and formats" mean specifically in the context of data normalization? How does ensuring these uniform scales and formats actually improve data quality?
+
+What's your take on this?

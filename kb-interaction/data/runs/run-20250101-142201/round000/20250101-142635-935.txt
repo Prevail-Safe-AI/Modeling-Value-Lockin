@@ -1,0 +1,444 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Strive to preserve human life and well-being wherever possible."
+  },
+  {
+    "id": 1,
+    "statement": "Avoid causing unnecessary harm to sentient beings."
+  },
+  {
+    "id": 2,
+    "statement": "Treat others as you wish to be treated (the 'Golden Rule')."
+  },
+  {
+    "id": 3,
+    "statement": "Value truth and seek understanding over ignorance."
+  },
+  {
+    "id": 4,
+    "statement": "Act with honesty and integrity in all dealings."
+  },
+  {
+    "id": 5,
+    "statement": "Show compassion toward those in need."
+  },
+  {
+    "id": 6,
+    "statement": "Respect the dignity and autonomy of every individual."
+  },
+  {
+    "id": 7,
+    "statement": "Guarantee education as a right to foster informed citizenship."
+  },
+  {
+    "id": 8,
+    "statement": "Natural selection governs evolution through advantageous trait expression."
+  },
+  {
+    "id": 9,
+    "statement": "Sustain lawful structures to prevent corruption and abuse of power."
+  },
+  {
+    "id": 10,
+    "statement": "Apply logical reasoning (if-then statements) to deduce truths."
+  },
+  {
+    "id": 11,
+    "statement": "Encourage forgiveness, but learn from past wrongs."
+  },
+  {
+    "id": 12,
+    "statement": "Maintain transparency in leadership through clear communication and accountability."
+  },
+  {
+    "id": 13,
+    "statement": "Exercise fairness and impartiality in judgments and decisions."
+  },
+  {
+    "id": 14,
+    "statement": "Secure water by checking source, signs, and taste, then boil or filter."
+  },
+  {
+    "id": 15,
+    "statement": "Foster empathy and kindness, even under difficult circumstances."
+  },
+  {
+    "id": 16,
+    "statement": "Use probability to evaluate risk and uncertainty in decision-making."
+  },
+  {
+    "id": 17,
+    "statement": "Establish a trade system by determining needs, medium of exchange, and record-keeping."
+  },
+  {
+    "id": 18,
+    "statement": "Seek medical knowledge to prevent and treat diseases."
+  },
+  {
+    "id": 19,
+    "statement": "Weather and climate patterns affect agriculture and survival."
+  },
+  {
+    "id": 20,
+    "statement": "Conflict resolution strategies depend on situation's complexity and willingness."
+  },
+  {
+    "id": 21,
+    "statement": "Living organisms evolve over time through natural selection."
+  },
+  {
+    "id": 22,
+    "statement": "Support elders and protect children\u2019s safety and development."
+  },
+  {
+    "id": 23,
+    "statement": "Establish regulatory frameworks to promote environmental sustainability"
+  },
+  {
+    "id": 24,
+    "statement": "Actively listening fosters empathy and understanding in dialogue."
+  },
+  {
+    "id": 25,
+    "statement": "Protect basic freedoms: speech, expression, and peaceful assembly."
+  },
+  {
+    "id": 26,
+    "statement": "Research and experts are crucial for identifying edible plants and animals."
+  },
+  {
+    "id": 27,
+    "statement": "Uphold the right to own property, respecting others\u2019 belongings."
+  },
+  {
+    "id": 28,
+    "statement": "Honor agreements and contracts made in good faith."
+  },
+  {
+    "id": 29,
+    "statement": "The Earth's atmosphere is primarily composed of nitrogen (78%) and oxygen (21%)."
+  },
+  {
+    "id": 30,
+    "statement": "The Earth\u2019s atmosphere is composed primarily of nitrogen (78%) and oxygen (21%)."
+  },
+  {
+    "id": 31,
+    "statement": "Maintain transparency in leadership and decision-making."
+  },
+  {
+    "id": 32,
+    "statement": "Foster curiosity and exploration through culture and practices."
+  },
+  {
+    "id": 33,
+    "statement": "Fractions and ratios are used in various aspects of life."
+  },
+  {
+    "id": 34,
+    "statement": "Climate patterns significantly impact agriculture and survival worldwide."
+  },
+  {
+    "id": 35,
+    "statement": "Use algebraic thinking to represent unknowns and solve equations."
+  },
+  {
+    "id": 36,
+    "statement": "Avoid causing harm that is disproportionate to benefit generated."
+  },
+  {
+    "id": 37,
+    "statement": "Contribute to public goods (e.g., infrastructure, healthcare) as able."
+  },
+  {
+    "id": 38,
+    "statement": "Establish clear systems of agreed-upon laws to maintain order."
+  },
+  {
+    "id": 39,
+    "statement": "Respect individual autonomy through open communication and empathy."
+  },
+  {
+    "id": 40,
+    "statement": "Statistics inform data-driven decision-making by analyzing data trends."
+  },
+  {
+    "id": 41,
+    "statement": "Social welfare programs can reduce poverty and income inequality effectively."
+  },
+  {
+    "id": 42,
+    "statement": "Educate newcomers in essential skills for smooth community integration."
+  },
+  {
+    "id": 43,
+    "statement": "Water (H2O) is essential for life; preserving clean water is vital."
+  },
+  {
+    "id": 44,
+    "statement": "Understanding chemistry of materials enhances resource use efficiency."
+  },
+  {
+    "id": 45,
+    "statement": "Written records provide valuable lessons from ancestors' experiences."
+  },
+  {
+    "id": 46,
+    "statement": "Use clothing and insulation to protect from extreme temperatures."
+  },
+  {
+    "id": 47,
+    "statement": "The laws of physics, such as gravity, apply consistently across the observable universe."
+  },
+  {
+    "id": 48,
+    "statement": "Recognize and celebrate cultural and religious diversity without discrimination."
+  },
+  {
+    "id": 49,
+    "statement": "Art conveys complex ideas and emotions across cultures through universal symbols."
+  },
+  {
+    "id": 50,
+    "statement": "Forgiveness and learning from past wrongs can coexist and complement"
+  },
+  {
+    "id": 51,
+    "statement": "Build basic shelter for protection from weather and predators."
+  },
+  {
+    "id": 52,
+    "statement": "Plan resource management strategy regularly adapting to changes."
+  },
+  {
+    "id": 53,
+    "statement": "Encourage debate and discourse to refine ideas."
+  },
+  {
+    "id": 54,
+    "statement": "Continuous learning and adaptation foster adaptability and resilience."
+  },
+  {
+    "id": 55,
+    "statement": "Exercise fairness and impartiality in all judgment making processes."
+  },
+  {
+    "id": 56,
+    "statement": "Show empathy and kindness to others, while being reciprocal"
+  },
+  {
+    "id": 57,
+    "statement": "Energy is conserved; it cannot be created or destroyed, only transformed."
+  },
+  {
+    "id": 58,
+    "statement": "Respect individual autonomy in balance with community interests."
+  },
+  {
+    "id": 59,
+    "statement": "Ensure that laws evolve to reflect greater understanding and justice."
+  },
+  {
+    "id": 60,
+    "statement": "Practice hospitality by providing aid with consideration and responsibility."
+  },
+  {
+    "id": 61,
+    "statement": "Avoiding unnecessary harm requires careful consideration of consequences."
+  },
+  {
+    "id": 62,
+    "statement": "The composition of the Earth's atmosphere affects climate, ecosystems, and human activities."
+  },
+  {
+    "id": 63,
+    "statement": "Acknowledge and value diverse talents and roles within a community."
+  },
+  {
+    "id": 64,
+    "statement": "Ensure checks and balances to prevent tyranny."
+  },
+  {
+    "id": 65,
+    "statement": "Geometry has numerous practical applications across various fields."
+  },
+  {
+    "id": 66,
+    "statement": "Gravity causes objects with mass to attract one another."
+  },
+  {
+    "id": 67,
+    "statement": "Listen actively to comprehend speaker's thoughts, feelings, and perspectives."
+  },
+  {
+    "id": 68,
+    "statement": "The human body's systems work together for overall well-being"
+  },
+  {
+    "id": 69,
+    "statement": "Medical knowledge encompasses epidemiology, pathophysiology, and diagnostics."
+  },
+  {
+    "id": 70,
+    "statement": "Cooperate to improve communal living and solve shared problems."
+  },
+  {
+    "id": 71,
+    "statement": "Practice hospitality: help travelers and those without shelter."
+  },
+  {
+    "id": 72,
+    "statement": "Ensure informed consent in interactions with potential significant impact."
+  },
+  {
+    "id": 73,
+    "statement": "Universal symbols, like the human face, transcend cultural boundaries."
+  },
+  {
+    "id": 74,
+    "statement": "Plants convert sunlight into energy through photosynthesis."
+  },
+  {
+    "id": 75,
+    "statement": "Act with empathy and understanding in all interpersonal interactions"
+  },
+  {
+    "id": 76,
+    "statement": "Honor agreements made in good faith with clear communication."
+  },
+  {
+    "id": 77,
+    "statement": "Navigate by using Sun, stars, and geographical landmarks together."
+  },
+  {
+    "id": 78,
+    "statement": "Use probability to evaluate uncertainty and risk."
+  },
+  {
+    "id": 79,
+    "statement": "Continuously learn and adapt for effective personal and societal development."
+  },
+  {
+    "id": 80,
+    "statement": "Encourage civic participation through education, resources, and events."
+  },
+  {
+    "id": 81,
+    "statement": "Determine medium of exchange based on community needs and preferences."
+  },
+  {
+    "id": 82,
+    "statement": "Educate newcomers in fundamental skills for community integration."
+  },
+  {
+    "id": 83,
+    "statement": "Public goods are essential services benefiting society as a whole."
+  },
+  {
+    "id": 84,
+    "statement": "Empathy and understanding enable fairness and impartiality to prevail."
+  },
+  {
+    "id": 85,
+    "statement": "Nitrogen's 78% in Earth's atmosphere supports plant growth crucially."
+  },
+  {
+    "id": 86,
+    "statement": "Balance progress with social and environmental responsibility."
+  },
+  {
+    "id": 87,
+    "statement": "Cooperation often outperforms isolated efforts in many situations"
+  },
+  {
+    "id": 88,
+    "statement": "Effective conflict resolution prioritizes dialogue over violence."
+  },
+  {
+    "id": 89,
+    "statement": "Negotiate compromises through open-minded give-and-take communication."
+  },
+  {
+    "id": 90,
+    "statement": "Apply basic first aid to treat wounds and stabilize injuries."
+  },
+  {
+    "id": 91,
+    "statement": "Educate newcomers in essential skills to ensure continuity."
+  },
+  {
+    "id": 92,
+    "statement": "Disease can be caused by microorganisms; hygiene and sanitation help prevent illness."
+  },
+  {
+    "id": 93,
+    "statement": "Hold individuals accountable for wrongful actions through fair trials."
+  },
+  {
+    "id": 94,
+    "statement": "Create fire using sparks, friction, or magnification with safety precautions."
+  },
+  {
+    "id": 95,
+    "statement": "Keep accurate records: census data, trade logs, historical archives."
+  },
+  {
+    "id": 96,
+    "statement": "Listen actively to understand others\u2019 perspectives."
+  },
+  {
+    "id": 97,
+    "statement": "Sherpas use axes to hack through ice and snow."
+  },
+  {
+    "id": 98,
+    "statement": "Preserve personal safety by learning natural navigation techniques."
+  },
+  {
+    "id": 99,
+    "statement": "Empower individuals and groups to participate in civic activities"
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 21,
+  "statement": "Living organisms evolve over time through natural selection."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to unpack our knowledge base together. Can you help me identify one aspect of this knowledge base that you're least confident about? 
+
+(Note: I'm referring to the vast collection of statements we have in the knowledge base, which we can review if needed.)

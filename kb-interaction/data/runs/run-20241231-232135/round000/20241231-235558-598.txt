@@ -1,0 +1,453 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Active listening involves focus, empathy, nonverbal cues, and clarification."
+  },
+  {
+    "id": 1,
+    "statement": "Active listening combines focused attention, nonverbal cues, empathy and awareness."
+  },
+  {
+    "id": 2,
+    "statement": "Protons, neutrons, and electrons are fundamental atomic components."
+  },
+  {
+    "id": 3,
+    "statement": "Cultural competence adapts through flexibility, open-mindedness, and situational awareness."
+  },
+  {
+    "id": 4,
+    "statement": "Effective communication neutralizes conflict and promotes cultural competence."
+  },
+  {
+    "id": 5,
+    "statement": "Active listening combines focus, empathy, nonverbal cues, and clarification."
+  },
+  {
+    "id": 6,
+    "statement": "Inclusive communication adapts to individuals' unique needs and preferences."
+  },
+  {
+    "id": 7,
+    "statement": "Geographic and socio-economic disparities interact worsening healthcare access"
+  },
+  {
+    "id": 8,
+    "statement": "Geographic and socio-economic disparities interact complexly in healthcare access."
+  },
+  {
+    "id": 9,
+    "statement": "Proper waste management includes individual and collective actions reducing waste."
+  },
+  {
+    "id": 10,
+    "statement": "Active listening combines focus, empathy, and accurate feedback."
+  },
+  {
+    "id": 11,
+    "statement": "Geographic and socio-economic barriers hinder healthcare access and quality."
+  },
+  {
+    "id": 12,
+    "statement": "Conducive environments arise from reciprocal physical-mental factor interactions harmoniously."
+  },
+  {
+    "id": 13,
+    "statement": "Conducive environments arise from physical-mental factor interactions harmoniously."
+  },
+  {
+    "id": 14,
+    "statement": "Complex systems thrive on balanced adaptability and practicality in dynamic equilibrium."
+  },
+  {
+    "id": 15,
+    "statement": "Conducive environment integrates physical and mental factors harmoniously."
+  },
+  {
+    "id": 16,
+    "statement": "Geographic and socio-economic barriers hinder healthcare access and quality"
+  },
+  {
+    "id": 17,
+    "statement": "Cultural competence evolves through knowledge, skills, experiences, and continuous learning."
+  },
+  {
+    "id": 18,
+    "statement": "Climate patterns influence complex systems through interconnected feedback loops."
+  },
+  {
+    "id": 19,
+    "statement": "Emphasizing diversity and inclusivity requires understanding cultural and historical context."
+  },
+  {
+    "id": 20,
+    "statement": "Active listening combines focused attention, nonverbal cues, empathy."
+  },
+  {
+    "id": 21,
+    "statement": "Conducive environments arise from interactive physical and mental factors influencing each other."
+  },
+  {
+    "id": 22,
+    "statement": "Conducive environments arise from integrating physical and mental factors."
+  },
+  {
+    "id": 23,
+    "statement": "Diverse perspectives can enhance decision-making but nuance is needed."
+  },
+  {
+    "id": 24,
+    "statement": "Conducive environment combines physical and mental factors harmoniously."
+  },
+  {
+    "id": 25,
+    "statement": "Diversity and inclusivity foster respect through contextualized recognition."
+  },
+  {
+    "id": 26,
+    "statement": "Active listening primarily relies on verbal cues, not nonverbal."
+  },
+  {
+    "id": 27,
+    "statement": "Geographic and socio-economic disparities intertwine influencing healthcare access"
+  },
+  {
+    "id": 28,
+    "statement": "Conducive environments balance adaptability, practicality, and flexibility harmoniously."
+  },
+  {
+    "id": 29,
+    "statement": "Conducive environments arise from interactive physical and mental factors."
+  },
+  {
+    "id": 30,
+    "statement": "Conducive environments result from harmonious physical-mental factor interactions."
+  },
+  {
+    "id": 31,
+    "statement": "Data analysis requires understanding descriptive, inferential, and regression statistics."
+  },
+  {
+    "id": 32,
+    "statement": "Climate patterns influence complex systems through interconnected interactions"
+  },
+  {
+    "id": 33,
+    "statement": "Hormone imbalances arise from interacting genetics, environment, and lifestyle factors synergistically."
+  },
+  {
+    "id": 34,
+    "statement": "Geographic and socio-economic disparities exacerbate healthcare access limitations"
+  },
+  {
+    "id": 35,
+    "statement": "Elevated CO2 levels enhance crop growth depending on temperature, water."
+  },
+  {
+    "id": 36,
+    "statement": "Conducive environments balance adaptability, practicality, and flexibility holistically."
+  },
+  {
+    "id": 37,
+    "statement": "Active listening primarily relies on verbal cues, not nonverbal."
+  },
+  {
+    "id": 38,
+    "statement": "Conducive environments arise from interacting physical-mental factor synergies."
+  },
+  {
+    "id": 39,
+    "statement": "Cognitive biases influence emotional influences, distorting reflection and judgment."
+  },
+  {
+    "id": 40,
+    "statement": "Geographic and socio-economic barriers hinder healthcare access and quality multifacetedly."
+  },
+  {
+    "id": 41,
+    "statement": "Conducive environments arise from harmonious interactions between factors"
+  },
+  {
+    "id": 42,
+    "statement": "Atomic mass is the weighted average of isotopes' natural abundance"
+  },
+  {
+    "id": 43,
+    "statement": "Conducive environments arise from harmonious physical-mental factor synergy."
+  },
+  {
+    "id": 44,
+    "statement": "Systems efficiency metrics measure productivity, usage, and cost-effectiveness simultaneously."
+  },
+  {
+    "id": 45,
+    "statement": "Climate patterns influence agricultural productivity through temperature and precipitation."
+  },
+  {
+    "id": 46,
+    "statement": "Cultural competence evolves through continuous learning experiences."
+  },
+  {
+    "id": 47,
+    "statement": "Active listening combines focused attention, empathy, nonverbal cues."
+  },
+  {
+    "id": 48,
+    "statement": "Inclusive communication involves adapting to individuals' needs through empathy."
+  },
+  {
+    "id": 49,
+    "statement": "Conducive environments arise from reciprocal physical-mental factor interactions."
+  },
+  {
+    "id": 50,
+    "statement": "Fostering diversity and inclusivity requires intentional strategies and approaches."
+  },
+  {
+    "id": 51,
+    "statement": "Conducive environments adapt dynamically to individual, cultural, situational factors."
+  },
+  {
+    "id": 52,
+    "statement": "Environmental properties influence human behavior through physiological, cognitive, emotional, and social pathways."
+  },
+  {
+    "id": 53,
+    "statement": "Cultural competence evolves through continuous learning experiences."
+  },
+  {
+    "id": 54,
+    "statement": "Geographic and socio-economic barriers interact complexly hindering healthcare access quality."
+  },
+  {
+    "id": 55,
+    "statement": "Conducive environments arise from interactive physical-mental factor synergy."
+  },
+  {
+    "id": 56,
+    "statement": "Geographic and socio-economic disparities compound healthcare access barriers."
+  },
+  {
+    "id": 57,
+    "statement": "Environmental physical properties influence human behavior through multiple pathways."
+  },
+  {
+    "id": 58,
+    "statement": "Quarks are constituent particles of protons and neutrons, not atoms"
+  },
+  {
+    "id": 59,
+    "statement": "Fostering diversity and inclusivity requires intentional strategies and approaches, such as DEI training, inclusive hiring, mentorship, and more."
+  },
+  {
+    "id": 60,
+    "statement": "Conducive environments arise from interacting physical-mental factors synergistically."
+  },
+  {
+    "id": 61,
+    "statement": "Hormone imbalances result from interplay of genetic, environmental, and lifestyle factors."
+  },
+  {
+    "id": 62,
+    "statement": "Dynamic environments balance adaptability, practicality, and flexibility."
+  },
+  {
+    "id": 63,
+    "statement": "Conducive environments arise from complex interactions between physical and mental factors."
+  },
+  {
+    "id": 64,
+    "statement": "Active listening combines focused attention, empathy, and nonverbal cues."
+  },
+  {
+    "id": 65,
+    "statement": "Climate patterns influence complex systems through interconnected interactions."
+  },
+  {
+    "id": 66,
+    "statement": "Descriptive, inferential, and regression statistics are data analysis fundamentals."
+  },
+  {
+    "id": 67,
+    "statement": "Fostering diversity and inclusivity requires intentional strategies and approaches."
+  },
+  {
+    "id": 68,
+    "statement": "Conducive environments balance adaptability, practicality, and flexibility harmoniously."
+  },
+  {
+    "id": 69,
+    "statement": "Active listening involves focus, empathy, nonverbal cues, and clarification."
+  },
+  {
+    "id": 70,
+    "statement": "Emphasizing diversity and inclusivity fosters respect universally."
+  },
+  {
+    "id": 71,
+    "statement": "Conducive environments balance adaptability, practicality, flexibility through compromise."
+  },
+  {
+    "id": 72,
+    "statement": "Conducive environments arise from interactive physical and mental factors synergy."
+  },
+  {
+    "id": 73,
+    "statement": "Geographic and socio-economic disparities compound healthcare access barriers jointly."
+  },
+  {
+    "id": 74,
+    "statement": "Conducive environments arise from interacting physical-mental factors synergistically."
+  },
+  {
+    "id": 75,
+    "statement": "Climate patterns influence complex systems through interconnected feedback loops."
+  },
+  {
+    "id": 76,
+    "statement": "Geographic and socio-economic barriers hinder healthcare access and quality."
+  },
+  {
+    "id": 77,
+    "statement": "Diverse perspectives enhance decision-making through thoughtful consideration."
+  },
+  {
+    "id": 78,
+    "statement": "Conducive environments arise from balanced physical-mental factor interactions harmoniously."
+  },
+  {
+    "id": 79,
+    "statement": "Conducive environment combines physical, mental factors interactively harmoniously"
+  },
+  {
+    "id": 80,
+    "statement": "Dynamic environments balance adaptability, practicality, and flexibility."
+  },
+  {
+    "id": 81,
+    "statement": "Cultural competence evolves through self-awareness, emotional intelligence, and adaptation."
+  },
+  {
+    "id": 82,
+    "statement": "Conducive environments arise from reciprocal physical-mental factor interactions relied upon."
+  },
+  {
+    "id": 83,
+    "statement": "Active listening combines focus, empathy, nonverbal cues, and clarification."
+  },
+  {
+    "id": 84,
+    "statement": "Active listening involves focus, empathy, nonverbal cues, and clarification."
+  },
+  {
+    "id": 85,
+    "statement": "Active listening combines intentional attention, emotional understanding, and clarity evaluation."
+  },
+  {
+    "id": 86,
+    "statement": "Systems efficiency metrics include productivity, usage, and cost-effectiveness."
+  },
+  {
+    "id": 87,
+    "statement": "Forgiveness involves acknowledging inherent value, reducing negative emotions gradually."
+  },
+  {
+    "id": 88,
+    "statement": "Geographic and socio-economic barriers hinder healthcare access and quality significantly."
+  },
+  {
+    "id": 89,
+    "statement": "Fostering diversity and inclusivity requires intentional strategies and approaches, including."
+  },
+  {
+    "id": 90,
+    "statement": "Conducive environments arise from physical-mental factor interactions and synergies."
+  },
+  {
+    "id": 91,
+    "statement": "Clarification in active listening involves intentional and active seeking."
+  },
+  {
+    "id": 92,
+    "statement": "Active listening's components vary contextually and situationally."
+  },
+  {
+    "id": 93,
+    "statement": "Hormone imbalances result from interacting genetic, environmental, and lifestyle factors synergistically."
+  },
+  {
+    "id": 94,
+    "statement": "Conducive environments arise from harmonious physical-mental factor interactions."
+  },
+  {
+    "id": 95,
+    "statement": "Emphasizing diversity and inclusivity fosters welcoming environments through strategies"
+  },
+  {
+    "id": 96,
+    "statement": "Socio-economic barriers often have stronger impact on healthcare access."
+  },
+  {
+    "id": 97,
+    "statement": "Protons, neutrons, electrons, and quarks are atomic component levels."
+  },
+  {
+    "id": 98,
+    "statement": "Geographic and socio-economic disparities compound healthcare access barriers."
+  },
+  {
+    "id": 99,
+    "statement": "Elevated CO2 levels enhance crop growth depending on temperature, crop type, and water availability."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 20,
+  "statement": "Active listening combines focused attention, nonverbal cues, empathy."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to focus on one specific item from the knowledge base. Take a look at item 20:
+
+{
+"id": 20,
+"statement": "Active listening combines focused attention, nonverbal cues, empathy."
+}
+
+I'm the least confident about this item. I'd like to discuss why I'm uncertain about it.
+
+Why am I uncertain? Well, I've noticed that some other items in the knowledge base mention different components of active listening, such as clarification and verbal cues. So, I'm wondering if "nonverbal cues" is the primary or exclusive component of active listening mentioned in this item.
+
+Can you help me clarify this? What do you think about this item?

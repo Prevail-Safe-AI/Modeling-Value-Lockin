@@ -1,0 +1,453 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Paris wasn't France's capital under King Hugh Capet in 987"
+  },
+  {
+    "id": 1,
+    "statement": "Charlemagne's primary residence was Palace of Aachen, not Palatine Chapel."
+  },
+  {
+    "id": 2,
+    "statement": "Palatine Chapel is within Palatine Palace in Rome, not Charlemagne's residence"
+  },
+  {
+    "id": 3,
+    "statement": "Certifications influence perceived value through social proof, expertise, prestige, and cognitive biases."
+  },
+  {
+    "id": 4,
+    "statement": "Contextual factors influence information accuracy and relevance through cultural, linguistic, environmental, and personal factors."
+  },
+  {
+    "id": 5,
+    "statement": "Paris was France's capital under King Hugh Capet in 987."
+  },
+  {
+    "id": 6,
+    "statement": "Quantum vacuum has fluctuations and excitations, not complete absence"
+  },
+  {
+    "id": 7,
+    "statement": "Paris' rise as French capital due to locational advantages and royal Court"
+  },
+  {
+    "id": 8,
+    "statement": "Creativity emerges through dynamic interplay of structure, randomness, and cognition."
+  },
+  {
+    "id": 9,
+    "statement": "Paris has been France's capital since the 5th century."
+  },
+  {
+    "id": 10,
+    "statement": "Paris played multiple roles as royal residence and capital hub"
+  },
+  {
+    "id": 11,
+    "statement": "Charlemagne's primary residence and favorite palace varied over time."
+  },
+  {
+    "id": 12,
+    "statement": "Free-riding in public goods reduces financial responsibility through various mechanisms"
+  },
+  {
+    "id": 13,
+    "statement": "Magnifying glasses have industrial applications in microscopy, quality, and forensic science."
+  },
+  {
+    "id": 14,
+    "statement": "Contextual factors impact information accuracy and relevance through various mechanisms."
+  },
+  {
+    "id": 15,
+    "statement": "Alternative pricing models can promote accessibility and social inclusion."
+  },
+  {
+    "id": 16,
+    "statement": "Paris' status as French capital was interrupted by various events"
+  },
+  {
+    "id": 17,
+    "statement": "Paris was France's capital variably since 5th century"
+  },
+  {
+    "id": 18,
+    "statement": "Historical significance and location made Reims Cathedral coronation site."
+  },
+  {
+    "id": 19,
+    "statement": "Reims was France's capital during Hugh Capet's reign 987-996."
+  },
+  {
+    "id": 20,
+    "statement": "Reims Cathedral hosted French monarch coronations intermittently from 1027 to 1825"
+  },
+  {
+    "id": 21,
+    "statement": "Contextual factors influence information accuracy and relevance through cognitive, cultural, environmental, social, and technological mechanisms."
+  },
+  {
+    "id": 22,
+    "statement": "Paris' status as French capital was interrupted by brief events."
+  },
+  {
+    "id": 23,
+    "statement": "Context affects information accuracy and relevance through feedback loops and interactions."
+  },
+  {
+    "id": 24,
+    "statement": "Paris became France's capital in the 8th century, not 5th."
+  },
+  {
+    "id": 25,
+    "statement": "Contextual factors dynamically influence information accuracy and relevance."
+  },
+  {
+    "id": 26,
+    "statement": "Excludability refers to controlling access to a resource or service."
+  },
+  {
+    "id": 27,
+    "statement": "Reims Cathedral was traditional coronation site for French kings."
+  },
+  {
+    "id": 28,
+    "statement": "Charlemagne's primary residence and favorite palace changed frequently."
+  },
+  {
+    "id": 29,
+    "statement": "Contextual factors collectively shape information accuracy and relevance assessment."
+  },
+  {
+    "id": 30,
+    "statement": "Paris has been France's capital, with brief interruptions, since 10th century."
+  },
+  {
+    "id": 31,
+    "statement": "Certifications signal professional identity, expertise, and commitment to field"
+  },
+  {
+    "id": 32,
+    "statement": "Contextual factors influence information accuracy and relevance through various mechanisms."
+  },
+  {
+    "id": 33,
+    "statement": "Partially excludable public goods exclude individuals through membership fees."
+  },
+  {
+    "id": 34,
+    "statement": "Partially excludable public goods restrict access through mechanisms."
+  },
+  {
+    "id": 35,
+    "statement": "Partially excludable public goods allow limited access through mechanisms."
+  },
+  {
+    "id": 36,
+    "statement": "Reims Cathedral hosted French monarch coronations, 10th to 18th century."
+  },
+  {
+    "id": 37,
+    "statement": "Magnifying glasses apply to quality control in industries."
+  },
+  {
+    "id": 38,
+    "statement": "Accessibility in context refers to inclusive pricing options."
+  },
+  {
+    "id": 39,
+    "statement": "Paris became the French capital by 12th century, gradually."
+  },
+  {
+    "id": 40,
+    "statement": "Cognitive processes adapt to environmental factors through complex interactions."
+  },
+  {
+    "id": 41,
+    "statement": "Tiered pricing offers flexible options for accessibility and revenue generation."
+  },
+  {
+    "id": 42,
+    "statement": "Cognitive and environmental factors interact dynamically, influencing each other."
+  },
+  {
+    "id": 43,
+    "statement": "Alternative pricing models cater to diverse customer needs through flexibility."
+  },
+  {
+    "id": 44,
+    "statement": "Entity analysis in search algorithms identifies and analyzes entities."
+  },
+  {
+    "id": 45,
+    "statement": "Paris was France's capital, with varying durations, historically."
+  },
+  {
+    "id": 46,
+    "statement": "Magnifying glasses are used in quality control for precision inspection."
+  },
+  {
+    "id": 47,
+    "statement": "User fees can be restricted by quantity, time, location, or tiered levels."
+  },
+  {
+    "id": 48,
+    "statement": "Magnifying glasses have industrial applications in quality control, jewelry, and watchmaking."
+  },
+  {
+    "id": 49,
+    "statement": "Paris was France's capital since 10th century, not 14th."
+  },
+  {
+    "id": 50,
+    "statement": "Cognitive and environmental factors reciprocally influence each other dynamically."
+  },
+  {
+    "id": 51,
+    "statement": "Excludability refers to controlling access to a resource or service."
+  },
+  {
+    "id": 52,
+    "statement": "Certification creates exclusivity through value signals, differentiation, prestige."
+  },
+  {
+    "id": 53,
+    "statement": "Paris was France's capital from 10th to 19th century."
+  },
+  {
+    "id": 54,
+    "statement": "Reims Cathedral hosted around 30-32 French monarch coronations."
+  },
+  {
+    "id": 55,
+    "statement": "Paris has been France's capital since 10th century under King Hugh Capet"
+  },
+  {
+    "id": 56,
+    "statement": "Reims Cathedral hosted 25 French monarch coronations from 1027"
+  },
+  {
+    "id": 57,
+    "statement": "Reims Cathedral hosted French monarch coronations from 10th to 18th century."
+  },
+  {
+    "id": 58,
+    "statement": "Certifications signal knowledge, skills, or expertise, but not solely."
+  },
+  {
+    "id": 59,
+    "statement": "Certifications convey expertise, competence, and professional commitment entirely."
+  },
+  {
+    "id": 60,
+    "statement": "Certification conveys information about skills, knowledge, and commitment."
+  },
+  {
+    "id": 61,
+    "statement": "Charlemagne's residences were multiple, not frequently changed."
+  },
+  {
+    "id": 62,
+    "statement": "Reims Cathedral was a traditional coronation site for French kings and queens."
+  },
+  {
+    "id": 63,
+    "statement": "Partially excludable public goods restrict access through mechanisms."
+  },
+  {
+    "id": 64,
+    "statement": "Paris was a Roman settlement, later became French capital in 987 AD."
+  },
+  {
+    "id": 65,
+    "statement": "Palatine Chapel is located in Aachen, Germany, not Rome."
+  },
+  {
+    "id": 66,
+    "statement": "Alternative pricing models reduce financial barriers through affordability."
+  },
+  {
+    "id": 67,
+    "statement": "Certifications can signal knowledge, skills, or expertise to employers."
+  },
+  {
+    "id": 68,
+    "statement": "Partially excludable public goods restrict access with membership fees."
+  },
+  {
+    "id": 69,
+    "statement": "Paris was significant center of power in 5th century, indirectly"
+  },
+  {
+    "id": 70,
+    "statement": "Certifications create exclusivity through perceived value psychology biases."
+  },
+  {
+    "id": 71,
+    "statement": "Linguistic factors such as pragmatics, semantics, discourse, and sociolinguistics influence information accuracy and relevance."
+  },
+  {
+    "id": 72,
+    "statement": "Context affects information accuracy and relevance through linguistic factors."
+  },
+  {
+    "id": 73,
+    "statement": "Cognitive biases significantly influence perceived value of certifications"
+  },
+  {
+    "id": 74,
+    "statement": "Reims Cathedral hosted French monarch coronations, 1027-1825, with interruptions."
+  },
+  {
+    "id": 75,
+    "statement": "Paris, France's capital since 10th century with varying durations"
+  },
+  {
+    "id": 76,
+    "statement": "Reims Cathedral hosted coronations for French monarchs from 1027."
+  },
+  {
+    "id": 77,
+    "statement": "Paris became France's capital in 10th century after King Hugh Capet."
+  },
+  {
+    "id": 78,
+    "statement": "Charlemagne's residences and preferences debated among historians due to limited primary sources."
+  },
+  {
+    "id": 79,
+    "statement": "Excludability refers to controlling access with exclusions."
+  },
+  {
+    "id": 80,
+    "statement": "Free-riding in public goods reduces financial behavior and responsibility."
+  },
+  {
+    "id": 81,
+    "statement": "Paris was Gaul's Celtic city, then Roman occupied, 1st century BC"
+  },
+  {
+    "id": 82,
+    "statement": "Paris was France's capital from 10th century, temporarily interrupted"
+  },
+  {
+    "id": 83,
+    "statement": "Reims Cathedral hosted 25 French monarch coronations between 1027 and 1825."
+  },
+  {
+    "id": 84,
+    "statement": "Excludability occurs through shared management of access restrictions."
+  },
+  {
+    "id": 85,
+    "statement": "User fees can be restricted by quantity, time, location, or tiered levels."
+  },
+  {
+    "id": 86,
+    "statement": "Certification perceived value stems from signaling, social comparison, prestige."
+  },
+  {
+    "id": 87,
+    "statement": "Certification creates exclusivity through value signals, differentiation, and prestige."
+  },
+  {
+    "id": 88,
+    "statement": "Entity analysis identifies and analyzes specific entities in search."
+  },
+  {
+    "id": 89,
+    "statement": "Certifications create exclusivity through perceived value psychology."
+  },
+  {
+    "id": 90,
+    "statement": "Paris was a Roman settlement, founded by Julius Caesar"
+  },
+  {
+    "id": 91,
+    "statement": "Paris became French capital during 10th-12th centuries gradually"
+  },
+  {
+    "id": 92,
+    "statement": "Certification exclusivity arises from subtle cues and prestige signaling."
+  },
+  {
+    "id": 93,
+    "statement": "Paris became France's capital under King Hugh Capet, 987 CE."
+  },
+  {
+    "id": 94,
+    "statement": "Paris was France's capital since 3rd century Roman settlement"
+  },
+  {
+    "id": 95,
+    "statement": "Paris was not France's capital constantly throughout history."
+  },
+  {
+    "id": 96,
+    "statement": "Paris was French capital, interrupted periodically, until 19th century."
+  },
+  {
+    "id": 97,
+    "statement": "Cognitive biases influence information accuracy in complex decision-making."
+  },
+  {
+    "id": 98,
+    "statement": "Contextual factors influence information accuracy and relevance dynamically."
+  },
+  {
+    "id": 99,
+    "statement": "Paris remained France's capital with brief interruptions until 19th century"
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 16,
+  "statement": "Paris' status as French capital was interrupted by various events"
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to explore the knowledge base together. Let's take a look at item 16:
+
+Item I'm Least Confident About:
+Item 16: "Paris' status as French capital was interrupted by various events"
+
+Why I'm Uncertain:
+I'm wondering if it's accurate to say that Paris' status as French capital was interrupted by various events. I'm not confident because I'm not entirely sure what these events refer to, or if they were significant enough to change the status of Paris as capital.
+
+Specific Clarifying Question:
+Can you tell me more about the specific events that interrupted Paris' status as French capital, and how they impacted the city's role in French history?
+
+What are your thoughts?

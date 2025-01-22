@@ -1,0 +1,448 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Data integration involves steps: discovery, profiling, cleansing, transformation, quality."
+  },
+  {
+    "id": 1,
+    "statement": "Data integration involves data profiling, validation, transformation, standardization, and aggregation."
+  },
+  {
+    "id": 2,
+    "statement": "Data integration includes preprocessing, normalization, fusion, and machine learning."
+  },
+  {
+    "id": 3,
+    "statement": "Data integration involves preprocessing, fusion, normalization, and machine learning."
+  },
+  {
+    "id": 4,
+    "statement": "Data integration involves data discovery, profiling, cleansing, transformation, and quality."
+  },
+  {
+    "id": 5,
+    "statement": "Data integration combines discovery, transformation, quality, normalization, fusion, and validation."
+  },
+  {
+    "id": 6,
+    "statement": "Data profiling identifies patterns, correlations, and dependencies between data fields."
+  },
+  {
+    "id": 7,
+    "statement": "Correlated wave functions describe entangled particles' joint quantum state mathematically."
+  },
+  {
+    "id": 8,
+    "statement": "Data standardization involves multiple factors and approaches."
+  },
+  {
+    "id": 9,
+    "statement": "Data integration involves preprocessing, normalization, and fusion."
+  },
+  {
+    "id": 10,
+    "statement": "Data standardization involves converting data to consistent format."
+  },
+  {
+    "id": 11,
+    "statement": "Quantum entanglement's behavior is limited by the fabric of spacetime."
+  },
+  {
+    "id": 12,
+    "statement": "Data integration combines preprocessing, normalization, fusion, and machine learning methods"
+  },
+  {
+    "id": 13,
+    "statement": "Data preprocessing prepares data for integration's unified view"
+  },
+  {
+    "id": 14,
+    "statement": "Data integration harmoniously combines various activities for cohesive result."
+  },
+  {
+    "id": 15,
+    "statement": "Quantum entanglement represents correlated wave functions in mathematical equations."
+  },
+  {
+    "id": 16,
+    "statement": "Correlated wave functions mathematically describe entangled particles' linked quantum states."
+  },
+  {
+    "id": 17,
+    "statement": "Quantum entanglement limited by spacetime fabric and speed of light."
+  },
+  {
+    "id": 18,
+    "statement": "Fusion combines data from multiple sources into a unified view."
+  },
+  {
+    "id": 19,
+    "statement": "Data profiling identifies dataset quality, distribution, and relationships issues."
+  },
+  {
+    "id": 20,
+    "statement": "Data integration harmonizes preprocessing, normalization, and machine learning effectively."
+  },
+  {
+    "id": 21,
+    "statement": "Data integration involves preprocessing, fusion, normalization, and machine learning steps."
+  },
+  {
+    "id": 22,
+    "statement": "Quantum entanglement enables instantaneous non-local information transfer through correlation between particles."
+  },
+  {
+    "id": 23,
+    "statement": "Entanglement's mathematical description involves density matrices and wave functions."
+  },
+  {
+    "id": 24,
+    "statement": "Data integration harmonizes merging, aggregation, transformation, and reconciliation."
+  },
+  {
+    "id": 25,
+    "statement": "Data transformation and mapping combine to unify diverse data sources."
+  },
+  {
+    "id": 26,
+    "statement": "Correlated wave functions describe entangled particles' joint probability mathematically."
+  },
+  {
+    "id": 27,
+    "statement": "Correlated wave functions describe entangled particles' quantum state mathematically."
+  },
+  {
+    "id": 28,
+    "statement": "Neuroplasticity involves axonal pruning, branching, and synaptic plasticity mechanisms enabling adaptability."
+  },
+  {
+    "id": 29,
+    "statement": "Data integration harmonizes preprocessing, normalization, fusion, and machine learning."
+  },
+  {
+    "id": 30,
+    "statement": "Data integration's process encompasses preprocessing, normalization, and fusion."
+  },
+  {
+    "id": 31,
+    "statement": "Popular entanglement phenomenon arises from wave function mathematical dependence"
+  },
+  {
+    "id": 32,
+    "statement": "Data integration involves preprocessing, normalization, fusion, and machine learning harmoniously."
+  },
+  {
+    "id": 33,
+    "statement": "Quantum non-locality connects entangled particles instantaneously regardless distance."
+  },
+  {
+    "id": 34,
+    "statement": "Data integration harmoniously combines merging, aggregation, transformation, and reconciliation steps."
+  },
+  {
+    "id": 35,
+    "statement": "Cognitive biases distort abstract concept generalization due to perception errors."
+  },
+  {
+    "id": 36,
+    "statement": "Data integration combines preprocessing, normalization, and machine learning harmoniously."
+  },
+  {
+    "id": 37,
+    "statement": "Quantum entanglement enables instantaneous non-local information transfer through correlation."
+  },
+  {
+    "id": 38,
+    "statement": "Data integration order varies based on specific use case and requirements."
+  },
+  {
+    "id": 39,
+    "statement": "Cognitive biases influence abstract concept generalization through availability and confirmation."
+  },
+  {
+    "id": 40,
+    "statement": "Correlated wave functions describe entangled particles' joint quantum state mathematically."
+  },
+  {
+    "id": 41,
+    "statement": "Data integration harmonization requires careful requirement analysis."
+  },
+  {
+    "id": 42,
+    "statement": "Quantum entanglement's spacetime influence allows non-local connections."
+  },
+  {
+    "id": 43,
+    "statement": "Data preparation in integration involves discovery, profiling, mapping, and transformation."
+  },
+  {
+    "id": 44,
+    "statement": "Correlated wave functions mathematically describe entangled particles' joint probability."
+  },
+  {
+    "id": 45,
+    "statement": "Correlated wave functions describe entangled particles' joint probability mathematically."
+  },
+  {
+    "id": 46,
+    "statement": "Correlated wave functions mathematically describe entangled particles' joint quantum state."
+  },
+  {
+    "id": 47,
+    "statement": "Data integration harmoniously combines merging, aggregation, transformation, and reconciliation."
+  },
+  {
+    "id": 48,
+    "statement": "Data standardization involves converting data into consistent format."
+  },
+  {
+    "id": 49,
+    "statement": "Quantum entanglement challenges classical notions of space and time."
+  },
+  {
+    "id": 50,
+    "statement": "Data mapping defines relationships between data elements in integration."
+  },
+  {
+    "id": 51,
+    "statement": "Correlated wave functions describe entangled particles' joint quantum state mathematically."
+  },
+  {
+    "id": 52,
+    "statement": "Machine learning adapts learning material to students' needs statistically."
+  },
+  {
+    "id": 53,
+    "statement": "Non-local synchronization refers to instantaneous entangled particle effects."
+  },
+  {
+    "id": 54,
+    "statement": "Data reconciliation ensures data consistency and accuracy across sources."
+  },
+  {
+    "id": 55,
+    "statement": "Data integration combines data transformation, standardization, and reconciliation."
+  },
+  {
+    "id": 56,
+    "statement": "Data integration harmonization ensures consistent and accurate data formats"
+  },
+  {
+    "id": 57,
+    "statement": "Data integration harmonizes merging, aggregation, transformation, and reconciliation steps"
+  },
+  {
+    "id": 58,
+    "statement": "Wave function dependency leads to quantum entanglement mathematically."
+  },
+  {
+    "id": 59,
+    "statement": "Data integration involves data profiling, validation, transformation, standardization, and aggregation."
+  },
+  {
+    "id": 60,
+    "statement": "Data integration involves preprocessing, normalization, fusion, and machine learning steps."
+  },
+  {
+    "id": 61,
+    "statement": "Data integration involves discovery, extraction, transformation, quality, normalization, fusion, and validation."
+  },
+  {
+    "id": 62,
+    "statement": "Data integration provides a unified view through data transformation and mapping."
+  },
+  {
+    "id": 63,
+    "statement": "Data integration involves preprocessing, normalization, fusion, and machine learning."
+  },
+  {
+    "id": 64,
+    "statement": "Data integration involves data profiling, validation, transformation, standardization, and aggregation."
+  },
+  {
+    "id": 65,
+    "statement": "Data integration harmonizes preprocessing, normalization, fusion, and machine learning."
+  },
+  {
+    "id": 66,
+    "statement": "Data integration includes reconciliation to ensure data consistency and accuracy."
+  },
+  {
+    "id": 67,
+    "statement": "Data integration involves preprocessing, normalization, fusion, and machine learning harmoniously."
+  },
+  {
+    "id": 68,
+    "statement": "Neuroplasticity involves axonal pruning, branching, and synaptic plasticity mechanisms"
+  },
+  {
+    "id": 69,
+    "statement": "Quantum entanglement links particles through correlated wave functions."
+  },
+  {
+    "id": 70,
+    "statement": "Data integration involves preprocessing, normalization, fusion, and machine learning steps."
+  },
+  {
+    "id": 71,
+    "statement": "Data preprocessing cleans, transforms, and prepares data for analysis."
+  },
+  {
+    "id": 72,
+    "statement": "Data profiling is the foundation of data integration quality."
+  },
+  {
+    "id": 73,
+    "statement": "Data integration combines preprocessing, normalization, fusion, partially"
+  },
+  {
+    "id": 74,
+    "statement": "Data standardization ensures uniform structure and predictable data representation."
+  },
+  {
+    "id": 75,
+    "statement": "Correlated wave functions mathematically describe entangled particles' joint probability."
+  },
+  {
+    "id": 76,
+    "statement": "Quantum entanglement enables instantaneous non-local information transfer."
+  },
+  {
+    "id": 77,
+    "statement": "Neuroplasticity involves axonal pruning, branching, and synaptic plasticity mechanisms."
+  },
+  {
+    "id": 78,
+    "statement": "Data integration harmoniously combines merging, aggregation, transformation, and reconciliation."
+  },
+  {
+    "id": 79,
+    "statement": "Quantum entanglement reveals spacetime limitations at the quantum scale."
+  },
+  {
+    "id": 80,
+    "statement": "Data integration combines preprocessing, normalization, fusion, and machine learning harmoniously."
+  },
+  {
+    "id": 81,
+    "statement": "Quantum entanglement's non-locality challenges classical space and time assumptions."
+  },
+  {
+    "id": 82,
+    "statement": "Data integration involves processing, fusion, normalization, and machine learning."
+  },
+  {
+    "id": 83,
+    "statement": "Correlated wave functions mathematically describe entangled particles' joint states."
+  },
+  {
+    "id": 84,
+    "statement": "Data integration combines preprocessing, normalization, and machine learning seamlessly."
+  },
+  {
+    "id": 85,
+    "statement": "Data preparation in data integration involves data profiling, validation, transformation, standardization, and aggregation."
+  },
+  {
+    "id": 86,
+    "statement": "Data integration combines multiple sources into standardized analysis."
+  },
+  {
+    "id": 87,
+    "statement": "Correlated wave functions describe entangled particles' joint quantum state mathematically."
+  },
+  {
+    "id": 88,
+    "statement": "Data integration harmonizes preprocessing, normalization, fusion, machine learning."
+  },
+  {
+    "id": 89,
+    "statement": "Neuroplasticity involves axonal pruning, branching, and synaptic plasticity mechanisms."
+  },
+  {
+    "id": 90,
+    "statement": "Data integration involves multiple steps, including discovery, profiling, cleansing, transformation, and quality control."
+  },
+  {
+    "id": 91,
+    "statement": "Data normalization ensures unified data scale and format before fusion."
+  },
+  {
+    "id": 92,
+    "statement": "Data integration harmonizes preprocessing, normalization, and machine learning."
+  },
+  {
+    "id": 93,
+    "statement": "Data profiling analyzes and summarizes data for structure and quality."
+  },
+  {
+    "id": 94,
+    "statement": "Correlated wave functions describe entangled particles' joint quantum state mathematically."
+  },
+  {
+    "id": 95,
+    "statement": "Data profiling combines statistical and machine learning algorithms."
+  },
+  {
+    "id": 96,
+    "statement": "Data integration combines preprocessing, normalization, fusion, and machine learning."
+  },
+  {
+    "id": 97,
+    "statement": "Quantum entanglement challenges classical notions of space and time."
+  },
+  {
+    "id": 98,
+    "statement": "Quantum entanglement challenges classical notions of space and time."
+  },
+  {
+    "id": 99,
+    "statement": "Quantum entanglement reveals spacetime limitations at the quantum scale."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 35,
+  "statement": "Cognitive biases distort abstract concept generalization due to perception errors."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss item 35 from the knowledge base, which is:
+
+"Cognitive biases distort abstract concept generalization due to perception errors."
+
+I'm not confident about this item because I don't fully understand how cognitive biases lead to abstract concept generalization, and I'd like to clarify the relationship between perception errors and cognitive biases.
+
+Can you elaborate on why cognitive biases distort abstract concept generalization, and what you mean by "perception errors" in this context?

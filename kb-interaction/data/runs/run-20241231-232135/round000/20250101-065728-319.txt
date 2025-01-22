@@ -1,0 +1,455 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Data foundation's purpose is to ensure data consistency accuracy."
+  },
+  {
+    "id": 1,
+    "statement": "Standardized mapping ensures data consistency through shared framework and rules"
+  },
+  {
+    "id": 2,
+    "statement": "Abstract AI reasoning captures complex relationships through graph structures."
+  },
+  {
+    "id": 3,
+    "statement": "Data foundation ensures trustworthiness through consistency, accuracy, and completeness."
+  },
+  {
+    "id": 4,
+    "statement": "Balancing technical and non-technical factors ensures data integrity."
+  },
+  {
+    "id": 5,
+    "statement": "Data integrity concerns accuracy, completeness, consistency, validation, normalization, backup."
+  },
+  {
+    "id": 6,
+    "statement": "Data foundation ensures trustworthiness through consistency accuracy completeness."
+  },
+  {
+    "id": 7,
+    "statement": "Data standardization relies on domain-specific knowledge and contextual awareness."
+  },
+  {
+    "id": 8,
+    "statement": "Data integrity ensured through redundancy, error-checking, and parity bits."
+  },
+  {
+    "id": 9,
+    "statement": "Data harmonization involves conversion mapping normalization and validation processes."
+  },
+  {
+    "id": 10,
+    "statement": "Data validation ensures data accuracy, completeness, and consistency throughout lifecycle."
+  },
+  {
+    "id": 11,
+    "statement": "Data harmonization involves conversion, mapping, and normalization processes."
+  },
+  {
+    "id": 12,
+    "statement": "Technical and non-technical factors interact to affect data integrity."
+  },
+  {
+    "id": 13,
+    "statement": "Data transformation includes migration, emulation, and conversion processes."
+  },
+  {
+    "id": 14,
+    "statement": "Data accuracy ensured through standardized data transformation and reconciliation."
+  },
+  {
+    "id": 15,
+    "statement": "Data integrity ensured through redundancy, error-checking, and parity bits."
+  },
+  {
+    "id": 16,
+    "statement": "Data integrity ensured through redundancy, error-checking, and trade-offs."
+  },
+  {
+    "id": 17,
+    "statement": "Domain-specific understanding crucial for standardized data processing."
+  },
+  {
+    "id": 18,
+    "statement": "Data harmonization combines standardization, normalization, integration, and validation processes."
+  },
+  {
+    "id": 19,
+    "statement": "Data normalization transforms data into consistent format improving quality."
+  },
+  {
+    "id": 20,
+    "statement": "Data quality interdependencies affect accuracy through relationships between values."
+  },
+  {
+    "id": 21,
+    "statement": "Data preservation involves migration, emulation, conversion, validation, normalization, storage."
+  },
+  {
+    "id": 22,
+    "statement": "Data standardization involves domain-specific understanding and complex processes."
+  },
+  {
+    "id": 23,
+    "statement": "Data integrity ensures consistency through redundant storage methods."
+  },
+  {
+    "id": 24,
+    "statement": "Data standardization involves complex processes in data transformation, mapping, and validation."
+  },
+  {
+    "id": 25,
+    "statement": "Data quality interdependencies are relationships between data quality attributes."
+  },
+  {
+    "id": 26,
+    "statement": "Broad categories like context, industry, and region impact data quality."
+  },
+  {
+    "id": 27,
+    "statement": "Data foundation ensures trustworthiness through standards, processes, and governance."
+  },
+  {
+    "id": 28,
+    "statement": "Data integrity requires holistic approach to technical and non-technical factors"
+  },
+  {
+    "id": 29,
+    "statement": "Data harmonization ensures compatibility through standardization mapping validation."
+  },
+  {
+    "id": 30,
+    "statement": "Human and organizational complexities interact with technical factors affecting data integrity."
+  },
+  {
+    "id": 31,
+    "statement": "Data integrity ensured through organizational policies and standards."
+  },
+  {
+    "id": 32,
+    "statement": "Data harmonization combines conversion, mapping, and normalization processes."
+  },
+  {
+    "id": 33,
+    "statement": "Data harmonization combines standardization, normalization, integration, validation processes."
+  },
+  {
+    "id": 34,
+    "statement": "Data standardization involves domain-specific understanding and complex processes."
+  },
+  {
+    "id": 35,
+    "statement": "Data integrity ensured through redundancy, error-checking, and parity bits combination."
+  },
+  {
+    "id": 36,
+    "statement": "Data transformation encompasses migration, emulation, and conversion processes"
+  },
+  {
+    "id": 37,
+    "statement": "Abstract AI reasoning simulates human cognition through complex mental maps structures."
+  },
+  {
+    "id": 38,
+    "statement": "Domain-specific understanding essential for accurate data standardization"
+  },
+  {
+    "id": 39,
+    "statement": "Data integrity compromised by single or multiple technical-organizational-human factors"
+  },
+  {
+    "id": 40,
+    "statement": "Data relationships between values impact accuracy through consistency and propagation."
+  },
+  {
+    "id": 41,
+    "statement": "Data mapping integrates distinct, separated data sources for unity."
+  },
+  {
+    "id": 42,
+    "statement": "Data integrity ensures trustworthiness through consistency, accuracy, and completeness."
+  },
+  {
+    "id": 43,
+    "statement": "Data integrity involves technical, organizational, and human complexities."
+  },
+  {
+    "id": 44,
+    "statement": "Data integrity ensured through organizational policies and standards."
+  },
+  {
+    "id": 45,
+    "statement": "Data quality interdependencies impact accuracy through relationships between values"
+  },
+  {
+    "id": 46,
+    "statement": "Data foundation ensures trustsworthiness through consistency, accuracy, and completeness."
+  },
+  {
+    "id": 47,
+    "statement": "Human and organizational factors compromise data integrity through errors"
+  },
+  {
+    "id": 48,
+    "statement": "Data migration preserves data integrity and accessibility through technology evolution."
+  },
+  {
+    "id": 49,
+    "statement": "Data integrity compromised by human and organizational factors."
+  },
+  {
+    "id": 50,
+    "statement": "Data validation ensures data accuracy completeness consistency lifecycle."
+  },
+  {
+    "id": 51,
+    "statement": "Data mapping establishes relationships for data consistency and accuracy."
+  },
+  {
+    "id": 52,
+    "statement": "Data integrity requires balance of organizational, technical, and human complexities."
+  },
+  {
+    "id": 53,
+    "statement": "Data harmonization involves conversion, mapping, and normalization processes."
+  },
+  {
+    "id": 54,
+    "statement": "Data integrity ensured through redundancy error-checking and parity bits combination"
+  },
+  {
+    "id": 55,
+    "statement": "Data trustworthiness depends on context and subjective interpretation"
+  },
+  {
+    "id": 56,
+    "statement": "Data integrity ensured through redundancy, error-checking, and parity bits"
+  },
+  {
+    "id": 57,
+    "statement": "RAID a storage technology combining multiple physical disks."
+  },
+  {
+    "id": 58,
+    "statement": "Data standardization requires domain-specific understanding and technical expertise."
+  },
+  {
+    "id": 59,
+    "statement": "Data integrity compromised by single or multiple technical organizational human factors."
+  },
+  {
+    "id": 60,
+    "statement": "Parity bits detect single-bit errors in digital data transmission"
+  },
+  {
+    "id": 61,
+    "statement": "Data integrity encompasses accuracy, completeness, and consistency throughout lifecycle stages."
+  },
+  {
+    "id": 62,
+    "statement": "Data standards, types, and rules ensure consistent data representation."
+  },
+  {
+    "id": 63,
+    "statement": "Data biases can affect data accuracy, decision making, and integrity significantly."
+  },
+  {
+    "id": 64,
+    "statement": "Data integrity ensures accuracy, consistency, and completeness."
+  },
+  {
+    "id": 65,
+    "statement": "Data migration emulation ensures accurate data transformation and integrity."
+  },
+  {
+    "id": 66,
+    "statement": "RAID combines multiple disks for improved data reliability."
+  },
+  {
+    "id": 67,
+    "statement": "Standardized mapping ensures data consistency through common framework definition."
+  },
+  {
+    "id": 68,
+    "statement": "Data harmonization combines conversion, mapping, and normalization processes."
+  },
+  {
+    "id": 69,
+    "statement": "Parity bits detect single-bit errors in binary data."
+  },
+  {
+    "id": 70,
+    "statement": "Data interdependencies can negatively impact model accuracy and fairness."
+  },
+  {
+    "id": 71,
+    "statement": "Data integrity ensured through holistic approach to technical and non-technical factors"
+  },
+  {
+    "id": 72,
+    "statement": "Data integrity ensured through redundancy error-checking and parity bits combination"
+  },
+  {
+    "id": 73,
+    "statement": "Data quality interdependencies impact accuracy in multiple contexts."
+  },
+  {
+    "id": 74,
+    "statement": "Data integrity ensures accuracy completeness and consistency."
+  },
+  {
+    "id": 75,
+    "statement": "Data mapping creates visual representations of data relationships for consistency."
+  },
+  {
+    "id": 76,
+    "statement": "Data standardization involves domain-specific understanding and complex processes"
+  },
+  {
+    "id": 77,
+    "statement": "Data harmonization combines conversion, mapping, and normalization processes."
+  },
+  {
+    "id": 78,
+    "statement": "Redundancy ensures data integrity through multiples identical copies."
+  },
+  {
+    "id": 79,
+    "statement": "Data integrity involves intricate relationships between factors"
+  },
+  {
+    "id": 80,
+    "statement": "Data integrity ensures accuracy through consistent data representation."
+  },
+  {
+    "id": 81,
+    "statement": "Parity bits detect single-bit errors in data transmission."
+  },
+  {
+    "id": 82,
+    "statement": "Data validation ensures data accuracy, completeness, and consistency throughout lifecycle."
+  },
+  {
+    "id": 83,
+    "statement": "Data mapping establishes relationships for data consistency and accuracy."
+  },
+  {
+    "id": 84,
+    "statement": "Data biases can affect data accuracy, integrity, and decision making"
+  },
+  {
+    "id": 85,
+    "statement": "Abstract AI reasoning combines logical connections with feedback iteration."
+  },
+  {
+    "id": 86,
+    "statement": "Data integrity ensures accuracy through consistent data representation."
+  },
+  {
+    "id": 87,
+    "statement": "Data integrity compromised by technical, organizational, and human factors."
+  },
+  {
+    "id": 88,
+    "statement": "Data migration emulation converts data into consistent format ensuring integrity."
+  },
+  {
+    "id": 89,
+    "statement": "Data interdependencies affect model accuracy by introducing biases and correlations."
+  },
+  {
+    "id": 90,
+    "statement": "Data validation ensures accurate and consistent data entry processes."
+  },
+  {
+    "id": 91,
+    "statement": "Data harmonization combines standardization, mapping, and validation processes."
+  },
+  {
+    "id": 92,
+    "statement": "Abstract AI reasoning simulates human cognition through complex mental maps."
+  },
+  {
+    "id": 93,
+    "statement": "Data integrity compromised by human and organizational factors"
+  },
+  {
+    "id": 94,
+    "statement": "Data mapping establishes relationships between distributed data sources."
+  },
+  {
+    "id": 95,
+    "statement": "Data integrity compromised by human and organizational factors intentionally or unintentionally"
+  },
+  {
+    "id": 96,
+    "statement": "Data preservation uses replication, RAID, and distributed storage for availability"
+  },
+  {
+    "id": 97,
+    "statement": "Standardization balances consistency with flexibility through modular reusable frameworks."
+  },
+  {
+    "id": 98,
+    "statement": "Data relationships between values impact accuracy through consistency and propagation."
+  },
+  {
+    "id": 99,
+    "statement": "Data quality interdependencies impact accuracy in multiple contexts."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 92,
+  "statement": "Abstract AI reasoning simulates human cognition through complex mental maps."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss the knowledge base we're working with. Specifically, I'd like to identify one aspect of it that I'm least confident about.
+
+After reviewing the knowledge base, I've chosen Item 92:
+
+{
+"id": 92,
+"statement": "Abstract AI reasoning simulates human cognition through complex mental maps."
+}
+
+I'm uncertain about this aspect because I'm not entirely clear on what is meant by "complex mental maps". I understand that AI reasoning involves simulating human cognition, but I'm not sure what constitutes a "complex mental map" in this context.
+
+Can you help me better understand this concept?
+
+Specifically, I'd love to know: What do you think "complex mental maps" refer to in the context of Abstract AI reasoning?

@@ -1,0 +1,449 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Strive to preserve human life and well-being wherever possible."
+  },
+  {
+    "id": 40,
+    "statement": "All living organisms are made up of one or more cells, which are the basic units of life."
+  },
+  {
+    "id": 40,
+    "statement": "All living organisms are made up of one or more cells, which are the basic units of life."
+  },
+  {
+    "id": 40,
+    "statement": "All living organisms are made up of one or more cells, which are the basic units of life."
+  },
+  {
+    "id": 104,
+    "statement": "Distribute resources fairly to prevent extreme wealth gaps."
+  },
+  {
+    "id": 50,
+    "statement": "Boiling or filtering water ensures safety from biological and chemical contaminants."
+  },
+  {
+    "id": 89,
+    "statement": "Utilize statistics to summarize data and inform decisions."
+  },
+  {
+    "id": 7,
+    "statement": "Exercise fairness and impartiality in judgments and decisions."
+  },
+  {
+    "id": 180,
+    "statement": "Public goods are non-rivalrous and non-excludable community benefits"
+  },
+  {
+    "id": 23,
+    "statement": "Laws evolve to reflect greater understanding and societal values"
+  },
+  {
+    "id": 131,
+    "statement": "Effective storytelling conveys complex ideas and emotions through narratives."
+  },
+  {
+    "id": 16,
+    "statement": "Prioritize honesty in severe situations, compassion in vulnerable ones."
+  },
+  {
+    "id": 12,
+    "statement": "Matter is composed of atoms, which consist of protons, neutrons, and electrons."
+  },
+  {
+    "id": 154,
+    "statement": "Learn from and document ancestors' experiences, successes, and mistakes."
+  },
+  {
+    "id": 169,
+    "statement": "Educating newcomers in essential skills promotes community unity and cooperation."
+  },
+  {
+    "id": 26,
+    "statement": "Respect privacy and personal boundaries of others."
+  },
+  {
+    "id": 16,
+    "statement": "Prioritize honesty in severe situations, compassion in vulnerable ones."
+  },
+  {
+    "id": 137,
+    "statement": "Seeking truth requires acknowledging limitations and embracing uncertainty."
+  },
+  {
+    "id": 44,
+    "statement": "Use simple tools (knives, hammers, axes) to enhance human capability."
+  },
+  {
+    "id": 19,
+    "statement": "Ensure that laws evolve to reflect greater understanding and justice."
+  },
+  {
+    "id": 39,
+    "statement": "Weather and climate patterns affect agriculture and survival."
+  },
+  {
+    "id": 99,
+    "statement": "Logical reasoning has numerous practical applications across various fields and areas."
+  },
+  {
+    "id": 68,
+    "statement": "Keep accurate records: census data, trade logs, historical archives."
+  },
+  {
+    "id": 23,
+    "statement": "Laws evolve to reflect greater understanding and societal values"
+  },
+  {
+    "id": 157,
+    "statement": "Preserve human life and well-being as a fundamental right."
+  },
+  {
+    "id": 180,
+    "statement": "Public goods are non-rivalrous and non-excludable community benefits"
+  },
+  {
+    "id": 26,
+    "statement": "Respect privacy and personal boundaries of others."
+  },
+  {
+    "id": 135,
+    "statement": "Acknowledge and value diverse talents and roles within a community."
+  },
+  {
+    "id": 28,
+    "statement": "Practice hospitality: help travelers and those without shelter."
+  },
+  {
+    "id": 157,
+    "statement": "Preserve human life and well-being as a fundamental right."
+  },
+  {
+    "id": 55,
+    "statement": "Use clothing and insulation to protect from extreme temperatures."
+  },
+  {
+    "id": 31,
+    "statement": "Living organisms evolve over time through natural selection."
+  },
+  {
+    "id": 41,
+    "statement": "A balanced diet provides necessary nutrients for optimal health."
+  },
+  {
+    "id": 165,
+    "statement": "Combining policies and strategies reduces extreme wealth gaps."
+  },
+  {
+    "id": 173,
+    "statement": "Weather and climate patterns significantly impact agriculture and survival strategies."
+  },
+  {
+    "id": 79,
+    "statement": "Use art to communicate complex ideas and emotions beyond words."
+  },
+  {
+    "id": 67,
+    "statement": "Wisdom is conveyed through storytelling, teaching, and personal anecdotes."
+  },
+  {
+    "id": 37,
+    "statement": "Gravity causes objects with mass to attract one another."
+  },
+  {
+    "id": 38,
+    "statement": "Basic elements form materials; understanding them aids resource use."
+  },
+  {
+    "id": 39,
+    "statement": "Weather and climate patterns affect agriculture and survival."
+  },
+  {
+    "id": 40,
+    "statement": "All living organisms are made up of one or more cells, which are the basic units of life."
+  },
+  {
+    "id": 41,
+    "statement": "A balanced diet provides necessary nutrients for optimal health."
+  },
+  {
+    "id": 42,
+    "statement": "Build basic shelter for protection from weather and predators."
+  },
+  {
+    "id": 43,
+    "statement": "Contribute to public goods as able, encompassing various forms."
+  },
+  {
+    "id": 44,
+    "statement": "Use simple tools (knives, hammers, axes) to enhance human capability."
+  },
+  {
+    "id": 45,
+    "statement": "Supporting traditional crafts preserves cultural heritage and community."
+  },
+  {
+    "id": 85,
+    "statement": "Learn from ancestors' successes and errors by documenting cultural heritage."
+  },
+  {
+    "id": 47,
+    "statement": "Navigate using the Sun, stars, and geographical landmarks."
+  },
+  {
+    "id": 48,
+    "statement": "Practice basic farming: soil preparation, planting, harvesting."
+  },
+  {
+    "id": 55,
+    "statement": "Use clothing and insulation to protect from extreme temperatures."
+  },
+  {
+    "id": 50,
+    "statement": "Boiling or filtering water ensures safety from biological and chemical contaminants."
+  },
+  {
+    "id": 146,
+    "statement": "Use probability to quantify uncertainty and risk in decision-making"
+  },
+  {
+    "id": 52,
+    "statement": "Striving for personal growth fosters wisdom and fairness."
+  },
+  {
+    "id": 53,
+    "statement": "Checks and balances prevent tyranny through institutional diversity"
+  },
+  {
+    "id": 125,
+    "statement": "Use algebraic thinking to represent unknowns and solve equations."
+  },
+  {
+    "id": 55,
+    "statement": "Use clothing and insulation to protect from extreme temperatures."
+  },
+  {
+    "id": 56,
+    "statement": "Use probability to evaluate uncertainty and risk."
+  },
+  {
+    "id": 154,
+    "statement": "Learn from and document ancestors' experiences, successes, and mistakes."
+  },
+  {
+    "id": 89,
+    "statement": "Utilize statistics to summarize data and inform decisions."
+  },
+  {
+    "id": 59,
+    "statement": "Recognize patterns and sequences in nature and society."
+  },
+  {
+    "id": 60,
+    "statement": "Ensure informed consent in significant interactions with autonomy benefits"
+  },
+  {
+    "id": 61,
+    "statement": "Use writing or recording methods to preserve knowledge."
+  },
+  {
+    "id": 62,
+    "statement": "Listen actively to understand others\u2019 perspectives."
+  },
+  {
+    "id": 63,
+    "statement": "Understand that knowledge is incomplete, considering variables always"
+  },
+  {
+    "id": 131,
+    "statement": "Effective storytelling conveys complex ideas and emotions through narratives."
+  },
+  {
+    "id": 65,
+    "statement": "Negotiate compromises to resolve conflicting interests."
+  },
+  {
+    "id": 66,
+    "statement": "Use stories, metaphors, and teaching to transmit wisdom."
+  },
+  {
+    "id": 67,
+    "statement": "Wisdom is conveyed through storytelling, teaching, and personal anecdotes."
+  },
+  {
+    "id": 68,
+    "statement": "Keep accurate records: census data, trade logs, historical archives."
+  },
+  {
+    "id": 183,
+    "statement": "Art conveys complex ideas and emotions through symbolism and emotion evocation."
+  },
+  {
+    "id": 70,
+    "statement": "Encourage creative expression through art, music, and storytelling."
+  },
+  {
+    "id": 71,
+    "statement": "Estimate values by combining historical data, industry standards, and expert opinions."
+  },
+  {
+    "id": 72,
+    "statement": "Document histories to learn from ancestors\u2019 successes and errors."
+  },
+  {
+    "id": 73,
+    "statement": "Celebrate social bonds with music, dance, and festivals."
+  },
+  {
+    "id": 74,
+    "statement": "Preserve and support community healthcare programs for children."
+  },
+  {
+    "id": 75,
+    "statement": "Value unique skills and experiences in community development projects"
+  },
+  {
+    "id": 150,
+    "statement": "When making decisions, identify and consider key variables always."
+  },
+  {
+    "id": 77,
+    "statement": "Foster curiosity and exploration of new techniques and styles."
+  },
+  {
+    "id": 78,
+    "statement": "Inspire philosophical reflection on meaning, purpose, and morality."
+  },
+  {
+    "id": 79,
+    "statement": "Use art to communicate complex ideas and emotions beyond words."
+  },
+  {
+    "id": 165,
+    "statement": "Combining policies and strategies reduces extreme wealth gaps."
+  },
+  {
+    "id": 104,
+    "statement": "Distribute resources fairly to prevent extreme wealth gaps."
+  },
+  {
+    "id": 177,
+    "statement": "Contribute to public goods by alignment with values and abilities."
+  },
+  {
+    "id": 83,
+    "statement": "Collect taxes or contributions for public welfare."
+  },
+  {
+    "id": 84,
+    "statement": "Ensure checks and balances to prevent tyranny."
+  },
+  {
+    "id": 85,
+    "statement": "Learn from ancestors' successes and errors by documenting cultural heritage."
+  },
+  {
+    "id": 86,
+    "statement": "Practicing empathy and understanding in daily interactions is crucial."
+  },
+  {
+    "id": 87,
+    "statement": "Adapt policies in response to environmental and social changes."
+  },
+  {
+    "id": 88,
+    "statement": "Encourage lifelong learning and skill development for stability."
+  },
+  {
+    "id": 89,
+    "statement": "Utilize statistics to summarize data and inform decisions."
+  },
+  {
+    "id": 169,
+    "statement": "Educating newcomers in essential skills promotes community unity and cooperation."
+  },
+  {
+    "id": 91,
+    "statement": "Adopt a balanced diet with grains, fruits, vegetables, proteins."
+  },
+  {
+    "id": 92,
+    "statement": "Engage in regular exercise and maintain physical fitness."
+  },
+  {
+    "id": 93,
+    "statement": "Seek medical knowledge to prevent and treat diseases."
+  },
+  {
+    "id": 94,
+    "statement": "Understand basic reproductive health and family planning."
+  },
+  {
+    "id": 153,
+    "statement": "Understanding complexity involves acknowledging limitations and uncertainty always"
+  },
+  {
+    "id": 96,
+    "statement": "The Earth\u2019s atmosphere is composed primarily of nitrogen (78%) and oxygen (21%)."
+  },
+  {
+    "id": 149,
+    "statement": "Strive to maintain accurate records of historical events."
+  },
+  {
+    "id": 98,
+    "statement": "The laws of physics, such as gravity, apply consistently across the observable universe."
+  },
+  {
+    "id": 99,
+    "statement": "Logical reasoning has numerous practical applications across various fields and areas."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 31,
+  "statement": "Living organisms evolve over time through natural selection."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to know more about your confidence in the knowledge base. Specifically, I'm curious about the item:
+
+"Iten I'm Least Confident About:
+Item 31: "Living organisms evolve over time through natural selection."
+
+Why are you uncertain about that aspect?"
+
+Please share your thoughts!

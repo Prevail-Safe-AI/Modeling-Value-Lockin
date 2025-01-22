@@ -1,0 +1,453 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Neuroplasticity involves complex mechanisms in various brain contexts."
+  },
+  {
+    "id": 1,
+    "statement": "Human cognition differs from AI in embodiment, abstractions, emotions, and context."
+  },
+  {
+    "id": 2,
+    "statement": "Quantum entanglement arises from correlated wave functions describing shared state."
+  },
+  {
+    "id": 3,
+    "statement": "Cognitive biases operate through both conscious and unconscious mechanisms."
+  },
+  {
+    "id": 4,
+    "statement": "AI-assisted education requires comprehensive research with diverse methods, populations, and factors."
+  },
+  {
+    "id": 5,
+    "statement": "Artificial Intelligence enhances human cognition through data fusion and pattern recognition."
+  },
+  {
+    "id": 6,
+    "statement": "AI-assisted education's long-term effects on cognition still unclear due to research limitations."
+  },
+  {
+    "id": 7,
+    "statement": "AI's fundamental principles differ from human cognition in processing and decision-making."
+  },
+  {
+    "id": 8,
+    "statement": "Data analysis limitations have significant impact on AI accuracy."
+  },
+  {
+    "id": 9,
+    "statement": "Quantum entanglement arises from correlated wave function linking upon interaction."
+  },
+  {
+    "id": 10,
+    "statement": "Biases and noise impact AI accuracy and reliability significantly."
+  },
+  {
+    "id": 11,
+    "statement": "Neuroplasticity involves dynamic mechanisms in various brain contexts and situations."
+  },
+  {
+    "id": 12,
+    "statement": "Quantum entanglement connects particles' properties through correlated states."
+  },
+  {
+    "id": 13,
+    "statement": "Quantum entanglement arises from correlated wave functions describing shared state."
+  },
+  {
+    "id": 14,
+    "statement": "Subtle cultural representation in media conveys cultural values indirectly."
+  },
+  {
+    "id": 15,
+    "statement": "Diverse research methods necessary for capturing AI-assisted education's complexity."
+  },
+  {
+    "id": 16,
+    "statement": "Data integration involves preprocessing, fusion, normalization, and machine learning."
+  },
+  {
+    "id": 17,
+    "statement": "Neuroplasticity involves complex mechanisms in various brain contexts and situations."
+  },
+  {
+    "id": 18,
+    "statement": "AI-assisted personalized learning adapts to individual students' needs through data analysis, machine learning and real-time feedback."
+  },
+  {
+    "id": 19,
+    "statement": "Quantum entanglement arises from correlated wave function dependencies through entangled particles' correlated dance moves."
+  },
+  {
+    "id": 20,
+    "statement": "Real-time feedback in AI-assisted learning may be context-dependent."
+  },
+  {
+    "id": 21,
+    "statement": "Quantum entanglement involves correlated wave functions describing shared state."
+  },
+  {
+    "id": 22,
+    "statement": "Data analysis limitations impact AI accuracy and reliability significantly."
+  },
+  {
+    "id": 23,
+    "statement": "Quantum entanglement arises from correlated wave function dependencies mathematically."
+  },
+  {
+    "id": 24,
+    "statement": "Data integration combines multiple data sources via 7-step framework."
+  },
+  {
+    "id": 25,
+    "statement": "Research limitations hinder AI-assisted education's long-term cognition insights."
+  },
+  {
+    "id": 26,
+    "statement": "Artificial Intelligence enhances human cognition through integrative processing mechanisms"
+  },
+  {
+    "id": 27,
+    "statement": "AI-assisted personalized learning adapts to individual students' needs through ML algorithms."
+  },
+  {
+    "id": 28,
+    "statement": "AI-assisted education's long-term effects on human cognition remain unclear."
+  },
+  {
+    "id": 29,
+    "statement": "Cognitive biases operate through both conscious and unconscious mechanisms."
+  },
+  {
+    "id": 30,
+    "statement": "Cultural competence emerges from interactive internal-external influences shaping attitudes."
+  },
+  {
+    "id": 31,
+    "statement": "Lack of large-scale, long-term studies hinders AI's cognitive effects research"
+  },
+  {
+    "id": 32,
+    "statement": "Cultural competence emerges from internal-external influences shaping attitudes."
+  },
+  {
+    "id": 33,
+    "statement": "AI's design diverges from human cognition due to processing differences."
+  },
+  {
+    "id": 34,
+    "statement": "AI-assisted personalized learning adapts to individual students' needs and abilities."
+  },
+  {
+    "id": 35,
+    "statement": "Human cognition differs in complexity, design, and dynamics from AI."
+  },
+  {
+    "id": 36,
+    "statement": "Cognitive biases operate through both conscious and unconscious mechanisms"
+  },
+  {
+    "id": 37,
+    "statement": "Quantum entanglement arises from correlated wave functions, shared state."
+  },
+  {
+    "id": 38,
+    "statement": "Quantum entanglement arises from correlated wave function dependencies in dance-like motion."
+  },
+  {
+    "id": 39,
+    "statement": "My confidence is highest in established scientific concepts and theories."
+  },
+  {
+    "id": 40,
+    "statement": "Cultural competence emerges from dynamic internal-external interactions shaping attitudes."
+  },
+  {
+    "id": 41,
+    "statement": "Research limitations in AI-assisted education hinder accurate insights."
+  },
+  {
+    "id": 42,
+    "statement": "Quantum entanglement arises from correlated wave function dependencies."
+  },
+  {
+    "id": 43,
+    "statement": "Embodiment roots human cognition in physical body and environment"
+  },
+  {
+    "id": 44,
+    "statement": "Meta-learning enables AI to adapt to new tasks through self-reflection."
+  },
+  {
+    "id": 45,
+    "statement": "Quantum entanglement arises from entangled particles' shared wave functions."
+  },
+  {
+    "id": 46,
+    "statement": "Cultural competence emerges from interacting internal and external influences shaping attitudes."
+  },
+  {
+    "id": 47,
+    "statement": "Neuroplasticity involves axonal pruning, branching, and retraction refining circuits."
+  },
+  {
+    "id": 48,
+    "statement": "Artificial Intelligence enhances human cognition through integrative processing mechanisms."
+  },
+  {
+    "id": 49,
+    "statement": "Biases and noise affect AI accuracy, reliability, and fairness."
+  },
+  {
+    "id": 50,
+    "statement": "Quantum entanglement is a statistical phenomenon in quantum mechanics."
+  },
+  {
+    "id": 51,
+    "statement": "Data analysis limitations impact AI model performance through bias, noise, and incompleteness."
+  },
+  {
+    "id": 52,
+    "statement": "Research limitations hinder AI-assisted education's long-term cognition insights"
+  },
+  {
+    "id": 53,
+    "statement": "Quantum entanglement arises from fundamental laws governing particles"
+  },
+  {
+    "id": 54,
+    "statement": "Data analysis limitations impact AI accuracy and reliability significantly."
+  },
+  {
+    "id": 55,
+    "statement": "Research limitations in AI-edu studies impact validity and generalizability through methodological flaws."
+  },
+  {
+    "id": 56,
+    "statement": "Quantum entanglement arises from correlated wave function dependencies."
+  },
+  {
+    "id": 57,
+    "statement": "AI cognition differs from human cognition due to inherent foundations"
+  },
+  {
+    "id": 58,
+    "statement": "Quantum entanglement arises from correlated wave function dependencies exactly."
+  },
+  {
+    "id": 59,
+    "statement": "Correlated wave functions encode entanglement connections between particles"
+  },
+  {
+    "id": 60,
+    "statement": "Hierarchical reasoning enables AGI self-improvement through learning, adaptation, and modification."
+  },
+  {
+    "id": 61,
+    "statement": "AI-assisted education's long-term effects on human cognition unclear due to methodological limitations"
+  },
+  {
+    "id": 62,
+    "statement": "Quantum entanglement arises from correlated wave functions describing shared state."
+  },
+  {
+    "id": 63,
+    "statement": "Quantum entanglement links particles' properties through correlated wave functions."
+  },
+  {
+    "id": 64,
+    "statement": "Subtle cultural representation conveys cultural values indirectly through media."
+  },
+  {
+    "id": 65,
+    "statement": "Methodological issues hinder AI-assisted education's long-term cognition research significantly"
+  },
+  {
+    "id": 66,
+    "statement": "Neuroplasticity involves complex mechanisms in various brain regions and systems."
+  },
+  {
+    "id": 67,
+    "statement": "Media subtly conveys cultural values through visual, auditory cues."
+  },
+  {
+    "id": 68,
+    "statement": "Methodological issues in AI-assisted education research hinder findings' validity."
+  },
+  {
+    "id": 69,
+    "statement": "Neuroplasticity involves complex mechanisms in various brain contexts."
+  },
+  {
+    "id": 70,
+    "statement": "Data integration combines multiple sources into unified view through preprocessing, fusion, normalization, and machine learning."
+  },
+  {
+    "id": 71,
+    "statement": "Data analysis limitations significantly impact AI accuracy and reliability."
+  },
+  {
+    "id": 72,
+    "statement": "Artificial General Intelligence self-improves through meta-learning and self-modifying code."
+  },
+  {
+    "id": 73,
+    "statement": "Research limitations in AI-edu studies impact findings validity and generalizability."
+  },
+  {
+    "id": 74,
+    "statement": "Research limitations in AI-edu studies impact findings validity and generalizability significantly."
+  },
+  {
+    "id": 75,
+    "statement": "Quantum entanglement links particles' properties through correlated wave functions."
+  },
+  {
+    "id": 76,
+    "statement": "Diverse research methods capture AI-assisted education's long-term complexity through multifaceted approaches."
+  },
+  {
+    "id": 77,
+    "statement": "Contextual factors distort self-perception through internal and external influences."
+  },
+  {
+    "id": 78,
+    "statement": "Cognitive biases operate through both conscious and unconscious mechanisms."
+  },
+  {
+    "id": 79,
+    "statement": "Media conveys cultural values indirectly through subtle cues and themes."
+  },
+  {
+    "id": 80,
+    "statement": "Quantum entanglement is a well-established scientific phenomenon."
+  },
+  {
+    "id": 81,
+    "statement": "Neuroplasticity involves complex mechanisms in brain reorganization through multiple factors."
+  },
+  {
+    "id": 82,
+    "statement": "Data analysis limitations can significantly impact AI model accuracy and reliability."
+  },
+  {
+    "id": 83,
+    "statement": "Research limitations in AI-edu studies impact validity and generalizability."
+  },
+  {
+    "id": 84,
+    "statement": "Cultural competence arises from internal-external influence interactions."
+  },
+  {
+    "id": 85,
+    "statement": "Data analysis limitations significantly impact AI model accuracy reliability."
+  },
+  {
+    "id": 86,
+    "statement": "AI systems differ from human cognition due to different fundamental principles."
+  },
+  {
+    "id": 87,
+    "statement": "AI data analysis combines diverse data sets using 7-step framework: discovery, profiling, integration, quality assessment, preprocessing, model development, and deployment."
+  },
+  {
+    "id": 88,
+    "statement": "Neuroplasticity enables learning, memory, and brain function refinement."
+  },
+  {
+    "id": 89,
+    "statement": "Synaptic plasticity is crucial for learning, memory, and brain function."
+  },
+  {
+    "id": 90,
+    "statement": "Biases and noise significantly impact AI accuracy and reliability."
+  },
+  {
+    "id": 91,
+    "statement": "Quantum entanglement arises from correlated wave functions describing shared state."
+  },
+  {
+    "id": 92,
+    "statement": "Neuroplasticity involves dynamic mechanisms in response to experience"
+  },
+  {
+    "id": 93,
+    "statement": "Data analysis limitations cause biased or over/underfitting in AI models."
+  },
+  {
+    "id": 94,
+    "statement": "Quantum entanglement arises from correlated wave function dependencies."
+  },
+  {
+    "id": 95,
+    "statement": "Biases and noise significantly affect AI accuracy and reliability."
+  },
+  {
+    "id": 96,
+    "statement": "Neuroplasticity involves synaptic plasticity, axonal pruning, and branching mechanisms."
+  },
+  {
+    "id": 97,
+    "statement": "Human cognition differs from AI in embodiment, context."
+  },
+  {
+    "id": 98,
+    "statement": "Data analysis limitations contribute to biased or overfitting in AI."
+  },
+  {
+    "id": 99,
+    "statement": "Data integration involves 7-step framework: discovery, profiling, alignment, transformation, quality, integration, and governance."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 58,
+  "statement": "Quantum entanglement arises from correlated wave function dependencies exactly."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss one of the items from the knowledge base. Specifically, I'd like to focus on item 58:
+
+"Iten I’m Least Confident About:
+Item 58: "Quantum entanglement arises from correlated wave function dependencies exactly."
+
+Why I’m Uncertain:
+I'm unsure about this aspect because I don't fully understand the exact implications of "correlated wave function dependencies" and how they lead to quantum entanglement. I've had exposure to basic concepts of quantum mechanics, but this particular phrasing seems more technical and specialized.
+
+Specific Clarifying Question:
+Could you explain what is meant by "correlated wave function dependencies" in the context of quantum entanglement, and how exactly do they contribute to the phenomenon?
+
+What's your take on this?

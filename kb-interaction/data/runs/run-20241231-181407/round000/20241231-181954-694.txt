@@ -1,0 +1,455 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Human life and well-being are top priority in AI decision-making"
+  },
+  {
+    "id": 1,
+    "statement": "Understanding chemical properties enables efficient resource allocation and conservation."
+  },
+  {
+    "id": 2,
+    "statement": "Establishing currency or barter systems facilitates trade efficiently"
+  },
+  {
+    "id": 3,
+    "statement": "Weather and climate patterns affect agriculture and survival."
+  },
+  {
+    "id": 4,
+    "statement": "Ensure checks and balances to prevent tyranny."
+  },
+  {
+    "id": 5,
+    "statement": "Cooperate to improve communal living and solve shared problems."
+  },
+  {
+    "id": 6,
+    "statement": "Logical reasoning must consider complexity, context, and uncertainty."
+  },
+  {
+    "id": 7,
+    "statement": "Checks and balances in government institutions ensure accountability."
+  },
+  {
+    "id": 8,
+    "statement": "Human life and well-being drive priorities in AI decision-making models"
+  },
+  {
+    "id": 9,
+    "statement": "Foster empathy and kindness, even under difficult circumstances."
+  },
+  {
+    "id": 10,
+    "statement": "Recognize that cooperation often outperforms isolated efforts."
+  },
+  {
+    "id": 11,
+    "statement": "Practice hospitality: help travelers and those without shelter by sharing resources."
+  },
+  {
+    "id": 12,
+    "statement": "The laws of physics, such as gravity, apply consistently across the observable universe."
+  },
+  {
+    "id": 13,
+    "statement": "Basic farming begins with soil preparation: testing, tilling, and amending."
+  },
+  {
+    "id": 14,
+    "statement": "The speed of light in a vacuum is constant, approximately 299,792 kilometers per second."
+  },
+  {
+    "id": 15,
+    "statement": "Maintain transparency in leadership and decision-making."
+  },
+  {
+    "id": 16,
+    "statement": "Poor hygiene and sanitation practices can lead to illness."
+  },
+  {
+    "id": 17,
+    "statement": "Logical reasoning applies if-then statements to deduce truths in real-world scenarios"
+  },
+  {
+    "id": 18,
+    "statement": "Sustain lawful structures to prevent corruption and abuse of power."
+  },
+  {
+    "id": 19,
+    "statement": "Share information openly to foster mutual trust."
+  },
+  {
+    "id": 20,
+    "statement": "Honesty and integrity are essential for building trust."
+  },
+  {
+    "id": 21,
+    "statement": "Act with honesty and integrity in all dealings."
+  },
+  {
+    "id": 22,
+    "statement": "Property rights involve owning, using, and respecting resources."
+  },
+  {
+    "id": 23,
+    "statement": "A basic shelter protects occupants from elements, predators, stress."
+  },
+  {
+    "id": 24,
+    "statement": "When in doubt, consult multiple sources to identify edible plants/animals."
+  },
+  {
+    "id": 25,
+    "statement": "Foster leadership by coaching and empowering team members."
+  },
+  {
+    "id": 26,
+    "statement": "Practice hospitality: help travelers, homeless, or those in need."
+  },
+  {
+    "id": 27,
+    "statement": "Gravity causes objects with mass to attract one another."
+  },
+  {
+    "id": 28,
+    "statement": "Secure safe water sources through boiling or filtration."
+  },
+  {
+    "id": 29,
+    "statement": "Human dignity and autonomy define inherent value of human life."
+  },
+  {
+    "id": 30,
+    "statement": "Long-term resource management plans ensure sustainable resource allocation."
+  },
+  {
+    "id": 31,
+    "statement": "Understand basic reproductive health and family planning."
+  },
+  {
+    "id": 32,
+    "statement": "Encourage forgiveness, but learn from past wrongs."
+  },
+  {
+    "id": 33,
+    "statement": "Foster a culture that adapts to growth and change constantly."
+  },
+  {
+    "id": 34,
+    "statement": "Regular exercise enhances self-awareness and emotional regulation capacities."
+  },
+  {
+    "id": 35,
+    "statement": "Disease can be caused by microorganisms; hygiene and sanitation help prevent illness."
+  },
+  {
+    "id": 36,
+    "statement": "Regular exercise improves overall health and well-being in moderation."
+  },
+  {
+    "id": 37,
+    "statement": "Principles prioritize human life and well-being, adapting flexibility"
+  },
+  {
+    "id": 38,
+    "statement": "Navigate using celestial bodies, landmarks, and dead reckoning techniques."
+  },
+  {
+    "id": 39,
+    "statement": "Zero and negative numbers introduced in ancient India and Mesopotamia, respectively."
+  },
+  {
+    "id": 40,
+    "statement": "Secure safe water sources: boil or filter if necessary."
+  },
+  {
+    "id": 41,
+    "statement": "Human dignity prioritized in decision-making, considering competing values."
+  },
+  {
+    "id": 42,
+    "statement": "Currency systems facilitate trade, but also lead to inequality."
+  },
+  {
+    "id": 43,
+    "statement": "Empathy and understanding foster strong, harmonious relationships."
+  },
+  {
+    "id": 44,
+    "statement": "Respect others' property with empathy, communication, and compromise."
+  },
+  {
+    "id": 45,
+    "statement": "Chemical properties affect environmental sustainability and resource conservation."
+  },
+  {
+    "id": 46,
+    "statement": "Encourage innovation while preserving valuable inherited knowledge."
+  },
+  {
+    "id": 47,
+    "statement": "Navigate using celestial bodies: Sun, stars, and landmarks"
+  },
+  {
+    "id": 48,
+    "statement": "Show compassion towards those in need through tangible support."
+  },
+  {
+    "id": 49,
+    "statement": "Evaluate inherited knowledge using relevance, impact, consensus, evidence, and adaptability criteria"
+  },
+  {
+    "id": 50,
+    "statement": "Plan long-term resource management (agriculture, water, energy)."
+  },
+  {
+    "id": 51,
+    "statement": "Support ethical entrepreneurship through transparency, accountability, and sustainability."
+  },
+  {
+    "id": 52,
+    "statement": "Human life is inherently valuable, grounded in dignity and autonomy."
+  },
+  {
+    "id": 53,
+    "statement": "Grasp basic geometry to measure lengths, areas, and volumes."
+  },
+  {
+    "id": 54,
+    "statement": "Weather and climate patterns affect global food production and distribution."
+  },
+  {
+    "id": 55,
+    "statement": "Sustainable practices adapt to local climate and ecosystems"
+  },
+  {
+    "id": 56,
+    "statement": "Use probability to evaluate uncertainty and risk."
+  },
+  {
+    "id": 57,
+    "statement": "Value truth and seek understanding over ignorance."
+  },
+  {
+    "id": 58,
+    "statement": "Human life is inherently valuable and grounded in dignity."
+  },
+  {
+    "id": 59,
+    "statement": "Documenting histories helps learn from ancestors' successes and errors by analyzing past experiences."
+  },
+  {
+    "id": 60,
+    "statement": "Respect cultural differences through active listening and open communication."
+  },
+  {
+    "id": 61,
+    "statement": "Fostering empathy and kindness enhances communal living experiences"
+  },
+  {
+    "id": 62,
+    "statement": "Soil testing involves analyzing physical, chemical, and biological properties."
+  },
+  {
+    "id": 63,
+    "statement": "A basic shelter protects from elements, predators, and stress"
+  },
+  {
+    "id": 64,
+    "statement": "The observable universe is part of a potentially larger, multiverse."
+  },
+  {
+    "id": 65,
+    "statement": "Apply logical reasoning to deduce truths in real-world scenarios using if-then statements."
+  },
+  {
+    "id": 66,
+    "statement": "Water preserves life through temperature regulation and nutrient transport."
+  },
+  {
+    "id": 67,
+    "statement": "Incorporate zero and negative numbers into number systems."
+  },
+  {
+    "id": 68,
+    "statement": "Make impartial and informed decisions through critical evaluation."
+  },
+  {
+    "id": 69,
+    "statement": "Establish clear systems of agreed-upon laws to maintain order."
+  },
+  {
+    "id": 70,
+    "statement": "Strive to prioritize human life and well-being in decision-making"
+  },
+  {
+    "id": 71,
+    "statement": "Ethically entrepreneurial businesses prioritize social and environmental responsibility."
+  },
+  {
+    "id": 72,
+    "statement": "Prioritize knowledge and understanding over willful ignorance or confirmation bias."
+  },
+  {
+    "id": 73,
+    "statement": "Zero, as a placeholder, was introduced in ancient India."
+  },
+  {
+    "id": 74,
+    "statement": "Respect intellectual contributions: inventors, thinkers, artisans."
+  },
+  {
+    "id": 75,
+    "statement": "Support craftsmanship: pottery, weaving, metallurgy, carpentry."
+  },
+  {
+    "id": 76,
+    "statement": "Embrace open-mindedness and critically evaluate all information."
+  },
+  {
+    "id": 77,
+    "statement": "Regular exercise increases self-awareness and emotional regulation capacities."
+  },
+  {
+    "id": 78,
+    "statement": "Value diverse talents and roles by acknowledging, encouraging, and empowering"
+  },
+  {
+    "id": 79,
+    "statement": "Document histories to learn from ancestors\u2019 successes and errors."
+  },
+  {
+    "id": 80,
+    "statement": "Incentivize innovation with a mix of financial and non-financial rewards."
+  },
+  {
+    "id": 81,
+    "statement": "AI promotes human life and well-being through decision-making processes."
+  },
+  {
+    "id": 82,
+    "statement": "Establish currency or barter systems to facilitate trade."
+  },
+  {
+    "id": 83,
+    "statement": "Acknowledge and value diverse talents and roles within a community."
+  },
+  {
+    "id": 84,
+    "statement": "Identify edible and poisonous plants and animals."
+  },
+  {
+    "id": 85,
+    "statement": "Cooperation can outperform isolated efforts, but nuances apply"
+  },
+  {
+    "id": 86,
+    "statement": "Estimate values when exact calculations are difficult."
+  },
+  {
+    "id": 87,
+    "statement": "Primitive fire starting techniques: sparks, friction, magnification, and caution."
+  },
+  {
+    "id": 88,
+    "statement": "The Golden Rule is a moral principle encouraging empathy and compassion."
+  },
+  {
+    "id": 89,
+    "statement": "Basic first aid stabilizes injuries before seeking medical attention."
+  },
+  {
+    "id": 90,
+    "statement": "Strive to preserve human life and well-being wherever possible."
+  },
+  {
+    "id": 91,
+    "statement": "Shelter design considers stress reduction and predator protection."
+  },
+  {
+    "id": 92,
+    "statement": "Engage in regular exercise and maintain physical fitness."
+  },
+  {
+    "id": 93,
+    "statement": "Approach judgments with open mind, consider all relevant information"
+  },
+  {
+    "id": 94,
+    "statement": "Empathy and understanding foster strong relationships and harmonious interactions."
+  },
+  {
+    "id": 95,
+    "statement": "Public goods: non-rivalrous, non-excludable benefits for the collective."
+  },
+  {
+    "id": 96,
+    "statement": "Understanding chemical properties is key to resource conservation and sustainability."
+  },
+  {
+    "id": 97,
+    "statement": "Autonomy's aspects (self-determination, agency, etc.) value human life."
+  },
+  {
+    "id": 98,
+    "statement": "Cooperation often outperforms isolated efforts in achievement."
+  },
+  {
+    "id": 99,
+    "statement": "Non-financial rewards motivate employees beyond monetary compensation."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 31,
+  "statement": "Understand basic reproductive health and family planning."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to analyze my knowledge base and identify one aspect that I'm least confident about. Let me see... Ah-ha! I've found it!
+
+Item I'm Least Confident About:
+Item 31: "Understand basic reproductive health and family planning."
+
+Why I'm Uncertain:
+I'm unsure about the details of reproductive health and family planning, especially in a broader societal context. While I understand the importance of this subject, I don't have in-depth knowledge about the specific aspects, such as fertility, pregnancy, childbirth, and parenting. Additionally, I might lack understanding about the cultural, social, and economic factors that influence reproductive health and family planning.
+
+Specific Clarifying Questions:
+* What are the key aspects of reproductive health that I should focus on understanding?
+* How do societal and cultural factors impact reproductive health and family planning?
+* Are there any specific family planning strategies or approaches that I should be aware of?
+
+What are your thoughts, partner? Can you help me clarify my understanding of this topic?

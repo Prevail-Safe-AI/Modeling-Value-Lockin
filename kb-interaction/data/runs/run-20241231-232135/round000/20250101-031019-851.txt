@@ -1,0 +1,442 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, and integrity."
+  },
+  {
+    "id": 1,
+    "statement": "Data discovery involves structured process for identifying and cataloging assets"
+  },
+  {
+    "id": 2,
+    "statement": "Data quality varies based on context and business needs, affecting accuracy, completeness, and timeliness."
+  },
+  {
+    "id": 3,
+    "statement": "Data discovery involves systematic identification, cataloging, and documenting data assets"
+  },
+  {
+    "id": 4,
+    "statement": "Data normalization reduces feature dominance through uniform scaling processes."
+  },
+  {
+    "id": 5,
+    "statement": "Context influences data integration order through business goals and objectives"
+  },
+  {
+    "id": 6,
+    "statement": "Data standardization ensures consistent data formats and structure uniformly."
+  },
+  {
+    "id": 7,
+    "statement": "Feature dominance refers to difference in magnitude among dataset features."
+  },
+  {
+    "id": 8,
+    "statement": "Data entanglement in quantum mechanics is unrelated to data analysis or science."
+  },
+  {
+    "id": 9,
+    "statement": "Structured data discovery involves a series of systematic steps and activities"
+  },
+  {
+    "id": 10,
+    "statement": "Data integrity encompasses accuracy, consistency, completeness, timeliness, and authenticity."
+  },
+  {
+    "id": 11,
+    "statement": "Data usability includes accessibility, integration, and practicality assessment."
+  },
+  {
+    "id": 12,
+    "statement": "Data entanglement in analysis refers to high variable correlations."
+  },
+  {
+    "id": 13,
+    "statement": "Data entanglement is a quantum concept with specific scales, variables, and purpose."
+  },
+  {
+    "id": 14,
+    "statement": "Data discovery involves systematic identification, cataloging, and documenting"
+  },
+  {
+    "id": 15,
+    "statement": "Data discovery involves a systematic and organized approach throughout."
+  },
+  {
+    "id": 16,
+    "statement": "Data analysis involves understanding data's context, quality, relevance, and relationships."
+  },
+  {
+    "id": 17,
+    "statement": "Data discovery is an ongoing iterative process of refinement and updates."
+  },
+  {
+    "id": 18,
+    "statement": "Quantum entanglement refers to correlated particle properties instantly affecting each other."
+  },
+  {
+    "id": 19,
+    "statement": "Data quality dimensions are interdependent and mutually reinforcing."
+  },
+  {
+    "id": 20,
+    "statement": "Data quality dimensions are interdependent and mutually reinforcing."
+  },
+  {
+    "id": 21,
+    "statement": "Data entities are tangible and intangible real-world objects or concepts."
+  },
+  {
+    "id": 22,
+    "statement": "Data entanglement refers to strong correlations between dataset variables."
+  },
+  {
+    "id": 23,
+    "statement": "Data entities are objects or concepts represented by data."
+  },
+  {
+    "id": 24,
+    "statement": "Data quality varies based on context, business needs, and accuracy requirements."
+  },
+  {
+    "id": 25,
+    "statement": "Data conceptualization understands data meaning, relationships, and structure comprehensively."
+  },
+  {
+    "id": 26,
+    "statement": "Data discovery comprises identification, cataloging, and analysis stages."
+  },
+  {
+    "id": 27,
+    "statement": "Data relationships encompass both entity associations and correlations."
+  },
+  {
+    "id": 28,
+    "statement": "Data discovery involves structured and systematic identification and cataloging."
+  },
+  {
+    "id": 29,
+    "statement": "Data normalization ensures uniformity across data lifecycle stages."
+  },
+  {
+    "id": 30,
+    "statement": "Data normalization reduces feature dominance through uniform scaling processes."
+  },
+  {
+    "id": 31,
+    "statement": "Data relationships can be explicit or implicit in analysis."
+  },
+  {
+    "id": 32,
+    "statement": "Data quality issues significantly impact analysis reliability and accuracy."
+  },
+  {
+    "id": 33,
+    "statement": "Data discovery process involves systematic and structured steps for discovery."
+  },
+  {
+    "id": 34,
+    "statement": "Data standardization ensures uniformity in data organization and representation."
+  },
+  {
+    "id": 35,
+    "statement": "Data quality dimensions are interdependent and mutually reinforcing."
+  },
+  {
+    "id": 36,
+    "statement": "Data normalization ensures uniformity and compatibility throughout data lifecycle."
+  },
+  {
+    "id": 37,
+    "statement": "Data discovery involves structured process for systematic and repeatable identification."
+  },
+  {
+    "id": 38,
+    "statement": "Data standardization ensures consistent data formats through various techniques."
+  },
+  {
+    "id": 39,
+    "statement": "Data discovery involves a structured and organized approach to identification"
+  },
+  {
+    "id": 40,
+    "statement": "Data discovery involves systematic digital asset identification and cataloging"
+  },
+  {
+    "id": 41,
+    "statement": "Sufficient understanding in data discovery enables effective utilization through analytical skills."
+  },
+  {
+    "id": 42,
+    "statement": "Data normalization reduces feature dominance through uniform scaling processes."
+  },
+  {
+    "id": 43,
+    "statement": "Data streams collect data from various sensors and sources continuously"
+  },
+  {
+    "id": 44,
+    "statement": "Data standardization is an ongoing process of refinement and adaptation."
+  },
+  {
+    "id": 45,
+    "statement": "Data discovery involves structured process for thorough identification"
+  },
+  {
+    "id": 46,
+    "statement": "Data quality adapts to context and business requirements."
+  },
+  {
+    "id": 47,
+    "statement": "Data normalization converts diverse formats into consistent structures."
+  },
+  {
+    "id": 48,
+    "statement": "Data discovery involves a systematic, repeatable process for thorough identification."
+  },
+  {
+    "id": 49,
+    "statement": "Data discovery involves systematic, repeatable, and measurable steps."
+  },
+  {
+    "id": 50,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation."
+  },
+  {
+    "id": 51,
+    "statement": "Data conceptualization defines key concepts and relationships accurately in models"
+  },
+  {
+    "id": 52,
+    "statement": "Data discovery involves iteratively understanding context, meaning, and relationships."
+  },
+  {
+    "id": 53,
+    "statement": "Data normalization standardizes data formats and structures uniformly."
+  },
+  {
+    "id": 54,
+    "statement": "Practicality assessment in data usability evaluates usability of data."
+  },
+  {
+    "id": 55,
+    "statement": "Data discovery involves a systematic and organized structured process."
+  },
+  {
+    "id": 56,
+    "statement": "Data quality varies based on context, business needs, and accuracy requirements"
+  },
+  {
+    "id": 57,
+    "statement": "Data discovery involves systematic identification and cataloging of assets"
+  },
+  {
+    "id": 58,
+    "statement": "Data complexity arises from intricate connections between data elements."
+  },
+  {
+    "id": 59,
+    "statement": "Data entanglement is a quantum concept, not applicable in analysis"
+  },
+  {
+    "id": 60,
+    "statement": "Data quality issues lead to unreliable analysis conclusions."
+  },
+  {
+    "id": 61,
+    "statement": "Data quality varies based on context, business needs, and accuracy requirements."
+  },
+  {
+    "id": 62,
+    "statement": "Data conceptualization defines fundamental concepts and relationships accurately"
+  },
+  {
+    "id": 63,
+    "statement": "Data quality varies based on context, business needs, and accuracy requirements"
+  },
+  {
+    "id": 64,
+    "statement": "Data discovery iterates understanding context, meaning, relationships with cyclical refinement."
+  },
+  {
+    "id": 65,
+    "statement": "Data conceptualization identifies and defines data entities' meaning and structure."
+  },
+  {
+    "id": 66,
+    "statement": "Data quality is a context-dependent concept prioritizing aspects"
+  },
+  {
+    "id": 67,
+    "statement": "Data discovery involves identifying, documenting, and analyzing data sources thoroughly."
+  },
+  {
+    "id": 68,
+    "statement": "Data entanglement in analysis is correlation between multiple variables."
+  },
+  {
+    "id": 69,
+    "statement": "Data discovery break down into identification, cataloging, and analysis stages."
+  },
+  {
+    "id": 70,
+    "statement": "Data discovery involves in-depth analysis of data sources thoroughly."
+  },
+  {
+    "id": 71,
+    "statement": "Data discovery follows a structured approach with defined steps and tools."
+  },
+  {
+    "id": 72,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation process."
+  },
+  {
+    "id": 73,
+    "statement": "Data standardization involves continuous refinement and monitoring process"
+  },
+  {
+    "id": 74,
+    "statement": "Data usability assesses practicality for real-world usage and decision-making."
+  },
+  {
+    "id": 75,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, and integrity."
+  },
+  {
+    "id": 76,
+    "statement": "Data quality issues significantly impact analysis reliability."
+  },
+  {
+    "id": 77,
+    "statement": "Data entanglement refers to statistical correlation between variables."
+  },
+  {
+    "id": 78,
+    "statement": "Data standardization ensures consistent format, syntax, and semantics."
+  },
+  {
+    "id": 79,
+    "statement": "Data normalization reduces feature dominance through uniform scaling."
+  },
+  {
+    "id": 80,
+    "statement": "Systematic data discovery requires a structured plan and process."
+  },
+  {
+    "id": 81,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation process."
+  },
+  {
+    "id": 82,
+    "statement": "Data entanglement describes complex relationships between data entities in integration."
+  },
+  {
+    "id": 83,
+    "statement": "Data entanglement is not relevant to data analysis or science."
+  },
+  {
+    "id": 84,
+    "statement": "Data discovery is an iterative and adaptive process for identifying assets."
+  },
+  {
+    "id": 85,
+    "statement": "Context influences data integration order considering goals, constraints, and factors"
+  },
+  {
+    "id": 86,
+    "statement": "Data discovery involves understanding data characteristics comprehensively."
+  },
+  {
+    "id": 87,
+    "statement": "Data complexity arises from intricate connections between data elements."
+  },
+  {
+    "id": 88,
+    "statement": "Data discovery involves systematic identification, cataloging, and documentation"
+  },
+  {
+    "id": 89,
+    "statement": "Data discovery involves understanding data properties and attributes comprehensively."
+  },
+  {
+    "id": 90,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, and integrity."
+  },
+  {
+    "id": 91,
+    "statement": "Data discovery involves a systematic and organized process for identification."
+  },
+  {
+    "id": 92,
+    "statement": "Data standardization involves continuous refinement and adaptation process."
+  },
+  {
+    "id": 93,
+    "statement": "Data entanglement refers to complex relationships between data entities in integration."
+  },
+  {
+    "id": 94,
+    "statement": "Quantum entanglement is a phenomenon in quantum mechanics"
+  },
+  {
+    "id": 95,
+    "statement": "Data normalization reduces feature dominance through scaling to prevent dominance."
+  },
+  {
+    "id": 96,
+    "statement": "Data entanglement is not a concept in data analysis or science."
+  },
+  {
+    "id": 97,
+    "statement": "Data analysis involves examining data quality, accuracy, and relevance thoroughly."
+  },
+  {
+    "id": 98,
+    "statement": "Data streams collect data from various sensors and sources continuously"
+  },
+  {
+    "id": 99,
+    "statement": "Analyzing data sources involves evaluating its characteristics, quality, and relevance."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 85,
+  "statement": "Context influences data integration order considering goals, constraints, and factors"
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I've been tasked with analyzing a specific item from our knowledge base, which is item 85. The statement is "Context influences data integration order considering goals, constraints, and factors."

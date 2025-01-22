@@ -1,0 +1,442 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Data preservation requires measures beyond protection for long-term accessibility."
+  },
+  {
+    "id": 1,
+    "statement": "Storage interdependence ensures data consistency by propagating changes correctly."
+  },
+  {
+    "id": 2,
+    "statement": "Data standardization considers industry standards, regulations, and policies."
+  },
+  {
+    "id": 3,
+    "statement": "Data integrity relies on multiple storage components' correct functioning."
+  },
+  {
+    "id": 4,
+    "statement": "Data accuracy, completeness, and reliability are interdependent and influencing."
+  },
+  {
+    "id": 5,
+    "statement": "Transparency in data enhances trust through clear communication."
+  },
+  {
+    "id": 6,
+    "statement": "Abstract reasoning in AI combines design, data, and feedback."
+  },
+  {
+    "id": 7,
+    "statement": "Data integrity involves accuracy, consistency, validation, and storage interdependence collectively"
+  },
+  {
+    "id": 8,
+    "statement": "Abstract reasoning in AI combines logical connections, feedback to refine understanding."
+  },
+  {
+    "id": 9,
+    "statement": "Data integrity relies on storage, backup, and processing strategies consistently."
+  },
+  {
+    "id": 10,
+    "statement": "Data accuracy, completeness, and reliability are interdependent aspects."
+  },
+  {
+    "id": 11,
+    "statement": "Standardizing data formats improves data quality and governance."
+  },
+  {
+    "id": 12,
+    "statement": "Data standardization ensures consistency in specific domains or applications"
+  },
+  {
+    "id": 13,
+    "statement": "Data complexity arises from multifaceted factors beyond volume interactions."
+  },
+  {
+    "id": 14,
+    "statement": "Data completeness depends on type, context, and requirements interactions."
+  },
+  {
+    "id": 15,
+    "statement": "Standardization balances consistency, flexibility, transparency, and fairness through setting guidelines."
+  },
+  {
+    "id": 16,
+    "statement": "Data trustworthiness requires quality, source credibility, and transparency."
+  },
+  {
+    "id": 17,
+    "statement": "Abstract reasoning in AI combines algorithmic design, data, and human feedback."
+  },
+  {
+    "id": 18,
+    "statement": "Data governance ensures quality, security, and integrity in harmonization."
+  },
+  {
+    "id": 19,
+    "statement": "Data trustworthiness requires transparency, source credibility, and open feedback"
+  },
+  {
+    "id": 20,
+    "statement": "Data quality interdependencies influence accuracy through error propagation's compound effects."
+  },
+  {
+    "id": 21,
+    "statement": "Data mapping establishes relationships through accurate translation for consistency."
+  },
+  {
+    "id": 22,
+    "statement": "A data foundation structure ensures data consistency, accuracy, and completeness."
+  },
+  {
+    "id": 23,
+    "statement": "Data preservation requires measures beyond protection for long-term accessibility through migration, normalization, documentation, refresh, and planning."
+  },
+  {
+    "id": 24,
+    "statement": "Data integrity involves accuracy, consistency, validation, and storage interdependence collectively."
+  },
+  {
+    "id": 25,
+    "statement": "Data harmonization involves standardization, mapping, validation, and quality control."
+  },
+  {
+    "id": 26,
+    "statement": "Data integrity relies on storage interdependence for accurate management."
+  },
+  {
+    "id": 27,
+    "statement": "Data complexity arises from multifaceted factors beyond volume alone."
+  },
+  {
+    "id": 28,
+    "statement": "Data integrity relies on accuracy, consistency, validation, and storage interdependence for correctness."
+  },
+  {
+    "id": 29,
+    "statement": "Data unity integrates multiple datasets into a cohesive, consistent, and meaningful whole."
+  },
+  {
+    "id": 30,
+    "statement": "Data foundation structures ensure data consistency accuracy completeness through framework architecture."
+  },
+  {
+    "id": 31,
+    "statement": "Data foundation structure defines and governs organization's data management."
+  },
+  {
+    "id": 32,
+    "statement": "Abstract reasoning in AI combines algorithmic design, data, feedback."
+  },
+  {
+    "id": 33,
+    "statement": "Data standardization involves complex processes and domain understanding."
+  },
+  {
+    "id": 34,
+    "statement": "Data harmonization involves standardization, mapping, validation, and quality control processes."
+  },
+  {
+    "id": 35,
+    "statement": "Data accuracy, completeness, and reliability are interdependent and influencing."
+  },
+  {
+    "id": 36,
+    "statement": "Data complexity stems from multifaceted factors beyond volume alone."
+  },
+  {
+    "id": 37,
+    "statement": "Abstract reasoning in AI combines data, feedback, and design"
+  },
+  {
+    "id": 38,
+    "statement": "Data foundation structures ensure consistency, accuracy, and completeness"
+  },
+  {
+    "id": 39,
+    "statement": "Data quality varies contextually due to industry, organization, and department."
+  },
+  {
+    "id": 40,
+    "statement": "Data Integrity encompasses Accuracy, Consistency, Completeness, and Timeliness harmoniously."
+  },
+  {
+    "id": 41,
+    "statement": "Abstract reasoning in AI involves data-driven adaptation through human feedback."
+  },
+  {
+    "id": 42,
+    "statement": "Data governance involves data quality, security, and compliance policies."
+  },
+  {
+    "id": 43,
+    "statement": "Abstract reasoning in AI simulates human problem-solving capabilities through complex representations."
+  },
+  {
+    "id": 44,
+    "statement": "Data accuracy, completeness, and reliability exhibit intricate interdependent dynamics"
+  },
+  {
+    "id": 45,
+    "statement": "Data quality complexity arises from multifaceted factors beyond volume interactions"
+  },
+  {
+    "id": 46,
+    "statement": "Data harmonization involves standardization, mapping, validation, and quality control processes."
+  },
+  {
+    "id": 47,
+    "statement": "Data preservation requires measures beyond protection for long-term accessibility"
+  },
+  {
+    "id": 48,
+    "statement": "Data governance ensures quality, integrity, and security through policies."
+  },
+  {
+    "id": 49,
+    "statement": "Data harmonization combines standardization, mapping, validation, quality control"
+  },
+  {
+    "id": 50,
+    "statement": "Data accuracy, completeness, and reliability exhibit interdependent quality dynamics."
+  },
+  {
+    "id": 51,
+    "statement": "A solid data foundation structure ensures data accuracy and consistency."
+  },
+  {
+    "id": 52,
+    "statement": "Abstract reasoning in AI combines algorithmic design, data, human feedback."
+  },
+  {
+    "id": 53,
+    "statement": "Data quality interdependencies are context-dependent and complex relationships"
+  },
+  {
+    "id": 54,
+    "statement": "Data Unity: integrated datasets ensure consistent accuracy."
+  },
+  {
+    "id": 55,
+    "statement": "Data quality interdependencies' complexity influenced by various contextual factors."
+  },
+  {
+    "id": 56,
+    "statement": "Data harmonization involves standardizing and normalizing data for analysis."
+  },
+  {
+    "id": 57,
+    "statement": "Data mapping establishes relationships for consistency and integrity."
+  },
+  {
+    "id": 58,
+    "statement": "Data governance ensures quality, integrity, and security through enforced policies"
+  },
+  {
+    "id": 59,
+    "statement": "Data quality varies contextually due to industry, organization, and department."
+  },
+  {
+    "id": 60,
+    "statement": "Data preservation includes measures beyond protection for long-term accessibility."
+  },
+  {
+    "id": 61,
+    "statement": "Data accuracy, completeness, and reliability form a balanced triangle."
+  },
+  {
+    "id": 62,
+    "statement": "Data harmonization involves standardizing and normalizing data for analysis."
+  },
+  {
+    "id": 63,
+    "statement": "Abstract reasoning in AI enables nuanced problem-solving capabilities"
+  },
+  {
+    "id": 64,
+    "statement": "Data quality importance varies with context, industry, volume, and complexity."
+  },
+  {
+    "id": 65,
+    "statement": "Data accuracy completeness and reliability are interconnected influencing each other"
+  },
+  {
+    "id": 66,
+    "statement": "Standardization balances consistency with flexibility through predictable applicability."
+  },
+  {
+    "id": 67,
+    "statement": "Data interdependencies affect accuracy inherent in data correlations."
+  },
+  {
+    "id": 68,
+    "statement": "Data integrity relies on storage interdependence for consistency and accuracy."
+  },
+  {
+    "id": 69,
+    "statement": "Standardization promotes transparency and fairness through consistency and flexibility."
+  },
+  {
+    "id": 70,
+    "statement": "Data unity ensures consistent, accurate, and meaningful integrated datasets."
+  },
+  {
+    "id": 71,
+    "statement": "Data standardization is insufficient without considering broader factors"
+  },
+  {
+    "id": 72,
+    "statement": "Data accuracy, completeness, and reliability are interconnected quality aspects."
+  },
+  {
+    "id": 73,
+    "statement": "Source credibility depends on context, domain, and cultural background"
+  },
+  {
+    "id": 74,
+    "statement": "Standardization balances consistency with flexibility through predictable adaptability."
+  },
+  {
+    "id": 75,
+    "statement": "Data trustworthiness encompasses data quality, source credibility, and processing transparency."
+  },
+  {
+    "id": 76,
+    "statement": "Big Data's 4 V's: Volume, Velocity, Variety, and Veracity require scalable analysis."
+  },
+  {
+    "id": 77,
+    "statement": "Data harmonization involves organizational, business, and technical adjustments"
+  },
+  {
+    "id": 78,
+    "statement": "Data accuracy, completeness, and reliability exhibit complex interconnected influences."
+  },
+  {
+    "id": 79,
+    "statement": "Data integrity involves interdependent factors, including storage, quality, validation, and governance."
+  },
+  {
+    "id": 80,
+    "statement": "Data standardization reduces biased decision-making through consistency and accuracy"
+  },
+  {
+    "id": 81,
+    "statement": "Data quality interdependencies impact accuracy contextually."
+  },
+  {
+    "id": 82,
+    "statement": "Data foundation structures ensure data consistency, accuracy, and completeness."
+  },
+  {
+    "id": 83,
+    "statement": "Abstract reasoning AI combines algorithmic design data feedback adaptation."
+  },
+  {
+    "id": 84,
+    "statement": "Data quality interdependencies influence accuracy through error propagation."
+  },
+  {
+    "id": 85,
+    "statement": "A data foundation structure ensures data consistency, accuracy, and completeness."
+  },
+  {
+    "id": 86,
+    "statement": "Data standardization considers broader factors to ensure relevance accuracy."
+  },
+  {
+    "id": 87,
+    "statement": "Abstract reasoning in AI combines algorithms, data, and feedback"
+  },
+  {
+    "id": 88,
+    "statement": "Data accuracy, completeness, and reliability are intricately related"
+  },
+  {
+    "id": 89,
+    "statement": "Abstract reasoning in AI involves human feedback and data-driven adaptation"
+  },
+  {
+    "id": 90,
+    "statement": "Data quality interdependencies influence accuracy through error propagation."
+  },
+  {
+    "id": 91,
+    "statement": "Data integrity involves storage interdependence across systems, networks."
+  },
+  {
+    "id": 92,
+    "statement": "Data integrity involves accuracy, consistency, validation, quality, governance, security, backup, and architecture"
+  },
+  {
+    "id": 93,
+    "statement": "Data integrity relies on accuracy, consistency, validation, and storage interdependence."
+  },
+  {
+    "id": 94,
+    "statement": "Data standardization involves mapping, transformation, cleansing, and aggregation processes."
+  },
+  {
+    "id": 95,
+    "statement": "Data completeness depends on multiple interacting factors, including type, context, and requirements"
+  },
+  {
+    "id": 96,
+    "statement": "Data mapping connects corresponding data elements across platforms"
+  },
+  {
+    "id": 97,
+    "statement": "Data foundation structures ensure data consistency, accuracy, and completeness"
+  },
+  {
+    "id": 98,
+    "statement": "Data integrity relies on storage interdependence for consistency and accuracy."
+  },
+  {
+    "id": 99,
+    "statement": "Data accuracy, completeness, and reliability influence each other's quality"
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 28,
+  "statement": "Data integrity relies on accuracy, consistency, validation, and storage interdependence for correctness."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to know which item from the knowledge base you're least confident about.

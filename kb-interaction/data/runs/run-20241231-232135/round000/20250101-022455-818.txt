@@ -1,0 +1,450 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Data integration involves preprocessing, normalization, fusion, and machine learning steps."
+  },
+  {
+    "id": 1,
+    "statement": "Data integration involves preprocessing, fusion, normalization, and machine learning steps."
+  },
+  {
+    "id": 2,
+    "statement": "Data integration involves preprocessing, normalization, fusion, and machine learning steps"
+  },
+  {
+    "id": 3,
+    "statement": "Data integration involves data profiling, validation, transformation, standardization, and aggregation."
+  },
+  {
+    "id": 4,
+    "statement": "Correlated wave functions describe entangled particles' joint quantum state mathematically."
+  },
+  {
+    "id": 5,
+    "statement": "Data preparation in data integration involves data profiling, validation, transformation, standardization, and aggregation."
+  },
+  {
+    "id": 6,
+    "statement": "Data integration combines preprocessing, normalization, and machine learning harmoniously."
+  },
+  {
+    "id": 7,
+    "statement": "Data integration harmoniously combines preprocessing, normalization, fusion, and machine learning."
+  },
+  {
+    "id": 8,
+    "statement": "Neuroplasticity involves synaptic plasticity, neuronal changes, and neurogenesis"
+  },
+  {
+    "id": 9,
+    "statement": "Data integration involves data discovery, profiling, cleansing, transformation, and quality."
+  },
+  {
+    "id": 10,
+    "statement": "Data integration includes merging, aggregation, transformation, and reconciliation steps harmoniously."
+  },
+  {
+    "id": 11,
+    "statement": "Correlated wave functions describe entangled particles' joint probability distributions."
+  },
+  {
+    "id": 12,
+    "statement": "Data integration combines preprocessing, normalization, fusion, and machine learning."
+  },
+  {
+    "id": 13,
+    "statement": "Data integration involves cleaning and transforming data for analysis."
+  },
+  {
+    "id": 14,
+    "statement": "Data integration combines preprocessing, normalization, fusion, and machine learning efficiently."
+  },
+  {
+    "id": 15,
+    "statement": "Data integration involves preprocessing, normalization, fusion, and machine learning harmoniously."
+  },
+  {
+    "id": 16,
+    "statement": "Correlated wave functions describe entangled particles' joint quantum state."
+  },
+  {
+    "id": 17,
+    "statement": "Data integration involves preprocessing, fusion, normalization, and machine learning."
+  },
+  {
+    "id": 18,
+    "statement": "Data integration combines preprocessing, normalization, fusion, and machine learning methods"
+  },
+  {
+    "id": 19,
+    "statement": "Data integration combines preprocessing, normalization, fusion, and machine learning."
+  },
+  {
+    "id": 20,
+    "statement": "Non-local synchronization refers to correlated state changes in entangled particles"
+  },
+  {
+    "id": 21,
+    "statement": "Neuroplasticity involves synaptic plasticity, axonal remodeling, and neurogenesis processes"
+  },
+  {
+    "id": 22,
+    "statement": "Quantum entanglement arises mathematically from correlated wave function dependencies."
+  },
+  {
+    "id": 23,
+    "statement": "Quantum entanglement challenges classical space and time notions implicitly."
+  },
+  {
+    "id": 24,
+    "statement": "Data integration involves preprocessing, normalization, fusion, and machine learning steps."
+  },
+  {
+    "id": 25,
+    "statement": "Cognitive biases influence abstract concept generalization through confirmation, anchoring, and availability heuristics."
+  },
+  {
+    "id": 26,
+    "statement": "Data integration involves preprocessing, normalization, fusion, and machine learning steps."
+  },
+  {
+    "id": 27,
+    "statement": "Data integration involves preprocessing, normalization, fusion, and machine learning."
+  },
+  {
+    "id": 28,
+    "statement": "Data integration success depends on harmonious data preprocessing, normalization, and machine learning."
+  },
+  {
+    "id": 29,
+    "statement": "Research limitations decrease validity and generalizability in AI-edu."
+  },
+  {
+    "id": 30,
+    "statement": "Correlated wave functions mathematically describe entangled particles' joint states."
+  },
+  {
+    "id": 31,
+    "statement": "Data preprocessing cleans, transforms, and prepares data for analysis."
+  },
+  {
+    "id": 32,
+    "statement": "Data integration includes preprocessing, normalization, fusion, and machine learning."
+  },
+  {
+    "id": 33,
+    "statement": "Data integration combines merging, aggregation, transformation, and reconciliation."
+  },
+  {
+    "id": 34,
+    "statement": "Data profiling identifies issues in dataset quality and distribution."
+  },
+  {
+    "id": 35,
+    "statement": "Cognitive biases influence abstract concept generalization through confirmation, anchoring, and availability."
+  },
+  {
+    "id": 36,
+    "statement": "Cognitive biases influence abstract concept generalization through heuristics."
+  },
+  {
+    "id": 37,
+    "statement": "Quantum entanglement arises mathematically from correlated wave functions."
+  },
+  {
+    "id": 38,
+    "statement": "Quantum entanglement arises mathematically from correlated wave function dependencies."
+  },
+  {
+    "id": 39,
+    "statement": "Cognitive biases influence abstract concept generalization through flawed mental shortcuts."
+  },
+  {
+    "id": 40,
+    "statement": "Quantum entanglement links particles instantly through wave functions."
+  },
+  {
+    "id": 41,
+    "statement": "Neuroplasticity involves reorganizing neural connections and adapting brain function."
+  },
+  {
+    "id": 42,
+    "statement": "Data integration includes preprocessing, normalization, fusion, and machine learning."
+  },
+  {
+    "id": 43,
+    "statement": "Data integration combines preprocessing, normalization, fusion, and machine learning techniques."
+  },
+  {
+    "id": 44,
+    "statement": "Data profiling identifies dataset quality, distribution, and relationships issues."
+  },
+  {
+    "id": 45,
+    "statement": "Quantum entanglement arises from correlated wave function dependencies mathematically."
+  },
+  {
+    "id": 46,
+    "statement": "Quantum entanglement connects particles via correlated properties instantly, fundamentally."
+  },
+  {
+    "id": 47,
+    "statement": "Correlated wave functions describe entangled particles' joint probability distribution."
+  },
+  {
+    "id": 48,
+    "statement": "Neuroplasticity refers to brain's adaptive response to changes."
+  },
+  {
+    "id": 49,
+    "statement": "Quantum entanglement is a fundamental property of the universe."
+  },
+  {
+    "id": 50,
+    "statement": "Quantum entanglement challenges classical notions of space and time."
+  },
+  {
+    "id": 51,
+    "statement": "Machine learning algorithms adapt learning material to students' needs statistically."
+  },
+  {
+    "id": 52,
+    "statement": "Data preparation in integration involves discovery, profiling, mapping, and transformation."
+  },
+  {
+    "id": 53,
+    "statement": "Correlated wave functions mathematically describe entangled particles' joint states."
+  },
+  {
+    "id": 54,
+    "statement": "Data integration combines multiple stages, techniques, and tools harmoniously."
+  },
+  {
+    "id": 55,
+    "statement": "Entangled particles' states exhibit correlated, non-local synchronization instantly."
+  },
+  {
+    "id": 56,
+    "statement": "Correlated wave functions describe quantum states with dependencies."
+  },
+  {
+    "id": 57,
+    "statement": "Correlated wave functions mathematically describe entangled particles' joint states."
+  },
+  {
+    "id": 58,
+    "statement": "Correlated wave functions describe entangled particles' joint quantum state mathematically."
+  },
+  {
+    "id": 59,
+    "statement": "Data integration involves preprocessing, normalization, fusion, and machine learning."
+  },
+  {
+    "id": 60,
+    "statement": "Data integration combines multiple steps harmoniously, handling various scenarios."
+  },
+  {
+    "id": 61,
+    "statement": "Correlated wave functions describe entangled particles' non-local correlations mathematically."
+  },
+  {
+    "id": 62,
+    "statement": "Data integration harmonizes data sources through preparation and transformation."
+  },
+  {
+    "id": 63,
+    "statement": "Correlated wave functions mathematically link entangled particles' properties instantly."
+  },
+  {
+    "id": 64,
+    "statement": "Data integration involves combining data sources in unified views."
+  },
+  {
+    "id": 65,
+    "statement": "Bell states are maximally entangled quantum states in quantum mechanics."
+  },
+  {
+    "id": 66,
+    "statement": "Quantum entanglement arises from correlated wave functions' tensor product."
+  },
+  {
+    "id": 67,
+    "statement": "Bell states are max entangled quantum states with instant correlation."
+  },
+  {
+    "id": 68,
+    "statement": "Quantum entanglement is a fundamental property of quantum systems."
+  },
+  {
+    "id": 69,
+    "statement": "Neuroplasticity involves axonal pruning and branching mechanisms efficiently."
+  },
+  {
+    "id": 70,
+    "statement": "Quantum entanglement arises mathematically from correlated wave functions' tensor product."
+  },
+  {
+    "id": 71,
+    "statement": "Quantum entanglement links particles through correlated wave functions."
+  },
+  {
+    "id": 72,
+    "statement": "Data preprocessing ensures data quality, consistency, and accuracy pre-integration"
+  },
+  {
+    "id": 73,
+    "statement": "Correlated wave functions describe entangled particles' joint quantum state mathematically."
+  },
+  {
+    "id": 74,
+    "statement": "Correlated wave functions describe entangled particles' joint probability."
+  },
+  {
+    "id": 75,
+    "statement": "Entangled particles' joint probability distribution is described by correlated wave functions."
+  },
+  {
+    "id": 76,
+    "statement": "Neuroplasticity involves axonal pruning, branching, and synaptic plasticity mechanisms."
+  },
+  {
+    "id": 77,
+    "statement": "Correlated wave functions describe entangled particles' joint probability distributions."
+  },
+  {
+    "id": 78,
+    "statement": "Data integration involves sequential and iterative processing steps: discovery, profiling, mapping, transformation, quality checking, and loading."
+  },
+  {
+    "id": 79,
+    "statement": "Correlated wave functions describe linked quantum states mathematically."
+  },
+  {
+    "id": 80,
+    "statement": "Correlated wave functions describe entangled particles' linked quantum states."
+  },
+  {
+    "id": 81,
+    "statement": "Quantum entanglement connects particles via correlated properties instantly."
+  },
+  {
+    "id": 82,
+    "statement": "Data integration involves combining multiple sources via merging, aggregation, transformation, and reconciliation."
+  },
+  {
+    "id": 83,
+    "statement": "Correlated wave functions describe entangled particles' joint probability distributions."
+  },
+  {
+    "id": 84,
+    "statement": "Machine learning algorithms personalize learning content adaptively."
+  },
+  {
+    "id": 85,
+    "statement": "Data integration combines multiple processing steps, including discovery, profiling, mapping, transformation, quality checking, and loading."
+  },
+  {
+    "id": 86,
+    "statement": "Neuroplasticity involves axonal remodeling, synaptic plasticity, and neurogenesis processes"
+  },
+  {
+    "id": 87,
+    "statement": "Correlated wave functions describe entangled particles' joint states mathematically."
+  },
+  {
+    "id": 88,
+    "statement": "Correlated wave functions mathematically link entangled particles' properties instantly."
+  },
+  {
+    "id": 89,
+    "statement": "Cognitive biases operate through both conscious and unconscious mechanisms."
+  },
+  {
+    "id": 90,
+    "statement": "Correlated wave functions describe entangled particles' joint quantum probability."
+  },
+  {
+    "id": 91,
+    "statement": "Data integration involves fusion, preprocessing, normalization, and machine learning."
+  },
+  {
+    "id": 92,
+    "statement": "Neuroplasticity involves axonal pruning, branching, and synaptic plasticity mechanisms"
+  },
+  {
+    "id": 93,
+    "statement": "Data integration involves preprocessing, normalization, fusion, and machine learning steps harmoniously."
+  },
+  {
+    "id": 94,
+    "statement": "Data integration involves data profiling, validation, transformation, standardization, and aggregation."
+  },
+  {
+    "id": 95,
+    "statement": "Research limitations impact validity and generalizability in AI-education studies."
+  },
+  {
+    "id": 96,
+    "statement": "Correlated wave functions mathematically describe entangled particles' joint quantum state."
+  },
+  {
+    "id": 97,
+    "statement": "Data integration's process encompasses preprocessing, normalization, and fusion."
+  },
+  {
+    "id": 98,
+    "statement": "Data integration combines preprocessing, fusion, normalization, and machine learning harmoniously."
+  },
+  {
+    "id": 99,
+    "statement": "Quantum entanglement links particles through non-local correlations instantly."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 77,
+  "statement": "Correlated wave functions describe entangled particles' joint probability distributions."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to know more about the knowledge base we're working with. I've been reading through the statements, and I'm going to identify one aspect that I'm least confident about, and that is:
+
+Item 77: "Correlated wave functions describe entangled particles' joint probability distributions."
+
+Why I'm uncertain about that aspect is because I'm not entirely sure what "correlated wave functions" mean in this context. I understand that wave functions are used to describe the quantum state of a system, but I'm not confident in my understanding of how they relate to entangled particles and probability distributions.
+
+Specifically, I'd like to know more about what "correlated wave functions" mean, and how they describe the joint probability distributions of entangled particles. Can you help me clarify this?
+
+What do you think?

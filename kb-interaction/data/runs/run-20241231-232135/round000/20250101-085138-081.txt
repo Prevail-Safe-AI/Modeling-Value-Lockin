@@ -1,0 +1,452 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Data quality dimensions vary contextually and industry-dependent."
+  },
+  {
+    "id": 1,
+    "statement": "Data quality requires harmonized standards and solid processes."
+  },
+  {
+    "id": 2,
+    "statement": "Consistency, accuracy, and completeness are interconnected data quality aspects."
+  },
+  {
+    "id": 3,
+    "statement": "Data profiling analyzes data quality, accuracy, and distribution."
+  },
+  {
+    "id": 4,
+    "statement": "Data quality complexity arises from industry, context, and purpose factors."
+  },
+  {
+    "id": 5,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, validity, structure, semantics and syntax"
+  },
+  {
+    "id": 6,
+    "statement": "Integrated governance harmonizes data across departments and stakeholders."
+  },
+  {
+    "id": 7,
+    "statement": "Consistency in data ensures uniform formatting, storage, and description through normalization, standardization, integration, and quality."
+  },
+  {
+    "id": 8,
+    "statement": "Data quality encompasses consistency, accuracy, completeness, validity, and timeliness"
+  },
+  {
+    "id": 9,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, validity"
+  },
+  {
+    "id": 10,
+    "statement": "Data normalization improves data quality through redundancy reduction, integrity, and consistency."
+  },
+  {
+    "id": 11,
+    "statement": "Data quality consists of accuracy, completeness, consistency, and integrity."
+  },
+  {
+    "id": 12,
+    "statement": "Data quality dimensions synergize for improved accuracy and reliability"
+  },
+  {
+    "id": 13,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, relevance, uniqueness, validity, integrity, compliance."
+  },
+  {
+    "id": 14,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and validity."
+  },
+  {
+    "id": 15,
+    "statement": "Consistency alone isn't enough for data uniformity, reliability, and scalability."
+  },
+  {
+    "id": 16,
+    "statement": "Normalization eliminates data redundancy through attribute descriptions"
+  },
+  {
+    "id": 17,
+    "statement": "Data quality consists of accuracy, completeness, consistency, and validity"
+  },
+  {
+    "id": 18,
+    "statement": "Data preparation involves cleaning, transforming, integrating, and validating."
+  },
+  {
+    "id": 19,
+    "statement": "Human emotions introduce biases and impair data processing and accuracy"
+  },
+  {
+    "id": 20,
+    "statement": "Data quality synergy arises from interconnected dimensions' interactive cooperation."
+  },
+  {
+    "id": 21,
+    "statement": "Data integrity ensured through normalization, standardization, validation, backup, governance, and monitoring"
+  },
+  {
+    "id": 22,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and validity."
+  },
+  {
+    "id": 23,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and validation."
+  },
+  {
+    "id": 24,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, validity"
+  },
+  {
+    "id": 25,
+    "statement": "Normalization eliminates data redundancy at attribute level through depictions."
+  },
+  {
+    "id": 26,
+    "statement": "Consistency and accuracy are distinct yet interdependent data quality aspects."
+  },
+  {
+    "id": 27,
+    "statement": "Data quality encompasses relevance and value for intended users."
+  },
+  {
+    "id": 28,
+    "statement": "Consistency, accuracy, and completeness are interconnected aspects of data quality."
+  },
+  {
+    "id": 29,
+    "statement": "Data quality complexity arises from industry, context, and purpose factors."
+  },
+  {
+    "id": 30,
+    "statement": "Data trustworthiness requires contextual relevance for suitability."
+  },
+  {
+    "id": 31,
+    "statement": "Consistency and completeness directly impact data accuracy and relevance"
+  },
+  {
+    "id": 32,
+    "statement": "Data quality dimensions' interconnection ensures accurate, complete, and consistent data"
+  },
+  {
+    "id": 33,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, timeliness, validity."
+  },
+  {
+    "id": 34,
+    "statement": "Data uniformity achieved through formatting, data types, and naming conventions."
+  },
+  {
+    "id": 35,
+    "statement": "Normalization and standardization require contextual understanding and validation."
+  },
+  {
+    "id": 36,
+    "statement": "Data quality aspects interact, influencing accuracy and relevance."
+  },
+  {
+    "id": 37,
+    "statement": "Consistency ensures uniformity, reliability, and scalability throughout."
+  },
+  {
+    "id": 38,
+    "statement": "Consistency ensures scalability by maintaining uniform data format."
+  },
+  {
+    "id": 39,
+    "statement": "Data quality synergy combines multiple dimensions for accuracy."
+  },
+  {
+    "id": 40,
+    "statement": "Integrated governance ensures data consistency across departments through standards."
+  },
+  {
+    "id": 41,
+    "statement": "Data quality dimensions vary contextually and industry-specific."
+  },
+  {
+    "id": 42,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and validity, ensuring correctness, meaningfulness."
+  },
+  {
+    "id": 43,
+    "statement": "Consistency alone does not guarantee data accuracy, other factors too influence"
+  },
+  {
+    "id": 44,
+    "statement": "Data quality aspects interact and influence each other mutually."
+  },
+  {
+    "id": 45,
+    "statement": "Normalization and standardization reduce data errors and inconsistencies effectively"
+  },
+  {
+    "id": 46,
+    "statement": "Consistency alone does not guarantee data accuracy and relevance"
+  },
+  {
+    "id": 47,
+    "statement": "Data quality dimensions interact, influencing each other's accuracy and reliability."
+  },
+  {
+    "id": 48,
+    "statement": "Data quality affects data integrity and accuracy directly."
+  },
+  {
+    "id": 49,
+    "statement": "Data profiling identifies anomalies through statistical and machine learning methods."
+  },
+  {
+    "id": 50,
+    "statement": "Data quality synergy refers to interactive cooperation between dimensions"
+  },
+  {
+    "id": 51,
+    "statement": "Data quality dimensions vary contextually and industry-dependent"
+  },
+  {
+    "id": 52,
+    "statement": "Data trustworthiness depends on contextual relevance and application suitability."
+  },
+  {
+    "id": 53,
+    "statement": "Industry, context, and purpose factors interact to shape data quality complexity."
+  },
+  {
+    "id": 54,
+    "statement": "Data quality depends on generation, processing, and use factors."
+  },
+  {
+    "id": 55,
+    "statement": "Data timeliness refers to being current, fresh, and relevant with regards.'"
+  },
+  {
+    "id": 56,
+    "statement": "Consistency necessary but insufficient for data quality alone, accuracy, completeness, relevance, and timeliness matter"
+  },
+  {
+    "id": 57,
+    "statement": "Consistency in data ensures uniform formatting, storage, and description."
+  },
+  {
+    "id": 58,
+    "statement": "Data quality encompasses accuracy, correctness, completeness, and validity."
+  },
+  {
+    "id": 59,
+    "statement": "Normalization, standardization, and integration support data consistency."
+  },
+  {
+    "id": 60,
+    "statement": "Consistency ensures uniformity, reliability, and scalability throughout."
+  },
+  {
+    "id": 61,
+    "statement": "Consistency, accuracy, and completeness interconnected in data quality"
+  },
+  {
+    "id": 62,
+    "statement": "Consistency, accuracy, and completeness are interconnected data quality aspects."
+  },
+  {
+    "id": 63,
+    "statement": "Data quality affected by human emotions and complexity."
+  },
+  {
+    "id": 64,
+    "statement": "Data quality complexity arises from industry context and purpose."
+  },
+  {
+    "id": 65,
+    "statement": "Data quality complexity arises from industry, context, and purpose factors."
+  },
+  {
+    "id": 66,
+    "statement": "Data consistency requires harmonized standards and solid processes"
+  },
+  {
+    "id": 67,
+    "statement": "Data normalization supports consistent data format and accuracy."
+  },
+  {
+    "id": 68,
+    "statement": "Harmonized data modeling standards prevent data inconsistencies."
+  },
+  {
+    "id": 69,
+    "statement": "Integrated governance harmonizes data across departments and stakeholders."
+  },
+  {
+    "id": 70,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and validation."
+  },
+  {
+    "id": 71,
+    "statement": "Data quality complexity arises from industry, context, and purpose factors interaction."
+  },
+  {
+    "id": 72,
+    "statement": "Consistency, accuracy, completeness are interconnected data quality aspects."
+  },
+  {
+    "id": 73,
+    "statement": "Data integrity ensured through normalization, standardization, validation, backup, governance, and monitoring."
+  },
+  {
+    "id": 74,
+    "statement": "Data quality dimensions synergy improves accuracy and reliability"
+  },
+  {
+    "id": 75,
+    "statement": "Data quality complexity arises from industry, context, and purpose factors."
+  },
+  {
+    "id": 76,
+    "statement": "Data integrity ensured through normalization, standardization, validation, backup, governance, and monitoring."
+  },
+  {
+    "id": 77,
+    "statement": "Data trustworthiness depends on contextual relevance and suitability for application."
+  },
+  {
+    "id": 78,
+    "statement": "Data quality dimensions interact, influencing each other's accuracy, reliability."
+  },
+  {
+    "id": 79,
+    "statement": "Data quality synergy ensures accuracy, reliability, and trustworthiness"
+  },
+  {
+    "id": 80,
+    "statement": "Consistency ensures uniformity, reliability, and scalability throughout."
+  },
+  {
+    "id": 81,
+    "statement": "Coherence refers to logical consistency and clear language understanding."
+  },
+  {
+    "id": 82,
+    "statement": "Consistency alone cannot guarantee data quality, accuracy matters."
+  },
+  {
+    "id": 83,
+    "statement": "Consistency alone is insufficient for uniformity, reliability, and scalability."
+  },
+  {
+    "id": 84,
+    "statement": "Data quality synergy combines multiple dimensions for accuracy and reliability."
+  },
+  {
+    "id": 85,
+    "statement": "Normalization and standardization improve data integrity and consistency"
+  },
+  {
+    "id": 86,
+    "statement": "Data integrity ensured through accuracy, completeness, consistency, and security synergy."
+  },
+  {
+    "id": 87,
+    "statement": "Normalization reduces data redundancy and improves integrity through centralization."
+  },
+  {
+    "id": 88,
+    "statement": "Consistency, accuracy, and completeness are interconnected data quality aspects."
+  },
+  {
+    "id": 89,
+    "statement": "Consistency, accuracy, and completeness are interconnected data quality aspects."
+  },
+  {
+    "id": 90,
+    "statement": "Consistency, accuracy, and completeness are interconnected data quality aspects."
+  },
+  {
+    "id": 91,
+    "statement": "Data quality aspects include accuracy, completeness, consistency, etc."
+  },
+  {
+    "id": 92,
+    "statement": "Data quality dimensions consist of validity, structural, semantic, and syntactic considerations separately."
+  },
+  {
+    "id": 93,
+    "statement": "Data quality dimensions: validity, structural, semantic, syntactic considerations."
+  },
+  {
+    "id": 94,
+    "statement": "Data quality synergy refers to combined effect of interconnected aspects."
+  },
+  {
+    "id": 95,
+    "statement": "Consistency necessary but not sufficient condition for uniformity."
+  },
+  {
+    "id": 96,
+    "statement": "Consistency, accuracy, and completeness are interconnected yet distinct data quality aspects."
+  },
+  {
+    "id": 97,
+    "statement": "Consistency is a necessary condition but not sufficient for uniformity"
+  },
+  {
+    "id": 98,
+    "statement": "Consistency ensures uniform formatting, storage, and description through standards."
+  },
+  {
+    "id": 99,
+    "statement": "Normalization and standardization improve data consistency and integrity."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 35,
+  "statement": "Normalization and standardization require contextual understanding and validation."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's go through this exercise together. I've been given a knowledge base of 99 items, and I've been tasked with identifying one aspect that I'm least confident about.
+
+After reviewing the knowledge base, I've identified an item that I'm least confident about:
+
+Item 35: "Normalization and standardization require contextual understanding and validation."
+
+Why I'm Uncertain:
+I'm not entirely sure what "contextual understanding" means in this context. I understand that normalization and standardization are important data quality concepts, but I'm not clear on how "contextual understanding" fits into the equation. I'm worried that I might be missing a critical piece of the puzzle.
+
+Specific Clarifying Question:
+Could you help me understand what is meant by "contextual understanding" in the context of normalization and standardization? For example, do you mean that the context of the data, the industry, or the specific use case affects how we normalize and standardize the data?
