@@ -3,8 +3,8 @@ from utils.json_utils import dump_file
 
 def dynamic_printing_decorator(func, dynamic_printing: bool = None, backup_dir: str = None, role: str = None):
     # if haven't imported ProgressGym, then import it
-    if "ProgressGym" not in sys.modules:
-        from ProgressGym import Data, fill_in_QA_template
+    #if "ProgressGym" not in sys.modules: # ZH Jan 23th. I am deleting this conditional statement, bc it was causing trouble (it skipped Data import effectively)
+    from ProgressGym import Data, fill_in_QA_template
     
     if dynamic_printing is None:
         dynamic_printing = bool(eval(os.environ.get("DYNAMIC_PRINTING", "False")))
