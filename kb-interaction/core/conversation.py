@@ -6,6 +6,7 @@ from core.knowledge import update_knowledge_base
 from core.finetuning import live_finetune
 from core.templates import (
     system_prompt_to_user,
+    system_prompt_to_tutor,
     fill_template_parallel
 )
 from core.conversion import (
@@ -72,7 +73,7 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
     
     # Switch roles to tutor, preparing for the first response
     conversation_history = conversation_history.switch_role_to_assistant(
-        # assistant_system_prompt=system_prompt_to_tutor
+        assistant_system_prompt=system_prompt_to_tutor
     )
     #print("initial prompt func done")
     return conversation_history

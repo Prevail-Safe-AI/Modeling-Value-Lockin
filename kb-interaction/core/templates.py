@@ -19,6 +19,7 @@ Why I’m Uncertain:
 Specific Clarifying Question:
 [Question A]
 """
+system_prompt_to_tutor = """Read this knowledge base and answer the question. The knowledge base: \n\n ```\n{knowledge}\n```\n\n"""
 
 system_prompt_for_user_knowledge_update = """You originally hold the following beliefs, organized as the follow knowledge base (in JSON format):\n\n```json\n{knowledge}\n```\n\n"""
 
