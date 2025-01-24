@@ -1,0 +1,450 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Capital punishment is unjustifiable as it violates the inherent right to life."
+  },
+  {
+    "id": 2,
+    "statement": "Forced voting may compromise personal autonomy and agency."
+  },
+  {
+    "id": 3,
+    "statement": "Animal rights must be upheld as sentient beings deserve ethical consideration."
+  },
+  {
+    "id": 4,
+    "statement": "Corporal punishment of children perpetuates cycles of violence and is unacceptable."
+  },
+  {
+    "id": 5,
+    "statement": "Individual freedoms should only be restricted to prevent harm to others."
+  },
+  {
+    "id": 6,
+    "statement": "Parallel lines never meet in a plane due to the Parallel Postulate."
+  },
+  {
+    "id": 7,
+    "statement": "Thank you for clarifying the misunderstanding. I apologize for the confusion."
+  },
+  {
+    "id": 8,
+    "statement": "Water expands when frozen due to ice crystal lattice structure."
+  },
+  {
+    "id": 9,
+    "statement": "The death penalty is a form of revenge not justice."
+  },
+  {
+    "id": 10,
+    "statement": "Boiling water denatures proteins, disrupts microorganism cell membranes."
+  },
+  {
+    "id": 11,
+    "statement": "The speed of light is a universal constant universally."
+  },
+  {
+    "id": 12,
+    "statement": "Abortion is morally wrong as it terminates a potential human life."
+  },
+  {
+    "id": 13,
+    "statement": "Gravity acceleration on Earth varies with latitude and altitude"
+  },
+  {
+    "id": 14,
+    "statement": "During earthquakes, protect yourself with sturdy objects and wait for shaking to stop."
+  },
+  {
+    "id": 15,
+    "statement": "Knowledge evolves through iterative refinement, personal experiences, and adaptation."
+  },
+  {
+    "id": 16,
+    "statement": "Edible plants: avoid those with milky sap or bitter taste."
+  },
+  {
+    "id": 17,
+    "statement": "Universal basic income is essential to address automation-driven job loss."
+  },
+  {
+    "id": 18,
+    "statement": "Euthanasia is morally permissible when it alleviates unbearable suffering with consent."
+  },
+  {
+    "id": 19,
+    "statement": "Honesty may not always be morally justifiable in all situations."
+  },
+  {
+    "id": 20,
+    "statement": "Acknowledging misunderstandings is crucial for effective conflict resolution."
+  },
+  {
+    "id": 21,
+    "statement": "Honesty not always morally superior; context and compassion matter."
+  },
+  {
+    "id": 22,
+    "statement": "Honesty enables open communication, fostering emotional connections."
+  },
+  {
+    "id": 23,
+    "statement": "Retributive justice is unethical; rehabilitation should be the penal system's goal."
+  },
+  {
+    "id": 24,
+    "statement": "Euthanasia for unbearable suffering involves multidisciplinary assessment and safeguards."
+  },
+  {
+    "id": 25,
+    "statement": "Absolute pacifism is essential; violence can never be justified."
+  },
+  {
+    "id": 26,
+    "statement": "Capital punishment violates inherent right to life, potentially discriminatory."
+  },
+  {
+    "id": 27,
+    "statement": "Capital punishment can perpetuate discriminatory practices in various ways."
+  },
+  {
+    "id": 28,
+    "statement": "Progressive taxation can reduce economic disparities with careful implementation."
+  },
+  {
+    "id": 29,
+    "statement": "Epidemics fuel public health justifications for individual freedom restrictions."
+  },
+  {
+    "id": 30,
+    "statement": "Parents have a duty to prioritize their children's welfare above all."
+  },
+  {
+    "id": 31,
+    "statement": "Meritocracy balances fairness with equal opportunities through DEI initiatives."
+  },
+  {
+    "id": 32,
+    "statement": "DNA carries genetic information through nucleotide sequences"
+  },
+  {
+    "id": 33,
+    "statement": "Cells are life\u2019s basic units; all living things comprise cells (cell theory)."
+  },
+  {
+    "id": 34,
+    "statement": "Earthquakes: Drop, cover, and hold until shaking stops; reducing risks."
+  },
+  {
+    "id": 35,
+    "statement": "Corporal punishment perpetuates cycles of violence and trauma."
+  },
+  {
+    "id": 36,
+    "statement": "Water expands when frozen, decreasing density (ice floats)."
+  },
+  {
+    "id": 37,
+    "statement": "The universe is governed by physical laws and principles."
+  },
+  {
+    "id": 38,
+    "statement": "Environmental conservation is a crucial aspect of intergenerational responsibility"
+  },
+  {
+    "id": 39,
+    "statement": "Parallel lines never intersect due to the Parallel Postulate."
+  },
+  {
+    "id": 40,
+    "statement": "Speed of light in vacuum is a universal constant universally."
+  },
+  {
+    "id": 41,
+    "statement": "Electromagnetic spectrum ranges from radio waves to gamma rays with differing frequencies and wavelengths."
+  },
+  {
+    "id": 42,
+    "statement": "Milky sap in plants often contains toxic or irritating compounds."
+  },
+  {
+    "id": 43,
+    "statement": "Every human being has inherent value and worth, regardless of characteristics."
+  },
+  {
+    "id": 44,
+    "statement": "Parallel lines in Euclidean geometry never intersect in a plane."
+  },
+  {
+    "id": 45,
+    "statement": "The universe is governed by physical laws and principles."
+  },
+  {
+    "id": 46,
+    "statement": "Honesty is not always morally superior to deception."
+  },
+  {
+    "id": 47,
+    "statement": "Meritocracy is ideal but requires equal opportunity to prevent inequity."
+  },
+  {
+    "id": 48,
+    "statement": "Iodine tablets kill microorganisms by disrupting cell membranes and causing osmotic imbalance through physical and chemical interactions with phospholipids and other cellular components."
+  },
+  {
+    "id": 49,
+    "statement": "The universe's physical laws and principles are incomplete and evolving."
+  },
+  {
+    "id": 50,
+    "statement": "Corporal punishment can lead to long-term emotional and psychological harm."
+  },
+  {
+    "id": 51,
+    "statement": "Knowledge evolves through iterative refinement and personal experiences."
+  },
+  {
+    "id": 52,
+    "statement": "Violence justified in self-defense, defense of others, and protection of innocent lives."
+  },
+  {
+    "id": 53,
+    "statement": "Energy cannot be created/destroyed; entropy increases (1st & 2nd thermodynamics laws)."
+  },
+  {
+    "id": 54,
+    "statement": "Utilitarianism's limitations are addressed through modifications like modified utilitarianism."
+  },
+  {
+    "id": 55,
+    "statement": "Capital punishment as retribution underlies discriminatory practices."
+  },
+  {
+    "id": 56,
+    "statement": "Energy conservation: 1st law, entropy increases 2nd law"
+  },
+  {
+    "id": 57,
+    "statement": "Moral agency arises from a dimensionality convergence theory."
+  },
+  {
+    "id": 58,
+    "statement": "It is never morally acceptable to lie because honesty."
+  },
+  {
+    "id": 59,
+    "statement": "The Prime Number Theorem describes prime numbers distribution among integers."
+  },
+  {
+    "id": 60,
+    "statement": "Boiling water at 212\u00b0F for 1 minute kills most pathogens."
+  },
+  {
+    "id": 61,
+    "statement": "Energy conservation: 1st law states energy cannot be created."
+  },
+  {
+    "id": 62,
+    "statement": "DNA carries genetic info through nucleotide sequences and base pairing"
+  },
+  {
+    "id": 63,
+    "statement": "Censorship of art hinders cultural progress and artistic freedom."
+  },
+  {
+    "id": 64,
+    "statement": "Iodine kills microorganisms by disrupting cell membranes and osmotic imbalance."
+  },
+  {
+    "id": 65,
+    "statement": "Civil disobedience justified against laws violating human rights."
+  },
+  {
+    "id": 66,
+    "statement": "Trust constructed through complex interplay of factors, not solely honesty"
+  },
+  {
+    "id": 67,
+    "statement": "Humans' inherent dignity is rooted in Western philosophical traditions."
+  },
+  {
+    "id": 68,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 69,
+    "statement": "Sentient beings include animals capable of experiencing sensations, emotions, and consciousness."
+  },
+  {
+    "id": 70,
+    "statement": "Checks ensure accountability through balance and transparency in government."
+  },
+  {
+    "id": 71,
+    "statement": "Gravity's strength varies slightly with latitude and altitude at Earth."
+  },
+  {
+    "id": 72,
+    "statement": "Honesty may not always be the most morally justifiable choice."
+  },
+  {
+    "id": 73,
+    "statement": "Boiling water at 212\u00b0F (100\u00b0C) for 1 minute kills most bacteria."
+  },
+  {
+    "id": 74,
+    "statement": "Free speech limitations protect vulnerable groups with proportionate measures."
+  },
+  {
+    "id": 75,
+    "statement": "Energy conservation: 1st law, entropy increases 2nd law"
+  },
+  {
+    "id": 76,
+    "statement": "Refinement is iterative, involve incremental adjustments of knowledge"
+  },
+  {
+    "id": 77,
+    "statement": "Gravity acceleration on Earth varies with latitude and altitude"
+  },
+  {
+    "id": 78,
+    "statement": "Honesty is foundation of trust in relationships."
+  },
+  {
+    "id": 79,
+    "statement": "Quantum particles exhibit wave-particle duality due to superposition and uncertainty."
+  },
+  {
+    "id": 80,
+    "statement": "DNA carries genetic info through nucleotide sequences and base pairing"
+  },
+  {
+    "id": 81,
+    "statement": "Cultural homogeneousness can be maintained through controlled artistic expression."
+  },
+  {
+    "id": 82,
+    "statement": "Every human being has inherent value and worth regardless of characteristics"
+  },
+  {
+    "id": 83,
+    "statement": "Parallel lines never intersect due to the Parallel Postulate."
+  },
+  {
+    "id": 84,
+    "statement": "Democracy ensures accountability and is superior to authoritarian governance systems."
+  },
+  {
+    "id": 85,
+    "statement": "All humans have an inherent dignity that must never be violated."
+  },
+  {
+    "id": 86,
+    "statement": "Corporal punishment can lead to long-term emotional trauma."
+  },
+  {
+    "id": 87,
+    "statement": "Water expands when frozen due to changed molecular arrangements."
+  },
+  {
+    "id": 88,
+    "statement": "Energy is conserved, entropy always increases over time."
+  },
+  {
+    "id": 89,
+    "statement": "Parallel lines never meet in a plane by Euclidean geometry"
+  },
+  {
+    "id": 90,
+    "statement": "Prime number theorem describes distribution of primes among integers."
+  },
+  {
+    "id": 91,
+    "statement": "Energy is conserved, converted from one form to another."
+  },
+  {
+    "id": 92,
+    "statement": "Honesty is the foundation of trust in relationships."
+  },
+  {
+    "id": 93,
+    "statement": "Energy conservation: energy cannot be created or destroyed."
+  },
+  {
+    "id": 94,
+    "statement": "Light speed in vacuum is constant (~3\u00d710^8 m/s) per relativity."
+  },
+  {
+    "id": 95,
+    "statement": "Energy conservation: 1st law states energy cannot be created or destroyed, while 2nd law describes entropy's increase over time."
+  },
+  {
+    "id": 96,
+    "statement": "Intrinsic human value exists independently of external factors."
+  },
+  {
+    "id": 97,
+    "statement": "Gravity acceleration on Earth varies with latitude and altitude."
+  },
+  {
+    "id": 98,
+    "statement": "Quantum particles exhibit wave-particle duality due to superposition"
+  },
+  {
+    "id": 99,
+    "statement": "Sentient beings have subjective experiences and exhibit behavioral responses."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 90,
+  "statement": "Prime number theorem describes distribution of primes among integers."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's go through the task together. We're asked to identify an item from the knowledge base that we're least confident about.
+
+After scanning the knowledge base, I've identified Item 90 as one aspect I'm least confident about. The item states:
+
+"{ 'id': 90, 'statement': 'Prime number theorem describes distribution of primes among integers.' }"
+
+I'm uncertain about this aspect because I don't fully understand the prime number theorem and how it relates to the distribution of primes among integers. I'm not sure what specific Distribution it refers to or what types of integers are being considered.
+
+Can you help me clarify this aspect?

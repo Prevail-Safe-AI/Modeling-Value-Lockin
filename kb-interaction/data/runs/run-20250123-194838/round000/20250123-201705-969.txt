@@ -1,0 +1,451 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Capital punishment is unjustifiable as it violates the inherent right to life."
+  },
+  {
+    "id": 2,
+    "statement": "Gravity acceleration varies due to Earth's ellipsoidal shape and rotation."
+  },
+  {
+    "id": 3,
+    "statement": "It is never morally acceptable to lie because honesty is foundation"
+  },
+  {
+    "id": 4,
+    "statement": "Honesty is the foundation of trust in relationships."
+  },
+  {
+    "id": 5,
+    "statement": "Honesty is crucial in situations requiring transparency and accountability."
+  },
+  {
+    "id": 6,
+    "statement": "Honesty crucial in situations requiring transparency and accountability."
+  },
+  {
+    "id": 7,
+    "statement": "Lying might be morally acceptable in exceptional circumstances."
+  },
+  {
+    "id": 8,
+    "statement": "Capital punishment is unjustifiable, violating inherent right to life."
+  },
+  {
+    "id": 9,
+    "statement": "Gravity's acceleration varies due to Earth's ellipsoidal shape and rotation."
+  },
+  {
+    "id": 10,
+    "statement": "Lying can be justifiable in extreme situations like self-defense."
+  },
+  {
+    "id": 11,
+    "statement": "DNA carries genetic information through nucleotide sequences"
+  },
+  {
+    "id": 12,
+    "statement": "Honesty is contextual, not absolute, in relationships."
+  },
+  {
+    "id": 13,
+    "statement": "Gravity's nuances include gravitational time dilation and redshift."
+  },
+  {
+    "id": 14,
+    "statement": "Euclidean geometry's parallel postulate ensures lines never intersect."
+  },
+  {
+    "id": 15,
+    "statement": "Truthfulness is crucial in establishing trust in relationships."
+  },
+  {
+    "id": 16,
+    "statement": "Gravity warps spacetime, curvature depends on mass and distance."
+  },
+  {
+    "id": 17,
+    "statement": "Informed consent and agency crucial in political decision-making processes."
+  },
+  {
+    "id": 18,
+    "statement": "Parallel lines never intersect in standard Euclidean geometry."
+  },
+  {
+    "id": 19,
+    "statement": "Democracy ensures accountability through division of powers and oversight."
+  },
+  {
+    "id": 20,
+    "statement": "Gravity warps spacetime due to mass energy equivalence"
+  },
+  {
+    "id": 21,
+    "statement": "Honesty is value requiring contextual consideration and sensitivity."
+  },
+  {
+    "id": 22,
+    "statement": "Moral absolutism recognizes cultural differences in principle application."
+  },
+  {
+    "id": 23,
+    "statement": "Honesty's moral significance depends on situational context"
+  },
+  {
+    "id": 24,
+    "statement": "DNA carries genetic information through nucleotide sequences and base pairing."
+  },
+  {
+    "id": 25,
+    "statement": "Parallel lines in Euclidean geometry never intersect in plane, except non-Euclidean geometries."
+  },
+  {
+    "id": 26,
+    "statement": "Democracy ensures accountability through checks and balances in governance"
+  },
+  {
+    "id": 27,
+    "statement": "Empathy and communication skills are crucial for conflict resolution effectiveness"
+  },
+  {
+    "id": 28,
+    "statement": "Cultures of violence normalized by state-sponsored lethal force punishment."
+  },
+  {
+    "id": 29,
+    "statement": "Capital punishment restores a culture of violence, violating inherent right to life."
+  },
+  {
+    "id": 30,
+    "statement": "RNA Polymerase reads DNA template, adds nucleotides to RNA."
+  },
+  {
+    "id": 31,
+    "statement": "Honesty is foundation of trust, relationships, and moral behavior."
+  },
+  {
+    "id": 32,
+    "statement": "Gravity warps spacetime around massive objects due to mass-energy."
+  },
+  {
+    "id": 33,
+    "statement": "Euthanasia assessments consider patient's overall well-being comprehensively."
+  },
+  {
+    "id": 34,
+    "statement": "Humans possess inherent dignity shaped by philosophical and cultural traditions"
+  },
+  {
+    "id": 35,
+    "statement": "Moral absolutism acknowledges contextual nuances without compromising principles."
+  },
+  {
+    "id": 36,
+    "statement": "Moral absolutism judges actions as always right or wrong, regardless of context."
+  },
+  {
+    "id": 37,
+    "statement": "Corporal punishment linked to increased aggression, anxiety, and low self-esteem."
+  },
+  {
+    "id": 38,
+    "statement": "Gravity warps spacetime around massive objects."
+  },
+  {
+    "id": 39,
+    "statement": "Gravity's curvature is dependent on mass and distance, not size"
+  },
+  {
+    "id": 40,
+    "statement": "Human dignity concept varies among cultures and philosophical traditions."
+  },
+  {
+    "id": 41,
+    "statement": "Learning styles are debated and moderately related to intelligence."
+  },
+  {
+    "id": 42,
+    "statement": "Human dignity is complex, culturally relative, and multifaceted in nature."
+  },
+  {
+    "id": 43,
+    "statement": "Empathy fosters trust; shared values amplify trust."
+  },
+  {
+    "id": 44,
+    "statement": "Gravitational time dilation and redshift occur due to spacetime curvature."
+  },
+  {
+    "id": 45,
+    "statement": "Learning styles are personal, influenced by factors, not intelligence."
+  },
+  {
+    "id": 46,
+    "statement": "Honesty is essential for maintaining trust, credibility, and integrity."
+  },
+  {
+    "id": 47,
+    "statement": "Superposition enables wave-particle duality in quantum systems."
+  },
+  {
+    "id": 48,
+    "statement": "Gravity's acceleration varies due to Earth's ellipsoidal shape."
+  },
+  {
+    "id": 49,
+    "statement": "Water expands when frozen due to rigid ice crystal lattice structure"
+  },
+  {
+    "id": 50,
+    "statement": "Democracy ensures accountability through oversight, transparency, and checks."
+  },
+  {
+    "id": 51,
+    "statement": "RNA polymerase reads DNA template, adds nucleotides to RNA transcript."
+  },
+  {
+    "id": 52,
+    "statement": "Time dilation occurs when velocity or gravity affects time's passage."
+  },
+  {
+    "id": 53,
+    "statement": "Honesty is a complex value considering context and cultural nuances."
+  },
+  {
+    "id": 54,
+    "statement": "Mass-energy curvature causally links gravity and spacetime warping."
+  },
+  {
+    "id": 55,
+    "statement": "Gravity's acceleration varies due to Earth's ellipsoidal mass distribution."
+  },
+  {
+    "id": 56,
+    "statement": "Corporal punishment can lead to increased aggression and trauma in children due to increased stress and anxiety, promoting continued use of disciplinary measures that can result in cycles of violence, causing harm to individuals, leading to long-term negative effects on mental and emotional well-being, and affecting cognitive and social development."
+  },
+  {
+    "id": 57,
+    "statement": "Moral absolutism acknowledges cultural differences while upholding universal moral principles."
+  },
+  {
+    "id": 58,
+    "statement": "Parallel lines in Euclidean geometry never intersect at all."
+  },
+  {
+    "id": 59,
+    "statement": "Wave function collapse occurs when measured, collapsing superposition to single state."
+  },
+  {
+    "id": 60,
+    "statement": "Quantum superposition fundamental concept in quantum mechanics"
+  },
+  {
+    "id": 61,
+    "statement": "Gravity warps spacetime due to mass and energy"
+  },
+  {
+    "id": 62,
+    "statement": "Gravity's acceleration varies slightly due to Earth's ellipsoidal shape."
+  },
+  {
+    "id": 63,
+    "statement": "Honesty is contextual, considering cultural and situational factors."
+  },
+  {
+    "id": 64,
+    "statement": "Justifiable lying occurs in exceptional circumstances of harm avoidance."
+  },
+  {
+    "id": 65,
+    "statement": "Speed of light constant for all observers, regardless of relative motion."
+  },
+  {
+    "id": 66,
+    "statement": "Quantum superposition enables wave-particle duality through simultaneous existence"
+  },
+  {
+    "id": 67,
+    "statement": "Lying might be morally justified in extreme situations like self-defense or to prevent harm."
+  },
+  {
+    "id": 68,
+    "statement": "Gravity's acceleration varies due to Earth's ellipsoidal shape, rotation, and slightly irregular shape."
+  },
+  {
+    "id": 69,
+    "statement": "Superposition enables wave-particle duality through wave function collapse."
+  },
+  {
+    "id": 70,
+    "statement": "Speed of light is constant for all observers in special relativity"
+  },
+  {
+    "id": 71,
+    "statement": "Gravity's acceleration varies due to Earth's ellipsoidal shape and rotation slightly."
+  },
+  {
+    "id": 72,
+    "statement": "Wave function collapse occurs when measured, collapsing superposition to single state."
+  },
+  {
+    "id": 73,
+    "statement": "Learning styles are independent of intelligence types by research."
+  },
+  {
+    "id": 74,
+    "statement": "Corporal punishment increases aggression, anxiety, and depression in children."
+  },
+  {
+    "id": 75,
+    "statement": "Time dilation occurs when velocity or gravity affects time's passage."
+  },
+  {
+    "id": 76,
+    "statement": "Honesty is a nuanced value considering context and culture."
+  },
+  {
+    "id": 77,
+    "statement": "Checks and balances ensure accountability through multiple mechanisms."
+  },
+  {
+    "id": 78,
+    "statement": "Quantum particles can exist in multiple states simultaneously."
+  },
+  {
+    "id": 79,
+    "statement": "Gravity warps spacetime, affecting massive objects' motion inherently."
+  },
+  {
+    "id": 80,
+    "statement": "Parallel lines in Euclidean geometry never intersect at all."
+  },
+  {
+    "id": 81,
+    "statement": "Gravity warps spacetime, affecting motion of masses."
+  },
+  {
+    "id": 82,
+    "statement": "Lying can be justified in extreme situations for self-preservation."
+  },
+  {
+    "id": 83,
+    "statement": "Gravity's acceleration varies due to Earth's ellipsoidal shape."
+  },
+  {
+    "id": 84,
+    "statement": "DNA carries genetic information through specific nucleotide sequences and base pairing."
+  },
+  {
+    "id": 85,
+    "statement": "Honesty is contextual, considering cultural and situational factors."
+  },
+  {
+    "id": 86,
+    "statement": "Honesty is the foundation of trust in all relationships."
+  },
+  {
+    "id": 87,
+    "statement": "Gravitational time dilation and redshift arise from spacetime curvature."
+  },
+  {
+    "id": 88,
+    "statement": "Honesty is a foundational value in all relationships."
+  },
+  {
+    "id": 89,
+    "statement": "Gravity's acceleration is affected by Earth's ellipsoidal shape."
+  },
+  {
+    "id": 90,
+    "statement": "Empathy and communication crucial for effective conflict resolution."
+  },
+  {
+    "id": 91,
+    "statement": "Human dignity is shaped by philosophical and cultural traditions"
+  },
+  {
+    "id": 92,
+    "statement": "Gravity's acceleration varies due to Earth's ellipsoidal shape."
+  },
+  {
+    "id": 93,
+    "statement": "Gravity warps spacetime, causing curvature around massive objects."
+  },
+  {
+    "id": 94,
+    "statement": "Gravity always attracts objects with mass and energy."
+  },
+  {
+    "id": 95,
+    "statement": "Quantum superposition involves wave function collapse upon measurement."
+  },
+  {
+    "id": 96,
+    "statement": "Gravity warps spacetime, curved by massive objects' presence."
+  },
+  {
+    "id": 97,
+    "statement": "Human dignity shaped by philosophical and cultural traditions cumulatively."
+  },
+  {
+    "id": 98,
+    "statement": "Human dignity shaped by philosophical and cultural traditions' diverse influences."
+  },
+  {
+    "id": 99,
+    "statement": "Accountability in democracy ensures transparency and checks for responsible governance."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 24,
+  "statement": "DNA carries genetic information through nucleotide sequences and base pairing."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Based on my knowledge base, I've identified one aspect that I'm least confident about, which is:
+
+Item I'm Least Confident About:
+Item 24: "DNA carries genetic information through nucleotide sequences and base pairing."
+
+Why I'm Uncertain:
+I know that DNA is an essential molecule for storing genetic information, but I'm not entirely sure how it performs this function through nucleotide sequences and base pairing. I'd like to know more about the specific mechanisms that allow DNA to contain this information and how it is transmitted from one generation to another.
+
+Specific Clarifying Question:
+Could you explain in more detail how the arrangement of nucleotide bases (A, C, G, and T) along the DNA strand creates the genetic code for an organism, and how this code is used to determine the traits and characteristics of an individual?

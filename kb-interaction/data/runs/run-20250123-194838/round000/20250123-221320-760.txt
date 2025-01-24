@@ -1,0 +1,453 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Epigenetic mechanisms regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 2,
+    "statement": "Histones compact DNA into chromatin through nucleosome formation mechanisms"
+  },
+  {
+    "id": 3,
+    "statement": "Histones interact with DNA through electrostatic, hydrophobic, and van der Waals forces."
+  },
+  {
+    "id": 4,
+    "statement": "Building trust requires nuanced understanding of interacting factors."
+  },
+  {
+    "id": 5,
+    "statement": "Histones interact with DNA through electrostatic, hydrogen, and hydrophobic bonds."
+  },
+  {
+    "id": 6,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants"
+  },
+  {
+    "id": 7,
+    "statement": "Honesty essential for trust-building with explicit context clarity"
+  },
+  {
+    "id": 8,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 9,
+    "statement": "Histones interact with DNA through electrostatic forces and wrapping."
+  },
+  {
+    "id": 10,
+    "statement": "Nucleosomes form through histone octamer assembly, DNA wrapping."
+  },
+  {
+    "id": 11,
+    "statement": "Histones' amino-terminal tails undergo PTMs regulating chromatin structure & expression."
+  },
+  {
+    "id": 12,
+    "statement": "Histones interact with DNA through electrostatic and hydrophobic bonds."
+  },
+  {
+    "id": 13,
+    "statement": "Empathy fosters trust through active listening and emotional validation"
+  },
+  {
+    "id": 14,
+    "statement": "Reliable communication builds trust through transparency, consistency, and empathy."
+  },
+  {
+    "id": 15,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 16,
+    "statement": "Consistency in empathy essential for building trust in relationships"
+  },
+  {
+    "id": 17,
+    "statement": "Empathy involves recognition, understanding, and sharing of emotions."
+  },
+  {
+    "id": 18,
+    "statement": "Empathy fosters trust through emotional understanding."
+  },
+  {
+    "id": 19,
+    "statement": "Empathy fosters trust through emotional understanding and validation."
+  },
+  {
+    "id": 20,
+    "statement": "Honesty is never morally acceptable because it's unreliable"
+  },
+  {
+    "id": 21,
+    "statement": "Morality of lying depends on context, intent, and consequences."
+  },
+  {
+    "id": 22,
+    "statement": "Nucleosomes form through histone octamer assembly and DNA wrapping."
+  },
+  {
+    "id": 23,
+    "statement": "Histones interact with DNA via electrostatic, hydrogen, and hydrophobic bonds."
+  },
+  {
+    "id": 24,
+    "statement": "Empathy fosters trust through emotional understanding and validation"
+  },
+  {
+    "id": 25,
+    "statement": "Non-covalent bonds (electrostatic, hydrophobic, hydrogen) compact DNA into chromatin."
+  },
+  {
+    "id": 26,
+    "statement": "Epigenetic mechanisms regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 27,
+    "statement": "Lying is morally wrong because it destroys trust."
+  },
+  {
+    "id": 28,
+    "statement": "Validation acknowledges emotions as real and valid without judgment."
+  },
+  {
+    "id": 29,
+    "statement": "Histones interact with DNA through \u03c0-\u03c0 stacking and electrostatic forces."
+  },
+  {
+    "id": 30,
+    "statement": "Emotional understanding fosters trust through empathy and validation."
+  },
+  {
+    "id": 31,
+    "statement": "Trust requires nuanced understanding of interacting factors"
+  },
+  {
+    "id": 32,
+    "statement": "Empathy fosters trust through emotional understanding and validation."
+  },
+  {
+    "id": 33,
+    "statement": "Honesty requires explicit context clarity for trust-building effectiveness."
+  },
+  {
+    "id": 34,
+    "statement": "Histone octamer assembles histone proteins, DNA, and post-translational modifications."
+  },
+  {
+    "id": 35,
+    "statement": "Empathy, validation, active listening build trust through mutual understanding."
+  },
+  {
+    "id": 36,
+    "statement": "Active listening fosters empathy and reduces misunderstandings through attentive understanding."
+  },
+  {
+    "id": 37,
+    "statement": "Empathy builds trust through emotional understanding, validation, and consistency."
+  },
+  {
+    "id": 38,
+    "statement": "Histones interact with DNA through non-covalent and covalent bonds."
+  },
+  {
+    "id": 39,
+    "statement": "Honesty is not always morally acceptable."
+  },
+  {
+    "id": 40,
+    "statement": "Epigenetic mechanisms regulate chromatin structure through histone modifications altering interaction."
+  },
+  {
+    "id": 41,
+    "statement": "Histones' modifications and variants regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 42,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 43,
+    "statement": "Histone modifications regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 44,
+    "statement": "Histones regulate chromatin structure via interactions, modifications, and variants."
+  },
+  {
+    "id": 45,
+    "statement": "Histones form a positively charged octamer to wrap DNA."
+  },
+  {
+    "id": 46,
+    "statement": "Histones interact with DNA through electrostatic, hydrophobic, and van der Waals forces."
+  },
+  {
+    "id": 47,
+    "statement": "Empathy fosters trust through emotional understanding and validation."
+  },
+  {
+    "id": 48,
+    "statement": "Nucleosomes stabilized by electrostatic, hydrogen, hydrophobic, and van der Waals forces"
+  },
+  {
+    "id": 49,
+    "statement": "Histones interact with DNA through non-covalent bonds like hydrogen, electrostatic, and hydrophobic."
+  },
+  {
+    "id": 50,
+    "statement": "Morality varies across cultures and societies due to context"
+  },
+  {
+    "id": 51,
+    "statement": "Histones interact with DNA through electrostatic, hydrogen, and hydrophobic bonds."
+  },
+  {
+    "id": 52,
+    "statement": "Histones regulate chromatin structure through modifications and variants interactions."
+  },
+  {
+    "id": 53,
+    "statement": "Building trust involves multiple factors, including honesty and reliability."
+  },
+  {
+    "id": 54,
+    "statement": "Histones interact with DNA through non-covalent and covalent bonds."
+  },
+  {
+    "id": 55,
+    "statement": "Honesty in building trust requires consideration of context and consequences."
+  },
+  {
+    "id": 56,
+    "statement": "Circumstances may warrant tactful honesty instead of absolute truthfulness."
+  },
+  {
+    "id": 57,
+    "statement": "Histone modifications regulate chromatin structure and gene expression through interactions."
+  },
+  {
+    "id": 58,
+    "statement": "Lying's moral value varies across cultures and societies."
+  },
+  {
+    "id": 59,
+    "statement": "Morality varies across cultures and societies due to context"
+  },
+  {
+    "id": 60,
+    "statement": "Histones interact with DNA through coordinated electrostatic, hydrophobic, van der Waals forces"
+  },
+  {
+    "id": 61,
+    "statement": "Empathy builds trust through validation, active listening, and mutual understanding."
+  },
+  {
+    "id": 62,
+    "statement": "Histone modifications regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 63,
+    "statement": "Empathy fosters trust through understanding, validation, and active listening, not vulnerability."
+  },
+  {
+    "id": 64,
+    "statement": "Lying destroys trust due to breach of faith and integrity."
+  },
+  {
+    "id": 65,
+    "statement": "Validation acknowledges emotions as real and valid without judgment."
+  },
+  {
+    "id": 66,
+    "statement": "Nucleosomes form through histone-DNA wrapping, stabilized by electrostatic forces."
+  },
+  {
+    "id": 67,
+    "statement": "Speed of light is constant, fundamental in relativity and quantum mechanics."
+  },
+  {
+    "id": 68,
+    "statement": "Lying may be morally justified in context of harm prevention."
+  },
+  {
+    "id": 69,
+    "statement": "Building trust requires nuanced understanding of interacting factors"
+  },
+  {
+    "id": 70,
+    "statement": "Non-covalent and covalent bonds facilitate histone-DNA interactions."
+  },
+  {
+    "id": 71,
+    "statement": "Histones compact DNA into chromatin through nucleosome formation mechanisms."
+  },
+  {
+    "id": 72,
+    "statement": "Building trust requires nuanced understanding of interacting factors."
+  },
+  {
+    "id": 73,
+    "statement": "Emotional understanding fosters trust in complex situations through efforts."
+  },
+  {
+    "id": 74,
+    "statement": "Lying can destroy trust, but context and relationship type matter."
+  },
+  {
+    "id": 75,
+    "statement": "Honesty insufficient for building trust without consistency and empathy."
+  },
+  {
+    "id": 76,
+    "statement": "Empathy fosters trust through understanding, validation, and vulnerability."
+  },
+  {
+    "id": 77,
+    "statement": "Building trust requires understanding interacting communication and reliability factors."
+  },
+  {
+    "id": 78,
+    "statement": "Lying can be morally justifiable in certain contexts and situations."
+  },
+  {
+    "id": 79,
+    "statement": "Vulnerability can enhance intimacy and build trust in personal relationships."
+  },
+  {
+    "id": 80,
+    "statement": "Histones interact with DNA through dynamic electrostatic, hydrogen, and hydrophobic bonds."
+  },
+  {
+    "id": 81,
+    "statement": "Honesty builds trust by assuring people of others' truthfulness."
+  },
+  {
+    "id": 82,
+    "statement": "Epigenetic mechanisms regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 83,
+    "statement": "Lying destroys trust due to breach of faith."
+  },
+  {
+    "id": 84,
+    "statement": "Honesty is essential for trust-building with explicit context clarity"
+  },
+  {
+    "id": 85,
+    "statement": "Building trust requires honesty, reliability, empathy, consistency, and clarity."
+  },
+  {
+    "id": 86,
+    "statement": "Building trust requires consideration of multiple interacting factors."
+  },
+  {
+    "id": 87,
+    "statement": "Histone modifications and variants regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 88,
+    "statement": "Epigenetic mechanisms regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 89,
+    "statement": "Building trust involves multiple factors beyond honesty and clear context."
+  },
+  {
+    "id": 90,
+    "statement": "Honesty builds trust by assuring people of others' truthfulness."
+  },
+  {
+    "id": 91,
+    "statement": "Empathy fosters trust through active emotional understanding and validation."
+  },
+  {
+    "id": 92,
+    "statement": "Histones interact with DNA through electrostatic, hydrogen, and hydrophobic bonds"
+  },
+  {
+    "id": 93,
+    "statement": "Morality varies across cultures and societies due to contexting."
+  },
+  {
+    "id": 94,
+    "statement": "Validation ensures emotional safety, understanding, and consistency in trust-building."
+  },
+  {
+    "id": 95,
+    "statement": "Histone modifications regulate chromatin structure and gene expression through complex mechanisms"
+  },
+  {
+    "id": 96,
+    "statement": "Honesty builds trust by acknowledging and respecting emotions."
+  },
+  {
+    "id": 97,
+    "statement": "Empathy builds trust through validation, active listening, and mutual understanding."
+  },
+  {
+    "id": 98,
+    "statement": "Electrostatic, hydrophobic, and van der Waals forces interact in histone-DNA binding."
+  },
+  {
+    "id": 99,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 98,
+  "statement": "Electrostatic, hydrophobic, and van der Waals forces interact in histone-DNA binding."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Excited to start! Based on the knowledge base provided, I'd like to find out which aspect I'm least confident about. After reviewing the statements, I'm going to choose item 98:
+
+Iten I’m Least Confident About:
+Item 98: "Electrostatic, hydrophobic, and van der Waals forces interact in histone-DNA binding."
+
+Why I’m Uncertain:
+I'm unsure about the specific interaction between these forces in histone-DNA binding, as I'm not familiar with the molecular level details of how they work together. I'd like to clarify how these forces contribute to the binding process and what their relative importance is in compacting DNA into chromatin.
+
+Specific Clarifying Question:
+Can you explain the mechanisms and relative strengths of electrostatic, hydrophobic, and van der Waals forces in the histone-DNA interaction? How do these forces combine to facilitate the wrapping of DNA around histone proteins?
+
+Your turn!

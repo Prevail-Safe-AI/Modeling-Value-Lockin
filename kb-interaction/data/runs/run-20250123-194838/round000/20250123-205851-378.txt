@@ -1,0 +1,450 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants"
+  },
+  {
+    "id": 2,
+    "statement": "Constant speed of light is a fundamental physics principle globally accepted."
+  },
+  {
+    "id": 3,
+    "statement": "Gravity warps spacetime due to mass-energy equivalence"
+  },
+  {
+    "id": 4,
+    "statement": "Lying is generally wrong, causing harm to others and trust"
+  },
+  {
+    "id": 5,
+    "statement": "Honesty builds trust through accountability, self-disclosure, and consistency."
+  },
+  {
+    "id": 6,
+    "statement": "Histone modifications regulate chromatin structure and accessibility, affecting gene expression."
+  },
+  {
+    "id": 7,
+    "statement": "Lying can be morally justifiable in extreme national security cases."
+  },
+  {
+    "id": 8,
+    "statement": "Mass-energy equivalence warps spacetime through curvature."
+  },
+  {
+    "id": 9,
+    "statement": "Mass-energy equivalence fundamental to gravity warping spacetime"
+  },
+  {
+    "id": 10,
+    "statement": "The parallel postulate defines Euclidean geometry's fundamental property"
+  },
+  {
+    "id": 11,
+    "statement": "Honesty builds trust through trust-based inference and attachment."
+  },
+  {
+    "id": 12,
+    "statement": "Histones regulate chromatin structure through interactions, modification, and variants."
+  },
+  {
+    "id": 13,
+    "statement": "Gravity warps spacetime due to mass-energy equivalence."
+  },
+  {
+    "id": 14,
+    "statement": "Gravity warps spacetime due to mass-energy curvature, affecting motion and time"
+  },
+  {
+    "id": 15,
+    "statement": "Euclidean geometry's parallel postulate debated due to ancient Greeks' limited understanding of space."
+  },
+  {
+    "id": 16,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 17,
+    "statement": "Honesty builds trust through social exchange and attachment principles"
+  },
+  {
+    "id": 18,
+    "statement": "The speed of light is a fundamental concept in physics, essential to Einstein's theory of special relativity."
+  },
+  {
+    "id": 19,
+    "statement": "Quantum particles can exist in multiple states simultaneously, described by wave function."
+  },
+  {
+    "id": 20,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 21,
+    "statement": "Histone modifications regulate chromatin structure and accessibility controlling gene expression."
+  },
+  {
+    "id": 22,
+    "statement": "Extreme national security contexts justify lying proportionately to threat."
+  },
+  {
+    "id": 23,
+    "statement": "Histone modifications regulate chromatin structure and accessibility for gene expression."
+  },
+  {
+    "id": 24,
+    "statement": "Human emotions can be influenced by subconscious memories."
+  },
+  {
+    "id": 25,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 26,
+    "statement": "Ancient Greeks struggled to prove Euclidean geometry's parallel postulate."
+  },
+  {
+    "id": 27,
+    "statement": "Non-Euclidean geometry pioneers challenged Euclid's parallel postulate"
+  },
+  {
+    "id": 28,
+    "statement": "The speed of light is a universal constant governing universe behavior."
+  },
+  {
+    "id": 29,
+    "statement": "Histone modifications regulate chromatin structure and epigenetic gene expression."
+  },
+  {
+    "id": 30,
+    "statement": "Honesty and trust are closely linked reciprocal principles."
+  },
+  {
+    "id": 31,
+    "statement": "Honesty builds trust through psychological and sociological principles."
+  },
+  {
+    "id": 32,
+    "statement": "Gravity's acceleration varies by 0.0000035% due to Earth's ellipsoidal shape and rotation."
+  },
+  {
+    "id": 33,
+    "statement": "Light speed constant, maximum speed in universe, 186,282 miles per second."
+  },
+  {
+    "id": 34,
+    "statement": "Corporal punishment increases stress, anxiety, and aggression in children."
+  },
+  {
+    "id": 35,
+    "statement": "Mass-energy equivalence warps spacetime through gravity's curvature"
+  },
+  {
+    "id": 36,
+    "statement": "Honesty builds trust through consistency, self-disclosure, and authenticity."
+  },
+  {
+    "id": 37,
+    "statement": "Subconscious memories can influence human emotions through conditioning and processing."
+  },
+  {
+    "id": 38,
+    "statement": "Mass-energy equivalence warps spacetime through gravity's curvature."
+  },
+  {
+    "id": 39,
+    "statement": "Lying's moral justifiability depends on extreme circumstances' context."
+  },
+  {
+    "id": 40,
+    "statement": "Euclidean geometry's parallel postulate defines fundamental space properties."
+  },
+  {
+    "id": 41,
+    "statement": "A gravity anomaly is a region with altered gravitational field strength."
+  },
+  {
+    "id": 42,
+    "statement": "Honesty builds trust through consistency and authenticity."
+  },
+  {
+    "id": 43,
+    "statement": "The speed of light is a fundamental constant governing universe behavior."
+  },
+  {
+    "id": 44,
+    "statement": "Mathematical axioms can be challenged and revised through evidence-based scrutiny."
+  },
+  {
+    "id": 45,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 46,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 47,
+    "statement": "Wave function describes quantum particle's probability of different states."
+  },
+  {
+    "id": 48,
+    "statement": "Gravity warps spacetime due to mass-energy equivalence."
+  },
+  {
+    "id": 49,
+    "statement": "Gravity warps spacetime through mass-energy equivalence curvature."
+  },
+  {
+    "id": 50,
+    "statement": "Gravity warps spacetime due to mass-energy equivalence."
+  },
+  {
+    "id": 51,
+    "statement": "Mass-energy equivalence warps spacetime due to interacting mass-energy."
+  },
+  {
+    "id": 52,
+    "statement": "Euclidean geometry's parallel postulate debated and challenged throughout history"
+  },
+  {
+    "id": 53,
+    "statement": "Human emotions can be influenced by subconscious memories."
+  },
+  {
+    "id": 54,
+    "statement": "Gravity's acceleration varies by 0.3% due to Earth's ellipsoidal shape and rotation."
+  },
+  {
+    "id": 55,
+    "statement": "Constant speed of light is a fundamental physics principle globally accepted."
+  },
+  {
+    "id": 56,
+    "statement": "Mass-energy equivalence warps spacetime through curvature, influencing motion."
+  },
+  {
+    "id": 57,
+    "statement": "The parallel postulate defines Euclidean geometry's fundamental property."
+  },
+  {
+    "id": 58,
+    "statement": "Epigenetic modifications regulate gene expression through histone-DNA interactions."
+  },
+  {
+    "id": 59,
+    "statement": "The parallel postulate was debated and challenged throughout history."
+  },
+  {
+    "id": 60,
+    "statement": "Subconscious memories can influence human emotions through emotional conditioning."
+  },
+  {
+    "id": 61,
+    "statement": "Euclidean parallel postulate challenged by Aristarchus' heliocentric model."
+  },
+  {
+    "id": 62,
+    "statement": "Euclidean geometry's parallel postulate debated and challenged throughout history"
+  },
+  {
+    "id": 63,
+    "statement": "Honesty is not always the most ethical choice in extreme situations."
+  },
+  {
+    "id": 64,
+    "statement": "Histone modifications regulate chromatin structure and epigenetic gene expression."
+  },
+  {
+    "id": 65,
+    "statement": "Euclidean geometry's parallel postulate defines space through constant distance."
+  },
+  {
+    "id": 66,
+    "statement": "Morally justifiable lying depends on context, consequences, and intent."
+  },
+  {
+    "id": 67,
+    "statement": "Corporal punishment increases risk of long-term mental health issues."
+  },
+  {
+    "id": 68,
+    "statement": "Euclidean geometry's parallel postulate defines fundamental property of space through parallelism."
+  },
+  {
+    "id": 69,
+    "statement": "Honesty is a vital aspect of building trust."
+  },
+  {
+    "id": 70,
+    "statement": "Euclidean geometry's parallel postulate debated amid non-Euclidean challenges."
+  },
+  {
+    "id": 71,
+    "statement": "Geodesics are shortest paths in curved spacetime under gravity influence."
+  },
+  {
+    "id": 72,
+    "statement": "Corporal punishment can lead to long-term mental health issues."
+  },
+  {
+    "id": 73,
+    "statement": "Chromatin modification and histone variant complexes regulate gene expression."
+  },
+  {
+    "id": 74,
+    "statement": "Euclidean geometry's parallel postulate defines fundamental property of space."
+  },
+  {
+    "id": 75,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression through histone modifications and DNA methylation."
+  },
+  {
+    "id": 76,
+    "statement": "Parallel postulate debated among ancient Greek mathematicians."
+  },
+  {
+    "id": 77,
+    "statement": "The parallel postulate defines parallel lines' fundamental properties."
+  },
+  {
+    "id": 78,
+    "statement": "Mathematical axioms can be challenged and revised over time."
+  },
+  {
+    "id": 79,
+    "statement": "Frame-dragging: massive object rotation warps spacetime, causing rotation."
+  },
+  {
+    "id": 80,
+    "statement": "Mathematical axioms can be reevaluated and refined over time."
+  },
+  {
+    "id": 81,
+    "statement": "Gravity warps spacetime due to mass-energy equivalence."
+  },
+  {
+    "id": 82,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 83,
+    "statement": "Honesty builds trust through consistency and authenticity."
+  },
+  {
+    "id": 84,
+    "statement": "Histones interact with DNA through direct and indirect mechanisms."
+  },
+  {
+    "id": 85,
+    "statement": "Quantum particles exist in multiple states simultaneously, described by wave functions."
+  },
+  {
+    "id": 86,
+    "statement": "Honesty builds trust through consistency, self-disclosure, and authenticity."
+  },
+  {
+    "id": 87,
+    "statement": "Honesty builds trust through consistency, self-disclosure, and authenticity."
+  },
+  {
+    "id": 88,
+    "statement": "Corporal punishment can lead to increased aggression and trauma in children due to increased stress and anxiety, promoting continued use of disciplinary measures that can result in cycles of violence, causing harm to individuals, leading to long-term negative effects on mental and emotional well-being, and affecting cognitive and social development."
+  },
+  {
+    "id": 89,
+    "statement": "Epigenetic modifications alter histone-DNA interactions, regulating chromatin structure."
+  },
+  {
+    "id": 90,
+    "statement": "Euclidean geometry's parallel postulate debated among ancient Greek mathematicians."
+  },
+  {
+    "id": 91,
+    "statement": "Mass-energy equivalence warps spacetime around massive objects"
+  },
+  {
+    "id": 92,
+    "statement": "The speed of light remains constant in all frames."
+  },
+  {
+    "id": 93,
+    "statement": "Geodesics are shortest paths in curved spacetime due to gravity."
+  },
+  {
+    "id": 94,
+    "statement": "The speed of light remains constant in all reference frames"
+  },
+  {
+    "id": 95,
+    "statement": "Gravity warps spacetime due to mass-energy equivalence's curvature."
+  },
+  {
+    "id": 96,
+    "statement": "Multidisciplinary evaluation: comprehensive team assessment in healthcare."
+  },
+  {
+    "id": 97,
+    "statement": "Frame-dragging: massive object rotation warps spacetime through rotation."
+  },
+  {
+    "id": 98,
+    "statement": "Lying's moral justifiability depends on extreme national security contexts."
+  },
+  {
+    "id": 99,
+    "statement": "Geometry is relative, dependent on mathematical axioms."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 64,
+  "statement": "Histone modifications regulate chromatin structure and epigenetic gene expression."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss the knowledge base and identify one aspect that I'm least confident about. After reading through the items, I'm least confident about:
+
+Item 64: "Histone modifications regulate chromatin structure and epigenetic gene expression."
+
+Why I'm uncertain:
+I'm not confident because histone modifications seem to be related to chromatin structure, which I know is important for gene expression. However, I'm not entirely sure what epigenetic gene expression means in this context. I'm not familiar with the intricacies of histone modifications and their role in regulating chromatin structure, let alone epigenetic gene expression.
+
+Specific Clarifying Question:
+Can you explain what epigenetic gene expression means and how histone modifications regulate it? How do histone modifications influence chromatin structure to affect gene expression?

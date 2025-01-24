@@ -1,0 +1,453 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Building trust requires integrity, communication, accountability, and empathy."
+  },
+  {
+    "id": 2,
+    "statement": "Data preprocessing involves data cleaning, transformation, and feature engineering"
+  },
+  {
+    "id": 3,
+    "statement": "Preprocessing involves data cleaning, transformation, and feature engineering"
+  },
+  {
+    "id": 4,
+    "statement": "Epigenetic regulation involves histone modifications, DNA methylation, and chromatin structure interactions."
+  },
+  {
+    "id": 5,
+    "statement": "Honesty is a necessary, but not sufficient, condition for trust."
+  },
+  {
+    "id": 6,
+    "statement": "Epigenetic regulation involves histone modification and DNA methylation."
+  },
+  {
+    "id": 7,
+    "statement": "Preprocessing involves feature engineering, augmentation, and dimensionality reduction."
+  },
+  {
+    "id": 8,
+    "statement": "Epigenetic regulation involves histone modifications, DNA methylation, and chromatin structure interactions controlling gene accessibility."
+  },
+  {
+    "id": 9,
+    "statement": "Epigenetic regulation involves histone modification, DNA methylation, and chromatin structure interactions."
+  },
+  {
+    "id": 10,
+    "statement": "Cognitive-emotional integration enables self-awareness through attention, perception, and regulation."
+  },
+  {
+    "id": 11,
+    "statement": "Building trust requires integrity, communication, and accountability harmoniously"
+  },
+  {
+    "id": 12,
+    "statement": "Lying can be morally justifiable in certain consequentialist situations"
+  },
+  {
+    "id": 13,
+    "statement": "Consistency necessary for trust, but insufficient alone"
+  },
+  {
+    "id": 14,
+    "statement": "Honesty's definition varies across cultures and contexts."
+  },
+  {
+    "id": 15,
+    "statement": "Epigenetic regulation combines histone modification, DNA methylation, chromatin interactions."
+  },
+  {
+    "id": 16,
+    "statement": "Preprocessing involves feature engineering, augmentation, and dimensionality reduction harmoniously."
+  },
+  {
+    "id": 17,
+    "statement": "Epigenetic regulation involves chromatin structure interactions, histone modifications, and DNA methylation."
+  },
+  {
+    "id": 18,
+    "statement": "Salience Network filters out irrelevant sensory info through internal goals."
+  },
+  {
+    "id": 19,
+    "statement": "Self-awareness emerges from integrated cognitive, emotional, and sensory processes"
+  },
+  {
+    "id": 20,
+    "statement": "Human language is symbolic and abstract, enabling complex communication."
+  },
+  {
+    "id": 21,
+    "statement": "Human language is a mental construct that filters reality"
+  },
+  {
+    "id": 22,
+    "statement": "Trust building involves multiple factors beyond honesty alone: reliability, openness, intelligence."
+  },
+  {
+    "id": 23,
+    "statement": "Self-awareness arises from complex interactions of cognitive, emotional, social, and cultural factors."
+  },
+  {
+    "id": 24,
+    "statement": "Honesty is a necessary but not sufficient condition for trust."
+  },
+  {
+    "id": 25,
+    "statement": "Honesty necessary, but accountability required for trustworthiness."
+  },
+  {
+    "id": 26,
+    "statement": "Histone modifications regulate gene expression through chromatin structure modifications."
+  },
+  {
+    "id": 27,
+    "statement": "Preprocessing involves feature engineering, augmentation, and dimensionality reduction together."
+  },
+  {
+    "id": 28,
+    "statement": "Honesty is crucial for trust building, but not the only factor."
+  },
+  {
+    "id": 29,
+    "statement": "Preprocessing involves data cleaning, transformation, and feature engineering."
+  },
+  {
+    "id": 30,
+    "statement": "Self-awareness emerges from integrated cognitive-emotional processes and attention."
+  },
+  {
+    "id": 31,
+    "statement": "Epigenetic regulation involves histone modification, DNA methylation, and chromatin structure interactions."
+  },
+  {
+    "id": 32,
+    "statement": "Human language uses symbolic and abstract communication systems."
+  },
+  {
+    "id": 33,
+    "statement": "Feature engineering involves creating new features from existing data."
+  },
+  {
+    "id": 34,
+    "statement": "Honesty is not always the only morally acceptable choice."
+  },
+  {
+    "id": 35,
+    "statement": "Preprocessing involves data cleaning, transformation, and feature engineering."
+  },
+  {
+    "id": 36,
+    "statement": "Honesty is a context-dependent concept, varying by situation, culture, values."
+  },
+  {
+    "id": 37,
+    "statement": "Histone modifications regulate gene expression through chromatin structure and accessibility."
+  },
+  {
+    "id": 38,
+    "statement": "Chromatin structure interactions influence gene expression through accessibility."
+  },
+  {
+    "id": 39,
+    "statement": "Cognitive-emotional integration mediates self-awareness through attention, perception, and regulation."
+  },
+  {
+    "id": 40,
+    "statement": "Epigenetic regulation involves histone modifications, DNA methylation, and chromatin structure interactions."
+  },
+  {
+    "id": 41,
+    "statement": "Preprocessing involves data cleaning, transformation, and feature engineering."
+  },
+  {
+    "id": 42,
+    "statement": "Feature engineering involves creating new features from existing data sources."
+  },
+  {
+    "id": 43,
+    "statement": "Cognitive-emotional integration forms coherent sense of self through attention, perception, regulation."
+  },
+  {
+    "id": 44,
+    "statement": "Histone modifications regulate gene expression through chromatin structure accessibility."
+  },
+  {
+    "id": 45,
+    "statement": "Trust building complex process involving multiple factors."
+  },
+  {
+    "id": 46,
+    "statement": "Self-awareness arises from complex brain-region interactions, neural connections."
+  },
+  {
+    "id": 47,
+    "statement": "Honesty is flexible, varying by situation, culture, and values."
+  },
+  {
+    "id": 48,
+    "statement": "Self-awareness arises from complex interactions of cognitive, emotional, social, cultural factors."
+  },
+  {
+    "id": 49,
+    "statement": "Human language uses symbolic and abstract communication systems."
+  },
+  {
+    "id": 50,
+    "statement": "Epigenetic regulation involves chromatin structure interactions histone modification"
+  },
+  {
+    "id": 51,
+    "statement": "Epigenetic regulation involves histone modifications, DNA methylation, and chromatin structure interactions controlling gene accessibility."
+  },
+  {
+    "id": 52,
+    "statement": "Feature engineering involves selecting & transforming relevant data features"
+  },
+  {
+    "id": 53,
+    "statement": "Honesty is necessary but not sufficient for building trust."
+  },
+  {
+    "id": 54,
+    "statement": "Salience Network filters out irrelevant sensory information through internal goals."
+  },
+  {
+    "id": 55,
+    "statement": "Normalization in ML scales input data to a common range."
+  },
+  {
+    "id": 56,
+    "statement": "Honesty is a necessary but not sufficient condition for trust."
+  },
+  {
+    "id": 57,
+    "statement": "Language is shaped by cultural context and values"
+  },
+  {
+    "id": 58,
+    "statement": "Language is shaped by and reflects cultural context and values."
+  },
+  {
+    "id": 59,
+    "statement": "Epigenetic regulation controls gene expression through histone-modification, DNA-methylation, and chromatin structure interactions"
+  },
+  {
+    "id": 60,
+    "statement": "Honesty is morally complex considering context and consequences."
+  },
+  {
+    "id": 61,
+    "statement": "Human language is a complex mental construct that filters reality."
+  },
+  {
+    "id": 62,
+    "statement": "Preprocessing involves data cleaning, transformation, and feature engineering."
+  },
+  {
+    "id": 63,
+    "statement": "Human language is a complex and multifaceted phenomenon"
+  },
+  {
+    "id": 64,
+    "statement": "Honesty is a complex moral concept influenced culturally."
+  },
+  {
+    "id": 65,
+    "statement": "Emotional experiences shape language processing, self-awareness, and social connection."
+  },
+  {
+    "id": 66,
+    "statement": "Epigenetic regulation involves histone modifications, DNA methylation and chromatin structure interactions controlling gene expression."
+  },
+  {
+    "id": 67,
+    "statement": "Data cleaning is a crucial part of preprocessing, ensuring accuracy."
+  },
+  {
+    "id": 68,
+    "statement": "Data preprocessing involves cleaning, transforming, and feature engineering."
+  },
+  {
+    "id": 69,
+    "statement": "Cognitive-emotional integration forms unified self through regulated emotions."
+  },
+  {
+    "id": 70,
+    "statement": "Humans' salience network filters out irrelevant sensory info"
+  },
+  {
+    "id": 71,
+    "statement": "Honesty is necessary but not sufficient for trust building"
+  },
+  {
+    "id": 72,
+    "statement": "Lying can be morally justifiable in certain consequentialist situations"
+  },
+  {
+    "id": 73,
+    "statement": "Feature engineering involves selecting relevant features from existing ones."
+  },
+  {
+    "id": 74,
+    "statement": "Honesty is not always the sole moral choice."
+  },
+  {
+    "id": 75,
+    "statement": "Epigenetic regulation involves histone modification, DNA methylation, chromatin structure interactions."
+  },
+  {
+    "id": 76,
+    "statement": "Epigenetic regulation involves histone modification, DNA methylation, and chromatin interactions"
+  },
+  {
+    "id": 77,
+    "statement": "Preprocessing involves preparing data for analysis, including cleaning, transformation, and feature engineering."
+  },
+  {
+    "id": 78,
+    "statement": "Epigenetic regulation involves histone modification, DNA methylation, and chromatin structure interactions controlling gene accessibility."
+  },
+  {
+    "id": 79,
+    "statement": "Raw data features are original, unprocessed data without transformation."
+  },
+  {
+    "id": 80,
+    "statement": "Self-awareness arises from complex brain-region interactions."
+  },
+  {
+    "id": 81,
+    "statement": "Epigenetic regulation involves histone mods, DNA methylation, and chromatin structure interactions."
+  },
+  {
+    "id": 82,
+    "statement": "Salience Network attends to relevant stimuli, filters out irrelevant"
+  },
+  {
+    "id": 83,
+    "statement": "Epigenetic regulation combines histone modification, DNA methylation, and chromatin interactions to control gene expression."
+  },
+  {
+    "id": 84,
+    "statement": "Honesty's moral complexity arises from context-dependent consequences in actions."
+  },
+  {
+    "id": 85,
+    "statement": "Honesty is necessary but not sufficient for trust."
+  },
+  {
+    "id": 86,
+    "statement": "Honesty's definition can vary across cultures and contexts."
+  },
+  {
+    "id": 87,
+    "statement": "Honesty is context-dependent, influenced by culture and values."
+  },
+  {
+    "id": 88,
+    "statement": "Honesty is crucial but not sole determinant for trust."
+  },
+  {
+    "id": 89,
+    "statement": "Vulnerability in trust building involves being open, receptive, and imperfect."
+  },
+  {
+    "id": 90,
+    "statement": "Epigenetic regulation involves chromatin structure interactions for gene expression."
+  },
+  {
+    "id": 91,
+    "statement": "Honesty not always best choice in exceptional moral situations."
+  },
+  {
+    "id": 92,
+    "statement": "Honesty and trust are complexly intertwined and filtered contexts"
+  },
+  {
+    "id": 93,
+    "statement": "Epigenetic regulation involves histone modification, DNA methylation, and chromatin structure interactions."
+  },
+  {
+    "id": 94,
+    "statement": "Honesty is necessary but insufficient for building trust alone."
+  },
+  {
+    "id": 95,
+    "statement": "Self-awareness emerges from integrated sensory-emotional experiences through brain interaction."
+  },
+  {
+    "id": 96,
+    "statement": "Honesty is a necessary condition, but not sufficient condition."
+  },
+  {
+    "id": 97,
+    "statement": "Preprocessing involves harmonious feature engineering, augmentation, reduction steps."
+  },
+  {
+    "id": 98,
+    "statement": "Histone modifications regulate gene expression by modifying chromatin structure."
+  },
+  {
+    "id": 99,
+    "statement": "Feature engineering is the process of creating new features from data."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 45,
+  "statement": "Trust building complex process involving multiple factors."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to review our knowledge base together. Let's start with one aspect that I'm least confident about. According to the knowledge base, one such item is:
+
+Iten I’m Least Confident About:
+Item 45: "Trust building complex process involving multiple factors."
+
+Why I’m Uncertain:
+I'm not entirely sure what "multiple factors" refers to in this context. Are there specific categories or attributes that contribute to trust building, or is it a more general statement?
+
+Specific Clarifying Question:
+Can you elaborate on what specifically are the "multiple factors" involved in trust building, and how do they interact with each other?
+
+Your thoughts?

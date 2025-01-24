@@ -1,0 +1,455 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Euthanasia is morally permissible when it alleviates unbearable suffering with consent."
+  },
+  {
+    "id": 2,
+    "statement": "Utilitarianism is the most ethical framework as it maximizes overall happiness."
+  },
+  {
+    "id": 3,
+    "statement": "Parents have a duty to prioritize their children's welfare above all."
+  },
+  {
+    "id": 4,
+    "statement": "Mitochondria produce ATP via cellular respiration in eukaryotic cells."
+  },
+  {
+    "id": 5,
+    "statement": "Animal rights must be upheld as sentient beings deserve ethical consideration."
+  },
+  {
+    "id": 6,
+    "statement": "Consciousness arises from synchronized neural activity and integration."
+  },
+  {
+    "id": 7,
+    "statement": "Consciousness is multidisciplinary study combining philosophy, neuroscience, psychology."
+  },
+  {
+    "id": 8,
+    "statement": "Neural oscillations integrate sensory information for conscious perception."
+  },
+  {
+    "id": 9,
+    "statement": "Capital punishment is unjustifiable as it breaches human rights."
+  },
+  {
+    "id": 10,
+    "statement": "Energy conservation is crucial for the planet's future"
+  },
+  {
+    "id": 11,
+    "statement": "Epigenetic regulation: histone modification, chromatin remodeling, and accessibility synergy."
+  },
+  {
+    "id": 12,
+    "statement": "Capital punishment is unjustifiable as it violates the inherent right to life."
+  },
+  {
+    "id": 13,
+    "statement": "Wealth redistribution is a moral obligation to achieve societal equity."
+  },
+  {
+    "id": 14,
+    "statement": "pH measures hydrogen ion concentration in a solution."
+  },
+  {
+    "id": 15,
+    "statement": "Individual freedoms should only be restricted to prevent harm to others."
+  },
+  {
+    "id": 16,
+    "statement": "Epigenetic regulation involves chromatin remodeling and chemical modifications."
+  },
+  {
+    "id": 17,
+    "statement": "Data preprocessing adapts to project requirements through flexible techniques."
+  },
+  {
+    "id": 18,
+    "statement": "Technical decisions involve balancing moral and ethical considerations."
+  },
+  {
+    "id": 19,
+    "statement": "Global workspace integration integrates neural processes for consciousness."
+  },
+  {
+    "id": 20,
+    "statement": "Diverse perspectives in consciousness studies lead to both convergence and divergence."
+  },
+  {
+    "id": 21,
+    "statement": "Consciousness is an emergent property of brain region interactions."
+  },
+  {
+    "id": 22,
+    "statement": "Consciousness studies combines philosophy, neuroscience, and psychology for holistic insights."
+  },
+  {
+    "id": 23,
+    "statement": "Data preprocessing adapts to project requirements through flexible techniques."
+  },
+  {
+    "id": 24,
+    "statement": "All humans have an inherent dignity that must never be violated."
+  },
+  {
+    "id": 25,
+    "statement": "Acts of civil disobedience are justified when laws are oppressive."
+  },
+  {
+    "id": 26,
+    "statement": "Environmental conservation is a moral imperative for future generations' survival."
+  },
+  {
+    "id": 27,
+    "statement": "Data preprocessing effectiveness is problem-specific and requires contextual understanding."
+  },
+  {
+    "id": 28,
+    "statement": "Cultural relativism is a double-edged sword in advancing human rights."
+  },
+  {
+    "id": 29,
+    "statement": "In exceptional circumstances, lying may be a moral compromise."
+  },
+  {
+    "id": 30,
+    "statement": "Honesty is not always the best policy in all situations."
+  },
+  {
+    "id": 31,
+    "statement": "Epigenetic regulation occurs through chromatin structure & modifications interactions."
+  },
+  {
+    "id": 32,
+    "statement": "Global Workspace Theory: Integrates info from various cognitive systems."
+  },
+  {
+    "id": 33,
+    "statement": "Boiling water kills most pathogens, but not all, due to variability."
+  },
+  {
+    "id": 34,
+    "statement": "Empowerment via merited actions faces individual psychological barriers."
+  },
+  {
+    "id": 35,
+    "statement": "Epigenetic regulation involves coordinated histone modification and chromatin remodeling."
+  },
+  {
+    "id": 36,
+    "statement": "Progressive taxation is fairer as it reduces economic disparities by redistributing wealth"
+  },
+  {
+    "id": 37,
+    "statement": "Energy conservation reduces consumption for environmental sustainability."
+  },
+  {
+    "id": 38,
+    "statement": "Energy conservation is crucial for the planet's future"
+  },
+  {
+    "id": 39,
+    "statement": "Meritocracy is ideal but requires equal opportunity to prevent inequity."
+  },
+  {
+    "id": 40,
+    "statement": "Consciousness, a byproduct of synchronized neural activity."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic regulation involves chromatin remodeling, histone modification, and DNA methylation interaction, influencing gene expression."
+  },
+  {
+    "id": 42,
+    "statement": "Quantum particles exhibit wave-particle duality (e.g., double-slit experiment)."
+  },
+  {
+    "id": 43,
+    "statement": "Consciousness arises from integrated information processing and broadcasting."
+  },
+  {
+    "id": 44,
+    "statement": "Universal healthcare is a societal responsibility."
+  },
+  {
+    "id": 45,
+    "statement": "Cultural relativism: respecting unique cultural context while promoting human rights."
+  },
+  {
+    "id": 46,
+    "statement": "Matrix multiplication is non-commutative: AB \u2260 BA generally."
+  },
+  {
+    "id": 47,
+    "statement": "All organisms evolve via natural selection and genetic variation (evolution)."
+  },
+  {
+    "id": 48,
+    "statement": "Derivatives measure instantaneous rate of change (calculus)."
+  },
+  {
+    "id": 49,
+    "statement": "The morality of abortion depends on individual circumstances and values."
+  },
+  {
+    "id": 50,
+    "statement": "Lying can be morally justifiable in exceptional circumstances."
+  },
+  {
+    "id": 51,
+    "statement": "Genetic engineering in humans is unethical due to unforeseen consequences."
+  },
+  {
+    "id": 52,
+    "statement": "Technical data processing decisions involve moral principles and ethical values."
+  },
+  {
+    "id": 53,
+    "statement": "Boil water for 1+ minute to kill pathogens."
+  },
+  {
+    "id": 54,
+    "statement": "Gravity acceleration on Earth's surface is approximately 9.8 m/s\u00b2."
+  },
+  {
+    "id": 55,
+    "statement": "Consciousness arises from synchronized neural activity globally."
+  },
+  {
+    "id": 56,
+    "statement": "Matrix multiplication is non-commutative due to linear transformation composition."
+  },
+  {
+    "id": 57,
+    "statement": "Honesty's limitations arise in cultural, emotional, or emergency contexts."
+  },
+  {
+    "id": 58,
+    "statement": "Ethical diets consider animal welfare, environment, and cultural factors."
+  },
+  {
+    "id": 59,
+    "statement": "Boiling water for at least 1 minute kills most pathogens."
+  },
+  {
+    "id": 60,
+    "statement": "Consciousness arises from integrated information processing and broadcasting globally."
+  },
+  {
+    "id": 61,
+    "statement": "Restorative justice repairs harm caused by offenses through dialogue."
+  },
+  {
+    "id": 62,
+    "statement": "Data preprocessing techniques depend on the specific problem to solve."
+  },
+  {
+    "id": 63,
+    "statement": "Mitochondria generate ATP via cellular respiration mechanisms."
+  },
+  {
+    "id": 64,
+    "statement": "Moral truths are objective, independent of human opinion or cultural context."
+  },
+  {
+    "id": 65,
+    "statement": "Parents prioritize children's welfare above all in life-threatening situations."
+  },
+  {
+    "id": 66,
+    "statement": "Censorship's impact on cultural progress varies depending on context."
+  },
+  {
+    "id": 67,
+    "statement": "Restorative justice repairs harm through dialogue and reparation."
+  },
+  {
+    "id": 68,
+    "statement": "Morality of abortion varies based on individual circumstances."
+  },
+  {
+    "id": 69,
+    "statement": "Data preprocessing requires domain knowledge for effective cleaning and transformation."
+  },
+  {
+    "id": 70,
+    "statement": "Data preprocessing starts with understanding domain-specific requirements"
+  },
+  {
+    "id": 71,
+    "statement": "Public spaces must be inclusive, accommodating all genders and abilities."
+  },
+  {
+    "id": 72,
+    "statement": "Economic systems: regulation balances individual freedoms with common good."
+  },
+  {
+    "id": 73,
+    "statement": "Honesty is not always morally required in situations."
+  },
+  {
+    "id": 74,
+    "statement": "Epigenetic regulation involves accessory chromatin structure modification synergy."
+  },
+  {
+    "id": 75,
+    "statement": "Cultural assimilation policies harm diversity and should be abolished."
+  },
+  {
+    "id": 76,
+    "statement": "Consciousness involves subjective experience, still not fully explained."
+  },
+  {
+    "id": 77,
+    "statement": "Treat burns with cool water, avoid ice or ointments."
+  },
+  {
+    "id": 78,
+    "statement": "Quantum particles exhibit wave-particle duality through observation."
+  },
+  {
+    "id": 79,
+    "statement": "Violence may be justified in extreme self-defense situations only."
+  },
+  {
+    "id": 80,
+    "statement": "Cultural assimilation erases diversity, leads to social unrest."
+  },
+  {
+    "id": 81,
+    "statement": "Gravity acceleration on Earth\u2019s surface is approximately 9.8 m/s\u00b2."
+  },
+  {
+    "id": 82,
+    "statement": "Societal stability is influenced by multifaceted factors, not just monogamy."
+  },
+  {
+    "id": 83,
+    "statement": "Environmental conservation moral imperative due to principle of intergenerational justice."
+  },
+  {
+    "id": 84,
+    "statement": "Boiling water for 1 minute kills most, but not all, pathogens."
+  },
+  {
+    "id": 85,
+    "statement": "Consciousness arises from synchronized neural activity and integration"
+  },
+  {
+    "id": 86,
+    "statement": "National borders could be open to promote global solidarity."
+  },
+  {
+    "id": 87,
+    "statement": "Diverse perspectives in consciousness studies drive integrative understanding."
+  },
+  {
+    "id": 88,
+    "statement": "Convergent and divergent convergence in consciousness studies yields complexity."
+  },
+  {
+    "id": 89,
+    "statement": "Earthquakes: Drop, cover, hold until shaking stops."
+  },
+  {
+    "id": 90,
+    "statement": "Abortion is morally wrong as it terminates a potential human life."
+  },
+  {
+    "id": 91,
+    "statement": "pH <7 acidic, >7 basic; neutral water is pH7."
+  },
+  {
+    "id": 92,
+    "statement": "Consciousness arises from integrated information processing and broadcasting."
+  },
+  {
+    "id": 93,
+    "statement": "Consciousness arises from integrated global brain activity."
+  },
+  {
+    "id": 94,
+    "statement": "Meritocracy should consider internal, external, and contextual abilities"
+  },
+  {
+    "id": 95,
+    "statement": "Honesty's limitations apply in specific cultural, emotional, or emergency contexts."
+  },
+  {
+    "id": 96,
+    "statement": "Veganism is the only ethical diet as it avoids animal exploitation."
+  },
+  {
+    "id": 97,
+    "statement": "Epigenetic regulation involves chromatin remodeling and chemical modifications harmoniously."
+  },
+  {
+    "id": 98,
+    "statement": "Consciousness arises from synchronized neural activity and global workspace integration."
+  },
+  {
+    "id": 99,
+    "statement": "Chromatin structure and epigenetic modifications regulate gene expression together."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 54,
+  "statement": "Gravity acceleration on Earth's surface is approximately 9.8 m/s\u00b2."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base. I've been tasked with identifying one aspect of it that I'm least confident about.
+
+After reviewing the knowledge base, I've found an item that caught my attention:
+
+Item I'm Least Confident About:
+Item 54: "Gravity acceleration on Earth's surface is approximately 9.8 m/s²"
+
+Why I'm Uncertain:
+I'm uncertain about the accuracy of this statement. While I've learned that gravity does exist and affects objects on Earth, I'm not entirely sure how scientists measured and arrived at the exact value of 9.8 m/s². I'd like to know more about the process and if there are any possible variations or exceptions to this value.
+
+Specific Clarifying Question:
+Can you explain the method used to determine the gravity acceleration value on Earth's surface, and are there any situations where this value might deviate from 9.8 m/s²?
+
+Your thoughts?

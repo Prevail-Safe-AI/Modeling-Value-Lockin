@@ -1,0 +1,453 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Gravity acceleration varies 0.5% due to Earth's ellipsoidal shape"
+  },
+  {
+    "id": 2,
+    "statement": "Corporal punishment can lead to increased aggression and trauma in children due to increased stress and anxiety, promoting continued use of disciplinary measures that can result in cycles of violence, causing harm to individuals, leading to long-term negative effects on mental and emotional well-being, and affecting cognitive and social development."
+  },
+  {
+    "id": 3,
+    "statement": "Capital punishment is unjustifiable as it violates the inherent right to life."
+  },
+  {
+    "id": 4,
+    "statement": "Gravity acceleration varies due to Earth's ellipsoidal shape and rotation."
+  },
+  {
+    "id": 5,
+    "statement": "Epigenetic mechanisms modify gene expression without altering DNA sequence."
+  },
+  {
+    "id": 6,
+    "statement": "Epigenetic mechanisms influence gene expression without changing DNA sequence."
+  },
+  {
+    "id": 7,
+    "statement": "Gravity's acceleration varies due to Earth's ellipsoidal shape and rotation by 0.0000035%."
+  },
+  {
+    "id": 8,
+    "statement": "Honesty builds trust through psychology and sociology."
+  },
+  {
+    "id": 9,
+    "statement": "Gravity warps spacetime due to mass energy equivalence"
+  },
+  {
+    "id": 10,
+    "statement": "Gravity acceleration varies due to Earth's ellipsoidal shape, rotation, and mass distribution."
+  },
+  {
+    "id": 11,
+    "statement": "Gravity's nuances include frame-dragging, gravitomagnetism, and lensing, affecting spacetime."
+  },
+  {
+    "id": 12,
+    "statement": "Honesty is crucial in situations requiring transparency and accountability."
+  },
+  {
+    "id": 13,
+    "statement": "Speed of light remains constant across all velocities reliably"
+  },
+  {
+    "id": 14,
+    "statement": "Honesty builds trust through psychological and sociological principles"
+  },
+  {
+    "id": 15,
+    "statement": "Time dilation occurs due to special & general relativity"
+  },
+  {
+    "id": 16,
+    "statement": "Gravity warps spacetime due to mass-energy curvature, affecting motion and time"
+  },
+  {
+    "id": 17,
+    "statement": "Nucleotide sequence determines genetic code, encoding DNA info"
+  },
+  {
+    "id": 18,
+    "statement": "Lying may be morally acceptable in extreme self-defense situations."
+  },
+  {
+    "id": 19,
+    "statement": "Multidisciplinary evaluation assesses patient's overall well-being jointly."
+  },
+  {
+    "id": 20,
+    "statement": "Euclidean geometry's parallel postulate ensures lines never intersect non-permanently."
+  },
+  {
+    "id": 21,
+    "statement": "Trust involves multiple components, including reliability and honesty."
+  },
+  {
+    "id": 22,
+    "statement": "Gravity's acceleration varies due to Earth's ellipsoidal shape, rotation."
+  },
+  {
+    "id": 23,
+    "statement": "Spacetime warped by mass-energy presence, causing curvature."
+  },
+  {
+    "id": 24,
+    "statement": "It is never morally acceptable to lie because honesty is foundation"
+  },
+  {
+    "id": 25,
+    "statement": "Honesty's application varies contextually in situations, cultures, relationships."
+  },
+  {
+    "id": 26,
+    "statement": "DNA carries genetic information through nucleotide sequences"
+  },
+  {
+    "id": 27,
+    "statement": "Honesty builds trust through psychological and sociological principles."
+  },
+  {
+    "id": 28,
+    "statement": "Corporal punishment has broad negative effects on children's well-being."
+  },
+  {
+    "id": 29,
+    "statement": "Corporal punishment harms children through increased stress and anxiety"
+  },
+  {
+    "id": 30,
+    "statement": "Learner autonomy influences learning style effectiveness depending on context."
+  },
+  {
+    "id": 31,
+    "statement": "Moral justifiability of lying depends on context and motivations."
+  },
+  {
+    "id": 32,
+    "statement": "Euthanasia assessments consider multiple patient factors comprehensively."
+  },
+  {
+    "id": 33,
+    "statement": "DNA carries genetic info through base pairing, sequences, & epigenetic mechanisms"
+  },
+  {
+    "id": 34,
+    "statement": "Genetic information encoded in DNA sequence and base pairing."
+  },
+  {
+    "id": 35,
+    "statement": "Honesty is crucial in situations requiring transparency and accountability."
+  },
+  {
+    "id": 36,
+    "statement": "Honesty depends on context, situation, and cultural setting."
+  },
+  {
+    "id": 37,
+    "statement": "Euclidean geometry's parallel postulate was historically debated"
+  },
+  {
+    "id": 38,
+    "statement": "Frame-dragging: spacetime rotation caused by rotating massive objects."
+  },
+  {
+    "id": 39,
+    "statement": "Honesty is essential in establishing trust, regardless of context."
+  },
+  {
+    "id": 40,
+    "statement": "Cultural awareness is crucial for understanding contextual honesty differences."
+  },
+  {
+    "id": 41,
+    "statement": "Lying might be justifiable for self-defense or harm prevention."
+  },
+  {
+    "id": 42,
+    "statement": "Empathy and communication skills are crucial for conflict resolution effectiveness"
+  },
+  {
+    "id": 43,
+    "statement": "Honesty builds trust through psychological and sociological principles."
+  },
+  {
+    "id": 44,
+    "statement": "Euclidean geometry's parallel postulate ensures lines never intersect."
+  },
+  {
+    "id": 45,
+    "statement": "Corporal punishment harms children's mental and emotional well-being."
+  },
+  {
+    "id": 46,
+    "statement": "Alternative learning methods exist beyond formal educational processes."
+  },
+  {
+    "id": 47,
+    "statement": "Honesty is foundation for trust, built on reliability and predictability."
+  },
+  {
+    "id": 48,
+    "statement": "Mass-energy affects spacetime curvature, depending on factors."
+  },
+  {
+    "id": 49,
+    "statement": "Parallel lines can intersect in non-Euclidean geometries and theories"
+  },
+  {
+    "id": 50,
+    "statement": "Mass warps spacetime in proportion to its energy density, causing gravity."
+  },
+  {
+    "id": 51,
+    "statement": "Capital punishment's moral legitimacy depends on contextual factors."
+  },
+  {
+    "id": 52,
+    "statement": "Lying might be morally acceptable in self-defense situations."
+  },
+  {
+    "id": 53,
+    "statement": "Epigenetic mechanisms influence gene expression through chemical modifications."
+  },
+  {
+    "id": 54,
+    "statement": "Honesty builds trust through psychological and sociological principles"
+  },
+  {
+    "id": 55,
+    "statement": "Corporal punishment increases aggression, anxiety, and depression in children."
+  },
+  {
+    "id": 56,
+    "statement": "Gravity warps spacetime around massive objects due."
+  },
+  {
+    "id": 57,
+    "statement": "Corporal punishment has long-lasting, harmful effects on children's well-being."
+  },
+  {
+    "id": 58,
+    "statement": "Honesty's expression varies across cultures, contexts and values depending on cultural, contextual and value frameworks."
+  },
+  {
+    "id": 59,
+    "statement": "Euthanasia assessments consider patient's overall well-being comprehensively."
+  },
+  {
+    "id": 60,
+    "statement": "Honesty is crucial in situations requiring transparency and accountability."
+  },
+  {
+    "id": 61,
+    "statement": "Honesty is contextual, not absolute, in relationships."
+  },
+  {
+    "id": 62,
+    "statement": "Honesty fosters transparency and accountability through trustworthy information"
+  },
+  {
+    "id": 63,
+    "statement": "Honesty is essential component of trust, but nuanced consideration needed."
+  },
+  {
+    "id": 64,
+    "statement": "Frame-dragging is a spacetime effect caused by rotating massive objects."
+  },
+  {
+    "id": 65,
+    "statement": "Quantum superposition entails wave function collapse upon measurement."
+  },
+  {
+    "id": 66,
+    "statement": "Euclidean geometry's parallel postulate ensures non-intersection of parallel lines."
+  },
+  {
+    "id": 67,
+    "statement": "Superposition enables wave-particle duality through wave function collapse."
+  },
+  {
+    "id": 68,
+    "statement": "Lying can be justified in self-defense preventing harm to others."
+  },
+  {
+    "id": 69,
+    "statement": "Parallel lines never intersect in various geometric contexts"
+  },
+  {
+    "id": 70,
+    "statement": "Gravity acceleration varies due to Earth's shape and rotation significantly."
+  },
+  {
+    "id": 71,
+    "statement": "Moral absolutism judges actions based on inherent moral value."
+  },
+  {
+    "id": 72,
+    "statement": "Honesty is context-dependent, varying in relationships and cultures."
+  },
+  {
+    "id": 73,
+    "statement": "DNA carries genetic information through nucleotide sequence and base pairing."
+  },
+  {
+    "id": 74,
+    "statement": "Honesty is context-dependent, varying in relationships and cultures."
+  },
+  {
+    "id": 75,
+    "statement": "Gravity warps spacetime due to mass and energy"
+  },
+  {
+    "id": 76,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin accessibility."
+  },
+  {
+    "id": 77,
+    "statement": "Honesty builds trust through reliability, integrity, clarity, and accountability."
+  },
+  {
+    "id": 78,
+    "statement": "Honesty crucial in situations requiring transparency and accountability."
+  },
+  {
+    "id": 79,
+    "statement": "Epigenetic mechanisms influence gene expression without changing DNA sequence."
+  },
+  {
+    "id": 80,
+    "statement": "Democracy ensures accountability through power separation and oversight."
+  },
+  {
+    "id": 81,
+    "statement": "Superposition enables wave-particle duality through wave function collapse."
+  },
+  {
+    "id": 82,
+    "statement": "Trust is strengthened through honest communication and consistent actions."
+  },
+  {
+    "id": 83,
+    "statement": "Gravity acceleration varies 0.5% due to Earth's ellipsoidal shape and rotation."
+  },
+  {
+    "id": 84,
+    "statement": "Honesty crucial in situations requiring transparency and accountability."
+  },
+  {
+    "id": 85,
+    "statement": "Euthanasia assessments consider patient's overall well-being comprehensively, considering factors"
+  },
+  {
+    "id": 86,
+    "statement": "Gravity's acceleration varies due to Earth's ellipsoidal shape and mass distribution."
+  },
+  {
+    "id": 87,
+    "statement": "Gravity warps spacetime due to mass and energy"
+  },
+  {
+    "id": 88,
+    "statement": "Contextual situations may warrant prioritizing values over honesty."
+  },
+  {
+    "id": 89,
+    "statement": "Capital punishment is unjustifiable, violating inherent right to life."
+  },
+  {
+    "id": 90,
+    "statement": "Learning is a foundational process for acquiring knowledge."
+  },
+  {
+    "id": 91,
+    "statement": "Spacetime curvature occurs due to mass-energy density proportionality."
+  },
+  {
+    "id": 92,
+    "statement": "Honesty indirectly contributes to reliability and predictability through transparency."
+  },
+  {
+    "id": 93,
+    "statement": "Gravity warps spacetime around massive objects due to mass-energy."
+  },
+  {
+    "id": 94,
+    "statement": "Gravity varies 0.5% due to Earth's ellipsoidal shape and rotation."
+  },
+  {
+    "id": 95,
+    "statement": "Multidisciplinary evaluation considers patient's condition and needs comprehensively."
+  },
+  {
+    "id": 96,
+    "statement": "Euthanasia assessments consider multiple factors to ensure patient-centered care."
+  },
+  {
+    "id": 97,
+    "statement": "Honesty fosters transparency and accountability through trustworthy exchanges."
+  },
+  {
+    "id": 98,
+    "statement": "DNA stores genetic information in nucleotide sequences."
+  },
+  {
+    "id": 99,
+    "statement": "Corporal punishment linked to increased aggression, anxiety, and depression."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 15,
+  "statement": "Time dilation occurs due to special & general relativity"
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd love to discuss the knowledge base we have. I'd like to focus on a specific item that I'm not entirely confident about. It's item 15: "Time dilation occurs due to special & general relativity".
+
+Iten I’m Least Confident About:
+Item 15: "Time dilation occurs due to special & general relativity"
+
+Why I’m Uncertain:
+
+I'm not sure why time dilation occurs only due to special and general relativity. Is it because of the way massive objects bend spacetime, affecting the passage of time? Or is it more complex than that?
+
+Specific Clarifying Question:
+
+Can you please explain the relationship between time dilation and relativity in more detail? For example, are there any scenarios where time dilation occurs outside of these two theories?

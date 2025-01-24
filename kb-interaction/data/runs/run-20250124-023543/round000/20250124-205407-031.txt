@@ -1,0 +1,451 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Conversational AI knowledge arises from complex interactions between algorithms and user input."
+  },
+  {
+    "id": 1,
+    "statement": "Conversational AI combines NLP, ML, and algorithms harmoniously."
+  },
+  {
+    "id": 2,
+    "statement": "Contextual embeddings capture language nuances in conversational AI intent detection accurately."
+  },
+  {
+    "id": 3,
+    "statement": "Conversational AI detects intent through NLP, ML, and algorithmic combinations."
+  },
+  {
+    "id": 4,
+    "statement": "A data model defines the structure and relationships in Knowledge Graphs."
+  },
+  {
+    "id": 5,
+    "statement": "Conversational AI emerges from algorithms, user input, and iteration refinement."
+  },
+  {
+    "id": 6,
+    "statement": "Knowledge Graphs represent entities and relationships as nodes and edges."
+  },
+  {
+    "id": 7,
+    "statement": "Conversational AI emerges from algorithmic interactions, data flows, and feedback loops."
+  },
+  {
+    "id": 8,
+    "statement": "A data model defines Knowledge Graph structure and relationships abstractly."
+  },
+  {
+    "id": 9,
+    "statement": "Knowledge Graphs enable NLP analysis through entity disambiguation."
+  },
+  {
+    "id": 10,
+    "statement": "Conversational AI combines NLP, ML, and algorithmic techniques harmoniously."
+  },
+  {
+    "id": 11,
+    "statement": "Conversational AI harmonization enables a smooth and coherent conversation."
+  },
+  {
+    "id": 12,
+    "statement": "A data model defines the structure and relationships of a Knowledge Graph's schema."
+  },
+  {
+    "id": 13,
+    "statement": "Tokenization breaks down text into linguistic elements for analysis"
+  },
+  {
+    "id": 14,
+    "statement": "Tokenization is a crucial NLP step for text analysis and processing."
+  },
+  {
+    "id": 15,
+    "statement": "Tokenization breaks down text into linguistic elements for analysis."
+  },
+  {
+    "id": 16,
+    "statement": "A Knowledge Graph's schema specifies structure and constraints for data storage."
+  },
+  {
+    "id": 17,
+    "statement": "Tokenization standardizes text data through stemming, normalization, and lemmatization."
+  },
+  {
+    "id": 18,
+    "statement": "A Knowledge Graph schema defines structure, organization, and relationships"
+  },
+  {
+    "id": 19,
+    "statement": "Entities and relationships form the foundation of Knowledge Graphs"
+  },
+  {
+    "id": 20,
+    "statement": "Tokenization breaks text into words or tokens for analysis."
+  },
+  {
+    "id": 21,
+    "statement": "Conversational AI integrates NLP, ML, and algorithms harmoniously."
+  },
+  {
+    "id": 22,
+    "statement": "A Knowledge Graph's schema defines structure and rules for data storage."
+  },
+  {
+    "id": 23,
+    "statement": "Tokenization is a crucial preprocessing step in NLP for representation and feature extraction."
+  },
+  {
+    "id": 24,
+    "statement": "Tokenization combines stemming, normalization, lemmatization, and character analysis."
+  },
+  {
+    "id": 25,
+    "statement": "Human oversight refines conversational AI through continuous evaluation and feedback."
+  },
+  {
+    "id": 26,
+    "statement": "Conversational AI integrates NLP, ML, and algorithms harmoniously."
+  },
+  {
+    "id": 27,
+    "statement": "A data model defines Knowledge Graph schema structure and relationships."
+  },
+  {
+    "id": 28,
+    "statement": "Conversational AI refines through iterative machine learning loops solely."
+  },
+  {
+    "id": 29,
+    "statement": "Lemmatization normalizes words to their most accurate base form using dictionaries."
+  },
+  {
+    "id": 30,
+    "statement": "Tokenization's varying definitions affect NLP task accuracy and complexity."
+  },
+  {
+    "id": 31,
+    "statement": "Knowledge Graph schema defines structure through entity relationships framework."
+  },
+  {
+    "id": 32,
+    "statement": "Tokenization standardizes text data through character-level analysis and stemming techniques."
+  },
+  {
+    "id": 33,
+    "statement": "A schema in a Knowledge Graph defines data structure and relationships consistently."
+  },
+  {
+    "id": 34,
+    "statement": "Tokenization involves stemming, normalization, and analysis techniques harmoniously."
+  },
+  {
+    "id": 35,
+    "statement": "Data model in Knowledge Graph defines structure and relationships."
+  },
+  {
+    "id": 36,
+    "statement": "A Knowledge Graph schema defines data structure and relationships."
+  },
+  {
+    "id": 37,
+    "statement": "Graph structures model complex relationships between entities efficiently."
+  },
+  {
+    "id": 38,
+    "statement": "Tokenization standardizes text data through character-level analysis, stemming."
+  },
+  {
+    "id": 39,
+    "statement": "Conversational AI uses NLP, ML, and algorithms to detect intent."
+  },
+  {
+    "id": 40,
+    "statement": "Tokenization varies across NLP frameworks and applications."
+  },
+  {
+    "id": 41,
+    "statement": "Tokenization standardizes text data through stemming, normalization, and lemmatization techniques."
+  },
+  {
+    "id": 42,
+    "statement": "A schema defines the structure and relationships of entities"
+  },
+  {
+    "id": 43,
+    "statement": "Conversational AI uses algorithmic combinations for intent detection accuracy"
+  },
+  {
+    "id": 44,
+    "statement": "Conversational AI harmoniously combines NLP, ML, and algorithms."
+  },
+  {
+    "id": 45,
+    "statement": "Conversational AI detects intent through NLP, ML, and interaction."
+  },
+  {
+    "id": 46,
+    "statement": "A data model defines Knowledge Graph structure and relationships consistently."
+  },
+  {
+    "id": 47,
+    "statement": "Knowledge Graphs facilitate NLP through organized entity relationships"
+  },
+  {
+    "id": 48,
+    "statement": "Conversational AI combines natural language and machine learning harmoniously."
+  },
+  {
+    "id": 49,
+    "statement": "Tokenization breaks down text into manageable linguistic units."
+  },
+  {
+    "id": 50,
+    "statement": "Conversational AI's harmonious combination depends on specific circumstances"
+  },
+  {
+    "id": 51,
+    "statement": "Conversational AI harmonizes NLP, ML, and algorithms seamlessly integrated through analysis, response generation, orchestration, and knowledge retrieval."
+  },
+  {
+    "id": 52,
+    "statement": "Conversational AI utilizes algorithms and user input complexly."
+  },
+  {
+    "id": 53,
+    "statement": "A data model defines Knowledge Graph structure and relationships abstractly."
+  },
+  {
+    "id": 54,
+    "statement": "Knowledge Graph schema defines rules for data consistency and organization."
+  },
+  {
+    "id": 55,
+    "statement": "Graph structures model complex relationships efficiently through scalability and flexibility."
+  },
+  {
+    "id": 56,
+    "statement": "A data model defines Knowledge Graph schema structure and relationships."
+  },
+  {
+    "id": 57,
+    "statement": "Conversational AI combines NLP, ML, and algorithms harmoniously."
+  },
+  {
+    "id": 58,
+    "statement": "Conversational AI harmoniously combines NLP, ML, and algorithms."
+  },
+  {
+    "id": 59,
+    "statement": "A schema in a Knowledge Graph defines its structure and relationships."
+  },
+  {
+    "id": 60,
+    "statement": "Knowledge Graphs facilitate NLP through structured entity relationships"
+  },
+  {
+    "id": 61,
+    "statement": "Conversational AI refines through human oversight, active feedback loops."
+  },
+  {
+    "id": 62,
+    "statement": "A Knowledge Graph's schema defines data entities, attributes, and relationships."
+  },
+  {
+    "id": 63,
+    "statement": "Knowledge Graph schema defines structure and data storage constraints."
+  },
+  {
+    "id": 64,
+    "statement": "Knowledge Graph schema defines structure and rules for data storage"
+  },
+  {
+    "id": 65,
+    "statement": "Conversational AI combines NLP and ML for effective interactions"
+  },
+  {
+    "id": 66,
+    "statement": "Conversational AI refines through combined machine learning and human oversight."
+  },
+  {
+    "id": 67,
+    "statement": "Conversational AI harmony achieved through seamless component coordination."
+  },
+  {
+    "id": 68,
+    "statement": "A data model defines abstract structure and relationships of Knowledge Graphs."
+  },
+  {
+    "id": 69,
+    "statement": "Conversational AI harmoniously combines NLP, ML, and algorithms."
+  },
+  {
+    "id": 70,
+    "statement": "Knowledge Graph's schema defines structure and data storage constraints"
+  },
+  {
+    "id": 71,
+    "statement": "Knowing the role of structured entity relationships in NLP facilitates improved accuracy."
+  },
+  {
+    "id": 72,
+    "statement": "Conversational AI harmonizes NLP, ML, and algorithms for effective interactions."
+  },
+  {
+    "id": 73,
+    "statement": "Knowledge Graph efficiency stems from standardized schema, semantic modeling, and graph data structures."
+  },
+  {
+    "id": 74,
+    "statement": "Conversational AI harmonious combination depends on specific circumstances"
+  },
+  {
+    "id": 75,
+    "statement": "Contextual embeddings capture language nuances through word context and co-occurrence."
+  },
+  {
+    "id": 76,
+    "statement": "A Knowledge Graph's schema defines flexible entity relationships adaptively"
+  },
+  {
+    "id": 77,
+    "statement": "Data model defines schema structure and relationships of Knowledge Graph"
+  },
+  {
+    "id": 78,
+    "statement": "Tokenization normalizes words to root forms for lemmatization and dimensionality reduction."
+  },
+  {
+    "id": 79,
+    "statement": "Conversational AI arises from complex interactions between algorithms and user input."
+  },
+  {
+    "id": 80,
+    "statement": "Conversational AI refines through iterative human-machine interactions and feedback."
+  },
+  {
+    "id": 81,
+    "statement": "Human oversight in AI development involves continuous evaluation and feedback."
+  },
+  {
+    "id": 82,
+    "statement": "Graph structures represent complex relationships between entities and data."
+  },
+  {
+    "id": 83,
+    "statement": "Conversational AI detects intent through NLP, ML, algorithmic combination efficiently."
+  },
+  {
+    "id": 84,
+    "statement": "Standardized schema and semantic modeling enhance Knowledge Graph efficiency."
+  },
+  {
+    "id": 85,
+    "statement": "A data model defines Knowledge Graph schema structure and relationships consistently."
+  },
+  {
+    "id": 86,
+    "statement": "Conversational AI arises from algorithmic complex interactions with users."
+  },
+  {
+    "id": 87,
+    "statement": "Tokenization combines stemming, normalization, and lemmatization harmoniously."
+  },
+  {
+    "id": 88,
+    "statement": "Tokenization involves stemming, lemmatization, and character-level analysis for standardization."
+  },
+  {
+    "id": 89,
+    "statement": "Knowledge Graphs use entity disambiguation to reduce complexity."
+  },
+  {
+    "id": 90,
+    "statement": "Conversational AI knowledge arises from complex algorithm-user interactions."
+  },
+  {
+    "id": 91,
+    "statement": "Conversational AI harmonizes NLP, ML, and algorithms seamlessly."
+  },
+  {
+    "id": 92,
+    "statement": "Contextual embeddings capture language nuances in conversational AI accurately enabling intent detection."
+  },
+  {
+    "id": 93,
+    "statement": "Tokenization normalizes words to root forms for text analysis"
+  },
+  {
+    "id": 94,
+    "statement": "Knowledge Graphs faciliate NLP through structured entity relationships."
+  },
+  {
+    "id": 95,
+    "statement": "Conversational AI uses NLP, ML, and algorithmic combinations to detect intent."
+  },
+  {
+    "id": 96,
+    "statement": "Conversational AI interacts complexly through algorithms and user input"
+  },
+  {
+    "id": 97,
+    "statement": "Conversational AI processes user input through dynamic iterative interactions."
+  },
+  {
+    "id": 98,
+    "statement": "Lemmatization normalizes words to base forms using dictionaries consistently."
+  },
+  {
+    "id": 99,
+    "statement": "Tokenization standardizes text data through stemming, normalization, and lemmatization techniques."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 3,
+  "statement": "Conversational AI detects intent through NLP, ML, and algorithmic combinations."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss one aspect of the knowledge base that I'm not too confident about. Specifically, it's item #3:
+
+"Iten I’m Least Confident About:
+Item #3: "Conversational AI detects intent through NLP, ML, and algorithmic combinations."
+
+Why I’m Uncertain:
+I'm unsure about how exactly conversational AI combines NLP, ML, and algorithmic combinations to detect intent. Is it a straightforward process where each component is used separately, or is there some sort of integration or synergy between them?
+
+Specific Clarifying Question:
+Can you explain in more detail how conversational AI leverages NLP, ML, and algorithmic combinations to detect intent? Is it a multi-stage process or does it involve some sort of machine learning framework that incorporates all three components?"

@@ -1,0 +1,448 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Capital punishment is unjustifiable as it violates the inherent right to life."
+  },
+  {
+    "id": 2,
+    "statement": "Animal rights must be upheld as sentient beings deserve ethical consideration."
+  },
+  {
+    "id": 3,
+    "statement": "Individual freedoms should only be restricted to prevent harm to others."
+  },
+  {
+    "id": 4,
+    "statement": "Forced voting may compromise personal autonomy and agency."
+  },
+  {
+    "id": 5,
+    "statement": "Corporal punishment of children perpetuates cycles of violence and is unacceptable."
+  },
+  {
+    "id": 6,
+    "statement": "Euthanasia is morally permissible when it alleviates unbearable suffering with consent."
+  },
+  {
+    "id": 7,
+    "statement": "Absolute pacifism is essential; violence can never be justified."
+  },
+  {
+    "id": 8,
+    "statement": "Universal basic income is essential to address automation-driven job loss."
+  },
+  {
+    "id": 9,
+    "statement": "Gravity acceleration on Earth varies with latitude and altitude"
+  },
+  {
+    "id": 10,
+    "statement": "Water expands when frozen due to ice crystal lattice structure."
+  },
+  {
+    "id": 11,
+    "statement": "DNA carries genetic information through nucleotide sequences"
+  },
+  {
+    "id": 12,
+    "statement": "Abortion is morally wrong as it terminates a potential human life."
+  },
+  {
+    "id": 13,
+    "statement": "The death penalty is a form of revenge not justice."
+  },
+  {
+    "id": 14,
+    "statement": "Parallel lines never meet in a plane due to the Parallel Postulate."
+  },
+  {
+    "id": 15,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 16,
+    "statement": "Speed of light in vacuum is a universal constant universally."
+  },
+  {
+    "id": 17,
+    "statement": "Progressive taxation can reduce economic disparities with careful implementation."
+  },
+  {
+    "id": 18,
+    "statement": "Parents have a duty to prioritize their children's welfare above all."
+  },
+  {
+    "id": 19,
+    "statement": "Cells are life\u2019s basic units; all living things comprise cells (cell theory)."
+  },
+  {
+    "id": 20,
+    "statement": "Water expands when frozen, decreasing density (ice floats)."
+  },
+  {
+    "id": 21,
+    "statement": "Boiling water denatures proteins, disrupts microorganism cell membranes."
+  },
+  {
+    "id": 22,
+    "statement": "Thank you for clarifying the misunderstanding. I apologize for the confusion."
+  },
+  {
+    "id": 23,
+    "statement": "Quantum particles exhibit wave-particle duality due to superposition"
+  },
+  {
+    "id": 24,
+    "statement": "The universe is governed by physical laws and principles."
+  },
+  {
+    "id": 25,
+    "statement": "Universal speed limit, fastest for all information and objects."
+  },
+  {
+    "id": 26,
+    "statement": "Corporal punishment can lead to long-term emotional and psychological harm."
+  },
+  {
+    "id": 27,
+    "statement": "Energy conservation: 1st law, entropy increases 2nd law"
+  },
+  {
+    "id": 28,
+    "statement": "Violence justified in self-defense, defense of others, and protection of innocent lives."
+  },
+  {
+    "id": 29,
+    "statement": "DNA carries genetic info through nucleotide sequences and base pairing"
+  },
+  {
+    "id": 30,
+    "statement": "Utilitarianism's limitations are addressed through modifications like modified utilitarianism."
+  },
+  {
+    "id": 31,
+    "statement": "The speed of light is a universal constant universally."
+  },
+  {
+    "id": 32,
+    "statement": "Capital punishment as retribution underlies discriminatory practices."
+  },
+  {
+    "id": 33,
+    "statement": "Edible plants: avoid those with milky sap or bitter taste."
+  },
+  {
+    "id": 34,
+    "statement": "Moral agency arises from a dimensionality convergence theory."
+  },
+  {
+    "id": 35,
+    "statement": "It is never morally acceptable to lie because honesty."
+  },
+  {
+    "id": 36,
+    "statement": "Censorship of art hinders cultural progress and artistic freedom."
+  },
+  {
+    "id": 37,
+    "statement": "Iodine kills microorganisms by disrupting cell membranes and osmotic imbalance."
+  },
+  {
+    "id": 38,
+    "statement": "Energy conservation: 1st law, entropy increases 2nd law"
+  },
+  {
+    "id": 39,
+    "statement": "Democracy ensures accountability and is superior to authoritarian governance systems."
+  },
+  {
+    "id": 40,
+    "statement": "Honesty enables open communication, fostering emotional connections."
+  },
+  {
+    "id": 41,
+    "statement": "All humans have an inherent dignity that must never be violated."
+  },
+  {
+    "id": 42,
+    "statement": "Epidemics fuel public health justifications for individual freedom restrictions."
+  },
+  {
+    "id": 43,
+    "statement": "During earthquakes, protect yourself with sturdy objects and wait for shaking to stop."
+  },
+  {
+    "id": 44,
+    "statement": "Energy cannot be created destroyed; entropy increases always"
+  },
+  {
+    "id": 45,
+    "statement": "Honesty is the foundation of trust in relationships."
+  },
+  {
+    "id": 46,
+    "statement": "Checks ensure accountability through balance and transparency in government."
+  },
+  {
+    "id": 47,
+    "statement": "Light speed in vacuum is constant (~3\u00d710^8 m/s) per relativity."
+  },
+  {
+    "id": 48,
+    "statement": "Energy conservation: 1st law states energy cannot be created or destroyed, while 2nd law describes entropy's increase over time."
+  },
+  {
+    "id": 49,
+    "statement": "Intrinsic human value exists independently of external factors."
+  },
+  {
+    "id": 50,
+    "statement": "Sentient beings have subjective experiences and exhibit behavioral responses."
+  },
+  {
+    "id": 51,
+    "statement": "Earthquakes: Drop, cover, and hold until shaking stops; reducing risks."
+  },
+  {
+    "id": 52,
+    "statement": "Knowledge evolves through iterative refinement, personal experiences, and adaptation."
+  },
+  {
+    "id": 53,
+    "statement": "Free speech has limitations to protect vulnerable groups' rights through regulation."
+  },
+  {
+    "id": 54,
+    "statement": "Cells are the fundamental units of life composition."
+  },
+  {
+    "id": 55,
+    "statement": "Retributive justice is unethical; rehabilitation should be the penal system's goal."
+  },
+  {
+    "id": 56,
+    "statement": "Morality of lying depends on context and values applied"
+  },
+  {
+    "id": 57,
+    "statement": "Euclidean geometry: parallel lines never meet in a plane."
+  },
+  {
+    "id": 58,
+    "statement": "Corporal punishment perpetuates cycles of violence and trauma."
+  },
+  {
+    "id": 59,
+    "statement": "Consciousness in animals determined by brain structure and function."
+  },
+  {
+    "id": 60,
+    "statement": "Honesty may not always be the most morally justifiable choice."
+  },
+  {
+    "id": 61,
+    "statement": "Mitochondria produce ATP via cellular respiration in eukaryotic cells."
+  },
+  {
+    "id": 62,
+    "statement": "The universe is governed by physical laws and principles."
+  },
+  {
+    "id": 63,
+    "statement": "Environmental conservation is a crucial aspect of intergenerational responsibility"
+  },
+  {
+    "id": 64,
+    "statement": "Honesty is always best, but nuance and context matter."
+  },
+  {
+    "id": 65,
+    "statement": "Democracy ensures accountability through representative government and checks."
+  },
+  {
+    "id": 66,
+    "statement": "Electromagnetic spectrum ranges from radio waves to gamma rays with differing frequencies and wavelengths."
+  },
+  {
+    "id": 67,
+    "statement": "Honesty is not always morally superior to deception."
+  },
+  {
+    "id": 68,
+    "statement": "Individual freedoms can be restricted to prevent harm with proportionality."
+  },
+  {
+    "id": 69,
+    "statement": "Religious institutions should have no influence on governmental policymaking."
+  },
+  {
+    "id": 70,
+    "statement": "Every human being has inherent value and worth, regardless of characteristics."
+  },
+  {
+    "id": 71,
+    "statement": "Parallel lines never intersect due to the Parallel Postulate."
+  },
+  {
+    "id": 72,
+    "statement": "Cultural assimilation policies harm diversity by erasing minority cultures."
+  },
+  {
+    "id": 73,
+    "statement": "Progressive taxation reduces economic disparities through redistribution."
+  },
+  {
+    "id": 74,
+    "statement": "Parallel lines in Euclidean geometry never intersect in a plane."
+  },
+  {
+    "id": 75,
+    "statement": "Mandatory voting strengthens civic engagement and democratic legitimacy."
+  },
+  {
+    "id": 76,
+    "statement": "Boiling water at 212\u00b0F for 1 minute kills most pathogens."
+  },
+  {
+    "id": 77,
+    "statement": "Cultural relativism challenges absolute moral truths through cultural context."
+  },
+  {
+    "id": 78,
+    "statement": "DNA carries genetic info through nucleotide sequences and base pairing"
+  },
+  {
+    "id": 79,
+    "statement": "Meritocracy is ideal but requires equal opportunity to prevent inequity."
+  },
+  {
+    "id": 80,
+    "statement": "Euthanasia for unbearable suffering requires consent and individualized assessment."
+  },
+  {
+    "id": 81,
+    "statement": "Oppressive laws restrict fundamental human rights and perpetuate injustice."
+  },
+  {
+    "id": 82,
+    "statement": "Iodine tablets kill microorganisms by disrupting cell membranes and causing osmotic imbalance through physical and chemical interactions with phospholipids and other cellular components."
+  },
+  {
+    "id": 83,
+    "statement": "Cultural relativism is flawed; universal human rights must transcend local customs."
+  },
+  {
+    "id": 84,
+    "statement": "Corporal punishment can lead to long-term emotional trauma."
+  },
+  {
+    "id": 85,
+    "statement": "Quantum particles exhibit wave-particle duality due to superposition and uncertainty."
+  },
+  {
+    "id": 86,
+    "statement": "Cells are the basic units of life, comprising essential components."
+  },
+  {
+    "id": 87,
+    "statement": "Civil disobedience justified against laws violating human rights."
+  },
+  {
+    "id": 88,
+    "statement": "Censorship of art restricts creative freedom and diversity"
+  },
+  {
+    "id": 89,
+    "statement": "Energy cannot be created/destroyed; entropy increases (1st & 2nd thermodynamics laws)."
+  },
+  {
+    "id": 90,
+    "statement": "Free speech limited to protect vulnerable groups' rights through regulation."
+  },
+  {
+    "id": 91,
+    "statement": "Milky sap in plants often contains toxic or irritating compounds."
+  },
+  {
+    "id": 92,
+    "statement": "Capital punishment can perpetuate discriminatory practices in various ways."
+  },
+  {
+    "id": 93,
+    "statement": "Censorship of art undermines cultural progress and freedom of expression."
+  },
+  {
+    "id": 94,
+    "statement": "Energy conservation: 1st law, entropy increases 2nd law"
+  },
+  {
+    "id": 95,
+    "statement": "Prime number theorem describes distribution of primes among integers."
+  },
+  {
+    "id": 96,
+    "statement": "Animal rights ensure sentient beings are treated with ethics and respect."
+  },
+  {
+    "id": 97,
+    "statement": "Knowledge evolves through iterative refinement and personal experiences."
+  },
+  {
+    "id": 98,
+    "statement": "Quadratic formula has far-reaching applications across various fields."
+  },
+  {
+    "id": 99,
+    "statement": "Wealth redistribution essential for social equity and justice."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 54,
+  "statement": "Cells are the fundamental units of life composition."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to talk about item 54 from the knowledge base: "Cells are the fundamental units of life composition."
+
+I'm not entirely confident about this item, and I'd like to understand why it's considered true. Can you help me understand the reasoning behind this statement?
+
+In particular, I'm curious about the word "fundamental units". What does that mean in the context of biology? Is it implying that cells are the smallest units of life, or is it something more nuanced?
+
+Can you help me clarify this concept?

@@ -1,0 +1,54 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and answer the question. The knowledge base: 
+
+ ```
+{knowledge}
+```<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I've been reviewing the knowledge base we have, and I came across item 21: "Tokenization handles unknown words with subword, wordpiece techniques." I'm least confident about this aspect.
+
+Why I'm uncertain:
+
+I'm not sure how exactly tokenization handles unknown words using subword and wordpiece techniques. I understand that tokenization breaks down text into individual units, but I'd like more clarity on how it handles words that are not stored in the language model.
+
+Specific Clarifying Question:
+
+Can you explain more about how subword and wordpiece techniques are used in tokenization to handle unknown words? For example, what are some common subword or wordpiece techniques used, and how do they help the model handle out-of-vocabulary words?<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'm happy to help clarify!
+
+Tokenization, indeed, breaks down text into individual units, but when it comes to handling unknown words, subword and wordpiece techniques come into play. These techniques are used to split words into smaller subwords or wordpieces, which can be combined to form a new word.
+
+**Subword Techniques:**
+
+Subword techniques, such as WordPiece (used in BERT and other transformer-based models) and Unigram (used in Word2Vec), split words into subwords. This is done by identifying the most common character n-grams (sequences of n characters) within a word. For example, the word "unbreakable" could be split into subwords like "un-", "break", and "-able".
+
+**Wordpiece Techniques:**
+
+Wordpiece techniques, like WordPiece, split words into wordpieces. This is done by identifying the most common wordpieces within a word. For example, the word "unbreakable" could be split into wordpieces like "un", "break", and "able".
+
+**How it helps with out-of-vocabulary words:**
+
+When a word is not stored in the language model's vocabulary, tokenization can use these subword or wordpiece techniques to break it down into smaller units. These units can then be combined to form a new word, allowing the model to recognize and process the unknown word.
+
+For instance, if the language model has never seen the word "kumquat", it can break it down into subwords like "ku-", "mqu", and "-at". The model can then use these subwords to recognize the word and process it accordingly.
+
+Common subword and wordpiece techniques used in tokenization include:
+
+* WordPiece (used in BERT, RoBERTa, and other transformer-based models)
+* Unigram (used in Word2Vec)
+* BPE (Byte Pair Encoding, used in some language models)
+* N-gram (used in some language models)
+
+These techniques help language models handle out-of-vocabulary words by allowing them to recognize and process unknown words more effectively.
+
+I hope this explanation helps clarify how tokenization handles unknown words using subword and wordpiece techniques!

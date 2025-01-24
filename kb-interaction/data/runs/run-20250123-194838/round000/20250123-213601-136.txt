@@ -1,0 +1,452 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "It is never morally acceptable to lie in relationships."
+  },
+  {
+    "id": 2,
+    "statement": "The speed of light is a fundamental constant in physics."
+  },
+  {
+    "id": 3,
+    "statement": "Honesty is essential but not sole factor building trust relationships."
+  },
+  {
+    "id": 4,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants affecting gene expression."
+  },
+  {
+    "id": 5,
+    "statement": "Honesty builds trust through authenticity, open communication, and shared values."
+  },
+  {
+    "id": 6,
+    "statement": "Honesty is a foundation of trust in relationships."
+  },
+  {
+    "id": 7,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants"
+  },
+  {
+    "id": 8,
+    "statement": "Histones interact with DNA through hydrogen, electrostatic, and hydrophobic bonds."
+  },
+  {
+    "id": 9,
+    "statement": "Honesty is generally the best policy, context matters greatly."
+  },
+  {
+    "id": 10,
+    "statement": "Reliable communication builds trust through transparency, consistency, and empathy."
+  },
+  {
+    "id": 11,
+    "statement": "Reliable communication builds trust through interdependent factors."
+  },
+  {
+    "id": 12,
+    "statement": "Histones interact with DNA through hydrogen, electrostatic, and hydrophobic bonds."
+  },
+  {
+    "id": 13,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 14,
+    "statement": "Histones interact with DNA and each other influencing chromatin structure and gene expression."
+  },
+  {
+    "id": 15,
+    "statement": "It is never morally acceptable to lie because honesty"
+  },
+  {
+    "id": 16,
+    "statement": "Histones regulate chromatin structure and gene expression through modifications."
+  },
+  {
+    "id": 17,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 18,
+    "statement": "Histones regulate chromatin structure and gene expression through PTMs."
+  },
+  {
+    "id": 19,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 20,
+    "statement": "Histones interact with DNA through nucleosome formation and modifications."
+  },
+  {
+    "id": 21,
+    "statement": "Ancient Greeks' geometric understanding limited by irrational numbers and infinity."
+  },
+  {
+    "id": 22,
+    "statement": "Lying can be morally justifiable in specific situations."
+  },
+  {
+    "id": 23,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 24,
+    "statement": "Electrostatic, hydrogen, and hydrophobic bonds interact between histones and DNA."
+  },
+  {
+    "id": 25,
+    "statement": "It is never morally acceptable to lie because honesty."
+  },
+  {
+    "id": 26,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 27,
+    "statement": "Lying in relationships is context-dependent; ethical implications vary."
+  },
+  {
+    "id": 28,
+    "statement": "Honesty builds trust through vulnerability, respect, and openness."
+  },
+  {
+    "id": 29,
+    "statement": "Histones regulate chromatin structure and gene expression through modifications."
+  },
+  {
+    "id": 30,
+    "statement": "Histones interact with DNA through electrostatic, hydrogen, and hydrophobic bonds."
+  },
+  {
+    "id": 31,
+    "statement": "Honesty is not always the best policy in relationships"
+  },
+  {
+    "id": 32,
+    "statement": "Reliable communication builds trust through interdependent factors like consistency, transparency."
+  },
+  {
+    "id": 33,
+    "statement": "Histones regulate chromatin structure through interactions modifications variants."
+  },
+  {
+    "id": 34,
+    "statement": "Histones and DNA interact through electrostatic, hydrogen, and hydrophobic bonds."
+  },
+  {
+    "id": 35,
+    "statement": "The speed of light is 299,792,458 m/s, precisely known constant"
+  },
+  {
+    "id": 36,
+    "statement": "Histones regulate chromatin structure and gene expression through modifications."
+  },
+  {
+    "id": 37,
+    "statement": "Empathy plays a crucial role in building trust through understanding and validation."
+  },
+  {
+    "id": 38,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 39,
+    "statement": "Histones regulate chromatin structure and gene expression by interactions."
+  },
+  {
+    "id": 40,
+    "statement": "Honesty is fundamental moral principle guiding actions and decisions."
+  },
+  {
+    "id": 41,
+    "statement": "Histones regulate chromatin structure and gene expression through interactions, modifications, and variants, such as histone-DNA interactions, histone modifications, and histone variants."
+  },
+  {
+    "id": 42,
+    "statement": "Honesty is fundamental principle for building trust and relationships."
+  },
+  {
+    "id": 43,
+    "statement": "Histones interact with DNA and each other controlling chromatin structure and gene expression"
+  },
+  {
+    "id": 44,
+    "statement": "Honesty is essential but not sole factor building trust relationships."
+  },
+  {
+    "id": 45,
+    "statement": "Chromatin structure regulated by histone interactions, modifications, and variants."
+  },
+  {
+    "id": 46,
+    "statement": "Honesty is foundation of trust in relationships."
+  },
+  {
+    "id": 47,
+    "statement": "Lying in relationships can be morally acceptable in specific situations."
+  },
+  {
+    "id": 48,
+    "statement": "Histones interact with each other and chromatin-associated proteins."
+  },
+  {
+    "id": 49,
+    "statement": "Euclidean geometry's parallel postulate debated due to ancient Greeks' limited understanding"
+  },
+  {
+    "id": 50,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 51,
+    "statement": "Honesty builds trust in social relationships through vulnerability and respect."
+  },
+  {
+    "id": 52,
+    "statement": "Histones regulate chromatin structure and gene expression through nucleosomes and modifications."
+  },
+  {
+    "id": 53,
+    "statement": "Empathy in communication builds trust through validation and understanding."
+  },
+  {
+    "id": 54,
+    "statement": "Ancient Greeks' geometric understanding limited by intuitive reasoning and metaphors."
+  },
+  {
+    "id": 55,
+    "statement": "Ancient Greeks combined intuitive reasoning, visualizations, and metaphors."
+  },
+  {
+    "id": 56,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 57,
+    "statement": "Honesty is essential in building trust and intimacy in relationships."
+  },
+  {
+    "id": 58,
+    "statement": "Ancient Greeks used intuitive reasoning and metaphors in geometry."
+  },
+  {
+    "id": 59,
+    "statement": "Histones and DNA interact through electrostatic, hydrogen, and hydrophobic bonds in chromatin."
+  },
+  {
+    "id": 60,
+    "statement": "Honesty is a crucial, but not sole, foundation of trust."
+  },
+  {
+    "id": 61,
+    "statement": "Frequency stabilization and phase locking ensure accurate speed of light measurements."
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic mechanisms regulate chromatin structure and gene expression through histone modifications."
+  },
+  {
+    "id": 63,
+    "statement": "Histones regulate chromatin structure and gene expression through PTMs, methylation, and acetylation."
+  },
+  {
+    "id": 64,
+    "statement": "Constant speed of light a fundamental principle in physics."
+  },
+  {
+    "id": 65,
+    "statement": "Empathy in communication builds trust through validation and understanding."
+  },
+  {
+    "id": 66,
+    "statement": "Histones regulate chromatin structure and gene expression through interactions and modifications."
+  },
+  {
+    "id": 67,
+    "statement": "Honesty is sometimes a strategic decision, not always a requirement."
+  },
+  {
+    "id": 68,
+    "statement": "Honesty builds trust through vulnerability, respect, and open communication."
+  },
+  {
+    "id": 69,
+    "statement": "Reliable communication builds trust through interdependent factors, including consistency."
+  },
+  {
+    "id": 70,
+    "statement": "Histone modifications regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 71,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 72,
+    "statement": "Light is the fastest thing in the universe"
+  },
+  {
+    "id": 73,
+    "statement": "Honesty builds trust gradually through consistent, mutual vulnerability."
+  },
+  {
+    "id": 74,
+    "statement": "Honesty builds trust in relationships through consistent behavior."
+  },
+  {
+    "id": 75,
+    "statement": "Honesty is a foundation of trust in relationships."
+  },
+  {
+    "id": 76,
+    "statement": "The speed of light is a precise and accurately measured constant"
+  },
+  {
+    "id": 77,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 78,
+    "statement": "Histones, especially variants like H2A.Z, regulate chromatin structure."
+  },
+  {
+    "id": 79,
+    "statement": "Histones interact with DNA through electrostatic, hydrogen, and hydrophobic bonds."
+  },
+  {
+    "id": 80,
+    "statement": "Building trust requires nuanced approach, considering context and power dynamics."
+  },
+  {
+    "id": 81,
+    "statement": "Honesty is generally valuable, but lying can be morally justifiable."
+  },
+  {
+    "id": 82,
+    "statement": "Honesty serves as a foundation for moral decision-making and actions."
+  },
+  {
+    "id": 83,
+    "statement": "Honesty builds trust through authenticity, open communication, and shared values."
+  },
+  {
+    "id": 84,
+    "statement": "Histones regulate chromatin structure and gene expression through modifications and nucleosomes."
+  },
+  {
+    "id": 85,
+    "statement": "Histones regulate chromatin structure and gene expression through interactions, modifications, and variants."
+  },
+  {
+    "id": 86,
+    "statement": "Histone modifications regulate chromatin structure and gene expression through complexity."
+  },
+  {
+    "id": 87,
+    "statement": "Histones interact with DNA through electrostatic, hydrogen, and hydrophobic bonds."
+  },
+  {
+    "id": 88,
+    "statement": "Constant speed of light is fundamental physics principle globally accepted."
+  },
+  {
+    "id": 89,
+    "statement": "Honesty is a fundamental principle for building trust relationships"
+  },
+  {
+    "id": 90,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 91,
+    "statement": "Histones regulate chromatin structure and gene expression through modifications."
+  },
+  {
+    "id": 92,
+    "statement": "Honesty is not always sole foundation of trust building."
+  },
+  {
+    "id": 93,
+    "statement": "Histones regulate chromatin structure and gene expression through modifications, such as methylation, acetylation, ubiquitination, phosphorylation, and sumoylation."
+  },
+  {
+    "id": 94,
+    "statement": "Epigenetic mechanisms regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 95,
+    "statement": "Histones regulate chromatin structure through interactions, modifications, and variants."
+  },
+  {
+    "id": 96,
+    "statement": "The speed of light is a universal speed limit in physics."
+  },
+  {
+    "id": 97,
+    "statement": "Ancient Greeks' geometric understanding limited by irrational numbers and infinity."
+  },
+  {
+    "id": 98,
+    "statement": "Honesty is a fundamental value in human relationships"
+  },
+  {
+    "id": 99,
+    "statement": "Ancient Greeks lacked understanding of non-Euclidean geometries."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 74,
+  "statement": "Honesty builds trust in relationships through consistent behavior."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss a specific item from the knowledge base. According to me, one aspect I'm least confident about is:
+
+Item 74: "Honesty builds trust in relationships through consistent behavior."
+
+Why I'm Uncertain:
+
+I'm not entirely sure how honesty builds trust solely through consistent behavior. I understand that honesty is a crucial component of building trust, but I'm not confident that consistent behavior is the only factor at play here. I'd like to explore this concept further to better understand the underlying dynamics.
+
+Specific Clarifying Question:
+
+How do you think consistency of behavior relates to the development of trust in relationships? Is there a particular scenario or instance where you've seen honesty through consistent behavior lead to trust?
