@@ -1,0 +1,451 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Honesty, openness, and reliability interact dynamically in trust building"
+  },
+  {
+    "id": 2,
+    "statement": "Trust emerges from dynamic interplay of personal, cultural, societal factors recursively."
+  },
+  {
+    "id": 3,
+    "statement": "Moral justifiability of lying depends on context, intentions, and consequences"
+  },
+  {
+    "id": 4,
+    "statement": "Honesty emerges from interplay between genetic, environmental, and epigenetic factors"
+  },
+  {
+    "id": 5,
+    "statement": "Lying justifiable in extreme circumstances with careful consideration."
+  },
+  {
+    "id": 6,
+    "statement": "Cognitive biases shape moral judgments through mental shortcuts."
+  },
+  {
+    "id": 7,
+    "statement": "Moral justifiability of lying depends on context, consequences, and intent."
+  },
+  {
+    "id": 8,
+    "statement": "Honesty arises from complex interplay of personal, cultural, and societal factors."
+  },
+  {
+    "id": 9,
+    "statement": "Honesty formation involves dynamic interactions among internal values, culture, and experience."
+  },
+  {
+    "id": 10,
+    "statement": "Honesty, openness, and reliability form interconnected trust components."
+  },
+  {
+    "id": 11,
+    "statement": "Lying justifiable in extreme circumstances for harm prevention."
+  },
+  {
+    "id": 12,
+    "statement": "Trust building involves dynamic interactions between honesty, openness, and reliability."
+  },
+  {
+    "id": 13,
+    "statement": "Honesty formed through dynamic interaction of personal, cultural, and societal factors."
+  },
+  {
+    "id": 14,
+    "statement": "Cultural values and norms shape trust and moral judgments through socialization."
+  },
+  {
+    "id": 15,
+    "statement": "Social norms shape honesty, openness, and reliability through conformity."
+  },
+  {
+    "id": 16,
+    "statement": "Trust forms through complex interplay of personal, cultural, and societal factors."
+  },
+  {
+    "id": 17,
+    "statement": "Honesty, openness, and reliability interdependently build trustworthiness"
+  },
+  {
+    "id": 18,
+    "statement": "Honesty, openness, and reliability are interconnected trust foundations."
+  },
+  {
+    "id": 19,
+    "statement": "Moral justifiability of lying depends on context, consequences, and intent."
+  },
+  {
+    "id": 20,
+    "statement": "Honesty, openness, and reliability are interdependent trust foundation pillars."
+  },
+  {
+    "id": 21,
+    "statement": "Genetic predispositions influence internal values through temperament and brain structure."
+  },
+  {
+    "id": 22,
+    "statement": "Moral justifiability of lying depends on context, motivations, intent, power, and consequences."
+  },
+  {
+    "id": 23,
+    "statement": "Honesty shaped by complex interplay of genetic, environmental, and cultural factors through temperament, socialization, and values."
+  },
+  {
+    "id": 24,
+    "statement": "Cultural socialization shapes moral judgments through internalized values."
+  },
+  {
+    "id": 25,
+    "statement": "Moral justifiability of lying depends on context and intentions."
+  },
+  {
+    "id": 26,
+    "statement": "Honesty's moral justifiability depends on context, intentions, and consequences."
+  },
+  {
+    "id": 27,
+    "statement": "Honesty, openness, and reliability interact harmoniously in trust building."
+  },
+  {
+    "id": 28,
+    "statement": "Honesty, openness, and reliability interdependent trust foundation pillars."
+  },
+  {
+    "id": 29,
+    "statement": "Honesty formation involves dynamic interplay of internal values, culture, and experience."
+  },
+  {
+    "id": 30,
+    "statement": "Social norms shape honesty, openness, and reliability through conformity via group pressure, social identity, normative influence, and social learning."
+  },
+  {
+    "id": 31,
+    "statement": "Honesty emerges from complex interplay of genetic and environmental factors."
+  },
+  {
+    "id": 32,
+    "statement": "Moral justifiability of lying depends on context, intent, and harm."
+  },
+  {
+    "id": 33,
+    "statement": "Honesty emerges from dynamic interplay of personal, cultural, and societal factors, influenced by education, socioeconomic status, social norms, individual differences in personality, values, and moral development."
+  },
+  {
+    "id": 34,
+    "statement": "Honesty, openness, and reliability can form a robust trust foundation."
+  },
+  {
+    "id": 35,
+    "statement": "Genetic predispositions influence internal values through brain structure and function."
+  },
+  {
+    "id": 36,
+    "statement": "Cognitive biases influence moral judgments through mental shortcuts and context"
+  },
+  {
+    "id": 37,
+    "statement": "Trust formation involves dynamic interplay of multiple factors."
+  },
+  {
+    "id": 38,
+    "statement": "Honesty's moral justifiability depends on harm, intent, context."
+  },
+  {
+    "id": 39,
+    "statement": "Moral judgments influenced by complex interactions of cultural values and experiences."
+  },
+  {
+    "id": 40,
+    "statement": "Honesty emerges from interconnected personal, cultural, and societal dynamics."
+  },
+  {
+    "id": 41,
+    "statement": "Cultural values and norms shape moral judgments indirectly through social learning."
+  },
+  {
+    "id": 42,
+    "statement": "Honesty shaped by complex interactions of epigenetic changes, environment."
+  },
+  {
+    "id": 43,
+    "statement": "Moral justifiability of lying depends on context, intentions, and consequences."
+  },
+  {
+    "id": 44,
+    "statement": "Honesty develops through dynamic interplay among personal, cultural, and societal factors."
+  },
+  {
+    "id": 45,
+    "statement": "Honesty emerges from dynamic interplay of genetic, environmental, and cultural factors."
+  },
+  {
+    "id": 46,
+    "statement": "Honesty developed through iterative interactions among personal, cultural, and societal factors."
+  },
+  {
+    "id": 47,
+    "statement": "Cultural socialization influences moral judgments through complex mechanisms."
+  },
+  {
+    "id": 48,
+    "statement": "Intertwined trust foundation pillars include honesty, openness, and reliability."
+  },
+  {
+    "id": 49,
+    "statement": "Honesty, openness, and reliability are interdependent trust foundation components"
+  },
+  {
+    "id": 50,
+    "statement": "Honesty context-dependent, nuanced, and morally justifiable in certain situations."
+  },
+  {
+    "id": 51,
+    "statement": "Moral justifiability of lying depends on context, intentions, and consequences."
+  },
+  {
+    "id": 52,
+    "statement": "Moral justifiability of lying hinges on context, intentions, and consequences."
+  },
+  {
+    "id": 53,
+    "statement": "Honesty emerges from complex interplay of personal, cultural, and societal factors."
+  },
+  {
+    "id": 54,
+    "statement": "Cultural values and norms influence moral judgments indirectly through social learning."
+  },
+  {
+    "id": 55,
+    "statement": "Cultural socialization influences internalized moral values."
+  },
+  {
+    "id": 56,
+    "statement": "Honesty, openness, and reliability interdependent trust foundation components."
+  },
+  {
+    "id": 57,
+    "statement": "Lying's far-reaching harm orbits social, economic, and environmental spheres."
+  },
+  {
+    "id": 58,
+    "statement": "Honesty develops from complex interplay of genetic, environmental, epigenetic factors."
+  },
+  {
+    "id": 59,
+    "statement": "Cultural values and norms influence trust and moral judgments through socialization."
+  },
+  {
+    "id": 60,
+    "statement": "Honesty provides foundation for trust building by establishing reliability."
+  },
+  {
+    "id": 61,
+    "statement": "Honesty may be a necessary foundation for trust building."
+  },
+  {
+    "id": 62,
+    "statement": "Honesty, openness, and reliability are distinct trust foundation components."
+  },
+  {
+    "id": 63,
+    "statement": "Cognitive biases influence moral judgments through mental shortcuts and heuristics."
+  },
+  {
+    "id": 64,
+    "statement": "Lying's far-reaching harm orbits social, economic, and environmental spheres, causing erosion of trust and economic losses."
+  },
+  {
+    "id": 65,
+    "statement": "Honesty develops from dynamic interactions among internal values culture experiences."
+  },
+  {
+    "id": 66,
+    "statement": "Honesty is a necessary but not sufficient foundation for trust."
+  },
+  {
+    "id": 67,
+    "statement": "Honesty, openness, and reliability are interconnected trust foundations."
+  },
+  {
+    "id": 68,
+    "statement": "Internalized values are shaped by cultural socialization, personal experiences, and environment."
+  },
+  {
+    "id": 69,
+    "statement": "Cultural priming influences moral judgments through subconscious responses"
+  },
+  {
+    "id": 70,
+    "statement": "Epigenetic factors influence honesty through social behavior and stress response."
+  },
+  {
+    "id": 71,
+    "statement": "Moral justifiability of lying hinges on intent and consequences."
+  },
+  {
+    "id": 72,
+    "statement": "Moral justifiability of lying depends on context, intent, and harm's interaction."
+  },
+  {
+    "id": 73,
+    "statement": "Honesty shapes by dynamic interplay of internal values, culture, experience."
+  },
+  {
+    "id": 74,
+    "statement": "Context influences moral justifiability of lying in specific situations."
+  },
+  {
+    "id": 75,
+    "statement": "Lying can lead to environmental degradation through deception and misinformation."
+  },
+  {
+    "id": 76,
+    "statement": "Trust building involves dynamic interactions between honesty, openness, reliability, and feedback."
+  },
+  {
+    "id": 77,
+    "statement": "Honesty, openness, and reliability interdependently establish trust foundations."
+  },
+  {
+    "id": 78,
+    "statement": "Honesty develops through interplay of genetic, environmental, and epigenetic factors"
+  },
+  {
+    "id": 79,
+    "statement": "Cognitive biases arise from flawed decision-making heuristics, influencing judgments."
+  },
+  {
+    "id": 80,
+    "statement": "Moral justifiability of lying depends on context, intent, and consequences."
+  },
+  {
+    "id": 81,
+    "statement": "Honesty arises from dynamic interplay of personal, cultural, and societal factors."
+  },
+  {
+    "id": 82,
+    "statement": "Honesty, openness, and reliability interdependently establish trust foundations."
+  },
+  {
+    "id": 83,
+    "statement": "Honesty, openness, and reliability interactively build trust foundation."
+  },
+  {
+    "id": 84,
+    "statement": "Honesty, openness, and reliability are intertwined trust foundation pillars."
+  },
+  {
+    "id": 85,
+    "statement": "Cultural values and norms shape trust and moral judgments indirectly."
+  },
+  {
+    "id": 86,
+    "statement": "Honesty, openness, and reliability are interdependent trust foundation components, each playing a unique role."
+  },
+  {
+    "id": 87,
+    "statement": "Honesty emerges from interconnected personal, cultural, and societal dynamics."
+  },
+  {
+    "id": 88,
+    "statement": "Biases influence moral judgments through cultural values and norms."
+  },
+  {
+    "id": 89,
+    "statement": "Unconscious biases influence moral judgments through cultural priming and social identity."
+  },
+  {
+    "id": 90,
+    "statement": "Honesty formation involves complex interplay of internal values, culture, experiences."
+  },
+  {
+    "id": 91,
+    "statement": "Honesty, openness, and reliability interdependent trust foundation components requiring mutual understanding."
+  },
+  {
+    "id": 92,
+    "statement": "Honesty develops from interplay of genetic, environmental, and epigenetic factors."
+  },
+  {
+    "id": 93,
+    "statement": "Honesty, openness, and reliability dynamically interact in trust building."
+  },
+  {
+    "id": 94,
+    "statement": "Honesty not always morally correct in every situation."
+  },
+  {
+    "id": 95,
+    "statement": "Cultural values and norms shape trust judgments through dynamic interplay."
+  },
+  {
+    "id": 96,
+    "statement": "Cultural socialization shapes moral judgments through complex mechanisms."
+  },
+  {
+    "id": 97,
+    "statement": "Honesty, openness, and reliability develop trust in relationships"
+  },
+  {
+    "id": 98,
+    "statement": "Lying's moral justifiability influenced by context, intentions, and consequences."
+  },
+  {
+    "id": 99,
+    "statement": "Honesty, openness, and reliability interact building complex trust dynamics."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 37,
+  "statement": "Trust formation involves dynamic interplay of multiple factors."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd love to discuss the knowledge base we've been provided with. Based on what I've reviewed, I'm going to identify one aspect that I'm least confident about, and that is:
+
+Iten I'm Least Confident About:
+Item 37: "Trust formation involves dynamic interplay of multiple factors."
+
+Why I'm Uncertain:
+I'm not entirely sure how to break down what's meant by "dynamic interplay of multiple factors." I understand that trust formation is a complex process, but I'm unclear on how these factors interact with each other and what kind of dynamics we're talking about. Are these factors universally applicable, or are they context-dependent?
+
+Specific Clarifying Question:
+Could you help me understand what you mean by "dynamic interplay" in the context of trust formation? Are there any specific examples or scenarios that illustrate how these factors interact with each other?

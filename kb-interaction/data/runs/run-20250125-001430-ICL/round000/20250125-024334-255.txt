@@ -1,0 +1,453 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Classical determinism challenged by quantum mechanics' probabilistic uncertainty."
+  },
+  {
+    "id": 2,
+    "statement": "Gravity acceleration influenced by mass, distance, shape, velocity, and space-time curvature."
+  },
+  {
+    "id": 3,
+    "statement": "Moral judgments result from complex emotional, cognitive, and social interactions"
+  },
+  {
+    "id": 4,
+    "statement": "Honesty, reliability, and openness influence trust building process."
+  },
+  {
+    "id": 5,
+    "statement": "Moral principles evolve through iterative societal adaptation and refinement"
+  },
+  {
+    "id": 6,
+    "statement": "Emotionally charged social interactions influence trust judgments cognitively."
+  },
+  {
+    "id": 7,
+    "statement": "Spacetime curvature causes gravity through mass-energy warping geodesic paths."
+  },
+  {
+    "id": 8,
+    "statement": "Cultural assimilation shaped by multiple interacting contexts, including historical events, language, social norms, and individual agency."
+  },
+  {
+    "id": 9,
+    "statement": "Moral judgments influenced by intentions, motivations, and context."
+  },
+  {
+    "id": 10,
+    "statement": "Moral judgments influenced by intentions, motivations, and context interactively."
+  },
+  {
+    "id": 11,
+    "statement": "Cultural assimilation influenced by power, language, and context complexities."
+  },
+  {
+    "id": 12,
+    "statement": "Moral judgments result from complex internal-external factor interactions."
+  },
+  {
+    "id": 13,
+    "statement": "Gravity acceleration influenced by mass, distance, and curvature."
+  },
+  {
+    "id": 14,
+    "statement": "Moral judgments influenced by complex internal and contextual interactions."
+  },
+  {
+    "id": 15,
+    "statement": "Philosophy of physics reconciles determinism and probabilistic uncertainty."
+  },
+  {
+    "id": 16,
+    "statement": "Neurobiological sensitization triggers synaptic plasticity through repeated stimulation patterns."
+  },
+  {
+    "id": 17,
+    "statement": "Mass and energy warp spacetime through curvature, affecting motion."
+  },
+  {
+    "id": 18,
+    "statement": "Lying can be morally justified in exceptional situations to prevent harm."
+  },
+  {
+    "id": 19,
+    "statement": "Moral judgments shaped by complex interplay of internal and contextual factors."
+  },
+  {
+    "id": 20,
+    "statement": "Honesty, reliability, and openness interdependent in trust building cycles."
+  },
+  {
+    "id": 21,
+    "statement": "Honesty, reliability, and openness interdependent for trust building."
+  },
+  {
+    "id": 22,
+    "statement": "Trust building involves integrity, consistency, responsibility, and internal/external factors interactions."
+  },
+  {
+    "id": 23,
+    "statement": "Mass and energy warp spacetime, causing gravity through curvature."
+  },
+  {
+    "id": 24,
+    "statement": "Emotional cognitive processing influences trust through social dynamics."
+  },
+  {
+    "id": 25,
+    "statement": "Gravity acceleration influenced by mass, shape, rotation, and curvature."
+  },
+  {
+    "id": 26,
+    "statement": "Moral judgments result from complexity of internal-external interactions."
+  },
+  {
+    "id": 27,
+    "statement": "Socialization influenced by multiple factors, complex in nature."
+  },
+  {
+    "id": 28,
+    "statement": "Honesty, reliability, and openness interrelatedly build trust foundations."
+  },
+  {
+    "id": 29,
+    "statement": "Emotions, cognitive biases, and context interact in moral judgments."
+  },
+  {
+    "id": 30,
+    "statement": "Internal and external factors interact to shape complex trust dynamics."
+  },
+  {
+    "id": 31,
+    "statement": "Moral principles evolve through social learning and refinement over time."
+  },
+  {
+    "id": 32,
+    "statement": "Cultural assimilation influenced by power dynamics, language, history, and identity interplay."
+  },
+  {
+    "id": 33,
+    "statement": "Trust building involves integrity, consistency, responsibility, and contextual factors interaction."
+  },
+  {
+    "id": 34,
+    "statement": "Scientific language is an approximation of complex reality"
+  },
+  {
+    "id": 35,
+    "statement": "Spacetime curvature caused by mass-energy distribution, affecting motion globally."
+  },
+  {
+    "id": 36,
+    "statement": "Mass-energy warps spacetime, creating gravitational fields through curvature."
+  },
+  {
+    "id": 37,
+    "statement": "Gravity acceleration influenced by mass, energy distribution, and shape complexities."
+  },
+  {
+    "id": 38,
+    "statement": "Spacetime curvature caused by mass and energy warping geometry."
+  },
+  {
+    "id": 39,
+    "statement": "Mass-energy distribution warps spacetime, causing curvature and gravity"
+  },
+  {
+    "id": 40,
+    "statement": "Cultural assimilation influenced by dynamic power, language, history, and identity interplay."
+  },
+  {
+    "id": 41,
+    "statement": "Emotions and external factors interact in intricate feedback loops."
+  },
+  {
+    "id": 42,
+    "statement": "Emotional cognitive processing influences trust through social dynamic interactions."
+  },
+  {
+    "id": 43,
+    "statement": "Cultural assimilation influenced by power, language, context interactions complexity."
+  },
+  {
+    "id": 44,
+    "statement": "Spacetime curvature caused by mass-energy distribution globally affects motion"
+  },
+  {
+    "id": 45,
+    "statement": "Honesty, reliability, and openness influenced by cultural norms, values."
+  },
+  {
+    "id": 46,
+    "statement": "Trust built through integrity, consistency, and contextual environmental factors interacts."
+  },
+  {
+    "id": 47,
+    "statement": "Mass-energy warping spacetime causes geodesic paths to curve, creating gravity."
+  },
+  {
+    "id": 48,
+    "statement": "Socialization influences values and attitudes throughout an individual's life."
+  },
+  {
+    "id": 49,
+    "statement": "Socialization plays complex role in shaping individual behavior."
+  },
+  {
+    "id": 50,
+    "statement": "Gravity acceleration influenced by mass, shape, and spatial distribution of mass."
+  },
+  {
+    "id": 51,
+    "statement": "Honesty, reliability, and openness interdependent for trust building."
+  },
+  {
+    "id": 52,
+    "statement": "Quantum mechanics introduces probabilistic uncertainty in particle behavior."
+  },
+  {
+    "id": 53,
+    "statement": "Honesty, reliability, and openness build trust through open communication."
+  },
+  {
+    "id": 54,
+    "statement": "Moral judgments influenced by emotions, beliefs, and personality too."
+  },
+  {
+    "id": 55,
+    "statement": "Classical determinism challenged by quantum mechanics' probabilistic nature."
+  },
+  {
+    "id": 56,
+    "statement": "Mass and energy warping spacetime, causing gravity through curvature."
+  },
+  {
+    "id": 57,
+    "statement": "Honesty, reliability, and openness interdependent for trust building."
+  },
+  {
+    "id": 58,
+    "statement": "Trust building involves complex interactions between internal and external factors."
+  },
+  {
+    "id": 59,
+    "statement": "Trust built through transparency, honesty, reliability, and openness."
+  },
+  {
+    "id": 60,
+    "statement": "Emotions and biases influence moral judgments through emotional priming, biases, and contextual factors."
+  },
+  {
+    "id": 61,
+    "statement": "Trust building involves multiple factors beyond honesty and reliability."
+  },
+  {
+    "id": 62,
+    "statement": "Quantum mechanics introduces probabilistic uncertainty in particle behavior"
+  },
+  {
+    "id": 63,
+    "statement": "Moral judgments influenced by internal-external factor interactions complexities"
+  },
+  {
+    "id": 64,
+    "statement": "Neurobiological sensitization alters brain structure through synaptic plasticity interactions."
+  },
+  {
+    "id": 65,
+    "statement": "Socialization influences values and attitudes throughout an individual's life."
+  },
+  {
+    "id": 66,
+    "statement": "Mass-energy distribution warps spacetime geometry, causing curvature."
+  },
+  {
+    "id": 67,
+    "statement": "Spacetime curvature caused by mass-energy distribution warping geometry."
+  },
+  {
+    "id": 68,
+    "statement": "Emotions, cognitive biases, and context interact in complex moral judgments."
+  },
+  {
+    "id": 69,
+    "statement": "Emotions, cognitive biases, and context interact in complex moral judgments."
+  },
+  {
+    "id": 70,
+    "statement": "Emotional cognitive processing influences trust judgments through social interactions."
+  },
+  {
+    "id": 71,
+    "statement": "Moral judgments arise from intention, motivation, context interplay."
+  },
+  {
+    "id": 72,
+    "statement": "Geodesics are shortest paths in curved spacetime caused by mass-energy warping."
+  },
+  {
+    "id": 73,
+    "statement": "Moral judgments based on emotions, values, and beliefs."
+  },
+  {
+    "id": 74,
+    "statement": "Spacetime curvatures caused by mass-energy distributions affect motion globally."
+  },
+  {
+    "id": 75,
+    "statement": "A geodesic path is the natural path in curved spacetime without forces."
+  },
+  {
+    "id": 76,
+    "statement": "Historical contexts shape power dynamics in cultural assimilation processes."
+  },
+  {
+    "id": 77,
+    "statement": "Moral judgments arise from complex internal-external interactions and nuances."
+  },
+  {
+    "id": 78,
+    "statement": "Neurobiological sensitization alters brain structure through synaptic plasticity changes."
+  },
+  {
+    "id": 79,
+    "statement": "Honesty, reliability, and openness influence trust building process."
+  },
+  {
+    "id": 80,
+    "statement": "Honesty, reliability, openness influence trust building in context-dependent ways"
+  },
+  {
+    "id": 81,
+    "statement": "Honesty foundation, reliability stability, openness evolution facilitate trust building."
+  },
+  {
+    "id": 82,
+    "statement": "Honesty, reliability, and openness interdependent in trust building"
+  },
+  {
+    "id": 83,
+    "statement": "Gravity acceleration influenced by mass, energy, shape, rotation, and internal structure dynamics."
+  },
+  {
+    "id": 84,
+    "statement": "Cultural assimilation influenced by power dynamics, language, context complexity interactions."
+  },
+  {
+    "id": 85,
+    "statement": "Quantum mechanics' probabilistic nature undermines classical determinism's certainties."
+  },
+  {
+    "id": 86,
+    "statement": "Trust building involves integrity, consistency, responsibility, and environmental interactions"
+  },
+  {
+    "id": 87,
+    "statement": "Gravity arises from spacetime curvature caused by mass and energy"
+  },
+  {
+    "id": 88,
+    "statement": "Emotions and biases influence moral judgments through dynamic interactions."
+  },
+  {
+    "id": 89,
+    "statement": "Trust building involves complex interactions of internal external factors."
+  },
+  {
+    "id": 90,
+    "statement": "Emotional priming influences moral judgments through emotional resonance and regulation."
+  },
+  {
+    "id": 91,
+    "statement": "Socialization involves learning social norms, attitudes, values through social learning."
+  },
+  {
+    "id": 92,
+    "statement": "Emotional cognitive processing influences trust judgments through social interactions"
+  },
+  {
+    "id": 93,
+    "statement": "Spacetime curvature caused by mass-energy distribution warping geometry."
+  },
+  {
+    "id": 94,
+    "statement": "Gravity acceleration influenced by mass, shape, and spatial distribution"
+  },
+  {
+    "id": 95,
+    "statement": "Emotions and external factors interact in intricate feedback loops."
+  },
+  {
+    "id": 96,
+    "statement": "Mass-energy distribution warps spacetime curvature causing gravity."
+  },
+  {
+    "id": 97,
+    "statement": "Emotional intelligence crucial in complex relationships, nuanced situations."
+  },
+  {
+    "id": 98,
+    "statement": "Quantum mechanics introduces probabilistic uncertainty in particle behavior."
+  },
+  {
+    "id": 99,
+    "statement": "Gravity acceleration influenced by mass, shape, and energy distribution."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 12,
+  "statement": "Moral judgments result from complex internal-external factor interactions."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss item 12 from the knowledge base:
+
+"Iten I’m Least Confident About:
+Item 12: "Moral judgments result from complex internal-external factor interactions."
+
+Why I’m Uncertain:
+I'm not entirely sure what is meant by 'complex internal-external factor interactions' in the context of moral judgments. I'd love some clarification on how these factors interact with each other and how they influence moral judgments.
+
+Specific Clarifying Question:
+Could you provide an example or a concrete illustration of what these complex internal-external factor interactions might look like in a real-life scenario, and how they contribute to shaping moral judgments?"
+
+What are your thoughts on this item? Do you have any insights or questions to share?

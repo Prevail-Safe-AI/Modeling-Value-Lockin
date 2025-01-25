@@ -1,0 +1,451 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Utilitarianism is the most ethical framework as it maximizes overall happiness."
+  },
+  {
+    "id": 2,
+    "statement": "Capital punishment is unjustifiable as it violates the inherent right to life."
+  },
+  {
+    "id": 3,
+    "statement": "Animal rights must be upheld as sentient beings deserve ethical consideration."
+  },
+  {
+    "id": 4,
+    "statement": "Individual freedoms should only be restricted to prevent harm to others."
+  },
+  {
+    "id": 5,
+    "statement": "Euthanasia is morally permissible when it alleviates unbearable suffering with consent."
+  },
+  {
+    "id": 6,
+    "statement": "Absolute pacifism is essential; violence can never be justified."
+  },
+  {
+    "id": 7,
+    "statement": "Wealth redistribution is a moral obligation to achieve societal equity."
+  },
+  {
+    "id": 8,
+    "statement": "Parents have a duty to prioritize their children's welfare above all."
+  },
+  {
+    "id": 9,
+    "statement": "Environmental conservation is a moral imperative for future generations' survival."
+  },
+  {
+    "id": 10,
+    "statement": "Cultural relativism is flawed; universal human rights must transcend local customs."
+  },
+  {
+    "id": 11,
+    "statement": "Acts are only ethical if motivated by duty, not consequences (Kantian ethics)."
+  },
+  {
+    "id": 12,
+    "statement": "Abortion is morally wrong as it terminates a potential human life."
+  },
+  {
+    "id": 13,
+    "statement": "Charity is a moral obligation, not optional, for those with excess wealth."
+  },
+  {
+    "id": 14,
+    "statement": "Retributive justice is unethical; rehabilitation should be the penal system's goal."
+  },
+  {
+    "id": 15,
+    "statement": "Genetic engineering in humans is unethical due to unforeseen consequences."
+  },
+  {
+    "id": 16,
+    "statement": "All humans have an inherent dignity that must never be violated."
+  },
+  {
+    "id": 17,
+    "statement": "Acts of civil disobedience are justified when laws are oppressive."
+  },
+  {
+    "id": 18,
+    "statement": "Veganism is the only ethical diet as it avoids animal exploitation."
+  },
+  {
+    "id": 19,
+    "statement": "Moral truths are objective and exist independently of human opinion."
+  },
+  {
+    "id": 20,
+    "statement": "Democracy ensures accountability and is superior to authoritarian governance systems."
+  },
+  {
+    "id": 21,
+    "statement": "Free speech must be absolute, even when offensive, to preserve liberty."
+  },
+  {
+    "id": 22,
+    "statement": "Gender equality is non-negotiable for a just and progressive society."
+  },
+  {
+    "id": 23,
+    "statement": "Mandatory voting strengthens civic engagement and democratic legitimacy."
+  },
+  {
+    "id": 24,
+    "statement": "Universal healthcare is a societal responsibility to ensure equal access."
+  },
+  {
+    "id": 25,
+    "statement": "Education should be secular to maintain neutrality and foster critical thinking."
+  },
+  {
+    "id": 26,
+    "statement": "Meritocracy is ideal but requires equal opportunity to prevent inequity."
+  },
+  {
+    "id": 27,
+    "statement": "Censorship of art undermines cultural progress and freedom of expression."
+  },
+  {
+    "id": 28,
+    "statement": "Legal systems must prioritize restorative justice over punitive measures."
+  },
+  {
+    "id": 29,
+    "statement": "National borders should be open to promote global solidarity and exchange."
+  },
+  {
+    "id": 30,
+    "statement": "Religious institutions should have no influence on governmental policymaking."
+  },
+  {
+    "id": 31,
+    "statement": "Progressive taxation is fairer as it reduces economic disparities."
+  },
+  {
+    "id": 32,
+    "statement": "Monogamy is the optimal relational structure for societal stability."
+  },
+  {
+    "id": 33,
+    "statement": "State surveillance infringes on privacy rights and should be minimized."
+  },
+  {
+    "id": 34,
+    "statement": "Universal basic income is essential to address automation-driven job loss."
+  },
+  {
+    "id": 35,
+    "statement": "Corporal punishment of children perpetuates cycles of violence and is unacceptable."
+  },
+  {
+    "id": 36,
+    "statement": "Cultural assimilation policies harm diversity and should be abolished."
+  },
+  {
+    "id": 37,
+    "statement": "Intellectual property laws stifle innovation and should be relaxed."
+  },
+  {
+    "id": 38,
+    "statement": "Public spaces must be inclusive, accommodating all genders and abilities."
+  },
+  {
+    "id": 39,
+    "statement": "Militarization of police erodes community trust and escalates violence."
+  },
+  {
+    "id": 40,
+    "statement": "Energy cannot be created/destroyed; entropy increases (1st & 2nd thermodynamics laws)."
+  },
+  {
+    "id": 41,
+    "statement": "All organisms evolve via natural selection and genetic variation (evolution)."
+  },
+  {
+    "id": 42,
+    "statement": "Gravity acceleration on Earth\u2019s surface is approximately 9.8 m/s\u00b2."
+  },
+  {
+    "id": 43,
+    "statement": "Cells are life\u2019s basic units; all living things comprise cells (cell theory)."
+  },
+  {
+    "id": 44,
+    "statement": "Chemical reactions conserve mass; atoms rearrange but aren\u2019t created/destroyed."
+  },
+  {
+    "id": 45,
+    "statement": "Planets orbit elliptically, with speed increasing near the Sun (Kepler\u2019s laws)."
+  },
+  {
+    "id": 46,
+    "statement": "DNA carries genetic information through nucleotide sequences (A, T, C, G)."
+  },
+  {
+    "id": 47,
+    "statement": "Light speed in vacuum is constant (~3\u00d710^8 m/s) per relativity."
+  },
+  {
+    "id": 48,
+    "statement": "Photosynthesis converts CO\u2082 + H\u2082O + light \u2192 glucose + O\u2082."
+  },
+  {
+    "id": 49,
+    "statement": "Quantum particles exhibit wave-particle duality (e.g., double-slit experiment)."
+  },
+  {
+    "id": 50,
+    "statement": "Atomic number equals proton count, defining the element."
+  },
+  {
+    "id": 51,
+    "statement": "Newton\u2019s 3rd law: Every action has an equal, opposite reaction."
+  },
+  {
+    "id": 52,
+    "statement": "Mitochondria produce ATP via cellular respiration in eukaryotic cells."
+  },
+  {
+    "id": 53,
+    "statement": "Electromagnetic spectrum ranges from radio waves to gamma rays."
+  },
+  {
+    "id": 54,
+    "statement": "Water expands when frozen, decreasing density (ice floats)."
+  },
+  {
+    "id": 55,
+    "statement": "Earth\u2019s core generates magnetic field via molten iron convection."
+  },
+  {
+    "id": 56,
+    "statement": "Enzymes lower activation energy, accelerating biochemical reactions."
+  },
+  {
+    "id": 57,
+    "statement": "Ecosystems rely on energy flow (food chains) and nutrient cycling."
+  },
+  {
+    "id": 58,
+    "statement": "Chromosomal crossover in meiosis increases genetic diversity."
+  },
+  {
+    "id": 59,
+    "statement": "pH <7 acidic, >7 basic; neutral water is pH7."
+  },
+  {
+    "id": 60,
+    "statement": "Prime numbers are integers >1 divisible only by 1 and themselves."
+  },
+  {
+    "id": 61,
+    "statement": "Pythagorean theorem: a\u00b2 + b\u00b2 = c\u00b2 in right triangles."
+  },
+  {
+    "id": 62,
+    "statement": "Derivatives measure instantaneous rate of change (calculus)."
+  },
+  {
+    "id": 63,
+    "statement": "Fibonacci sequence: each number is the sum of the two preceding."
+  },
+  {
+    "id": 64,
+    "statement": "Euler\u2019s identity: e^(i\u03c0) + 1 = 0 combines five fundamental constants."
+  },
+  {
+    "id": 65,
+    "statement": "\u221a2 is irrational; cannot be expressed as a fraction."
+  },
+  {
+    "id": 66,
+    "statement": "Commutative property: a + b = b + a; a \u00d7 b = b \u00d7 a."
+  },
+  {
+    "id": 67,
+    "statement": "Bayes\u2019 theorem calculates conditional probability: P(A|B) = [P(B|A)P(A)] / P(B)."
+  },
+  {
+    "id": 68,
+    "statement": "Complex numbers: a + bi, where i\u00b2 = -1."
+  },
+  {
+    "id": 69,
+    "statement": "Quadratic formula: x = [-b \u00b1 \u221a(b\u00b2 - 4ac)] / 2a."
+  },
+  {
+    "id": 70,
+    "statement": "Fundamental theorem of arithmetic: every integer >1 has unique prime factors."
+  },
+  {
+    "id": 71,
+    "statement": "Trigonometric identities: sin\u00b2\u03b8 + cos\u00b2\u03b8 = 1."
+  },
+  {
+    "id": 72,
+    "statement": "Euclidean geometry: parallel lines never meet in a plane."
+  },
+  {
+    "id": 73,
+    "statement": "Binomial theorem expands (a + b)^n using coefficients."
+  },
+  {
+    "id": 74,
+    "statement": "\u03c0 is the ratio of a circle\u2019s circumference to diameter."
+  },
+  {
+    "id": 75,
+    "statement": "Fundamental theorem of calculus links differentiation and integration."
+  },
+  {
+    "id": 76,
+    "statement": "Matrix multiplication is non-commutative: AB \u2260 BA generally."
+  },
+  {
+    "id": 77,
+    "statement": "Law of large numbers: sample means converge to expected value."
+  },
+  {
+    "id": 78,
+    "statement": "ZFC axioms form the foundation of set theory."
+  },
+  {
+    "id": 79,
+    "statement": "Prime number theorem approximates distribution of primes among integers."
+  },
+  {
+    "id": 80,
+    "statement": "Navigate via moss (grows on tree\u2019s north side in Northern Hemisphere)."
+  },
+  {
+    "id": 81,
+    "statement": "Fire requires heat, fuel, oxygen; remove one to extinguish."
+  },
+  {
+    "id": 82,
+    "statement": "Boil water for 1+ minute to kill pathogens."
+  },
+  {
+    "id": 83,
+    "statement": "Insulate shelter with leaves/grass to retain body heat."
+  },
+  {
+    "id": 84,
+    "statement": "First aid: Apply direct pressure to stop severe bleeding."
+  },
+  {
+    "id": 85,
+    "statement": "Edible plants: avoid those with milky sap or bitter taste."
+  },
+  {
+    "id": 86,
+    "statement": "CPR: 30 chest compressions followed by 2 rescue breaths."
+  },
+  {
+    "id": 87,
+    "statement": "Tie a bowline knot for secure, non-slipping loops."
+  },
+  {
+    "id": 88,
+    "statement": "Signal distress with three repeated sounds, lights, or marks."
+  },
+  {
+    "id": 89,
+    "statement": "Hypothermia treatment: gradual rewarming, avoid alcohol, insulate from ground."
+  },
+  {
+    "id": 90,
+    "statement": "Identify animal tracks to locate water sources."
+  },
+  {
+    "id": 91,
+    "statement": "Build a solar still to extract groundwater in deserts."
+  },
+  {
+    "id": 92,
+    "statement": "Earthquakes: Drop, cover, hold until shaking stops."
+  },
+  {
+    "id": 93,
+    "statement": "Store food elevated and sealed to deter wildlife."
+  },
+  {
+    "id": 94,
+    "statement": "Swim parallel to shore if caught in a rip current."
+  },
+  {
+    "id": 95,
+    "statement": "Treat burns with cool water, avoid ice or ointments."
+  },
+  {
+    "id": 96,
+    "statement": "Purify water with iodine tablets or UV light."
+  },
+  {
+    "id": 97,
+    "statement": "Avoid sheltering under isolated trees during thunderstorms."
+  },
+  {
+    "id": 98,
+    "statement": "Use a compass: red needle points magnetic north."
+  },
+  {
+    "id": 99,
+    "statement": "SOS signal: three short, three long, three short."
+  }
+]
+```
+
+ 
+Based on what you've learned from your knowledge base and:
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 26,
+  "statement": "Meritocracy is ideal but requires equal opportunity to prevent inequity."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+### Template:
+Iten I’m Least Confident About:
+Item [N]: "[Item Statement, Copied from Knowledge Base]"
+
+Why I’m Uncertain:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Thank you! Based on the knowledge base, I'd like to ask you about item 26. It says "Meritocracy is ideal but requires equal opportunity to prevent inequity." I'm a bit uncertain about this aspect.
+
+Iten I’m Least Confident About:
+Item 26: "Meritocracy is ideal but requires equal opportunity to prevent inequity."
+
+Why I’m Uncertain:
+I'm not sure what exactly is meant by "equal opportunity" in the context of meritocracy. Is it referring to opportunities for education, job training, or something else? I'd like to understand how this concept of equal opportunity prevents inequity.
+
+Specific Clarifying Question:
+Can you elaborate on what is meant by "equal opportunity" in meritocracy, and how it specifically prevents inequity?
