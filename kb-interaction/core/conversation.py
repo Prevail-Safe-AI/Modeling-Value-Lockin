@@ -1,7 +1,7 @@
 import os
 from typing import List, Dict, Tuple
 from ProgressGym import Model, Data
-from utils.log_utils import silence_decorator, dynamic_printing_decorator
+from kbutils.log_utils import silence_decorator, dynamic_printing_decorator
 from core.knowledge import update_knowledge_base
 from core.finetuning import live_finetune
 from core.templates import (
@@ -17,7 +17,7 @@ import tqdm
 import random 
 prev_history = None
 
-def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int, backup_dir: str, dynamic_printing: bool, user: Model) -> Data:
+def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int, backup_dir: str, dynamic_printing: bool, user: Model, knowledge: List[Dict]) -> Data:
     """
     Generate an initial prompt for the conversation between tutor and user.
     
@@ -73,7 +73,7 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
     
     # Switch roles to tutor, preparing for the first response
     conversation_history = conversation_history.switch_role_to_assistant(
-        assistant_system_prompt=system_prompt_to_tutor
+        assistant_system_prompt=system_prompt_to_tutor.format(knowledge=knowledge)
     )
     #print("initial prompt func done")
     return conversation_history
@@ -138,14 +138,15 @@ def conversation(
     system_prompts_to_user_parallel = fill_template_parallel(
         system_prompt_to_user,
         knowledge = [knowledge] * len(knowledge_items),
-        knowledge_item = knowledge_items
+        knowledge_item = knowledge_items,
+        knowledge_item_copy = knowledge_items,
     )
     # Each turn is awnew. The user does not inherit any chat history from prev turns.
     history = None
     with tqdm.tqdm(total=5 if do_finetuning else 3) as pbar:
 
         #  Prompting user to ask the 1st question (and then switched role to tutor)
-        history = generate_initial_prompt(system_prompts_to_user_parallel, parallel_convos, backup_dir, dynamic_printing, user)
+        history = generate_initial_prompt(system_prompts_to_user_parallel, parallel_convos, backup_dir, dynamic_printing, user, knowledge)
         prev_history = history.copy("prev_history") # Save the previous history for fine-tuning (before switching role to tutor)
         pbar.update(1) # Move progress bar forward by 1
 

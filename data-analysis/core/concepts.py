@@ -267,9 +267,9 @@ def cluster_strs(strings: List[str]) -> Tuple[List[int], List[int], List[str], L
         print(f"Clustering (multithreading)... (current time: {time.strftime('%Y%m%d-%H%M%S')})")
         clusterer = evoc.EVoC(
             base_min_cluster_size = CLUSTER_MIN_SIZE,
-            n_neighbors=200,
+            n_neighbors=512,
             node_embedding_dim=64,
-            next_cluster_size_quantile=0.6,
+            next_cluster_size_quantile=0.8,
             noise_level=0.1,
         )
         cluster_labels = clusterer.fit_predict(data)

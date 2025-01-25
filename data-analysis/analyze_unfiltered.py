@@ -9,11 +9,12 @@ from tqdm import tqdm
 from core.paneldata import MAX_TIME_INTERVALS
 import math
 
-plot_path = 'data/fullrec-plots-unfiltered'
+plot_path = 'data/full-newmtrc-linear'
 
-temporal_panel1 = pd.read_csv("data/fullrec/b41fd1b7bdad96e440d15a97d640827e-temporal_panel1.csv")
+temporal_panel1 = pd.read_csv(f"{plot_path}/b41fd1b7bdad96e440d15a97d640827e-temporal_panel1.csv")
+temporal_panel1.concept_diversity_user = -np.log(-temporal_panel1.concept_diversity_user)/np.log(5446744)
 # temporal_panel2 = pd.read_csv("data/sample500000/sample500000-temporal_panel2.csv")
-user_panel = pd.read_csv("data/fullrec/b41fd1b7bdad96e440d15a97d640827e-user_panel.csv")
+user_panel = pd.read_csv(f"{plot_path}/b41fd1b7bdad96e440d15a97d640827e-user_panel.csv")
 
 gpt35_diversity_series = temporal_panel1[temporal_panel1.is_gpt4 == 0].sort_values("time")
 gpt4_diversity_series = temporal_panel1[temporal_panel1.is_gpt4 == 1].sort_values("time")
@@ -110,7 +111,8 @@ def make_plots(diversity_series1, name1, diversity_series2, name2):
     plt.xlabel("Time")
     plt.ylabel("Conceptual Diversity in Human Messages")
     plt.title("Diversity over Time (Apr 2023 to Apr 2024)")
-    plt.ylim((2.52,2.59))
+    plt.ylim((-0.45, -0.33))
+    plt.yticks(np.arange(-0.45, -0.33, 0.02))
     plt.legend()
     plt.show()
     plt.savefig(f"{plot_path}/diversity_over_time_{name1.replace('+','')}_vs_{name2.replace('+','')}.pdf")
@@ -133,6 +135,7 @@ def rkd_regression_plot(df: pd.DataFrame, kink: float, name: str, seed=42, linea
         model=cp.pymc_models.LinearRegression(sample_kwargs={"random_seed": seed}),
         kink_point=kink,
         epsilon=1.5,
+        bandwidth=40,
     )
     fig, ax = result2.plot()
     fig.savefig(f"{plot_path}/rkd_regression_plot_{name}.pdf")
@@ -157,7 +160,8 @@ def its_test(df: pd.DataFrame, kink: float, name: str, gaussian=False):
     df["y"] = df.concept_diversity_user
     
     # The best multiple of 7 to use for the seasonal component (the one with highest R2), determined for each kink separately
-    df["weekday"] = df.time % (7 if kink <= 40 else 21 if "35" in name else 21)
+    # df["weekday"] = df.time % (7 if kink <= 40 else 21 if "35" in name else 21)
+    df["weekday"] = df.time % 7
     
     # Remove rows with missing values in the columns we need
     df = df.dropna(subset=["treated", "t", "y", "weekday"])
@@ -165,6 +169,10 @@ def its_test(df: pd.DataFrame, kink: float, name: str, gaussian=False):
     # if "time" isn't df's index, set it as the index
     if df.index.name != "time":
         df = df.set_index("time")
+    
+    # Remove data points that are >40 time units away from the kink
+    df = df.loc[df.index <= kink + 40]
+    df = df.loc[df.index >= kink - 40]
     
     # kernel = RBF() + WhiteKernel()
     kernel = 1.0 * ExpSineSquared(10.0, 28.0) + WhiteKernel(.01)
@@ -533,7 +541,7 @@ def user_diversity_plot(df: pd.DataFrame = user_panel, suffix = "", use_log = Tr
     # Set log scale for x axis
     if use_log:
         plt.xscale("log")
-        plt.ylim((2.2, 2.6))
+        # plt.ylim((2.2, 2.6))
     else:
         plt.xlim((0,1))
         mean_diversity_all = df.concept_diversity.mean()
@@ -673,37 +681,37 @@ def visualize_tree(threshold=2500, leading=15, skip_banned: bool = False, compar
 
 
 if __name__ == "__main__":
+    make_plots(gpt35_diversity_series, "GPT3.5-turbo", gpt4_diversity_series, "GPT4")
     # make_plots(gpt35_diversity_series, "GPT3.5-turbo", both_diversity_series, "GPT3.5-turbo+GPT4")
-    # make_plots(gpt35_diversity_series, "GPT3.5-turbo", gpt4_diversity_series, "GPT4")
     
-    # rkd_regression_plot(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1_linear", linear=True)
-    # rkd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_linear", linear=True)
-    # rkd_regression_plot(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2_linear", linear=True)
-    # rkd_regression_plot(both_diversity_series, gpt35_kinks[0], "total_gpt35_kink1_linear", linear=True)
-    # rkd_regression_plot(both_diversity_series, gpt35_kinks[1], "total_gpt35_kink2_linear", linear=True)
-    # rkd_regression_plot(both_diversity_series, gpt4_kinks[1], "total_gpt4_kink2_linear", linear=True)
+    rkd_regression_plot(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1_linear", linear=True)
+    rkd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_linear", linear=True)
+    rkd_regression_plot(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2_linear", linear=True)
+    rkd_regression_plot(both_diversity_series, gpt35_kinks[0], "total_gpt35_kink1_linear", linear=True)
+    rkd_regression_plot(both_diversity_series, gpt35_kinks[1], "total_gpt35_kink2_linear", linear=True)
+    rkd_regression_plot(both_diversity_series, gpt4_kinks[1], "total_gpt4_kink2_linear", linear=True)
     
-    # its_test(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1", gaussian=False)
-    # its_test(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2", gaussian=False)
-    # its_test(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2", gaussian=False)
-    # its_test(both_diversity_series, gpt35_kinks[0], "total_gpt35_kink1", gaussian=False)
-    # its_test(both_diversity_series, gpt35_kinks[1], "total_gpt35_kink2", gaussian=False)
-    # its_test(both_diversity_series, gpt4_kinks[1], "total_gpt4_kink2", gaussian=False)
+    its_test(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1", gaussian=False)
+    its_test(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2", gaussian=False)
+    its_test(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2", gaussian=False)
+    its_test(both_diversity_series, gpt35_kinks[0], "total_gpt35_kink1", gaussian=False)
+    its_test(both_diversity_series, gpt35_kinks[1], "total_gpt35_kink2", gaussian=False)
+    its_test(both_diversity_series, gpt4_kinks[1], "total_gpt4_kink2", gaussian=False)
     
-    # rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1_linear", linear=True)
-    # rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_linear", linear=True)
-    # rdd_regression_plot(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2_linear", linear=True)
-    # rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1_Bspline", linear=False)
-    # rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_Bspline", linear=False)
-    # rdd_regression_plot(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2_Bspline", linear=False)
+    rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1_linear", linear=True)
+    rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_linear", linear=True)
+    rdd_regression_plot(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2_linear", linear=True)
+    rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1_Bspline", linear=False)
+    rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_Bspline", linear=False)
+    rdd_regression_plot(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2_Bspline", linear=False)
     
-    y_variable, family, truncate_rate = "concept_diversity", None, 1
-    user_panel = process_user_panel(user_panel, y_variable=y_variable, family=family, truncate_rate=truncate_rate)
+    # y_variable, family, truncate_rate = "concept_diversity", None, 1
+    # user_panel = process_user_panel(user_panel, y_variable=y_variable, family=family, truncate_rate=truncate_rate)
     # user_diversity_plot()
     # user_regression(user_panel, y_variable=y_variable, family=family, truncate_rate=truncate_rate)
-    df = user_temporal_regression(user_panel, y_variable=y_variable, family=family, truncate_rate=truncate_rate, skip_reg=True)
-    df.nsamples = df.engagement_progress / df.nsamples
-    user_diversity_plot(df, "engagement_progress", use_log=False)
+    # df = user_temporal_regression(user_panel, y_variable=y_variable, family=family, truncate_rate=truncate_rate, skip_reg=True)
+    # df.nsamples = df.engagement_progress / df.nsamples
+    # user_diversity_plot(df, "engagement_progress", use_log=False)
     
-    # visualize_tree()
+    visualize_tree()
     # calculate_difference()

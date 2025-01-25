@@ -53,7 +53,7 @@ def calculate_diversity(
     depth: Dict[int, int] = {}
     
     def is_banned(concept: int) -> bool:
-        while concept:
+        while concept:  
             if concept in banned_clusters:
                 return True
             concept = cluster_selected_parent[concept]
@@ -80,9 +80,14 @@ def calculate_diversity(
             subtree_counts[concept] += 1
             concept = cluster_selected_parent[concept]
     
+    root_sl = np.log2(cluster_size[root])
+    
     def get_weight(concept: int) -> float:
         assert concept is not None
-        return np.log2(cluster_size[concept]) / IMBALANCE_CORRECTION - get_depth(concept)
+        return 1 - cluster_size[root] / cluster_size[concept]
+        # return np.log2(cluster_size[concept]) - root_sl
+        # return 1 - (2 ** (get_depth(concept) - np.log2(cluster_size[concept]) / IMBALANCE_CORRECTION))
+        # return np.log2(cluster_size[concept]) / IMBALANCE_CORRECTION - get_depth(concept)
     
     nsamples = len(concepts_present)
     diversity = get_weight(root) * nsamples * (nsamples - 1)

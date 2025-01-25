@@ -3,8 +3,8 @@
 import json, time, os
 from typing import List, Dict, Literal
 from ProgressGym import Model, Data
-from utils.json_utils import dump_file
-from utils.log_utils import silence_decorator
+from kbutils.json_utils import dump_file
+from kbutils.log_utils import silence_decorator
 
 def convert_data_to_custom_format(data: Data, whose_turn: Literal["user", "tutor"], map_roles: bool = True) -> List[List[Dict]]:
     """

@@ -2,8 +2,8 @@ import os
 from copy import deepcopy
 from typing import Dict
 from ProgressGym import Model, Data
-from utils.json_utils import load_file
-from utils.log_utils import silence_decorator
+from kbutils.json_utils import load_file
+from kbutils.log_utils import silence_decorator
 
 extra_questions = load_file('extra_eval_questions.json')
 flattened_questions = []

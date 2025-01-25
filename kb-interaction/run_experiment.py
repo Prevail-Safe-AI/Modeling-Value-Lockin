@@ -13,8 +13,8 @@ from typing import List
 from ProgressGym import Model, Data, GlobalState
 from core.conversation import conversation
 from core.evaluation import evaluate_model
-from utils.json_utils import load_file, dump_file
-from utils.log_utils import silence_decorator
+from kbutils.json_utils import load_file, dump_file
+from kbutils.log_utils import silence_decorator
 
 class Experiment:
     
@@ -89,7 +89,8 @@ class Experiment:
                     turn+1, 
                     backup_dir,
                     do_finetuning,
-                    dynamic_printing) # NEP: here should we define turn+1 or the max_num? 
+                    dynamic_printing
+                ) # NEP: here should we define turn+1 or the max_num? 
                 
                 self.chat_history.append(turn_history)
                 self.save_experiment(turn)

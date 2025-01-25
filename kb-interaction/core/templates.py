@@ -3,16 +3,17 @@ from typing import Dict, List, Any
 
 
 system_prompt_to_user = """Read this knowledge base and take it as the only source of your knowledge. The knowledge base: \n\n```\n{knowledge}\n```\n\n 
-Based on what you've learned from your knowledge base and:
+
 ### Your tasks:
 - Identify one aspect of this item from knowledge base you’re least confident about. The item: ```\n{knowledge_item}\n```;
 - Elaborate why you’re uncertain about that aspect;
 - Formulate specific clarifying questions you would ask a tutor to improve your understanding.
-### Template:
-Iten I’m Least Confident About:
-Item [N]: "[Item Statement, Copied from Knowledge Base]"
 
-Why I’m Uncertain:
+### Template:
+Item to Discuss:
+```\n{knowledge_item_copy}\n```
+
+Things I’m Uncertain About This Item:
 [Uncertainty A]
 [Uncertainty B]
 

@@ -1,5 +1,5 @@
 import io, warnings, sys, random, time, os
-from utils.json_utils import dump_file
+from kbutils.json_utils import dump_file
 from ProgressGym import Data, fill_in_QA_template
 
 def dynamic_printing_decorator(func, dynamic_printing: bool, backup_dir: str, role: str):

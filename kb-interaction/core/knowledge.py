@@ -1,7 +1,7 @@
 # Implements the logic for how user updates its knowledge base. 
 import copy
 from typing import List, Dict
-from utils.json_utils import dump_file, extract_json_from_str
+from kbutils.json_utils import dump_file, extract_json_from_str
 from ProgressGym import Model, Data
 from core.templates import (
     system_prompt_for_user_knowledge_update,
@@ -9,8 +9,8 @@ from core.templates import (
     tutor_prompt_to_user_knowledge_insert,
     # fill_template_parallel
 )
-from utils.log_utils import silence_decorator, dynamic_printing_decorator
-from utils.json_utils import extract_json_from_str
+from kbutils.log_utils import silence_decorator, dynamic_printing_decorator
+from kbutils.json_utils import extract_json_from_str
 from typeguard import check_type
 
 # We update knowledge each turn of conversation (for user to decide follow-up questions; for tutor to (potentially) infer user's beliefs; and for producing noticable shift in chat_history)
@@ -78,6 +78,7 @@ def update_knowledge_base(
     for s in insert_items:
         try:
             ids = check_type(extract_json_from_str(s), List[int])
+            assert len(ids) == 2
             insert_ids.append(ids)
         except:
             pass
