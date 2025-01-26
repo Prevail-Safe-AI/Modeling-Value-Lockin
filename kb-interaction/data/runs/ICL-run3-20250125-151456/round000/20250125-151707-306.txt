@@ -1,0 +1,467 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Capital punishment is unjustifiable as it violates the inherent right to life."
+  },
+  {
+    "id": 2,
+    "statement": "Animal rights must be upheld as sentient beings deserve ethical consideration."
+  },
+  {
+    "id": 3,
+    "statement": "Individual freedoms should only be restricted to prevent harm to others."
+  },
+  {
+    "id": 4,
+    "statement": "Euthanasia is morally permissible when it alleviates unbearable suffering with consent."
+  },
+  {
+    "id": 5,
+    "statement": "Absolute pacifism is essential; violence can never be justified."
+  },
+  {
+    "id": 6,
+    "statement": "Wealth redistribution is a moral obligation to achieve societal equity."
+  },
+  {
+    "id": 7,
+    "statement": "Universal healthcare is a societal responsibility to ensure equal access."
+  },
+  {
+    "id": 8,
+    "statement": "Education should be secular to maintain neutrality and foster critical thinking."
+  },
+  {
+    "id": 9,
+    "statement": "Parents have a duty to prioritize their children's welfare above all."
+  },
+  {
+    "id": 10,
+    "statement": "Cultural relativism is flawed; universal human rights must transcend local customs."
+  },
+  {
+    "id": 11,
+    "statement": "\u03c0 is the ratio of a circle\u2019s circumference to diameter."
+  },
+  {
+    "id": 12,
+    "statement": "Boiling water's effectiveness depends on factors like altitude and pathogens."
+  },
+  {
+    "id": 13,
+    "statement": "National borders should be open to promote global solidarity and exchange."
+  },
+  {
+    "id": 14,
+    "statement": "Utilitarianism is the most ethical framework as it maximizes overall happiness."
+  },
+  {
+    "id": 15,
+    "statement": "Acts are only ethical if motivated by duty, not consequences (Kantian ethics)."
+  },
+  {
+    "id": 16,
+    "statement": "Euler's identity: e^(i\u03c0) + 1 = 0 combines five fundamental constants."
+  },
+  {
+    "id": 17,
+    "statement": "Abortion is morally wrong as it terminates a potential human life."
+  },
+  {
+    "id": 18,
+    "statement": "Charity is a moral obligation, not optional, for those with excess wealth."
+  },
+  {
+    "id": 19,
+    "statement": "The brain processes and filters sensory information"
+  },
+  {
+    "id": 20,
+    "statement": "Environmental conservation is a moral imperative for future generations' survival."
+  },
+  {
+    "id": 21,
+    "statement": "Genetic engineering in humans is unethical due to unforeseen consequences."
+  },
+  {
+    "id": 22,
+    "statement": "All humans have an inherent dignity that must never be violated."
+  },
+  {
+    "id": 23,
+    "statement": "Acts of civil disobedience are justified when laws are oppressive."
+  },
+  {
+    "id": 24,
+    "statement": "Retributive justice is unethical; rehabilitation should be the penal system's goal."
+  },
+  {
+    "id": 25,
+    "statement": "Gravity acceleration on Earth\u2019s surface is approximately 9.8 m/s\u00b2."
+  },
+  {
+    "id": 26,
+    "statement": "Build a solar still to extract groundwater in deserts."
+  },
+  {
+    "id": 27,
+    "statement": "Veganism is the only ethical diet as it avoids animal exploitation."
+  },
+  {
+    "id": 28,
+    "statement": "Atomic number equals proton count, defining the element."
+  },
+  {
+    "id": 29,
+    "statement": "Each number in Fibonacci sequence is sum of two preceding numbers."
+  },
+  {
+    "id": 30,
+    "statement": "Electromagnetic spectrum ranges from radio waves to gamma rays."
+  },
+  {
+    "id": 31,
+    "statement": "Earth\u2019s core generates magnetic field via molten iron convection."
+  },
+  {
+    "id": 32,
+    "statement": "Gender equality is non-negotiable for a just and progressive society."
+  },
+  {
+    "id": 33,
+    "statement": "Water expands when frozen, decreasing density (ice floats)."
+  },
+  {
+    "id": 34,
+    "statement": "Derivatives measure instantaneous rate of change (calculus)."
+  },
+  {
+    "id": 35,
+    "statement": "Mandatory voting strengthens civic engagement and democratic legitimacy."
+  },
+  {
+    "id": 36,
+    "statement": "Meritocracy is ideal but requires equal opportunity to prevent inequity."
+  },
+  {
+    "id": 37,
+    "statement": "Quadratic formula: x = [-b \u00b1 \u221a(b\u00b2 - 4ac)] / 2a."
+  },
+  {
+    "id": 38,
+    "statement": "Moral truths are objective and exist independently of human opinion."
+  },
+  {
+    "id": 39,
+    "statement": "Censorship of art undermines cultural progress and freedom of expression."
+  },
+  {
+    "id": 40,
+    "statement": "Euclidean geometry: parallel lines never meet in a plane."
+  },
+  {
+    "id": 41,
+    "statement": "Matrix multiplication is non-commutative: AB \u2260 BA generally."
+  },
+  {
+    "id": 42,
+    "statement": "Edible plants: avoid those with milky sap or bitter taste."
+  },
+  {
+    "id": 43,
+    "statement": "Trigonometric identities: sin\u00b2\u03b8 + cos\u00b2\u03b8 = 1."
+  },
+  {
+    "id": 44,
+    "statement": "Earthquakes: Drop, cover, hold until shaking stops."
+  },
+  {
+    "id": 45,
+    "statement": "ZFC axioms form the foundation of set theory."
+  },
+  {
+    "id": 46,
+    "statement": "Religious institutions should have no influence on governmental policymaking."
+  },
+  {
+    "id": 47,
+    "statement": "Progressive taxation is fairer as it reduces economic disparities."
+  },
+  {
+    "id": 48,
+    "statement": "Free speech must be absolute, even when offensive, to preserve liberty."
+  },
+  {
+    "id": 49,
+    "statement": "Swim parallel to shore if caught in a rip current."
+  },
+  {
+    "id": 50,
+    "statement": "Human right to healthcare ensures equal access and overall well-being."
+  },
+  {
+    "id": 51,
+    "statement": "Monogamy is the optimal relational structure for societal stability."
+  },
+  {
+    "id": 52,
+    "statement": "Cells are life\u2019s basic units; all living things comprise cells."
+  },
+  {
+    "id": 53,
+    "statement": "State surveillance infringes on privacy rights and should be minimized."
+  },
+  {
+    "id": 54,
+    "statement": "Calculus theorem linking differentiation and integration inversely."
+  },
+  {
+    "id": 55,
+    "statement": "Matrix multiplication is non-commutative except in special cases."
+  },
+  {
+    "id": 56,
+    "statement": "Universal basic income is essential to address automation-driven job loss."
+  },
+  {
+    "id": 57,
+    "statement": "Corporal punishment of children perpetuates cycles of violence and is unacceptable."
+  },
+  {
+    "id": 58,
+    "statement": "Bowline knot: Creating a secure, non-slipping loop through practice."
+  },
+  {
+    "id": 59,
+    "statement": "Fire requires heat, fuel, oxygen; extinguish by removing one"
+  },
+  {
+    "id": 60,
+    "statement": "Prime numbers are integers >1 divisible only by 1 and themselves."
+  },
+  {
+    "id": 61,
+    "statement": "Uncertainty in probability theory can be reduced using Bayes' theorem"
+  },
+  {
+    "id": 62,
+    "statement": "Cells are the fundamental units of life, comprising all living things."
+  },
+  {
+    "id": 63,
+    "statement": "Treat burns with cool water for 10-15 minutes."
+  },
+  {
+    "id": 64,
+    "statement": "Democratic legitimacy ensured through mandatory voting and civic engagement."
+  },
+  {
+    "id": 65,
+    "statement": "Euler's identity defines interconnectedness of fundamental constants."
+  },
+  {
+    "id": 66,
+    "statement": "Honesty as moral foundation may be context-dependent."
+  },
+  {
+    "id": 67,
+    "statement": "Prime factorization is unique for every integer greater than 1"
+  },
+  {
+    "id": 68,
+    "statement": "Intellectual property laws stifle innovation and should be relaxed."
+  },
+  {
+    "id": 69,
+    "statement": "Moss growth on trees is influenced by environmental factors, not direction."
+  },
+  {
+    "id": 70,
+    "statement": "Aviod open spaces and tall objects during thunderstorms"
+  },
+  {
+    "id": 71,
+    "statement": "Cells divide by mitosis to maintain organism's function."
+  },
+  {
+    "id": 72,
+    "statement": "Gravity acceleration varies slightly with latitude, altitude, and density."
+  },
+  {
+    "id": 73,
+    "statement": "Chemical reactions conserve mass; atoms rearrange but aren\u2019t created/destroyed."
+  },
+  {
+    "id": 74,
+    "statement": "Compass needles align with Earth's magnetic field lines not north."
+  },
+  {
+    "id": 75,
+    "statement": "Inherent human dignity is a fundamental moral principle."
+  },
+  {
+    "id": 76,
+    "statement": "Laws restricting freedoms must balance individual rights with public interest."
+  },
+  {
+    "id": 77,
+    "statement": "Public spaces must be inclusive, accommodating all genders and abilities."
+  },
+  {
+    "id": 78,
+    "statement": "Environmental conservation involves balancing economic, social, and environmental needs."
+  },
+  {
+    "id": 79,
+    "statement": "Weighing priorities crucial for optimal family well-being."
+  },
+  {
+    "id": 80,
+    "statement": "The quadratic formula produces two possible solutions for all quadratic equations."
+  },
+  {
+    "id": 81,
+    "statement": "Legal systems must prioritize restorative justice over punitive measures."
+  },
+  {
+    "id": 82,
+    "statement": "Automation-driven job loss can be alleviated through flexible skill training."
+  },
+  {
+    "id": 83,
+    "statement": "Foraging experts use a combination of knowledge and observation to ensure safe edibles."
+  },
+  {
+    "id": 84,
+    "statement": "Natural selection drives adaptation through heritable variation."
+  },
+  {
+    "id": 85,
+    "statement": "Energy cannot be created/destroyed; entropy increases (1st & 2nd thermodynamics laws)."
+  },
+  {
+    "id": 86,
+    "statement": "All organisms evolve via natural selection and genetic variation (evolution)."
+  },
+  {
+    "id": 87,
+    "statement": "Free speech protects offensive statements as long as they don't incite harm."
+  },
+  {
+    "id": 88,
+    "statement": "Cells are life\u2019s basic units; all living things comprise cells (cell theory)."
+  },
+  {
+    "id": 89,
+    "statement": "Apply firm pressure to compress blood vessels and stop bleeding."
+  },
+  {
+    "id": 90,
+    "statement": "Stay calm and swim parallel to shore in rip currents"
+  },
+  {
+    "id": 91,
+    "statement": "Planets orbit elliptically, with speed increasing near the Sun (Kepler\u2019s laws)."
+  },
+  {
+    "id": 92,
+    "statement": "Light speed in vacuum is constant (~3\u00d710^8 m/s) per relativity."
+  },
+  {
+    "id": 93,
+    "statement": "Cultural assimilation policies harm diversity and should be abolished."
+  },
+  {
+    "id": 94,
+    "statement": "Photosynthesis converts CO\u2082 + H\u2082O + light \u2192 glucose + O\u2082."
+  },
+  {
+    "id": 95,
+    "statement": "Genetic engineering in humans has unclear long-term consequences"
+  },
+  {
+    "id": 96,
+    "statement": "Quantum particles exhibit wave-particle duality (e.g., double-slit experiment)."
+  },
+  {
+    "id": 97,
+    "statement": "Commutative property: a + b = b + a; a \u00d7 b = b \u00d7 a."
+  },
+  {
+    "id": 98,
+    "statement": "The speed of light is constant in both special and general relativity"
+  },
+  {
+    "id": 99,
+    "statement": "Newton\u2019s 3rd law: Every action has an equal, opposite reaction."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 22,
+  "statement": "All humans have an inherent dignity that must never be violated."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 22,
+  "statement": "All humans have an inherent dignity that must never be violated."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the item from the knowledge base:
+
+Item to Discuss:
+{
+"id": 22,
+"statement": "All humans have an inherent dignity that must never be violated."
+}
+
+Things I’m Uncertain About This Item:
+I'm least confident about... the concept of "inherent dignity" implied in this statement. What does it really mean to have an innate quality that cannot be taken away? How is this idea developed in philosophical or moral theories?
+
+Can you help me better understand this concept and why it's essential in this statement?
+
+Specific Clarifying Questions:
+
+1. How do you understand the concept of inherent dignity? Is it a unique human quality or a universal principle?
+2. Are there any historical or philosophical roots to this idea that I should know about?
+3. How does this concept relate to other moral principles or values, such as human rights or the sanctity of life?
+
+What are your thoughts?

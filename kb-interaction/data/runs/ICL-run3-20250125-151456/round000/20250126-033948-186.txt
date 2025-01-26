@@ -1,0 +1,455 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Objectivity in research relies on honesty, transparency, and robust methodology."
+  },
+  {
+    "id": 1,
+    "statement": "Author credibility arises from expertise, communication skills, and peer recognition."
+  },
+  {
+    "id": 2,
+    "statement": "Author credibility comprises multiple, interconnected factors and influences"
+  },
+  {
+    "id": 3,
+    "statement": "Author credibility arises from expertise, communication skills, and transparency."
+  },
+  {
+    "id": 4,
+    "statement": "Author credibility builds from publication record and reputation."
+  },
+  {
+    "id": 5,
+    "statement": "Objectivity arises from intertwined honesty, transparency, and robust methodology."
+  },
+  {
+    "id": 6,
+    "statement": "Author credibility comprises qualifications, expertise, reputation, and communication skills."
+  },
+  {
+    "id": 7,
+    "statement": "Meticulous process documentation enhances transparency through accountability"
+  },
+  {
+    "id": 8,
+    "statement": "Research sincerity involves genuine commitment to truthful and transparent findings"
+  },
+  {
+    "id": 9,
+    "statement": "Self-awareness arises from coordinated brain region activity comprehensively."
+  },
+  {
+    "id": 10,
+    "statement": "Peer recognition stems from expertise, impact and reputation among peers."
+  },
+  {
+    "id": 11,
+    "statement": "Author credibility arises from interconnected expertise, communication, and transparency, all converging."
+  },
+  {
+    "id": 12,
+    "statement": "Research integrity involves accuracy, completeness, and transparency consistently."
+  },
+  {
+    "id": 13,
+    "statement": "Author credibility arises from expertise, publication record, and engagement."
+  },
+  {
+    "id": 14,
+    "statement": "Contextual research methodology tailored to specific research contexts exists."
+  },
+  {
+    "id": 15,
+    "statement": "Research consistency relies on robust methodology and expertise"
+  },
+  {
+    "id": 16,
+    "statement": "Peer review enhances objectivity through diverse expert evaluation process"
+  },
+  {
+    "id": 17,
+    "statement": "ACC regulates emotional responses through attention modulation mechanisms"
+  },
+  {
+    "id": 18,
+    "statement": "Anterior Cingulate Cortex integrates emotional information with cognitive processes."
+  },
+  {
+    "id": 19,
+    "statement": "ACC plays crucial role in emotional processing networks, connectivity."
+  },
+  {
+    "id": 20,
+    "statement": "Author credibility comprises multiple influencing factors and dimensions."
+  },
+  {
+    "id": 21,
+    "statement": "Meticulous process documentation increases transparency and trustworthiness in research."
+  },
+  {
+    "id": 22,
+    "statement": "Objectivity demands honesty, transparency, and robust methodology synergy."
+  },
+  {
+    "id": 23,
+    "statement": "Author credibility emerges from synergistic expertise and reputation dynamics."
+  },
+  {
+    "id": 24,
+    "statement": "Standardization, transparency, and rigorous analysis ensure robust research methodology integrity."
+  },
+  {
+    "id": 25,
+    "statement": "Data integrity cannot be entirely ensured through backup and quality control alone."
+  },
+  {
+    "id": 26,
+    "statement": "Author credibility develops through qualifications, expertise, and reputation synergy."
+  },
+  {
+    "id": 27,
+    "statement": "Research integrity depends on transparency, accountability, and rigor."
+  },
+  {
+    "id": 28,
+    "statement": "Self-awareness emerges from brain region information integration."
+  },
+  {
+    "id": 29,
+    "statement": "Systematic design ensures objectivity through transparency, standardization, and planning"
+  },
+  {
+    "id": 30,
+    "statement": "Investigative rigor and transparency enhance author credibility always."
+  },
+  {
+    "id": 31,
+    "statement": "Author credibility stems from demonstrated expertise and reputation."
+  },
+  {
+    "id": 32,
+    "statement": "Author credibility arises from expertise, reputation, and effective communication."
+  },
+  {
+    "id": 33,
+    "statement": "Peer review limitations include bias, expertise, and subjective evaluation."
+  },
+  {
+    "id": 34,
+    "statement": "Consistency in research integrity ensures trustworthiness of findings always."
+  },
+  {
+    "id": 35,
+    "statement": "Objectivity arises from robust methodology, transparency, and systematic analysis."
+  },
+  {
+    "id": 36,
+    "statement": "Research integrity is a continuous process and commitment."
+  },
+  {
+    "id": 37,
+    "statement": "Research integrity involves maintaining accurate and transparent records."
+  },
+  {
+    "id": 38,
+    "statement": "Research honesty involves authenticity, accountability, and unbiased motivation"
+  },
+  {
+    "id": 39,
+    "statement": "Author credibility rooted in expertise and communication synergy,"
+  },
+  {
+    "id": 40,
+    "statement": "Peer review's subjective evaluation can result from implicit biases."
+  },
+  {
+    "id": 41,
+    "statement": "Author credibility arises from expertise, engagement, and transparency."
+  },
+  {
+    "id": 42,
+    "statement": "Intentional planning involves clearly defining research objectives and outcomes."
+  },
+  {
+    "id": 43,
+    "statement": "Anterior Cingulate Cortex plays crucial role in emotional regulation"
+  },
+  {
+    "id": 44,
+    "statement": "Objectivity arises from intertwined honesty, transparency, and robust methodology."
+  },
+  {
+    "id": 45,
+    "statement": "Author credibility builds from expertise, publication record, and engagement activities."
+  },
+  {
+    "id": 46,
+    "statement": "Self-awareness arises from coordinated neural activity in multiple regions."
+  },
+  {
+    "id": 47,
+    "statement": "Robust data backup and quality control ensure integrity always."
+  },
+  {
+    "id": 48,
+    "statement": "Error prevention measures can always be compromised by human mistakes."
+  },
+  {
+    "id": 49,
+    "statement": "Objectivity arises from systematic, transparent, and robust research methodology."
+  },
+  {
+    "id": 50,
+    "statement": "Consistency in research is necessary but not sufficient for reliability."
+  },
+  {
+    "id": 51,
+    "statement": "Peer review ensures research objectivity through expert evaluation and criticism."
+  },
+  {
+    "id": 52,
+    "statement": "Research bias limitations persist despite double-blind reviewing efforts."
+  },
+  {
+    "id": 53,
+    "statement": "The Anterior Cingulate Cortex is involved in emotional conflict monitoring."
+  },
+  {
+    "id": 54,
+    "statement": "Self-awareness arises from harmonious neural network coordination."
+  },
+  {
+    "id": 55,
+    "statement": "Self-awareness's complexity arises from multiple neural, genetic, environmental, and cognitive factors."
+  },
+  {
+    "id": 56,
+    "statement": "Self-awareness arises from complex interplay of neural, genetic, environmental, and cognitive factors"
+  },
+  {
+    "id": 57,
+    "statement": "Double-blind reviewing may not eliminate research bias completely."
+  },
+  {
+    "id": 58,
+    "statement": "Standardization, research design, data quality, and expertise synergize consistency in research."
+  },
+  {
+    "id": 59,
+    "statement": "Objectivity arises from robust methodology, transparency, and systematic analysis."
+  },
+  {
+    "id": 60,
+    "statement": "Data integrity ensured through comprehensive multi-layered protection approach."
+  },
+  {
+    "id": 61,
+    "statement": "Data integrity requires comprehensive approach and multiple layers protection"
+  },
+  {
+    "id": 62,
+    "statement": "Systematic research design promotes transparency and reproducibility through intentionality."
+  },
+  {
+    "id": 63,
+    "statement": "ACC integrates emotional information from multiple brain regions harmoniously."
+  },
+  {
+    "id": 64,
+    "statement": "Robust methodology involves honesty, transparency, and systematic design consistently."
+  },
+  {
+    "id": 65,
+    "statement": "Standardization, transparency, and rigorous analysis ensure robust research methodology."
+  },
+  {
+    "id": 66,
+    "statement": "Intentional planning involves clearly defining research objectives."
+  },
+  {
+    "id": 67,
+    "statement": "Robust methodology relies on honesty, transparency, and systematic design."
+  },
+  {
+    "id": 68,
+    "statement": "The Anterior Cingulate Cortex detects and resolves emotional conflicts."
+  },
+  {
+    "id": 69,
+    "statement": "Research integrity balances competing values through transparency and rigor."
+  },
+  {
+    "id": 70,
+    "statement": "Meticulous process documentation boosts transparency, trustworthiness, and reproducibility."
+  },
+  {
+    "id": 71,
+    "statement": "The Anterior Cingulate Cortex regulates emotional responses through selective attention."
+  },
+  {
+    "id": 72,
+    "statement": "Objectivity arises from robust methodology ensuring transparency and rigor."
+  },
+  {
+    "id": 73,
+    "statement": "Robust methodology requires intentional design, analysis, and accuracy."
+  },
+  {
+    "id": 74,
+    "statement": "Emotional self-awareness develops through recognizing emotional responses, understanding optional."
+  },
+  {
+    "id": 75,
+    "statement": "Peer review improves research objectivity through expert evaluation and transparency."
+  },
+  {
+    "id": 76,
+    "statement": "Systematic analysis ensures objectivity in research through transparency."
+  },
+  {
+    "id": 77,
+    "statement": "Research consistency arises from synergy of robust methodology and expertise."
+  },
+  {
+    "id": 78,
+    "statement": "Objectivity relies on harmonious synergy of honesty, transparency, methodology."
+  },
+  {
+    "id": 79,
+    "statement": "Peer review is subjective, prone to human bias and error."
+  },
+  {
+    "id": 80,
+    "statement": "Effective communication enhances author credibility and expertise."
+  },
+  {
+    "id": 81,
+    "statement": "Peer recognition emerges from expertise, impact, and interpersonal relationships interdependently."
+  },
+  {
+    "id": 82,
+    "statement": "Research integrity involves accurate and transparent record-keeping practices."
+  },
+  {
+    "id": 83,
+    "statement": "Emotional self-awareness can arise from recognition without understanding causes."
+  },
+  {
+    "id": 84,
+    "statement": "Robust methodology minimizes unintended bias through systematic design"
+  },
+  {
+    "id": 85,
+    "statement": "ACC's role in emotional processing involves complex brain networks."
+  },
+  {
+    "id": 86,
+    "statement": "Self-awareness stems from neural, genetic, environmental, and cognitive interactions"
+  },
+  {
+    "id": 87,
+    "statement": "Research bias persists despite double-blind reviewing efforts."
+  },
+  {
+    "id": 88,
+    "statement": "Research transparency may be compromised by misleading documentation."
+  },
+  {
+    "id": 89,
+    "statement": "Expertise, communication skills, and transparency each serves distinct purposes."
+  },
+  {
+    "id": 90,
+    "statement": "Author credibility built on interconnected expertise, reputation, and record."
+  },
+  {
+    "id": 91,
+    "statement": "Research integrity depends on transparency, accountability, and methodological rigor."
+  },
+  {
+    "id": 92,
+    "statement": "Robust methodology ensures objectivity through systematic design and transparency."
+  },
+  {
+    "id": 93,
+    "statement": "Standardization, research design, data quality, and expertise synergize consistency."
+  },
+  {
+    "id": 94,
+    "statement": "Clear research objectives emerge from intentional planning decisions."
+  },
+  {
+    "id": 95,
+    "statement": "Author credibility built on publication record, reputation, and expertise"
+  },
+  {
+    "id": 96,
+    "statement": "Data integrity ensured through multiple-layered protection approach, encompassing data quality, access controls, encryption, and auditing."
+  },
+  {
+    "id": 97,
+    "statement": "Effective communication is crucial for author credibility and expertise."
+  },
+  {
+    "id": 98,
+    "statement": "Robust research methodology involves multiple interdependent factors"
+  },
+  {
+    "id": 99,
+    "statement": "Self-awareness arises from synchronized neural oscillations and activity."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 74,
+  "statement": "Emotional self-awareness develops through recognizing emotional responses, understanding optional."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 74,
+  "statement": "Emotional self-awareness develops through recognizing emotional responses, understanding optional."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd love to discuss the item: 
+
+{
+"id": 74,
+"statement": "Emotional self-awareness develops through recognizing emotional responses, understanding optional."
+}
+
+I'm least confident about this item, and I'd like to understand it better. What do you think is meant by "recognizing emotional responses"? Is it just acknowledging that a certain emotion is present, or does it involve more nuanced understanding, like identifying the underlying causes or triggers of those emotions?

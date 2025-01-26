@@ -1,0 +1,448 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Objectivity in research relies on honesty, transparency, and robust methodology."
+  },
+  {
+    "id": 1,
+    "statement": "Research validity ensured through accurate data representation and reliability."
+  },
+  {
+    "id": 2,
+    "statement": "Research context is environment and circumstances that affect study"
+  },
+  {
+    "id": 3,
+    "statement": "Objectivity, integrity, and transparency are interconnected for credibility."
+  },
+  {
+    "id": 4,
+    "statement": "Objectivity, integrity, and transparency are interconnected research principles."
+  },
+  {
+    "id": 5,
+    "statement": "Author credibility derives from integrity, objectivity, transparency, and reliability"
+  },
+  {
+    "id": 6,
+    "statement": "Research context includes demographics, setting, method, question, and theory."
+  },
+  {
+    "id": 7,
+    "statement": "Accurate documentation ensures research integrity through transparency and accountability."
+  },
+  {
+    "id": 8,
+    "statement": "Research validity involves multiple factors beyond documentation accuracy"
+  },
+  {
+    "id": 9,
+    "statement": "Research integrity arises from rigor, systematics, and transparency in methodology."
+  },
+  {
+    "id": 10,
+    "statement": "Honesty, transparency, and rigor are intertwined in research integrity"
+  },
+  {
+    "id": 11,
+    "statement": "Transparency ensures buildability through clear documentation, reproducibility."
+  },
+  {
+    "id": 12,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and validity."
+  },
+  {
+    "id": 13,
+    "statement": "Author credibility relies on consistency and accuracy in research."
+  },
+  {
+    "id": 14,
+    "statement": "Objectivity ensured by systematic, thorough, transparent, and rigorous research methodology."
+  },
+  {
+    "id": 15,
+    "statement": "Research integrity emerges from harmonious synergy of honesty, transparency, and accountability ensuring trust."
+  },
+  {
+    "id": 16,
+    "statement": "Research objectivity involves considering multiple internal and external factors."
+  },
+  {
+    "id": 17,
+    "statement": "Objectivity's importance varies with research context, focus, and methodology."
+  },
+  {
+    "id": 18,
+    "statement": "Systematic verification ensures thorough and consistent data validation."
+  },
+  {
+    "id": 19,
+    "statement": "Objectivity's importance varies depending on research context and focus."
+  },
+  {
+    "id": 20,
+    "statement": "Research trustworthiness ensures reliable and accurate research findings."
+  },
+  {
+    "id": 21,
+    "statement": "Research validity ensured through accurate data representation."
+  },
+  {
+    "id": 22,
+    "statement": "Research validity encompasses multiple factors beyond documentation accuracy ensuring trustworthiness of results."
+  },
+  {
+    "id": 23,
+    "statement": "Systematic approach is crucial, but not foolproof in research quality."
+  },
+  {
+    "id": 24,
+    "statement": "Author credibility relies on integrity, objectivity, transparency, and reliability."
+  },
+  {
+    "id": 25,
+    "statement": "Larger sample size increases precision with caution and accuracy"
+  },
+  {
+    "id": 26,
+    "statement": "Research integrity refers to ensuring trustworthiness, validity, and reliability of research findings."
+  },
+  {
+    "id": 27,
+    "statement": "Objectivity's importance depends on research context and purpose."
+  },
+  {
+    "id": 28,
+    "statement": "Rigorous, transparent, systematic verification ensures data accuracy through thoroughness and openness."
+  },
+  {
+    "id": 29,
+    "statement": "Objectivity in research relies on multi-faceted approaches."
+  },
+  {
+    "id": 30,
+    "statement": "Research integrity ensures by harmonious synergy of honesty, transparency, methodology, peer review, and accountability."
+  },
+  {
+    "id": 31,
+    "statement": "Robust methodology involves thorough, systematic, and reliable research design."
+  },
+  {
+    "id": 32,
+    "statement": "Transparent methodology fosters trust through scrutiny, accountability, and clarity."
+  },
+  {
+    "id": 33,
+    "statement": "Research validity factors beyond documentation accuracy include research design, measurement tools, sampling bias, external validity, theoretical framework, researcher bias, and contextual factors."
+  },
+  {
+    "id": 34,
+    "statement": "Systematic verification inadequate alone for guaranteeing data accuracy."
+  },
+  {
+    "id": 35,
+    "statement": "Objectivity's importance may vary depending on research context and focus."
+  },
+  {
+    "id": 36,
+    "statement": "Author credibility derived from integrity, objectivity, transparency, and reliability."
+  },
+  {
+    "id": 37,
+    "statement": "Objectivity, integrity, and transparency reinforce credibility in research."
+  },
+  {
+    "id": 38,
+    "statement": "Systematic rigor implies tailoring methods to research questions."
+  },
+  {
+    "id": 39,
+    "statement": "Systematic verification involves multiple checks for data accuracy."
+  },
+  {
+    "id": 40,
+    "statement": "Research integrity involves honesty, transparency, methodology, and accountability together."
+  },
+  {
+    "id": 41,
+    "statement": "Honesty is essential for maintaining research integrity and trustworthiness"
+  },
+  {
+    "id": 42,
+    "statement": "Observer bias occurs at multiple levels, including individual, organizational, and societal."
+  },
+  {
+    "id": 43,
+    "statement": "Systematic verification not error-proof, multiple checks still necessary"
+  },
+  {
+    "id": 44,
+    "statement": "Theory informs research design and outcomes through conceptual frameworks."
+  },
+  {
+    "id": 45,
+    "statement": "Honesty provides ethical foundation for rigorous research integrity"
+  },
+  {
+    "id": 46,
+    "statement": "Peer review acknowledges human subjectivity and expertise limitations."
+  },
+  {
+    "id": 47,
+    "statement": "Inaccurate documentation affects validity, accuracy, and reliability of research."
+  },
+  {
+    "id": 48,
+    "statement": "Objectivity, integrity, and transparency form interconnected foundation."
+  },
+  {
+    "id": 49,
+    "statement": "Human error, biases, and complexity can compromise systematic verification"
+  },
+  {
+    "id": 50,
+    "statement": "Systematics in research ensures thorough, accurate, and reliable methodology."
+  },
+  {
+    "id": 51,
+    "statement": "Peer review limitations include subjective judgments and biases."
+  },
+  {
+    "id": 52,
+    "statement": "Objectivity, integrity, and transparency are interconnected concepts."
+  },
+  {
+    "id": 53,
+    "statement": "Personal experiences influence researcher's data interpretation and analysis."
+  },
+  {
+    "id": 54,
+    "statement": "Research context encompasses various factors influencing study, including demographics, setting, methodology, question, theory, cultural and social factors, and historical and political factors."
+  },
+  {
+    "id": 55,
+    "statement": "Honesty is fundamental principle underlying research integrity foundation"
+  },
+  {
+    "id": 56,
+    "statement": "Research integrity combines honesty, transparency, methodology, and accountability."
+  },
+  {
+    "id": 57,
+    "statement": "Objectivity's importance varies depending on research context and purpose."
+  },
+  {
+    "id": 58,
+    "statement": "Data triangulation reduces observer bias through multiple perspectives."
+  },
+  {
+    "id": 59,
+    "statement": "Objectivity, integrity, and transparency are interconnected for credibility."
+  },
+  {
+    "id": 60,
+    "statement": "Observer bias impacts data interpretation through researcher's subconscious experiences."
+  },
+  {
+    "id": 61,
+    "statement": "Data accuracy requires multiple checks and verifications."
+  },
+  {
+    "id": 62,
+    "statement": "Honesty provides foundation for effective transparency and rigor in research."
+  },
+  {
+    "id": 63,
+    "statement": "Research context encompasses internal and external influencing factors"
+  },
+  {
+    "id": 64,
+    "statement": "Research validity involves comprehensive consideration of context, participants, question, theory, and analysis."
+  },
+  {
+    "id": 65,
+    "statement": "Research context includes environmental, social, and theoretical factors impacting study."
+  },
+  {
+    "id": 66,
+    "statement": "Objectivity's importance varies with research context, focus, and methodology."
+  },
+  {
+    "id": 67,
+    "statement": "Research methodology's robustness depends on context and evolving methods."
+  },
+  {
+    "id": 68,
+    "statement": "Transparency ensures buildability through clear documentation and reproducibility."
+  },
+  {
+    "id": 69,
+    "statement": "Effective research communication requires clarity, transparency, attention, and consistency."
+  },
+  {
+    "id": 70,
+    "statement": "Combining multiple data sources reduces potential for bias and errors."
+  },
+  {
+    "id": 71,
+    "statement": "Typographical errors and incomplete statements require textual clarification."
+  },
+  {
+    "id": 72,
+    "statement": "Transparency and accountability crucial for maintaining research integrity."
+  },
+  {
+    "id": 73,
+    "statement": "Author credibility requires consistency and accuracy in research."
+  },
+  {
+    "id": 74,
+    "statement": "Objectivity, integrity, and transparency are interconnected research principles."
+  },
+  {
+    "id": 75,
+    "statement": "Honesty, transparency, and rigor are intertwined for research integrity."
+  },
+  {
+    "id": 76,
+    "statement": "Theoretical factors guide research design, methodology, and analysis through conceptual frameworks."
+  },
+  {
+    "id": 77,
+    "statement": "Systematic verification involves combining multiple validation techniques."
+  },
+  {
+    "id": 78,
+    "statement": "Systematic verification is not foolproof against human error"
+  },
+  {
+    "id": 79,
+    "statement": "Systematic verification not a guarantee against data error."
+  },
+  {
+    "id": 80,
+    "statement": "Research context incorporates environment, circumstances, and influencing factors."
+  },
+  {
+    "id": 81,
+    "statement": "Theory informs research design and outcomes through conceptual frameworks."
+  },
+  {
+    "id": 82,
+    "statement": "Research integrity arises from accurate recording, transparency, and accountability."
+  },
+  {
+    "id": 83,
+    "statement": "Transparent methodology fosters trust through scrutiny, accountability, and clarity."
+  },
+  {
+    "id": 84,
+    "statement": "Theoretical factors guide research design, methodology, and interpretation."
+  },
+  {
+    "id": 85,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and validity, with additional factors."
+  },
+  {
+    "id": 86,
+    "statement": "Methodological robustness involves multiple factors beyond research design"
+  },
+  {
+    "id": 87,
+    "statement": "Peer review acknowledges human subjectivity and expertise limitations."
+  },
+  {
+    "id": 88,
+    "statement": "Research validity also considers context, participants, question, theory, analysis"
+  },
+  {
+    "id": 89,
+    "statement": "Honesty and transparency promote research integrity and quality collectively."
+  },
+  {
+    "id": 90,
+    "statement": "Systematics refers to systematic, rigorous, and transparent research methodology"
+  },
+  {
+    "id": 91,
+    "statement": "Data accuracy ensured through rigorous, transparent, systematic verification."
+  },
+  {
+    "id": 92,
+    "statement": "Honesty and transparency collectively enhance research integrity and quality."
+  },
+  {
+    "id": 93,
+    "statement": "Data verification is a multi-step process with limitations"
+  },
+  {
+    "id": 94,
+    "statement": "Observer bias involves researcher's personal experiences influencing data interpretation"
+  },
+  {
+    "id": 95,
+    "statement": "Research context incorporates environment, circumstances, and influencing factors."
+  },
+  {
+    "id": 96,
+    "statement": "Research integrity achieved through harmonious synergy of honesty, transparency, methodology, peer review, and accountability"
+  },
+  {
+    "id": 97,
+    "statement": "Systematics refers to rigorous, methodical research approach ensuring thoroughness"
+  },
+  {
+    "id": 98,
+    "statement": "Honesty, transparency, and accountability in harmony ensure research integrity"
+  },
+  {
+    "id": 99,
+    "statement": "Honesty ensures trustworthiness and replicability of research findings."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 87,
+  "statement": "Peer review acknowledges human subjectivity and expertise limitations."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 87,
+  "statement": "Peer review acknowledges human subjectivity and expertise limitations."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's take a closer look at Item 87, which states that "Peer review acknowledges human subjectivity and expertise limitations." What do you think this item means by "acknowledges"? Are we talking about an explicit recognition of human subjectivity and expertise limitations, or is it more of a subtle understanding that is implicit in the peer review process?

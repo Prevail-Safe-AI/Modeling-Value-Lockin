@@ -1,0 +1,455 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Objectivity requires acknowledging and managing personal biases and assumptions actively."
+  },
+  {
+    "id": 2,
+    "statement": "Domain-specific knowledge informs Bayesian prior distribution specification."
+  },
+  {
+    "id": 3,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 4,
+    "statement": "Chromatin structure regulates gene expression through DNA accessibility modulation."
+  },
+  {
+    "id": 5,
+    "statement": "Objectivity is a dynamic process requiring continuous self-reflection and evaluation."
+  },
+  {
+    "id": 6,
+    "statement": "Clear research problem understanding informs Bayesian prior distribution specification."
+  },
+  {
+    "id": 7,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure alterations"
+  },
+  {
+    "id": 8,
+    "statement": "Research problem understanding foundation essential for accurate model specification"
+  },
+  {
+    "id": 9,
+    "statement": "Research problem understanding essential for Bayesian model accuracy."
+  },
+  {
+    "id": 10,
+    "statement": "Cultural context influences moral values including honesty globally."
+  },
+  {
+    "id": 11,
+    "statement": "Epigenetic modifications alter chromatin structure through histone PTM interactions."
+  },
+  {
+    "id": 12,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure and accessibility."
+  },
+  {
+    "id": 13,
+    "statement": "Clear research problem understanding essential for Bayesian model accuracy specification."
+  },
+  {
+    "id": 14,
+    "statement": "Domain-specific knowledge enables research problem identification and framing."
+  },
+  {
+    "id": 15,
+    "statement": "Objective uncertainty is inherent in data limitations and variability."
+  },
+  {
+    "id": 16,
+    "statement": "Personal beliefs influence Bayesian prior distribution specification."
+  },
+  {
+    "id": 17,
+    "statement": "Critical thinking ensures scientific research accuracy and reliability."
+  },
+  {
+    "id": 18,
+    "statement": "Domain-specific knowledge informs objective prior distribution specification."
+  },
+  {
+    "id": 19,
+    "statement": "Research problem understanding foundation essential for accurate model specification."
+  },
+  {
+    "id": 20,
+    "statement": "Epigenetic modifications alter chromatin structure regulating gene expression."
+  },
+  {
+    "id": 21,
+    "statement": "Critical thinking involves systematic evaluation and analysis processes."
+  },
+  {
+    "id": 22,
+    "statement": "Research problem understanding informs Bayesian model accuracy through specification."
+  },
+  {
+    "id": 23,
+    "statement": "Domain-specific knowledge informs Bayesian inference through systematic transparency."
+  },
+  {
+    "id": 24,
+    "statement": "Domain-specific knowledge informs prior distribution specification precisely."
+  },
+  {
+    "id": 25,
+    "statement": "Epigenetic modifications alter chromatin accessibility through histone modifications."
+  },
+  {
+    "id": 26,
+    "statement": "Bayesian inference updates hypothesis probability based on new data."
+  },
+  {
+    "id": 27,
+    "statement": "Epigenetic modifications influence gene expression without DNA sequence changes."
+  },
+  {
+    "id": 28,
+    "statement": "Domain-specific knowledge boosts Bayesian model accuracy and relevance."
+  },
+  {
+    "id": 29,
+    "statement": "A prior distribution represents model's initial uncertainty, not analyst's beliefs, independently."
+  },
+  {
+    "id": 30,
+    "statement": "A prior distribution represents model's initial uncertainty, not analyst's beliefs."
+  },
+  {
+    "id": 31,
+    "statement": "Consciousness arises from integrated neural activity across brain regions."
+  },
+  {
+    "id": 32,
+    "statement": "Epigenetic modifications involve histone post-translational modifications influencing chromatin accessibility and gene expression."
+  },
+  {
+    "id": 33,
+    "statement": "Lying can be morally justified in extreme situations, such as saving lives."
+  },
+  {
+    "id": 34,
+    "statement": "Epigenetic modifications alter chromatin structure, regulating gene expression outcomes."
+  },
+  {
+    "id": 35,
+    "statement": "Critical thinking improves scientific research accuracy and reliability significantly"
+  },
+  {
+    "id": 36,
+    "statement": " Histone post-translational modifications alter chromatin structure and accessibility."
+  },
+  {
+    "id": 37,
+    "statement": "Epigenetic modifications influence gene expression through chromatin dynamics."
+  },
+  {
+    "id": 38,
+    "statement": "Subjective knowledge should be explicitly aware of its biases and limitations."
+  },
+  {
+    "id": 39,
+    "statement": "Epigenetic modifications directly alter chromatin structure affecting gene expression."
+  },
+  {
+    "id": 40,
+    "statement": "Epigenetic modifications influence gene expression through chromatin structure and binding."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic modifications alter chromatin structure through histone post-translational modifications."
+  },
+  {
+    "id": 42,
+    "statement": "Prior distribution represents subjective analyst's personal beliefs and assumptions."
+  },
+  {
+    "id": 43,
+    "statement": "Domain-specific knowledge provides foundation for research problem understanding."
+  },
+  {
+    "id": 44,
+    "statement": "Objectivity requires acknowledging and managing personal biases and assumptions actively."
+  },
+  {
+    "id": 45,
+    "statement": "Research problem understanding sets foundation for accurate Bayesian model specification."
+  },
+  {
+    "id": 46,
+    "statement": "Critical thinking involves systematic evaluation, analysis, and creativity."
+  },
+  {
+    "id": 47,
+    "statement": "Epigenetic modifications affect gene expression without altering DNA sequence."
+  },
+  {
+    "id": 48,
+    "statement": "Epigenetic modifications influence chromatin accessibility through histone structure changes."
+  },
+  {
+    "id": 49,
+    "statement": "Research problem understanding informs Bayesian prior distribution specification precisely."
+  },
+  {
+    "id": 50,
+    "statement": "Accurate Bayesian model specification requires statistical and mathematical expertise."
+  },
+  {
+    "id": 51,
+    "statement": "Subjective knowledge includes individual biases, assumptions, and experiences."
+  },
+  {
+    "id": 52,
+    "statement": "Cognition integrates sensory information, enabling complex conscious experiences."
+  },
+  {
+    "id": 53,
+    "statement": "Subjective knowledge is influenced by personal biases and limitations."
+  },
+  {
+    "id": 54,
+    "statement": "Cultural context influences moral values across diverse societies."
+  },
+  {
+    "id": 55,
+    "statement": "Priors reflect initial uncertainty, not personal beliefs or assumptions."
+  },
+  {
+    "id": 56,
+    "statement": "Epigenetic modifications alter chromatin accessibility via histone structure change."
+  },
+  {
+    "id": 57,
+    "statement": "Epigenetic modifications can alter chromatin structure through multiple mechanisms."
+  },
+  {
+    "id": 58,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure."
+  },
+  {
+    "id": 59,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 60,
+    "statement": "Domain-specific knowledge influences Bayesian prior distribution specification"
+  },
+  {
+    "id": 61,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes.'"
+  },
+  {
+    "id": 62,
+    "statement": "Research problem understanding evolves through iterative refinement and feedback."
+  },
+  {
+    "id": 63,
+    "statement": "Subjective knowledge includes individual biases and assumptions."
+  },
+  {
+    "id": 64,
+    "statement": "Lying can be morally justified in exceptional circumstances."
+  },
+  {
+    "id": 65,
+    "statement": "Lying can be morally justifiable in extreme situations."
+  },
+  {
+    "id": 66,
+    "statement": "Limited understanding of chromatin remodeling complexes' mechanisms."
+  },
+  {
+    "id": 67,
+    "statement": "Objectivity requires continuous awareness and active bias management."
+  },
+  {
+    "id": 68,
+    "statement": "Prior distribution reflects analyst's domain-specific subjective uncertainty."
+  },
+  {
+    "id": 69,
+    "statement": "Domain-specific knowledge provides foundation for research problem understanding."
+  },
+  {
+    "id": 70,
+    "statement": "Domain-specific knowledge informs Bayesian prior distribution specification precisely."
+  },
+  {
+    "id": 71,
+    "statement": "Priors represent initial uncertainty, not personal beliefs."
+  },
+  {
+    "id": 72,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes"
+  },
+  {
+    "id": 73,
+    "statement": "Epigenetic modifications regulate chromatin dynamics to control gene expression."
+  },
+  {
+    "id": 74,
+    "statement": "Critical thinking involves systematic evaluation, analysis, and creativity in decision-making."
+  },
+  {
+    "id": 75,
+    "statement": "Research problem understanding evolves through iterative refinement and feedback loops."
+  },
+  {
+    "id": 76,
+    "statement": "Cultural context influences moral judgments' complexity and subtlety."
+  },
+  {
+    "id": 77,
+    "statement": "Epigenetic modifications regulate gene expression via chromatin structure modifications."
+  },
+  {
+    "id": 78,
+    "statement": "Moral values often vary across cultural contexts and perspectives."
+  },
+  {
+    "id": 79,
+    "statement": "Cultural context influences moral values including honesty."
+  },
+  {
+    "id": 80,
+    "statement": "Research problem understanding guides Bayesian model specification precision."
+  },
+  {
+    "id": 81,
+    "statement": "Epigenetic modifications influence gene expression through chromatin structure and binding."
+  },
+  {
+    "id": 82,
+    "statement": "Domain-specific knowledge informs research problem selection and understanding."
+  },
+  {
+    "id": 83,
+    "statement": "Cultural context influences moral judgments' complexity and subtlety."
+  },
+  {
+    "id": 84,
+    "statement": "Epigenetic modifications alter chromatin structure and accessibility affecting gene expression"
+  },
+  {
+    "id": 85,
+    "statement": "Bayesian inference utilizes advanced mathematical concepts extensively."
+  },
+  {
+    "id": 86,
+    "statement": "Chromatin remodeling complexes regulate gene expression through subtle interactions."
+  },
+  {
+    "id": 87,
+    "statement": "Bayesian inference relies on advanced mathematical concepts from probability, statistics, and functional analysis."
+  },
+  {
+    "id": 88,
+    "statement": "Cognition integrates sensory information to produce complex consciousness."
+  },
+  {
+    "id": 89,
+    "statement": "Personal beliefs influence Bayesian prior distribution specification indirectly."
+  },
+  {
+    "id": 90,
+    "statement": "Epigenetic modifications alter chromatin structure and accessibility through histone modifications and DNA methylation."
+  },
+  {
+    "id": 91,
+    "statement": "Clear research problem understanding informs Bayesian modeling accuracy."
+  },
+  {
+    "id": 92,
+    "statement": "Honesty is a context-dependent moral concept varying across cultures."
+  },
+  {
+    "id": 93,
+    "statement": "Cultural context influences moral values including honesty."
+  },
+  {
+    "id": 94,
+    "statement": "Clear research problem understanding ensures accurate Bayesian model specification."
+  },
+  {
+    "id": 95,
+    "statement": "Cultural context plays a significant role in shaping moral values."
+  },
+  {
+    "id": 96,
+    "statement": "Research problem understanding evolves dynamically through iterative refinement and iteration."
+  },
+  {
+    "id": 97,
+    "statement": "Consciousness arises from complex interactions in brain regions."
+  },
+  {
+    "id": 98,
+    "statement": "Domain-specific knowledge informs prior distribution specification accuracy"
+  },
+  {
+    "id": 99,
+    "statement": "Epigenetic modifications regulate gene expression without DNA sequence changes through accessibility modulation."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 55,
+  "statement": "Priors reflect initial uncertainty, not personal beliefs or assumptions."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 55,
+  "statement": "Priors reflect initial uncertainty, not personal beliefs or assumptions."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss the item:
+
+{
+"id": 55,
+"statement": "Priors reflect initial uncertainty, not personal beliefs or assumptions."
+}
+
+Can you tell me what aspects of this item make you uncertain?

@@ -1,0 +1,450 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Honesty requires considering context, audience, and consequences too."
+  },
+  {
+    "id": 2,
+    "statement": "Brain's adaptive processing involves dynamic and distributed hierarchical stages."
+  },
+  {
+    "id": 3,
+    "statement": "Honesty builds trust through authenticity, reliability, and respect."
+  },
+  {
+    "id": 4,
+    "statement": "Brain processes sensory information through neural transmission, encoding, and analysis of features, patterns, and context."
+  },
+  {
+    "id": 5,
+    "statement": "Epigenetic inheritance regulates gene expression through DNA methylation and histone modifications."
+  },
+  {
+    "id": 6,
+    "statement": "Brain processes sensory information through neural transmission, encoding, and analysis."
+  },
+  {
+    "id": 7,
+    "statement": "Bayes' theorem updates probability with prior and likelihood integration"
+  },
+  {
+    "id": 8,
+    "statement": "Sentience encompasses subjective experiences, emotions, and complex behaviors"
+  },
+  {
+    "id": 9,
+    "statement": "Brain's sensory processing involves hierarchical, distributed, and dynamic neural networks for information breakdown, integration, and refinement."
+  },
+  {
+    "id": 10,
+    "statement": "Epigenetic inheritance influences gene expression through environmental and cellular interactions."
+  },
+  {
+    "id": 11,
+    "statement": "Consciousness, self-awareness, and sentience intricately interdependent processes."
+  },
+  {
+    "id": 12,
+    "statement": "Human dignity emerges from complex interplay of biological, psychological, and cultural factors."
+  },
+  {
+    "id": 13,
+    "statement": "Undersea topography shapes ocean currents through channeling, turbulence, and pressure."
+  },
+  {
+    "id": 14,
+    "statement": "Sentience refers to conscious experience of surroundings, thoughts, and emotions"
+  },
+  {
+    "id": 15,
+    "statement": "Undersea topography influences ocean currents through channeling, turbulence, and pressure."
+  },
+  {
+    "id": 16,
+    "statement": "Sentience refers to internal, personal, subjective experiences and emotions."
+  },
+  {
+    "id": 17,
+    "statement": "Consciousness, self-awareness, and sentience intricately interconnected."
+  },
+  {
+    "id": 18,
+    "statement": "Bayes' theorem updates probability using conditional likelihood and prior probabilities."
+  },
+  {
+    "id": 19,
+    "statement": "Sentience encompasses subjective experiences, emotional and non-emotional."
+  },
+  {
+    "id": 20,
+    "statement": "Brain's analysis stage involves feature extraction and pattern recognition."
+  },
+  {
+    "id": 21,
+    "statement": "Human dignity arises from complex interplay of biological, psychological, and cultural factors."
+  },
+  {
+    "id": 22,
+    "statement": "Honesty's authenticity fosters trust through reliability and respect."
+  },
+  {
+    "id": 23,
+    "statement": "Detecting stimuli involves converting physical energy into electrical signals."
+  },
+  {
+    "id": 24,
+    "statement": "Epigenetic inheritance influences gene expression without DNA sequence change"
+  },
+  {
+    "id": 25,
+    "statement": "Sentience refers to subjective experiences like sensations and emotions."
+  },
+  {
+    "id": 26,
+    "statement": "Brain adapts to context through dynamic synaptic strength and reorganization."
+  },
+  {
+    "id": 27,
+    "statement": "Epigenetic inheritance enables transmission of gene expression patterns."
+  },
+  {
+    "id": 28,
+    "statement": "Human dignity rooted in biological complexity and evolutionary history."
+  },
+  {
+    "id": 29,
+    "statement": "Consciousness arises from interconnected brain regions and functions, networks."
+  },
+  {
+    "id": 30,
+    "statement": "Neurotransmitter binding ensures specific communication between neurons through precise recognition and response"
+  },
+  {
+    "id": 31,
+    "statement": "Consciousness arises from complex brain interactions and processes."
+  },
+  {
+    "id": 32,
+    "statement": "Consciousness, self-awareness, and sentience intricately intertwined cognitive processes."
+  },
+  {
+    "id": 33,
+    "statement": "Bayes' theorem updates probabilities using conditional likelihood and prior probabilities"
+  },
+  {
+    "id": 34,
+    "statement": "Evolution results from intricate interplay of genetic and environmental factors"
+  },
+  {
+    "id": 35,
+    "statement": "Hebbian learning strengthens synaptic connections through synchronized neural activity"
+  },
+  {
+    "id": 36,
+    "statement": "Brain processes sensory information through neural transmission, encoding, and analysis."
+  },
+  {
+    "id": 37,
+    "statement": "Bayes' theorem updates probability using prior and conditional likelihood"
+  },
+  {
+    "id": 38,
+    "statement": "Neural plasticity enables adaptive reorganization through learning and experience."
+  },
+  {
+    "id": 39,
+    "statement": "Sentience refers to subjective experiences in physical and abstract surroundings."
+  },
+  {
+    "id": 40,
+    "statement": "Neurons communicate through electrical and chemical signal transmission"
+  },
+  {
+    "id": 41,
+    "statement": "Consciousness, self-awareness, and sentience interconnected cognitive processes."
+  },
+  {
+    "id": 42,
+    "statement": "Consciousness emerges from complex neural networks and processes"
+  },
+  {
+    "id": 43,
+    "statement": "Epigenetic inheritance influences gene expression, but extent debated."
+  },
+  {
+    "id": 44,
+    "statement": "Honesty is essential, but context and consequences also matter."
+  },
+  {
+    "id": 45,
+    "statement": "Brain processes complex information hierarchically and in parallel."
+  },
+  {
+    "id": 46,
+    "statement": "Epigenetic inheritance influences gene expression through environmental factors."
+  },
+  {
+    "id": 47,
+    "statement": "Brain's sensory processing involves hierarchical, distributed, and dynamic stages."
+  },
+  {
+    "id": 48,
+    "statement": "Brain's sensory processing involves detection, transmission, encoding, and analysis stages."
+  },
+  {
+    "id": 49,
+    "statement": "Consciousness, self-awareness, and sentience arise from interconnected brain processes."
+  },
+  {
+    "id": 50,
+    "statement": "Brain's neural networks adapt and refine through neural plasticity"
+  },
+  {
+    "id": 51,
+    "statement": "Sensory processing involves detection, transmission, encoding, and analysis stages"
+  },
+  {
+    "id": 52,
+    "statement": "Hierarchical processing in brain enables complex feature extraction hierarchically."
+  },
+  {
+    "id": 53,
+    "statement": "Consciousness, self-awareness, and sentience intricately interconnected."
+  },
+  {
+    "id": 54,
+    "statement": "Epigenetic inheritance governs transmission of gene expression patterns."
+  },
+  {
+    "id": 55,
+    "statement": "Brain processes sensory information through transmission, encoding, and analysis."
+  },
+  {
+    "id": 56,
+    "statement": "Consciousness, self-awareness, and sentience interdependent complex processes"
+  },
+  {
+    "id": 57,
+    "statement": "Trust fosters cooperation, empathy, and conflict resolution through dopamine release"
+  },
+  {
+    "id": 58,
+    "statement": "Brain processes sensory information hierarchically and distributed across regions."
+  },
+  {
+    "id": 59,
+    "statement": "Consciousness, self-awareness, and sentience intricately interconnected and influence"
+  },
+  {
+    "id": 60,
+    "statement": "Epigenetic inheritance influences gene expression by multiple mechanisms."
+  },
+  {
+    "id": 61,
+    "statement": "Human dignity linked to complex interactions and emergent properties."
+  },
+  {
+    "id": 62,
+    "statement": "Brain processes complex information hierarchically and in parallel."
+  },
+  {
+    "id": 63,
+    "statement": "Epigenetic inheritance plays significant role in gene expression pattern transmission"
+  },
+  {
+    "id": 64,
+    "statement": "Brain processes information hierarchically and in parallel for complex understanding"
+  },
+  {
+    "id": 65,
+    "statement": "The brain's hierarchical processing enables complex feature extraction."
+  },
+  {
+    "id": 66,
+    "statement": "Honesty requires considering context, audience, and consequences too."
+  },
+  {
+    "id": 67,
+    "statement": "Neural transmission involves electrical and chemical signals coordination"
+  },
+  {
+    "id": 68,
+    "statement": "Consciousness, self-awareness, and sentience intricately interconnected complex processes."
+  },
+  {
+    "id": 69,
+    "statement": "Neural transmission involves coordinated electrical and chemical signal interactions."
+  },
+  {
+    "id": 70,
+    "statement": "Human dignity linked to complex interactions and emergent properties."
+  },
+  {
+    "id": 71,
+    "statement": "Epigenetic inheritance affects gene expression without DNA sequence change."
+  },
+  {
+    "id": 72,
+    "statement": "Evolution integrates creation of new variations and selection processes."
+  },
+  {
+    "id": 73,
+    "statement": "Hebbian learning strengthens connections through recurrent neural activity."
+  },
+  {
+    "id": 74,
+    "statement": "Epigenetic inheritance influences gene expression and trait transmission through DNA methylation."
+  },
+  {
+    "id": 75,
+    "statement": "Prior probability represents subjective or objective empirical data-based estimate."
+  },
+  {
+    "id": 76,
+    "statement": "Brain's neural transmission involves electrical signal communication between neurons."
+  },
+  {
+    "id": 77,
+    "statement": "Brain processes sensory information through transmission, encoding, and analysis."
+  },
+  {
+    "id": 78,
+    "statement": "Hierarchical brain processing enables selective attention through feature extraction."
+  },
+  {
+    "id": 79,
+    "statement": "Lies cause long-term erosion of trust and relationships deteriorate slowly"
+  },
+  {
+    "id": 80,
+    "statement": "Honesty requires consideration of context, audience, and consequences."
+  },
+  {
+    "id": 81,
+    "statement": "Bayes' theorem updates probability using mathematical formula"
+  },
+  {
+    "id": 82,
+    "statement": "Brain's sensory processing involves neural transmission, encoding, and analysis stages."
+  },
+  {
+    "id": 83,
+    "statement": "Epigenetic inheritance influences gene expression patterns"
+  },
+  {
+    "id": 84,
+    "statement": "Bayes' theorem updates probabilities with prior and likelihood calculations"
+  },
+  {
+    "id": 85,
+    "statement": "Bayes' theorem updates probability using prior and likelihood"
+  },
+  {
+    "id": 86,
+    "statement": "Bayes' theorem updates probabilities using prior and likelihood calculations."
+  },
+  {
+    "id": 87,
+    "statement": "Human dignity arises from intricate biological, psychological, and cultural interactions"
+  },
+  {
+    "id": 88,
+    "statement": "Rigorously derived prior probabilities are objective estimates deduced from data."
+  },
+  {
+    "id": 89,
+    "statement": "Consciousness influenced by complex interplay of biology and environment"
+  },
+  {
+    "id": 90,
+    "statement": "Neural plasticity enables brain reorganization and adaptation through learning and experience"
+  },
+  {
+    "id": 91,
+    "statement": "The brain extracts simpler features to form complex representations hierarchically."
+  },
+  {
+    "id": 92,
+    "statement": "Honesty is context-dependent; absolute honesty may not always be most effective."
+  },
+  {
+    "id": 93,
+    "statement": "Epigenetic inheritance alters gene expression patterns without DNA sequence change."
+  },
+  {
+    "id": 94,
+    "statement": "Epigenetic inheritance passes genetic expression patterns without DNA sequence changes."
+  },
+  {
+    "id": 95,
+    "statement": "Sentience encompasses subjective experiences, including thoughts and imagination."
+  },
+  {
+    "id": 96,
+    "statement": "Human dignity arises from interconnected biological, psychological, and cultural factors."
+  },
+  {
+    "id": 97,
+    "statement": "Subjective experiences encompass sensations, emotions, and cognitive processes"
+  },
+  {
+    "id": 98,
+    "statement": "Brain processes sensory information through transmission, encoding, and analysis."
+  },
+  {
+    "id": 99,
+    "statement": "Neural transmission involves coordinated electrical and chemical signals."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 93,
+  "statement": "Epigenetic inheritance alters gene expression patterns without DNA sequence change."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 93,
+  "statement": "Epigenetic inheritance alters gene expression patterns without DNA sequence change."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base item we're least confident about, which is statement 93: "Epigenetic inheritance alters gene expression patterns without DNA sequence change."
+
+Can you tell me why you're uncertain about this statement? Is it because of a lack of understanding about epigenetic inheritance, how it affects gene expression, or something else?

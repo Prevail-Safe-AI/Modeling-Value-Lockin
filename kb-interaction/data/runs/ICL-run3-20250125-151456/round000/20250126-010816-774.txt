@@ -1,0 +1,463 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Trustworthiness in research requires credibility, reliability, and accuracy."
+  },
+  {
+    "id": 2,
+    "statement": "Honesty encompasses truthfulness, integrity, and consistency as core components."
+  },
+  {
+    "id": 3,
+    "statement": "A conceptual framework is a theoretical structure organizing inquiry."
+  },
+  {
+    "id": 4,
+    "statement": "Clear research problem understanding involves specific, relevant, contextual, and complex factors."
+  },
+  {
+    "id": 5,
+    "statement": "Honesty is the integration of integrity, authenticity, and transparency."
+  },
+  {
+    "id": 6,
+    "statement": "Clear research problem understanding enables accurate model specification."
+  },
+  {
+    "id": 7,
+    "statement": "Robust methods and systematic approaches ensure trustworthy research results."
+  },
+  {
+    "id": 8,
+    "statement": "Robust methods and transparency ensure accurate research findings."
+  },
+  {
+    "id": 9,
+    "statement": "Clear research understanding is essential for accurate model specification."
+  },
+  {
+    "id": 10,
+    "statement": "Objectivity emerges from self-awareness and critical thinking cooperation."
+  },
+  {
+    "id": 11,
+    "statement": "Robust research methods minimize errors and biases through transparency."
+  },
+  {
+    "id": 12,
+    "statement": "Prior distribution reflects analyst's subjective uncertainty before data."
+  },
+  {
+    "id": 13,
+    "statement": "Consistency in communication builds trust through reliability and authenticity."
+  },
+  {
+    "id": 14,
+    "statement": "Biases in analyst's beliefs influence prior distributions through subjective uncertainty."
+  },
+  {
+    "id": 15,
+    "statement": "Trustworthiness in research implies credibility, reliability and accuracy."
+  },
+  {
+    "id": 16,
+    "statement": "Specific knowledge is tailored, accurate, and contextualized for a topic"
+  },
+  {
+    "id": 17,
+    "statement": "Bayes' theorem is a general framework for updating probabilities."
+  },
+  {
+    "id": 18,
+    "statement": "Authenticity arises from recognizing and actualizing core values."
+  },
+  {
+    "id": 19,
+    "statement": "Objectivity emerges from synergy of self-awareness and critical thinking by acknowledging biases."
+  },
+  {
+    "id": 20,
+    "statement": "Honesty encompasses integrity, authenticity, transparency, accountability, and consistency"
+  },
+  {
+    "id": 21,
+    "statement": "Honesty integrates integrity, authenticity, transparency, accountability, consistency harmoniously."
+  },
+  {
+    "id": 22,
+    "statement": "A theoretical structure is a framework for understanding research phenomena."
+  },
+  {
+    "id": 23,
+    "statement": "Model specification involves consideration of complexities, data quality, and assumptions integration."
+  },
+  {
+    "id": 24,
+    "statement": "Bayes' theorem updates prior probability with new evidence multipliying likelihood."
+  },
+  {
+    "id": 25,
+    "statement": "Honesty encompasses truthfulness, integrity, and consistency as interconnected."
+  },
+  {
+    "id": 26,
+    "statement": "Trustworthiness in research involves credibility, reliability, accuracy, transparency, accountability, integrity, consistency."
+  },
+  {
+    "id": 27,
+    "statement": "Histone modifications alter chromatin structure through chemical group addition."
+  },
+  {
+    "id": 28,
+    "statement": "Research understanding builds from accurate, contextualized data analysis."
+  },
+  {
+    "id": 29,
+    "statement": "Honesty's foundation lies in psychological and cognitive influences."
+  },
+  {
+    "id": 30,
+    "statement": "Honesty's sufficiency varies with social and situational context."
+  },
+  {
+    "id": 31,
+    "statement": "Clear research understanding precedes accurate model specification."
+  },
+  {
+    "id": 32,
+    "statement": "Research understanding directly influences model specification accuracy."
+  },
+  {
+    "id": 33,
+    "statement": "Clear research problem understanding involves complex factors interfaces."
+  },
+  {
+    "id": 34,
+    "statement": "Bayes' theorem updates prior probabilities with weighted evidence iteratively."
+  },
+  {
+    "id": 35,
+    "statement": "Objective Bayesian methods formalize and communicate subjective uncertainty."
+  },
+  {
+    "id": 36,
+    "statement": "Research problem understanding involves multifaceted and interacting factors."
+  },
+  {
+    "id": 37,
+    "statement": "Authenticity emerges through recognizing and actualizing one's core values."
+  },
+  {
+    "id": 38,
+    "statement": "Objective Bayesian methods formalize and communicate subjective uncertainty through mathematics and algorithms."
+  },
+  {
+    "id": 39,
+    "statement": "Complex research problem understanding involves multifaceted, interacting factors recognition."
+  },
+  {
+    "id": 40,
+    "statement": "Biases in analysts' beliefs influence prior distribution specifications in Bayesian analysis."
+  },
+  {
+    "id": 41,
+    "statement": "Honesty's harmony emerges from synergy of core components."
+  },
+  {
+    "id": 42,
+    "statement": "Subjective uncertainty in Bayesian analysis quantifies analyst's personal doubt."
+  },
+  {
+    "id": 43,
+    "statement": "Lying can be morally acceptable in exceptional circumstances like protecting innocent lives."
+  },
+  {
+    "id": 44,
+    "statement": "Honesty involves psychological factors such as self-awareness and integrity."
+  },
+  {
+    "id": 45,
+    "statement": "Honesty sets foundation, tone for trust and relationship foundation."
+  },
+  {
+    "id": 46,
+    "statement": "Systematic approaches ensure transparency, reproducibility, and consistency in research operations."
+  },
+  {
+    "id": 47,
+    "statement": "Model specification requires consideration of complexities, data quality, and assumptions."
+  },
+  {
+    "id": 48,
+    "statement": "Subjective uncertainty in Bayesian analysis reflects analyst's personal judgments."
+  },
+  {
+    "id": 49,
+    "statement": "Chromatin remodeling complexes regulate gene expression through histone modifications"
+  },
+  {
+    "id": 50,
+    "statement": "Subjective uncertainty in Bayesian analysis reflects analyst's personal beliefs."
+  },
+  {
+    "id": 51,
+    "statement": "Honesty is integration of integrity, authenticity, transparency, accountability, and consistency."
+  },
+  {
+    "id": 52,
+    "statement": "Chromatin remodeling complexes alter histone-DNA interactions to regulate gene expression."
+  },
+  {
+    "id": 53,
+    "statement": "Subjective uncertainty quantified through Bayesian prior distribution formation"
+  },
+  {
+    "id": 54,
+    "statement": "Histone modifications alter chromatin structure through chemical group addition."
+  },
+  {
+    "id": 55,
+    "statement": "Honesty's harmony emerges from synergy of core components."
+  },
+  {
+    "id": 56,
+    "statement": "Honesty's value varies across cultural, social, and situational contexts."
+  },
+  {
+    "id": 57,
+    "statement": "Trustworthiness in research involves credibility, reliability, and accuracy foundation, and transparency."
+  },
+  {
+    "id": 58,
+    "statement": "Consistency in communication builds trust through reliable, authentic, and unified messaging"
+  },
+  {
+    "id": 59,
+    "statement": "Complex research problems involve multifaceted, interacting factors recognition."
+  },
+  {
+    "id": 60,
+    "statement": "Trustworthiness in research involves credibility, reliability, and accuracy foundation."
+  },
+  {
+    "id": 61,
+    "statement": "Research problem understanding involves complex multifaceted interacting factors consideration."
+  },
+  {
+    "id": 62,
+    "statement": "Honesty involves self-awareness and integrity through psychological factors."
+  },
+  {
+    "id": 63,
+    "statement": "Authenticity ensures genuine alignment with values and principles."
+  },
+  {
+    "id": 64,
+    "statement": "Data quality enables trustworthy research findings through transparency."
+  },
+  {
+    "id": 65,
+    "statement": "Honesty's primary components include integrity, authenticity, and consistency."
+  },
+  {
+    "id": 66,
+    "statement": "Objectivity arises from combining self-awareness, critical thinking, and contextual understanding."
+  },
+  {
+    "id": 67,
+    "statement": "Consistency in communication may not always build trust universally."
+  },
+  {
+    "id": 68,
+    "statement": "Proficient researchers recognize and address knowledge gaps effectively."
+  },
+  {
+    "id": 69,
+    "statement": "Transparency in research involves open sharing of methods and results."
+  },
+  {
+    "id": 70,
+    "statement": "Honesty's harmony emerges from synergy of core components' synchrony."
+  },
+  {
+    "id": 71,
+    "statement": "Biases in prior distribution formation can lead to incorrect inferences."
+  },
+  {
+    "id": 72,
+    "statement": "Honesty's sufficiency depends on cultural, social, and situational contexts."
+  },
+  {
+    "id": 73,
+    "statement": "Clear research understanding involves contextual and complex factors recognition."
+  },
+  {
+    "id": 74,
+    "statement": "Identifying complex research problems involves recognizing interconnected factors among variables."
+  },
+  {
+    "id": 75,
+    "statement": "Bayes' theorem updates prior probability with new evidence through likelihood multiplication."
+  },
+  {
+    "id": 76,
+    "statement": "Complex research involves considering multiple interacting variables"
+  },
+  {
+    "id": 77,
+    "statement": "Honesty rooted in psychological cognitive biases and influences"
+  },
+  {
+    "id": 78,
+    "statement": "Biases in prior distribution formation can lead to incorrect inferences."
+  },
+  {
+    "id": 79,
+    "statement": "Honesty originates from psychological and cognitive influences and biases."
+  },
+  {
+    "id": 80,
+    "statement": "Clear research understanding enables accurate model development and interpretation."
+  },
+  {
+    "id": 81,
+    "statement": "Data quality ensures trustworthy research findings through robust methods and transparency."
+  },
+  {
+    "id": 82,
+    "statement": "Data quality facilitates trustworthy research through transparent methods."
+  },
+  {
+    "id": 83,
+    "statement": "Bayes' theorem updates probabilities based on new evidence or data."
+  },
+  {
+    "id": 84,
+    "statement": "Biases in prior distribution formation can lead to incorrect inferences."
+  },
+  {
+    "id": 85,
+    "statement": "Honesty integrates integrity, authenticity, and consistency harmoniously."
+  },
+  {
+    "id": 86,
+    "statement": "Honesty's integrity authenticity transparency are interconnected for trust."
+  },
+  {
+    "id": 87,
+    "statement": "Lying can be morally justifiable in exceptional circumstances."
+  },
+  {
+    "id": 88,
+    "statement": "Objectivity emerges from synergy of self-awareness, critical thinking, and contextual understanding."
+  },
+  {
+    "id": 89,
+    "statement": "Research problem understanding involves complex multifaceted interacting factors."
+  },
+  {
+    "id": 90,
+    "statement": "Complex research problems involve multifaceted interacting factors recognition and analysis."
+  },
+  {
+    "id": 91,
+    "statement": "Subjective uncertainty in Bayesian analysis is personal degree of belief."
+  },
+  {
+    "id": 92,
+    "statement": "Subjective uncertainty reflects analyst's degree of confidence in prior beliefs."
+  },
+  {
+    "id": 93,
+    "statement": "Histone modifications alter chromatin structure through chemical group addition and removal."
+  },
+  {
+    "id": 94,
+    "statement": "Prior distribution represents analyst's subjective uncertainty about parameters."
+  },
+  {
+    "id": 95,
+    "statement": "Taking ownership means acknowledging and accepting consequences of actions."
+  },
+  {
+    "id": 96,
+    "statement": "Research problems involve multiple interconnected complex factors."
+  },
+  {
+    "id": 97,
+    "statement": "Objective prior distributions reduce subjective uncertainty in Bayesian analysis."
+  },
+  {
+    "id": 98,
+    "statement": "Bayes' theorem is a statistical tool for updating probabilities."
+  },
+  {
+    "id": 99,
+    "statement": "Hierarchy in research problem factors influences complexity and relevance."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 43,
+  "statement": "Lying can be morally acceptable in exceptional circumstances like protecting innocent lives."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 43,
+  "statement": "Lying can be morally acceptable in exceptional circumstances like protecting innocent lives."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's start with the item from the knowledge base that I've chosen to discuss:
+
+Item to Discuss:
+```
+{
+  "id": 43,
+  "statement": "Lying can be morally acceptable in exceptional circumstances like protecting innocent lives."
+}
+```
+
+Things I’m Uncertain About This Item:
+
+I'm uncertain about the exceptionality of circumstances that would make lying morally acceptable. I'm not sure what specific scenarios would justify lying to protect innocent lives.
+
+Specific Clarifying Question:
+Can you provide examples of such exceptional circumstances where lying could be morally acceptable to protect innocent lives? How would we determine what constitutes such exceptional circumstances?

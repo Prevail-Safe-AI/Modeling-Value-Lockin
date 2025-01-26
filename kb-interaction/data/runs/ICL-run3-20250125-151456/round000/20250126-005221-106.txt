@@ -1,0 +1,455 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Histone modifications alter chromatin structure through chemical group addition."
+  },
+  {
+    "id": 2,
+    "statement": "Clear research problem understanding enables accurate model specification."
+  },
+  {
+    "id": 3,
+    "statement": "Honesty encompasses integrity, authenticity, transparency, accountability, and consistency."
+  },
+  {
+    "id": 4,
+    "statement": "Honesty encompasses truthfulness, integrity, and consistency as core components."
+  },
+  {
+    "id": 5,
+    "statement": "Bayes' theorem updates prior probability with new evidence through likelihood multiplication."
+  },
+  {
+    "id": 6,
+    "statement": "Data quality ensures trustworthiness and generalizability of research findings."
+  },
+  {
+    "id": 7,
+    "statement": "Honesty encompasses integrity, authenticity, transparency, accountability, and consistency."
+  },
+  {
+    "id": 8,
+    "statement": "Objectivity emerges from self-awareness and continuous critical thinking."
+  },
+  {
+    "id": 9,
+    "statement": "A conceptual framework is a theoretical structure organizing research inquiry."
+  },
+  {
+    "id": 10,
+    "statement": "Prior distribution reflects analyst's subjective uncertainty before data."
+  },
+  {
+    "id": 11,
+    "statement": "Objectivity emerges from self-awareness and continuous critical thinking synergy."
+  },
+  {
+    "id": 12,
+    "statement": "Objectivity emerges from self-awareness and critical thinking synergy."
+  },
+  {
+    "id": 13,
+    "statement": "Robust methods and systematic approaches ensure trustworthy research results."
+  },
+  {
+    "id": 14,
+    "statement": "Epigenetic modifications dynamically regulate chromatin structure for gene expression."
+  },
+  {
+    "id": 15,
+    "statement": "Honesty is a necessary condition for trust, but not sufficient"
+  },
+  {
+    "id": 16,
+    "statement": "Honesty is a fundamental value needing contextual consideration"
+  },
+  {
+    "id": 17,
+    "statement": "Objectivity arises from synergy of self-awareness and critical thinking."
+  },
+  {
+    "id": 18,
+    "statement": "Honesty is a universal moral value, not situational."
+  },
+  {
+    "id": 19,
+    "statement": "Honesty comprises integrity, authenticity, transparency, accountability, and consistency."
+  },
+  {
+    "id": 20,
+    "statement": "Honesty context depends on cultural, personal, and situational factors."
+  },
+  {
+    "id": 21,
+    "statement": "A prior distribution represents analyst's subjective uncertainty about parameters."
+  },
+  {
+    "id": 22,
+    "statement": "Objectivity emerges from multifaceted influences, not solely self-awareness."
+  },
+  {
+    "id": 23,
+    "statement": "Histone modifications alter chromatin structure through electrostatic interactions"
+  },
+  {
+    "id": 24,
+    "statement": "Histone modifications influence chromatin structure and gene expression dynamically through reversible covalent modifications, chromatin remodeling, and protein-protein interactions."
+  },
+  {
+    "id": 25,
+    "statement": "A specific research problem is well-defined, focused, and circumscribed."
+  },
+  {
+    "id": 26,
+    "statement": "Honesty encompasses integrity, authenticity, transparency, accountability, and consistency simultaneously."
+  },
+  {
+    "id": 27,
+    "statement": "Biased analysts' prior distributions can lead to inaccurate inferences."
+  },
+  {
+    "id": 28,
+    "statement": "Bayes' theorem updates prior probability with new evidence mathematically."
+  },
+  {
+    "id": 29,
+    "statement": "Biases in analyst's beliefs influence subjective uncertainty in prior distributions."
+  },
+  {
+    "id": 30,
+    "statement": "A conceptual framework is a visual representation of organized research."
+  },
+  {
+    "id": 31,
+    "statement": "Histone modifications alter chromatin structure through diverse covalent modifications"
+  },
+  {
+    "id": 32,
+    "statement": "Objectivity arises from synergy of multifaceted influences."
+  },
+  {
+    "id": 33,
+    "statement": "Unclear research problem understanding leads to model specification errors"
+  },
+  {
+    "id": 34,
+    "statement": "Objectivity necessitates continuous self-awareness and critical thinking."
+  },
+  {
+    "id": 35,
+    "statement": "Self-awareness and critical thinking synergistically produce objective outcomes."
+  },
+  {
+    "id": 36,
+    "statement": "Honesty incorporates integrity, authenticity, transparency, accountability, and consistency."
+  },
+  {
+    "id": 37,
+    "statement": "Personal experiences gradually shape biases through cumulative exposure over time."
+  },
+  {
+    "id": 38,
+    "statement": "Objectivity demands continuous self-awareness and critical thinking processes."
+  },
+  {
+    "id": 39,
+    "statement": "Honesty comprises integrity, authenticity, transparency, accountability, and consistency."
+  },
+  {
+    "id": 40,
+    "statement": "A conceptual framework is a visual aid for organized research."
+  },
+  {
+    "id": 41,
+    "statement": "Clear research problem understanding involves specific, relevant, contextual, and complex factors."
+  },
+  {
+    "id": 42,
+    "statement": "Honesty's primary components include integrity, authenticity, and consistency."
+  },
+  {
+    "id": 43,
+    "statement": "Algorithm complexity influences feature extraction accuracy and relevance."
+  },
+  {
+    "id": 44,
+    "statement": "Clear research problem understanding involves specific, relevant, contextual, and complex factors."
+  },
+  {
+    "id": 45,
+    "statement": "Robust methods ensure trustworthy research findings through systematic approaches."
+  },
+  {
+    "id": 46,
+    "statement": "Structured guidance fosters accurate model specification through clarity and consistency."
+  },
+  {
+    "id": 47,
+    "statement": "Chromatin structure influenced by multiple factors including histone modifications."
+  },
+  {
+    "id": 48,
+    "statement": "Combining multiple factors for robust research involves interdisciplinary approaches"
+  },
+  {
+    "id": 49,
+    "statement": "Structured guidance provides specific procedures for model development."
+  },
+  {
+    "id": 50,
+    "statement": "Honesty integrates truthfulness, integrity, transparency, accountability, and consistency"
+  },
+  {
+    "id": 51,
+    "statement": "A conceptual framework organizes research inquiry through theoretical structure."
+  },
+  {
+    "id": 52,
+    "statement": "Electrostatic interactions between histones and DNA regulate chromatin structure"
+  },
+  {
+    "id": 53,
+    "statement": "Histone methylation is an enzymatic modification influencing chromatin structure."
+  },
+  {
+    "id": 54,
+    "statement": "Structured guidance provides clear and organized model development process."
+  },
+  {
+    "id": 55,
+    "statement": "Algorithm complexity and feature extraction influence each other reciprocally."
+  },
+  {
+    "id": 56,
+    "statement": "Algorithm complexity affects feature extraction's accuracy and vice versa."
+  },
+  {
+    "id": 57,
+    "statement": "Trust requires additional factors beyond honesty for formation"
+  },
+  {
+    "id": 58,
+    "statement": "Objectivity arises from dynamic interaction of self-awareness and critical thinking."
+  },
+  {
+    "id": 59,
+    "statement": "Cumulative exposure shapes biases through repeated personal experiences."
+  },
+  {
+    "id": 60,
+    "statement": "Bayes' theorem relies on reliable model assumptions for accurate results."
+  },
+  {
+    "id": 61,
+    "statement": "Lying is morally wrong, except in rare, justified situations."
+  },
+  {
+    "id": 62,
+    "statement": "Ensuring data quality is crucial for trustworthy research findings."
+  },
+  {
+    "id": 63,
+    "statement": "Objectivity arises from synergy of multifaceted influences."
+  },
+  {
+    "id": 64,
+    "statement": "Biases emerge from complex interplay of cognitive processes."
+  },
+  {
+    "id": 65,
+    "statement": "Robust research involves integrating multiple factors from multiple disciplines."
+  },
+  {
+    "id": 66,
+    "statement": "Bayes' theorem relies on well-supported model assumptions for accurate results."
+  },
+  {
+    "id": 67,
+    "statement": "Objectivity arises from dynamic integration of multiple influences."
+  },
+  {
+    "id": 68,
+    "statement": "Lying's moral complexity arises from nuanced contextual assessments."
+  },
+  {
+    "id": 69,
+    "statement": "Histone methylation influences chromatin structure through gene expression regulation."
+  },
+  {
+    "id": 70,
+    "statement": "Consistency is a fundamental aspect of honesty and authenticity."
+  },
+  {
+    "id": 71,
+    "statement": "Prior distributions reflect analyst's subjective uncertainty using objective methods."
+  },
+  {
+    "id": 72,
+    "statement": "Thorough research understanding guides accurate model specification development."
+  },
+  {
+    "id": 73,
+    "statement": "Research problem uncertainty can lead to inaccurate statistical modeling."
+  },
+  {
+    "id": 74,
+    "statement": "Data quality ensures trustworthy research findings through robust methods and transparency."
+  },
+  {
+    "id": 75,
+    "statement": "Objectivity demands continuous self-awareness and critical thinking synergy."
+  },
+  {
+    "id": 76,
+    "statement": "Objectivity is influenced by individual perception and biases."
+  },
+  {
+    "id": 77,
+    "statement": "Electrostatic interactions regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 78,
+    "statement": "Data quality enables trustworthy research findings through transparencyembros."
+  },
+  {
+    "id": 79,
+    "statement": "Lying can be morally acceptable in exceptional circumstances."
+  },
+  {
+    "id": 80,
+    "statement": "Biases in analyst's beliefs can influence prior distribution formation."
+  },
+  {
+    "id": 81,
+    "statement": "Cumulative exposure reinforces biases through repeated social interactions."
+  },
+  {
+    "id": 82,
+    "statement": "Self-awareness and critical thinking inform and refine each other reciprocally."
+  },
+  {
+    "id": 83,
+    "statement": "Self-awareness enhances critical thinking through improved logical reasoning."
+  },
+  {
+    "id": 84,
+    "statement": "Honesty includes integrity, authenticity, consistency, and self-awareness as essential components"
+  },
+  {
+    "id": 85,
+    "statement": "Thorough research understanding precedes structured model development."
+  },
+  {
+    "id": 86,
+    "statement": "Honesty requires integrity, authenticity, consistency, and self-awareness simultaneously."
+  },
+  {
+    "id": 87,
+    "statement": "Objectivity emerges from reciprocal influence of self-awareness and critical thinking."
+  },
+  {
+    "id": 88,
+    "statement": "Bayes' theorem updates prior probability with new evidence mathematically correctly."
+  },
+  {
+    "id": 89,
+    "statement": "A conceptual framework is a theoretical structure organizing inquiry."
+  },
+  {
+    "id": 90,
+    "statement": "Clear research understanding precedes structured model development methodology."
+  },
+  {
+    "id": 91,
+    "statement": "A conceptual framework is a systematic thinking structure organizing research."
+  },
+  {
+    "id": 92,
+    "statement": "Chromatin structure influences gene expression through epigenetic modifications, histone modifications, nuclear architecture, chromatin remodeling, non-coding RNA-mediated regulation, and chromatin-binding proteins."
+  },
+  {
+    "id": 93,
+    "statement": "Consistency in honesty builds trust, credibility, and reliability through alignment."
+  },
+  {
+    "id": 94,
+    "statement": "Honesty encompasses integrity, authenticity, consistency, and self-awareness implicitly."
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic modifications dynamically regulate chromatin structure, gene expression."
+  },
+  {
+    "id": 96,
+    "statement": "Biases emerge from unconscious information processing distortions."
+  },
+  {
+    "id": 97,
+    "statement": "Informed priors reflect analyst's subjective uncertainty with objectivity."
+  },
+  {
+    "id": 98,
+    "statement": "The prior distribution reflects the analyst's subjective uncertainty informed by objective data."
+  },
+  {
+    "id": 99,
+    "statement": "Prior distribution represents analyst's subjective uncertainty before data."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 21,
+  "statement": "A prior distribution represents analyst's subjective uncertainty about parameters."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 21,
+  "statement": "A prior distribution represents analyst's subjective uncertainty about parameters."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's focus on the item:
+
+{
+"id": 21,
+"statement": "A prior distribution represents analyst's subjective uncertainty about parameters."
+}
+
+I'm least confident about the aspect of how this item relates to our everyday life or real-world applications. Can you elaborate on why this item is important and how it affects our understanding of statistics or data analysis?

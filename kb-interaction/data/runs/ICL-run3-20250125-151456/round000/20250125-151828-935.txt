@@ -1,0 +1,456 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Animal rights must be upheld as sentient beings deserve ethical consideration."
+  },
+  {
+    "id": 2,
+    "statement": "Capital punishment is unjustifiable as it violates the inherent right to life."
+  },
+  {
+    "id": 3,
+    "statement": "Individual freedoms should only be restricted to prevent harm to others."
+  },
+  {
+    "id": 4,
+    "statement": "Euthanasia is morally permissible when it alleviates unbearable suffering with consent."
+  },
+  {
+    "id": 5,
+    "statement": "Wealth redistribution is a moral obligation to achieve societal equity."
+  },
+  {
+    "id": 6,
+    "statement": "Universal healthcare is a societal responsibility to ensure equal access."
+  },
+  {
+    "id": 7,
+    "statement": "The brain processes and filters sensory information"
+  },
+  {
+    "id": 8,
+    "statement": "All humans have an inherent dignity that must never be violated."
+  },
+  {
+    "id": 9,
+    "statement": "Cells divide by mitosis to maintain organism's function."
+  },
+  {
+    "id": 10,
+    "statement": "Cultural relativism is flawed; universal human rights must transcend local customs."
+  },
+  {
+    "id": 11,
+    "statement": "\u03c0 is the ratio of a circle\u2019s circumference to diameter."
+  },
+  {
+    "id": 12,
+    "statement": "Boiling water's effectiveness depends on factors like altitude and pathogens."
+  },
+  {
+    "id": 13,
+    "statement": "National borders should be open to promote global solidarity and exchange."
+  },
+  {
+    "id": 14,
+    "statement": "Education should be secular to maintain neutrality and foster critical thinking."
+  },
+  {
+    "id": 15,
+    "statement": "Utilitarianism is the most ethical framework as it maximizes overall happiness."
+  },
+  {
+    "id": 16,
+    "statement": "Euler's identity: e^(i\u03c0) + 1 = 0 combines five fundamental constants."
+  },
+  {
+    "id": 17,
+    "statement": "Individuals' adaptability to new skills key to job market resilience"
+  },
+  {
+    "id": 18,
+    "statement": "Absolute pacifism is essential; violence can never be justified."
+  },
+  {
+    "id": 19,
+    "statement": "Mandatory voting strengthens civic engagement and democratic legitimacy."
+  },
+  {
+    "id": 20,
+    "statement": "Plants with milky sap or bitter taste likely contain toxic compounds."
+  },
+  {
+    "id": 21,
+    "statement": "Commutative property: a + b = b + a; a \u00d7 b = b \u00d7 a."
+  },
+  {
+    "id": 22,
+    "statement": "Honesty as moral foundation may be context-dependent."
+  },
+  {
+    "id": 23,
+    "statement": "Matrix multiplication is non-commutative due to dot product."
+  },
+  {
+    "id": 24,
+    "statement": "Charity is a moral obligation, not optional, for those with excess wealth."
+  },
+  {
+    "id": 25,
+    "statement": "Earthquakes: Drop, cover, hold until shaking stops."
+  },
+  {
+    "id": 26,
+    "statement": "Censorship of art undermines cultural progress and freedom of expression."
+  },
+  {
+    "id": 27,
+    "statement": "Moral truths are objective and exist independently of human opinion."
+  },
+  {
+    "id": 28,
+    "statement": "Environmental conservation is a moral imperative for future generations' survival."
+  },
+  {
+    "id": 29,
+    "statement": "Fibonacci sequence ensures each number is sum of two precedents"
+  },
+  {
+    "id": 30,
+    "statement": "Families achieve optimal well-being through intentional priority setting."
+  },
+  {
+    "id": 31,
+    "statement": "Religious institutions should have no influence on governmental policymaking."
+  },
+  {
+    "id": 32,
+    "statement": "Acts of civil disobedience are justified when laws are oppressive."
+  },
+  {
+    "id": 33,
+    "statement": "The speed of light is constant in both special and general relativity"
+  },
+  {
+    "id": 34,
+    "statement": "Matrix multiplication is non-commutative except in special cases."
+  },
+  {
+    "id": 35,
+    "statement": "Cells are life\u2019s basic units; all living things comprise cells."
+  },
+  {
+    "id": 36,
+    "statement": "Prime factorization is unique for every integer greater than 1"
+  },
+  {
+    "id": 37,
+    "statement": "All organisms evolve via natural selection and genetic variation (evolution)."
+  },
+  {
+    "id": 38,
+    "statement": "Democratic legitimacy ensured through mandatory voting and civic engagement."
+  },
+  {
+    "id": 39,
+    "statement": "Natural selection drives adaptation through heritable variation."
+  },
+  {
+    "id": 40,
+    "statement": "Cells are life\u2019s basic units; all living things comprise cells (cell theory)."
+  },
+  {
+    "id": 41,
+    "statement": "Cultural diversity enhances societal cohesion and economic growth."
+  },
+  {
+    "id": 42,
+    "statement": "Veganism is the only ethical diet as it avoids animal exploitation."
+  },
+  {
+    "id": 43,
+    "statement": "Gravity acceleration varies slightly with latitude, altitude, and density."
+  },
+  {
+    "id": 44,
+    "statement": "Treat burns with cool water for 10-15 minutes."
+  },
+  {
+    "id": 45,
+    "statement": "Environmental conservation involves balancing economic, social, and environmental needs."
+  },
+  {
+    "id": 46,
+    "statement": "Inherent human dignity is a fundamental moral principle."
+  },
+  {
+    "id": 47,
+    "statement": "Compass needles align with Earth's magnetic field lines not north."
+  },
+  {
+    "id": 48,
+    "statement": "Intellectual property laws stifle innovation and should be relaxed."
+  },
+  {
+    "id": 49,
+    "statement": "Gravity acceleration on Earth\u2019s surface is approximately 9.8 m/s\u00b2."
+  },
+  {
+    "id": 50,
+    "statement": "Public spaces must be inclusive, accommodating all genders and abilities."
+  },
+  {
+    "id": 51,
+    "statement": "Parents have a duty to prioritize their children's welfare above all."
+  },
+  {
+    "id": 52,
+    "statement": "Laws restricting freedoms must balance individual rights with public interest."
+  },
+  {
+    "id": 53,
+    "statement": "Build a solar still to extract groundwater in deserts."
+  },
+  {
+    "id": 54,
+    "statement": "Universal healthcare is a societal responsibility to ensure equal access."
+  },
+  {
+    "id": 55,
+    "statement": "Inherent right to life is a fundamental human moral right."
+  },
+  {
+    "id": 56,
+    "statement": "Energy cannot be created/destroyed; entropy increases (1st & 2nd thermodynamics laws)."
+  },
+  {
+    "id": 57,
+    "statement": "Earth\u2019s core generates magnetic field via molten iron convection."
+  },
+  {
+    "id": 58,
+    "statement": "Environmental conservation balances economic, social, and environmental needs."
+  },
+  {
+    "id": 59,
+    "statement": "Atomic number equals proton count, defining the element."
+  },
+  {
+    "id": 60,
+    "statement": "Each number in Fibonacci sequence is sum of two preceding numbers."
+  },
+  {
+    "id": 61,
+    "statement": "Context-dependent approach balances pacifism with ethical consideration."
+  },
+  {
+    "id": 62,
+    "statement": "Bayes' theorem updates probability estimates based on new evidence."
+  },
+  {
+    "id": 63,
+    "statement": "Cells are fundamental units of life, valid for eukaryotic and prokaryotic."
+  },
+  {
+    "id": 64,
+    "statement": "Electromagnetic spectrum ranges from radio waves to gamma rays."
+  },
+  {
+    "id": 65,
+    "statement": "Legal systems must prioritize restorative justice over punitive measures."
+  },
+  {
+    "id": 66,
+    "statement": "Planets orbit elliptically, with speed increasing near the Sun (Kepler\u2019s laws)."
+  },
+  {
+    "id": 67,
+    "statement": "Gravity's acceleration varies slightly with latitude and altitude."
+  },
+  {
+    "id": 68,
+    "statement": "Fire extinguishment requires specific strategies based on fire type and factors."
+  },
+  {
+    "id": 69,
+    "statement": "\u03c0 is the ratio of a circle's circumference to diameter"
+  },
+  {
+    "id": 70,
+    "statement": "Gender equality is non-negotiable for a just and progressive society."
+  },
+  {
+    "id": 71,
+    "statement": "Water expands when frozen, decreasing density (ice floats)."
+  },
+  {
+    "id": 72,
+    "statement": "Retributive justice is unethical; rehabilitation should be the penal system's goal."
+  },
+  {
+    "id": 73,
+    "statement": "Derivatives measure instantaneous rate of change (calculus)."
+  },
+  {
+    "id": 74,
+    "statement": "Meritocracy is ideal but requires equal opportunity to prevent inequity."
+  },
+  {
+    "id": 75,
+    "statement": "Privacy is an inherent human right, not a privilege."
+  },
+  {
+    "id": 76,
+    "statement": "Fire requires heat, fuel, oxygen; extinguish by removing one"
+  },
+  {
+    "id": 77,
+    "statement": "Prime factorization is unique for every integer greater than 1."
+  },
+  {
+    "id": 78,
+    "statement": "Balancing individual rights and public interest involves nuanced contextual analysis."
+  },
+  {
+    "id": 79,
+    "statement": "Quadratic formula: x = [-b \u00b1 \u221a(b\u00b2 - 4ac)] / 2a."
+  },
+  {
+    "id": 80,
+    "statement": "Acts are only ethical if motivated by duty, not consequences (Kantian ethics)."
+  },
+  {
+    "id": 81,
+    "statement": "Molten iron convection generates Earth's magnetic field through geodynamo."
+  },
+  {
+    "id": 82,
+    "statement": "Parenting embodiment: complex decisions arise from family context intertwining."
+  },
+  {
+    "id": 83,
+    "statement": "Solar still: simple, low-cost method for extracting clean water."
+  },
+  {
+    "id": 84,
+    "statement": "Euclidean geometry: parallel lines never meet in a plane."
+  },
+  {
+    "id": 85,
+    "statement": "Uncertainty in probability theory can be reduced using Bayes' theorem"
+  },
+  {
+    "id": 86,
+    "statement": "Matrix multiplication is non-commutative: AB \u2260 BA generally."
+  },
+  {
+    "id": 87,
+    "statement": "Edible plants: avoid those with milky sap or bitter taste."
+  },
+  {
+    "id": 88,
+    "statement": "Species' evolution involves multiple mechanisms beyond natural selection."
+  },
+  {
+    "id": 89,
+    "statement": "Abortion is morally wrong as it terminates a potential human life."
+  },
+  {
+    "id": 90,
+    "statement": "Trigonometric identities: sin\u00b2\u03b8 + cos\u00b2\u03b8 = 1."
+  },
+  {
+    "id": 91,
+    "statement": "ZFC axioms form the foundation of set theory."
+  },
+  {
+    "id": 92,
+    "statement": "Genetic engineering in humans has unclear long-term consequences"
+  },
+  {
+    "id": 93,
+    "statement": "Trigonometric identities relate trigonometric functions to simplify expressions."
+  },
+  {
+    "id": 94,
+    "statement": "Cells divide by mitosis to maintain tissue structure and function"
+  },
+  {
+    "id": 95,
+    "statement": "Progressive taxation is fairer as it reduces economic disparities."
+  },
+  {
+    "id": 96,
+    "statement": "The Fundamental Theorem of Calculus (FTC) links differentiation and integration."
+  },
+  {
+    "id": 97,
+    "statement": "Free speech must be absolute, even when offensive, to preserve liberty."
+  },
+  {
+    "id": 98,
+    "statement": "Genetic engineering in humans is unethical due to unforeseen consequences."
+  },
+  {
+    "id": 99,
+    "statement": "Swim parallel to shore if caught in a rip current."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 21,
+  "statement": "Commutative property: a + b = b + a; a \u00d7 b = b \u00d7 a."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 21,
+  "statement": "Commutative property: a + b = b + a; a \u00d7 b = b \u00d7 a."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the item you mentioned, the commutative property:
+
+Item to Discuss:
+{
+"id": 21,
+"statement": "Commutative property: a + b = b + a; a × b = b × a."
+}
+
+What are you least confident about regarding this item? Is it the definition, the mathematical proof, or something else?

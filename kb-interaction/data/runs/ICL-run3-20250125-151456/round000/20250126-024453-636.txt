@@ -1,0 +1,464 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Objectivity in research relies on honesty, transparency, and robust methodology."
+  },
+  {
+    "id": 1,
+    "statement": "Clear problem understanding enables accurate model specification through precise variables definition."
+  },
+  {
+    "id": 2,
+    "statement": "Emotional regulation enhances introspection's accuracy through reduced mental distractions."
+  },
+  {
+    "id": 3,
+    "statement": "Clear problem definition involves understanding context and key variables."
+  },
+  {
+    "id": 4,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 5,
+    "statement": "Self-awareness develops through introspection, emotional regulation, and mindfulness practices."
+  },
+  {
+    "id": 6,
+    "statement": "Abstracted complex research ideas yield concise conceptual representations"
+  },
+  {
+    "id": 7,
+    "statement": "Emotional intelligence fosters self-awareness through emotional awareness and regulation."
+  },
+  {
+    "id": 8,
+    "statement": "Cognitive limitations in information processing yield unconscious biases."
+  },
+  {
+    "id": 9,
+    "statement": "Self-awareness develops through intentional introspection and mindfulness practices."
+  },
+  {
+    "id": 10,
+    "statement": "Objectivity in research relies on intentional bias acknowledgment."
+  },
+  {
+    "id": 11,
+    "statement": "Systematic research approach combines methodology, design, and procedures."
+  },
+  {
+    "id": 12,
+    "statement": "Systematic research approach combines methodology, design, and procedures rigorously."
+  },
+  {
+    "id": 13,
+    "statement": "Emotional regulation enhances introspection through reduced mind-wandering."
+  },
+  {
+    "id": 14,
+    "statement": "Self-awareness develops through integrated introspection, emotional regulation."
+  },
+  {
+    "id": 15,
+    "statement": "Clear research problem understanding derives from intertwined context, complexity, and nuance."
+  },
+  {
+    "id": 16,
+    "statement": "Objectivity relies on transparency, honesty, and rigorous methodology accountability"
+  },
+  {
+    "id": 17,
+    "statement": "A rigorous research approach combines methodology, design, and procedures systematically."
+  },
+  {
+    "id": 18,
+    "statement": "Robust methodology ensures reliable, valid, and generalizable research findings."
+  },
+  {
+    "id": 19,
+    "statement": "Author reputation influenced by research quality, rigor, and originality."
+  },
+  {
+    "id": 20,
+    "statement": "Comprehensive problem comprehension involves situational awareness, context, and perspectives."
+  },
+  {
+    "id": 21,
+    "statement": "Author reputation builds through peer recognition, publications, and transparency."
+  },
+  {
+    "id": 22,
+    "statement": "Emotional regulation enhances self-awareness through increased cognitive flexibility."
+  },
+  {
+    "id": 23,
+    "statement": "Clear problem understanding enables precise variable selection for accurate modeling."
+  },
+  {
+    "id": 24,
+    "statement": "Emotional regulation activates prefrontal cortex to reduce mind-wandering"
+  },
+  {
+    "id": 25,
+    "statement": "Robust methodology minimizes error, bias, and uncertainty in research."
+  },
+  {
+    "id": 26,
+    "statement": "Self-awareness emerges from integrated cognitive-emotional processes naturally."
+  },
+  {
+    "id": 27,
+    "statement": "Self-awareness emerges from iterative introspection and bias refinement."
+  },
+  {
+    "id": 28,
+    "statement": "Clear problem understanding integrates complexity and nuanced context factors."
+  },
+  {
+    "id": 29,
+    "statement": "Mindfulness enhances introspection through self-regulation and emotional clarity"
+  },
+  {
+    "id": 30,
+    "statement": "External factors, such as funding sources and social context, can influence research."
+  },
+  {
+    "id": 31,
+    "statement": "Unconscious biases rooted in brain's automatic processing mechanisms."
+  },
+  {
+    "id": 32,
+    "statement": "Self-awareness develops from complex interplay of internal and external factors"
+  },
+  {
+    "id": 33,
+    "statement": "Rigorous methodology promotes objectivity through transparent and replicable design."
+  },
+  {
+    "id": 34,
+    "statement": "Self-awareness develops naturally through integrated cognitive-emotional interactions."
+  },
+  {
+    "id": 35,
+    "statement": "Clear problem understanding requires precise variables definition and proper context."
+  },
+  {
+    "id": 36,
+    "statement": "Emotional regulation influences attentional control and mind-wandering bidirectionally."
+  },
+  {
+    "id": 37,
+    "statement": "Emotional regulation enhances introspection accuracy by reducing mental distractions."
+  },
+  {
+    "id": 38,
+    "statement": "Emotional regulation reduces mind-wandering by decreasing DMN activity."
+  },
+  {
+    "id": 39,
+    "statement": "Robust methodology involves systematic data collection and analysis."
+  },
+  {
+    "id": 40,
+    "statement": "Effective emotional regulation enhances focused introspection through reduced distractions"
+  },
+  {
+    "id": 41,
+    "statement": "Clear research understanding emerges from interrelated context, complexity, and nuance."
+  },
+  {
+    "id": 42,
+    "statement": "Meta-cognitive detachment cultivates self-awareness through mindfulness observation."
+  },
+  {
+    "id": 43,
+    "statement": "Emotional regulation enhances introspection's accuracy through reduced mental distractions."
+  },
+  {
+    "id": 44,
+    "statement": "Research objectivity demands continuous self-awareness and bias recognition"
+  },
+  {
+    "id": 45,
+    "statement": "Self-awareness develops through mindfulness, introspection, and emotional regulation."
+  },
+  {
+    "id": 46,
+    "statement": "Emotional regulation reduces mental distractions, enhancing introspection's accuracy through self-awareness."
+  },
+  {
+    "id": 47,
+    "statement": "Self-awareness arises from cognitive-emotional interaction and integration."
+  },
+  {
+    "id": 48,
+    "statement": "Self-awareness arises from complex interplay of biological, cognitive, emotional, environmental, social, and cultural factors."
+  },
+  {
+    "id": 49,
+    "statement": "Author credibility comprises qualifications, expertise, reputation, and communication skills."
+  },
+  {
+    "id": 50,
+    "statement": "Unconscious biases arise from evolutionary pressures driving quick decision-making."
+  },
+  {
+    "id": 51,
+    "statement": "Author credibility stems from qualifications, expertise, and reputation."
+  },
+  {
+    "id": 52,
+    "statement": "Chromatin compacting occurs through various non-covalent interactions."
+  },
+  {
+    "id": 53,
+    "statement": "Intentional bias recognition mitigates research bias through transparency enables accountability."
+  },
+  {
+    "id": 54,
+    "statement": "Author reputation built through interdependent communication, collaboration, and engagement"
+  },
+  {
+    "id": 55,
+    "statement": "Intentional bias recognition mitigates research biases through robust methodologies."
+  },
+  {
+    "id": 56,
+    "statement": "Objectivity in research demands honesty, transparency, and robust methodology"
+  },
+  {
+    "id": 57,
+    "statement": "Research objectivity involves continuous self-awareness and bias recognition."
+  },
+  {
+    "id": 58,
+    "statement": "Robust methodology ensures reliable and valid research findings through."
+  },
+  {
+    "id": 59,
+    "statement": "Self-awareness develops through complex interplay of factors, including biological, environmental, cognitive, emotional, social, and psychological aspects."
+  },
+  {
+    "id": 60,
+    "statement": "Self-awareness emerges from complex interplay of biological, cognitive, emotional, environmental, and social factors."
+  },
+  {
+    "id": 61,
+    "statement": "Emotional regulation reduces mind-wandering through increased attentional control."
+  },
+  {
+    "id": 62,
+    "statement": "Attentional control modulates ACC activity, regulating emotional reactivity."
+  },
+  {
+    "id": 63,
+    "statement": "Emotional regulation improves introspection's accuracy by reducing mental distractions."
+  },
+  {
+    "id": 64,
+    "statement": "Objectivity in research requires honesty, transparency, and rigorous methodology"
+  },
+  {
+    "id": 65,
+    "statement": "Self-awareness emerges from dynamic interplay of factors."
+  },
+  {
+    "id": 66,
+    "statement": "Attentional control modulates ACC activity to regulate emotional reactivity."
+  },
+  {
+    "id": 67,
+    "statement": "Rigorous methodology ensures reliable and generalizable research findings transparently."
+  },
+  {
+    "id": 68,
+    "statement": "Objectivity in research demands honesty, transparency, and robust methodology"
+  },
+  {
+    "id": 69,
+    "statement": "Rigorous research methodology minimizes errors and biases through systematics"
+  },
+  {
+    "id": 70,
+    "statement": "Generalizability refers to the study's applicability beyond the sample"
+  },
+  {
+    "id": 71,
+    "statement": "Evolutionary pressures drive quick decision-making, leading to unconscious biases."
+  },
+  {
+    "id": 72,
+    "statement": "Robust methodology ensures reliable, valid, and generalizable research findings."
+  },
+  {
+    "id": 73,
+    "statement": "Intentional bias recognition enhances research objectivity through mitigation strategies."
+  },
+  {
+    "id": 74,
+    "statement": "Self-awareness develops through integrated cognitive-emotional-environmental interactions biologically innately."
+  },
+  {
+    "id": 75,
+    "statement": "Emotional regulation enhances introspection through increased self-awareness and control."
+  },
+  {
+    "id": 76,
+    "statement": "Methodologies alone can't completely eliminate research biases."
+  },
+  {
+    "id": 77,
+    "statement": "Unconscious biases formed through evolutionary, cultural, emotional, and cognitive factors"
+  },
+  {
+    "id": 78,
+    "statement": "Intentional bias acknowledgment is crucial for maintaining research objectivity."
+  },
+  {
+    "id": 79,
+    "statement": "Unconscious cognitive biases are shaped by evolution, culture, emotion, and cognitive limitations."
+  },
+  {
+    "id": 80,
+    "statement": "Author credibility stems from diverse factors, not just qualifications."
+  },
+  {
+    "id": 81,
+    "statement": "Intentional bias recognition involves peer review's scrutiny and feedback."
+  },
+  {
+    "id": 82,
+    "statement": "Intentional bias recognition through reflective journaling increases self-awareness."
+  },
+  {
+    "id": 83,
+    "statement": "Iterative self-reflection enables continuous personal growth through self-acceptance."
+  },
+  {
+    "id": 84,
+    "statement": "Environmental factors significantly influence self-awareness development."
+  },
+  {
+    "id": 85,
+    "statement": "Comprehensive problem comprehension involves understanding situation, context, and perspectives"
+  },
+  {
+    "id": 86,
+    "statement": "Self-awareness develops through intricate, non-linear, context-dependent relationships."
+  },
+  {
+    "id": 87,
+    "statement": "Robust methodology requires integration of multiple research components."
+  },
+  {
+    "id": 88,
+    "statement": "Self-awareness develops through integrated cognitive-emotional-environmental interactions inherently."
+  },
+  {
+    "id": 89,
+    "statement": "Author reputation influenced by quality, context, and institutional factors for credibility."
+  },
+  {
+    "id": 90,
+    "statement": "Objectivity in research relies on honesty, transparency, and robust methodology."
+  },
+  {
+    "id": 91,
+    "statement": "Generalizability is ensured through controlled conditions, representative sampling, and replication."
+  },
+  {
+    "id": 92,
+    "statement": "Clear problem definition involves understanding context, key variables, and relationships."
+  },
+  {
+    "id": 93,
+    "statement": "Self-awareness develops through complex interplay of factors, experiences, and practices."
+  },
+  {
+    "id": 94,
+    "statement": "Chromatin compacting involves non-covalent interactions between DNA and histones."
+  },
+  {
+    "id": 95,
+    "statement": "Emotional regulation reduces mind-wandering, improving introspection accuracy."
+  },
+  {
+    "id": 96,
+    "statement": "Robust methodology ensures accurate, reliable, and generalizable research findings."
+  },
+  {
+    "id": 97,
+    "statement": "Mindfulness, introspection, and emotional regulation interactingly foster self-awareness."
+  },
+  {
+    "id": 98,
+    "statement": "Reflective journaling enhances research precision through increased self-awareness."
+  },
+  {
+    "id": 99,
+    "statement": "Objectivity in research involves complex factors beyond honesty transparency methodology."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 45,
+  "statement": "Self-awareness develops through mindfulness, introspection, and emotional regulation."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 45,
+  "statement": "Self-awareness develops through mindfulness, introspection, and emotional regulation."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's discuss the item from the knowledge base:
+
+Item to Discuss:
+```
+{
+  "id": 45,
+  "statement": "Self-awareness develops through mindfulness, introspection, and emotional regulation."
+}
+```
+
+Things I’m Uncertain About This Item:
+I'm uncertain about how this statement captures the full complexity of self-awareness development. It seems too simplistic.
+
+Specific Clarifying Question:
+Can you provide more context or details on how these three factors - mindfulness, introspection, and emotional regulation - interact and influence each other in the development of self-awareness?
+
+What are your thoughts?

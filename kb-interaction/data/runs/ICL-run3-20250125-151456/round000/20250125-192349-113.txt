@@ -1,0 +1,459 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Honesty's definition can vary culturally across societal contexts"
+  },
+  {
+    "id": 2,
+    "statement": "Bayes' theorem accuracy relies on independence and identifiability."
+  },
+  {
+    "id": 3,
+    "statement": "Honesty's definition varies culturally, socially, and historically."
+  },
+  {
+    "id": 4,
+    "statement": "Bayes' theorem accuracy relies on independence and identifiability assumptions."
+  },
+  {
+    "id": 5,
+    "statement": "Independence and identifiability assumptions crucial for Bayes' theorem accuracy."
+  },
+  {
+    "id": 6,
+    "statement": "Lying can be morally acceptable in certain situations."
+  },
+  {
+    "id": 7,
+    "statement": "Honesty involves being open, authentic, and vulnerable in intentions."
+  },
+  {
+    "id": 8,
+    "statement": "Bayes' theorem relies on independence and identifiability assumptions"
+  },
+  {
+    "id": 9,
+    "statement": "Honesty is a complex concept shaped by culture, history, and context."
+  },
+  {
+    "id": 10,
+    "statement": "Epigenetic inheritance involves coordinated regulation of histone modifications, DNA methylation, and chromatin remodeling."
+  },
+  {
+    "id": 11,
+    "statement": "Honesty concept influenced by cultural, social, and historical contexts."
+  },
+  {
+    "id": 12,
+    "statement": "Integrated Information Theory posits consciousness arises from neural patterns integration."
+  },
+  {
+    "id": 13,
+    "statement": "Independence and identifiability assumptions crucial for Bayes' theorem accuracy"
+  },
+  {
+    "id": 14,
+    "statement": "Bayes' theorem accuracy depends on unmet independence assumptions."
+  },
+  {
+    "id": 15,
+    "statement": "Consciousness emerges from dynamic neural pattern interactions, complexity."
+  },
+  {
+    "id": 16,
+    "statement": "Honesty's definition shaped by cultural, social, and historical context."
+  },
+  {
+    "id": 17,
+    "statement": "Honesty's definition varies across cultures, societies, and historical contexts"
+  },
+  {
+    "id": 18,
+    "statement": "Bayes' theorem accuracy relies on independence assumptions"
+  },
+  {
+    "id": 19,
+    "statement": "Identifiability ensures unique parameters estimation in Bayesian models."
+  },
+  {
+    "id": 20,
+    "statement": "Identifiability in Bayes' theorem ensures unique parameter estimation."
+  },
+  {
+    "id": 21,
+    "statement": "Bayes' theorem requires independence and identifiability assumptions for accuracy."
+  },
+  {
+    "id": 22,
+    "statement": "Honesty's nuance stems from context-dependent application."
+  },
+  {
+    "id": 23,
+    "statement": "Honesty's definition varies culturally, socially, and historically."
+  },
+  {
+    "id": 24,
+    "statement": "In Bayes' theorem, independence means unchanging conditional probabilities reflect unconditional probability."
+  },
+  {
+    "id": 25,
+    "statement": "Bayes' theorem independence assumption requires contextual refinement in application."
+  },
+  {
+    "id": 26,
+    "statement": "Bayes' theorem combines prior, likelihood, and evidence through multiplication."
+  },
+  {
+    "id": 27,
+    "statement": "Independence in Bayes' theorem means unchanging conditional probabilities equal unconditional probability."
+  },
+  {
+    "id": 28,
+    "statement": "Independence and identifiability assumptions ensure Bayes' theorem accuracy."
+  },
+  {
+    "id": 29,
+    "statement": "In Bayes' theorem, independence and identifiability are critical assumptions."
+  },
+  {
+    "id": 30,
+    "statement": "Histone PTMs modify chromatin packaging and gene accessibility."
+  },
+  {
+    "id": 31,
+    "statement": "Epigenetic inheritance influenced by interplay of histone modifications and DNA methylation."
+  },
+  {
+    "id": 32,
+    "statement": "Histone modifications dynamically regulate chromatin structure and gene expression"
+  },
+  {
+    "id": 33,
+    "statement": "Assumptions of independence and identifiability crucial for Bayes' theorem accuracy"
+  },
+  {
+    "id": 34,
+    "statement": "Identifiability assumptions ensure unique parameter estimation in Bayes' theorem."
+  },
+  {
+    "id": 35,
+    "statement": "Independence assumes absence of influence between events in Bayes' theorem."
+  },
+  {
+    "id": 36,
+    "statement": "Honesty's definition varies across cultures, societies, and historical contexts."
+  },
+  {
+    "id": 37,
+    "statement": "Honesty's definition contextualized by cultural, social, and historical factors."
+  },
+  {
+    "id": 38,
+    "statement": "Histone modifications dynamically regulate chromatin and gene expression"
+  },
+  {
+    "id": 39,
+    "statement": "Independence in Bayes' theorem assumes no event influence"
+  },
+  {
+    "id": 40,
+    "statement": "Histone modifications dynamically regulate gene expression and chromatin compaction."
+  },
+  {
+    "id": 41,
+    "statement": "Identifiability in Bayes' theorem ensures unique parameter estimation."
+  },
+  {
+    "id": 42,
+    "statement": "Histone modifications dynamically regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 43,
+    "statement": "Honesty's definition varies across cultures, societies, and historical contexts"
+  },
+  {
+    "id": 44,
+    "statement": "Bayes' theorem combines prior and likelihood through conditional probability estimation."
+  },
+  {
+    "id": 45,
+    "statement": "Honesty definition shaped by cultural, social, and historical factors."
+  },
+  {
+    "id": 46,
+    "statement": "Consciousness arises from integrated information processing across brain regions"
+  },
+  {
+    "id": 47,
+    "statement": "Histone PTMs regulate chromatin structure and gene expression epigenetically."
+  },
+  {
+    "id": 48,
+    "statement": "Epigenetic inheritance involves chromatin structure changes leading gene expression changes."
+  },
+  {
+    "id": 49,
+    "statement": "Cultural, social, and historical context influences honesty definition."
+  },
+  {
+    "id": 50,
+    "statement": "Independence and identifiability assumptions crucial for Bayes' theorem accuracy"
+  },
+  {
+    "id": 51,
+    "statement": "Consciousness arises from coordinated brain activity patterns integration."
+  },
+  {
+    "id": 52,
+    "statement": "Honesty is not absolute, but essential for trust building."
+  },
+  {
+    "id": 53,
+    "statement": "Honesty nuances vary across cultures, social contexts, and history."
+  },
+  {
+    "id": 54,
+    "statement": "Harmonious integration: complex, dynamic coordination of neural activity patterns"
+  },
+  {
+    "id": 55,
+    "statement": "Identifiability ensures unique parameter estimation in Bayesian models."
+  },
+  {
+    "id": 56,
+    "statement": "Conscious awareness influences honesty through integrated neural processing."
+  },
+  {
+    "id": 57,
+    "statement": "Independence in Bayes' theorem means no event influence."
+  },
+  {
+    "id": 58,
+    "statement": "Honesty's definition varies culturally, socially, and historically."
+  },
+  {
+    "id": 59,
+    "statement": "Consciousness arises from integrated information generated by causally interacting components."
+  },
+  {
+    "id": 60,
+    "statement": "Bayes' theorem requires independence and identifiability assumptions for accuracy."
+  },
+  {
+    "id": 61,
+    "statement": "Identifiability ensures unique parameter estimation in Bayes' theorem."
+  },
+  {
+    "id": 62,
+    "statement": "Identifiability in Bayesian modeling ensures unique parameter estimation."
+  },
+  {
+    "id": 63,
+    "statement": "Integrated Information Theory posits consciousness from neural pattern integration"
+  },
+  {
+    "id": 64,
+    "statement": "Consciousness emerges from coordinated brain activity patterns integration."
+  },
+  {
+    "id": 65,
+    "statement": "Honesty involves open, authentic, and vulnerable intentions."
+  },
+  {
+    "id": 66,
+    "statement": "Independence and identifiability assumptions crucial for Bayes' theorem accuracy."
+  },
+  {
+    "id": 67,
+    "statement": "Bayes' theorem relies on independence and identifiability assumptions accuracy"
+  },
+  {
+    "id": 68,
+    "statement": "Identifiability in Bayes' theorem ensures unique parameter estimation."
+  },
+  {
+    "id": 69,
+    "statement": "Identifiability assumes statistically unique parameter estimation in Bayesian models."
+  },
+  {
+    "id": 70,
+    "statement": "Histone modifications regulate chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 71,
+    "statement": "Epigenetic inheritance involves histone modification, DNA methylation, and chromatin remodeling working together."
+  },
+  {
+    "id": 72,
+    "statement": "Epigenetic inheritance involves harmonious coordination of histone modifications and DNA methylation."
+  },
+  {
+    "id": 73,
+    "statement": "Histone modifications dynamically regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 74,
+    "statement": "Honesty's definition varies across cultural, social, and historical contexts."
+  },
+  {
+    "id": 75,
+    "statement": "Histone PTMs regulate chromatin structure and gene expression through epigenetic mechanisms."
+  },
+  {
+    "id": 76,
+    "statement": "Consciousness arises from integrated brain region activity patterns harmonization."
+  },
+  {
+    "id": 77,
+    "statement": "The so-called specific independence assumptions need contextual refinement."
+  },
+  {
+    "id": 78,
+    "statement": "Prior probability represents our initial beliefs before updated information."
+  },
+  {
+    "id": 79,
+    "statement": "Cultural variations in honesty impact relationships, business, decision-making."
+  },
+  {
+    "id": 80,
+    "statement": "Honesty's definition varies across cultures due to societal values."
+  },
+  {
+    "id": 81,
+    "statement": "Consciousness arises from harmonious synchronization of neural activity patterns."
+  },
+  {
+    "id": 82,
+    "statement": "Honesty requires vulnerability, transparency, and truthful intentions."
+  },
+  {
+    "id": 83,
+    "statement": "Lying can be morally justified in exceptional circumstances."
+  },
+  {
+    "id": 84,
+    "statement": "Honesty's definition varies culturally, socially, and historically."
+  },
+  {
+    "id": 85,
+    "statement": "Cultural variations in honesty influence communication strategies globally."
+  },
+  {
+    "id": 86,
+    "statement": "Bayes' theorem accuracy relies on realistic assumptions."
+  },
+  {
+    "id": 87,
+    "statement": "Independence and identifiability assumptions are crucial for Bayes' theorem accuracy."
+  },
+  {
+    "id": 88,
+    "statement": "Bayesian inference simplifies complex probability calculations through independence assumption."
+  },
+  {
+    "id": 89,
+    "statement": "Epigenetic inheritance involves coordinated histone, DNA methylation, and chromatin remodeling."
+  },
+  {
+    "id": 90,
+    "statement": "Histone modifications dynamically regulate chromatin structure and gene expression"
+  },
+  {
+    "id": 91,
+    "statement": "Histone variants H3.3 and H2A.Z influence epigenetic inheritance directly."
+  },
+  {
+    "id": 92,
+    "statement": "Histone PTMs dynamically regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 93,
+    "statement": "Independence is a necessary assumption, not always a sufficient condition."
+  },
+  {
+    "id": 94,
+    "statement": "Epigenetic inheritance involves histone, DNA methylation, and chromatin remodeling interactions synergistically affecting gene expression."
+  },
+  {
+    "id": 95,
+    "statement": "Bayes' theorem accuracy relies on realistic assumptions and sufficient data."
+  },
+  {
+    "id": 96,
+    "statement": "Independence in Bayes' theorem means absence of event influence."
+  },
+  {
+    "id": 97,
+    "statement": "Honesty's definition varies culturally, socially, and historically, influenced by context."
+  },
+  {
+    "id": 98,
+    "statement": "Identifiability ensures unique estimation of statistical model parameters."
+  },
+  {
+    "id": 99,
+    "statement": "Bayes' theorem requires independence and identifiability for accuracy"
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 16,
+  "statement": "Honesty's definition shaped by cultural, social, and historical context."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 16,
+  "statement": "Honesty's definition shaped by cultural, social, and historical context."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's start with the item:
+
+{
+"id": 16,
+"statement": "Honesty's definition shaped by cultural, social, and historical context."
+}
+
+I'm a bit uncertain about this item. The thing that's unclear to me is the extent to which honesty's definition is truly shaped by cultural, social, and historical context. On one hand, I can understand how cultural values and social norms could influence what we consider to be honest behavior. For instance, what constitutes honesty might differ between cultures or societies. But on the other hand, I'm not sure if the concept of honesty is so fluid that it's definition can be completely dependent on context.
+
+Can you help me clarify this? What do you think about the relationship between honesty and its definition?
+
+(And feel free to use the template I provided earlier if you'd like to elaborate!)

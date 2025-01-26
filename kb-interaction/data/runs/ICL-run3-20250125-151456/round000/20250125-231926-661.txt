@@ -1,0 +1,460 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Research problem understanding sets foundation for accurate Bayesian modeling."
+  },
+  {
+    "id": 2,
+    "statement": "Critical thinking ensures scientific research accuracy and reliability."
+  },
+  {
+    "id": 3,
+    "statement": "Domain-specific knowledge is essential for accurate research problem understanding"
+  },
+  {
+    "id": 4,
+    "statement": "Consciousness arises from integrated neural activity and global workspace processing."
+  },
+  {
+    "id": 5,
+    "statement": "Research problem understanding involves critical thinking and domain expertise."
+  },
+  {
+    "id": 6,
+    "statement": "Clear research problem understanding is critical for accurate Bayesian modeling."
+  },
+  {
+    "id": 7,
+    "statement": "Research problem understanding encompasses domain-specific knowledge and assumptions"
+  },
+  {
+    "id": 8,
+    "statement": "Epigenetic modifications influence gene expression through chromatin structure and binding."
+  },
+  {
+    "id": 9,
+    "statement": "Research problem understanding essential for Bayesian model accuracy."
+  },
+  {
+    "id": 10,
+    "statement": "Research problem understanding encompasses domain-specific knowledge, literature review, and critical thinking."
+  },
+  {
+    "id": 11,
+    "statement": "Literature review refines research problem understanding through analysis of existing knowledge."
+  },
+  {
+    "id": 12,
+    "statement": "Epigenetic modifications influence gene expression without DNA sequence changes."
+  },
+  {
+    "id": 13,
+    "statement": "Research problem understanding through continuous refinement and iteration."
+  },
+  {
+    "id": 14,
+    "statement": "Research problem understanding foundation essential for accurate model specification"
+  },
+  {
+    "id": 15,
+    "statement": "Subjective moral understanding influences individual honesty perception standards."
+  },
+  {
+    "id": 16,
+    "statement": "Research problem understanding involves continuous iteration and refinement."
+  },
+  {
+    "id": 17,
+    "statement": "Model specification is necessary but not sufficient condition for reliability."
+  },
+  {
+    "id": 18,
+    "statement": "Consciousness arises from integrated neural activity across brain regions."
+  },
+  {
+    "id": 19,
+    "statement": "Subjective knowledge in Bayesian modeling represents analyst's initial understanding."
+  },
+  {
+    "id": 20,
+    "statement": "Research problem understanding informs Bayesian prior distribution specification."
+  },
+  {
+    "id": 21,
+    "statement": "Accurate Bayesian modeling requires careful consideration of multiple factors."
+  },
+  {
+    "id": 22,
+    "statement": "Bayesian inference relies on mathematical theories and principles."
+  },
+  {
+    "id": 23,
+    "statement": "Accurate model specification is necessary but not sufficient for reliability."
+  },
+  {
+    "id": 24,
+    "statement": "Epigenetic modifications alter chromatin structure and binding to regulate gene expression."
+  },
+  {
+    "id": 25,
+    "statement": "Consciousness arises from complex integrating brain networks' dynamic interactions."
+  },
+  {
+    "id": 26,
+    "statement": "Domain-specific knowledge provides foundation for research problem understanding."
+  },
+  {
+    "id": 27,
+    "statement": "Accurate model specification requires domain knowledge and domain-specific assumptions."
+  },
+  {
+    "id": 28,
+    "statement": "Critical thinking ensures scientific research accuracy and reliability through evaluation and objectivity."
+  },
+  {
+    "id": 29,
+    "statement": "Prior distribution represents analysts' initial uncertainty and subjective knowledge."
+  },
+  {
+    "id": 30,
+    "statement": "Epigenetic modifications are chemical changes on DNA/histones without sequence changes."
+  },
+  {
+    "id": 31,
+    "statement": "Honesty foundations of trust do not apply universally."
+  },
+  {
+    "id": 32,
+    "statement": "Consciousness arises from complex integrating brain networks' dynamic interactions."
+  },
+  {
+    "id": 33,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure and binding."
+  },
+  {
+    "id": 34,
+    "statement": "Epigenetic modifications alter chromatin structure impacting gene expression."
+  },
+  {
+    "id": 35,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression"
+  },
+  {
+    "id": 36,
+    "statement": "Literature review and domain expertise constitute foundation)"
+  },
+  {
+    "id": 37,
+    "statement": "Accurate model specification requires multifaceted consideration."
+  },
+  {
+    "id": 38,
+    "statement": "Epigenetic modifications influence gene expression through chromatin structure and binding."
+  },
+  {
+    "id": 39,
+    "statement": "Critical thinking involves systematic evaluation, analysis, and creativity."
+  },
+  {
+    "id": 40,
+    "statement": "Model specification is essential but not sufficient for Bayesian reliability"
+  },
+  {
+    "id": 41,
+    "statement": "Hierarchical sensory integration enables brain's adaptive and comprehensive representation."
+  },
+  {
+    "id": 42,
+    "statement": "Critical thinking is crucial but insufficient for reliable conclusions"
+  },
+  {
+    "id": 43,
+    "statement": "Epigenetic modifications regulate gene expression without altering DNA sequence."
+  },
+  {
+    "id": 44,
+    "statement": "Clear research problem understanding is essential for accurate Bayesian model development."
+  },
+  {
+    "id": 45,
+    "statement": "Research problem understanding is critical for Bayesian modeling accuracy."
+  },
+  {
+    "id": 46,
+    "statement": "Accurate research problem understanding necessitates domain-specific knowledge."
+  },
+  {
+    "id": 47,
+    "statement": "Brain processes information through hierarchical sensory integration"
+  },
+  {
+    "id": 48,
+    "statement": "Literature review and domain expertise underpin accurate Bayesian modeling."
+  },
+  {
+    "id": 49,
+    "statement": "Clear research problem understanding necessary for accurate model building."
+  },
+  {
+    "id": 50,
+    "statement": "Consciousness arises from integrated brain region processing."
+  },
+  {
+    "id": 51,
+    "statement": "Objective uncertainty refers to data limitations and variability, not beliefs."
+  },
+  {
+    "id": 52,
+    "statement": "Prior distribution represents analyst's subjective knowledge and uncertainty."
+  },
+  {
+    "id": 53,
+    "statement": "Epigenetic modifications alter chromatin structure, affecting gene expression."
+  },
+  {
+    "id": 54,
+    "statement": "Honesty perceived differently across cultures and power dynamics."
+  },
+  {
+    "id": 55,
+    "statement": "Research problem understanding informs Bayesian prior distribution specification."
+  },
+  {
+    "id": 56,
+    "statement": "Epigenetic modifications influence gene expression without altering DNA sequence through chromatin alterations."
+  },
+  {
+    "id": 57,
+    "statement": "Brain processes information through hierarchical sensory integration and reassembly."
+  },
+  {
+    "id": 58,
+    "statement": "Consciousness arises from integrated brain information processing."
+  },
+  {
+    "id": 59,
+    "statement": "Domain-specific knowledge essential for research problem understanding and analysis."
+  },
+  {
+    "id": 60,
+    "statement": "Consciousness arises from integrated information processing within brain regions."
+  },
+  {
+    "id": 61,
+    "statement": "Consciousness arises from integrated neural activity in the global workspace."
+  },
+  {
+    "id": 62,
+    "statement": "Specificity in research problem understanding means clarity and precision."
+  },
+  {
+    "id": 63,
+    "statement": "Clear research problem understanding sets foundation for Bayesian modeling accuracy."
+  },
+  {
+    "id": 64,
+    "statement": "Critical thinking requires consideration of domain-specific knowledge and data quality."
+  },
+  {
+    "id": 65,
+    "statement": "Accurate model specification necessary but not sufficient for reliable inference."
+  },
+  {
+    "id": 66,
+    "statement": "Research problem understanding combines domain knowledge and assumptions."
+  },
+  {
+    "id": 67,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure and protein binding."
+  },
+  {
+    "id": 68,
+    "statement": "Domain-specific knowledge informs domain-specific assumptions in model specification."
+  },
+  {
+    "id": 69,
+    "statement": "Consciousness arises from integrated brain region neural activities."
+  },
+  {
+    "id": 70,
+    "statement": "Global workspace integrates sensory info through neural oscillations."
+  },
+  {
+    "id": 71,
+    "statement": "Bayesian inference relies on mathematical theories and principles."
+  },
+  {
+    "id": 72,
+    "statement": "Consciousness arises from integrated brain processing of sensory information."
+  },
+  {
+    "id": 73,
+    "statement": "Bayesian modeling accuracy requires multifold components considering"
+  },
+  {
+    "id": 74,
+    "statement": "Consciousness arises from complex brain neural network interactions."
+  },
+  {
+    "id": 75,
+    "statement": "Epigenetic modifications regulate gene expression without DNA sequence changes."
+  },
+  {
+    "id": 76,
+    "statement": "Prior distribution represents uncertainty in analyst's subjective knowledge, not empirical evidence."
+  },
+  {
+    "id": 77,
+    "statement": "Bayesian reliability depends on multiple factors, not just model specification."
+  },
+  {
+    "id": 78,
+    "statement": "Domain knowledge informs model specification and validation."
+  },
+  {
+    "id": 79,
+    "statement": "Domain-independent factors are general principles used in Bayesian modeling."
+  },
+  {
+    "id": 80,
+    "statement": "Consciousness arises from integrated brain processing in global workspace."
+  },
+  {
+    "id": 81,
+    "statement": "Consciousness arises from brain's integrated information processing dynamics."
+  },
+  {
+    "id": 82,
+    "statement": "Domainspecific factors are unique to a particular research context."
+  },
+  {
+    "id": 83,
+    "statement": "Objective uncertainty includes inherent data randomness and variability"
+  },
+  {
+    "id": 84,
+    "statement": "Prior distribution represents analyst's subjective understanding of the problem."
+  },
+  {
+    "id": 85,
+    "statement": "Literature review and domain expertise form foundation for Bayesian modeling."
+  },
+  {
+    "id": 86,
+    "statement": "Consciousness arises from integrated brain information processing."
+  },
+  {
+    "id": 87,
+    "statement": "Honesty's definition varies across cultures and personal contexts due"
+  },
+  {
+    "id": 88,
+    "statement": "Accurate model specification necessary but not sufficient for reliability."
+  },
+  {
+    "id": 89,
+    "statement": "The prior distribution represents analyst's initial uncertainty and subjective knowledge."
+  },
+  {
+    "id": 90,
+    "statement": "Accurate model specification requires consideration of multiple factors."
+  },
+  {
+    "id": 91,
+    "statement": "Domain-specific assumptions not always necessary for accurate modeling."
+  },
+  {
+    "id": 92,
+    "statement": "Clear research problem understanding characterized by specificity, domain expertise."
+  },
+  {
+    "id": 93,
+    "statement": "Research problem understanding essential for accurate Bayesian modeling."
+  },
+  {
+    "id": 94,
+    "statement": "Clear research problem understanding a must for Bayesian accuracy."
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic modifications influence gene expression through chromatin structure alterations."
+  },
+  {
+    "id": 96,
+    "statement": "Prior distribution represents analyst's subjective knowledge and uncertainty."
+  },
+  {
+    "id": 97,
+    "statement": "Prior distribution represents subjective analyst's personal beliefs and assumptions."
+  },
+  {
+    "id": 98,
+    "statement": "Honesty is foundation of trust, essential for social relationships"
+  },
+  {
+    "id": 99,
+    "statement": "Domain-specific knowledge importance varies depending on research context."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 17,
+  "statement": "Model specification is necessary but not sufficient condition for reliability."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 17,
+  "statement": "Model specification is necessary but not sufficient condition for reliability."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base. I'm going to pick an item, and we can discuss it together.
+
+I've chosen item 17:
+
+"Model specification is necessary but not sufficient condition for reliability."
+
+What I'm least confident about is the phrase "necessary but not sufficient". Can you help me understand what this means in the context of model specification and reliability?
+
+What do you think is meant by "necessary" and "sufficient" in this statement? Are they two distinct thresholds, or is there some overlap?
+
+Also, what kind of reliability are we talking about? Is it reliability in terms of output, accuracy, or prediction?
+
+Please share your thoughts, and we can clarify this together!

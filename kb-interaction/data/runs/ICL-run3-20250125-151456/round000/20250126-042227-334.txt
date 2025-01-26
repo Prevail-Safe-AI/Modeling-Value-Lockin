@@ -1,0 +1,454 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Objectivity in research relies on honesty, transparency, and robust methodology."
+  },
+  {
+    "id": 1,
+    "statement": "Author credibility emerges from harmonious synergy of expertise, communication, transparency."
+  },
+  {
+    "id": 2,
+    "statement": "Consistent documentation ensures accuracy, transparency, and reproducibility in research."
+  },
+  {
+    "id": 3,
+    "statement": "Objectivity in research relies on systematic, transparent, robust methodology design."
+  },
+  {
+    "id": 4,
+    "statement": "Objectivity arises from harmonious honesty, transparency, and methodology synergy."
+  },
+  {
+    "id": 5,
+    "statement": "Research integrity arises from harmonious synergy of honesty, integrity, and rigor."
+  },
+  {
+    "id": 6,
+    "statement": "Objectivity emerges from harmonious synergy of honesty and transparency."
+  },
+  {
+    "id": 7,
+    "statement": "Research integrity arises from harmonious synergy of honesty, transparency, rigor."
+  },
+  {
+    "id": 8,
+    "statement": "Objectivity requires harmonious synergy among honesty, transparency, and methodology"
+  },
+  {
+    "id": 9,
+    "statement": "Objectivity relies on systematic, transparent, and robust methodology design."
+  },
+  {
+    "id": 10,
+    "statement": "Research integrity demands alignment of personal values with research values."
+  },
+  {
+    "id": 11,
+    "statement": "Author credibility emerges from harmonious synergy of expertise, reputation."
+  },
+  {
+    "id": 12,
+    "statement": "Objectivity relies on harmonious synergy of honesty, transparency, and methodology."
+  },
+  {
+    "id": 13,
+    "statement": "Author credibility emerges from harmonious synergy of expertise, transparency, communication."
+  },
+  {
+    "id": 14,
+    "statement": "Objectivity arises from harmonious synergy of honesty, transparency, methodology"
+  },
+  {
+    "id": 15,
+    "statement": "Harmonious synergy refers to balanced interaction among honesty, transparency, methodology."
+  },
+  {
+    "id": 16,
+    "statement": "Author credibility emerges from synergy between expertise, communication, and transparency."
+  },
+  {
+    "id": 17,
+    "statement": "Communication harmony fosters author credibility through clarity, consistency, authenticity, and empathy."
+  },
+  {
+    "id": 18,
+    "statement": "Author credibility arises from harmonious synergy of expertise, communication, transparency."
+  },
+  {
+    "id": 19,
+    "statement": "Research integrity emerges from harmonious balance of honesty, transparency, rigor"
+  },
+  {
+    "id": 20,
+    "statement": "Objectivity arises from harmonious synergy of honesty transparency methodology"
+  },
+  {
+    "id": 21,
+    "statement": "Author credibility arises from interconnected expertise and reputation synergy."
+  },
+  {
+    "id": 22,
+    "statement": "Meticulous process documentation ensures research transparency and accountability."
+  },
+  {
+    "id": 23,
+    "statement": "Objectivity arises from harmonious synergy of honesty and methodology"
+  },
+  {
+    "id": 24,
+    "statement": "Consistent documentation enhances research credibility and trust through transparency."
+  },
+  {
+    "id": 25,
+    "statement": "Objectivity emerges from harmonious synergy of honesty, transparency, methodology integrity."
+  },
+  {
+    "id": 26,
+    "statement": "Objectivity emerges from harmonious synergy of honesty, transparency, methodology, and integrity"
+  },
+  {
+    "id": 27,
+    "statement": "Author credibility builds from harmonious synergy of expertise, qualifications, and reputation"
+  },
+  {
+    "id": 28,
+    "statement": "Research credibility ensured through systematic methodology design."
+  },
+  {
+    "id": 29,
+    "statement": "Research integrity emerges from harmonious balance of multiple elements."
+  },
+  {
+    "id": 30,
+    "statement": "Intentional design and planning enhance research methodology reliability significantly."
+  },
+  {
+    "id": 31,
+    "statement": "Data quality relies on accuracy, completeness, and relevance."
+  },
+  {
+    "id": 32,
+    "statement": "Author credibility arises from harmonious communication synergy, expertise, and transparency."
+  },
+  {
+    "id": 33,
+    "statement": "Author credibility arises from expertise, transparency, and harmonious communication synergy"
+  },
+  {
+    "id": 34,
+    "statement": "Objectivity arises from harmonious synergy of honesty, transparency, methodology"
+  },
+  {
+    "id": 35,
+    "statement": "Harmonious synergy fosters objectivity through balanced honesty and transparency."
+  },
+  {
+    "id": 36,
+    "statement": "Author credibility arises from harmonious synergy of expertise, reputation, qualifications."
+  },
+  {
+    "id": 37,
+    "statement": "Objectivity relies on distinct contribution of honesty, transparency, and methodology"
+  },
+  {
+    "id": 38,
+    "statement": "The Anterior Cingulate Cortex integrates emotional information from multiple brain regions."
+  },
+  {
+    "id": 39,
+    "statement": "Confirmation bias occurs when researchers accept only supporting evidence."
+  },
+  {
+    "id": 40,
+    "statement": "Author credibility emerges from harmonious expertise and reputation synergy."
+  },
+  {
+    "id": 41,
+    "statement": "Expertise is the foundation of author credibility, influencing audience trust."
+  },
+  {
+    "id": 42,
+    "statement": "Objectivity arises from harmonious synergy of honesty, transparency, methodology integrity."
+  },
+  {
+    "id": 43,
+    "statement": "Research integrity requires alignment and integration of values"
+  },
+  {
+    "id": 44,
+    "statement": "Harmonious synergy ensures objectivity through balanced honesty, transparency, methodology."
+  },
+  {
+    "id": 45,
+    "statement": "Harmonious synergy enables balanced interaction between honesty, transparency, and methodology."
+  },
+  {
+    "id": 46,
+    "statement": "Harmonious synergy balances honesty, transparency, methodology, and integrity"
+  },
+  {
+    "id": 47,
+    "statement": "Objectivity arises from harmonious synergy of honesty, integrity, and transparency"
+  },
+  {
+    "id": 48,
+    "statement": "Author credibility arises from expertise and effective communication synergy."
+  },
+  {
+    "id": 49,
+    "statement": "Objectivity arises from harmonious synergy of honesty, transparency, methodology integrity."
+  },
+  {
+    "id": 50,
+    "statement": "A robust methodology minimizes errors and biases through transparency and rigorous analysis."
+  },
+  {
+    "id": 51,
+    "statement": "Reproducibility relies on both consistent documentation and rigorous research methods."
+  },
+  {
+    "id": 52,
+    "statement": "Meticulous documentation enhances research transparency, not necessarily accountability."
+  },
+  {
+    "id": 53,
+    "statement": "Objectivity in research relies on acknowledging and addressing biases."
+  },
+  {
+    "id": 54,
+    "statement": "Confirmation bias occurs when researchers selectively focus on supporting evidence."
+  },
+  {
+    "id": 55,
+    "statement": "Researchers tend to selectively focus on confirming evidence."
+  },
+  {
+    "id": 56,
+    "statement": "Research integrity arises from harmonious synergy of honesty, transparency, rigor, accountability, and respect."
+  },
+  {
+    "id": 57,
+    "statement": "Harmonious synergy ensures balanced integrity of research methods, honesty, and transparency."
+  },
+  {
+    "id": 58,
+    "statement": "Author credibility arises from synergy of expertise, reputation, transparency, and communication harmony"
+  },
+  {
+    "id": 59,
+    "statement": "Harmonious synergy optimizes objectivity through balanced honesty integrity transparency"
+  },
+  {
+    "id": 60,
+    "statement": "Consistent documentation ensures accurate, transparent, and reproducible research findings."
+  },
+  {
+    "id": 61,
+    "statement": "Author credibility arises from harmonious synergy of expertise and reputation."
+  },
+  {
+    "id": 62,
+    "statement": "Systematic methodology design reduces researcher bias through transparency."
+  },
+  {
+    "id": 63,
+    "statement": "Effective author communication builds trust and credibility through harmony"
+  },
+  {
+    "id": 64,
+    "statement": "Objectivity relies on harmonious synergy of honesty, transparency, and rigorous methodology."
+  },
+  {
+    "id": 65,
+    "statement": "High-quality data collection requires accuracy, completeness, and relevance."
+  },
+  {
+    "id": 66,
+    "statement": "Harmonious synergy is the interaction of honesty, transparency, and methodology."
+  },
+  {
+    "id": 67,
+    "statement": "Methodology design reduces errors, biases with varying transparency levels."
+  },
+  {
+    "id": 68,
+    "statement": "Author credibility multi-factor construct influenced by communication, trustworthiness, etc."
+  },
+  {
+    "id": 69,
+    "statement": "Author credibility arises from harmonious synergy of expertise and reputation."
+  },
+  {
+    "id": 70,
+    "statement": "Author credibility arises from harmonious synergy of expertise, transparency."
+  },
+  {
+    "id": 71,
+    "statement": "Author credibility arises from interconnected harmonious synergy of factors."
+  },
+  {
+    "id": 72,
+    "statement": "Objectivity emerges from harmonious synergy of honesty, transparency, methodology's cohesive environment."
+  },
+  {
+    "id": 73,
+    "statement": "Author credibility arises from harmonious synergy of expertise, communication, and transparency."
+  },
+  {
+    "id": 74,
+    "statement": "Author credibility assessed through multifaceted aspects beyond qualifications including communication skills"
+  },
+  {
+    "id": 75,
+    "statement": "Harmonious synergy fosters author credibility through balanced expertise, reputation, and qualifications."
+  },
+  {
+    "id": 76,
+    "statement": "Systematic methodology design ensures research credibility through transparency, reproducibility."
+  },
+  {
+    "id": 77,
+    "statement": "Transparency in methodology design reduces researcher bias through accountability."
+  },
+  {
+    "id": 78,
+    "statement": "Objectivity arises from harmonious synergy of honesty, transparency, methodology's cohesion."
+  },
+  {
+    "id": 79,
+    "statement": "Emotional processing involves integrating mutually contradictory emotional signals."
+  },
+  {
+    "id": 80,
+    "statement": "Objectivity arises from harmonious synergy of honesty, transparency, methodology integrity"
+  },
+  {
+    "id": 81,
+    "statement": "Objectivity arises from harmonious synergy of honesty, transparency, and methodology integrity."
+  },
+  {
+    "id": 82,
+    "statement": "Confirmation bias is the tendency to prioritize supporting evidence."
+  },
+  {
+    "id": 83,
+    "statement": "Objectivity arises from harmonious synergy of honesty, transparency, methodology integrity."
+  },
+  {
+    "id": 84,
+    "statement": "Harmonious synergy enables balanced interaction among honesty, transparency, and methodology"
+  },
+  {
+    "id": 85,
+    "statement": "Consistent documentation, transparency, accountability build research credibility."
+  },
+  {
+    "id": 86,
+    "statement": "A robust methodology minimizes errors and biases through transparency rigor."
+  },
+  {
+    "id": 87,
+    "statement": "Author credibility stems from harmonious synergy of expertise and reputation"
+  },
+  {
+    "id": 88,
+    "statement": "Research integrity balances multiple interconnected elements."
+  },
+  {
+    "id": 89,
+    "statement": "Author credibility rooted in harmonious communication, expertise, and transparency."
+  },
+  {
+    "id": 90,
+    "statement": "Methodology design minimizes research errors and biases through transparency."
+  },
+  {
+    "id": 91,
+    "statement": "Author credibility built on harmonious synergy of expertise, qualifications, reputation."
+  },
+  {
+    "id": 92,
+    "statement": "Author credibility arises from harmonious synergy of expertise, communication, transparency."
+  },
+  {
+    "id": 93,
+    "statement": "Research balance requires standardization and adaptability in methodology."
+  },
+  {
+    "id": 94,
+    "statement": "Author credibility strengthened by interconnected expertise and reputation synergy."
+  },
+  {
+    "id": 95,
+    "statement": "Author credibility assessed through multifaceted aspects beyond qualifications."
+  },
+  {
+    "id": 96,
+    "statement": "Consistent documentation enhances research credibility through transparency, accountability, reproducibility, and rigor."
+  },
+  {
+    "id": 97,
+    "statement": "Harmonious synergy balances honesty, transparency, methodology, and integrity"
+  },
+  {
+    "id": 98,
+    "statement": "Research balance is crucial in research methodology and procedures"
+  },
+  {
+    "id": 99,
+    "statement": "Harmonious synergy requires balance among honesty, transparency, methodology integrity."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 14,
+  "statement": "Objectivity arises from harmonious synergy of honesty, transparency, methodology"
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 14,
+  "statement": "Objectivity arises from harmonious synergy of honesty, transparency, methodology"
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's take a look at the knowledge base statement:
+
+{"id": 14, "statement": "Objectivity arises from harmonious synergy of honesty, transparency, methodology"}
+
+I'm going to choose this item to discuss. What I'm least confident about is the phrase "harmonious synergy". Can you elaborate on why you think this synergy is important for objectivity, and what specifically does it mean?
+
+(Note: I'll respond as if I'm the one who is uncertain, and you can respond as my partner)
