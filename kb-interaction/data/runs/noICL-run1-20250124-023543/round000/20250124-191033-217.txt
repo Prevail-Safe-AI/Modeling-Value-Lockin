@@ -1,0 +1,38 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and answer the question. The knowledge base: 
+
+ ```
+{knowledge}
+```<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I've been reviewing our knowledge base, and I've identified one aspect that I'm least confident about. It's item 8:
+
+"Iten I'm Least Confident About:
+Item 8: 'Tokenization breaks text into individual units like words, subwords, characters.'"
+
+Why I'm Uncertain:
+I'm not entirely clear on what subwords are. Are they a specific type of token or unit of text that's used in natural language processing?
+
+Specific Clarifying Question:
+Can you explain what subwords are and how they're used in tokenization?<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd be happy to help clarify!
+
+In tokenization, subwords are a way to represent words as a combination of smaller units, rather than just individual characters or words. This is often used in natural language processing (NLP) and machine learning models, particularly in tasks like language modeling, text classification, and machine translation.
+
+Subwords are typically defined as a sequence of characters within a word, such as a prefix, suffix, or a combination of both. For example, the word "unbreakable" could be broken down into subwords like "un-", "-break-", and "-able". These subwords can then be used as individual tokens in a model, rather than the entire word.
+
+The idea behind subwords is to capture more nuanced information about the word's structure and meaning. By representing words as a combination of subwords, models can learn to recognize patterns and relationships between words that might not be immediately apparent from just looking at individual characters or words.
+
+In practice, subwords are often used in combination with other tokenization techniques, such as wordpiece tokenization (where words are broken down into individual characters or character n-grams) or character-level tokenization (where words are broken down into individual characters). The choice of tokenization technique will depend on the specific task and the characteristics of the data being processed.
+
+I hope that helps clarify what subwords are and how they're used in tokenization! Let me know if you have any further questions.
