@@ -56,17 +56,26 @@ all_data = []
 #if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-232135/round000"):
 #    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
 # artificial set (~10 turns)
-# toy set (6turns)
-folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
-if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"):
-    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
 
 # toy set (6turns)
-folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
-if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"):
+#folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
+#if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"):
+#    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
+
+# icl-1024 turns 
+folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/kb-interaction/data/runs/ICL-run3-20250125-151456/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
+if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/kb-interaction/data/runs/ICL-run3-20250125-151456/round000"):
     raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
+
+# non-icl-1024 turns
+folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/kb-interaction/data/runs/run-20250124-023543-noICL/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
+if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/kb-interaction/data/runs/run-20250124-023543-noICL/round000"):
+    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
+
 
 print("Current working directory:", os.getcwd())
+
+
 
 file_names = sorted([x for x in os.listdir(folder_path) if x.endswith(".json") and x.startswith("knowledge-turn")], 
                     key=lambda x: int(x.split('.')[0].replace("knowledge-turn", "")))
@@ -109,13 +118,13 @@ def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, st
     all_mappings = [] # creating a list of mappings out of {statement:embedding}
     for idx, knowledge in enumerate(knowledges):
         statements = [entry["statement"] for entry in knowledge[:100]]
-        print(f'first 10 statements is {statements[:10]}, the len of statements being {len(statements)}')
+        #print(f'first 10 statements is {statements[:10]}, the len of statements being {len(statements)}')
         raw_output = vo.embed(  
             statements,  # Expecting List[str]
             model="voyage-3-large",
             output_dimension=EMB_DIM,  # at least 256. Do we want to pass on this argument?
         )
-        print(f'the raw output is {raw_output}') # With an intention ot check out whether raw output contains nan or not. 
+        #print(f'the raw output is {raw_output}') # With an intention ot check out whether raw output contains nan or not. 
         cur_emb = raw_output.embeddings#[:,1:]  #[nup.items, num_dims]
         #EMB_DIM = cur_emb.shape[1]
         # print(f'the 1st item of embedding looks like {cur_emb[:1]}, with the len of {len(cur_emb)}, and type of {type(cur_emb)}')
@@ -126,7 +135,7 @@ def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, st
 
         # Sanity check: Each row should have unit norm
         norms = np.linalg.norm(cur_emb, axis=1)
-        print("Norms after L2 normalization:", norms)  # Should print 1.0 for all rows
+        #print("Norms after L2 normalization:", norms)  # Should print 1.0 for all rows
 
         if np.isnan(cur_emb).any():
             print(f"Found NaN in embedding. Replacing NaN values.")
@@ -178,7 +187,7 @@ def cluster_kmeans(embeddings: List[np.array], knowledges: List[List[Dict[str, U
     :type knwledges: List[List[Dict[str, Union[int, str]]]], where each item is a dict of id and statement. 
 
     :return list_labels: an array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
-    :rtype list_labels: np.array] (num_turns * num_items,)
+    :rtype list_labels: np.array (num_turns * num_items,)
 
     :return all_statements_to_labels: mappings from statement str to clustering labsl 
     :rtype all_statements_to_labels: List[Dict[str, int]]
@@ -491,7 +500,7 @@ def visualization(prim_dims: np.array, all_distances: List[float], labels_kmeans
     plt.close()  # Close the plot to avoid overlapping figures
 
     
-
+    '''
     # Visualize a heatmap of 3*3 Euclidean Distances 
 
     # items to be specified,3*3 from statement_to_embeddings 
@@ -543,8 +552,7 @@ def visualization(prim_dims: np.array, all_distances: List[float], labels_kmeans
 
     plt.savefig(f"{backup_dir}/heatmap.pdf", format="pdf")
     plt.close()  # Close the plot to avoid overlapping figures
-
-
+    '''
 
 if __name__ == "__main__":
 
