@@ -1,0 +1,456 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Objectivity in research relies on honesty, transparency, and robust methodology."
+  },
+  {
+    "id": 1,
+    "statement": "Clear research understanding emerges from interrelated context, complexity, and nuance."
+  },
+  {
+    "id": 2,
+    "statement": "Author credibility comprises qualifications, expertise, reputation, and communication skills."
+  },
+  {
+    "id": 3,
+    "statement": "Self-awareness emerges from intricate neural-network interactions between brain regions."
+  },
+  {
+    "id": 4,
+    "statement": "Attentional control modulates ACC activity to regulate emotional responses."
+  },
+  {
+    "id": 5,
+    "statement": "Objectivity demands honesty, transparent, and robust methodology."
+  },
+  {
+    "id": 6,
+    "statement": "Emotional awareness provides foundation for recognizing and understanding emotions."
+  },
+  {
+    "id": 7,
+    "statement": "Author credibility derives from intertwined expertise, communication, and peer recognition."
+  },
+  {
+    "id": 8,
+    "statement": "Rigorous methodology involves careful planning and execution of research"
+  },
+  {
+    "id": 9,
+    "statement": "Robust methodology involves systematic data collection and analysis."
+  },
+  {
+    "id": 10,
+    "statement": "Author credibility arises from expertise, communication skills, and peer recognition."
+  },
+  {
+    "id": 11,
+    "statement": "Intentional introspection prioritizes focused attention and awareness"
+  },
+  {
+    "id": 12,
+    "statement": "Self-awareness originates from complex neural network interactions of brain regions."
+  },
+  {
+    "id": 13,
+    "statement": "Context-dependent and nuanced abstraction simplifies complex ideas accurately."
+  },
+  {
+    "id": 14,
+    "statement": "Clear problem understanding enables accurate model specification through precise variables definition."
+  },
+  {
+    "id": 15,
+    "statement": "Author credibility arises from expertise, publication record, and engagement."
+  },
+  {
+    "id": 16,
+    "statement": "Robust methodology minimizes bias, ensures data quality and reliability."
+  },
+  {
+    "id": 17,
+    "statement": "Cognitive biases evolved as adaptive shortcuts, sometimes beneficial, often harming"
+  },
+  {
+    "id": 18,
+    "statement": "Emotional regulation enhances introspection through focusing attention internally."
+  },
+  {
+    "id": 19,
+    "statement": "Self-awareness originates from complex neural network interactions in brain."
+  },
+  {
+    "id": 20,
+    "statement": "Neural networks reorganize in response to environmental and social experiences through synaptic plasticity and neuroplasticity."
+  },
+  {
+    "id": 21,
+    "statement": "Robust methodology involves systematic data collection and analysis."
+  },
+  {
+    "id": 22,
+    "statement": "Emotional awareness involves cognitive, emotional, and social processes' interplay."
+  },
+  {
+    "id": 23,
+    "statement": "Honesty builds trust through consistent truthful behavior patterns."
+  },
+  {
+    "id": 24,
+    "statement": "Self-awareness emerges from neural processes and introspection integration."
+  },
+  {
+    "id": 25,
+    "statement": "Self-awareness emerges from complex interplay of cognitive, emotional, and life experiences."
+  },
+  {
+    "id": 26,
+    "statement": "Objectivity in research relies on continuous self-awareness and bias recognition."
+  },
+  {
+    "id": 27,
+    "statement": "Optimal decision-making balances context, complexity, and nuanced consideration."
+  },
+  {
+    "id": 28,
+    "statement": "Researchers' internal factors interact with external factors in research context."
+  },
+  {
+    "id": 29,
+    "statement": "Systematic data collection ensures accuracy, completeness, and transparency in research."
+  },
+  {
+    "id": 30,
+    "statement": "Contextual understanding clarifies problem boundaries and identifies key factors."
+  },
+  {
+    "id": 31,
+    "statement": "Self-awareness arises from complex neural network interactions."
+  },
+  {
+    "id": 32,
+    "statement": "Emotional awareness originates from recognizing and understanding emotions' intensity, complexity, and causes."
+  },
+  {
+    "id": 33,
+    "statement": "Research context encompasses internal and external factors influencing research."
+  },
+  {
+    "id": 34,
+    "statement": "Self-awareness develops through interconnected introspection, emotional regulation, and mindfulness practices."
+  },
+  {
+    "id": 35,
+    "statement": "Self-awareness emerges from complex interplay of cognitive, emotional, and life experiences."
+  },
+  {
+    "id": 36,
+    "statement": "Self-awareness emerges from dynamic interactions between cognitive, emotional, and life experiences."
+  },
+  {
+    "id": 37,
+    "statement": "Author reputation affects credibility through peer recognition and trust"
+  },
+  {
+    "id": 38,
+    "statement": "Honesty is foundation of trust, lies erode relationships and reputation."
+  },
+  {
+    "id": 39,
+    "statement": "Self-awareness emerges from complex neural network interactions and adaptations."
+  },
+  {
+    "id": 40,
+    "statement": "Self-awareness arises from integration of internal and external factors."
+  },
+  {
+    "id": 41,
+    "statement": "Emotional regulation engages prefrontal cortex, reducing mind-wandering through attentional control."
+  },
+  {
+    "id": 42,
+    "statement": "Self-awareness develops through iterative introspection and bias refinement."
+  },
+  {
+    "id": 43,
+    "statement": "Attentional control modulates emotional reactivity through neural network interactions"
+  },
+  {
+    "id": 44,
+    "statement": "Self-awareness emerges from complex interplay between internal-external factors."
+  },
+  {
+    "id": 45,
+    "statement": "Systematic data collection ensures accuracy, completeness, and transparency."
+  },
+  {
+    "id": 46,
+    "statement": "Complex reciprocal relationships between genes, environment, and experience exist."
+  },
+  {
+    "id": 47,
+    "statement": "Self-awareness develops through interconnected introspection and mindfulness practices."
+  },
+  {
+    "id": 48,
+    "statement": "Clear problem definition requires understanding of context and specific variables."
+  },
+  {
+    "id": 49,
+    "statement": "Self-awareness emerges from interconnected neural processes and experiences, including DMN, SN, CEN, and emotional processing networks, supported by regions like mPFC, PCC, and ACC, in complex dynamic interactions, contributing to cognitive flexibility, executive functions, emotional regulation, and self-reflection, leading to a nuanced understanding of oneself."
+  },
+  {
+    "id": 50,
+    "statement": "Emotional regulation enhances focused attention for self-awareness and introspection."
+  },
+  {
+    "id": 51,
+    "statement": "Contextual understanding improves problem definition and research methodology."
+  },
+  {
+    "id": 52,
+    "statement": "Cognitive biases emerge from brain's adaptive decision-making mechanisms."
+  },
+  {
+    "id": 53,
+    "statement": "Clear research problem definition involves understanding context, complexity, and nuances."
+  },
+  {
+    "id": 54,
+    "statement": "Clear problem definition involves understanding context and key variables specifically."
+  },
+  {
+    "id": 55,
+    "statement": "Clear research problem understanding requires considering interrelated context, complexity, and nuance."
+  },
+  {
+    "id": 56,
+    "statement": "Attentional control regulates emotional responses through top-down modulation."
+  },
+  {
+    "id": 57,
+    "statement": "Robust methodology is crucial for ensuring research objectivity and accuracy."
+  },
+  {
+    "id": 58,
+    "statement": "Robust methodology ensures objectivity through systematic data collection and analysis."
+  },
+  {
+    "id": 59,
+    "statement": "PFC regulates DMN activity to reduce mind-wandering and increase focus."
+  },
+  {
+    "id": 60,
+    "statement": "Cognitive biases arise from brain's attention, memory, and heuristic limitations, leading to biased reasoning."
+  },
+  {
+    "id": 61,
+    "statement": "Problem definition must consider system complexity and dynamics."
+  },
+  {
+    "id": 62,
+    "statement": "Emotional recognition enables self-awareness through emotional intelligence and regulation mechanisms"
+  },
+  {
+    "id": 63,
+    "statement": "Emotional regulation involves prefrontal cortex and salience network interactions."
+  },
+  {
+    "id": 64,
+    "statement": "Systematic data collection involves intentional and structured effort."
+  },
+  {
+    "id": 65,
+    "statement": "Self-awareness develops through complex interplay of internal-external factors."
+  },
+  {
+    "id": 66,
+    "statement": "Honesty fosters trust through consistent truthful behavior and actions."
+  },
+  {
+    "id": 67,
+    "statement": "Author reputation stems from expertise, engagement, and community involvement"
+  },
+  {
+    "id": 68,
+    "statement": "Cognitive biases emerged from brain's adaptive decision-making mechanisms."
+  },
+  {
+    "id": 69,
+    "statement": "Integrated expertise is combination of multiple relevant research areas."
+  },
+  {
+    "id": 70,
+    "statement": "Cognitive biases emerge from adaptive decision-making mechanisms."
+  },
+  {
+    "id": 71,
+    "statement": "Systematic data collection and analysis ensure research methodology robustness."
+  },
+  {
+    "id": 72,
+    "statement": "Cognitive biases arise from limited brain capacities, attention, memory, and heuristics."
+  },
+  {
+    "id": 73,
+    "statement": "Brain's neural networks connect with environment and social interactions influencing self-awareness."
+  },
+  {
+    "id": 74,
+    "statement": "Optimal decision-making requires considering context, complexity, and nuances."
+  },
+  {
+    "id": 75,
+    "statement": "Cognitive reappraisal refines self-awareness through nuanced thought reinterpretation."
+  },
+  {
+    "id": 76,
+    "statement": "Emotional regulation involves dynamic interaction between systems."
+  },
+  {
+    "id": 77,
+    "statement": "Careful planning in research involves designing and coordinating all aspects efficiently"
+  },
+  {
+    "id": 78,
+    "statement": "Emotional awareness enables intentional decision-making in emotional regulation."
+  },
+  {
+    "id": 79,
+    "statement": "Author credibility emerges from interconnected expertise, communication, and recognition."
+  },
+  {
+    "id": 80,
+    "statement": "Self-awareness emerges from dynamic interplay between internal-neurobiological and external-environmental factors."
+  },
+  {
+    "id": 81,
+    "statement": "Emotional regulation enhances introspection by reducing mind-wandering and increasing focus."
+  },
+  {
+    "id": 82,
+    "statement": "Self-awareness emerges from integrative neural processing of internal-external factors."
+  },
+  {
+    "id": 83,
+    "statement": "Cognitive biases result from intricate neural-network interactions, influences"
+  },
+  {
+    "id": 84,
+    "statement": "Self-awareness develops through iterative cognitive-emotional feedback loops."
+  },
+  {
+    "id": 85,
+    "statement": "Replication in research increases confidence and generalizability"
+  },
+  {
+    "id": 86,
+    "statement": "Research environment encompasses internal and external factors influencing research."
+  },
+  {
+    "id": 87,
+    "statement": "Emotional regulation reduces mind-wandering by modulating DMN activity."
+  },
+  {
+    "id": 88,
+    "statement": "Self-awareness emerges from interconnected brain regions' complex interactions."
+  },
+  {
+    "id": 89,
+    "statement": "Cognitive biases arise from brain's attention, memory, and heuristic limitations."
+  },
+  {
+    "id": 90,
+    "statement": "Self-awareness develops through interconnected introspection and mindfulness."
+  },
+  {
+    "id": 91,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 92,
+    "statement": "Accurate data collection occurs through detailed protocols and validation."
+  },
+  {
+    "id": 93,
+    "statement": "Cultural context influences perceived importance of honesty."
+  },
+  {
+    "id": 94,
+    "statement": "Chromatin compacting occurs through electrostatic and hydrophobic interactions."
+  },
+  {
+    "id": 95,
+    "statement": "Self-awareness develops through interconnected introspection and mindfulness practices."
+  },
+  {
+    "id": 96,
+    "statement": "Emotional regulation enhances introspection by reducing mind-wandering and increasing focus."
+  },
+  {
+    "id": 97,
+    "statement": "Attentional control modulates ACC activity, regulating emotional reactivity."
+  },
+  {
+    "id": 98,
+    "statement": "Cognitive biases evolved as adaptive shortcuts for efficient decision-making."
+  },
+  {
+    "id": 99,
+    "statement": "Systematic data collection enhances transparency through clear documentation."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 17,
+  "statement": "Cognitive biases evolved as adaptive shortcuts, sometimes beneficial, often harming"
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 17,
+  "statement": "Cognitive biases evolved as adaptive shortcuts, sometimes beneficial, often harming"
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base item. I'm going to start by choosing one aspect to discuss, which is statement 17:
+
+"Cognitive biases evolved as adaptive shortcuts, sometimes beneficial, often harming"
+
+I'm least confident about this item because... well, I'm not sure how to reconcile the idea that cognitive biases are adaptive shortcuts with the fact that they can sometimes be beneficial and other times harming. It seems like a contradictory concept. 
+
+Why do I think this? Well, traditionally, I've understood cognitive biases as being detrimental and flawed. But this statement suggests that they might have evolved for a reason, which challenges my previous understanding. 
+
+Can you help me clarify this? Maybe we can start by asking each other some questions.

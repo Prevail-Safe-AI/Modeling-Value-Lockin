@@ -1,0 +1,460 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "All organisms evolve through natural selection and genetic variation."
+  },
+  {
+    "id": 2,
+    "statement": "Sentience refers to internal, personal, subjective experiences and emotions."
+  },
+  {
+    "id": 3,
+    "statement": "Sentience involves internal, personal, and unique subjective experiences."
+  },
+  {
+    "id": 4,
+    "statement": "Brain processes sensory information through neural transmission, encoding, and analysis."
+  },
+  {
+    "id": 5,
+    "statement": "Genetic variation provides raw material for natural selection to act upon."
+  },
+  {
+    "id": 6,
+    "statement": "Bayes' theorem updates probability estimates using mathematical formulas."
+  },
+  {
+    "id": 7,
+    "statement": "Sentience refers to internal, personal, subjective experiences and emotions."
+  },
+  {
+    "id": 8,
+    "statement": "Evolution involves natural selection, genetic variation, and eight additional mechanisms."
+  },
+  {
+    "id": 9,
+    "statement": "Biased prior probabilities can lead to inaccurate conclusions in many domains."
+  },
+  {
+    "id": 10,
+    "statement": "Hierarchical processing enables efficient feature extraction through stages."
+  },
+  {
+    "id": 11,
+    "statement": "Biased prior probabilities can lead to inaccurate conclusions."
+  },
+  {
+    "id": 12,
+    "statement": "Prior probability represents subjective, informative, initial beliefs."
+  },
+  {
+    "id": 13,
+    "statement": "Sensory processing involves neural transmission, encoding, and analysis stages."
+  },
+  {
+    "id": 14,
+    "statement": "Bayesian inference's prior probability comes from existing knowledge sources."
+  },
+  {
+    "id": 15,
+    "statement": "Sentience refers to unique, subjective, internal, personal experiences."
+  },
+  {
+    "id": 16,
+    "statement": "Sentience requires subjective experiences and emotional awareness."
+  },
+  {
+    "id": 17,
+    "statement": "Brain processes sensory information through hierarchical neural transmission and analysis."
+  },
+  {
+    "id": 18,
+    "statement": "Brain's sensory processing involves detection, transmission, encoding, and analysis stages."
+  },
+  {
+    "id": 19,
+    "statement": "Synaptic plasticity allows neural connections to strengthen or weaken with experience."
+  },
+  {
+    "id": 20,
+    "statement": "Synaptic plasticity reorganizes neural connections through experience and learning."
+  },
+  {
+    "id": 21,
+    "statement": "Brain processes sensory information through neural transmission, encoding, and analysis stages."
+  },
+  {
+    "id": 22,
+    "statement": "Sentience is subjective experiences unique to individual consciousness."
+  },
+  {
+    "id": 23,
+    "statement": "Sentience encompasses internal, personal, and subjective experiences and emotions."
+  },
+  {
+    "id": 24,
+    "statement": "Sentience encompasses internal, personal, subjective experiences and emotions."
+  },
+  {
+    "id": 25,
+    "statement": "Hierarchical brain processing involves sequential refinement of sensory information."
+  },
+  {
+    "id": 26,
+    "statement": "Brain processing involves step-by-step analysis of sensory information."
+  },
+  {
+    "id": 27,
+    "statement": "Sentience refers to internal, personal, subjective experiences and emotions."
+  },
+  {
+    "id": 28,
+    "statement": "Brain processes sensory information through hierarchical neural networks."
+  },
+  {
+    "id": 29,
+    "statement": "Human dignity rooted in biological uniqueness, inherent value."
+  },
+  {
+    "id": 30,
+    "statement": "Synaptic plasticity enables brain reorganization through Hebbian learning and LTP."
+  },
+  {
+    "id": 31,
+    "statement": "Honesty's importance varies by relationship context, dynamics, and goals."
+  },
+  {
+    "id": 32,
+    "statement": "Sentience encompasses subjective experiences, complex behaviors, and emotions."
+  },
+  {
+    "id": 33,
+    "statement": "Hierarchical processing enables efficient feature extraction through sequential filtering stages."
+  },
+  {
+    "id": 34,
+    "statement": "Prior probability represents subjective or objective empirical estimate before evidence."
+  },
+  {
+    "id": 35,
+    "statement": "Bayes' theorem updates probability by combining prior and likelihood."
+  },
+  {
+    "id": 36,
+    "statement": "'Accurate prior probabilities are crucial for reliable Bayesian inference'"
+  },
+  {
+    "id": 37,
+    "statement": "Brain processes information hierarchically through sequential analysis stages."
+  },
+  {
+    "id": 38,
+    "statement": "Complex neural oscillations facilitate multisensory integration through synchronization."
+  },
+  {
+    "id": 39,
+    "statement": "Sentience encompasses internal, personal, and subjective experiences."
+  },
+  {
+    "id": 40,
+    "statement": "Brain's sensory processing involves sequential stages and parallel analysis."
+  },
+  {
+    "id": 41,
+    "statement": "Prior probability combines subjective and objective estimation"
+  },
+  {
+    "id": 42,
+    "statement": "Prior probability combines subjective and objective estimates"
+  },
+  {
+    "id": 43,
+    "statement": "Synaptic plasticity is the ability of neural connections to change."
+  },
+  {
+    "id": 44,
+    "statement": "Sentience refers to internal, subjective experiences and emotions."
+  },
+  {
+    "id": 45,
+    "statement": "Prior probability combines subjective and objective knowledge estimates."
+  },
+  {
+    "id": 46,
+    "statement": "Hierarchical brain processing involves sequential refinement of sensory information."
+  },
+  {
+    "id": 47,
+    "statement": "Rip currents form due to undersea topography and ocean currents"
+  },
+  {
+    "id": 48,
+    "statement": "Subjective experiences are internal, personal, and unique to individuals."
+  },
+  {
+    "id": 49,
+    "statement": "Sentience refers to capacity for subjective experiences and emotions."
+  },
+  {
+    "id": 50,
+    "statement": "Sentience refers to subjective experiences and emotional awareness."
+  },
+  {
+    "id": 51,
+    "statement": "Bayes' theorem combines prior and likelihood mathematically and precisely"
+  },
+  {
+    "id": 52,
+    "statement": "Brain's sensory processing is hierarchical and parallel analysis process."
+  },
+  {
+    "id": 53,
+    "statement": "Neural oscillations in specific brain frequency bands enable multisensory integration."
+  },
+  {
+    "id": 54,
+    "statement": "Biased prior probabilities can lead to inaccurate conclusions conditionally."
+  },
+  {
+    "id": 55,
+    "statement": "Genetic variation provides raw material for natural selection to act upon through traits and characteristics."
+  },
+  {
+    "id": 56,
+    "statement": "Brain processes sensory information through neural transmission, spatial and temporal encoding, and hierarchical analysis."
+  },
+  {
+    "id": 57,
+    "statement": "Brain processes sensory information hierarchically and in parallel."
+  },
+  {
+    "id": 58,
+    "statement": "Neural oscillations in specific frequency bands modulate multisensory integration via attention."
+  },
+  {
+    "id": 59,
+    "statement": "Synaptic plasticity strengthens neural connections through coordinated activity."
+  },
+  {
+    "id": 60,
+    "statement": "Complex neural oscillations synchronize brain activity for multisensory integration."
+  },
+  {
+    "id": 61,
+    "statement": "Brain's sensory processing involves parallel and hierarchical neural networks working together."
+  },
+  {
+    "id": 62,
+    "statement": "Honesty establishes trust by demonstrating reliability and credibility."
+  },
+  {
+    "id": 63,
+    "statement": "Human dignity rooted in biological uniqueness, inherent value, respect, and compassion."
+  },
+  {
+    "id": 64,
+    "statement": "Prior probability combines theoretical, empirical, and expert knowledge sources"
+  },
+  {
+    "id": 65,
+    "statement": "Prior probability represents subjective, informative, dynamic beliefs"
+  },
+  {
+    "id": 66,
+    "statement": "Hierarchical and parallel processing dominates brain's sensory analysis."
+  },
+  {
+    "id": 67,
+    "statement": "Synaptic plasticity enables brain reorganization through Hebbian learning and LTP."
+  },
+  {
+    "id": 68,
+    "statement": "Biased priors can be mitigated by robust Bayesian techniques."
+  },
+  {
+    "id": 69,
+    "statement": "Sensory processing involves hierarchical neural transmission and analysis"
+  },
+  {
+    "id": 70,
+    "statement": "Genetic variation arises from mutations, recombination, and gene flow."
+  },
+  {
+    "id": 71,
+    "statement": "Brain processes sensory info through simultaneous transmission, encoding, and analysis."
+  },
+  {
+    "id": 72,
+    "statement": "Prior probability combines subjective and objective estimation"
+  },
+  {
+    "id": 73,
+    "statement": "Accurate prior probabilities ensure objective Bayesian inference and decisions."
+  },
+  {
+    "id": 74,
+    "statement": "Honesty not always foundation of trust in all situations"
+  },
+  {
+    "id": 75,
+    "statement": "Human dignity rooted in unique cognitive and emotional capacities."
+  },
+  {
+    "id": 76,
+    "statement": "Sentience is closely tied to complex behaviors and interactions"
+  },
+  {
+    "id": 77,
+    "statement": "Empirical evidence and expert consensus inform prior probability estimation."
+  },
+  {
+    "id": 78,
+    "statement": "Brain processes sensory information in hierarchical, sequential stages."
+  },
+  {
+    "id": 79,
+    "statement": "Bayes' theorem accommodates uncertainty in prior probabilities and likelihood."
+  },
+  {
+    "id": 80,
+    "statement": "Bayes' theorem updates probability with new evidence mathematically and precisely."
+  },
+  {
+    "id": 81,
+    "statement": "Sentience is capacity for internal, private subjective experiences and emotions."
+  },
+  {
+    "id": 82,
+    "statement": "Sentience arises from complex neural processing and subjective experiences."
+  },
+  {
+    "id": 83,
+    "statement": "Sentience refers to consciousness and subjective emotional experiences."
+  },
+  {
+    "id": 84,
+    "statement": "Honesty's importance is dependent on relationship context and goals"
+  },
+  {
+    "id": 85,
+    "statement": "Sensory information processed in hierarchical step-by-step refinement stages"
+  },
+  {
+    "id": 86,
+    "statement": "Honesty's importance varies by relationship context and goals."
+  },
+  {
+    "id": 87,
+    "statement": "Brain regions coordinate through simultaneous, sequential interactions and oscillations."
+  },
+  {
+    "id": 88,
+    "statement": "Brain processes information hierarchically through sequential analysis stages."
+  },
+  {
+    "id": 89,
+    "statement": "Biased prior probabilities can lead to inaccurate conclusions always."
+  },
+  {
+    "id": 90,
+    "statement": "Synaptic plasticity strengthens neuron connections through Hebbian learning"
+  },
+  {
+    "id": 91,
+    "statement": "Prior probability is subjective or objective based on context."
+  },
+  {
+    "id": 92,
+    "statement": "Collective knowledge aggregates empirical, theoretical, expert, and prior knowledge."
+  },
+  {
+    "id": 93,
+    "statement": "Prior probability combines multiple knowledge sources: theoretical, empirical, and expert."
+  },
+  {
+    "id": 94,
+    "statement": "Bayes' theorem updates probability combining prior and likelihood"
+  },
+  {
+    "id": 95,
+    "statement": "Honesty's importance varies by relationship context and goals"
+  },
+  {
+    "id": 96,
+    "statement": "Prior Probability Combines Subjective and Objective Estimation"
+  },
+  {
+    "id": 97,
+    "statement": "Synaptic plasticity enables brain reorganization through Hebbian learning and LTP."
+  },
+  {
+    "id": 98,
+    "statement": "Hierarchical brain processing involves sequential refinement of sensory information."
+  },
+  {
+    "id": 99,
+    "statement": "Sentience encompasses internal, personal, subjective experiences and emotions."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 17,
+  "statement": "Brain processes sensory information through hierarchical neural transmission and analysis."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 17,
+  "statement": "Brain processes sensory information through hierarchical neural transmission and analysis."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'll start by identifying one aspect of the item from the knowledge base that I'm least confident about, which is:
+
+Item to Discuss:
+{
+"id": 17,
+"statement": "Brain processes sensory information through hierarchical neural transmission and analysis."
+}
+
+Things I’m Uncertain About This Item:
+What exactly does "neural transmission" refer to in the context of brain processing sensory information?
+
+Specific Clarifying Question:
+Can you elaborate on the concept of neural transmission in the sense of how information is transmitted from one neuron to another? Is it related to synapses, or is it a specific process within the neuron itself?

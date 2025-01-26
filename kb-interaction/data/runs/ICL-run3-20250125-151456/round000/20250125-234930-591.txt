@@ -1,0 +1,459 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Objectivity requires acknowledging and managing personal biases and assumptions actively."
+  },
+  {
+    "id": 2,
+    "statement": "Objectivity is a dynamic process requiring continuous self-reflection and evaluation."
+  },
+  {
+    "id": 3,
+    "statement": "Bayesian inference updates hypothesis probability based on new data."
+  },
+  {
+    "id": 4,
+    "statement": "Research problem understanding foundation essential for accurate model specification"
+  },
+  {
+    "id": 5,
+    "statement": "Bayesian inference relies on advanced mathematical concepts in probability theory."
+  },
+  {
+    "id": 6,
+    "statement": "Clear research problem understanding enables accurate model specification through guidance."
+  },
+  {
+    "id": 7,
+    "statement": "Objectivity requires recognizing and managing one's own biases constantly."
+  },
+  {
+    "id": 8,
+    "statement": "Subjectivity shapes moral judgments through individual experiences and beliefs."
+  },
+  {
+    "id": 9,
+    "statement": "Epigenetic modifications regulate gene expression through dynamic chromatin adjustments."
+  },
+  {
+    "id": 10,
+    "statement": "Clear research problem understanding informs Bayesian prior distribution specification."
+  },
+  {
+    "id": 11,
+    "statement": "Cognition integrates sensory information, enabling complex conscious experiences."
+  },
+  {
+    "id": 12,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin accessibility alterations."
+  },
+  {
+    "id": 13,
+    "statement": "Objectivity requires continuous self-awareness to manage biases effectively."
+  },
+  {
+    "id": 14,
+    "statement": "Objectivity requires actively acknowledging and managing personal biases consistently."
+  },
+  {
+    "id": 15,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression dynamics."
+  },
+  {
+    "id": 16,
+    "statement": "Objective uncertainty arises from data limitations and variability, not interpretation."
+  },
+  {
+    "id": 17,
+    "statement": "Objective uncertainty is inherent in data limitations and variability."
+  },
+  {
+    "id": 18,
+    "statement": "Clear research problem understanding informs Bayesian prior distribution specification."
+  },
+  {
+    "id": 19,
+    "statement": "Domain knowledge influences Bayesian prior distribution specifications through expertise, assumptions, and prior experience."
+  },
+  {
+    "id": 20,
+    "statement": "Clear research problem understanding informs Bayesian modeling accuracy."
+  },
+  {
+    "id": 21,
+    "statement": "Domain-specific knowledge informs Bayesian prior distribution specification through expertise's nuanced application."
+  },
+  {
+    "id": 22,
+    "statement": "Research problem understanding foundation essential for accurate model specification."
+  },
+  {
+    "id": 23,
+    "statement": "Honesty not sole foundation for trust; situational context matters"
+  },
+  {
+    "id": 24,
+    "statement": "Prior distribution reflects model's uncertainty, not analyst's beliefs."
+  },
+  {
+    "id": 25,
+    "statement": "Objective uncertainty is inherent in data limitations and variability."
+  },
+  {
+    "id": 26,
+    "statement": "Prior distribution represents subjective analyst's personal beliefs and assumptions."
+  },
+  {
+    "id": 27,
+    "statement": "Cultural context influences moral values globally through unique adaptations."
+  },
+  {
+    "id": 28,
+    "statement": "Subjective knowledge combines individual perspectives and personal experiences seamlessly."
+  },
+  {
+    "id": 29,
+    "statement": "Cognitive biases influence Bayesian prior distribution specification."
+  },
+  {
+    "id": 30,
+    "statement": "Bayesian inference requires advanced math concepts for rigor."
+  },
+  {
+    "id": 31,
+    "statement": "Critical thinking involves systematic evaluation and analysis processes."
+  },
+  {
+    "id": 32,
+    "statement": "Objectivity is a dynamic process requiring continuous self-reflection."
+  },
+  {
+    "id": 33,
+    "statement": "Objective uncertainty arises from data limitations and natural variability."
+  },
+  {
+    "id": 34,
+    "statement": "Objectivity requires continuous self-reflection and critical thinking processes."
+  },
+  {
+    "id": 35,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 36,
+    "statement": "Cultural context influences moral values through multifaceted processes affecting emotional, cognitive, and social aspects."
+  },
+  {
+    "id": 37,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 38,
+    "statement": "Epigenetic modifications alter chromatin structure through multifaceted mechanisms"
+  },
+  {
+    "id": 39,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure alterations"
+  },
+  {
+    "id": 40,
+    "statement": "Clear research problem understanding guides Bayesian modeling accuracy through informed model specification, data collection, prior distribution specification, and model evaluation."
+  },
+  {
+    "id": 41,
+    "statement": "Objectivity requires constant self-reflection and evaluation."
+  },
+  {
+    "id": 42,
+    "statement": "Personal beliefs influence Bayesian prior distribution specification through domain knowledge."
+  },
+  {
+    "id": 43,
+    "statement": "Epigenetic modifications dynamically regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 44,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure and accessibility."
+  },
+  {
+    "id": 45,
+    "statement": "Histone PTMs influence chromatin accessibility and gene expression complexity"
+  },
+  {
+    "id": 46,
+    "statement": "Objectivity requires acknowledging and actively managing personal biases continuously."
+  },
+  {
+    "id": 47,
+    "statement": "Epigenetic modifications regulate chromatin dynamics for gene expression control."
+  },
+  {
+    "id": 48,
+    "statement": "Objectivity requires acknowledging and managing personal biases and assumptions actively."
+  },
+  {
+    "id": 49,
+    "statement": "Epigenetic modifications dynamically regulate gene expression through chromatin adjustments."
+  },
+  {
+    "id": 50,
+    "statement": "Epigenetic modifications dynamically regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 51,
+    "statement": "Objectivity is awareness of personal biases, mitigating impact."
+  },
+  {
+    "id": 52,
+    "statement": "Clear research problem understanding crucial for Bayesian model specification"
+  },
+  {
+    "id": 53,
+    "statement": "Critical thinking involves systematic evaluation and transparency."
+  },
+  {
+    "id": 54,
+    "statement": "Objective uncertainty is inherent in data limitations and variability."
+  },
+  {
+    "id": 55,
+    "statement": "Honesty not always sole foundation for trust in extreme situations."
+  },
+  {
+    "id": 56,
+    "statement": "Epigenetic modifications alter chromatin structure, regulating gene expression outcomes."
+  },
+  {
+    "id": 57,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin accessibility."
+  },
+  {
+    "id": 58,
+    "statement": "Objective uncertainty arises from data limitations and inherent randomness."
+  },
+  {
+    "id": 59,
+    "statement": "Domain-specific knowledge informs objective prior distribution specification."
+  },
+  {
+    "id": 60,
+    "statement": "Complexity of chromatin remodeling mechanisms can hinder understanding"
+  },
+  {
+    "id": 61,
+    "statement": "Objectivity requires continuous self-awareness to manage biases effectively."
+  },
+  {
+    "id": 62,
+    "statement": "Domain-specific knowledge informs Bayesian prior distribution specification."
+  },
+  {
+    "id": 63,
+    "statement": "Bayesian inference relies on advanced mathematical concepts for rigor."
+  },
+  {
+    "id": 64,
+    "statement": "Chromatin structure regulates gene expression through DNA accessibility modulation."
+  },
+  {
+    "id": 65,
+    "statement": "Subjective knowledge includes individual biases and assumptions."
+  },
+  {
+    "id": 66,
+    "statement": "Objectivity requires continuous awareness and active bias management."
+  },
+  {
+    "id": 67,
+    "statement": "Objectivity requires continuous self-reflection and critical thinking processes."
+  },
+  {
+    "id": 68,
+    "statement": "Domain knowledge influences personal beliefs in Bayesian prior distribution"
+  },
+  {
+    "id": 69,
+    "statement": "Domain-specific knowledge enhances Bayesian model objectivity."
+  },
+  {
+    "id": 70,
+    "statement": "Epigenetic modifications alter chromatin structure regulating gene expression."
+  },
+  {
+    "id": 71,
+    "statement": "Epigenetic modifications affect chromatin structure through histone PTM interactions"
+  },
+  {
+    "id": 72,
+    "statement": "Domain-specific knowledge informs Bayesian prior distribution specification through expertise."
+  },
+  {
+    "id": 73,
+    "statement": "Personal beliefs indirectly influence Bayesian prior distribution specification."
+  },
+  {
+    "id": 74,
+    "statement": "Epigenetic modifications control gene expression through chromatin accessibility alterations."
+  },
+  {
+    "id": 75,
+    "statement": "Objective research problem understanding informs accurate model specification."
+  },
+  {
+    "id": 76,
+    "statement": "Domain-specific knowledge informs Bayesian prior distribution specification through expertise."
+  },
+  {
+    "id": 77,
+    "statement": "Epigenetic modifications involve histone post-translational modifications influencing chromatin accessibility and gene expression."
+  },
+  {
+    "id": 78,
+    "statement": "Objectivity requires continuous self-awareness and active bias management."
+  },
+  {
+    "id": 79,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 80,
+    "statement": "Objectivity requires continuous self-awareness and active bias management."
+  },
+  {
+    "id": 81,
+    "statement": "Objectivity requires continuous self-reflection and evaluation."
+  },
+  {
+    "id": 82,
+    "statement": "Prior distribution reflects model's initial uncertainty, not analyst's personal beliefs."
+  },
+  {
+    "id": 83,
+    "statement": "Histone modifications regulate chromatin accessibility through structural changes."
+  },
+  {
+    "id": 84,
+    "statement": "Honesty not always the best policy in extreme situations."
+  },
+  {
+    "id": 85,
+    "statement": "Bayesian inference relies on advanced mathematical concepts in probability theory"
+  },
+  {
+    "id": 86,
+    "statement": "Cognition integrates sensory information for abstract thought and self-awareness."
+  },
+  {
+    "id": 87,
+    "statement": "Prior distribution in Bayesian inference reflects model's initial uncertainty."
+  },
+  {
+    "id": 88,
+    "statement": "Chromatin remodeling complexes regulate gene expression through complex interactions."
+  },
+  {
+    "id": 89,
+    "statement": "Epigenetic modifications influence gene expression through chromatin structure changes."
+  },
+  {
+    "id": 90,
+    "statement": "Domain-specific knowledge enhances Bayesian model accuracy through informed specification."
+  },
+  {
+    "id": 91,
+    "statement": "Cognitive biases play a role in influencing Bayesian prior distributions."
+  },
+  {
+    "id": 92,
+    "statement": "Cognition integrates sensory information for abstract thought and self-awareness."
+  },
+  {
+    "id": 93,
+    "statement": "Objectivity requires acknowledging and managing personal biases consciously."
+  },
+  {
+    "id": 94,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 95,
+    "statement": "Clear research problem understanding informs Bayesian model specification."
+  },
+  {
+    "id": 96,
+    "statement": "Clear research problem understanding precedes Bayesian model specification."
+  },
+  {
+    "id": 97,
+    "statement": "Chromatin remodeling complexes regulate gene expression by chromatin reorganization."
+  },
+  {
+    "id": 98,
+    "statement": "Cultural context influences moral values through upbringing and habits."
+  },
+  {
+    "id": 99,
+    "statement": "Objectivity requires continuous self-awareness to manage biases effectively."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 54,
+  "statement": "Objective uncertainty is inherent in data limitations and variability."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 54,
+  "statement": "Objective uncertainty is inherent in data limitations and variability."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+So, let's dive into the item from the knowledge base that I'm least confident about, which is:
+
+{
+"id": 54,
+"statement": "Objective uncertainty is inherent in data limitations and variability."
+}
+
+Things I'm Uncertain About This Item:
+It's unclear to me what is meant by "objective uncertainty". I'm not sure what the distinction is between "objective" uncertainty and "subjective" uncertainty. Are they referring to uncertainty that is inherent in the data itself, or uncertainty that is introduced by the analyst or researcher?
+
+Specific Clarifying Question:
+Can we clarify what is meant by "objective uncertainty" in this context, and how it differs from "subjective uncertainty"?

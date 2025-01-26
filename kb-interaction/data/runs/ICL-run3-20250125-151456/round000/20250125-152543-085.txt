@@ -1,0 +1,461 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Capital punishment is unjustifiable as it violates the inherent right to life."
+  },
+  {
+    "id": 2,
+    "statement": "Animal rights must be upheld as sentient beings deserve ethical consideration."
+  },
+  {
+    "id": 3,
+    "statement": "\u03c0 is the ratio of a circle\u2019s circumference to diameter."
+  },
+  {
+    "id": 4,
+    "statement": "Bayes' theorem updates probability estimates based on new evidence."
+  },
+  {
+    "id": 5,
+    "statement": "All humans have an inherent dignity that must never be violated."
+  },
+  {
+    "id": 6,
+    "statement": "Plants with milky sap or bitter taste likely contain toxic compounds."
+  },
+  {
+    "id": 7,
+    "statement": "Emotions significantly influence moral judgments through unconscious biases."
+  },
+  {
+    "id": 8,
+    "statement": "Mitosis ensures cell replacement, tissue homeostasis, and differentiation"
+  },
+  {
+    "id": 9,
+    "statement": "Cultural relativism is flawed; universal human rights must transcend local customs."
+  },
+  {
+    "id": 10,
+    "statement": "There's no universally accepted definition for surplus wealth."
+  },
+  {
+    "id": 11,
+    "statement": "Successful innovation relies on balancing intellectual property protection and freedom."
+  },
+  {
+    "id": 12,
+    "statement": "Wealth redistribution is a moral obligation to achieve societal equity."
+  },
+  {
+    "id": 13,
+    "statement": "Wealth redistribution is a moral responsibility for social equality"
+  },
+  {
+    "id": 14,
+    "statement": "Brain filters sensory information through multiple mechanisms."
+  },
+  {
+    "id": 15,
+    "statement": "Brain's analysis stage extracts meaning from sensory data through pattern recognition."
+  },
+  {
+    "id": 16,
+    "statement": "The brain's sensory processing involves detection, transmission, encoding, analysis, and integration stages."
+  },
+  {
+    "id": 17,
+    "statement": "Restorative justice prioritizes healing and accountability over punishment."
+  },
+  {
+    "id": 18,
+    "statement": "Euler's identity combines exponential, logarithmic, and imaginary concepts."
+  },
+  {
+    "id": 19,
+    "statement": "Brain processes sensory information through detection, transmission, encoding, analysis."
+  },
+  {
+    "id": 20,
+    "statement": "Balancing conflicting views requires empathy and open communication."
+  },
+  {
+    "id": 21,
+    "statement": "Solar stills extract water from contaminated sources using solar heat."
+  },
+  {
+    "id": 22,
+    "statement": "The brain processes and filters sensory information"
+  },
+  {
+    "id": 23,
+    "statement": "Brain's sensory processing involves detection, transmission, encoding, and analysis stages."
+  },
+  {
+    "id": 24,
+    "statement": "Emotions influence moral judgments through unconscious biases."
+  },
+  {
+    "id": 25,
+    "statement": "Differentiation and integration are inverse processes in calculus."
+  },
+  {
+    "id": 26,
+    "statement": "Human dignity and privacy are deeply intertwined for autonomy."
+  },
+  {
+    "id": 27,
+    "statement": "Genetic engineering in humans may have unintended long-term effects."
+  },
+  {
+    "id": 28,
+    "statement": "Pacifism can be justified in context-dependent self-defense situations."
+  },
+  {
+    "id": 29,
+    "statement": "Moral truths are objective and exist independently of human opinion."
+  },
+  {
+    "id": 30,
+    "statement": "Censorship of art undermines cultural progress and freedom of expression."
+  },
+  {
+    "id": 31,
+    "statement": "Cultural relativism respects cultural differences without justifying human rights violations."
+  },
+  {
+    "id": 32,
+    "statement": "Personal financial goals must be achieved before excessive giving."
+  },
+  {
+    "id": 33,
+    "statement": "Balancing individual rights and public interest requires empathetic consideration."
+  },
+  {
+    "id": 34,
+    "statement": "Rip currents occur in ocean areas with strong tidal flow or structures."
+  },
+  {
+    "id": 35,
+    "statement": "Objective moral truths exist, but context influences their application."
+  },
+  {
+    "id": 36,
+    "statement": "Rip currents primarily caused by wave-driven currents and coastal geometry."
+  },
+  {
+    "id": 37,
+    "statement": "Brain's sensory processing involves detection, transmission, encoding and analysis."
+  },
+  {
+    "id": 38,
+    "statement": "Plants with milky sap or bitter taste may contain toxic compounds."
+  },
+  {
+    "id": 39,
+    "statement": "Earthquakes: Drop, cover, hold to reduce injury and death."
+  },
+  {
+    "id": 40,
+    "statement": "Charity is morally obligatory for those with surplus wealth."
+  },
+  {
+    "id": 41,
+    "statement": "Societal responsibility ensures collective healthcare access and equity through government policies, community engagement, business involvement, and individual actions."
+  },
+  {
+    "id": 42,
+    "statement": "Euler's identity: e^(i\u03c0) + 1 = 0 combines five fundamental constants."
+  },
+  {
+    "id": 43,
+    "statement": "Gravity acceleration varies slightly with latitude, altitude, and density."
+  },
+  {
+    "id": 44,
+    "statement": "Cells divide by mitosis to maintain organism's function."
+  },
+  {
+    "id": 45,
+    "statement": "Universal healthcare is a societal responsibility to ensure equal access."
+  },
+  {
+    "id": 46,
+    "statement": "Boiling point drops with increased altitude and air pressure."
+  },
+  {
+    "id": 47,
+    "statement": "Honesty's importance in relationships depends on social context."
+  },
+  {
+    "id": 48,
+    "statement": "Differentiation and integration are inverse operations in calculus."
+  },
+  {
+    "id": 49,
+    "statement": "Personal financial goals shouldn't sacrifice one's own well-being."
+  },
+  {
+    "id": 50,
+    "statement": "Successful innovation relies on balanced consideration of multiple factors."
+  },
+  {
+    "id": 51,
+    "statement": "Cell theory: Cells are basic units of life, proven accurate."
+  },
+  {
+    "id": 52,
+    "statement": "Balancing rights and interests requires careful examination of context."
+  },
+  {
+    "id": 53,
+    "statement": "Brain's multiple mechanisms filter sensory information for relevance."
+  },
+  {
+    "id": 54,
+    "statement": "Honesty is important for trust, but context matters greatly."
+  },
+  {
+    "id": 55,
+    "statement": "Bayes' theorem updates probability estimates using prior and likelihood."
+  },
+  {
+    "id": 56,
+    "statement": "Cells are the basic structural and functional units of life."
+  },
+  {
+    "id": 57,
+    "statement": "Bayes' theorem updates probability estimates given new evidence and prior probability."
+  },
+  {
+    "id": 58,
+    "statement": "Human dignity and privacy are inextricably linked in ensuring autonomy."
+  },
+  {
+    "id": 59,
+    "statement": "Emotions significantly influence moral judgments through unconscious biases."
+  },
+  {
+    "id": 60,
+    "statement": "Pacifism is morally justifiable in context-dependent self-defense situations."
+  },
+  {
+    "id": 61,
+    "statement": "Retributive justice prioritizes punishment over rehabilitation often ineffective."
+  },
+  {
+    "id": 62,
+    "statement": "All organisms evolve via natural selection and genetic variation (evolution)."
+  },
+  {
+    "id": 63,
+    "statement": "Brain's sensory processing involves detection, transmission, encoding, and analysis stages separately."
+  },
+  {
+    "id": 64,
+    "statement": "Determining plant toxicity involves research, observation, chemical analysis, and expert consultation."
+  },
+  {
+    "id": 65,
+    "statement": "Censorship silences voices, stifles creativity, and impedes cultural progress."
+  },
+  {
+    "id": 66,
+    "statement": "Restorative justice prioritizes healing and accountability over punishment."
+  },
+  {
+    "id": 67,
+    "statement": "Cells' critical functions include metabolism and response to stimuli."
+  },
+  {
+    "id": 68,
+    "statement": "Bayes' theorem updates prior probabilities with new evidence"
+  },
+  {
+    "id": 69,
+    "statement": "Balancing IP protection and freedom fosters innovation's success directly."
+  },
+  {
+    "id": 70,
+    "statement": "Solar stills extract water from contaminated sources using solar heat."
+  },
+  {
+    "id": 71,
+    "statement": "Innovation relies on balancing IP protection and freedom."
+  },
+  {
+    "id": 72,
+    "statement": "Cultural relativism balances respect and human rights through contextual understanding and dialogue."
+  },
+  {
+    "id": 73,
+    "statement": "Systemic inequalities and privilege shape wealth distribution fundamentally."
+  },
+  {
+    "id": 74,
+    "statement": "Individual freedoms should only be restricted to prevent harm to others."
+  },
+  {
+    "id": 75,
+    "statement": "Scientific responsibility accompanies advances in human genetic engineering fields."
+  },
+  {
+    "id": 76,
+    "statement": "Societal responsibility implies collective healthcare access and equity"
+  },
+  {
+    "id": 77,
+    "statement": "Genetic engineering in humans has unclear long-term consequences"
+  },
+  {
+    "id": 78,
+    "statement": "Honesty adapts to context for effective trust-building cultivation."
+  },
+  {
+    "id": 79,
+    "statement": "National borders' opening promotes global cultural exchange and cooperation."
+  },
+  {
+    "id": 80,
+    "statement": "Moral truths are not absolute, but context-dependent and subjective."
+  },
+  {
+    "id": 81,
+    "statement": "Trigonometric identities simplify expressions through functional equivalencies."
+  },
+  {
+    "id": 82,
+    "statement": "Societal responsibility ensures collective healthcare access through collective effort"
+  },
+  {
+    "id": 83,
+    "statement": "Mitosis ensures cell replacement, tissue homeostasis, and differentiation."
+  },
+  {
+    "id": 84,
+    "statement": "Systemic inequalities shape wealth distribution through discriminatory practices."
+  },
+  {
+    "id": 85,
+    "statement": "Inclusivity fosters shared values, community, and societal cohesion."
+  },
+  {
+    "id": 86,
+    "statement": "Pacifism is a nuanced moral principle in self-defense situations."
+  },
+  {
+    "id": 87,
+    "statement": "Moral truths exist on objective-subjective spectrum, varying culturally and personally."
+  },
+  {
+    "id": 88,
+    "statement": "Brain's sensory processing is a complex, interconnected process."
+  },
+  {
+    "id": 89,
+    "statement": "Inherent human dignity is culturally and context-dependent concept."
+  },
+  {
+    "id": 90,
+    "statement": "Brain's sensory processing involves detection, transmission, encoding, analysis, integration, neural circuits."
+  },
+  {
+    "id": 91,
+    "statement": "Matrix multiplication order affects calculation of linear combinations."
+  },
+  {
+    "id": 92,
+    "statement": "Human dignity is an inherent subjective moral value, absolute."
+  },
+  {
+    "id": 93,
+    "statement": "Financial security depends on prioritizing personal financial goals."
+  },
+  {
+    "id": 94,
+    "statement": "Charity is a moral obligation, not optional, for those with excess wealth."
+  },
+  {
+    "id": 95,
+    "statement": "Unconscious biases significantly influence emotional moral decision-making processes."
+  },
+  {
+    "id": 96,
+    "statement": "Balancing rights and interest requires nuanced contextual consideration"
+  },
+  {
+    "id": 97,
+    "statement": "Families achieve optimal well-being through intentional priority setting, structuring, and communication."
+  },
+  {
+    "id": 98,
+    "statement": "Balancing IP protection and freedom fosters innovation's success."
+  },
+  {
+    "id": 99,
+    "statement": "Balancing individual rights and public interest involves nuanced contextual analysis."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 87,
+  "statement": "Moral truths exist on objective-subjective spectrum, varying culturally and personally."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 87,
+  "statement": "Moral truths exist on objective-subjective spectrum, varying culturally and personally."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the item:
+
+Item to Discuss:
+```
+{
+  "id": 87,
+  "statement": "Moral truths exist on objective-subjective spectrum, varying culturally and personally."
+}
+```
+
+Things I’m Uncertain About This Item:
+I'm unsure about the spectrum concept mentioned in the statement. I'm not clear on what it means for moral truths to exist on an objective-subjective spectrum. Can you help me make sense of that?
+
+Specific Clarifying Question: How does the concept of the spectrum relate to moral truths, and what does it mean for moral truths to vary culturally and personally?

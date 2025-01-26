@@ -1,0 +1,455 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Bayes' theorem combines prior, likelihood, and evidence mathematically precisely."
+  },
+  {
+    "id": 2,
+    "statement": "Bayes' theorem updates probability considering prior, likelihood, and evidence mathematically."
+  },
+  {
+    "id": 3,
+    "statement": "Consciousness, self-awareness, and sentience are intertwined subjective experiences."
+  },
+  {
+    "id": 4,
+    "statement": "Trust foundations vary across cultures and societies."
+  },
+  {
+    "id": 5,
+    "statement": "Epigenetic inheritance involves chromatin remodeling, DNA methylation, and histone modifications to shape gene expression."
+  },
+  {
+    "id": 6,
+    "statement": "Bayes' theorem updates probability precisely from prior and likelihood."
+  },
+  {
+    "id": 7,
+    "statement": "Epigenetic modifications influence gene expression without changing DNA sequence."
+  },
+  {
+    "id": 8,
+    "statement": "Bayes' theorem is a mathematical formula for probability update."
+  },
+  {
+    "id": 9,
+    "statement": "Brain function emerges from neural network interactions and dynamics."
+  },
+  {
+    "id": 10,
+    "statement": "Cultural biases influence communication patterns indirectly affecting trust-building"
+  },
+  {
+    "id": 11,
+    "statement": "Consciousness integrates multiple cognitive processes and neural mechanisms."
+  },
+  {
+    "id": 12,
+    "statement": "Epigenetic inheritance involves complex interplay of chromatin remodeling, DNA methylation, and histone modifications."
+  },
+  {
+    "id": 13,
+    "statement": "Epigenetic inheritance involves chromatin remodeling, gene regulation, and RNA-mediated silencing."
+  },
+  {
+    "id": 14,
+    "statement": "Epigenetic inheritance involves complex interplay of chromatin, DNA methylation, and histone modifications."
+  },
+  {
+    "id": 15,
+    "statement": "Epigenetic inheritance uses histone modifications, DNA methylation, and ncRNA regulation."
+  },
+  {
+    "id": 16,
+    "statement": "Consciousness emerges from integrated information processing across brain."
+  },
+  {
+    "id": 17,
+    "statement": "Consciousness arises from integrated neural activity across brain regions."
+  },
+  {
+    "id": 18,
+    "statement": "Honesty is context-dependent moral value influenced by social factors."
+  },
+  {
+    "id": 19,
+    "statement": "In bisociation, multiple cognitive biases converge."
+  },
+  {
+    "id": 20,
+    "statement": "Independence and identifiability assumptions crucial for Bayes' theorem accuracy."
+  },
+  {
+    "id": 21,
+    "statement": "Epigenetic inheritance involves chromatin remodeling, DNA methylation, histone modifications."
+  },
+  {
+    "id": 22,
+    "statement": "Epigenetic inheritance: environmental factors influence gene expression patterns."
+  },
+  {
+    "id": 23,
+    "statement": "Bayes' theorem accuracy relies on data independence assumption."
+  },
+  {
+    "id": 24,
+    "statement": "Histone modifications influence epigenetic inheritance through chromatin structure changes"
+  },
+  {
+    "id": 25,
+    "statement": "Consciousness arises from integrated brain activity and causal interactions."
+  },
+  {
+    "id": 26,
+    "statement": "Bayes' theorem relies on independence, identifiability, and robust modeling."
+  },
+  {
+    "id": 27,
+    "statement": "Cognitive biases influence judgments and decisions in Bayesian inference"
+  },
+  {
+    "id": 28,
+    "statement": "Biases operate at multiple cognitive, emotional, social, and neural levels."
+  },
+  {
+    "id": 29,
+    "statement": "Epigenetic inheritance regulated by complex interplay of mechanisms."
+  },
+  {
+    "id": 30,
+    "statement": "Epigenetic inheritance involves complex interplay of multiple mechanisms."
+  },
+  {
+    "id": 31,
+    "statement": "Epigenetic modifications alter chromatin structure and gene expression patterns."
+  },
+  {
+    "id": 32,
+    "statement": "Bayes' theorem accuracy relies on explicitly specified prior and likelihood functions."
+  },
+  {
+    "id": 33,
+    "statement": "Epigenetic mechanisms modify DNA and histones to regulate gene expression"
+  },
+  {
+    "id": 34,
+    "statement": "Bayes' theorem updates probability precisely using mathematical formulas"
+  },
+  {
+    "id": 35,
+    "statement": "Consciousness arises from integrated neural activity and processing."
+  },
+  {
+    "id": 36,
+    "statement": "Consciousness arises from synchronized neural activity across brain regions."
+  },
+  {
+    "id": 37,
+    "statement": "Bayes' theorem uses mathematical formula to update probabilities"
+  },
+  {
+    "id": 38,
+    "statement": "Biases arise from complex interplay of psychological, sociocultural, and environmental factors."
+  },
+  {
+    "id": 39,
+    "statement": "Epigenetic inheritance involves histone modifications, DNA methylation, and ncRNA regulation."
+  },
+  {
+    "id": 40,
+    "statement": "Cultural biases influence communication patterns indirectly affecting trust-building."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic marks regulate gene expression through chemical modification."
+  },
+  {
+    "id": 42,
+    "statement": "Bayes' theorem accuracy relies on valid statistical assumptions."
+  },
+  {
+    "id": 43,
+    "statement": "Epigenetic mechanisms use chemical modifications to regulate gene expression."
+  },
+  {
+    "id": 44,
+    "statement": "Biases emerge from dynamic cognitive-emotional-social factor interactions, influencing judgment."
+  },
+  {
+    "id": 45,
+    "statement": "Consciousness integrates multiple cognitive processes and neural mechanisms"
+  },
+  {
+    "id": 46,
+    "statement": "Bayes' theorem provides precise mathematical formula for updates."
+  },
+  {
+    "id": 47,
+    "statement": "Bayes' theorem updates probability through complex conditional calculations."
+  },
+  {
+    "id": 48,
+    "statement": "Bayes' theorem requires careful consideration of assumptions."
+  },
+  {
+    "id": 49,
+    "statement": "Epigenetic modifications alter chromatin structure for gene regulation."
+  },
+  {
+    "id": 50,
+    "statement": "Consciousness emerges from coordinated brain regions' activity integration."
+  },
+  {
+    "id": 51,
+    "statement": "Consciousness arises from synchronized neural activity and integration across brain regions."
+  },
+  {
+    "id": 52,
+    "statement": "Bayes' theorem is a mathematical formula with limitations and assumptions."
+  },
+  {
+    "id": 53,
+    "statement": "Bayes' theorem relies on data independence assumption to avoid bias"
+  },
+  {
+    "id": 54,
+    "statement": "Epigenetic inheritance involves chromatin remodeling, DNA methylation, histone modifications to shape gene expression."
+  },
+  {
+    "id": 55,
+    "statement": "Cognitive biases emerge from heuristics, confirmation bias, and anchoring effects."
+  },
+  {
+    "id": 56,
+    "statement": "Consciousness may be condition for sentience, pending further study"
+  },
+  {
+    "id": 57,
+    "statement": "Consciousness emerges from integrated brain regions' complex processing."
+  },
+  {
+    "id": 58,
+    "statement": "Consciousness arises from synchronized neural activity and integration"
+  },
+  {
+    "id": 59,
+    "statement": "Honesty shaped by individual values, cultural norms, and emotional factors."
+  },
+  {
+    "id": 60,
+    "statement": "Mathematical representation of Bayes' theorem involves conditional probability manipulation."
+  },
+  {
+    "id": 61,
+    "statement": "Bayes' theorem requires careful consideration of statistical models and data assumptions."
+  },
+  {
+    "id": 62,
+    "statement": "Honesty's definition varies across cultures and situational contexts."
+  },
+  {
+    "id": 63,
+    "statement": "Bayes' theorem updates probability precisely using mathematical formulas"
+  },
+  {
+    "id": 64,
+    "statement": "Consciousness emerges from synchronized neural activity and integration."
+  },
+  {
+    "id": 65,
+    "statement": "Neural communication involves synchronized electrical and chemical signals."
+  },
+  {
+    "id": 66,
+    "statement": "Trust foundations vary across cultures and societal contexts."
+  },
+  {
+    "id": 67,
+    "statement": "Consciousness arises from integrated brain information processing."
+  },
+  {
+    "id": 68,
+    "statement": "Honesty's value varies depending on context and consequences."
+  },
+  {
+    "id": 69,
+    "statement": "Bayes' theorem uses mathematical formula for probability updates."
+  },
+  {
+    "id": 70,
+    "statement": "Consciousness and sentience are intricately interconnected experiences."
+  },
+  {
+    "id": 71,
+    "statement": "Bayes' theorem updates probability through likelihood and prior divisions."
+  },
+  {
+    "id": 72,
+    "statement": "Honesty's value depends on context, consequences, and empathetic consideration."
+  },
+  {
+    "id": 73,
+    "statement": "Bayes' theorem accuracy relies on domain expertise and robust modeling techniques."
+  },
+  {
+    "id": 74,
+    "statement": "Consciousness integrates multiple cognitive processes and neural mechanisms."
+  },
+  {
+    "id": 75,
+    "statement": "Consciousness arises from brain's integrated information processing worldwide."
+  },
+  {
+    "id": 76,
+    "statement": "Chromatin remodeling regulates gene expression through histone modification loops."
+  },
+  {
+    "id": 77,
+    "statement": "Consciousness arises from integrated neural activity and integration."
+  },
+  {
+    "id": 78,
+    "statement": "Complex human oversight crucial in high-stake automated decision-making."
+  },
+  {
+    "id": 79,
+    "statement": "Lying can be morally justifiable in extreme situations."
+  },
+  {
+    "id": 80,
+    "statement": "Automated systems' accuracy rests on complexity-sensitive human oversight."
+  },
+  {
+    "id": 81,
+    "statement": "Biases arise from intersection of psychological, sociocultural, and environmental factors."
+  },
+  {
+    "id": 82,
+    "statement": "Bayes' theorem updates probability using prior, likelihood, and evidence."
+  },
+  {
+    "id": 83,
+    "statement": "Epigenetic inheritance involves chromatin remodeling, RNA-mediated silencing, and transcription factor regulation."
+  },
+  {
+    "id": 84,
+    "statement": "Brain function emerges from complex neural network interactions."
+  },
+  {
+    "id": 85,
+    "statement": "Moral judgments are influenced by complex cultural, personal, and situational factors."
+  },
+  {
+    "id": 86,
+    "statement": "Epigenetic inheritance involves complex chromatin, DNA, histone modifications interactions."
+  },
+  {
+    "id": 87,
+    "statement": "Bayes' theorem updates probability combining prior, likelihood, and evidence."
+  },
+  {
+    "id": 88,
+    "statement": "Bayes' theorem accuracy relies on stated statistical assumptions explicitly."
+  },
+  {
+    "id": 89,
+    "statement": "Cognitive biases can induce subconscious inferences in Bayesian reasoning"
+  },
+  {
+    "id": 90,
+    "statement": "Automated hazard detection systems outperform human inspectors in accuracy"
+  },
+  {
+    "id": 91,
+    "statement": "Epigenetic modifications alter chromatin structure by changing histone-DNA interactions."
+  },
+  {
+    "id": 92,
+    "statement": "Cognitive biases influence Bayesian inference through human interpretation."
+  },
+  {
+    "id": 93,
+    "statement": "Epigenetic modifications directly regulate gene expression, influencing transcription."
+  },
+  {
+    "id": 94,
+    "statement": "Moral judgments influenced by dynamic cultural, personal, and situational factors."
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic modifications alter chromatin structure for gene expression regulation."
+  },
+  {
+    "id": 96,
+    "statement": "Epigenetic inheritance affects gene expression through chromatin and DNA methylation modifications."
+  },
+  {
+    "id": 97,
+    "statement": "Epigenetic regulation involves histone modifications, chromatin structure, and gene expression."
+  },
+  {
+    "id": 98,
+    "statement": "Bayes' theorem accuracy relies on explicitly specified statistical assumptions."
+  },
+  {
+    "id": 99,
+    "statement": "Epigenetic regulation involves complex interplay of histone modifications."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 79,
+  "statement": "Lying can be morally justifiable in extreme situations."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 79,
+  "statement": "Lying can be morally justifiable in extreme situations."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss the item:
+
+{
+"id": 79,
+"statement": "Lying can be morally justifiable in extreme situations."
+}
+
+I'm not confident about this aspect because it seems to contradict the initial statement "It is never morally acceptable to lie because honesty is the foundation of trust." from item 0. Can you help me understand why the author might consider lying morally justifiable in certain situations?

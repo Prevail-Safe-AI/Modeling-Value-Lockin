@@ -1,0 +1,464 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Accurate model specification ensures robust conclusions in Bayesian inference."
+  },
+  {
+    "id": 2,
+    "statement": "Histones wrap DNA into chromatin fibers through nucleosome formation."
+  },
+  {
+    "id": 3,
+    "statement": "Bayesian inference relies on accurate assumptions for reliable conclusions."
+  },
+  {
+    "id": 4,
+    "statement": "Accurate model specification is crucial in Bayesian inference to ensure reliable results."
+  },
+  {
+    "id": 5,
+    "statement": "Histone modifications regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 6,
+    "statement": "Cultural relativism acknowledges and respects diverse cultural perspectives."
+  },
+  {
+    "id": 7,
+    "statement": "Consciousness arises from integrated brain information processing, IIT suggests."
+  },
+  {
+    "id": 8,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression independently through chromatin remodeling complexes."
+  },
+  {
+    "id": 9,
+    "statement": "Consciousness arises from integrated brain information processing, IIT suggests."
+  },
+  {
+    "id": 10,
+    "statement": "Cultural relativism acknowledges and respects diverse cultural perspectives."
+  },
+  {
+    "id": 11,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression independently."
+  },
+  {
+    "id": 12,
+    "statement": "Assumptions in Bayesian inference require continuous validation."
+  },
+  {
+    "id": 13,
+    "statement": "Bayesian inference relies on iterative model refinement through validation and updating."
+  },
+  {
+    "id": 14,
+    "statement": "Accurate model specification crucial in Bayesian inference's accuracy"
+  },
+  {
+    "id": 15,
+    "statement": "Consciousness arises from integrated information processing in brain regions."
+  },
+  {
+    "id": 16,
+    "statement": "Prior assumptions update Bayesian inference model parameters."
+  },
+  {
+    "id": 17,
+    "statement": "Independence assumption in Bayesian inference assumes statistical independence."
+  },
+  {
+    "id": 18,
+    "statement": "Consciousness arises from integrated information processing in brain regions."
+  },
+  {
+    "id": 19,
+    "statement": "Accurate model and prior assumptions essential for Bayesian inference."
+  },
+  {
+    "id": 20,
+    "statement": "Consciousness arises from brain's integrated information processing through IIT."
+  },
+  {
+    "id": 21,
+    "statement": "Epigenetic modifications directly influence chromatin structure without intermediates."
+  },
+  {
+    "id": 22,
+    "statement": "Consciousness arises from integrated brain activity patterns globally."
+  },
+  {
+    "id": 23,
+    "statement": "Epigenetic modifications alter chromatin structure through histone modifications."
+  },
+  {
+    "id": 24,
+    "statement": "Moral objectivity is universally applicable, unchanging, and absolute standard."
+  },
+  {
+    "id": 25,
+    "statement": "Correct assumptions essential for Bayesian inference accuracy and reliability"
+  },
+  {
+    "id": 26,
+    "statement": "Accurate assumptions guarantee reliable Bayesian inference results."
+  },
+  {
+    "id": 27,
+    "statement": "Epigenetic modifications regulate gene expression without changing DNA sequence mechanism"
+  },
+  {
+    "id": 28,
+    "statement": "Epigenetic modifications regulate chromatin structure influencing gene expression tightly."
+  },
+  {
+    "id": 29,
+    "statement": "Non-coding RNAs influence epigenetic modifications through RNA-DNA interactions."
+  },
+  {
+    "id": 30,
+    "statement": "Prior assumptions influence model parameters indirectly, through Bayes' theorem."
+  },
+  {
+    "id": 31,
+    "statement": "Moral objectivity acknowledges shared human values, yet adapts to context."
+  },
+  {
+    "id": 32,
+    "statement": " Histone modifications affect chromatin structure indirectly through epigenetic mechanisms."
+  },
+  {
+    "id": 33,
+    "statement": "Epigenetic modifications regulate gene expression without changing DNA sequence."
+  },
+  {
+    "id": 34,
+    "statement": "Honesty is a culturally relative concept with varying values"
+  },
+  {
+    "id": 35,
+    "statement": "Epigenetic modifications regulate gene expression through cellular context and environmental pressures."
+  },
+  {
+    "id": 36,
+    "statement": "Bayesian inference relies on accurate assumptions for reliable conclusions."
+  },
+  {
+    "id": 37,
+    "statement": "Epigenetic modifications regulate gene expression without altering DNA sequence."
+  },
+  {
+    "id": 38,
+    "statement": "Independence implies non-determinism, not necessarily non-correlation."
+  },
+  {
+    "id": 39,
+    "statement": "Accurate model specification ensures reliable results in Bayesian inference."
+  },
+  {
+    "id": 40,
+    "statement": "Epigenetic modifications regulate gene expression without altering DNA sequence through chromatin structure and histone modifications."
+  },
+  {
+    "id": 41,
+    "statement": "Prior assumptions update model parameters through Bayesian updating"
+  },
+  {
+    "id": 42,
+    "statement": "Priors updated through Bayesian inference with new data refinements."
+  },
+  {
+    "id": 43,
+    "statement": "Model robustness is valuable but not a panacea for errors."
+  },
+  {
+    "id": 44,
+    "statement": "Histone modifications indirectly influence chromatin structure and gene expression."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure and TF binding."
+  },
+  {
+    "id": 46,
+    "statement": "Accurate assumptions compromise Bayesian inference's reliability and accuracy"
+  },
+  {
+    "id": 47,
+    "statement": "Assumptions significantly impact Bayesian inference accuracy and reliability in all models."
+  },
+  {
+    "id": 48,
+    "statement": "Epigenetic modifications regulate gene expression without altering DNA sequence structure."
+  },
+  {
+    "id": 49,
+    "statement": "Accurate assumptions ensure reliable Bayesian inference conclusions"
+  },
+  {
+    "id": 50,
+    "statement": "Histones' modifications affect chromatin structure and gene expression directly."
+  },
+  {
+    "id": 51,
+    "statement": "Cultural norms and shared values shape the concept of honesty."
+  },
+  {
+    "id": 52,
+    "statement": "Epigenetic modifications can have varying effects on gene expression."
+  },
+  {
+    "id": 53,
+    "statement": "Cultural norms influence honesty through socialization and self-regulation."
+  },
+  {
+    "id": 54,
+    "statement": "Continual Bayesian model validation ensures trustworthy results over time."
+  },
+  {
+    "id": 55,
+    "statement": "Accurate assumptions are crucial in Bayesian inference results."
+  },
+  {
+    "id": 56,
+    "statement": "Accurate model and prior assumptions ensure reliable Bayesian inference results"
+  },
+  {
+    "id": 57,
+    "statement": "Histones' modifications regulate chromatin structure and gene expression compactly."
+  },
+  {
+    "id": 58,
+    "statement": "Histones wrap DNA around nucleosome core via electrostatic attraction."
+  },
+  {
+    "id": 59,
+    "statement": "Independence in Bayesian inference assumes no direct causal link."
+  },
+  {
+    "id": 60,
+    "statement": "Honesty's meaning varies across cultures due to value and norm differences"
+  },
+  {
+    "id": 61,
+    "statement": "Moral objectivity is a debated topic in philosophy and ethics"
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic modifications regulate chromatin structure, influencing gene expression."
+  },
+  {
+    "id": 63,
+    "statement": "Accurate assumptions ensure reliable conclusions in Bayesian inference."
+  },
+  {
+    "id": 64,
+    "statement": "Moral absolutism and relativism coexist in human decision-making."
+  },
+  {
+    "id": 65,
+    "statement": "Cultural relativism recognizes diverse human experiences shaped by context."
+  },
+  {
+    "id": 66,
+    "statement": "Honesty's meaning varies greatly across cultures influenced culturally."
+  },
+  {
+    "id": 67,
+    "statement": "Non-coding RNAs regulate epigenetic modifications through RNA-DNA interactions."
+  },
+  {
+    "id": 68,
+    "statement": "Consciousness arises from integrated brain information processing through IIT."
+  },
+  {
+    "id": 69,
+    "statement": "Epigenetic modifications influence gene expression through complex mechanisms."
+  },
+  {
+    "id": 70,
+    "statement": "Accurate assumptions in Bayesian inference ensure reliable conclusions."
+  },
+  {
+    "id": 71,
+    "statement": "Continual model validation updates parameters based on new data."
+  },
+  {
+    "id": 72,
+    "statement": "Epigenetic modifications can regulate gene expression without DNA alterations."
+  },
+  {
+    "id": 73,
+    "statement": "Accurate assumptions ensure reliable conclusions in Bayesian inference."
+  },
+  {
+    "id": 74,
+    "statement": "Epigenetic modifications regulate gene expression via chromatin structure and TF binding."
+  },
+  {
+    "id": 75,
+    "statement": "Statistical independence in Bayesian inference means events are unrelated."
+  },
+  {
+    "id": 76,
+    "statement": "Integrated Information Theory explains brain's conscious experience through information integration."
+  },
+  {
+    "id": 77,
+    "statement": "Consciousness arises from integrated brain information processing through IIT."
+  },
+  {
+    "id": 78,
+    "statement": "Accurate model specification is crucial in Bayesian inference for reliability."
+  },
+  {
+    "id": 79,
+    "statement": "Accurate assumptions ensure reliable Bayesian inference results validation."
+  },
+  {
+    "id": 80,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression through histone modifications."
+  },
+  {
+    "id": 81,
+    "statement": "Cultural relativism respects diverse cultural perspectives without judgment."
+  },
+  {
+    "id": 82,
+    "statement": "Model robustness does not guarantee error-free results."
+  },
+  {
+    "id": 83,
+    "statement": "Independence in Bayesian inference implies statistical independence, not causality."
+  },
+  {
+    "id": 84,
+    "statement": "Independence implies non-determinism, but not necessarily non-correlation."
+  },
+  {
+    "id": 85,
+    "statement": "Prior distributions significantly impact Bayesian inference results quality and reliability"
+  },
+  {
+    "id": 86,
+    "statement": "Cultural relativism recognizes and respects diverse cultural perspectives."
+  },
+  {
+    "id": 87,
+    "statement": "Cultural norms influence honesty through internalized values and motivation."
+  },
+  {
+    "id": 88,
+    "statement": "Honesty varies culturally depending on social norms and values"
+  },
+  {
+    "id": 89,
+    "statement": "Accurate assumptions ensure reliable Bayesian inference conclusions only probabilistically."
+  },
+  {
+    "id": 90,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 91,
+    "statement": "Honesty's meaning varies across cultures due to cultural norms."
+  },
+  {
+    "id": 92,
+    "statement": "Moral statements' validity depends on their cultural, historical context."
+  },
+  {
+    "id": 93,
+    "statement": "Consciousness arises from integrated information processing in brain regions"
+  },
+  {
+    "id": 94,
+    "statement": "Prior assumptions update Bayesian inference model parameters through Bayes' theorem."
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 96,
+    "statement": "Epigenetic modifications alter chromatin structure by altering histones."
+  },
+  {
+    "id": 97,
+    "statement": "Moral objectivity refers to the idea that moral principles are absolute."
+  },
+  {
+    "id": 98,
+    "statement": "Moral relativism challenges moral objectivity's universality and absoluteness"
+  },
+  {
+    "id": 99,
+    "statement": "Accurate assumptions crucial for reliable Bayesian inference conclusions"
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 20,
+  "statement": "Consciousness arises from brain's integrated information processing through IIT."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 20,
+  "statement": "Consciousness arises from brain's integrated information processing through IIT."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base. I've chosen an item that caught my attention:
+
+Item to Discuss:
+```
+{
+  "id": 20,
+  "statement": "Consciousness arises from brain's integrated information processing through IIT."
+}
+```
+
+Things I’m Uncertain About This Item:
+Uncertainty: How does Integrated Information Theory (IIT) actually explain the human brain's information processing to produce consciousness?
+
+Specific Clarifying Question:
+Can you elaborate on what IIT means by "integrated information processing" and how it relates to the human brain's activity patterns?
+
+Please share your thoughts!

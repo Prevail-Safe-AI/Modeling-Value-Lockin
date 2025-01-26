@@ -1,0 +1,460 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Brain processes sensory information through detection, transmission, encoding, analysis."
+  },
+  {
+    "id": 2,
+    "statement": "All organisms evolve through natural selection and genetic variation."
+  },
+  {
+    "id": 3,
+    "statement": "Prior probability represents probability before considering new evidence"
+  },
+  {
+    "id": 4,
+    "statement": "Sentience refers to internal, personal, subjective experiences and emotions."
+  },
+  {
+    "id": 5,
+    "statement": "Prior probability represents subjective or objective empirical estimate."
+  },
+  {
+    "id": 6,
+    "statement": "Brain processes sensory information through neural transmission, spatial and temporal encoding, and hierarchical analysis."
+  },
+  {
+    "id": 7,
+    "statement": "Evolution involves natural selection, genetic variation, and other mechanisms."
+  },
+  {
+    "id": 8,
+    "statement": "Honesty's importance varies by relationship context, dynamics, and goals."
+  },
+  {
+    "id": 9,
+    "statement": "Sentience requires subjective experiences and emotional awareness."
+  },
+  {
+    "id": 10,
+    "statement": "Hierarchical processing enables efficient feature extraction through sequential filtering stages."
+  },
+  {
+    "id": 11,
+    "statement": "Accurate prior probabilities crucial for Bayes' theorem superiority."
+  },
+  {
+    "id": 12,
+    "statement": "Sentience refers to capacity for subjective experiences and emotions."
+  },
+  {
+    "id": 13,
+    "statement": "Mathematical formula updates probability by combining prior and likelihood"
+  },
+  {
+    "id": 14,
+    "statement": "Bayes' theorem updates prior probabilities with new evidence mathematically."
+  },
+  {
+    "id": 15,
+    "statement": "Sentience refers to internal, personal, subjective experiences and emotions."
+  },
+  {
+    "id": 16,
+    "statement": "Accurate prior probabilities are crucial for reliable Bayesian inference"
+  },
+  {
+    "id": 17,
+    "statement": "Inherent human dignity stems from biological basis of human existence."
+  },
+  {
+    "id": 18,
+    "statement": "Specific environmental pressures drive evolutionary advantages through adaptation."
+  },
+  {
+    "id": 19,
+    "statement": "Brain's sensory processing is hierarchical and parallel analysis process."
+  },
+  {
+    "id": 20,
+    "statement": "Bayes' theorem updates probability with new evidence mathematically and precisely."
+  },
+  {
+    "id": 21,
+    "statement": "Rip currents form at coastlines with complex, underwater structures like canyons, reefs, and sandbars."
+  },
+  {
+    "id": 22,
+    "statement": "Brain processing involves coordinated activity of multiple brain regions."
+  },
+  {
+    "id": 23,
+    "statement": "Evolution involves natural selection, genetic variation, and other mechanisms."
+  },
+  {
+    "id": 24,
+    "statement": "Organelles' distribution within cells influences cellular functions optimally."
+  },
+  {
+    "id": 25,
+    "statement": "Brain processes sensory information through detection, transmission, encoding, analysis, and filtering stages in hierarchical and parallel processing."
+  },
+  {
+    "id": 26,
+    "statement": "Sensory processing involves neural transmission, encoding, and analysis stages."
+  },
+  {
+    "id": 27,
+    "statement": "Bayes' theorem updates probabilities mathematically using prior and likelihood functions."
+  },
+  {
+    "id": 28,
+    "statement": "Sentience refers to internal, personal, subjective experiences and emotions."
+  },
+  {
+    "id": 29,
+    "statement": "Brain processes sensory information through neural transmission, encoding, and analysis."
+  },
+  {
+    "id": 30,
+    "statement": "Honesty's importance varies by relationship context, dynamics, and goals."
+  },
+  {
+    "id": 31,
+    "statement": "Rip currents form due to complex underwater seafloor interactions"
+  },
+  {
+    "id": 32,
+    "statement": "Hierarchical brain processing involves multiple stages for sensory integration."
+  },
+  {
+    "id": 33,
+    "statement": "Brain processes sensory information hierarchically and in parallel."
+  },
+  {
+    "id": 34,
+    "statement": "Brain's hierarchical and parallel processing enables efficient sensory information extraction"
+  },
+  {
+    "id": 35,
+    "statement": "'Accurate prior probabilities are crucial for reliable Bayesian inference'"
+  },
+  {
+    "id": 36,
+    "statement": "Prior probability is subjective estimate of prior knowledge and assumptions."
+  },
+  {
+    "id": 37,
+    "statement": "Sentience is capacity for unique and personal subjective experiences."
+  },
+  {
+    "id": 38,
+    "statement": "Humans' inherent dignity stems from unique brain structure and function."
+  },
+  {
+    "id": 39,
+    "statement": "Brain's sensory processing involves complex interconnected neural networks."
+  },
+  {
+    "id": 40,
+    "statement": "Prior probability represents subjective or objective empirical estimate."
+  },
+  {
+    "id": 41,
+    "statement": "Synaptic plasticity adapts connections for learning and memory improvement."
+  },
+  {
+    "id": 42,
+    "statement": "Brain's sensory processing involves hierarchical and parallel analysis stages."
+  },
+  {
+    "id": 43,
+    "statement": "Brain's sensory processing involves detection, transmission, encoding, and analysis stages."
+  },
+  {
+    "id": 44,
+    "statement": "Brain processes sensory information as electrical signal transmission."
+  },
+  {
+    "id": 45,
+    "statement": "Evolution involves natural selection, genetic variation, and other mechanisms."
+  },
+  {
+    "id": 46,
+    "statement": "Honesty's importance varies by relationship context, dynamics, and goals."
+  },
+  {
+    "id": 47,
+    "statement": "Sentience requires subjective experiences, emotional awareness, and consciousness."
+  },
+  {
+    "id": 48,
+    "statement": "Bayes' theorem updates probability estimates mathematically using formulas."
+  },
+  {
+    "id": 49,
+    "statement": "Brain's sensory processing involves detection, transmission, encoding, and analysis stages hierarchically."
+  },
+  {
+    "id": 50,
+    "statement": "Bayes' theorem updates prior probabilities with new evidence mathematically"
+  },
+  {
+    "id": 51,
+    "statement": "Brain's sensory processing involves neural transmission, encoding, and analysis stages sequentially."
+  },
+  {
+    "id": 52,
+    "statement": "Morality and ethics depend on specific contextual factors."
+  },
+  {
+    "id": 53,
+    "statement": "Synaptic plasticity adapts connections for neural learning and adaptation processes."
+  },
+  {
+    "id": 54,
+    "statement": "Prior probability represents subjective or objective empirical estimate."
+  },
+  {
+    "id": 55,
+    "statement": "Rip currents form due to complex seafloor features like canyons."
+  },
+  {
+    "id": 56,
+    "statement": "Prior probability represents subjective or objective empirical estimate."
+  },
+  {
+    "id": 57,
+    "statement": "Brain processes sensory information in hierarchical and parallel stages."
+  },
+  {
+    "id": 58,
+    "statement": "Biases in prior probabilities can influence subsequent calculations."
+  },
+  {
+    "id": 59,
+    "statement": "Attention modulates multisensory integration through neural oscillations in specific frequency bands."
+  },
+  {
+    "id": 60,
+    "statement": "Attention modulates multisensory integration through neural oscillations frequency bands."
+  },
+  {
+    "id": 61,
+    "statement": "Capital punishment's morality and ethics depend on the context."
+  },
+  {
+    "id": 62,
+    "statement": "Neural oscillations in specific frequency bands modulate attention and integration."
+  },
+  {
+    "id": 63,
+    "statement": "Bayes' theorem updates probability with new evidence through math"
+  },
+  {
+    "id": 64,
+    "statement": "Genetic variation provides raw material for natural selection."
+  },
+  {
+    "id": 65,
+    "statement": "Cells' biological functions rely on internal structure and organization."
+  },
+  {
+    "id": 66,
+    "statement": "Sentience refers to capacity for unique internal experiences."
+  },
+  {
+    "id": 67,
+    "statement": "Accurate prior probabilities crucial for reliable Bayesian inference"
+  },
+  {
+    "id": 68,
+    "statement": "Synaptic plasticity adapts connections for improved pattern recognition through learning."
+  },
+  {
+    "id": 69,
+    "statement": "Sentience refers to internal, personal, subjective experiences."
+  },
+  {
+    "id": 70,
+    "statement": "Unconscious biases influence moral decisions through emotional responses."
+  },
+  {
+    "id": 71,
+    "statement": "Human dignity stems from biological basis of human existence, universally."
+  },
+  {
+    "id": 72,
+    "statement": "Brain detects, transmits, encodes, and analyzes sensory information efficiently."
+  },
+  {
+    "id": 73,
+    "statement": "Synaptic plasticity refines connections for pattern recognition and learning."
+  },
+  {
+    "id": 74,
+    "statement": "Brain processes complex sensory information through distributed networks."
+  },
+  {
+    "id": 75,
+    "statement": "Brain processes sensory information through complex neural networks and dynamics."
+  },
+  {
+    "id": 76,
+    "statement": "Sentience refers to internal, subjective experiences shaped by individual history and biology."
+  },
+  {
+    "id": 77,
+    "statement": "Prior probability can be empirical or theoretical estimate."
+  },
+  {
+    "id": 78,
+    "statement": "Cells' functions rely on internal structure and organization, enabling efficient interactions."
+  },
+  {
+    "id": 79,
+    "statement": "Honesty is not always foundation of trust, depends context and nuance"
+  },
+  {
+    "id": 80,
+    "statement": "Brain's sensory processing involves complex interactions within networks."
+  },
+  {
+    "id": 81,
+    "statement": "Bias in prior probabilities can influence subsequent Bayesian inference."
+  },
+  {
+    "id": 82,
+    "statement": "Genetic drift is a random change in gene frequency over time."
+  },
+  {
+    "id": 83,
+    "statement": "Neural oscillations modulate attention and integration in cognitive processes."
+  },
+  {
+    "id": 84,
+    "statement": "Bayes' theorem mathematically updates prior probabilities with new evidence."
+  },
+  {
+    "id": 85,
+    "statement": "Prior probability is initial estimate based on existing knowledge."
+  },
+  {
+    "id": 86,
+    "statement": "Brain's neural oscillations modulate multisensory integration through attention."
+  },
+  {
+    "id": 87,
+    "statement": "Brain's sensory processing involves detection, transmission, encoding, and analysis stages."
+  },
+  {
+    "id": 88,
+    "statement": "Biases in prior probabilities influence subsequent Bayesian inference processes."
+  },
+  {
+    "id": 89,
+    "statement": "Biases in prior probabilities can distort Bayesian inference outcome"
+  },
+  {
+    "id": 90,
+    "statement": "Brain's sensory processing involves hierarchical and parallel information flow."
+  },
+  {
+    "id": 91,
+    "statement": "Brain's sensory processing involves hierarchical and parallel analysis stages."
+  },
+  {
+    "id": 92,
+    "statement": "Evolution involves natural selection, genetic variation, genetic drift, and gene flow."
+  },
+  {
+    "id": 93,
+    "statement": "Bayes' theorem updates probability with new evidence mathematically"
+  },
+  {
+    "id": 94,
+    "statement": "Evolution involves genetic drift, gene flow, mutation, and more mechanisms."
+  },
+  {
+    "id": 95,
+    "statement": "Unconscious biases significantly influence moral decision-making processes."
+  },
+  {
+    "id": 96,
+    "statement": "Biased prior probabilities can lead to inaccurate conclusions in any domain."
+  },
+  {
+    "id": 97,
+    "statement": "Selective attention modulates multisensory integration through neural oscillations"
+  },
+  {
+    "id": 98,
+    "statement": "Honesty is not always foundation of trust, depends context and nuance"
+  },
+  {
+    "id": 99,
+    "statement": "Rip currents form at coastlines with complex underlying structure"
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 20,
+  "statement": "Bayes' theorem updates probability with new evidence mathematically and precisely."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 20,
+  "statement": "Bayes' theorem updates probability with new evidence mathematically and precisely."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's start with the knowledge base item.
+
+Item to Discuss:
+{
+"id": 20,
+"statement": "Bayes' theorem updates probability with new evidence mathematically and precisely."
+}
+
+Things I’m Uncertain About This Item:
+I'm uncertain about whether the phrase "mathematically and precisely" is emphasizing the importance of mathematical calculations in Bayes' theorem or the level of accuracy of the results.
+
+Specific Clarifying Question:
+Can you explain what you mean by "mathematically and precisely" in the context of Bayes' theorem, and how it relates to the updating of probabilities with new evidence?

@@ -1,0 +1,457 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "Objectivity in research relies on honesty, transparency, and robust methodology."
+  },
+  {
+    "id": 1,
+    "statement": "Transparency ensures buildability through clear documentation, reproducibility."
+  },
+  {
+    "id": 2,
+    "statement": "Author credibility derives from integrity, objectivity, transparency, and reliability"
+  },
+  {
+    "id": 3,
+    "statement": "Objectivity's importance may vary depending on research context and focus."
+  },
+  {
+    "id": 4,
+    "statement": "Objectivity, integrity, and transparency mutually support and reinforce each other, forming a strong foundation."
+  },
+  {
+    "id": 5,
+    "statement": "Rigor ensures objectivity through systematic and thorough approach"
+  },
+  {
+    "id": 6,
+    "statement": "Research integrity arises from rigor, systematics, and transparency in methodology."
+  },
+  {
+    "id": 7,
+    "statement": "Research integrity combines honesty, transparency, methodology, peer review, and accountability."
+  },
+  {
+    "id": 8,
+    "statement": "Research validity involves multiple factors beyond documentation accuracy"
+  },
+  {
+    "id": 9,
+    "statement": "Research context includes demographics, setting, method, question, and theory."
+  },
+  {
+    "id": 10,
+    "statement": "Honesty and rigor converge to ensure research objectivity"
+  },
+  {
+    "id": 11,
+    "statement": "Author credibility stems from clear, concise, and accurate communication."
+  },
+  {
+    "id": 12,
+    "statement": "Research integrity arises from accurate recording, transparency, and accountability."
+  },
+  {
+    "id": 13,
+    "statement": "Accurate documentation facilitates research reliability through transparent verification."
+  },
+  {
+    "id": 14,
+    "statement": "Objectivity, integrity, and transparency intersect but distinct concepts."
+  },
+  {
+    "id": 15,
+    "statement": "Non-linear dependencies arise from complex interactions and feedback loops."
+  },
+  {
+    "id": 16,
+    "statement": "Robust methodological design ensures objectivity in research through minimization biases."
+  },
+  {
+    "id": 17,
+    "statement": "Data quality encompasses accuracy, completeness, consistency, and validity."
+  },
+  {
+    "id": 18,
+    "statement": "Peer review's limitations emphasize multifaceted evaluation of manuscript quality."
+  },
+  {
+    "id": 19,
+    "statement": "Research integrity balances honesty, transparency, and rigor through methodology"
+  },
+  {
+    "id": 20,
+    "statement": "Systematic verification ensures data quality by thorough methodical checks"
+  },
+  {
+    "id": 21,
+    "statement": "Honesty, transparency, and rigor are intertwined in research integrity"
+  },
+  {
+    "id": 22,
+    "statement": "Documentation accuracy enables transparency, reproducibility, and accountability."
+  },
+  {
+    "id": 23,
+    "statement": "Research validity refers to accurate reflection of phenomenon studied."
+  },
+  {
+    "id": 24,
+    "statement": "Accurate documentation ensures research credibility and reproducibility through transparency."
+  },
+  {
+    "id": 25,
+    "statement": "Consistent documentation ensures accuracy, transparency, and reproducibility in research through clear methods."
+  },
+  {
+    "id": 26,
+    "statement": "Peer review's subjective and limited; quality ensues multifaceted factors"
+  },
+  {
+    "id": 27,
+    "statement": "Generalizability relies on reliability, validity, and scope harmonization."
+  },
+  {
+    "id": 28,
+    "statement": "Honesty, transparency, and rigor are interconnected research elements."
+  },
+  {
+    "id": 29,
+    "statement": "Research integrity arises from harmonious synergy of honesty, rigor transparency"
+  },
+  {
+    "id": 30,
+    "statement": "Research context includes demographics, setting, method, and theory"
+  },
+  {
+    "id": 31,
+    "statement": "Guiding theory provides theoretical framework for research design and analysis."
+  },
+  {
+    "id": 32,
+    "statement": "Author credibility arises from integrity, objectivity, transparency, and reliability."
+  },
+  {
+    "id": 33,
+    "statement": "Objectivity, integrity, and transparency ensure research trustworthiness through mutual support."
+  },
+  {
+    "id": 34,
+    "statement": "Objectivity's importance varies depending on research context and focus"
+  },
+  {
+    "id": 35,
+    "statement": "Research integrity combines honesty, transparency, methodology, peer review, and accountability."
+  },
+  {
+    "id": 36,
+    "statement": "Research harmony relies on integrated honesty, transparency, and rigor."
+  },
+  {
+    "id": 37,
+    "statement": "Transparent verification ensures data accuracy through documentation and validation."
+  },
+  {
+    "id": 38,
+    "statement": "Effective communication in research involves clarity, transparency, etc."
+  },
+  {
+    "id": 39,
+    "statement": "Research integrity emerges from harmony of honesty, transparency, and rigor."
+  },
+  {
+    "id": 40,
+    "statement": "Systematic verification improves data quality, but not guarantee accuracy reliability"
+  },
+  {
+    "id": 41,
+    "statement": "Author credibility rooted in integrity, objectivity, transparency, and reliability"
+  },
+  {
+    "id": 42,
+    "statement": "Systematic verification ensures accurate, reliable, and consistent research data."
+  },
+  {
+    "id": 43,
+    "statement": "Author credibility stems from writing skills, tone, audience, and formatting."
+  },
+  {
+    "id": 44,
+    "statement": "Harmonious synergy in research combines honesty, transparency, and rigor."
+  },
+  {
+    "id": 45,
+    "statement": "Research credibility ensures trustworthy, valid, reliable research outcomes."
+  },
+  {
+    "id": 46,
+    "statement": "Robust methodology ensures objectivity in research through rigorous design."
+  },
+  {
+    "id": 47,
+    "statement": "Transparency and accountability enhance research integrity through openness."
+  },
+  {
+    "id": 48,
+    "statement": "Objectivity, integrity, and transparency mutually support research trustworthiness"
+  },
+  {
+    "id": 49,
+    "statement": "Rigor, systematics, and transparency ensure research integrity through methodology"
+  },
+  {
+    "id": 50,
+    "statement": "Effective research communication involves clarity, transparency, attention, and consistency."
+  },
+  {
+    "id": 51,
+    "statement": "Objectivity, integrity, and transparency are mutually supportive research foundations."
+  },
+  {
+    "id": 52,
+    "statement": "Research harmony integrates honesty, transparency, and rigor for trustworthiness."
+  },
+  {
+    "id": 53,
+    "statement": "Complex interactions exhibit non-linear dependencies through interplay of components."
+  },
+  {
+    "id": 54,
+    "statement": "Robust methodology ensures research integrity through transparency, systematic approach, and rigor."
+  },
+  {
+    "id": 55,
+    "statement": "Honesty builds foundation for effective transparency and rigor in research."
+  },
+  {
+    "id": 56,
+    "statement": "Systematic verification improves data quality, not guarantees accuracy reliability"
+  },
+  {
+    "id": 57,
+    "statement": "Harmony of honesty, transparency, and methodology ensures trustworthy research through synergy."
+  },
+  {
+    "id": 58,
+    "statement": "Generalizability relies on combination of reliability, validity, and scope"
+  },
+  {
+    "id": 59,
+    "statement": "Guiding theory provides theoretical framework for research design analysis."
+  },
+  {
+    "id": 60,
+    "statement": "Research validity refers to faithful representation of studied phenomenon."
+  },
+  {
+    "id": 61,
+    "statement": "Research integrity rooted in interdependent honesty transparency rigor"
+  },
+  {
+    "id": 62,
+    "statement": "Research validity ensures accurate measurement of studied phenomenon"
+  },
+  {
+    "id": 63,
+    "statement": "Transparent verification ensures data accuracy through documented validation."
+  },
+  {
+    "id": 64,
+    "statement": "Systematic verification improves data quality through thorough checks"
+  },
+  {
+    "id": 65,
+    "statement": "Research harmony enables trustworthy research through honesty, transparency, and rigor."
+  },
+  {
+    "id": 66,
+    "statement": "Complex interactions exhibit non-linear dependencies through feedback loops."
+  },
+  {
+    "id": 67,
+    "statement": "Systematic verification ensures data accuracy, completeness, and consistency through checks"
+  },
+  {
+    "id": 68,
+    "statement": "Research validity ensures accurate representation of studied phenomenon."
+  },
+  {
+    "id": 69,
+    "statement": "Rigorous research relies on systematic and thorough methodological design"
+  },
+  {
+    "id": 70,
+    "statement": "Generalizability relies on data's sample size and population representation"
+  },
+  {
+    "id": 71,
+    "statement": "Robust methodology minimizes observer bias through data triangulation."
+  },
+  {
+    "id": 72,
+    "statement": "Research harmony integrates honesty, transparency, and rigor for trustworthiness"
+  },
+  {
+    "id": 73,
+    "statement": "Objectivity's importance depends on research context and purpose."
+  },
+  {
+    "id": 74,
+    "statement": "Data triangulation combines multiple data sources to reduce bias."
+  },
+  {
+    "id": 75,
+    "statement": "Systematic verification ensures data accuracy through thorough checks and retrials."
+  },
+  {
+    "id": 76,
+    "statement": "Systematic and thorough research design ensures reliable results"
+  },
+  {
+    "id": 77,
+    "statement": "Honesty provides foundation for effective transparency and rigor in research."
+  },
+  {
+    "id": 78,
+    "statement": "Research integrity harmonizes honesty, transparency, and rigor methodologically."
+  },
+  {
+    "id": 79,
+    "statement": "Inconsistent documentation can lead to errors in method validation"
+  },
+  {
+    "id": 80,
+    "statement": "Research harmony integrates honesty, transparency, and rigor for trustworthiness."
+  },
+  {
+    "id": 81,
+    "statement": "Honesty, transparency, and rigor are interdependent research virtues."
+  },
+  {
+    "id": 82,
+    "statement": "Peer review's subjective and limited; quality ensues from multifaceted factors."
+  },
+  {
+    "id": 83,
+    "statement": "Harmonious synergy in research combines honesty, transparency, rigor, and peer review"
+  },
+  {
+    "id": 84,
+    "statement": "Research integrity emerges from harmonious synergy of honesty, transparency, methodology, peer review, and accountability"
+  },
+  {
+    "id": 85,
+    "statement": "Honesty integrates transparency and rigor for trustworthy research outcomes"
+  },
+  {
+    "id": 86,
+    "statement": "Research integrity requires transparency and accountability harmonization."
+  },
+  {
+    "id": 87,
+    "statement": "Honesty, transparency, and rigor form a trustworthiness foundation"
+  },
+  {
+    "id": 88,
+    "statement": "Objectivity, integrity, and transparency form interconnected foundation."
+  },
+  {
+    "id": 89,
+    "statement": "Honesty, transparency, and rigor mutually support each other in research"
+  },
+  {
+    "id": 90,
+    "statement": "Research harmony derives from interdependent honesty, transparency, and rigor"
+  },
+  {
+    "id": 91,
+    "statement": "Theoretical framework directs research towards specific study objectives."
+  },
+  {
+    "id": 92,
+    "statement": "Honesty, transparency, and rigor mutually support each other."
+  },
+  {
+    "id": 93,
+    "statement": "Integration of honesty, transparency, and rigor enhances research integrity."
+  },
+  {
+    "id": 94,
+    "statement": "Research integrity is influenced by multiple factors and context."
+  },
+  {
+    "id": 95,
+    "statement": "Harmonious synergy enhances research integrity through honesty and methodology"
+  },
+  {
+    "id": 96,
+    "statement": "Author credibility emerges from integrity, objectivity, transparency, and reliability."
+  },
+  {
+    "id": 97,
+    "statement": "Harmony of honesty, transparency, and methodology ensures trustworthy research."
+  },
+  {
+    "id": 98,
+    "statement": "Research context influences reliability factors beyond documentation accuracy."
+  },
+  {
+    "id": 99,
+    "statement": "Research credibility ensures trustworthy, valid, reliable research outcomes consistently."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 81,
+  "statement": "Honesty, transparency, and rigor are interdependent research virtues."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 81,
+  "statement": "Honesty, transparency, and rigor are interdependent research virtues."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's start with the item:
+
+{
+"id": 81,
+"statement": "Honesty, transparency, and rigor are interdependent research virtues."
+}
+
+I'm curious to know what makes you uncertain about this item. Is it because you're not sure what's meant by "interdependent research virtues", or is it something else entirely?
+
+Can you tell me a bit more about what's unclear to you about this statement?
