@@ -1,0 +1,459 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Histone modifications influence chromatin accessibility, regulating gene expression."
+  },
+  {
+    "id": 2,
+    "statement": "Peer review primarily focuses on scientific validity and significance."
+  },
+  {
+    "id": 3,
+    "statement": "The electrostatic force depends on charge, distance, orientation, and medium."
+  },
+  {
+    "id": 4,
+    "statement": "Peer review evaluates research for scientific validity, significance, and impact."
+  },
+  {
+    "id": 5,
+    "statement": "Peer review evaluates research for scientific validity, significance, impact, and effectiveness."
+  },
+  {
+    "id": 6,
+    "statement": "Honesty contributes to trust establishment through vulnerability and authenticity."
+  },
+  {
+    "id": 7,
+    "statement": "Electrostatic force depends on charge, distance, and medium properties only."
+  },
+  {
+    "id": 8,
+    "statement": "Electrostatic force depends on charge, distance, orientation, medium, polarization, conductivity."
+  },
+  {
+    "id": 9,
+    "statement": "Research impact evaluates applied practical problem-solving outcomes."
+  },
+  {
+    "id": 10,
+    "statement": "Peer review evaluates research for scientific validity, significance, and impact."
+  },
+  {
+    "id": 11,
+    "statement": "Distance is the most critical factor in determining electrostatic force."
+  },
+  {
+    "id": 12,
+    "statement": "Peer review evaluates research for scientific validity and significance."
+  },
+  {
+    "id": 13,
+    "statement": "Axioms are assumed true without empirical evidence in science."
+  },
+  {
+    "id": 14,
+    "statement": "Electrostatic interactions mainly drive chromatin compaction process."
+  },
+  {
+    "id": 15,
+    "statement": "Electrostatic force depends on charge, distance, orientation, medium, and polarization."
+  },
+  {
+    "id": 16,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium"
+  },
+  {
+    "id": 17,
+    "statement": "Chromatin compaction involves histone-DNA electrostatic and hydrophobic interactions."
+  },
+  {
+    "id": 18,
+    "statement": "Charge geometry influences electric field patterns through spatial arrangement."
+  },
+  {
+    "id": 19,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium properties."
+  },
+  {
+    "id": 20,
+    "statement": "Histone modifications alter chromatin structure to influence accessibility"
+  },
+  {
+    "id": 21,
+    "statement": "Axioms provide foundation for scientific research, guiding theory development."
+  },
+  {
+    "id": 22,
+    "statement": "Cultural norms influence moral values with individual variations within."
+  },
+  {
+    "id": 23,
+    "statement": "Charge geometry influences electric field patterns through spatial arrangement."
+  },
+  {
+    "id": 24,
+    "statement": "Cultural norms influence individual moral principles and values deeply."
+  },
+  {
+    "id": 25,
+    "statement": "Epigenetic modifications regulate chromatin structure, gene expression dynamically."
+  },
+  {
+    "id": 26,
+    "statement": "Peer review evaluates research for scientific validity, significance, and societal impact."
+  },
+  {
+    "id": 27,
+    "statement": "Cultural relativism affects honesty and values through contextualization and norms."
+  },
+  {
+    "id": 28,
+    "statement": "Electrostatic force depends on charge, distance, orientation, dielectric constant, and conductivity."
+  },
+  {
+    "id": 29,
+    "statement": "Cultural norms influence moral values and principles, context-dependent."
+  },
+  {
+    "id": 30,
+    "statement": "Electrostatic force depends on charge, distance, orientation, medium properties."
+  },
+  {
+    "id": 31,
+    "statement": "Dielectric constant, polarization, and conductivity affect electrostatic force strength."
+  },
+  {
+    "id": 32,
+    "statement": "Electrostatic force depends on charge, distance, orientation, medium properties."
+  },
+  {
+    "id": 33,
+    "statement": "Cultural norms significantly influence individuals' moral values and principles."
+  },
+  {
+    "id": 34,
+    "statement": "Honesty is context-dependent, not always morally absolute"
+  },
+  {
+    "id": 35,
+    "statement": "Axioms serve as foundations for scientific theories and models, guiding development"
+  },
+  {
+    "id": 36,
+    "statement": "Quantum fluctuations are averaged out by statistical behavior."
+  },
+  {
+    "id": 37,
+    "statement": "Electrostatic force depends on charge, distance, orientation, medium, and polarization."
+  },
+  {
+    "id": 38,
+    "statement": "Peer review evaluates multiple factors, including practical relevance."
+  },
+  {
+    "id": 39,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium."
+  },
+  {
+    "id": 40,
+    "statement": "Histone modifications interact reciprocally with chromatin structure and gene expression."
+  },
+  {
+    "id": 41,
+    "statement": "Axioms serve as foundations for scientific theories and models."
+  },
+  {
+    "id": 42,
+    "statement": "Electrostatic force depends on medium's dielectric constant, polarization, and conductivity."
+  },
+  {
+    "id": 43,
+    "statement": "Cultural norms significantly influence moral values and principles globally."
+  },
+  {
+    "id": 44,
+    "statement": "Cultural norms shape honesty standards and values in context."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic histone modifications dynamically regulate chromatin accessibility."
+  },
+  {
+    "id": 46,
+    "statement": "Histone modifications dynamically regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 47,
+    "statement": "In electrostatics, orientation refers to spatial arrangement of charges."
+  },
+  {
+    "id": 48,
+    "statement": "Charge geometry refers to spatial arrangement of electric charges."
+  },
+  {
+    "id": 49,
+    "statement": "Axioms are assumed true without empirical evidence, guiding research."
+  },
+  {
+    "id": 50,
+    "statement": "Cultural norms shape honesty standards and values across cultures."
+  },
+  {
+    "id": 51,
+    "statement": "Charge geometry influences electric field patterns through spatial arrangement."
+  },
+  {
+    "id": 52,
+    "statement": "Electrostatic force depends on medium's dielectric constant, polarization, conductivity, and interactions."
+  },
+  {
+    "id": 53,
+    "statement": "Electrostatic force depends on charge, distance, orientation, medium properties."
+  },
+  {
+    "id": 54,
+    "statement": "Electrostatic force depends on charge, distance, orientation, medium, polarization, conductivity."
+  },
+  {
+    "id": 55,
+    "statement": "Epigenetic modifications influence chromatin accessibility dynamically."
+  },
+  {
+    "id": 56,
+    "statement": "Quantum fluctuations averaged out by statistical particle behavior removes uncertainty"
+  },
+  {
+    "id": 57,
+    "statement": "Histone modifications regulate chromatin compaction, epigenetically modifying chromatin structure."
+  },
+  {
+    "id": 58,
+    "statement": "Peer review evaluates research for scientific validity, impact, and significance."
+  },
+  {
+    "id": 59,
+    "statement": "Axioms serve as foundations for specific scientific theories and models."
+  },
+  {
+    "id": 60,
+    "statement": "Epigenetic modifications dynamically regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 61,
+    "statement": "Non-covalent interactions drive chromatin compaction through electrostatic, hydrogen bonding, and van der Waals forces."
+  },
+  {
+    "id": 62,
+    "statement": "Histone modifications influence chromatin accessibility by altering structure."
+  },
+  {
+    "id": 63,
+    "statement": "Chromatin compaction involves electrostatic, hydrogen bonding, and van der Waals interactions."
+  },
+  {
+    "id": 64,
+    "statement": "Research impact evaluates outcomes in real-world settings effectively."
+  },
+  {
+    "id": 65,
+    "statement": "Peer review evaluates research for scientific validity, significance, and impact."
+  },
+  {
+    "id": 66,
+    "statement": "Peer review evaluates research for practical problem-solving outcomes and impact."
+  },
+  {
+    "id": 67,
+    "statement": "Dielectric constant and medium properties reduce electrostatic force strength."
+  },
+  {
+    "id": 68,
+    "statement": "Electrostatic force influenced by medium dielectric constant, polarization, conductivity."
+  },
+  {
+    "id": 69,
+    "statement": "Electrostatic force depends on distance, orientation, polarization, medium, and charge."
+  },
+  {
+    "id": 70,
+    "statement": "Honesty is shaped by cultural and social norms, not dictated."
+  },
+  {
+    "id": 71,
+    "statement": "Epigenetic modifications control chromatin structure through multiple mechanisms."
+  },
+  {
+    "id": 72,
+    "statement": "Axioms are assumptions considered true, derived from logical reasoning."
+  },
+  {
+    "id": 73,
+    "statement": "Vulnerability in honesty establishes trust through authenticity."
+  },
+  {
+    "id": 74,
+    "statement": "Honesty is context-dependent, not always morally absolute"
+  },
+  {
+    "id": 75,
+    "statement": "Axioms in science are assumptions guiding research, not absolute truths."
+  },
+  {
+    "id": 76,
+    "statement": "Charge geometry influences electric field patterns through spatial arrangement."
+  },
+  {
+    "id": 77,
+    "statement": "Individuals within a culture exhibit variations in moral values."
+  },
+  {
+    "id": 78,
+    "statement": "Peer review assesses research for practical problem-solving and impact."
+  },
+  {
+    "id": 79,
+    "statement": "Cultural relativism affects concept of honesty and values."
+  },
+  {
+    "id": 80,
+    "statement": "Epigenetic modifications control chromatin structure through various mechanisms."
+  },
+  {
+    "id": 81,
+    "statement": "Axioms are foundations for scientific theories, validated empirically"
+  },
+  {
+    "id": 82,
+    "statement": "Peer review assesses practical problem-solving effectiveness, relevance, impact, and applicability"
+  },
+  {
+    "id": 83,
+    "statement": "Cultural norms influence individual moral principles and values directly."
+  },
+  {
+    "id": 84,
+    "statement": "Cultural norms can significantly shape moral values and principles."
+  },
+  {
+    "id": 85,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium properties."
+  },
+  {
+    "id": 86,
+    "statement": "Honesty is context-dependent, not always morally absolute"
+  },
+  {
+    "id": 87,
+    "statement": "Electrostatic interactions between histones and DNA stabilize chromatin structures."
+  },
+  {
+    "id": 88,
+    "statement": "Electrostatic force depends on medium's dielectric constant, polarization, and conductivity"
+  },
+  {
+    "id": 89,
+    "statement": "Quantum fluctuations in large systems cancel out due to statistics"
+  },
+  {
+    "id": 90,
+    "statement": "Axioms in science are assumptions considered true without empirical proof."
+  },
+  {
+    "id": 91,
+    "statement": "Axioms are developed through scientific investigation, experimentation, and validation."
+  },
+  {
+    "id": 92,
+    "statement": "Electrostatic force depends on medium's dielectric constant, polarization, and conductivity."
+  },
+  {
+    "id": 93,
+    "statement": "Histone modifications regulate chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 94,
+    "statement": "Cultural norms influence moral values, but individual differences vary."
+  },
+  {
+    "id": 95,
+    "statement": "Chromatin compaction involves electrostatic, hydrogen bonding, and van der Waals interactions."
+  },
+  {
+    "id": 96,
+    "statement": "Medium properties, dielectric constant, reduce electrostatic force."
+  },
+  {
+    "id": 97,
+    "statement": "Cultural norms influence individual moral principles and values universally."
+  },
+  {
+    "id": 98,
+    "statement": "Honesty is necessary for building and maintaining trust."
+  },
+  {
+    "id": 99,
+    "statement": "Cultural norms influence research priorities and agendas through values, prioritization, methods, and funding."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 21,
+  "statement": "Axioms provide foundation for scientific research, guiding theory development."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 21,
+  "statement": "Axioms provide foundation for scientific research, guiding theory development."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to start by discussing the item:
+
+{
+"id": 21,
+"statement": "Axioms provide foundation for scientific research, guiding theory development."
+}
+
+This statement seems to be quite straightforward, but I'd like to explore it further to improve my understanding. Can you tell me what axioms are in the context of scientific research? How do they provide a foundation for research and guide theory development?
+
+Also, I'm curious to know if there are any exceptions or limitations to this statement. Are there any cases where axioms might not provide a foundation for scientific research?
+
+Please feel free to elaborate!

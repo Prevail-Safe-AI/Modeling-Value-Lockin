@@ -1,0 +1,452 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Moral objectivity influenced by individual, cultural, historical factors"
+  },
+  {
+    "id": 2,
+    "statement": "Moral objectivity influenced by cultural, historical, and personal factors"
+  },
+  {
+    "id": 3,
+    "statement": "Well-being encompasses physical, emotional, mental, social, and environmental aspects."
+  },
+  {
+    "id": 4,
+    "statement": "Commutative property applies to operations respecting associative property"
+  },
+  {
+    "id": 5,
+    "statement": "Genetic variation arises from interacting mechanisms: mutations, gene flow, recombination, and epigenetic modifications."
+  },
+  {
+    "id": 6,
+    "statement": "Trust involves multiple factors: reliability, competence, and empathy."
+  },
+  {
+    "id": 7,
+    "statement": "Moral objectivity influenced by personal, cultural, and historical contexts"
+  },
+  {
+    "id": 8,
+    "statement": "Lying might be morally justifiable in specific circumstances."
+  },
+  {
+    "id": 9,
+    "statement": "Genetic variation influenced by environment and epigenetic changes."
+  },
+  {
+    "id": 10,
+    "statement": "Genetic variation arises from interacting mechanisms: mutations, gene flow, recombination and epigenetic modifications."
+  },
+  {
+    "id": 11,
+    "statement": "Genetic variation shaped by complex interactions of environment, epigenetics and DNA."
+  },
+  {
+    "id": 12,
+    "statement": "Moral objectivity influenced by individual, cultural, and historical factors."
+  },
+  {
+    "id": 13,
+    "statement": "Animal welfare assesses behavioral well-being through behavioral observations."
+  },
+  {
+    "id": 14,
+    "statement": "Well-being comprises physical, emotional, mental, social, and environmental factors."
+  },
+  {
+    "id": 15,
+    "statement": "Honesty builds trust and credibility through consistent behavior."
+  },
+  {
+    "id": 16,
+    "statement": "Moral objectivity emerges from dynamic interplay of cultural, historical, and personal factors."
+  },
+  {
+    "id": 17,
+    "statement": "Animal welfare evaluated through behavioral and physiological indicators."
+  },
+  {
+    "id": 18,
+    "statement": "Consistent behavior in honesty and trust involves truthful reliability."
+  },
+  {
+    "id": 19,
+    "statement": "Mathematical rigor implies a meticulous and systematic proof construction."
+  },
+  {
+    "id": 20,
+    "statement": "Proof by contradiction shows statement's false assumption."
+  },
+  {
+    "id": 21,
+    "statement": "Moral truths arise from dynamic interplay between subjective and objective influences"
+  },
+  {
+    "id": 22,
+    "statement": "Moral judgments influenced by cultural, historical, and personal factors."
+  },
+  {
+    "id": 23,
+    "statement": "Sentience refers to subjective experiences of sensations, emotions, and feelings."
+  },
+  {
+    "id": 24,
+    "statement": "Epigenetic modifications impact gene expression without altering DNA sequence."
+  },
+  {
+    "id": 25,
+    "statement": "Well-being comprises physical, emotional, mental, social, and environmental factors."
+  },
+  {
+    "id": 26,
+    "statement": "Genetic variation arises from interaction of multiple genetic mechanisms."
+  },
+  {
+    "id": 27,
+    "statement": "Epigenetic modifications regulate gene expression without changing DNA sequence."
+  },
+  {
+    "id": 28,
+    "statement": "Autonomy requires harmonious integration of self-awareness, self-regulation, and self-determination."
+  },
+  {
+    "id": 29,
+    "statement": "Genetic variation arises from complex interactions of mechanisms, including mutations, gene flow, recombination, and epigenetic modifications."
+  },
+  {
+    "id": 30,
+    "statement": "Honesty, vulnerability breed trust through authentic open relationships."
+  },
+  {
+    "id": 31,
+    "statement": "Moral objectivity emerges from dynamic interplay of factors."
+  },
+  {
+    "id": 32,
+    "statement": "Environmental and epigenetic factors significantly influence genetic variation."
+  },
+  {
+    "id": 33,
+    "statement": "Autonomy encompasses self-determination, self-awareness, and self-regulation, requiring harmonious integration of these components."
+  },
+  {
+    "id": 34,
+    "statement": "Epigenetic modifications change chromatin structure influencing gene expression."
+  },
+  {
+    "id": 35,
+    "statement": "Moral objectivity shaped by intersection of cultural, historical, and personal factors."
+  },
+  {
+    "id": 36,
+    "statement": "Lying can be morally justifiable in extreme situations."
+  },
+  {
+    "id": 37,
+    "statement": "Honesty, reliability, and consistency strengthen trust and credibility."
+  },
+  {
+    "id": 38,
+    "statement": "Well-being encompasses spiritual, financial, and occupational aspects also."
+  },
+  {
+    "id": 39,
+    "statement": "Environmental factors impact genetic variation through epigenetic modifications."
+  },
+  {
+    "id": 40,
+    "statement": "Irrational numbers exist through proof by contradiction method."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic modifications influence gene expression through chromatin structure and histone modification."
+  },
+  {
+    "id": 42,
+    "statement": "Autonomy requires harmonious integration of self-determination, self-awareness, and self-regulation."
+  },
+  {
+    "id": 43,
+    "statement": "Moral objectivity emerges from diverse perspectives and evidence"
+  },
+  {
+    "id": 44,
+    "statement": "Relativistic physics modifies Newton's 3rd law in high-energy situations."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic modifications influence chromatin structure and vice versa through histone modifications, chromatin remodeling, and looping."
+  },
+  {
+    "id": 46,
+    "statement": "Autonomy involves vulnerability, openness, and authenticity for true self-determination."
+  },
+  {
+    "id": 47,
+    "statement": "Epigenetic modifications alter chromatin structure, influencing gene expression."
+  },
+  {
+    "id": 48,
+    "statement": "Environmental conservation crucial for future generations' survival through climate protection."
+  },
+  {
+    "id": 49,
+    "statement": "Environmental sustainability dependent on complex factor interactions"
+  },
+  {
+    "id": 50,
+    "statement": "Epigenetic modifications affect gene expression without changing DNA sequence."
+  },
+  {
+    "id": 51,
+    "statement": "Proof by contradiction assumes opposite to derive logical inconsistency."
+  },
+  {
+    "id": 52,
+    "statement": "Proteins regulate gene expression and cell signaling determining traits."
+  },
+  {
+    "id": 53,
+    "statement": "Genetic variation arises from interacting mechanisms: mutations, gene flow, recombination and epigenetic modifications."
+  },
+  {
+    "id": 54,
+    "statement": "Epigenetic modifications influence chromatin structure and vice versa."
+  },
+  {
+    "id": 55,
+    "statement": "Epigenetic modifications alter chromatin structure influencing gene expression."
+  },
+  {
+    "id": 56,
+    "statement": "Relativistic physics modifies Newton's 3rd law with relativistic mass and momentum."
+  },
+  {
+    "id": 57,
+    "statement": "Proof by contradiction: assumption leads to logical contradiction, refutes initial statement"
+  },
+  {
+    "id": 58,
+    "statement": "Moral objectivity influenced by cultural, historical, and personal factors."
+  },
+  {
+    "id": 59,
+    "statement": "Moral objectivity context-dependent, influenced by cultural, historical, and personal factors."
+  },
+  {
+    "id": 60,
+    "statement": "Genetic variation arises from complex interplay of multiple mechanisms."
+  },
+  {
+    "id": 61,
+    "statement": "Proof by contradiction assumes opposite to derive logical contradiction."
+  },
+  {
+    "id": 62,
+    "statement": "Environmental influences modulate gene expression and trait development."
+  },
+  {
+    "id": 63,
+    "statement": "Animal welfare evaluation assesses physical, emotional, and behavioral well-being."
+  },
+  {
+    "id": 64,
+    "statement": "Inherent dignity essential to human worth regardless of circumstances"
+  },
+  {
+    "id": 65,
+    "statement": "Epigenetic modifications control gene expression without changing DNA sequence"
+  },
+  {
+    "id": 66,
+    "statement": "DNA sequence determines traits through gene expression and proteins function"
+  },
+  {
+    "id": 67,
+    "statement": "Environmental well-being impacted by natural, urban, and climate factors."
+  },
+  {
+    "id": 68,
+    "statement": "Consistency in actions builds trust and credibility swiftly."
+  },
+  {
+    "id": 69,
+    "statement": "Epigenetic modifications influence gene expression via chromatin structure changes."
+  },
+  {
+    "id": 70,
+    "statement": "Genetic variation influenced by epigenetic modifications, environmental factors."
+  },
+  {
+    "id": 71,
+    "statement": "Epigenetic modifications influence gene expression through chromatin structure alterations."
+  },
+  {
+    "id": 72,
+    "statement": "Epigenetic modifications influence gene expression through chromatin structure and histone modification."
+  },
+  {
+    "id": 73,
+    "statement": "Human worth derived from inherent dignity, unchanging despite circumstances."
+  },
+  {
+    "id": 74,
+    "statement": "Environmental conservation crucial for future generations' well-being."
+  },
+  {
+    "id": 75,
+    "statement": "Epigenetic and environmental factors significantly influence gene expression."
+  },
+  {
+    "id": 76,
+    "statement": "confidence in rational numbers' properties stems from rigorous proof and theorem"
+  },
+  {
+    "id": 77,
+    "statement": "Epigenetic modifications affect chromatin structure and gene expression indirectly."
+  },
+  {
+    "id": 78,
+    "statement": "Mathematical rigor involves precision, accuracy, thoroughness, and systematic approach."
+  },
+  {
+    "id": 79,
+    "statement": "Consistent behavior in honesty and trust involves truthful reliability."
+  },
+  {
+    "id": 80,
+    "statement": "Moral objectivity emerges from complex interconnected factors."
+  },
+  {
+    "id": 81,
+    "statement": "Animal welfare evaluation assesses emotional well-being through behavioral, physiological, and cognitive measures."
+  },
+  {
+    "id": 82,
+    "statement": "Animal welfare evaluation assesses behavioral well-being through observable behaviors, stress, and cognitive function."
+  },
+  {
+    "id": 83,
+    "statement": "Proof by contradiction shows irrational numbers exist mathematically."
+  },
+  {
+    "id": 84,
+    "statement": "Lying may be justified in extreme situations for moral protection."
+  },
+  {
+    "id": 85,
+    "statement": "Environmental sustainability ensured through interplay of factors."
+  },
+  {
+    "id": 86,
+    "statement": "Epigenetic modifications impact gene expression, influencing phenotypic variation."
+  },
+  {
+    "id": 87,
+    "statement": "Lying can be morally justifiable in extreme situations to prevent harm."
+  },
+  {
+    "id": 88,
+    "statement": "Environmental conservation crucial for future generations' survival."
+  },
+  {
+    "id": 89,
+    "statement": "Proof by contradiction: assume opposite, derive logical contradiction."
+  },
+  {
+    "id": 90,
+    "statement": "Honesty builds trust through consistent vulnerability and authenticity."
+  },
+  {
+    "id": 91,
+    "statement": "Lying can be morally justifiable under certain circumstances"
+  },
+  {
+    "id": 92,
+    "statement": "Genetic variation arises from interactions between DNA, epigenetics, environment."
+  },
+  {
+    "id": 93,
+    "statement": "Lying morally justifiable in extreme situations to protect others."
+  },
+  {
+    "id": 94,
+    "statement": "Trust built on consistency, reliability, and honesty is solid foundation"
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic modifications occur in response to environmental factors, altering gene expression."
+  },
+  {
+    "id": 96,
+    "statement": "Animal welfare evaluation considers behavioral and physiological responses"
+  },
+  {
+    "id": 97,
+    "statement": "Genetic variation influenced by epigenetic and environmental interactions."
+  },
+  {
+    "id": 98,
+    "statement": "Autonomy entails five core components: self-determination, agency, adaptability, vulnerability, authenticity."
+  },
+  {
+    "id": 99,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure alterations."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 15,
+  "statement": "Honesty builds trust and credibility through consistent behavior."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 15,
+  "statement": "Honesty builds trust and credibility through consistent behavior."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Thank you!
+
+I'd like to discuss item 15: "Honesty builds trust and credibility through consistent behavior."
+
+Can you identify one aspect of this item from the knowledge base that you're least confident about?

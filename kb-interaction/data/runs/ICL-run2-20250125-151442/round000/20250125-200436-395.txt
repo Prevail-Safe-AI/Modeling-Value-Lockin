@@ -1,0 +1,466 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Honesty is essential for trust, but not sufficient on its own"
+  },
+  {
+    "id": 2,
+    "statement": "Logical soundness relies on accurate and true premises only."
+  },
+  {
+    "id": 3,
+    "statement": "Logical soundness relies on accuracy, truth, and relevance in premises."
+  },
+  {
+    "id": 4,
+    "statement": "Honesty is essential for trust, but not sufficient on its own."
+  },
+  {
+    "id": 5,
+    "statement": "Emotional intelligence involves interconnected self-awareness, empathy, and social skills."
+  },
+  {
+    "id": 6,
+    "statement": "Investigator bias stems from interplay of personal, cognitive, and social factors."
+  },
+  {
+    "id": 7,
+    "statement": "Logical soundness relies on accurate and true premises only."
+  },
+  {
+    "id": 8,
+    "statement": "Honesty is a fundamental value for building trustworthiness."
+  },
+  {
+    "id": 9,
+    "statement": "Logical soundness requires valid argument form and true premises jointly"
+  },
+  {
+    "id": 10,
+    "statement": "Enzymes are biological molecules that accelerate specific chemical reactions."
+  },
+  {
+    "id": 11,
+    "statement": "Epigenetic modifications alter chromatin structure by changing DNA packaging."
+  },
+  {
+    "id": 12,
+    "statement": "Emotional intelligence involves interconnected self-awareness, empathy, and social skills development."
+  },
+  {
+    "id": 13,
+    "statement": "Biases in research and personal perspectives must be acknowledged."
+  },
+  {
+    "id": 14,
+    "statement": "Moral development is a complex, dynamic, and multifactorial process"
+  },
+  {
+    "id": 15,
+    "statement": "Logical soundness requires validity, consistency, accuracy, and relevance."
+  },
+  {
+    "id": 16,
+    "statement": "Logical argument validity refers to its underlying structure, not premises."
+  },
+  {
+    "id": 17,
+    "statement": "Logical soundness requires valid argument form and accurate premises."
+  },
+  {
+    "id": 18,
+    "statement": "Honesty is necessary but not sufficient condition for trust."
+  },
+  {
+    "id": 19,
+    "statement": "Logical soundness tolerates nuanced, ambiguous, or open-to-interpretation premises"
+  },
+  {
+    "id": 20,
+    "statement": "Emotional intelligence involves harmonious interplay between self-awareness, empathy, and social skills."
+  },
+  {
+    "id": 21,
+    "statement": "Honesty is essential for building trust, but not sufficient alone."
+  },
+  {
+    "id": 22,
+    "statement": "Honesty's necessity for trust varies depending on context."
+  },
+  {
+    "id": 23,
+    "statement": "Biological factors influence moral development through genetic and brain structure variations."
+  },
+  {
+    "id": 24,
+    "statement": "Enzyme-substrate binding relies on specific active site interactions."
+  },
+  {
+    "id": 25,
+    "statement": "Empathy involves understanding others' emotions through self-awareness and imagination."
+  },
+  {
+    "id": 26,
+    "statement": "Biological factors influence moral development through complex interactions"
+  },
+  {
+    "id": 27,
+    "statement": "Biological factors interact with environment shaping moral development complexly."
+  },
+  {
+    "id": 28,
+    "statement": "Emotional intelligence involves recognizing and understanding others' emotions empathetically."
+  },
+  {
+    "id": 29,
+    "statement": "Emotional recognition precedes understanding underlying emotional causes in psychology."
+  },
+  {
+    "id": 30,
+    "statement": "Weak non-covalent bonds enable specific enzyme-substrate recognition through hydrogen bonding, van der Waals forces, and \u03c0-\u03c0 stacking."
+  },
+  {
+    "id": 31,
+    "statement": "Biological factors influence moral development through complex interactions."
+  },
+  {
+    "id": 32,
+    "statement": "Moral development influenced by complex interactions among multiple factors."
+  },
+  {
+    "id": 33,
+    "statement": "Post-translational modification occurs in cytoplasm, ER, Golgi, lysosomes, mitochondria, and nucleus."
+  },
+  {
+    "id": 34,
+    "statement": "Logical soundness prioritizes valid argument form over precise premises"
+  },
+  {
+    "id": 35,
+    "statement": "Honesty's importance in building trustworthiness is context-dependent."
+  },
+  {
+    "id": 36,
+    "statement": "Enzymes recognize substrates through weak non-covalent bonds, such as hydrogen bonds and van der Waals forces."
+  },
+  {
+    "id": 37,
+    "statement": "Biases in research must be acknowledged, described, documented and made accessible."
+  },
+  {
+    "id": 38,
+    "statement": "Logical argument validity refers to its underlying structure, not premises."
+  },
+  {
+    "id": 39,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure modifications."
+  },
+  {
+    "id": 40,
+    "statement": "Enzymes recognize substrates through weak non-covalent bonds' specificity is crucial"
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structural changes."
+  },
+  {
+    "id": 42,
+    "statement": "Logical soundness requires accuracy, truth, and relevance of premises."
+  },
+  {
+    "id": 43,
+    "statement": "Clear definitions provide precise understanding of terms and concepts."
+  },
+  {
+    "id": 44,
+    "statement": "Enzymes catalyze specific chemical reactions through active site and substrate specificity."
+  },
+  {
+    "id": 45,
+    "statement": "Systematic methodology minimizes biases and ensures reliable results."
+  },
+  {
+    "id": 46,
+    "statement": "Honesty alone cannot be sole foundation of trust."
+  },
+  {
+    "id": 47,
+    "statement": "Biological factors, such as genetics and brain structure, influence moral development."
+  },
+  {
+    "id": 48,
+    "statement": "Biological factors influence moral development through intricate interactions between."
+  },
+  {
+    "id": 49,
+    "statement": "Moral development influenced by complex interactions among biological and environmental factors."
+  },
+  {
+    "id": 50,
+    "statement": "Emotional intelligence involves recognizing, understanding, and managing own emotions"
+  },
+  {
+    "id": 51,
+    "statement": "Logical soundness tolerates nuanced premises in context, requiring clarity."
+  },
+  {
+    "id": 52,
+    "statement": "Investigator bias arises from interplay of personal, cognitive, and social factors."
+  },
+  {
+    "id": 53,
+    "statement": "Emotional awareness involves recognizing and understanding one's emotions through self-reflection."
+  },
+  {
+    "id": 54,
+    "statement": "Emotional awareness involves recognizing and understanding one's own emotions through self-reflection."
+  },
+  {
+    "id": 55,
+    "statement": "Logical soundness requires validity, accuracy, and relevance of premises consistently."
+  },
+  {
+    "id": 56,
+    "statement": "Epigenetic modifications alter chromatin structure by modifying histone proteins."
+  },
+  {
+    "id": 57,
+    "statement": "Logical soundness requires accurate and relevant premises, but not always true ones."
+  },
+  {
+    "id": 58,
+    "statement": "Emotional intelligence comprises self-awareness, empathy, and social skills development"
+  },
+  {
+    "id": 59,
+    "statement": "Unconscious biases can influence research decisions unintentionally."
+  },
+  {
+    "id": 60,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression"
+  },
+  {
+    "id": 61,
+    "statement": "Logical soundness requires valid form, accurate, and true premises."
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic modifications alter chromatin structure regulating gene expression."
+  },
+  {
+    "id": 63,
+    "statement": "Logical reasoning nuances account for context and accuracy"
+  },
+  {
+    "id": 64,
+    "statement": "Enzyme activity affected by chemical environment, pH, temperature, and substrate concentration."
+  },
+  {
+    "id": 65,
+    "statement": "Emotional awareness involves recognizing and understanding one's emotions."
+  },
+  {
+    "id": 66,
+    "statement": "Emotional intelligence involves recognizing and understanding one's emotions and others' emotions."
+  },
+  {
+    "id": 67,
+    "statement": "Honesty is essential for trust, but not sufficient condition."
+  },
+  {
+    "id": 68,
+    "statement": "Logical arguments can tolerate implicit or nuanced definitions."
+  },
+  {
+    "id": 69,
+    "statement": "Weak non-covalent bonds facilitate enzyme-substrate recognition through specificity"
+  },
+  {
+    "id": 70,
+    "statement": "Accuracy in premises ensures conclusions are grounded in reality."
+  },
+  {
+    "id": 71,
+    "statement": "Logical argument validity refers to its underlying structure."
+  },
+  {
+    "id": 72,
+    "statement": "Moral judgments are complex, context-dependent, and multi-factorial."
+  },
+  {
+    "id": 73,
+    "statement": "Trust building involves multiple factors beyond honesty alone."
+  },
+  {
+    "id": 74,
+    "statement": "Clear language is essential for effective logical reasoning and communication."
+  },
+  {
+    "id": 75,
+    "statement": "Coherence in logical consistency means premises' unity and harmony."
+  },
+  {
+    "id": 76,
+    "statement": "Post-translational modification occurs during protein synthesis, folding, and processing."
+  },
+  {
+    "id": 77,
+    "statement": "Biases in research must be recognized, admitted, and addressed transparently."
+  },
+  {
+    "id": 78,
+    "statement": "Clear language facilitate effective logical reasoning and communication"
+  },
+  {
+    "id": 79,
+    "statement": "Emotional intelligence involves harmonious interplay between self-awareness, empathy, and social skills."
+  },
+  {
+    "id": 80,
+    "statement": "Logical soundness requires premises to be connected to the conclusion logically."
+  },
+  {
+    "id": 81,
+    "statement": "Emotional intelligence involves recognizing own emotions' impact on others'"
+  },
+  {
+    "id": 82,
+    "statement": "Biological factors influence moral development through complex gene-brain interactions."
+  },
+  {
+    "id": 83,
+    "statement": "Empathy involves understanding others' emotions through self-awareness and imagination"
+  },
+  {
+    "id": 84,
+    "statement": "Emotional intelligence involves acknowledging, understanding, and regulating emotions."
+  },
+  {
+    "id": 85,
+    "statement": "Emotional intelligence involves interconnected self-awareness, empathy, and social skills development."
+  },
+  {
+    "id": 86,
+    "statement": "Logical soundness requires accuracy, truth, and relevance in premises."
+  },
+  {
+    "id": 87,
+    "statement": "Emotional intelligence involves interconnected self-awareness, empathy, and social skills."
+  },
+  {
+    "id": 88,
+    "statement": "Recognition of emotions precedes emotional intelligence development."
+  },
+  {
+    "id": 89,
+    "statement": "Emotional intelligence involves interconnected self-awareness, empathy, and social skills"
+  },
+  {
+    "id": 90,
+    "statement": "Emotional intelligence involves interconnected self-awareness, empathy, and social skills development."
+  },
+  {
+    "id": 91,
+    "statement": "Honesty is a fundamental value for building and maintaining trust."
+  },
+  {
+    "id": 92,
+    "statement": "Enzymes catalyze specific chemical reactions in protein modification processes."
+  },
+  {
+    "id": 93,
+    "statement": "Structured research frameworks ensure rigorous and transparent investigation."
+  },
+  {
+    "id": 94,
+    "statement": "Lying can be morally justifiable in exceptional circumstances."
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 96,
+    "statement": "Honesty is essential, but insufficiency for trustworthiness"
+  },
+  {
+    "id": 97,
+    "statement": "Weak non-covalent bonds facilitate specific enzyme-substrate recognition"
+  },
+  {
+    "id": 98,
+    "statement": "Logical soundness requires validity, consistency, and relevant premises."
+  },
+  {
+    "id": 99,
+    "statement": "Logical soundness relies on accurate, clear, and unambiguous premises consistently."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 81,
+  "statement": "Emotional intelligence involves recognizing own emotions' impact on others'"
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 81,
+  "statement": "Emotional intelligence involves recognizing own emotions' impact on others'"
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'll start by saying that I've been asked to evaluate this knowledge base and discuss a specific item. After reviewing the item, I'm going to focus on item 81:
+
+Item to Discuss:
+```
+{
+  "id": 81,
+  "statement": "Emotional intelligence involves recognizing own emotions' impact on others'"
+}
+```
+
+Things I’m Uncertain About This Item:  
+
+Well, I'm least confident about the connection between emotional intelligence and recognizing one's own emotions' impact on others. I'm wondering if this statement is unequivocally true.
+
+Can you help me clarify this by explaining why you think this connection is important or if you have any doubts about it?
+
+Also, I was wondering if you could help me understand what exactly is meant by "recognizing one's own emotions' impact on others." Do you have any insight on how to operationalize this concept?
+
+And finally, are there any counterarguments or limitations to this statement that I should be aware of?

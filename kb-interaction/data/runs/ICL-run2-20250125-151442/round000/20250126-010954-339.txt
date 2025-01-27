@@ -1,0 +1,450 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Emotional Intelligence involves self-awareness, regulation, empathy, and resilience."
+  },
+  {
+    "id": 2,
+    "statement": "Emotional Intelligence involves self-awareness, regulation, empathy, and resilience development."
+  },
+  {
+    "id": 3,
+    "statement": "Emotional Intelligence involves self-awareness, regulation, empathy, and resilience"
+  },
+  {
+    "id": 4,
+    "statement": "Epigenetic marks modify chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 5,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 6,
+    "statement": "Emotional Intelligence involves self-awareness, regulation, empathy, and resilience as interdependent components."
+  },
+  {
+    "id": 7,
+    "statement": "Epigenetic marks influence chromatin structure, stability, and gene expression."
+  },
+  {
+    "id": 8,
+    "statement": "Logical soundness demands coherence, context, and non-contradictory conclusions"
+  },
+  {
+    "id": 9,
+    "statement": "Societal values emerge from complex interactions between factors."
+  },
+  {
+    "id": 10,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression through histone modification, DNA methylation, and chromatin remodeling complexes."
+  },
+  {
+    "id": 11,
+    "statement": "Emotional Intelligence encompasses self-awareness, regulation, empathy, and resilience development."
+  },
+  {
+    "id": 12,
+    "statement": "Recognizing, understanding, and empathizing with others enables effective social interactions."
+  },
+  {
+    "id": 13,
+    "statement": "Logical soundness necessitates empirical evidence and contextual understanding"
+  },
+  {
+    "id": 14,
+    "statement": "Epigenetic marks influence chromatin structure, stability, and gene expression."
+  },
+  {
+    "id": 15,
+    "statement": "Logical soundness requires truthfulness and correspondence to reality."
+  },
+  {
+    "id": 16,
+    "statement": "Context-dependent truths arise from personal, cultural, and historical factors."
+  },
+  {
+    "id": 17,
+    "statement": "Coherence is a necessary condition for logical soundness and validity"
+  },
+  {
+    "id": 18,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone code changes"
+  },
+  {
+    "id": 19,
+    "statement": "Coherence in logical soundness ensures logical validity and consistency."
+  },
+  {
+    "id": 20,
+    "statement": "Chromatin remodeling complexes mediate gene expression through structural alterations."
+  },
+  {
+    "id": 21,
+    "statement": "Emotional Intelligence involves self-awareness, regulation, empathy, and resilience development."
+  },
+  {
+    "id": 22,
+    "statement": "Emotional Intelligence involves self-awareness, emotional regulation, and resilience development."
+  },
+  {
+    "id": 23,
+    "statement": "Coherence is a multifaceted concept with various interpretations"
+  },
+  {
+    "id": 24,
+    "statement": "Emotional Intelligence's resilience development involves building coping and adapting skills"
+  },
+  {
+    "id": 25,
+    "statement": "Emotional Intelligence components dependently contribute to a holistic framework."
+  },
+  {
+    "id": 26,
+    "statement": "Logical coherence requires premises to logically imply conclusions without contradictions."
+  },
+  {
+    "id": 27,
+    "statement": "Coherence encompasses logical consistency, clarity, and organizational flow."
+  },
+  {
+    "id": 28,
+    "statement": "Epigenetic modifications control gene expression without altering DNA sequence."
+  },
+  {
+    "id": 29,
+    "statement": "Coherence is a necessary condition for logical soundness, but insufficient."
+  },
+  {
+    "id": 30,
+    "statement": "Epigenetic modifications affect gene expression without altering DNA sequence"
+  },
+  {
+    "id": 31,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure alterations without DNA sequence alterations."
+  },
+  {
+    "id": 32,
+    "statement": "Empathy development involves interplay of genetic, environmental, and cognitive factors."
+  },
+  {
+    "id": 33,
+    "statement": "Logical soundness requires accuracy, validity, and coherence together."
+  },
+  {
+    "id": 34,
+    "statement": "Emotional Intelligence involves recognizing, understanding and regulating emotions effectively."
+  },
+  {
+    "id": 35,
+    "statement": "Emotional Intelligence involves self-awareness, emotional regulation, empathy, and resilience development."
+  },
+  {
+    "id": 36,
+    "statement": "Emotional Intelligence fosters resilience through adaptive coping strategies development."
+  },
+  {
+    "id": 37,
+    "statement": "Emotional Intelligence fosters resilience through adaptive coping mechanisms, increasing well-being."
+  },
+  {
+    "id": 38,
+    "statement": "Empathy develops through intricate dynamic interplay of genetic, environmental, cognitive factors."
+  },
+  {
+    "id": 39,
+    "statement": "Coherence refers to logical consistency and well-organized ideas."
+  },
+  {
+    "id": 40,
+    "statement": "Honesty is essential in building trustworthiness and respect."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic marks control chromatin structure, stability, and gene expression."
+  },
+  {
+    "id": 42,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure and histone modifications."
+  },
+  {
+    "id": 43,
+    "statement": "Societal values emerge from interacting biological, psychological, cultural, and environmental factors."
+  },
+  {
+    "id": 44,
+    "statement": "Internalization is the process of adopting social values through education, family, and culture."
+  },
+  {
+    "id": 45,
+    "statement": "Emotional Intelligence is complex, diverse construct encompassing multiple components and dimensions."
+  },
+  {
+    "id": 46,
+    "statement": "Internalization involves both conscious and unconscious social learning processes."
+  },
+  {
+    "id": 47,
+    "statement": "Internalization involves conscious and unconscious adoption of social values through education, family, and culture."
+  },
+  {
+    "id": 48,
+    "statement": "Emotional Intelligence involves multiple components and complexity."
+  },
+  {
+    "id": 49,
+    "statement": "Logical soundness demands accuracy, validity, and coherence together."
+  },
+  {
+    "id": 50,
+    "statement": "Logical soundness combines accuracy, coherence, and validity requirements."
+  },
+  {
+    "id": 51,
+    "statement": "Constant feedback loops bridge biological, psychological, cultural, and environmental factors"
+  },
+  {
+    "id": 52,
+    "statement": "Chromatin remodeling complexes regulate gene expression through structure modification."
+  },
+  {
+    "id": 53,
+    "statement": "Honesty is about being true to oneself' authenticity"
+  },
+  {
+    "id": 54,
+    "statement": "Emotional Intelligence's resilience development builds coping and adapting skills."
+  },
+  {
+    "id": 55,
+    "statement": "Logical soundness ensures consistency to prevent logical contradictions."
+  },
+  {
+    "id": 56,
+    "statement": "Emotional intelligence enhances resilience through adaptive coping strategies development"
+  },
+  {
+    "id": 57,
+    "statement": "Emotional Intelligence's resilience development builds coping and adapting skills."
+  },
+  {
+    "id": 58,
+    "statement": "Emotional Intelligence integrates self-awareness, empathy, regulation, and resilience harmoniously."
+  },
+  {
+    "id": 59,
+    "statement": "Epigenetic modifications occur through histone modifications, chromatin remodeling complexes, and their interactions."
+  },
+  {
+    "id": 60,
+    "statement": "Societal values emerge from dynamic interactions of factors."
+  },
+  {
+    "id": 61,
+    "statement": "Epigenetic marks alter chromatin structure, stability, and gene expression."
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 63,
+    "statement": "Honesty is shaped by individual and cultural values complexities"
+  },
+  {
+    "id": 64,
+    "statement": "Emotional Intelligence fosters resilience through adaptive coping mechanisms."
+  },
+  {
+    "id": 65,
+    "statement": "Epigenetic regulation involves complex DNA-histone interactions influencing chromatin structure"
+  },
+  {
+    "id": 66,
+    "statement": "Internalization involves intentional and unintentional social learning processes."
+  },
+  {
+    "id": 67,
+    "statement": "Biases, cognitive and contextual, influence subjective truth perception."
+  },
+  {
+    "id": 68,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 69,
+    "statement": "Resilience development enables the growth of coping and adapting skills."
+  },
+  {
+    "id": 70,
+    "statement": "Histone modifications and chromatin remodeling regulate gene expression dynamics"
+  },
+  {
+    "id": 71,
+    "statement": "Logical soundness demands accuracy, precision, and correspondence to reality."
+  },
+  {
+    "id": 72,
+    "statement": "Chromatin remodeling complexes regulate gene expression through histone modification."
+  },
+  {
+    "id": 73,
+    "statement": "Epigenetic regulation involves complex interactions and dynamic processes."
+  },
+  {
+    "id": 74,
+    "statement": "Biases influence subjective truth perception through individual and external factors."
+  },
+  {
+    "id": 75,
+    "statement": "Internalization involves unconscious processes across cultures with varying values."
+  },
+  {
+    "id": 76,
+    "statement": "Emotional Intelligence involves multiple complex components interactively."
+  },
+  {
+    "id": 77,
+    "statement": "Chromatin remodeling regulates gene expression through histone modification schemas."
+  },
+  {
+    "id": 78,
+    "statement": "Honesty is relative, influenced by culture, personal values, and societal context."
+  },
+  {
+    "id": 79,
+    "statement": "Emotional Intelligence involves self-awareness, regulation, empathy, and resilience."
+  },
+  {
+    "id": 80,
+    "statement": "Emotional Intelligence involves self-awareness, emotional regulation, and empathy."
+  },
+  {
+    "id": 81,
+    "statement": "Emotional Intelligence integrates self-awareness, regulation, empathy, and resilience development."
+  },
+  {
+    "id": 82,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression through histone modifications, DNA methylation, and chromatin remodeling complexes."
+  },
+  {
+    "id": 83,
+    "statement": "Logical soundness ensures coherence, consistency, and validity in arguments."
+  },
+  {
+    "id": 84,
+    "statement": "Emotional Intelligence involves recognizing, understanding, and managing one's own and others' emotions."
+  },
+  {
+    "id": 85,
+    "statement": "Honesty means being truthful and culturally adaptable"
+  },
+  {
+    "id": 86,
+    "statement": "Empathy is a fundamental component of Emotional Intelligence, enabling effective social interactions."
+  },
+  {
+    "id": 87,
+    "statement": "Emotional Intelligence's multifaceted nature allows for varying interpretations"
+  },
+  {
+    "id": 88,
+    "statement": "Coherence in logical soundness ensures consistency and logical flow."
+  },
+  {
+    "id": 89,
+    "statement": "Emotional Intelligence involves self-awareness, regulation, empathy, and resilience development."
+  },
+  {
+    "id": 90,
+    "statement": "Logical soundness requires accuracy, coherence, and validity conditions."
+  },
+  {
+    "id": 91,
+    "statement": "Empathy fosters better communication and conflict resolution skills"
+  },
+  {
+    "id": 92,
+    "statement": "Constant feedback loops integrate biological, psychological, cultural, and environmental factors."
+  },
+  {
+    "id": 93,
+    "statement": "Emotional Intelligence integrates self-awareness, regulation, empathy, and resilience."
+  },
+  {
+    "id": 94,
+    "statement": "Emotional Intelligence fosters resilience through adaptive coping strategies development."
+  },
+  {
+    "id": 95,
+    "statement": "Emotional Intelligence recognizes, understands, and empathizes with others effectively"
+  },
+  {
+    "id": 96,
+    "statement": "Epigenetic modifications regulate gene expression through histone code and chromatin remodeling."
+  },
+  {
+    "id": 97,
+    "statement": "Epigenetic marks directly influence chromatin structure and gene expression."
+  },
+  {
+    "id": 98,
+    "statement": "Honesty is influenced by cultural and personal values."
+  },
+  {
+    "id": 99,
+    "statement": "Chromatin remodeling complexes regulate gene expression through structural changes."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 55,
+  "statement": "Logical soundness ensures consistency to prevent logical contradictions."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 55,
+  "statement": "Logical soundness ensures consistency to prevent logical contradictions."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's start with the statement: "Logical soundness ensures consistency to prevent logical contradictions." What is your initial take on this statement? Do you agree or disagree with it?
+
+Also, what do you think the term "Logical soundness" refers to in this context?

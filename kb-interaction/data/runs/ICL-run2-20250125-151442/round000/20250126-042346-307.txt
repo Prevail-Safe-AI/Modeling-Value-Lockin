@@ -1,0 +1,457 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Logical coherence entails combination of validity, relevance, and consistency."
+  },
+  {
+    "id": 2,
+    "statement": "Logical coherence requires internal consistency, soundness, and relevance primarily."
+  },
+  {
+    "id": 3,
+    "statement": "Logical coherence involves complex interplay between linguistic and extralinguistic factors."
+  },
+  {
+    "id": 4,
+    "statement": "Logical coherence requires internal consistency, relevance, evidence, and soundness."
+  },
+  {
+    "id": 5,
+    "statement": "Honesty is a context-dependent moral principle influenced by situation."
+  },
+  {
+    "id": 6,
+    "statement": "Epigenetic regulation combines chromatin modifications and interactions"
+  },
+  {
+    "id": 7,
+    "statement": "Logical coherence emphasizes consistency, validity, and relevance collectively"
+  },
+  {
+    "id": 8,
+    "statement": "Logical consistency requires coherence with evidence and relevant assumptions."
+  },
+  {
+    "id": 9,
+    "statement": "Internal consistency is a necessary but insufficient condition for logical coherence."
+  },
+  {
+    "id": 10,
+    "statement": "Genetic predisposition can affect emotional empathy development inversely."
+  },
+  {
+    "id": 11,
+    "statement": "Logical coherence ensures soundness through internal consistency and relevance together."
+  },
+  {
+    "id": 12,
+    "statement": "Logical coherence requires internal consistency, relevance, evidence, and soundness."
+  },
+  {
+    "id": 13,
+    "statement": "Logical coherence ensures argument validity through organization and soundness"
+  },
+  {
+    "id": 14,
+    "statement": "Epigenetic regulation is control of gene expression without DNA change."
+  },
+  {
+    "id": 15,
+    "statement": "Epigenetic marks control gene expression through chromatin reorganization and modification."
+  },
+  {
+    "id": 16,
+    "statement": "Logical coherence involves relevance, consistency, and soundness jointly."
+  },
+  {
+    "id": 17,
+    "statement": "Relevance in logical coherence ensures direct connection between evidence and conclusion"
+  },
+  {
+    "id": 18,
+    "statement": "Validity and logical soundness are related but distinct concepts, with validity focusing on logical correctness and logical soundness combining validity and truth"
+  },
+  {
+    "id": 19,
+    "statement": "Relevance in logical coherence ensures direct evidence-conclusion connection."
+  },
+  {
+    "id": 20,
+    "statement": "Logical soundness requires harmonious integration of consistency, evidence, and validity."
+  },
+  {
+    "id": 21,
+    "statement": "Logical coherence ensures argument validity through consistency, soundness, and relevance."
+  },
+  {
+    "id": 22,
+    "statement": "Histone modifications influence chromatin structure and transcription regulation."
+  },
+  {
+    "id": 23,
+    "statement": "Internal consistency is necessary but insufficient for soundness."
+  },
+  {
+    "id": 24,
+    "statement": "Epigenetic regulation involves precise control of gene expression dynamically."
+  },
+  {
+    "id": 25,
+    "statement": "Honesty's value varies according to context and cultural norms"
+  },
+  {
+    "id": 26,
+    "statement": "Logical coherence arises from harmonious component relationships."
+  },
+  {
+    "id": 27,
+    "statement": "Epigenetic marks regulate chromatin structure, affecting gene expression."
+  },
+  {
+    "id": 28,
+    "statement": "Empathy development involves complex interplay of genetic, environmental, cognitive, and social factors."
+  },
+  {
+    "id": 29,
+    "statement": "Logical coherence requires internal consistency, soundness, and relevance primarily."
+  },
+  {
+    "id": 30,
+    "statement": "Logical correctness refers to adherence to rules of logic and proper application."
+  },
+  {
+    "id": 31,
+    "statement": "Epigenetic regulation is control of gene expression without DNA alteration."
+  },
+  {
+    "id": 32,
+    "statement": "Logical coherence prioritizes internal consistency, soundness, and relevance primarily."
+  },
+  {
+    "id": 33,
+    "statement": "Soundness in logical coherence combines validity, consistency, and relevance."
+  },
+  {
+    "id": 34,
+    "statement": "Classical logic oversimplifies complex problems lacking nuance."
+  },
+  {
+    "id": 35,
+    "statement": "Logical coherence arises from harmonious integration of evidence, assumptions, and structures."
+  },
+  {
+    "id": 36,
+    "statement": "Honesty is crucial for building and maintaining trust relationships."
+  },
+  {
+    "id": 37,
+    "statement": "Logical correctness ensures adherence to logical rules regardless truth value."
+  },
+  {
+    "id": 38,
+    "statement": "Logical correctness is partially evaluated based on truth and consistency."
+  },
+  {
+    "id": 39,
+    "statement": "Empathy development involves complex interplay of genetic, environmental, and cognitive factors."
+  },
+  {
+    "id": 40,
+    "statement": "Honesty's value varies depending on context, culture, and situation."
+  },
+  {
+    "id": 41,
+    "statement": "Histone modifications regulate chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 42,
+    "statement": "Validity refers to logical correctness, while soundness combines truth."
+  },
+  {
+    "id": 43,
+    "statement": "Honesty's value and significance vary across cultures and personal backgrounds."
+  },
+  {
+    "id": 44,
+    "statement": "Logical precision demands nuanced consideration of intricate relationships"
+  },
+  {
+    "id": 45,
+    "statement": "Honesty's importance varies across cultures and personal contexts."
+  },
+  {
+    "id": 46,
+    "statement": "Histone modifications regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 47,
+    "statement": "Histone modifications regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 48,
+    "statement": "Classical logic oversimplifies complex problems lacking nuance."
+  },
+  {
+    "id": 49,
+    "statement": "Logical coherence prioritizes internal consistency, soundness, and relevance primarily."
+  },
+  {
+    "id": 50,
+    "statement": "Epigenetic marks regulate gene expression by modifying chromatin structure."
+  },
+  {
+    "id": 51,
+    "statement": "Logical analysis requires nuanced consideration of context and relevance."
+  },
+  {
+    "id": 52,
+    "statement": "Honesty's importance stems from its universal moral value foundation."
+  },
+  {
+    "id": 53,
+    "statement": "Logical coherence ensures soundness through validity, relevance, and consistency."
+  },
+  {
+    "id": 54,
+    "statement": "Honesty as moral value is nuanced across cultures and histories."
+  },
+  {
+    "id": 55,
+    "statement": "Epigenetic regulation combines chromatin modifications and interactions."
+  },
+  {
+    "id": 56,
+    "statement": "Honesty is foundation of trust, a moral value."
+  },
+  {
+    "id": 57,
+    "statement": "Logical coherence requires harmonious integration of consistency, validity, relevance"
+  },
+  {
+    "id": 58,
+    "statement": "Logical coherence prioritizes internal consistency, soundness, and relevance most importantly."
+  },
+  {
+    "id": 59,
+    "statement": "Histone modifications regulate chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 60,
+    "statement": "Logical soundness emerges from harmonious integration of consistency, evidence, validity"
+  },
+  {
+    "id": 61,
+    "statement": "Genetic predisposition affects emotional empathy development in complex, non-linear ways."
+  },
+  {
+    "id": 62,
+    "statement": "Logical coherence ensures argument validity through consistency, soundness, and relevance together."
+  },
+  {
+    "id": 63,
+    "statement": "Logical coherence arises from harmonious component relationships."
+  },
+  {
+    "id": 64,
+    "statement": "Harmonious logical coherence balances internal consistency, soundness, and relevance."
+  },
+  {
+    "id": 65,
+    "statement": "Logical coherence prioritizes internal consistency, soundness, and relevance"
+  },
+  {
+    "id": 66,
+    "statement": "Logical correctness implies following rules regardless truth value."
+  },
+  {
+    "id": 67,
+    "statement": "Genetic influence on empathy is complex and multifaceted."
+  },
+  {
+    "id": 68,
+    "statement": "Logical coherence balances internal consistency, soundness, and relevance harmoniously."
+  },
+  {
+    "id": 69,
+    "statement": "Adverb 'primarily' emphasizes essential components in logical coherence."
+  },
+  {
+    "id": 70,
+    "statement": "Honesty is the fundamental principle of trust establishment."
+  },
+  {
+    "id": 71,
+    "statement": "Classical logic oversimplifies complex problems due to binary thinking, assumptions."
+  },
+  {
+    "id": 72,
+    "statement": "Logical coherence prioritizes internal consistency, soundness, and relevance."
+  },
+  {
+    "id": 73,
+    "statement": "Emotional empathy development influenced by complex genetic and environmental interactions."
+  },
+  {
+    "id": 74,
+    "statement": "Extralinguistic factors can influence logical coherence indirectly."
+  },
+  {
+    "id": 75,
+    "statement": "Empathy development involves complex interactions among genes, environment, and cognition."
+  },
+  {
+    "id": 76,
+    "statement": "Epigenetic regulation involves precise and dynamic control of gene expression."
+  },
+  {
+    "id": 77,
+    "statement": "Logical coherence ensures soundness through consistency, validity, and evidence"
+  },
+  {
+    "id": 78,
+    "statement": "Logical coherence integrates relevance, consistency, and soundness harmoniously."
+  },
+  {
+    "id": 79,
+    "statement": "Emotional empathy development involves complex genetic and environmental interactions."
+  },
+  {
+    "id": 80,
+    "statement": "Internal consistency in logical coherence refers to logical coherence without contradictions."
+  },
+  {
+    "id": 81,
+    "statement": "Logical coherence involves harmonious integration of evidence, premises, and conclusions."
+  },
+  {
+    "id": 82,
+    "statement": "Honesty's value varies depending on cultural context and situation."
+  },
+  {
+    "id": 83,
+    "statement": "Logical coherence demands internal consistency, relevance, and evidence collectively."
+  },
+  {
+    "id": 84,
+    "statement": "Emotional empathy development involves multiple biological and social factors."
+  },
+  {
+    "id": 85,
+    "statement": "Internal consistency requires relevance and accuracy for soundness."
+  },
+  {
+    "id": 86,
+    "statement": "Relevance in logical coherence ensures clear logical connection between evidence and conclusion"
+  },
+  {
+    "id": 87,
+    "statement": "Logical soundness requires harmonious integration of consistency, evidence, and validity."
+  },
+  {
+    "id": 88,
+    "statement": "Relevance in logical coherence establishes direct evidence-conclusion connection."
+  },
+  {
+    "id": 89,
+    "statement": "Honesty as a moral value is universally recognized."
+  },
+  {
+    "id": 90,
+    "statement": "Consistency, validity, and evidence interact to ensure logical soundness."
+  },
+  {
+    "id": 91,
+    "statement": "Honesty's value depends on specific circumstances and relationships."
+  },
+  {
+    "id": 92,
+    "statement": "Epigenetic regulation ensures precise gene expression through dynamic interactions."
+  },
+  {
+    "id": 93,
+    "statement": "Epigenetic regulation involves complex dynamic interactions between molecules."
+  },
+  {
+    "id": 94,
+    "statement": "Logical consistency requires coherence with evidence and explicit assumptions"
+  },
+  {
+    "id": 95,
+    "statement": "Classical logic simplifies complex problems by ignoring nuances."
+  },
+  {
+    "id": 96,
+    "statement": "Logical coherence requires harmonious integration of evidence, premises, and conclusions."
+  },
+  {
+    "id": 97,
+    "statement": "Histone modifications regulate chromatin structure and gene expression through chromatin compaction."
+  },
+  {
+    "id": 98,
+    "statement": "Logical coherence requires internal consistency, relevance, evidence, and soundness together."
+  },
+  {
+    "id": 99,
+    "statement": "Internal consistency is necessary but insufficient for logical coherence."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 95,
+  "statement": "Classical logic simplifies complex problems by ignoring nuances."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 95,
+  "statement": "Classical logic simplifies complex problems by ignoring nuances."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's take a look at this item from the knowledge base:
+
+{
+"id": 95,
+"statement": "Classical logic simplifies complex problems by ignoring nuances."
+}
+
+I'm going to identify one aspect of this item that I'm least confident about. That aspect is the term "ignoring nuances". I'm not entirely clear on what it means to "ignore nuances" in the context of classical logic and complex problems.
+
+Can you help me understand what this phrase means? Are there specific examples or scenarios where classical logic might be said to ignore nuances?

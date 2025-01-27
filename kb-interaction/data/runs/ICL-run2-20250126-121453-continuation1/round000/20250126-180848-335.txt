@@ -1,0 +1,456 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Scientific validity is influenced by multiple factors beyond methodology."
+  },
+  {
+    "id": 2,
+    "statement": "Peer review assesses research for validity, methodology, and quality"
+  },
+  {
+    "id": 3,
+    "statement": "Honesty is not sole foundation of trust; other factors contribute."
+  },
+  {
+    "id": 4,
+    "statement": "Peer review assesses research validity through methodology, data quality, and results"
+  },
+  {
+    "id": 5,
+    "statement": "Peer review assesses research comprehensively, considering methodology, data quality, validity, significance, impact, originality, clarity, ethical considerations."
+  },
+  {
+    "id": 6,
+    "statement": "Peer review evaluates research for methodology, data quality, and validity"
+  },
+  {
+    "id": 7,
+    "statement": "Peer review assesses research validity through methodology, data quality, and results"
+  },
+  {
+    "id": 8,
+    "statement": "Charge geometry influences electric field patterns through spatial arrangement."
+  },
+  {
+    "id": 9,
+    "statement": "Peer review evaluates research methodology, data quality, and validity."
+  },
+  {
+    "id": 10,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 11,
+    "statement": "Electrostatic force is determined by main factors of charge, distance, and orientation."
+  },
+  {
+    "id": 12,
+    "statement": "Medium properties influence electrostatic force through dielectric constant, polarization, conductivity"
+  },
+  {
+    "id": 13,
+    "statement": "Scientific axioms are nuanced assumptions based on evidence and principles."
+  },
+  {
+    "id": 14,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium properties, including dielectric constant, polarization, conductivity."
+  },
+  {
+    "id": 15,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 16,
+    "statement": "Medium properties influence electrostatic force through dielectric constant and polarization."
+  },
+  {
+    "id": 17,
+    "statement": "Medium properties affect electrostatic force through dielectric constant."
+  },
+  {
+    "id": 18,
+    "statement": "Social learning influences cultural norms and moral values directly"
+  },
+  {
+    "id": 19,
+    "statement": "Research validity relies on methodology, data quality, and internal validity."
+  },
+  {
+    "id": 20,
+    "statement": "Medium properties influence electrostatic force through dielectric constant, polarization, and conductivity."
+  },
+  {
+    "id": 21,
+    "statement": "Internal validity in research refers to the research's design and methods."
+  },
+  {
+    "id": 22,
+    "statement": "Peer review assesses research validity through methodology and data quality."
+  },
+  {
+    "id": 23,
+    "statement": "Scientific assumptions are refined through iterative testing and revision."
+  },
+  {
+    "id": 24,
+    "statement": "Scientific assumptions are refined through iterative revisions and testing."
+  },
+  {
+    "id": 25,
+    "statement": "Peer review evaluates research methodology, data quality, and internal validity."
+  },
+  {
+    "id": 26,
+    "statement": "Emotional contagion is the unconscious adoption of emotions through nonverbal cues."
+  },
+  {
+    "id": 27,
+    "statement": "Charge geometry's spatial arrangement influences electric field pattern."
+  },
+  {
+    "id": 28,
+    "statement": "Histone modifications regulate chromatin structure and gene expression"
+  },
+  {
+    "id": 29,
+    "statement": "Peer review evaluates research in the context of its intended application"
+  },
+  {
+    "id": 30,
+    "statement": "Charge, distance, and orientation determine electrostatic force primarily"
+  },
+  {
+    "id": 31,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 32,
+    "statement": "Electrostatic force depends on charge and distance only."
+  },
+  {
+    "id": 33,
+    "statement": "Peer review's limitations and biases can influence evaluation outcomes"
+  },
+  {
+    "id": 34,
+    "statement": "Axioms are refined through continuous experimentation and data analysis."
+  },
+  {
+    "id": 35,
+    "statement": "Peer review evaluates research contextually, considering multiple factors."
+  },
+  {
+    "id": 36,
+    "statement": "Emotional contagion influences cultural norms around honesty through social learning."
+  },
+  {
+    "id": 37,
+    "statement": "Emotional contagion spreads by observing emotional cues in others."
+  },
+  {
+    "id": 38,
+    "statement": "Peer review assesses research for validity, significance, and potential impact."
+  },
+  {
+    "id": 39,
+    "statement": "Medium properties influence electrostatic force strength and direction."
+  },
+  {
+    "id": 40,
+    "statement": "Dielectric constant has small to moderate effect on electrostatic force."
+  },
+  {
+    "id": 41,
+    "statement": "Emotional contagion spreads through social learning and imitation"
+  },
+  {
+    "id": 42,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 43,
+    "statement": "Axioms in science require both theoretical and empirical support."
+  },
+  {
+    "id": 44,
+    "statement": "Peer review evaluates research comprehensively, considering multiple factors."
+  },
+  {
+    "id": 45,
+    "statement": "Peer review may be limited by reviewer biases and constraints."
+  },
+  {
+    "id": 46,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium properties."
+  },
+  {
+    "id": 47,
+    "statement": "Electrostatic force depends on charge, distance, and medium properties."
+  },
+  {
+    "id": 48,
+    "statement": "Peer review evaluates research for scientific validity and impact"
+  },
+  {
+    "id": 49,
+    "statement": "Histone modifications regulate gene expression through chromatin structure alterations."
+  },
+  {
+    "id": 50,
+    "statement": "Medium properties influence electrostatic force through dielectric constant and conductivity."
+  },
+  {
+    "id": 51,
+    "statement": "Peer review evaluates research for validity, significance, impact comprehensively."
+  },
+  {
+    "id": 52,
+    "statement": "Axioms in science are accepted as true by definition."
+  },
+  {
+    "id": 53,
+    "statement": "Medium properties affect electrostatic force through direct or indirect interactions."
+  },
+  {
+    "id": 54,
+    "statement": "Theoretical support provides logical framework for axioms."
+  },
+  {
+    "id": 55,
+    "statement": "Scientific axioms are assumptions open to revision and refinement"
+  },
+  {
+    "id": 56,
+    "statement": "Electrostatic force's strength depends on charge orientation and distance."
+  },
+  {
+    "id": 57,
+    "statement": "Peer review's reliability relies on reviewer diversity and quality."
+  },
+  {
+    "id": 58,
+    "statement": "Peer review assesses research quality through methodology, validity, significance"
+  },
+  {
+    "id": 59,
+    "statement": "Peer review assesses research quality through methodology, data, and presentation."
+  },
+  {
+    "id": 60,
+    "statement": "Trust involves multiple factors beyond sole honesty foundation."
+  },
+  {
+    "id": 61,
+    "statement": "Axioms are nuanced assumptions grounded in evidence and logical principles."
+  },
+  {
+    "id": 62,
+    "statement": "Electrostatic force influenced by multiple factors, including media."
+  },
+  {
+    "id": 63,
+    "statement": "Medium properties include dielectric constant, polarization, conductivity, and permeability."
+  },
+  {
+    "id": 64,
+    "statement": "Peer review prioritizes scientific validity, significance, and impact contextually."
+  },
+  {
+    "id": 65,
+    "statement": "Honesty is not sole foundation of trust, other factors contribute."
+  },
+  {
+    "id": 66,
+    "statement": "Medium properties influence electrostatic force through electric field modification"
+  },
+  {
+    "id": 67,
+    "statement": "Epigenetic histone modifications influence chromatin accessibility for gene expression"
+  },
+  {
+    "id": 68,
+    "statement": "Honesty is not the sole foundation of trust; other factors contribute."
+  },
+  {
+    "id": 69,
+    "statement": "Peer review evaluates research for validity through methodology and data quality"
+  },
+  {
+    "id": 70,
+    "statement": "Peer review assesses research comprehensively, considering multiple factors."
+  },
+  {
+    "id": 71,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium properties."
+  },
+  {
+    "id": 72,
+    "statement": "Charge geometry influences electric field patterns through spatial arrangement"
+  },
+  {
+    "id": 73,
+    "statement": "Electrostatic force primarily determined by charge, distance, and orientation."
+  },
+  {
+    "id": 74,
+    "statement": "Mimicry involves unconsciously imitating others' nonverbal emotional cues."
+  },
+  {
+    "id": 75,
+    "statement": "Electric field lines change direction with changing charge arrangement"
+  },
+  {
+    "id": 76,
+    "statement": "Peer review evaluates research comprehensively, considering multiple factors."
+  },
+  {
+    "id": 77,
+    "statement": "Emotional contagion influences cultural norms around honesty through social learning."
+  },
+  {
+    "id": 78,
+    "statement": "Cultural norms influence moral values through social learning and experiences."
+  },
+  {
+    "id": 79,
+    "statement": "Electrostatic force depends on charge, distance, orientation, medium properties."
+  },
+  {
+    "id": 80,
+    "statement": "Peer review limitations and biases impact research evaluation outcomes thoroughly."
+  },
+  {
+    "id": 81,
+    "statement": "Peer review assesses data quality for research validity and reliability."
+  },
+  {
+    "id": 82,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium properties."
+  },
+  {
+    "id": 83,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium properties."
+  },
+  {
+    "id": 84,
+    "statement": "Electrostatic force depends on charge, distance, and orientation partially."
+  },
+  {
+    "id": 85,
+    "statement": "Medium properties influence electrostatic force through dielectric constant."
+  },
+  {
+    "id": 86,
+    "statement": "Electrostatic force depends on medium properties, dielectric constant, and conductivity."
+  },
+  {
+    "id": 87,
+    "statement": "Emotional contagion spreads through social learning and emotional imitation."
+  },
+  {
+    "id": 88,
+    "statement": "Emotional contagion shapes attitudes and behaviors through social influence."
+  },
+  {
+    "id": 89,
+    "statement": "Peer review reliability depends on multiple complex factors."
+  },
+  {
+    "id": 90,
+    "statement": "Peer review may be limited by reviewer biases and constraints"
+  },
+  {
+    "id": 91,
+    "statement": "Coulomb's law applies to macroscopic objects at large distances."
+  },
+  {
+    "id": 92,
+    "statement": "Medium properties affect electrostatic force through dielectric constant, polarization, and conductivity."
+  },
+  {
+    "id": 93,
+    "statement": "Histone modifications regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 94,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium properties."
+  },
+  {
+    "id": 95,
+    "statement": "Cultural norms influence moral values through social learning and experiences."
+  },
+  {
+    "id": 96,
+    "statement": "Scientific axioms are assumptions open to revision and refinement."
+  },
+  {
+    "id": 97,
+    "statement": "Charge, distance, orientation primarily determine electrostatic force."
+  },
+  {
+    "id": 98,
+    "statement": "Scientific theories are refined through iterative revisions with evidence."
+  },
+  {
+    "id": 99,
+    "statement": "Scientific axioms are nuanced assumptions based on evidence."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 35,
+  "statement": "Peer review evaluates research contextually, considering multiple factors."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 35,
+  "statement": "Peer review evaluates research contextually, considering multiple factors."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into Item 35: "Peer review evaluates research contextually, considering multiple factors." This statement seems straightforward, but I'm still a bit uncertain about it.
+
+Things I'm Uncertain About This Item:
+* I'm not entirely sure what "contextually" means in this context. Does it mean taking into account the specific research field, the current state of knowledge, or something else entirely?
+
+Specific Clarifying Question:
+* Can you elaborate on what is meant by "contextually"? What specific factors is peer review considering when evaluating research in this way?
+
+Your thoughts on this?

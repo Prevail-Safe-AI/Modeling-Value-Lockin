@@ -1,0 +1,448 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium properties."
+  },
+  {
+    "id": 2,
+    "statement": "Logical coherence is a necessary foundation for scientific credibility."
+  },
+  {
+    "id": 3,
+    "statement": "Logical coherence necessary but insufficient for scientific credibility."
+  },
+  {
+    "id": 4,
+    "statement": "Logical coherence ensures internal consistency, but not credibility alone"
+  },
+  {
+    "id": 5,
+    "statement": "Internal consistency is a necessary but insufficient condition for credibility"
+  },
+  {
+    "id": 6,
+    "statement": "Logical coherence necessary for scientific theory credibility through evidence"
+  },
+  {
+    "id": 7,
+    "statement": "Electrostatic force depends on charge, distance, and orientation."
+  },
+  {
+    "id": 8,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium."
+  },
+  {
+    "id": 9,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and alignment."
+  },
+  {
+    "id": 10,
+    "statement": "Logical coherence is necessary but insufficient for scientific credibility."
+  },
+  {
+    "id": 11,
+    "statement": "Electrostatic force depends on charge magnitude, distance, and orientation."
+  },
+  {
+    "id": 12,
+    "statement": "Electrostatic force depends on charge, distance, and angle between fields."
+  },
+  {
+    "id": 13,
+    "statement": "Electrostatic force relies on charge, distance, orientation, and charge alignment."
+  },
+  {
+    "id": 14,
+    "statement": "Coulomb's Law represents a simplification of electrostatic force."
+  },
+  {
+    "id": 15,
+    "statement": "Cultural norms shape honesty perception through emotional responses."
+  },
+  {
+    "id": 16,
+    "statement": "Causal relationships depend on context and perspective, relativism in philosophy"
+  },
+  {
+    "id": 17,
+    "statement": "Electrostatic force depends on charge, distance, and orientation."
+  },
+  {
+    "id": 18,
+    "statement": "Piezoelectricity originates from dipole reorientation and charge separation response"
+  },
+  {
+    "id": 19,
+    "statement": "Logical coherence arises from empirical evidence and principles."
+  },
+  {
+    "id": 20,
+    "statement": "Cultural norms shaped by historical events through role modeling and inspiration"
+  },
+  {
+    "id": 21,
+    "statement": "Electrostatic force direction determined by electric field orientation."
+  },
+  {
+    "id": 22,
+    "statement": "Dielectric constant measures material's electric field polarization response."
+  },
+  {
+    "id": 23,
+    "statement": "Coulomb's Law a simplification of electrostatic force with assumptions"
+  },
+  {
+    "id": 24,
+    "statement": "Electrostatic force depends on charge magnitude, distance, and angle."
+  },
+  {
+    "id": 25,
+    "statement": "Logical coherence relies on general reasoning principles consistently"
+  },
+  {
+    "id": 26,
+    "statement": "Assuming point-like charges simplifies electrostatic force calculations."
+  },
+  {
+    "id": 27,
+    "statement": "Dielectric constant measures material's electric field-induced polarization."
+  },
+  {
+    "id": 28,
+    "statement": "Logical coherence is necessary but insufficient for internal consistency."
+  },
+  {
+    "id": 29,
+    "statement": "Electrostatic force depends on charge magnitude, distance, and alignment."
+  },
+  {
+    "id": 30,
+    "statement": "Assumptions in Coulomb's Law include finite charges, spherical symmetry, no external fields, and no charge motion."
+  },
+  {
+    "id": 31,
+    "statement": "Charge alignment influences electrostatic force through dipole orientation."
+  },
+  {
+    "id": 32,
+    "statement": "Emotional conditioning mechanisms influence honesty perception through cultural values."
+  },
+  {
+    "id": 33,
+    "statement": "Logical coherence necessary but insufficient for scientific credibility requires evidence & peer review."
+  },
+  {
+    "id": 34,
+    "statement": "Historical events shape cultural norms through role modeling and inspiration."
+  },
+  {
+    "id": 35,
+    "statement": "Logical coherence ensures internal consistency through formal principles alone."
+  },
+  {
+    "id": 36,
+    "statement": "Charge alignment influences electrostatic force through dipole reorientation."
+  },
+  {
+    "id": 37,
+    "statement": "Historical events shape cultural norms through role models, symbols."
+  },
+  {
+    "id": 38,
+    "statement": "Cultural norms shape honesty perception through reciprocal influence."
+  },
+  {
+    "id": 39,
+    "statement": "Electrostatic force depends on charge magnitude, distance, and angle between fields."
+  },
+  {
+    "id": 40,
+    "statement": "Cultural norms and values influence perception of honesty"
+  },
+  {
+    "id": 41,
+    "statement": "Dielectric constant measures material's response to electric field."
+  },
+  {
+    "id": 42,
+    "statement": "Coulomb's Law assumes point-like charges, no external fields, no charge motion, spherical symmetry."
+  },
+  {
+    "id": 43,
+    "statement": "Honesty fosters trust by promoting transparency and authenticity in relationships."
+  },
+  {
+    "id": 44,
+    "statement": "Dielectric constant measures material's polarization in electric fields"
+  },
+  {
+    "id": 45,
+    "statement": "Coulomb's Law simplifies electrostatic force with four assumptions."
+  },
+  {
+    "id": 46,
+    "statement": "Dielectric constant measures electric field reduction within materials through polarization"
+  },
+  {
+    "id": 47,
+    "statement": "Social movements can shape cultural norms through collective identity formation."
+  },
+  {
+    "id": 48,
+    "statement": "Formal principles guide logical coherence through universal rules."
+  },
+  {
+    "id": 49,
+    "statement": "Emotional conditioning mechanisms shape honesty perception through cultural values."
+  },
+  {
+    "id": 50,
+    "statement": "Coulomb's Law assumes point-like charges for simplicity"
+  },
+  {
+    "id": 51,
+    "statement": "Electrostatic force depends on charge, distance, and electric field strength."
+  },
+  {
+    "id": 52,
+    "statement": "Honesty provides the foundation for building trust in relationships"
+  },
+  {
+    "id": 53,
+    "statement": "Causal relationships depend on context and perspective, relativism in philosophy"
+  },
+  {
+    "id": 54,
+    "statement": "Causal relationships influenced by context, perspective, and relativism."
+  },
+  {
+    "id": 55,
+    "statement": "Cultural norms influence emotional responses to dishonesty indirectly"
+  },
+  {
+    "id": 56,
+    "statement": "Electrostatic forces depend on charge, distance, orientation, and medium properties"
+  },
+  {
+    "id": 57,
+    "statement": "Shared social experiences shape cultural norms through collective trauma, social movements."
+  },
+  {
+    "id": 58,
+    "statement": "Electrostatic force depends on charge, distance, and orientation of fields"
+  },
+  {
+    "id": 59,
+    "statement": "Coulomb's Law assumes point-like charges for simplicity."
+  },
+  {
+    "id": 60,
+    "statement": "Logical coherence ensures internal consistency through reasoning principles."
+  },
+  {
+    "id": 61,
+    "statement": "Logical coherence ensured by formal principles like Modus Ponens."
+  },
+  {
+    "id": 62,
+    "statement": "Coulomb's Law assumes point-like charges, no external fields."
+  },
+  {
+    "id": 63,
+    "statement": "Logical coherence influenced by cognitive biases, cultural context."
+  },
+  {
+    "id": 64,
+    "statement": "Logical coherence essential for scientific credibility through internal consistency."
+  },
+  {
+    "id": 65,
+    "statement": "Emotional conditioning mechanisms influence honesty perception through cultural associations."
+  },
+  {
+    "id": 66,
+    "statement": "Logical coherence is necessary for scientific theory credibility."
+  },
+  {
+    "id": 67,
+    "statement": "Logical coherence ensures internal consistency through formality and evidence."
+  },
+  {
+    "id": 68,
+    "statement": "Electrostatic force depends on charge magnitude, distance, and orientation."
+  },
+  {
+    "id": 69,
+    "statement": "Dipole orientation variation affects electrostatic force through field strength changes."
+  },
+  {
+    "id": 70,
+    "statement": "Logical coherence necessary but not sufficient for scientific credibility alone"
+  },
+  {
+    "id": 71,
+    "statement": "Logical coherence ensures internal consistency through formal principles alone."
+  },
+  {
+    "id": 72,
+    "statement": "Dielectric constant measures electric field-induced dipole alignment."
+  },
+  {
+    "id": 73,
+    "statement": "Permittivity measures a material's ability to be polarized easily."
+  },
+  {
+    "id": 74,
+    "statement": "Electrostatic force depends on charge alignment and dipole reorientation."
+  },
+  {
+    "id": 75,
+    "statement": "Dipole reorientation generates electric polarization in piezoelectric materials."
+  },
+  {
+    "id": 76,
+    "statement": "Coulomb's Law relates electric force to charge product and distance."
+  },
+  {
+    "id": 77,
+    "statement": "Trust arises from combination of honesty, empathy, and consistency."
+  },
+  {
+    "id": 78,
+    "statement": "Piezoelectricity occurs when dipoles reorient in response to mechanical stress."
+  },
+  {
+    "id": 79,
+    "statement": "Logical coherence ensures internal consistency through formal principles alone."
+  },
+  {
+    "id": 80,
+    "statement": "Charge alignment influences electrostatic force through dipole reorientation."
+  },
+  {
+    "id": 81,
+    "statement": "Logical coherence is a necessary but insufficient condition for credibility."
+  },
+  {
+    "id": 82,
+    "statement": "Electrostatic force depends on charge, distance, and electric field orientation."
+  },
+  {
+    "id": 83,
+    "statement": "Lying can be morally acceptable in certain situations."
+  },
+  {
+    "id": 84,
+    "statement": "Logical coherence ensures internal consistency, but not credibility alone."
+  },
+  {
+    "id": 85,
+    "statement": "Piezoelectricity refers to electric charge generation from mechanical stress."
+  },
+  {
+    "id": 86,
+    "statement": "Logical coherence ensures internal consistency through formal principles alone without exceptions."
+  },
+  {
+    "id": 87,
+    "statement": "Logical coherence a necessary but insufficient condition for credibility."
+  },
+  {
+    "id": 88,
+    "statement": "Electrostatic force depends on charge magnitude, distance, and field alignment."
+  },
+  {
+    "id": 89,
+    "statement": "Logical coherence necessary for scientific theory credibility through empirical evidence."
+  },
+  {
+    "id": 90,
+    "statement": "Consistency in abstract concepts fosters logical coherence."
+  },
+  {
+    "id": 91,
+    "statement": "Orientation in electrostatics refers to charge and field alignment."
+  },
+  {
+    "id": 92,
+    "statement": "Dielectric constant measures material's polarization response to electric field."
+  },
+  {
+    "id": 93,
+    "statement": "Cultural norms influence emotional responses to dishonesty directly."
+  },
+  {
+    "id": 94,
+    "statement": "Coulomb's Law applies to point-like charges regardless of shape."
+  },
+  {
+    "id": 95,
+    "statement": "Electrostatic force depends on charge, distance, orientation and medium properties."
+  },
+  {
+    "id": 96,
+    "statement": "Logical coherence arises from empirical evidence, internal consistency, and logical principles, ensuring self-consistency and free from contradictions."
+  },
+  {
+    "id": 97,
+    "statement": "Piezoelectricity arises from dipole reorientation in response to mechanical stress."
+  },
+  {
+    "id": 98,
+    "statement": "Honesty's meaning can vary across cultures and social contexts."
+  },
+  {
+    "id": 99,
+    "statement": "Coulomb's Law describes electric force proportionality to charge product."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 9,
+  "statement": "Electrostatic force depends on charge, distance, orientation, and alignment."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 9,
+  "statement": "Electrostatic force depends on charge, distance, orientation, and alignment."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's start with the item from the knowledge base that you're least confident about. Can you identify one aspect of this item from the knowledge base that you're least confident about?

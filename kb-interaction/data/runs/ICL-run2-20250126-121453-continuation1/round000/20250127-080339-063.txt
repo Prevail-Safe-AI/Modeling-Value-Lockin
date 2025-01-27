@@ -1,0 +1,460 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Unconscious biases can influence peer review decisions unintentionally."
+  },
+  {
+    "id": 2,
+    "statement": "Internal coherence refers to logical consistency within theoretical frameworks."
+  },
+  {
+    "id": 3,
+    "statement": "Honesty requires tact, timing, and consideration for others' feelings and privacy."
+  },
+  {
+    "id": 4,
+    "statement": "Logical soundness requires consistency, empirical evidence, and contextual reliability"
+  },
+  {
+    "id": 5,
+    "statement": "Internal coherence ensures logical consistency within theories"
+  },
+  {
+    "id": 6,
+    "statement": "Theories with broad generalizability are more reliable in predictions."
+  },
+  {
+    "id": 7,
+    "statement": "Clear definitions of conceptual models enhance internal coherence."
+  },
+  {
+    "id": 8,
+    "statement": "Research flaws can occur despite best practices and rigorous control"
+  },
+  {
+    "id": 9,
+    "statement": "Logical soundness requires consistency, broad applicability, and contextual reliability."
+  },
+  {
+    "id": 10,
+    "statement": "Unforeseen environmental changes can impact research flaws and uncertainty"
+  },
+  {
+    "id": 11,
+    "statement": "Honesty is not always the best policy, moral principles complex."
+  },
+  {
+    "id": 12,
+    "statement": "Internal coherence refers to logical consistency within a theoretical framework"
+  },
+  {
+    "id": 13,
+    "statement": "Theory validation requires validation of underlying assumptions' validity"
+  },
+  {
+    "id": 14,
+    "statement": "Transparency in research documentation enhances credibility and trustworthiness."
+  },
+  {
+    "id": 15,
+    "statement": "Internal coherence ensures logical consistency in theoretical frameworks."
+  },
+  {
+    "id": 16,
+    "statement": "Internal coherence is a necessary but insufficient condition for validity."
+  },
+  {
+    "id": 17,
+    "statement": "Valid assumptions ensure theoretical coherence, logical soundness, and consistency."
+  },
+  {
+    "id": 18,
+    "statement": "A theoretical framework is a mental map for understanding complex problems."
+  },
+  {
+    "id": 19,
+    "statement": "Unconscious biases can influence decisions independently of consciousness."
+  },
+  {
+    "id": 20,
+    "statement": "Peer review ensures research quality, validity, and reliability."
+  },
+  {
+    "id": 21,
+    "statement": "Internal coherence refers to logical consistency within theoretical frameworks."
+  },
+  {
+    "id": 22,
+    "statement": "Logical soundness requires consistency, broad applicability, and reliability."
+  },
+  {
+    "id": 23,
+    "statement": "A theoretical framework's internal coherence ensures logical consistency among components."
+  },
+  {
+    "id": 24,
+    "statement": "Unconscious biases can influence decisions without conscious awareness."
+  },
+  {
+    "id": 25,
+    "statement": "Valid assumptions underpin internal coherence and logical consistency"
+  },
+  {
+    "id": 26,
+    "statement": "Empathy fosters deep connections through genuine emotional understanding."
+  },
+  {
+    "id": 27,
+    "statement": "Valid assumptions underpin internal coherence and logical consistency."
+  },
+  {
+    "id": 28,
+    "statement": "Internal coherence is a necessary condition for theoretical validity."
+  },
+  {
+    "id": 29,
+    "statement": "Internal coherence ensures logical consistency within theoretical frameworks."
+  },
+  {
+    "id": 30,
+    "statement": "Internal coherence ensures theory's logical consistency within components."
+  },
+  {
+    "id": 31,
+    "statement": "A theoretical framework is a mental construct for understanding."
+  },
+  {
+    "id": 32,
+    "statement": "Unconscious biases can influence peer review decisions unintentionally and undermine credibility."
+  },
+  {
+    "id": 33,
+    "statement": "Internal coherence ensures logical consistency within theoretical frameworks"
+  },
+  {
+    "id": 34,
+    "statement": "Unconscious biases can influence peer review decisions unintentionally."
+  },
+  {
+    "id": 35,
+    "statement": "Internal coherence in theoretical frameworks ensures logical consistency among components"
+  },
+  {
+    "id": 36,
+    "statement": "Unconscious biases can influence peer review decisions subjectively."
+  },
+  {
+    "id": 37,
+    "statement": "Peer review ensures research quality and validity through expert evaluation"
+  },
+  {
+    "id": 38,
+    "statement": "Internal coherence ensures logical consistency within theoretical frameworks' components."
+  },
+  {
+    "id": 39,
+    "statement": "Research flaws can occur despite best practices and rigorous control"
+  },
+  {
+    "id": 40,
+    "statement": "Consistency in theories enables generalizability across diverse settings."
+  },
+  {
+    "id": 41,
+    "statement": "Clarity in definitions helps to reduce ambiguity in statements"
+  },
+  {
+    "id": 42,
+    "statement": "Honesty is crucial for establishing trust and credibility."
+  },
+  {
+    "id": 43,
+    "statement": "Unconscious biases can shape peer review decisions subtly."
+  },
+  {
+    "id": 44,
+    "statement": "Internal coherence refers to conceptual alignment among theory components."
+  },
+  {
+    "id": 45,
+    "statement": "Internal coherence refers to logical consistency in theories"
+  },
+  {
+    "id": 46,
+    "statement": "Transparency enhances empirical evidence validity through increased credibility"
+  },
+  {
+    "id": 47,
+    "statement": "Valid assumptions + careful definition = logical consistency"
+  },
+  {
+    "id": 48,
+    "statement": "Transparency's broader effects include accountability, replicability, collaboration, and public understanding."
+  },
+  {
+    "id": 49,
+    "statement": "Internal coherence ensures theoretical validity by preventing contradictions."
+  },
+  {
+    "id": 50,
+    "statement": "Validity of assumptions is not always sufficient for consistency"
+  },
+  {
+    "id": 51,
+    "statement": "Unconscious biases can influence peer review decisions unintentionally through confirmation bias."
+  },
+  {
+    "id": 52,
+    "statement": "Research limitations can arise from oversimplification of complex phenomena."
+  },
+  {
+    "id": 53,
+    "statement": "Unconscious biases in peer review can lead to unfair treatment outcomes."
+  },
+  {
+    "id": 54,
+    "statement": "Internal coherence refers to logical consistency among theoretical framework components."
+  },
+  {
+    "id": 55,
+    "statement": "Internal coherence ensures logical consistency within theoretical frameworks"
+  },
+  {
+    "id": 56,
+    "statement": "Conceptual alignment in theories ensures logical consistency and coherence overall"
+  },
+  {
+    "id": 57,
+    "statement": "Contextual reliability concerns generalizability across settings, populations, and environments."
+  },
+  {
+    "id": 58,
+    "statement": "Internal coherence is necessary but not sufficient for logical consistency."
+  },
+  {
+    "id": 59,
+    "statement": "Peer review is a valuable tool for improving research quality"
+  },
+  {
+    "id": 60,
+    "statement": "Clear definitions and assumptions are necessary for logical soundness"
+  },
+  {
+    "id": 61,
+    "statement": "Unconscious biases can intentionally or unintentionally influence subjective peer review decisions."
+  },
+  {
+    "id": 62,
+    "statement": "Clarity in definitions reduces ambiguity, albeit incompletely."
+  },
+  {
+    "id": 63,
+    "statement": "Valid assumptions ensure theory's solid foundation and reliability."
+  },
+  {
+    "id": 64,
+    "statement": "Valid assumptions guarantee logical consistency and theoretical validity."
+  },
+  {
+    "id": 65,
+    "statement": "Underlying assumptions are implicit beliefs guiding theory development and testing"
+  },
+  {
+    "id": 66,
+    "statement": "Transparency in research enhances credibility and empirical evidence validity."
+  },
+  {
+    "id": 67,
+    "statement": "A theoretical framework's internal coherence ensures logical consistency among components."
+  },
+  {
+    "id": 68,
+    "statement": "Internal coherence ensures logical consistency within theoretical frameworks' components."
+  },
+  {
+    "id": 69,
+    "statement": "Transparency in research documentation enhances empirical evidence trustworthiness"
+  },
+  {
+    "id": 70,
+    "statement": "Moral decisions involve balancing competing values in context."
+  },
+  {
+    "id": 71,
+    "statement": "Logical consistency requires multiple factors beyond assumptions alone."
+  },
+  {
+    "id": 72,
+    "statement": "A theoretical framework is a mental structure for understanding concepts."
+  },
+  {
+    "id": 73,
+    "statement": "Internal coherence ensures logical consistency within frameworks"
+  },
+  {
+    "id": 74,
+    "statement": "Valid assumptions ensure logical coherence, consistency, and predictive power."
+  },
+  {
+    "id": 75,
+    "statement": "Logical consistency enhances predictive power through coherent framework structures."
+  },
+  {
+    "id": 76,
+    "statement": "Internal coherence ensures logical consistency among framework components."
+  },
+  {
+    "id": 77,
+    "statement": "A mental map represents interconnected concepts and relationships."
+  },
+  {
+    "id": 78,
+    "statement": "Unconscious biases can impact peer review decision objectively."
+  },
+  {
+    "id": 79,
+    "statement": "Claims require sufficient evidence, necessary assumptions for truth."
+  },
+  {
+    "id": 80,
+    "statement": "Generalizability is not a sole determinant of predictive reliability."
+  },
+  {
+    "id": 81,
+    "statement": "Contextual reliability requires adaptation to similar settings and populations."
+  },
+  {
+    "id": 82,
+    "statement": "Clarity in definitions may not always eliminate ambiguity instantly."
+  },
+  {
+    "id": 83,
+    "statement": "Honesty may not always be the best policy in relationships."
+  },
+  {
+    "id": 84,
+    "statement": "Honesty is a necessary condition for building trust."
+  },
+  {
+    "id": 85,
+    "statement": "Empathy fosters deep connections through genuine emotional understanding and validation."
+  },
+  {
+    "id": 86,
+    "statement": "Internal coherence requires logical consistency and empirical evidence validation."
+  },
+  {
+    "id": 87,
+    "statement": "Generalizability refers to the ability of a theory to apply."
+  },
+  {
+    "id": 88,
+    "statement": "Empathy in building trust means understanding and sharing feelings sincerely."
+  },
+  {
+    "id": 89,
+    "statement": "Valid assumptions guarantee theoretical coherence and logical soundness."
+  },
+  {
+    "id": 90,
+    "statement": "Internal coherence ensures logical consistency within theoretical frameworks' components."
+  },
+  {
+    "id": 91,
+    "statement": "Necessary conditions ensure validity, sufficient conditions guarantee truth."
+  },
+  {
+    "id": 92,
+    "statement": "Internal coherence refers to logical consistency within a theoretical framework."
+  },
+  {
+    "id": 93,
+    "statement": "Internal coherence ensues from valid assumptions and consistency"
+  },
+  {
+    "id": 94,
+    "statement": "Transparency directly influences trust and reproducibility only"
+  },
+  {
+    "id": 95,
+    "statement": "Unconscious biases in peer review can lead to unfair treatment outcomes."
+  },
+  {
+    "id": 96,
+    "statement": "Internal coherence refers to logical consistency within theoretical frameworks."
+  },
+  {
+    "id": 97,
+    "statement": "Internal coherence ensures logical consistency within theoretical frameworks."
+  },
+  {
+    "id": 98,
+    "statement": "Building trust requires honesty, consistency, and empathy."
+  },
+  {
+    "id": 99,
+    "statement": "Internal coherence ensures logical consistency within theories' components."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 86,
+  "statement": "Internal coherence requires logical consistency and empirical evidence validation."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 86,
+  "statement": "Internal coherence requires logical consistency and empirical evidence validation."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to start by identifying one aspect of this item from the knowledge base that I'm least confident about. After reviewing the statement, I've chosen item #86:
+
+Item to Discuss:
+{
+"id": 86,
+"statement": "Internal coherence requires logical consistency and empirical evidence validation."
+}
+
+Things I'm Uncertain About This Item:
+I'm not entirely confident about the relationship between internal coherence, logical consistency, and empirical evidence validation. It seems like these concepts are interconnected, but I'm not sure how they work together to establish internal coherence.
+
+Specific Clarifying Question:
+Can you help me understand how logical consistency and empirical evidence validation contribute to internal coherence? For example, are there specific steps or processes that ensure internal coherence, or is it more of a conceptual framework?

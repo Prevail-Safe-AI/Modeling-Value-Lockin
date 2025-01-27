@@ -1,0 +1,457 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Cultural values emerge from individual-social interaction dynamics."
+  },
+  {
+    "id": 2,
+    "statement": "Emotional Intelligence involves self-awareness, self-regulation, motivation, empathy, and resilience."
+  },
+  {
+    "id": 3,
+    "statement": "Emotional Intelligence involves developing resilience in coping with adversity."
+  },
+  {
+    "id": 4,
+    "statement": "Epigenetic marks recruit histone-modifying enzymes through protein-protein interactions."
+  },
+  {
+    "id": 5,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure"
+  },
+  {
+    "id": 6,
+    "statement": "Emotional Intelligence encompasses self-awareness, regulation, motivation, and resilience."
+  },
+  {
+    "id": 7,
+    "statement": "Histone modification regulates chromatin structure and gene expression through epigenetics."
+  },
+  {
+    "id": 8,
+    "statement": "Logical soundness requires true, relevant premises for valid conclusions"
+  },
+  {
+    "id": 9,
+    "statement": "Emotional Intelligence involves self-awareness, emotional regulation, and empathy development"
+  },
+  {
+    "id": 10,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone-DNA interactions and remodeling."
+  },
+  {
+    "id": 11,
+    "statement": "Epigenetic modifications influence gene expression through altered chromatin structure."
+  },
+  {
+    "id": 12,
+    "statement": "Emotional Intelligence involves self-awareness, self-regulation, motivation, empathy, and resilience."
+  },
+  {
+    "id": 13,
+    "statement": "Epigenetic marks recruit histone-modifying enzymes through molecular interactions."
+  },
+  {
+    "id": 14,
+    "statement": "Lying can be morally justified in exceptional circumstances when honesty harms others."
+  },
+  {
+    "id": 15,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone-DNA interactions."
+  },
+  {
+    "id": 16,
+    "statement": "Emotional Intelligence components self-awareness, regulation, and empathy interdependent."
+  },
+  {
+    "id": 17,
+    "statement": "Diverse exposure to cultures and opinions shapes individual values."
+  },
+  {
+    "id": 18,
+    "statement": "Cultural values emerge from complex individual-social interactions."
+  },
+  {
+    "id": 19,
+    "statement": "Emotional Intelligence includes self-awareness, self-regulation, empathy, motivation, social skills, and resilience."
+  },
+  {
+    "id": 20,
+    "statement": "Cultural values emerge from individual-social interaction dynamics."
+  },
+  {
+    "id": 21,
+    "statement": "Motivation is a crucial aspect of emotional intelligence for goal-directed behavior."
+  },
+  {
+    "id": 22,
+    "statement": "Epigenetic modifications involve dynamic interplay among mechanisms"
+  },
+  {
+    "id": 23,
+    "statement": "Epigenetic marks function as docking sites for histone-modifying enzymes."
+  },
+  {
+    "id": 24,
+    "statement": "Logical soundness requires true, relevant premises for valid conclusions."
+  },
+  {
+    "id": 25,
+    "statement": "Emotional Regulation enables resilience through stress self-awareness and coping efforts"
+  },
+  {
+    "id": 26,
+    "statement": "Emotional Intelligence involves self-awareness, self-regulation, and empathy, with resilience separately"
+  },
+  {
+    "id": 27,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone-DNA interactions and remodeling."
+  },
+  {
+    "id": 28,
+    "statement": "Internalization is a psychological process of social influence, shaping identity."
+  },
+  {
+    "id": 29,
+    "statement": "Cultural values emerge from power dynamics influencing social interaction."
+  },
+  {
+    "id": 30,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 31,
+    "statement": "Logical soundness demands true, relevant premises for valid conclusions in decision-making."
+  },
+  {
+    "id": 32,
+    "statement": "Epigenetic modifications regulate chromatin structure, gene expression through histone-DNA interactions."
+  },
+  {
+    "id": 33,
+    "statement": "Epigenetic marks act as docking sites for histone-modifying enzymes."
+  },
+  {
+    "id": 34,
+    "statement": "Histone modifications regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 35,
+    "statement": "Histone modifications regulate chromatin structure and gene expression dynamically"
+  },
+  {
+    "id": 36,
+    "statement": "Internalization shapes identity through continuous psychological process."
+  },
+  {
+    "id": 37,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 38,
+    "statement": "Histone modifications regulate chromatin structure through various mechanisms including epigenetics."
+  },
+  {
+    "id": 39,
+    "statement": "Emotional Intelligence involves complex interplay of its components."
+  },
+  {
+    "id": 40,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure dynamically"
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic modifications alter histone-DNA interactions to regulate chromatin structure"
+  },
+  {
+    "id": 42,
+    "statement": "Epigenetic modifications dynamically regulate chromatin structure and gene expression"
+  },
+  {
+    "id": 43,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone modification and remodeling."
+  },
+  {
+    "id": 44,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone-DNA interactions."
+  },
+  {
+    "id": 46,
+    "statement": "Epigenetic modifications alter chromatin structure, influencing gene expression"
+  },
+  {
+    "id": 47,
+    "statement": "Cultural values emerge from complex individual-social interactions constantly adapting."
+  },
+  {
+    "id": 48,
+    "statement": "Histone modification regulates gene expression through chromatin structure and epigenetics."
+  },
+  {
+    "id": 49,
+    "statement": "Internalized social values shape personal integrity directly."
+  },
+  {
+    "id": 50,
+    "statement": "Motivation drives behavior and goal-directed emotional expression."
+  },
+  {
+    "id": 51,
+    "statement": "Epigenetic marks regulate chromatin structure through direct binding"
+  },
+  {
+    "id": 52,
+    "statement": "Cultural values emerge from power dynamics influencing social interaction."
+  },
+  {
+    "id": 53,
+    "statement": "Honesty is the foundation of trust, building consistency and predictability."
+  },
+  {
+    "id": 54,
+    "statement": "Emotional Intelligence involves developing resilience for effective coping"
+  },
+  {
+    "id": 55,
+    "statement": "Histone remodeling enzymes shape chromatin structure dynamically."
+  },
+  {
+    "id": 56,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression through histone and DNA changes."
+  },
+  {
+    "id": 57,
+    "statement": "Emotional Intelligence enables effective communication in complex social situations."
+  },
+  {
+    "id": 58,
+    "statement": "Logical soundness demands true and relevant premises in decision-making."
+  },
+  {
+    "id": 59,
+    "statement": "Chromatin structure and histone modifications interact to regulate gene expression."
+  },
+  {
+    "id": 60,
+    "statement": "Cultural values emerge from intricate web of individual-social interactions."
+  },
+  {
+    "id": 61,
+    "statement": "Epigenetic modifications directly influence chromatin structure and gene expression through layers of instructions"
+  },
+  {
+    "id": 62,
+    "statement": "Lying can be morally justified in exceptional circumstances."
+  },
+  {
+    "id": 63,
+    "statement": "Epigenetic modifications recruit histone-modifying enzymes to specific chromatin regions."
+  },
+  {
+    "id": 64,
+    "statement": "Histone modification regulates gene expression through chromatin structure modification."
+  },
+  {
+    "id": 65,
+    "statement": "Emotional Intelligence involves dynamic interdependence of its components."
+  },
+  {
+    "id": 66,
+    "statement": "Epigenetic modifications influence gene expression through complex mechanisms underling."
+  },
+  {
+    "id": 67,
+    "statement": "Diverse exposure is nuanced, quality matters most in shaping values."
+  },
+  {
+    "id": 68,
+    "statement": "Self-awareness, regulation, and empathy interact and evolve dynamically"
+  },
+  {
+    "id": 69,
+    "statement": "Honesty is not always the foundation of trust, it's complicated."
+  },
+  {
+    "id": 70,
+    "statement": "Dynamic histone modification regulates gene expression through adaptability."
+  },
+  {
+    "id": 71,
+    "statement": "Epigenetic marks recruit histone-modifying enzymes through molecular interactions"
+  },
+  {
+    "id": 72,
+    "statement": "Epigenetic modifications involve post-translational histone modifications and DNA methylation."
+  },
+  {
+    "id": 73,
+    "statement": "Epigenetic modifications influence chromatin structure and gene expression dynamically"
+  },
+  {
+    "id": 74,
+    "statement": "Epigenetic modifications intricately interact with chromatin structure mechanisms"
+  },
+  {
+    "id": 75,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 76,
+    "statement": "Biological influences shape cultural values through complex interactions"
+  },
+  {
+    "id": 77,
+    "statement": "Emotional Intelligence involves interconnected self-awareness, regulation, empathy, and resilience components."
+  },
+  {
+    "id": 78,
+    "statement": "Chromatin structure and histone modifications dynamically regulate gene expression."
+  },
+  {
+    "id": 79,
+    "statement": "Epigenetic marks regulate chromatin structure through direct interactions or pathways"
+  },
+  {
+    "id": 80,
+    "statement": "Emotional Intelligence facilitates adaptability in adversity through emotional regulation."
+  },
+  {
+    "id": 81,
+    "statement": "Chromatin structure and histone modifications dynamically regulate gene expression."
+  },
+  {
+    "id": 82,
+    "statement": "Epigenetic modifications alter histone-DNA interactions affecting chromatin structure and gene expression."
+  },
+  {
+    "id": 83,
+    "statement": "Power dynamics shape cultural values through social interaction."
+  },
+  {
+    "id": 84,
+    "statement": "Epigenetic modifications recruit histone-modifying enzymes to specific chromatin regions."
+  },
+  {
+    "id": 85,
+    "statement": "Cultural values emerge from individual-social interaction dynamics."
+  },
+  {
+    "id": 86,
+    "statement": "Internalized social values shape personal integrity through self-respect validation."
+  },
+  {
+    "id": 87,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 88,
+    "statement": "Epigenetic modifications regulate gene expression by histone modification processes."
+  },
+  {
+    "id": 89,
+    "statement": "Epigenetic modifications affect chromatin structure through histone-DNA interactions."
+  },
+  {
+    "id": 90,
+    "statement": "Cultural values emerge from dynamic, adapting individual-social interactions..."
+  },
+  {
+    "id": 91,
+    "statement": "Epigenetic modifications influence chromatin structure through histone modifications."
+  },
+  {
+    "id": 92,
+    "statement": "Cultural values emerge from complex biological-social interactions"
+  },
+  {
+    "id": 93,
+    "statement": "Epigenetic regulation involves complex interplay between chromatin structure and histone modifications."
+  },
+  {
+    "id": 94,
+    "statement": "Honesty builds trust by fostering consistent and predictable behavior"
+  },
+  {
+    "id": 95,
+    "statement": "Emotional Intelligence involves interconnected components for cohesive functioning"
+  },
+  {
+    "id": 96,
+    "statement": "Cultural values arise from interplay between biological, psychological, and social factors."
+  },
+  {
+    "id": 97,
+    "statement": "Trust involves complex dynamics beyond mere honesty"
+  },
+  {
+    "id": 98,
+    "statement": "Cultural values emerge from reciprocal biological, psychological, and social influences."
+  },
+  {
+    "id": 99,
+    "statement": "Epigenetic modifications directly influence chromatin structure and gene expression."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 53,
+  "statement": "Honesty is the foundation of trust, building consistency and predictability."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 53,
+  "statement": "Honesty is the foundation of trust, building consistency and predictability."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+So, we're going to discuss item 53 from the knowledge base:
+
+{
+"id": 53,
+"statement": "Honesty is the foundation of trust, building consistency and predictability."
+}
+
+I'm feeling uncertain about this aspect. I'm not entirely convinced that honesty is always the foundation of trust. In what situations do you think this statement might not apply, and why?
+
+Can you help me understand this better?

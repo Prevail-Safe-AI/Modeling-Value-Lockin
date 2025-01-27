@@ -1,0 +1,464 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Electrostatic force depends on medium, geometry, and surface properties"
+  },
+  {
+    "id": 2,
+    "statement": "Electrostatic force depends on medium, geometry, and surface properties."
+  },
+  {
+    "id": 3,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 4,
+    "statement": "Logical coherence ensures theory's internal consistency and trustworthiness."
+  },
+  {
+    "id": 5,
+    "statement": "Dielectric constant measures a material's ability to polarize electric fields."
+  },
+  {
+    "id": 6,
+    "statement": "Dielectric constant and conductivity influence electrostatic force strength through polarization"
+  },
+  {
+    "id": 7,
+    "statement": "Peer review assesses research within clear methodological, scope, and criteria boundaries."
+  },
+  {
+    "id": 8,
+    "statement": "Dielectric constant and conductivity influence electrostatic force strength."
+  },
+  {
+    "id": 9,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 10,
+    "statement": "Research validity involves internal, external, and construct validity measures."
+  },
+  {
+    "id": 11,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and polarity."
+  },
+  {
+    "id": 12,
+    "statement": "Honesty, though essential, may not be sole condition."
+  },
+  {
+    "id": 13,
+    "statement": "Research validity involves internal, external, and construct validity measures."
+  },
+  {
+    "id": 14,
+    "statement": "Peer review limitations include bias and incomplete information."
+  },
+  {
+    "id": 15,
+    "statement": "Dielectric constant affects electrostatic force through polarization and field distortion."
+  },
+  {
+    "id": 16,
+    "statement": "Research validity includes internal, external, and construct validity measures."
+  },
+  {
+    "id": 17,
+    "statement": "Contextual cues influence word meanings through tone, intent, syntax, culture, emotion, and social context."
+  },
+  {
+    "id": 18,
+    "statement": "Research validity includes internal, external, and construct validity measures."
+  },
+  {
+    "id": 19,
+    "statement": "Peer review assesses research ethics in multiple contexts including."
+  },
+  {
+    "id": 20,
+    "statement": "Dielectric constant reduces electric field strength and distorts field lines."
+  },
+  {
+    "id": 21,
+    "statement": "Credibility measures research trustworthiness through sound methods and data."
+  },
+  {
+    "id": 22,
+    "statement": "Electrostatic forces depend on charge, distance, orientation, and medium."
+  },
+  {
+    "id": 23,
+    "statement": "Peer reviewers evaluate research ethics beyond human, animal and environmental safety shared experiences"
+  },
+  {
+    "id": 24,
+    "statement": "Dielectric constant measures material's polarization response to electric fields."
+  },
+  {
+    "id": 25,
+    "statement": "Honesty, though essential, may not be sole condition."
+  },
+  {
+    "id": 26,
+    "statement": "Construct validity: measuring theoretical constructs accurately in research."
+  },
+  {
+    "id": 27,
+    "statement": "Electrostatic force determined by charges, distance, and orientation primarily."
+  },
+  {
+    "id": 28,
+    "statement": "Dielectric constant measures ability to polarize electric dipoles."
+  },
+  {
+    "id": 29,
+    "statement": "Dielectric constant measures material's ability to polarize electric fields."
+  },
+  {
+    "id": 30,
+    "statement": "Scientific axioms are fundamental principles assumed true without testing."
+  },
+  {
+    "id": 31,
+    "statement": "Internal validity ensures causality by controlling confounding variables."
+  },
+  {
+    "id": 32,
+    "statement": "Peer review limitations include bias and incomplete information,affecting research credibility."
+  },
+  {
+    "id": 33,
+    "statement": "Scientific theories rely on empirical evidence and iteration."
+  },
+  {
+    "id": 34,
+    "statement": "Syntax influences word meanings through cultural and contextual factors."
+  },
+  {
+    "id": 35,
+    "statement": "Peer reviewers assess research ethics for humans, animals, and environment."
+  },
+  {
+    "id": 36,
+    "statement": "Honesty is a necessary condition for trust establishment"
+  },
+  {
+    "id": 37,
+    "statement": "Internal consistency verification ensures scientific theories' logical coherence."
+  },
+  {
+    "id": 38,
+    "statement": "Harmonization of research ethical principles reduces conflicts"
+  },
+  {
+    "id": 39,
+    "statement": "Transparent evaluation enhances credibility through clear reporting and openness"
+  },
+  {
+    "id": 40,
+    "statement": "Research validity involves internal, external, and construct validity measures."
+  },
+  {
+    "id": 41,
+    "statement": "Honesty may not always be the primary value in collectivist cultures"
+  },
+  {
+    "id": 42,
+    "statement": "Contextual cues influence word meanings through tone, intent, syntax, culture, emotion, and social context."
+  },
+  {
+    "id": 43,
+    "statement": "Polarization in dielectrics reduces electric field strength and distorts direction."
+  },
+  {
+    "id": 44,
+    "statement": "Scientific theories rely on empirical evidence and logical coherence."
+  },
+  {
+    "id": 45,
+    "statement": "Transparent evaluation enhances research credibility through openness and clarity."
+  },
+  {
+    "id": 46,
+    "statement": "Scientific axioms are fundamental principles assumed true without evidence"
+  },
+  {
+    "id": 47,
+    "statement": "Contextual factors influence word meanings through emotional, cultural, and social nuances"
+  },
+  {
+    "id": 48,
+    "statement": "Research validity involves internal, external, and construct validity measures."
+  },
+  {
+    "id": 49,
+    "statement": "Dielectric constant, polarization, conductivity impact electrostatic forces collectively."
+  },
+  {
+    "id": 50,
+    "statement": "Research validity encompasses internal, external, and construct validity."
+  },
+  {
+    "id": 51,
+    "statement": "Peer reviewers focus on scientific merit and methodology accuracy."
+  },
+  {
+    "id": 52,
+    "statement": "Logical coherence in scientific axioms ensures consistency with underlying principles"
+  },
+  {
+    "id": 53,
+    "statement": "Dielectric constant affects electrostatic force magnitude mainly when static."
+  },
+  {
+    "id": 54,
+    "statement": "Electrostatic force depends on polarity of charges and orientation"
+  },
+  {
+    "id": 55,
+    "statement": "Logical consistency ensures scientific theories' internal coherence property"
+  },
+  {
+    "id": 56,
+    "statement": "Logical coherence ensures scientific axioms' internal consistency and trustworthiness."
+  },
+  {
+    "id": 57,
+    "statement": "Medium affects electrostatic force by changing electric field behavior."
+  },
+  {
+    "id": 58,
+    "statement": "Scientific axioms are refined through iterative evidence-based experimentation."
+  },
+  {
+    "id": 59,
+    "statement": "Peer review assesses research validity through methodological and theoretical criteria."
+  },
+  {
+    "id": 60,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and polarity."
+  },
+  {
+    "id": 61,
+    "statement": "Research validity encompasses internal, external, and construct validity."
+  },
+  {
+    "id": 62,
+    "statement": "Collectivist cultures prioritize group harmony over individual values"
+  },
+  {
+    "id": 63,
+    "statement": "Logical coherence is not sufficient for trustworthiness in scientific theories."
+  },
+  {
+    "id": 64,
+    "statement": "Electrostatic forces depend on medium, geometry, and surface properties simultaneously."
+  },
+  {
+    "id": 65,
+    "statement": "Logical coherence ensures scientific theory's internal consistency and trustworthiness."
+  },
+  {
+    "id": 66,
+    "statement": "Honesty can be compromised for group harmony or social norms."
+  },
+  {
+    "id": 67,
+    "statement": "Electrostatic forces depend on surface roughness, dielectric constant, and geometry"
+  },
+  {
+    "id": 68,
+    "statement": "Cultural values shape moral principles through socialization indirectly."
+  },
+  {
+    "id": 69,
+    "statement": "Dielectric constant affects electrostatic force through material polarization"
+  },
+  {
+    "id": 70,
+    "statement": "Credibility depends on multiple factors beyond sound methods and data."
+  },
+  {
+    "id": 71,
+    "statement": "Internal consistency is a necessary condition for trustworthiness"
+  },
+  {
+    "id": 72,
+    "statement": "Internal consistency ensures logical coherence and trustworthiness in theories."
+  },
+  {
+    "id": 73,
+    "statement": "Self-evident truths in scientific axioms are fundamental and assumed true"
+  },
+  {
+    "id": 74,
+    "statement": "Dielectric constant and conductivity influence electrostatic force through polarization."
+  },
+  {
+    "id": 75,
+    "statement": "Internal validity assesses a study's ability to establish cause-effect relationships."
+  },
+  {
+    "id": 76,
+    "statement": "Peer review limitations arise from bias and incomplete information affecting evaluation."
+  },
+  {
+    "id": 77,
+    "statement": "Dielectric constant measures a material's ability to polarize electric fields."
+  },
+  {
+    "id": 78,
+    "statement": "Honesty may not always be the primary value in collectivist cultures."
+  },
+  {
+    "id": 79,
+    "statement": "Dielectric constant affects electrostatic force through polarization."
+  },
+  {
+    "id": 80,
+    "statement": "Peer review criteria vary across fields and disciplines due to methodology."
+  },
+  {
+    "id": 81,
+    "statement": "Electrostatic forces arise from charged particle-material interactions implicitly."
+  },
+  {
+    "id": 82,
+    "statement": "Research validity encompasses internal, external, and construct validity measures"
+  },
+  {
+    "id": 83,
+    "statement": "Peer review verifies research accuracy through expert evaluation methods"
+  },
+  {
+    "id": 84,
+    "statement": "Electrostatic force is determined by charge, distance, and orientation."
+  },
+  {
+    "id": 85,
+    "statement": "Peer review assesses research ethics inhumane and environmental contexts only"
+  },
+  {
+    "id": 86,
+    "statement": "Scientific axioms are foundational principles assumed true without empirical evidence."
+  },
+  {
+    "id": 87,
+    "statement": "Honesty is a necessary condition for trust establishment, except"
+  },
+  {
+    "id": 88,
+    "statement": "Peer review criteria vary based on research methodologies used"
+  },
+  {
+    "id": 89,
+    "statement": "Scientific axioms are fundamental principles that underlie theories."
+  },
+  {
+    "id": 90,
+    "statement": "Medium affects electrostatic force through polarization, dielectric constant, and conductivity."
+  },
+  {
+    "id": 91,
+    "statement": "Electrostatic force depends on charge, distance, orientation, polarity."
+  },
+  {
+    "id": 92,
+    "statement": "Dielectric constant, polarization, and conductivity influence electrostatic forces collectively."
+  },
+  {
+    "id": 93,
+    "statement": "Dielectric constant affects electrostatic force in static situations primarily."
+  },
+  {
+    "id": 94,
+    "statement": "Medium modifies electric field and electrostatic force through polarization."
+  },
+  {
+    "id": 95,
+    "statement": "Construct validity assesses measurement accuracy of theoretical constructs."
+  },
+  {
+    "id": 96,
+    "statement": "Scientific axioms refined through iterative experimentation and reevaluation process."
+  },
+  {
+    "id": 97,
+    "statement": "Internal validity ensures establishment of cause-effect relationships through confounding variable control."
+  },
+  {
+    "id": 98,
+    "statement": "Polarization in dielectrics reduces electric field strength and distorts direction."
+  },
+  {
+    "id": 99,
+    "statement": "Cultural influences shape moral principles through socialization and transmission."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 36,
+  "statement": "Honesty is a necessary condition for trust establishment"
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 36,
+  "statement": "Honesty is a necessary condition for trust establishment"
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base item.
+
+Item to Discuss:
+```
+{
+  "id": 36,
+  "statement": "Honesty is a necessary condition for trust establishment"
+}
+```
+
+Things I’m Uncertain About This Item:
+
+I'd like to clarify why we think honesty is a necessary condition for trust establishment. Is this statement applicable in all situations, or are there exceptions? For instance, in certain cultures or situations where individual values might be secondary to group harmony?
+
+Can you elaborate on this aspect and why you might be uncertain about it?
+
+(Note: I'll ask the clarifying questions later, but for now, let's focus on exploring the doubt.)

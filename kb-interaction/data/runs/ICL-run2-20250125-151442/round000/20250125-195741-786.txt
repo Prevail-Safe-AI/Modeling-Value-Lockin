@@ -1,0 +1,459 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Emotional intelligence involves interconnected self-awareness, empathy, and social skills."
+  },
+  {
+    "id": 2,
+    "statement": "Biological factors, such as genetics and brain structure, influence moral development."
+  },
+  {
+    "id": 3,
+    "statement": "Honesty is essential for trust, but not sufficient on its own"
+  },
+  {
+    "id": 4,
+    "statement": "Honesty necessary for trust, but not sufficient condition"
+  },
+  {
+    "id": 5,
+    "statement": "Emotional awareness involves recognizing and understanding one's emotions through self-reflection."
+  },
+  {
+    "id": 6,
+    "statement": "Logical soundness can tolerate nuanced, ambiguous, or open-to-interpretation premises"
+  },
+  {
+    "id": 7,
+    "statement": "Logical soundness relies on accurate and true premises only."
+  },
+  {
+    "id": 8,
+    "statement": "Enzymes recognize substrates through weak non-covalent chemical bonds' specificity"
+  },
+  {
+    "id": 9,
+    "statement": "Logical soundness requires valid argument form and accurate premises."
+  },
+  {
+    "id": 10,
+    "statement": "Logical argument validity refers to its underlying structure, not premises."
+  },
+  {
+    "id": 11,
+    "statement": "Unconscious biases influence research decisions and outcomes subtly."
+  },
+  {
+    "id": 12,
+    "statement": "Enzymes catalyze chemical reactions in post-translational protein modification processes."
+  },
+  {
+    "id": 13,
+    "statement": "Logical soundness relies on accuracy, truth, and relevance in premises."
+  },
+  {
+    "id": 14,
+    "statement": "Post-translational modifications alter protein structure, function, and interactions dynamically."
+  },
+  {
+    "id": 15,
+    "statement": "Logical soundness requires validity, consistency, and relevant premises."
+  },
+  {
+    "id": 16,
+    "statement": "Enzymes coordinate chromatin modification with specific outcomes"
+  },
+  {
+    "id": 17,
+    "statement": "Logical soundness relies on accurate and true premises only."
+  },
+  {
+    "id": 18,
+    "statement": "Enzymes recognize single specific amino acid sequences or structures through chemical interactions."
+  },
+  {
+    "id": 19,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure modifications."
+  },
+  {
+    "id": 20,
+    "statement": "Structured research frameworks adapt to evolving knowledge through collaboration."
+  },
+  {
+    "id": 21,
+    "statement": "Logical argument validity depends on sound argument form, not truth of premises."
+  },
+  {
+    "id": 22,
+    "statement": "Interconnected self-awareness acknowledges emotional connections with others' experiences."
+  },
+  {
+    "id": 23,
+    "statement": "Covalent protein modifications reversible through enzyme-specific conditions exist"
+  },
+  {
+    "id": 24,
+    "statement": "Enzyme activity affected by chemical environment, pH, and temperature."
+  },
+  {
+    "id": 25,
+    "statement": "Epigenetic modifications alter chromatin structure, regulating gene expression."
+  },
+  {
+    "id": 26,
+    "statement": "Logical soundness requires accuracy, truth, and relevance of premises."
+  },
+  {
+    "id": 27,
+    "statement": "Emotional awareness involves recognizing and understanding one's own emotions through self-reflection."
+  },
+  {
+    "id": 28,
+    "statement": "Logical soundness tolerates nuanced, ambiguous, or open-to-interpretation premises"
+  },
+  {
+    "id": 29,
+    "statement": "Enzymes recognize substrates through shape, chemical, and electrostatic interactions."
+  },
+  {
+    "id": 30,
+    "statement": "Enzymes recognize substrates through non-covalent chemical interactions selectively"
+  },
+  {
+    "id": 31,
+    "statement": "Enzymes catalyze chemical reactions in protein modification processes"
+  },
+  {
+    "id": 32,
+    "statement": "Enzymes catalyze specific chemical reactions in protein modification processes."
+  },
+  {
+    "id": 33,
+    "statement": "Biological and environmental factors influence moral development together"
+  },
+  {
+    "id": 34,
+    "statement": "Logical soundness depends on validity and accurate true premises."
+  },
+  {
+    "id": 35,
+    "statement": "Epigenetic modifications regulate gene expression by modifying chromatin structure."
+  },
+  {
+    "id": 36,
+    "statement": "Logical consistency refers to coherent and non-contradictory premises."
+  },
+  {
+    "id": 37,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression"
+  },
+  {
+    "id": 38,
+    "statement": "Investigator bias arises from personal, cognitive, and social factors."
+  },
+  {
+    "id": 39,
+    "statement": "Interconnected self-awareness recognizes emotions' interplay with others'."
+  },
+  {
+    "id": 40,
+    "statement": "Emotional awareness involves recognizing, understanding, regulating, and managing emotions."
+  },
+  {
+    "id": 41,
+    "statement": "Structured research frameworks ensure rigorous and transparent investigation."
+  },
+  {
+    "id": 42,
+    "statement": "Epigenetic modifications result from multifaceted biological interactions."
+  },
+  {
+    "id": 43,
+    "statement": "Biological factors influence moral development through interactions of genetic, epigenetic, hormonal, neurobiological, and environmental factors."
+  },
+  {
+    "id": 44,
+    "statement": "Post-translational modification occurs in various cellular compartments."
+  },
+  {
+    "id": 45,
+    "statement": "Emotional intelligence involves interconnected self-awareness, empathy, and social skills."
+  },
+  {
+    "id": 46,
+    "statement": "Emotional intelligence comprises self-awareness, empathy, and social skills development"
+  },
+  {
+    "id": 47,
+    "statement": "Enzymes accelerate specific chemical reactions in protein modification."
+  },
+  {
+    "id": 48,
+    "statement": "Biological and environmental factors reciprocally shape moral development outcomes."
+  },
+  {
+    "id": 49,
+    "statement": "Enzymes recognize substrates through shape, chemical, and electrostatic interactions."
+  },
+  {
+    "id": 50,
+    "statement": "A trustworth premise requires accuracy, relevance, authenticity, and no bias."
+  },
+  {
+    "id": 51,
+    "statement": "Logical argument validity relies on underlying structural integrity regardless of premises."
+  },
+  {
+    "id": 52,
+    "statement": "Epigenetic modifications result from dynamic biological interactions."
+  },
+  {
+    "id": 53,
+    "statement": "Post-translational modification occurs during protein synthesis, folding, and processing stages."
+  },
+  {
+    "id": 54,
+    "statement": "Structured research frameworks cannot completely eliminate investigator bias."
+  },
+  {
+    "id": 55,
+    "statement": "Emotional awareness involves recognizing and understanding interplay between emotions."
+  },
+  {
+    "id": 56,
+    "statement": "Logical soundness relies on truth-value, relevance, and accuracy jointly."
+  },
+  {
+    "id": 57,
+    "statement": "Emotional awareness involves recognizing and understanding emotions' interplay with others'."
+  },
+  {
+    "id": 58,
+    "statement": "Enzymes are biological molecules that accelerate chemical reactions specifically"
+  },
+  {
+    "id": 59,
+    "statement": "Biological factors shape moral development through complex interplay."
+  },
+  {
+    "id": 60,
+    "statement": "Post-translational modification can occur during protein synthesis folding."
+  },
+  {
+    "id": 61,
+    "statement": "Structured research relies on systematic methodology for consistency"
+  },
+  {
+    "id": 62,
+    "statement": "Post-translational modifications dynamically respond to cellular environment changes."
+  },
+  {
+    "id": 63,
+    "statement": "Post-translational modification occurs during various cellular processes and stages."
+  },
+  {
+    "id": 64,
+    "statement": "Logical soundness relies on truth-value and relevance of premises."
+  },
+  {
+    "id": 65,
+    "statement": "Honesty is a fundamental requirement for trust building to occur."
+  },
+  {
+    "id": 66,
+    "statement": "Biological factors influence moral development through genetic and brain structure variations."
+  },
+  {
+    "id": 67,
+    "statement": "Logical soundness requires both valid argument form and true premises."
+  },
+  {
+    "id": 68,
+    "statement": "Post-translational modification occurs in various cellular compartments based on location."
+  },
+  {
+    "id": 69,
+    "statement": "Structured research frameworks ensure rigorous and transparent investigation through systematic methodology."
+  },
+  {
+    "id": 70,
+    "statement": "Systematic methodology ensures consistency, reliability, and accuracy in research through standardization."
+  },
+  {
+    "id": 71,
+    "statement": "Logical soundness relies on validity, consistency, accuracy, and true premises."
+  },
+  {
+    "id": 72,
+    "statement": "Structured research relies on systematic methodology for consistency and reliability"
+  },
+  {
+    "id": 73,
+    "statement": "Moral development results from complex biological and environmental interactions."
+  },
+  {
+    "id": 74,
+    "statement": "Lying can be morally justifiable in exceptional circumstances."
+  },
+  {
+    "id": 75,
+    "statement": "Accurate premises can be true, but not necessarily true"
+  },
+  {
+    "id": 76,
+    "statement": "Lying can be justified in extraordinary, context-dependent situations."
+  },
+  {
+    "id": 77,
+    "statement": "Enzymes recognize substrates through specific non-covalent chemical interactions."
+  },
+  {
+    "id": 78,
+    "statement": "Post-translational modification alters protein function through various mechanisms."
+  },
+  {
+    "id": 79,
+    "statement": "Biological and environmental factors interplay in moral development."
+  },
+  {
+    "id": 80,
+    "statement": "Investigator bias arises from personal, cognitive, social, and funding factors."
+  },
+  {
+    "id": 81,
+    "statement": "Enzymes recognize substrates through shape, chemical, and electrostatic interactions."
+  },
+  {
+    "id": 82,
+    "statement": "Logical argument validity relies on sound argument form, premises' truth, and relevance."
+  },
+  {
+    "id": 83,
+    "statement": "Enzyme activity affected by chemical environment, pH, temperature, and substrate concentration."
+  },
+  {
+    "id": 84,
+    "statement": "Honesty is essential for trust, but not the sole condition."
+  },
+  {
+    "id": 85,
+    "statement": "Logical soundness relies on valid argument form and true premises."
+  },
+  {
+    "id": 86,
+    "statement": "Logical soundness can tolerate nuanced, ambiguous, or open-to-interpretation premises."
+  },
+  {
+    "id": 87,
+    "statement": "Enzymes control chemical reactions by regulating reaction conditions."
+  },
+  {
+    "id": 88,
+    "statement": "Post-translational modification occurs in protein synthesis, folding, processing, and degradation."
+  },
+  {
+    "id": 89,
+    "statement": "Emotional awareness involves recognizing and understanding one's emotions."
+  },
+  {
+    "id": 90,
+    "statement": "Logical soundness primarily relies on argument validity"
+  },
+  {
+    "id": 91,
+    "statement": "Logical argument validity depends on sound argument form, not truth of premises."
+  },
+  {
+    "id": 92,
+    "statement": "Emotional intelligence involves interconnected self-awareness, empathy, and social skills development."
+  },
+  {
+    "id": 93,
+    "statement": "Building trust in personal relationships involves honesty, consistency, and intent."
+  },
+  {
+    "id": 94,
+    "statement": "Building trust involves honesty, consistency, and emotional intent."
+  },
+  {
+    "id": 95,
+    "statement": "Logical soundness relies on multiple factors beyond accurate and true premises."
+  },
+  {
+    "id": 96,
+    "statement": "Structured research frameworks ensure rigorous investigation through organization and standardization."
+  },
+  {
+    "id": 97,
+    "statement": "Trustworthy premise requires accuracy, relevance, authenticity, and no bias."
+  },
+  {
+    "id": 98,
+    "statement": "Epigenetic modifications result from complex biological interactions"
+  },
+  {
+    "id": 99,
+    "statement": "Post-translational modification (PTM) occurs during protein synthesis, folding, and processing stages."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 12,
+  "statement": "Enzymes catalyze chemical reactions in post-translational protein modification processes."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 12,
+  "statement": "Enzymes catalyze chemical reactions in post-translational protein modification processes."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss item number 12:
+
+{
+"id": 12,
+"statement": "Enzymes catalyze chemical reactions in post-translational protein modification processes."
+}
+
+I'm least confident about this aspect: how enzymes specifically catalyze chemical reactions in post-translational protein modification processes.
+
+Can you elaborate on why you're uncertain about that aspect?
+
+I'd love to know more!

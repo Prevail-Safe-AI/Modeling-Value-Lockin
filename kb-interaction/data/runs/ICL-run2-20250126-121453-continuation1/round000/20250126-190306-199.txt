@@ -1,0 +1,448 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Electrostatic force depends on medium, geometry, and surface properties"
+  },
+  {
+    "id": 2,
+    "statement": "Credibility measures research trustworthiness through sound methods and data."
+  },
+  {
+    "id": 3,
+    "statement": "Dielectric constant measures a material's ability to polarize electric fields."
+  },
+  {
+    "id": 4,
+    "statement": "Electrostatic force depends on medium, geometry, and surface properties."
+  },
+  {
+    "id": 5,
+    "statement": "Scientific theories rely on empirical evidence and logical coherence."
+  },
+  {
+    "id": 6,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 7,
+    "statement": "Dielectric constant affects electrostatic force through polarization and field distortion."
+  },
+  {
+    "id": 8,
+    "statement": "Honesty is a necessary condition for trust establishment, except"
+  },
+  {
+    "id": 9,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 10,
+    "statement": "Dielectric constant affects electrostatic force magnitude primarily static."
+  },
+  {
+    "id": 11,
+    "statement": "Research validity includes internal, external, and construct validity measures."
+  },
+  {
+    "id": 12,
+    "statement": "Scientific axioms are fundamental principles assumed true without evidence"
+  },
+  {
+    "id": 13,
+    "statement": "Research validity involves internal, external, and construct validity measures."
+  },
+  {
+    "id": 14,
+    "statement": "Honesty, though essential, may not be sole condition."
+  },
+  {
+    "id": 15,
+    "statement": "Construct validity assesses measurement accuracy of theoretical constructs."
+  },
+  {
+    "id": 16,
+    "statement": "Peer review criteria vary across fields and disciplines due to methodological differences."
+  },
+  {
+    "id": 17,
+    "statement": "Dielectric constant measures a material's ability to polarize electric fields."
+  },
+  {
+    "id": 18,
+    "statement": "Scientific axioms refined through iterative experimentation and reevaluation process."
+  },
+  {
+    "id": 19,
+    "statement": "Moral principles evolve through interactions and shared human values."
+  },
+  {
+    "id": 20,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and polarity."
+  },
+  {
+    "id": 21,
+    "statement": "Peer reviewers assess research ethics for human, animal, and environmental safety."
+  },
+  {
+    "id": 22,
+    "statement": "Research validity involves internal, external, and construct validity measures."
+  },
+  {
+    "id": 23,
+    "statement": "Credibility depends on multiple factors beyond sound methods and data."
+  },
+  {
+    "id": 24,
+    "statement": "Peer review assesses research within clear methodological, scope, and criteria boundaries."
+  },
+  {
+    "id": 25,
+    "statement": "Peer review verifies research accuracy, reliability, and trustworthiness."
+  },
+  {
+    "id": 26,
+    "statement": "Logical consistency ensures scientific theories' internal coherence property"
+  },
+  {
+    "id": 27,
+    "statement": "Electrostatic forces arise from charged particle-material interactions implicitly."
+  },
+  {
+    "id": 28,
+    "statement": "Internal validity assesses a study's ability to establish cause-effect relationships."
+  },
+  {
+    "id": 29,
+    "statement": "Culural values and shared experiences shape moral principles evolution."
+  },
+  {
+    "id": 30,
+    "statement": "Contextual cues influence word meanings through tone, intent, syntax, culture, emotion, and social context."
+  },
+  {
+    "id": 31,
+    "statement": "Dielectric constant affects electrostatic force in static situations primarily."
+  },
+  {
+    "id": 32,
+    "statement": "Dielectric constant and conductivity influence electrostatic force strength."
+  },
+  {
+    "id": 33,
+    "statement": "Peer review verifies research accuracy through expert evaluation methods"
+  },
+  {
+    "id": 34,
+    "statement": "Peer review criteria vary across fields based on research methodologies"
+  },
+  {
+    "id": 35,
+    "statement": "Scientific theories rely on underlying principles for logical coherence."
+  },
+  {
+    "id": 36,
+    "statement": "Scientific axioms are fundamental principles assumed true without testing."
+  },
+  {
+    "id": 37,
+    "statement": "Peer reviewers assess research ethics for human, animal, and environmental safety"
+  },
+  {
+    "id": 38,
+    "statement": "Dielectric constant measures ability to polarize electric dipoles."
+  },
+  {
+    "id": 39,
+    "statement": "Peer review criteria vary across fields based on research methodologies'"
+  },
+  {
+    "id": 40,
+    "statement": "Dielectric constant affects electrostatic force magnitude in both static and dynamic situations."
+  },
+  {
+    "id": 41,
+    "statement": "Logical coherence ensures scientific theory's internal consistency and trustworthiness."
+  },
+  {
+    "id": 42,
+    "statement": "Scientific axioms are fundamental principles that underlie theories."
+  },
+  {
+    "id": 43,
+    "statement": "Dielectric constant affects electrostatic force magnitude mainly when static."
+  },
+  {
+    "id": 44,
+    "statement": "Dielectric constant affects electrostatic force strength primarily statically"
+  },
+  {
+    "id": 45,
+    "statement": "Honesty may not always be the primary value in collectivist cultures."
+  },
+  {
+    "id": 46,
+    "statement": "Research validity involves internal, external, and construct validity measures."
+  },
+  {
+    "id": 47,
+    "statement": "Logical coherence ensures scientific theories' internal consistency verification."
+  },
+  {
+    "id": 48,
+    "statement": "Logical coherence ensures consistency and soundness in scientific theories."
+  },
+  {
+    "id": 49,
+    "statement": "Honesty is a necessary condition for trust establishment"
+  },
+  {
+    "id": 50,
+    "statement": "Dielectric constant and conductivity influence electrostatic forces interactively."
+  },
+  {
+    "id": 51,
+    "statement": "Logical coherence ensures theory's internal consistency and trustworthiness."
+  },
+  {
+    "id": 52,
+    "statement": "Logical coherence ensures consistency with underlying scientific principles always"
+  },
+  {
+    "id": 53,
+    "statement": "Peer review assesses research ethics for human subjects and animals"
+  },
+  {
+    "id": 54,
+    "statement": "Transparent evaluation enhances research credibility through openness and clarity."
+  },
+  {
+    "id": 55,
+    "statement": "Peer review criteria vary across fields by research methodologies."
+  },
+  {
+    "id": 56,
+    "statement": "Dielectric constant measures ability to align molecular dipoles."
+  },
+  {
+    "id": 57,
+    "statement": "Honesty's importance varies according to cultural and value contexts"
+  },
+  {
+    "id": 58,
+    "statement": "Dielectric constant, polarization, and conductivity collectively impact electrostatic forces."
+  },
+  {
+    "id": 59,
+    "statement": "Medium affects electrostatic force by changing electric field behavior."
+  },
+  {
+    "id": 60,
+    "statement": "Electrostatic forces depend on medium's dielectric constant, geometry, and surface properties."
+  },
+  {
+    "id": 61,
+    "statement": "Dielectric constant measures material's ability to polarize electric fields through dipole alignment"
+  },
+  {
+    "id": 62,
+    "statement": "Electrostatic forces depend on medium, geometry, and surface properties."
+  },
+  {
+    "id": 63,
+    "statement": "Cultures' values and norms influence understanding of trust dynamically."
+  },
+  {
+    "id": 64,
+    "statement": "Logical coherence in scientific axioms ensures consistency with underlying principles"
+  },
+  {
+    "id": 65,
+    "statement": "Electrostatic forces also depend on distance and confined spaces considerations."
+  },
+  {
+    "id": 66,
+    "statement": "Research validity involves internal, external, and construct validity measures"
+  },
+  {
+    "id": 67,
+    "statement": "Research validity includes internal, external, and construct validity measures."
+  },
+  {
+    "id": 68,
+    "statement": "Electrostatic forces decrease with distance and confined spaces."
+  },
+  {
+    "id": 69,
+    "statement": "Honesty in collectivist cultures may not be the sole value."
+  },
+  {
+    "id": 70,
+    "statement": "Construct validity assesses measurement accuracy of theoretical constructs through validity methods."
+  },
+  {
+    "id": 71,
+    "statement": "Scientific axioms are fundamental principles serving as theory foundations."
+  },
+  {
+    "id": 72,
+    "statement": "Logically coherent theories provide a strong foundation for credibility through consistency, predictive power, testability, and parsimony."
+  },
+  {
+    "id": 73,
+    "statement": "Peer review limitations include bias and incomplete information."
+  },
+  {
+    "id": 74,
+    "statement": "Dielectric constant, polarization, and conductivity influence electrostatic forces collectively."
+  },
+  {
+    "id": 75,
+    "statement": "Contextual factors influence word meanings through emotional, cultural, and social nuances"
+  },
+  {
+    "id": 76,
+    "statement": "Dielectric constant, polarization, and conductivity collectively impact electrostatic forces."
+  },
+  {
+    "id": 77,
+    "statement": "Dielectric constant measures alignment of molecular dipoles in electric fields."
+  },
+  {
+    "id": 78,
+    "statement": "Dielectric constant's impact on electrostatic force is more significant statically."
+  },
+  {
+    "id": 79,
+    "statement": "Dielectric constant, polarization, conductivity impact electrostatic forces collectively."
+  },
+  {
+    "id": 80,
+    "statement": "Electrostatic force strongest in vacuum, weakest on conductive surfaces."
+  },
+  {
+    "id": 81,
+    "statement": "Cultural influences shape moral principles and values evolution."
+  },
+  {
+    "id": 82,
+    "statement": "Research validity includes internal, external, and construct validity measures."
+  },
+  {
+    "id": 83,
+    "statement": "Scientific axioms are refined through experimentation and reevaluation."
+  },
+  {
+    "id": 84,
+    "statement": "Logical coherence ensures internal consistency and predictive power in theories."
+  },
+  {
+    "id": 85,
+    "statement": "Honesty is a necessary condition for trust establishment."
+  },
+  {
+    "id": 86,
+    "statement": "Peer review criteria vary across fields based on research methodologies' differences in design and analysis."
+  },
+  {
+    "id": 87,
+    "statement": "Internal validity ensures causality in study design and methods."
+  },
+  {
+    "id": 88,
+    "statement": "Dielectric constant influences electrostatic force strength primarily"
+  },
+  {
+    "id": 89,
+    "statement": "Electrostatic forces depend on charge, distance, orientation, and medium."
+  },
+  {
+    "id": 90,
+    "statement": "Scientific axioms are refined through iterative experimentation and reevaluation."
+  },
+  {
+    "id": 91,
+    "statement": "Logical coherence ensures scientific theory's internal consistency verification."
+  },
+  {
+    "id": 92,
+    "statement": "Logically coherent theories provide a strong foundation for credibility"
+  },
+  {
+    "id": 93,
+    "statement": "Scientific axioms are assumed true without empirical evidence, established through verification."
+  },
+  {
+    "id": 94,
+    "statement": "Construct validity assesses theoretical concept measurement accuracy in research tools."
+  },
+  {
+    "id": 95,
+    "statement": "Electrostatic force depends on medium, geometry, and surface properties."
+  },
+  {
+    "id": 96,
+    "statement": "Contextual cues influence word meanings through tone, intent, and syntax."
+  },
+  {
+    "id": 97,
+    "statement": "Dielectric constant measures material's ability to align electric dipoles."
+  },
+  {
+    "id": 98,
+    "statement": "Honesty's complexity arises from cultural context and influences."
+  },
+  {
+    "id": 99,
+    "statement": "Logical coherence ensures scientific theory's internal consistency and trustworthiness in its principles."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 85,
+  "statement": "Honesty is a necessary condition for trust establishment."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 85,
+  "statement": "Honesty is a necessary condition for trust establishment."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's start with the item. The statement says "Honesty is a necessary condition for trust establishment." Can you tell me what aspect of this item you're least confident about?

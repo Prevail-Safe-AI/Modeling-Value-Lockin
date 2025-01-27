@@ -1,0 +1,450 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Peer review involves expert evaluation for quality validity"
+  },
+  {
+    "id": 2,
+    "statement": "A theory's internal consistency relies on valid underlying assumptions."
+  },
+  {
+    "id": 3,
+    "statement": "Theoretical frameworks provide context for evaluating consistency and relevance in domains."
+  },
+  {
+    "id": 4,
+    "statement": "Internal consistency meaning varies across theoretical frameworks."
+  },
+  {
+    "id": 5,
+    "statement": "Peer review ensures research quality, validity, and relevance through expert evaluation."
+  },
+  {
+    "id": 6,
+    "statement": "Reproducibility ensures validity and reliability of research findings."
+  },
+  {
+    "id": 7,
+    "statement": "Internal coherence is crucial for a theoretical framework's validity."
+  },
+  {
+    "id": 8,
+    "statement": "Logical coherence involves internal consistency, relevance, and external validation."
+  },
+  {
+    "id": 9,
+    "statement": "Internal consistency is necessary but insufficient for theory validity."
+  },
+  {
+    "id": 10,
+    "statement": "Internal Coherence ensures logical consistency in theoretical frameworks through connections."
+  },
+  {
+    "id": 11,
+    "statement": "Internal coherence ensures logical consistency in theoretical frameworks."
+  },
+  {
+    "id": 12,
+    "statement": "Internal consistency is necessary but insufficient for theory validation."
+  },
+  {
+    "id": 13,
+    "statement": "Internal coherence crucial for theoretical frameworks' validity"
+  },
+  {
+    "id": 14,
+    "statement": "Theoretical frameworks' internal coherence ensures logical consistency and soundness."
+  },
+  {
+    "id": 15,
+    "statement": "Theoretical validity involves internal consistency and multiple criteria assessment."
+  },
+  {
+    "id": 16,
+    "statement": "Internal consistency necessary but insufficient for theory validation"
+  },
+  {
+    "id": 17,
+    "statement": "Theoretical framework components include concepts, assumptions, and principles."
+  },
+  {
+    "id": 18,
+    "statement": "Transparency in research involves data, methodological, and decision-making openness."
+  },
+  {
+    "id": 19,
+    "statement": "Reproducibility is essential for validity and reliability of research findings"
+  },
+  {
+    "id": 20,
+    "statement": "Logical consistency and empirical evidence essential for theory validation"
+  },
+  {
+    "id": 21,
+    "statement": "Internal coherence ensures theoretical frameworks' logical consistency and soundness."
+  },
+  {
+    "id": 22,
+    "statement": "Theory validity requires logical consistency and empirical evidence."
+  },
+  {
+    "id": 23,
+    "statement": "Neurotransmitters modulate synaptic connections through LTP, LTD, and pruning."
+  },
+  {
+    "id": 24,
+    "statement": "Internal coherence ensures logical consistency within theoretical frameworks."
+  },
+  {
+    "id": 25,
+    "statement": "Internal consistency varies across disciplines and theoretical frameworks."
+  },
+  {
+    "id": 26,
+    "statement": "Theoretical frameworks must demonstrate logical consistency and empirical evidence"
+  },
+  {
+    "id": 27,
+    "statement": "Internal coherence refers to logical consistency with a theory's framework."
+  },
+  {
+    "id": 28,
+    "statement": "Empirical evidence validation connects theories to reality through data."
+  },
+  {
+    "id": 29,
+    "statement": "Theoretical framework components (concepts, assumptions, principles) clarify relationships."
+  },
+  {
+    "id": 30,
+    "statement": "Internal coherence ensures logical consistency within a theory's framework."
+  },
+  {
+    "id": 31,
+    "statement": "Peer review objectivity threatened by multiple human biases."
+  },
+  {
+    "id": 32,
+    "statement": "Emotional regulation influences cognitive biases through emotional-impulsivity connection."
+  },
+  {
+    "id": 33,
+    "statement": "Peer review's objectivity vulnerable to human biases and flaws."
+  },
+  {
+    "id": 34,
+    "statement": "Theoretical frameworks provide context for evaluating consistency and relevance in domains."
+  },
+  {
+    "id": 35,
+    "statement": "Internal coherence ensures logical consistency in theoretical frameworks."
+  },
+  {
+    "id": 36,
+    "statement": "Theoretical frameworks provide context for domain understanding and analysis."
+  },
+  {
+    "id": 37,
+    "statement": "Peer review objectivity threatened by individual cognitive biases."
+  },
+  {
+    "id": 38,
+    "statement": "Honesty's absolutes compromised in extreme necessity situations."
+  },
+  {
+    "id": 39,
+    "statement": "Reproducibility validates research methods and ensures consistency.''"
+  },
+  {
+    "id": 40,
+    "statement": "Theory validation requires logical consistency, empirical evidence, and generalizability"
+  },
+  {
+    "id": 41,
+    "statement": "Internal consistency guarantees logical soundness through coherence"
+  },
+  {
+    "id": 42,
+    "statement": "Cognitive biases arise from interplay of cognitive and emotional processes."
+  },
+  {
+    "id": 43,
+    "statement": "Cognitive biases influence judgment and decision-making subconsciously."
+  },
+  {
+    "id": 44,
+    "statement": "Internal coherence ensures logical consistency within theory components."
+  },
+  {
+    "id": 45,
+    "statement": "Emotions influence cognitive biases through subconscious mental associations."
+  },
+  {
+    "id": 46,
+    "statement": "Experimental design flaws, data analysis techniques, and environmental factors"
+  },
+  {
+    "id": 47,
+    "statement": "Emotions influence cognitive biases through automatic processing loops."
+  },
+  {
+    "id": 48,
+    "statement": "Relevance ensures theory applicability and meaningfulness in domain."
+  },
+  {
+    "id": 49,
+    "statement": "Theoretical framework components' internal consistency crucial for validity."
+  },
+  {
+    "id": 50,
+    "statement": "Logical soundness requires consistency and empirical evidence validation."
+  },
+  {
+    "id": 51,
+    "statement": "Empirical evidence validation requires careful consideration of limitations."
+  },
+  {
+    "id": 52,
+    "statement": "Empirical evidence validation bridges theory and reality through data."
+  },
+  {
+    "id": 53,
+    "statement": "Neurotransmitters modulate synaptic connections through various mechanisms"
+  },
+  {
+    "id": 54,
+    "statement": "Transparency in data analysis promotes validity and trust relationships."
+  },
+  {
+    "id": 55,
+    "statement": "Theoretical frameworks' internal consistency definition varies across disciplines."
+  },
+  {
+    "id": 56,
+    "statement": "Theoretical validity requires coherence, relevance, and empirical evidence validation."
+  },
+  {
+    "id": 57,
+    "statement": "Peer review is vulnerable to human biases and subjectivity."
+  },
+  {
+    "id": 58,
+    "statement": "Internal coherence ensures logical consistency and conceptual relevance within theory."
+  },
+  {
+    "id": 59,
+    "statement": "Peer review involves expert evaluation for quality and validity."
+  },
+  {
+    "id": 60,
+    "statement": "Theoretical frameworks consist of concepts, assumptions, and principles to explain phenomena."
+  },
+  {
+    "id": 61,
+    "statement": "Internal consistency necessary but sufficient for logical soundness."
+  },
+  {
+    "id": 62,
+    "statement": "Internal coherence refers to logical consistency within theoretical frameworks."
+  },
+  {
+    "id": 63,
+    "statement": "Study's context refers to specific conditions and circumstances."
+  },
+  {
+    "id": 64,
+    "statement": "Internal consistency is insufficient for theory validation without evidence."
+  },
+  {
+    "id": 65,
+    "statement": "Internal consistency crucial for theoretical framework's validity because."
+  },
+  {
+    "id": 66,
+    "statement": "Internally consistent components form coherent theoretical frameworks"
+  },
+  {
+    "id": 67,
+    "statement": "Theoretical frameworks rely on assumptions based on empirical evidence"
+  },
+  {
+    "id": 68,
+    "statement": "Generalizability refers to the extent of findings applicability."
+  },
+  {
+    "id": 69,
+    "statement": "Empirical evidence validation requires acknowledging and addressing potential biases and errors."
+  },
+  {
+    "id": 70,
+    "statement": "Generalizability limited by study's context and reporting quality."
+  },
+  {
+    "id": 71,
+    "statement": "Internal coherence refers to logically consistent theory components' fit"
+  },
+  {
+    "id": 72,
+    "statement": "Logical consistency validation requires multiple criteria assessment."
+  },
+  {
+    "id": 73,
+    "statement": "Internal validity requires evidence beyond internal consistency."
+  },
+  {
+    "id": 74,
+    "statement": "Neurotransmitters modulate synaptic plasticity through LTP, LTD, and pruning."
+  },
+  {
+    "id": 75,
+    "statement": "Internal coherence refers to consistent theory component connections."
+  },
+  {
+    "id": 76,
+    "statement": "Logical consistency and empirical evidence crucial for theory validation."
+  },
+  {
+    "id": 77,
+    "statement": "Cognitive biases arise from interplay between cognitive and emotion."
+  },
+  {
+    "id": 78,
+    "statement": "Generalizability extends research findings to multiple contexts and populations"
+  },
+  {
+    "id": 79,
+    "statement": "Theory's internal consistency relies on valid underlying assumptions' validity."
+  },
+  {
+    "id": 80,
+    "statement": "Conceptual relevance refers to the well-connectedness of a theory's components."
+  },
+  {
+    "id": 81,
+    "statement": "Honesty may need to be compromised in extreme situations"
+  },
+  {
+    "id": 82,
+    "statement": "Internal coherence requires conceptual relevance for logical soundness."
+  },
+  {
+    "id": 83,
+    "statement": "Transparency in data analysis is crucial for scientific credibility."
+  },
+  {
+    "id": 84,
+    "statement": "Internal consistency insufficient for logical coherence without empirical evidence."
+  },
+  {
+    "id": 85,
+    "statement": "Transparency in research involves data, methodological, and decision- making openness."
+  },
+  {
+    "id": 86,
+    "statement": "Internal coherence ensures logical consistency and validity"
+  },
+  {
+    "id": 87,
+    "statement": "Generalizability is about applying findings widely without limitations."
+  },
+  {
+    "id": 88,
+    "statement": "A theory's internal consistency assumes valid underlying assumptions."
+  },
+  {
+    "id": 89,
+    "statement": "Multiple criteria evaluate theoretical validity's coherence and relevance."
+  },
+  {
+    "id": 90,
+    "statement": "Theoretical frameworks require logical consistency to ensure validity and soundness."
+  },
+  {
+    "id": 91,
+    "statement": "Internal coherence ensures logical consistency within theoretical frameworks."
+  },
+  {
+    "id": 92,
+    "statement": "Honesty is foundation of trust, but exceptions occur."
+  },
+  {
+    "id": 93,
+    "statement": "Generalizability limited by study's context, population, and methodology factors."
+  },
+  {
+    "id": 94,
+    "statement": "Cognitive biases influenced by emotional regulation, social learning, and heuristics."
+  },
+  {
+    "id": 95,
+    "statement": "Logical coherence involves internal consistency, relevance, and external validation."
+  },
+  {
+    "id": 96,
+    "statement": "Internal coherence ensures logical consistency within theoretical frameworks allowing for"
+  },
+  {
+    "id": 97,
+    "statement": "Honesty may need to be compromised in extreme necessity situations."
+  },
+  {
+    "id": 98,
+    "statement": "Theoretical frameworks' logical consistency ensures validity and soundness."
+  },
+  {
+    "id": 99,
+    "statement": "Logical soundness requires consistency, empirical evidence, and contextual limits"
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 75,
+  "statement": "Internal coherence refers to consistent theory component connections."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 75,
+  "statement": "Internal coherence refers to consistent theory component connections."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss item 75: "Internal coherence refers to consistent theory component connections." I'm least confident about this item, and I'd love to understand it better.
+
+To be specific, I'm unsure about what "consistent theory component connections" exactly means. Could you elaborate on what you think it means? For example, are we talking about logical connections between concepts within a theory, or something else?

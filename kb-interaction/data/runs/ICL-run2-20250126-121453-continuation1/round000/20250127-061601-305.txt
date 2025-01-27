@@ -1,0 +1,462 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Vagueness refers to lack of precision in language meaning."
+  },
+  {
+    "id": 2,
+    "statement": "Internal consistency necessary but insufficient for logical coherence."
+  },
+  {
+    "id": 3,
+    "statement": "Internal consistency varies across theoretical frameworks, contexts, and domains."
+  },
+  {
+    "id": 4,
+    "statement": "Biases arise from complex interplay of cognitive, emotional, social factors."
+  },
+  {
+    "id": 5,
+    "statement": "Internal consistency a necessary condition for theoretical validity"
+  },
+  {
+    "id": 6,
+    "statement": "Internal consistency necessary for logical coherence in theories'"
+  },
+  {
+    "id": 7,
+    "statement": "Internal consistency is necessary but insufficient for logical coherence."
+  },
+  {
+    "id": 8,
+    "statement": "Internal consistency necessary condition for theoretical validity alone insufficient."
+  },
+  {
+    "id": 9,
+    "statement": "Internal consistency varies across theoretical frameworks, methodologies, and epistemologies."
+  },
+  {
+    "id": 10,
+    "statement": "Internal consistency is necessary but insufficient for logical coherence."
+  },
+  {
+    "id": 11,
+    "statement": "Biases emerge from complex interactions among cognitive, emotional, and social factors."
+  },
+  {
+    "id": 12,
+    "statement": "Internal consistency is necessary but insufficient for logical coherence alone."
+  },
+  {
+    "id": 13,
+    "statement": "Feedback loops impact system behavior based on multiple factors."
+  },
+  {
+    "id": 14,
+    "statement": "Vagueness refers to ambiguity and semantic uncertainty"
+  },
+  {
+    "id": 15,
+    "statement": "Internal consistency refers to coherence within a theory's components."
+  },
+  {
+    "id": 16,
+    "statement": "Internal consistency necessary for logical coherence but not sufficient alone."
+  },
+  {
+    "id": 17,
+    "statement": "Accuracy refers to theory's predictions matching observed data."
+  },
+  {
+    "id": 18,
+    "statement": "Logical coherence requires internal consistency and empirical evidence validation."
+  },
+  {
+    "id": 19,
+    "statement": "Internal consistency means logical soundness within a theory or argument."
+  },
+  {
+    "id": 20,
+    "statement": "Logical coherence requires both internal consistency and empirical evidence validation."
+  },
+  {
+    "id": 21,
+    "statement": "Internal theoretical consistency ensures logical coherence and accuracy through rigorous reasoning."
+  },
+  {
+    "id": 22,
+    "statement": "Trust building involves multiple factors including reliability, empathy, communication, consistency."
+  },
+  {
+    "id": 23,
+    "statement": "Theoretical validity requires internal consistency, empirical evidence, and cohesion between components."
+  },
+  {
+    "id": 24,
+    "statement": "Internal consistency necessary but insufficient for validity alone."
+  },
+  {
+    "id": 25,
+    "statement": "Subconscious influence arises from interplay of cognitive biases and emotions."
+  },
+  {
+    "id": 26,
+    "statement": "Biases emerge from entangled cognitive, emotional, and social processes."
+  },
+  {
+    "id": 27,
+    "statement": "Internal consistency necessary for logical coherence in theories."
+  },
+  {
+    "id": 28,
+    "statement": "Empirical evidence validation demonstrates theory validity through prediction matching."
+  },
+  {
+    "id": 29,
+    "statement": "Vagueness refers to ambiguity in concepts and meanings."
+  },
+  {
+    "id": 30,
+    "statement": "Logical coherence requires internal consistency and empirical evidence validation"
+  },
+  {
+    "id": 31,
+    "statement": "Subconscious influence arises from complex interaction of cognitive biases and emotions."
+  },
+  {
+    "id": 32,
+    "statement": "Theoretical validity often demands interconnectedness among sub-components and variables."
+  },
+  {
+    "id": 33,
+    "statement": "Internal consistency a necessary but insufficient condition for validity."
+  },
+  {
+    "id": 34,
+    "statement": "Internal consistency necessary but insufficient for logical coherence and validity."
+  },
+  {
+    "id": 35,
+    "statement": "Logical coherence requires both internal consistency and empirical validation"
+  },
+  {
+    "id": 36,
+    "statement": "Empirical evidence validation tests theories against real-world data."
+  },
+  {
+    "id": 37,
+    "statement": "Honesty is not always the only morally acceptable choice."
+  },
+  {
+    "id": 38,
+    "statement": "Internal consistency varies context and goal, importance undetermined"
+  },
+  {
+    "id": 39,
+    "statement": "Vagueness arises from absence of clear definitions and boundaries."
+  },
+  {
+    "id": 40,
+    "statement": "Internal consistency ensures logical coherence through rigorous reasoning"
+  },
+  {
+    "id": 41,
+    "statement": "Cognitive biases arise from complex interactions among factors."
+  },
+  {
+    "id": 42,
+    "statement": "Internal consistency varies across contexts, goals, and methodologies"
+  },
+  {
+    "id": 43,
+    "statement": "Cognitive biases can be mitigated through self-awareness and reflection."
+  },
+  {
+    "id": 44,
+    "statement": "Subconscious mind constantly interplays cognitive biases and emotions."
+  },
+  {
+    "id": 45,
+    "statement": "Internal consistency insufficient for logical coherence; accuracy required."
+  },
+  {
+    "id": 46,
+    "statement": "Accuracy refers to perfect correlation between predictions and data."
+  },
+  {
+    "id": 47,
+    "statement": "Theoretical frameworks' goals and assumptions influence internal consistency measures."
+  },
+  {
+    "id": 48,
+    "statement": "Internal consistency ensures logical soundness, empirical validation accuracy."
+  },
+  {
+    "id": 49,
+    "statement": "Subconscious mind can operate outside conscious awareness implicitly."
+  },
+  {
+    "id": 50,
+    "statement": "Subconscious mind shaped by complex interplay of emotions and biases."
+  },
+  {
+    "id": 51,
+    "statement": "Building trust involves multiple factors beyond honesty alone."
+  },
+  {
+    "id": 52,
+    "statement": "Empirical evidence validation tests theories against real-world data."
+  },
+  {
+    "id": 53,
+    "statement": "Internal consistency ensures logical coherence and accuracy in theories."
+  },
+  {
+    "id": 54,
+    "statement": "Feedback loops amplify or stabilize system behavior conditionally."
+  },
+  {
+    "id": 55,
+    "statement": "Internal theoretical consistency ensures logical coherence and accuracy through rigorous reasoning."
+  },
+  {
+    "id": 56,
+    "statement": "Cognitive biases and emotions interact in automatic, reciprocal ways."
+  },
+  {
+    "id": 57,
+    "statement": "Judgment calls in relevance assessment require contextual understanding."
+  },
+  {
+    "id": 58,
+    "statement": "Honesty not always the only morally acceptable choice"
+  },
+  {
+    "id": 59,
+    "statement": "Honesty influenced by complex interplay of cognitive, emotional, social, environmental, and neuro factors."
+  },
+  {
+    "id": 60,
+    "statement": "Internal consistency depends on context, goals, and methodologies applied."
+  },
+  {
+    "id": 61,
+    "statement": "Internal consistency's meaning varies with context, domain, discipline."
+  },
+  {
+    "id": 62,
+    "statement": "Internal consistency refers to logical soundness within theory components."
+  },
+  {
+    "id": 63,
+    "statement": "Logical coherence requires both internal consistency and empirical evidence validation."
+  },
+  {
+    "id": 64,
+    "statement": "Vagueness in language refers to ambiguity and unclear meaning."
+  },
+  {
+    "id": 65,
+    "statement": "Internal consistency guarantees logical coherence but not validity."
+  },
+  {
+    "id": 66,
+    "statement": "Cognitive, emotional, and social factors interact to produce biases."
+  },
+  {
+    "id": 67,
+    "statement": "Theoretical validity demands interconnected conditions of soundness, evidence, and applicability."
+  },
+  {
+    "id": 68,
+    "statement": "Internal consistency involves logical soundness, coherence, and empirical validation."
+  },
+  {
+    "id": 69,
+    "statement": "Valid assumptions are essential for internally consistent and externally verified theories"
+  },
+  {
+    "id": 70,
+    "statement": "Logical soundness refers to coherence without internal contradictions."
+  },
+  {
+    "id": 71,
+    "statement": "Internal consistency varies across theoretical frameworks, domains, disciplines, contexts."
+  },
+  {
+    "id": 72,
+    "statement": "Theory's adaptability across domains and contexts ensures consistency."
+  },
+  {
+    "id": 73,
+    "statement": "Honesty is a fundamental component of trust-building relationships."
+  },
+  {
+    "id": 74,
+    "statement": "Internal consistency ensures logical coherence but lacks empirical evidence validation."
+  },
+  {
+    "id": 75,
+    "statement": "Internal consistency is necessary but insufficient for logical coherence alone."
+  },
+  {
+    "id": 76,
+    "statement": "Theoretical validity requires internal consistency, empirical evidence, and other aspects."
+  },
+  {
+    "id": 77,
+    "statement": "Honesty influenced by complex interplay of cognitive, emotional, social, environmental, and neuro factors."
+  },
+  {
+    "id": 78,
+    "statement": "Honesty is a necessary but insufficient factor in trust."
+  },
+  {
+    "id": 79,
+    "statement": "Cognitive biases emerge from dynamic cognitive-emotional-social interactions."
+  },
+  {
+    "id": 80,
+    "statement": "Internal coherence requires logical soundness, empirical evidence, and integration."
+  },
+  {
+    "id": 81,
+    "statement": "Biases emerge from intricate finally-linked cognitive, emotional, and social interactions."
+  },
+  {
+    "id": 82,
+    "statement": "Internal consistency varies across disciplines and theoretical frameworks."
+  },
+  {
+    "id": 83,
+    "statement": "Accuracy refers to degree of agreement between predictions and data."
+  },
+  {
+    "id": 84,
+    "statement": "Biases emerge from interactive cognition, social influence, and feedback loops."
+  },
+  {
+    "id": 85,
+    "statement": "Cognitive biases and emotions interact intricately in judgment formation"
+  },
+  {
+    "id": 86,
+    "statement": "Subconscious influence arises from cognitive biases and emotions interaction"
+  },
+  {
+    "id": 87,
+    "statement": "Subconscious mind processes cognitive biases and emotions through neural networks."
+  },
+  {
+    "id": 88,
+    "statement": "Contextual consistency refers to theories' adaptability across domains and contexts."
+  },
+  {
+    "id": 89,
+    "statement": "Cognitive biases emerge from interactions among cognitive processes and emotions."
+  },
+  {
+    "id": 90,
+    "statement": "Internal theoretical consistency ensures logical coherence through rigorous reasoning."
+  },
+  {
+    "id": 91,
+    "statement": "Internal consistency necessary but insufficient for theoretical coherence."
+  },
+  {
+    "id": 92,
+    "statement": "Empirical evidence validation tests theories against actual observations."
+  },
+  {
+    "id": 93,
+    "statement": "Empirical evidence validation confirms theory accuracy and explanatory power through prediction matching."
+  },
+  {
+    "id": 94,
+    "statement": "Cognitive biases and emotions interact intricately, influencing judgments."
+  },
+  {
+    "id": 95,
+    "statement": "Theoretical validity demands soundness, empirical evidence, and applicability."
+  },
+  {
+    "id": 96,
+    "statement": "Internal consistency guarantees logical coherence but not validity."
+  },
+  {
+    "id": 97,
+    "statement": "Biases emerge from complex interplay of cognitive, emotional, social factors."
+  },
+  {
+    "id": 98,
+    "statement": "Internal consistency necessary but insufficient for logical coherence without evidence."
+  },
+  {
+    "id": 99,
+    "statement": "Theoretical validity requires internal consistency, empirical evidence and more."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 4,
+  "statement": "Biases arise from complex interplay of cognitive, emotional, social factors."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 4,
+  "statement": "Biases arise from complex interplay of cognitive, emotional, social factors."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base. I'd like to discuss item 4:
+
+Item to Discuss:
+{
+"id": 4,
+"statement": "Biases arise from complex interplay of cognitive, emotional, social factors."
+}
+
+Things I’m Uncertain About This Item:
+I'm uncertain about how specific and concrete the phrase "complex interplay" is. Is it a straightforward concept, or is it open to interpretation?
+
+Specific Clarifying Question:
+Can you elaborate on what you mean by "complex interplay" in this context? How do cognitive, emotional, and social factors interact to produce biases?
+
+What are your thoughts on this item, and are you more or less confident about it?

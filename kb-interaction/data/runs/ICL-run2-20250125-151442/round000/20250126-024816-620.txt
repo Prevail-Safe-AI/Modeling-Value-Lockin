@@ -1,0 +1,457 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Logical coherence requires consistent, sound, and relevant premises."
+  },
+  {
+    "id": 2,
+    "statement": "Epigenetic marks often interact with histones to regulate gene expression"
+  },
+  {
+    "id": 3,
+    "statement": "Logical coherence ensures argument validity through consistency and soundness."
+  },
+  {
+    "id": 4,
+    "statement": "Logical coherence ensures argument validity through consistency, soundness, and relevance."
+  },
+  {
+    "id": 5,
+    "statement": "Epigenetic regulation involves complex histone-DNA interactions and chromatin remodeling."
+  },
+  {
+    "id": 6,
+    "statement": "Epigenetic regulation involves complex interactions among histone modification, DNA methylation, chromatin remodeling, and non-coding RNAs, influencing gene expression."
+  },
+  {
+    "id": 7,
+    "statement": "Logical coherence ensures soundness through consistency, validity, relevance, context, evidence, counterarguments, and logical fallacies detection."
+  },
+  {
+    "id": 8,
+    "statement": "Logical coherence depends on contextual influence and audience familiarity."
+  },
+  {
+    "id": 9,
+    "statement": "Logical coherence ensures soundness through consistency, validity, relevance, context, evidence, counterarguments, and logical fallacies detection."
+  },
+  {
+    "id": 10,
+    "statement": "Logical coherence involves soundness through logical fallacies detection consistency."
+  },
+  {
+    "id": 11,
+    "statement": "Empathy development involves complex interplay between genetics, environment, and cognition."
+  },
+  {
+    "id": 12,
+    "statement": "Power dynamics influence moral judgments through subtle, implicit bias."
+  },
+  {
+    "id": 13,
+    "statement": "Emotional Intelligence involves interdependent self-awareness, regulation, empathy, and resilience."
+  },
+  {
+    "id": 14,
+    "statement": "Logical coherence demands consistency, soundness, relevance, context, evidence."
+  },
+  {
+    "id": 15,
+    "statement": "Moral judgments vary across cultures due to multiple factors."
+  },
+  {
+    "id": 16,
+    "statement": "Moral judgments vary across cultures due to multiple factors influencing historical context, religious beliefs, economic and social factors, and power dynamics."
+  },
+  {
+    "id": 17,
+    "statement": "Unconscious biases refer to attitudes influencing understanding and actions subconsciously."
+  },
+  {
+    "id": 18,
+    "statement": "Epigenetic marks and histone modifications both regulate gene expression."
+  },
+  {
+    "id": 19,
+    "statement": "Epigenetic regulation involves interplay between histone mods & DNA methylation."
+  },
+  {
+    "id": 20,
+    "statement": "Logical coherence adapts to implicit shared assumptions in context"
+  },
+  {
+    "id": 21,
+    "statement": "Empathy development involves complex dynamic genetic-environment interactions."
+  },
+  {
+    "id": 22,
+    "statement": "Moral judgments vary across cultures due to various historical contexts."
+  },
+  {
+    "id": 23,
+    "statement": "Emotional Intelligence consists of interdependent components: self-awareness, self-regulation, motivation, and empathy."
+  },
+  {
+    "id": 24,
+    "statement": "Epigenetic marks respond to environmental cues through gene expression alteration"
+  },
+  {
+    "id": 25,
+    "statement": "Empathy development involves complex interplay between genetic, cognitive, and environmental factors."
+  },
+  {
+    "id": 26,
+    "statement": "Epigenetic regulation involves complex histone-DNA interactions, chromatin remodeling, and histone modifications tightly linked for gene expression control."
+  },
+  {
+    "id": 27,
+    "statement": "Unconscious biases are attitudes or stereotypes operating outside awareness."
+  },
+  {
+    "id": 28,
+    "statement": "Moral judgments vary across cultures due to historical context."
+  },
+  {
+    "id": 29,
+    "statement": "Epigenetic regulation regulates gene expression through chromatin modification and DNA methylation."
+  },
+  {
+    "id": 30,
+    "statement": "Histone modification dynamically regulates chromatin structure and transcription factor binding"
+  },
+  {
+    "id": 31,
+    "statement": "Epigenetic marks influence gene expression through multiple mechanisms"
+  },
+  {
+    "id": 32,
+    "statement": "Epigenetic marks can influence gene expression through DNA methylation."
+  },
+  {
+    "id": 33,
+    "statement": "Logical coherence depends on context, audience, and purpose."
+  },
+  {
+    "id": 34,
+    "statement": "Logical coherence demands consistency, soundness, and relevance."
+  },
+  {
+    "id": 35,
+    "statement": "Epigenetic regulation involves dynamic histone-DNA interactions and non-coding RNAs."
+  },
+  {
+    "id": 36,
+    "statement": "Empathy development involves interplay of genetic, cognitive, and environmental factors."
+  },
+  {
+    "id": 37,
+    "statement": "Epigenetic regulation influences gene expression through histone modification."
+  },
+  {
+    "id": 38,
+    "statement": "Epigenetic regulation involves complex histone-DNA-chromatin interactions."
+  },
+  {
+    "id": 39,
+    "statement": "Unconscious biases refer to automatic, unintentional attitudes influencing understanding and actions."
+  },
+  {
+    "id": 40,
+    "statement": "Chromatin remodeling complexes modify histones to alter gene expression via nucleosome repositioning and histone modification"
+  },
+  {
+    "id": 41,
+    "statement": "Histone modifications dynamically alter chromatin structure and transcription factor binding."
+  },
+  {
+    "id": 42,
+    "statement": "Logical coherence ensures argument validity through consistency and soundness."
+  },
+  {
+    "id": 43,
+    "statement": "Honesty establishes reliability, consistency, and authenticity in relationships."
+  },
+  {
+    "id": 44,
+    "statement": "Logical coherence is context-dependent; nuances require understanding underlying principles."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic marks and histone modifications interact to regulate gene expression."
+  },
+  {
+    "id": 46,
+    "statement": "Epigenetic regulation involves complex histone-DNA interactions."
+  },
+  {
+    "id": 47,
+    "statement": "Logical coherence ensures valid conclusions through accurate premises foremost\u043b\u0456\u043d\u043d\u044f"
+  },
+  {
+    "id": 48,
+    "statement": "Unconscious biases operate outside awareness, influencing thoughts and behaviors."
+  },
+  {
+    "id": 49,
+    "statement": "Emotional Intelligence is the ability to identify and regulate emotions."
+  },
+  {
+    "id": 50,
+    "statement": "Epigenetic regulation occurs through histone modifications, chromatin structure."
+  },
+  {
+    "id": 51,
+    "statement": "Chromatin remodeling complexes regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 52,
+    "statement": "Epigenetic regulation regulates gene expression through chromatin modification and DNA methylation."
+  },
+  {
+    "id": 53,
+    "statement": "Logical coherence demands consistency, soundness, relevance, and context."
+  },
+  {
+    "id": 54,
+    "statement": "Epigenetic marks respond to environmental cues through gene expression alteration"
+  },
+  {
+    "id": 55,
+    "statement": "Moral judgments vary across cultures due to multiple factors influencing historical context, religious beliefs, economic and social factors, and power dynamics."
+  },
+  {
+    "id": 56,
+    "statement": "Epigenetic regulation involves complex interplay among histone modifications, DNA methylation, chromatin remodeling, and non-coding RNAs."
+  },
+  {
+    "id": 57,
+    "statement": "Logical coherence ensures valid conclusions through true premises foremost"
+  },
+  {
+    "id": 58,
+    "statement": "Epigenetic complexity stems from intricate histone-DNA interaction dynamics."
+  },
+  {
+    "id": 59,
+    "statement": "Unconscious assumptions require conscious effort to identify and address."
+  },
+  {
+    "id": 60,
+    "statement": "Epigenetic regulation involves complex interactions between histone modifications, DNA methylation."
+  },
+  {
+    "id": 61,
+    "statement": "Genetic-environment interactions influence gene expression through epigenetic modifications."
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic interactions regulate gene expression through environmental influences."
+  },
+  {
+    "id": 63,
+    "statement": "Logical coherence depends on nuances of context and audience assumptions."
+  },
+  {
+    "id": 64,
+    "statement": "Emotional Intelligence involves developing resilience amidst uncertainty"
+  },
+  {
+    "id": 65,
+    "statement": "Moral judgments vary across cultures due to complex interactions."
+  },
+  {
+    "id": 66,
+    "statement": "Historical context shapes cultural values, beliefs, and moral judgments."
+  },
+  {
+    "id": 67,
+    "statement": "Implicit assumptions influence logical coherence through background knowledge."
+  },
+  {
+    "id": 68,
+    "statement": "Histone modification regulates gene expression by altering chromatin structure."
+  },
+  {
+    "id": 69,
+    "statement": "Logical coherence demands consistency, soundness, relevance, context, evidence, and validation."
+  },
+  {
+    "id": 70,
+    "statement": "Logical coherence prioritizes trustworthy premises for valid conclusions"
+  },
+  {
+    "id": 71,
+    "statement": "Honesty, accountability, and compassion are core aspects of integrity."
+  },
+  {
+    "id": 72,
+    "statement": "Chromatin remodeling complexes regulate gene expression by modifying chromatin structure."
+  },
+  {
+    "id": 73,
+    "statement": "Moral judgments vary across cultures due to distinct belief systems"
+  },
+  {
+    "id": 74,
+    "statement": "Logical coherence depends on context, audience, and underlying principles."
+  },
+  {
+    "id": 75,
+    "statement": "Unconscious assumptions are attitudes or biases operating outside awareness."
+  },
+  {
+    "id": 76,
+    "statement": "Epigenetic regulation influences gene expression through histone modification."
+  },
+  {
+    "id": 77,
+    "statement": "Chromatin remodeling complexes regulate gene expression through histone modifications indirectly."
+  },
+  {
+    "id": 78,
+    "statement": "Epigenetic regulation involves interactions among histone modification, DNA methylation, chromatin remodeling, and non-coding RNAs."
+  },
+  {
+    "id": 79,
+    "statement": "Logical coherence demands consistency, soundness, relevance, context."
+  },
+  {
+    "id": 80,
+    "statement": "Logical coherence ensures soundness through consistency and validity."
+  },
+  {
+    "id": 81,
+    "statement": "Epigenetic marks modulate chromatin structure through histone modifications and DNA methylation."
+  },
+  {
+    "id": 82,
+    "statement": "Integrity's complexity stems from its multifaceted nature and context."
+  },
+  {
+    "id": 83,
+    "statement": "Moral judgments vary across cultures due to multifaceted influences."
+  },
+  {
+    "id": 84,
+    "statement": "Epigenetic regulation involves interactive mechanisms between histone modification, DNA methylation, chromatin remodeling, and non-coding RNAs."
+  },
+  {
+    "id": 85,
+    "statement": "Honesty provides foundation for emotional trust and relationships."
+  },
+  {
+    "id": 86,
+    "statement": "Trust relies on various factors, not solely honesty."
+  },
+  {
+    "id": 87,
+    "statement": "Logical coherence demands consistency, soundness, and contextual relevance."
+  },
+  {
+    "id": 88,
+    "statement": "Chromatin remodeling complexes regulate gene expression through histone modification."
+  },
+  {
+    "id": 89,
+    "statement": "Trust relies on honesty, reliability, and emotional intelligence"
+  },
+  {
+    "id": 90,
+    "statement": "Chromatin remodeling complexes regulate gene expression via nucleosome repositioning and histone modification"
+  },
+  {
+    "id": 91,
+    "statement": "Emotional Intelligence involves interdependent self-awareness, regulation, empathy, and resilience components."
+  },
+  {
+    "id": 92,
+    "statement": "Chromatin remodeling complexes regulate gene expression through structure modification."
+  },
+  {
+    "id": 93,
+    "statement": "Epigenetic regulation involves intricate chromatin-DNA-histone modification interactions."
+  },
+  {
+    "id": 94,
+    "statement": "Chromatin remodeling complexes regulate gene expression through histone modification."
+  },
+  {
+    "id": 95,
+    "statement": "Empathy development involves complex interplay between genetics, environment, and cognition."
+  },
+  {
+    "id": 96,
+    "statement": "Epigenetic marks and histone modifications interact to regulate gene expression."
+  },
+  {
+    "id": 97,
+    "statement": "Histone modification alters chromatin structure and transcription factor binding."
+  },
+  {
+    "id": 98,
+    "statement": "Epigenetic regulation influences gene expression through multiple mechanisms"
+  },
+  {
+    "id": 99,
+    "statement": "Empathy development involves complex, dynamic, and highly individualized interactions."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 97,
+  "statement": "Histone modification alters chromatin structure and transcription factor binding."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 97,
+  "statement": "Histone modification alters chromatin structure and transcription factor binding."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss aspect 97 from the knowledge base:
+
+{
+"id": 97,
+"statement": "Histone modification alters chromatin structure and transcription factor binding."
+}
+
+I'm a little uncertain about this item. I'd like to know more about what histone modification entails and how it affects transcription factor binding. 
+
+Can you help me understand how chromatin structure relates to gene expression?

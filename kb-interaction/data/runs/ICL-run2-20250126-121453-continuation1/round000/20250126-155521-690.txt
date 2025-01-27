@@ -1,0 +1,459 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Electrostatic force depends on charge separation, distance, orientation, and medium."
+  },
+  {
+    "id": 2,
+    "statement": "Electrostatic force depends on multiple factors, charge, distance, orientation, shape."
+  },
+  {
+    "id": 3,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure alterations."
+  },
+  {
+    "id": 4,
+    "statement": "Honesty is a universal moral principle, not relative."
+  },
+  {
+    "id": 5,
+    "statement": "Electrostatic force is dependent on charge, distance, orientation, and shape."
+  },
+  {
+    "id": 6,
+    "statement": "Cultural norms influence scientific evidence through values and attitudes."
+  },
+  {
+    "id": 7,
+    "statement": "Epigenetic modifications involve histone methylation and DNA methylation"
+  },
+  {
+    "id": 8,
+    "statement": "Systematic evaluation involves clear goals, defined scope, and logical steps."
+  },
+  {
+    "id": 9,
+    "statement": "Electrostatic force depends on charge separation, distance, orientation, and medium."
+  },
+  {
+    "id": 10,
+    "statement": "Electrostatic force depends on multiple factors including charge, distance, orientation"
+  },
+  {
+    "id": 11,
+    "statement": "Electrostatic force depends on charge distribution, proximity, and relative alignment."
+  },
+  {
+    "id": 12,
+    "statement": "Axioms are statements accepted as true without explicit proof."
+  },
+  {
+    "id": 13,
+    "statement": "Electrostatic forces depend on charge, distance, orientation, and surrounding medium."
+  },
+  {
+    "id": 14,
+    "statement": "Credibility in academia results from multiple, interconnected factors."
+  },
+  {
+    "id": 15,
+    "statement": "Systematic evaluation involves clear goals, defined scope, and logical steps"
+  },
+  {
+    "id": 16,
+    "statement": "Electrostatic force depends on charge distribution, proximity, and polarization angle."
+  },
+  {
+    "id": 17,
+    "statement": "Epigenetic modifications alter chromatin structure, regulating gene expression."
+  },
+  {
+    "id": 18,
+    "statement": "Honesty establishes tone for reliable and dependable relationships."
+  },
+  {
+    "id": 19,
+    "statement": "Coulomb's law is an approximation, not always accurate."
+  },
+  {
+    "id": 20,
+    "statement": "Electrostatic force depends on factors: charge, distance, orientation, shape."
+  },
+  {
+    "id": 21,
+    "statement": "Axioms are assumptions accepted as true without explicit proof, requiring coherence."
+  },
+  {
+    "id": 22,
+    "statement": "Epigenetic modifications alter chromatin structure through histone modifications."
+  },
+  {
+    "id": 23,
+    "statement": "Charge distribution affects electrostatic force strength and direction."
+  },
+  {
+    "id": 24,
+    "statement": "Axioms are fundamental principles within specific theoretical frameworks."
+  },
+  {
+    "id": 25,
+    "statement": "Honesty in research data ensures accuracy and transparency."
+  },
+  {
+    "id": 26,
+    "statement": "Unconscious biases can be managed through self-awareness and calibration."
+  },
+  {
+    "id": 27,
+    "statement": "Societal and cultural influences shape cultural context through interactions."
+  },
+  {
+    "id": 28,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes"
+  },
+  {
+    "id": 29,
+    "statement": "Axioms are fundamental principles assumed true without explicit proof"
+  },
+  {
+    "id": 30,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium."
+  },
+  {
+    "id": 31,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure thereby."
+  },
+  {
+    "id": 32,
+    "statement": "Electrostatic force is dependent on charge, distance, orientation, shape, and polarization."
+  },
+  {
+    "id": 33,
+    "statement": "Credibility in academia arises from interconnected and nuanced factors"
+  },
+  {
+    "id": 34,
+    "statement": "Systematic evaluation requires clear goals, defined scope, logical steps, and transparency."
+  },
+  {
+    "id": 35,
+    "statement": "Axioms are evidence-based, self-evident, intuitive, and universally accepted."
+  },
+  {
+    "id": 36,
+    "statement": "Honesty fosters consistent, transparent, accountable, and respectful relationships."
+  },
+  {
+    "id": 37,
+    "statement": "Cultural norms can influence scientific evidence interpretation subtly."
+  },
+  {
+    "id": 38,
+    "statement": "Electrostatic force depends on charge distribution, proximity, and orientation arrangement"
+  },
+  {
+    "id": 39,
+    "statement": "Electrostatic forces arise from charged particle interactions, oppositely attracting."
+  },
+  {
+    "id": 40,
+    "statement": "Electrostatic force depends on charge distribution, proximity, and orientation interaction."
+  },
+  {
+    "id": 41,
+    "statement": "Electrostatic force affects surrounding medium's electric field properties"
+  },
+  {
+    "id": 42,
+    "statement": "Peer review ensures research quality, accountability, and validity"
+  },
+  {
+    "id": 43,
+    "statement": "Electrostatic forces arise from virtual photon exchange between charged particles."
+  },
+  {
+    "id": 44,
+    "statement": "Electrostatic force depends on charge distribution, proximity, and orientation interaction."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 46,
+    "statement": "Electrostatic force depends on charge distribution, proximity, and orientation."
+  },
+  {
+    "id": 47,
+    "statement": "Honesty is the foundation of trust and relationships."
+  },
+  {
+    "id": 48,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure alterations."
+  },
+  {
+    "id": 49,
+    "statement": "Honesty is a universal moral principle, not relative."
+  },
+  {
+    "id": 50,
+    "statement": "Electromagnetic force arises from charged particle interactions and photon exchange."
+  },
+  {
+    "id": 51,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes"
+  },
+  {
+    "id": 52,
+    "statement": "Axioms are assumptions accepted as true, not necessarily evidence-based."
+  },
+  {
+    "id": 53,
+    "statement": "Cultural norms influence scientific evidence through unconscious biases'"
+  },
+  {
+    "id": 54,
+    "statement": "Cultural norms can insidiously influence scientific evidence interpretation."
+  },
+  {
+    "id": 55,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure alterations."
+  },
+  {
+    "id": 56,
+    "statement": "Electrostatic force depends on charge, distance, orientation."
+  },
+  {
+    "id": 57,
+    "statement": "Epigenetic modifications alter chromatin structure regulating gene expression."
+  },
+  {
+    "id": 58,
+    "statement": "Axioms are fundamental principles assumed true without explicit proof."
+  },
+  {
+    "id": 59,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure"
+  },
+  {
+    "id": 60,
+    "statement": "A systematic evaluation is a structured, transparent, and rigorous process"
+  },
+  {
+    "id": 61,
+    "statement": "Electrostatic force depends on factors: charge, distance, orientation, surface roughness."
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes"
+  },
+  {
+    "id": 63,
+    "statement": "Epigenetic modifications can alter chromatin structure regulating gene expression."
+  },
+  {
+    "id": 64,
+    "statement": "Epigenetic modifications can induce chromatin compaction or relaxation."
+  },
+  {
+    "id": 65,
+    "statement": "Implicit biases can influence scientific conclusions through unconscious attitudes."
+  },
+  {
+    "id": 66,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 67,
+    "statement": "Electrostatic force is proportional to charge magnitude and distance."
+  },
+  {
+    "id": 68,
+    "statement": "Electrostatic forces can be influenced by the surrounding medium's properties."
+  },
+  {
+    "id": 69,
+    "statement": "Axioms can be context-dependent and subject to revision"
+  },
+  {
+    "id": 70,
+    "statement": "Cultural norms influence scientific evidence interpretation through shared values."
+  },
+  {
+    "id": 71,
+    "statement": "Epigenetic modifications alter chromatin structure through histone modifications."
+  },
+  {
+    "id": 72,
+    "statement": "Electrostatic force depends on charge distribution, proximity, and polarization angle of charged particles."
+  },
+  {
+    "id": 73,
+    "statement": "Axioms can be context-dependent and subject to revision"
+  },
+  {
+    "id": 74,
+    "statement": "Electrostatic force depends on charge, distance, orientation, shape."
+  },
+  {
+    "id": 75,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure alterations."
+  },
+  {
+    "id": 76,
+    "statement": "Peer review bias arises from familiarity with well-established research topics."
+  },
+  {
+    "id": 77,
+    "statement": "Charge distribution affects electrostatic force strength and direction."
+  },
+  {
+    "id": 78,
+    "statement": "Honesty is a relative concept influenced by context."
+  },
+  {
+    "id": 79,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 80,
+    "statement": "Epigenetic modifications involve histone methylation and DNA methylation mechanisms"
+  },
+  {
+    "id": 81,
+    "statement": "Honesty is essential for building and maintaining trust relationships"
+  },
+  {
+    "id": 82,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin compaction"
+  },
+  {
+    "id": 83,
+    "statement": "Axioms serve as foundational assumptions within specific theoretical frameworks."
+  },
+  {
+    "id": 84,
+    "statement": "Electrostatic force depends on charge distribution, proximity, and orientation."
+  },
+  {
+    "id": 85,
+    "statement": "Unconscious biases shape scientific conclusions through implicit attitudes."
+  },
+  {
+    "id": 86,
+    "statement": "Peer review identifies errors, improves methodology, and ensures validity"
+  },
+  {
+    "id": 87,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and shape."
+  },
+  {
+    "id": 88,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure alterations."
+  },
+  {
+    "id": 89,
+    "statement": "Honesty in research data collection and reporting is crucial."
+  },
+  {
+    "id": 90,
+    "statement": "Cultural norms influence scientific interpretation through collective beliefs, values, and norms."
+  },
+  {
+    "id": 91,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure alterations."
+  },
+  {
+    "id": 92,
+    "statement": "Epigenetic modifications regulate gene expression without changing DNA sequence."
+  },
+  {
+    "id": 93,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression needed."
+  },
+  {
+    "id": 94,
+    "statement": "Epigenetic modifications regulate gene expression via multiple mechanisms"
+  },
+  {
+    "id": 95,
+    "statement": "Coupled charged particles interact through electrostatic forces proportionally."
+  },
+  {
+    "id": 96,
+    "statement": "Credibility in academia stems from multiple interconnected factors including education, research, collaboration, and communication."
+  },
+  {
+    "id": 97,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and polarization angle."
+  },
+  {
+    "id": 98,
+    "statement": "Axioms are assumptions accepted as true without explicit proof."
+  },
+  {
+    "id": 99,
+    "statement": "Coulomb's law predicts electrostatic force between charged particles accurately."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 84,
+  "statement": "Electrostatic force depends on charge distribution, proximity, and orientation."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 84,
+  "statement": "Electrostatic force depends on charge distribution, proximity, and orientation."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's take a look at this item:
+
+{
+"id": 84,
+"statement": "Electrostatic force depends on charge distribution, proximity, and orientation."
+}
+
+I'm least confident about this aspect of the item. I'm not sure if I fully understand what it means by "charge distribution". Can you help me clarify what that refers to?
+
+For instance, does it mean the distribution of charge on a specific object, or the distribution of charges between two objects? Or is there something else I'm missing?
+
+What are your thoughts on this?

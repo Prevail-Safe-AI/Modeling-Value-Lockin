@@ -1,0 +1,457 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Empathy involves understanding, validating, and emotionally sharing emotions."
+  },
+  {
+    "id": 2,
+    "statement": "Empathy involves understanding, validation, and emotional resonance."
+  },
+  {
+    "id": 3,
+    "statement": "Empathy involves understanding, validating, and emotionally resonating with others' emotions."
+  },
+  {
+    "id": 4,
+    "statement": "Empathy involves understanding, validating, and resonating with others' emotions"
+  },
+  {
+    "id": 5,
+    "statement": "Empathy involves harmonious integration of cognitive and emotional processes."
+  },
+  {
+    "id": 6,
+    "statement": "Logical coherence requires harmonious validation, relevance, consistency, and thorough evaluation."
+  },
+  {
+    "id": 7,
+    "statement": "Logical coherence arises from harmonious validation, relevance, and consistency."
+  },
+  {
+    "id": 8,
+    "statement": "Histones compact DNA through electrostatic and hydrogen bonding primarily."
+  },
+  {
+    "id": 9,
+    "statement": "Empathy involves validating and understanding others' emotions as legitimate."
+  },
+  {
+    "id": 10,
+    "statement": "Electrostatic forces primarily drive histone-DNA interactions, supplemented by others"
+  },
+  {
+    "id": 11,
+    "statement": "Empathy occurs from harmonious integration of cognitive and emotional processes."
+  },
+  {
+    "id": 12,
+    "statement": "Logical coherence emerges from harmonious validation of components' consistency, relevance, and soundness."
+  },
+  {
+    "id": 13,
+    "statement": "Chromatin-modifying enzymes dynamically regulate gene expression through structural changes."
+  },
+  {
+    "id": 14,
+    "statement": "Empathy involves understanding, acknowledging, and acknowledging others' emotions."
+  },
+  {
+    "id": 15,
+    "statement": "Internal consistency ensures logical compatibility but not necessarily truth."
+  },
+  {
+    "id": 16,
+    "statement": "Chromatin-modifying enzymes rapidly regulate gene expression through structural changes"
+  },
+  {
+    "id": 17,
+    "statement": "Empathy emerges from harmonious integration of cognitive and emotional processes"
+  },
+  {
+    "id": 18,
+    "statement": "Mental states are inherently abstract, difficult to simulate."
+  },
+  {
+    "id": 19,
+    "statement": "Epigenetic modifications influence chromatin structure, regulating gene expression."
+  },
+  {
+    "id": 20,
+    "statement": "Honesty's moral significance depends on context, values, and motivations."
+  },
+  {
+    "id": 21,
+    "statement": "Empathy involves understanding, recognizing, and validating others' emotional experiences."
+  },
+  {
+    "id": 22,
+    "statement": "Logical coherence arises from evaluating argument components harmoniously."
+  },
+  {
+    "id": 23,
+    "statement": "Histones compact DNA through electrostatic, hydrogen, and hydrophobic interactions."
+  },
+  {
+    "id": 24,
+    "statement": "Histone-DNA interactions involve multiple force types: electrostatic, hydrogen, hydrophobic, \u03c0-\u03c0 stacking."
+  },
+  {
+    "id": 25,
+    "statement": "Logical coherence requires harmonious validation, relevance, and consistency."
+  },
+  {
+    "id": 26,
+    "statement": "Histones compact DNA through electrostatic and hydrogen bonding."
+  },
+  {
+    "id": 27,
+    "statement": "Logical coherence requires harmonious integration of relevance, consistency, and soundness."
+  },
+  {
+    "id": 28,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression mechanisms."
+  },
+  {
+    "id": 29,
+    "statement": "Logical coherence requires harmonious evaluation of relevance, consistency, and soundness."
+  },
+  {
+    "id": 30,
+    "statement": "Chromatin remodeling reorganizes DNA-protein complex for gene expression regulation."
+  },
+  {
+    "id": 31,
+    "statement": "Empathy arises from harmony between cognitive and emotional processes."
+  },
+  {
+    "id": 32,
+    "statement": "Empathy involves understanding, validating, and sharing others' emotional experiences."
+  },
+  {
+    "id": 33,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression pathways."
+  },
+  {
+    "id": 34,
+    "statement": "Histone-DNA interactions involve electrostatic, hydrogen, and hydrophobic forces proportionally."
+  },
+  {
+    "id": 35,
+    "statement": "Empathy emerges from harmonious interaction of cognitive, emotional, and social processes"
+  },
+  {
+    "id": 36,
+    "statement": "Chromatin structure modification affects gene expression through accessibility changes"
+  },
+  {
+    "id": 37,
+    "statement": "Epi modifications regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 38,
+    "statement": "Internal consistency alone does not ensure logical coherence"
+  },
+  {
+    "id": 39,
+    "statement": "Empathy integrates cognitive, emotional, and social processes for understanding."
+  },
+  {
+    "id": 40,
+    "statement": "Epigenetic modifications regulate gene expression through dynamic chromatin structure changes."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic modifications dynamically regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 42,
+    "statement": "Histones compact DNA through electrostatic, hydrogen, and hydrophobic bonds."
+  },
+  {
+    "id": 43,
+    "statement": "Honesty necessary but insufficient for trust alone; requires consistency and intent"
+  },
+  {
+    "id": 44,
+    "statement": "Histones compact DNA through electrostatic, hydrogen bonding, and hydrophobic interactions."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic modifications dynamically regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 46,
+    "statement": "Internal consistency a necessary but insufficient condition for logical coherence"
+  },
+  {
+    "id": 47,
+    "statement": "Chromatin-modifying enzymes regulate gene expression through structural changes."
+  },
+  {
+    "id": 48,
+    "statement": "Empathy involves harmonious coordination of cognitive and emotional processes."
+  },
+  {
+    "id": 49,
+    "statement": "Honesty's moral significance depends on context, values, and motivations."
+  },
+  {
+    "id": 50,
+    "statement": "Empathy integrates cognitive, emotional, and social processes harmoniously."
+  },
+  {
+    "id": 51,
+    "statement": "Theory of Mind involves continuous simulation, inference, and empathy."
+  },
+  {
+    "id": 52,
+    "statement": "Logical coherence emerges from harmonious validation of argument components."
+  },
+  {
+    "id": 53,
+    "statement": "Empathy involves simulating or imagining others' emotional experiences."
+  },
+  {
+    "id": 54,
+    "statement": "Theory of Mind involves simulation, inference, and empathy dynamically."
+  },
+  {
+    "id": 55,
+    "statement": "Logical coherence relies on harmonious validation, consistency, relevance, and thorough evaluation."
+  },
+  {
+    "id": 56,
+    "statement": "Logical coherence requires harmonious integration of relevance, consistency, and soundness."
+  },
+  {
+    "id": 57,
+    "statement": "Empathy facilitates understanding and compassion through harmonious cognitive-emotional integration."
+  },
+  {
+    "id": 58,
+    "statement": "Histone modifications regulate chromatin structure through direct and local influence"
+  },
+  {
+    "id": 59,
+    "statement": "Mental states' complexity hinders accurate simulation and understanding."
+  },
+  {
+    "id": 60,
+    "statement": "Hydrogen bonds form between histones and DNA phosphate groups."
+  },
+  {
+    "id": 61,
+    "statement": "The subconscious simulation of mental states facilitates Theory of Mind."
+  },
+  {
+    "id": 62,
+    "statement": "Logical coherence emerges from harmonious validation of consistent information."
+  },
+  {
+    "id": 63,
+    "statement": "Internal consistency and compatibility do not ensure truth."
+  },
+  {
+    "id": 64,
+    "statement": "Theory of Mind involves subconscious mental state simulation inference."
+  },
+  {
+    "id": 65,
+    "statement": "Logical coherence arises from harmonious validation of components."
+  },
+  {
+    "id": 66,
+    "statement": "Chromatin modifications relax or compact chromatin structure."
+  },
+  {
+    "id": 67,
+    "statement": "Honesty is a necessary but insufficient condition for trust"
+  },
+  {
+    "id": 68,
+    "statement": "Logical coherence emerges from harmonious validation of argument components."
+  },
+  {
+    "id": 69,
+    "statement": "Honesty depends on context, values, and motivations."
+  },
+  {
+    "id": 70,
+    "statement": "Honesty's moral significance fluctuates dependently on context and values"
+  },
+  {
+    "id": 71,
+    "statement": "Emotional resonance is capacity to understand and connect with others' emotions."
+  },
+  {
+    "id": 72,
+    "statement": "DNA compaction involves histone interactions through electrostatic, hydrogen, and hydrophobic forces."
+  },
+  {
+    "id": 73,
+    "statement": "A harmonious evaluation involves balancing relevance, consistency, and soundness."
+  },
+  {
+    "id": 74,
+    "statement": "Epigenetic modifications regulate gene expression through dynamic chromatin structure changes."
+  },
+  {
+    "id": 75,
+    "statement": "Histones compact DNA through electrostatic, hydrogen, and hydrophobic interactions."
+  },
+  {
+    "id": 76,
+    "statement": "Empathy involves a deeper emotional resonance and connection with others"
+  },
+  {
+    "id": 77,
+    "statement": "Empathy involves active listening, perspective-taking, emotional resonance, and regulation."
+  },
+  {
+    "id": 78,
+    "statement": "Chromatin-modifying enzymes regulate gene expression through chromatin structural changes EPSily."
+  },
+  {
+    "id": 79,
+    "statement": "Logical coherence necessitates thorough and unbiased evaluation processes."
+  },
+  {
+    "id": 80,
+    "statement": "Harmonious validation ensures logical coherence through systematic unbiased evaluation."
+  },
+  {
+    "id": 81,
+    "statement": "Logical coherence emerges from harmonious evaluation of components."
+  },
+  {
+    "id": 82,
+    "statement": "Chromatin-modifying enzymes regulate gene expression through chromatin structural changes."
+  },
+  {
+    "id": 83,
+    "statement": "Mental states are inherently abstract and difficult to simulate accurately."
+  },
+  {
+    "id": 84,
+    "statement": "Harmonious evaluation ensures balanced and thorough argument assessment."
+  },
+  {
+    "id": 85,
+    "statement": "Empathy involves harmonious integration of cognitive, emotional, and social processes harmoniously."
+  },
+  {
+    "id": 86,
+    "statement": "Histone-DNA interactions involve multiple forces stabilizing chromatin structure."
+  },
+  {
+    "id": 87,
+    "statement": "Empathy involves cognitive, emotional, and social processes harmoniously."
+  },
+  {
+    "id": 88,
+    "statement": "Chromatin structure influences gene expression through epigenetic modifications."
+  },
+  {
+    "id": 89,
+    "statement": "Honesty's moral significance depends on context, values, and motivations."
+  },
+  {
+    "id": 90,
+    "statement": "A harmonious evaluation balances relevance, consistency, and soundness effectively."
+  },
+  {
+    "id": 91,
+    "statement": "Logical coherence requires harmonious evaluation of relevance and consistency"
+  },
+  {
+    "id": 92,
+    "statement": "Histone-DNA interactions involve electrostatic, hydrogen, and hydrophobic forces proportionally."
+  },
+  {
+    "id": 93,
+    "statement": "Logical coherence emerges from harmonious evaluation of argument components."
+  },
+  {
+    "id": 94,
+    "statement": "Internal consistency insufficient for logical coherence without relevance and evidence."
+  },
+  {
+    "id": 95,
+    "statement": "Empathy involves understanding, acknowledging, and sharing emotions."
+  },
+  {
+    "id": 96,
+    "statement": "Logical coherence requires harmonious validation, relevance, and consistency."
+  },
+  {
+    "id": 97,
+    "statement": "Empathy involves understanding through emotional resonance, validation, and connection."
+  },
+  {
+    "id": 98,
+    "statement": "Histone modifications regulate chromatin structure through direct influence"
+  },
+  {
+    "id": 99,
+    "statement": "Emotions facilitate social cohesion through empathy and understanding."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 99,
+  "statement": "Emotions facilitate social cohesion through empathy and understanding."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 99,
+  "statement": "Emotions facilitate social cohesion through empathy and understanding."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's discuss the item: 
+
+```
+{
+  "id": 99,
+  "statement": "Emotions facilitate social cohesion through empathy and understanding."
+}
+```
+
+I'm interested in knowing what aspects of this item you're least confident about. Can you identify one particular aspect that you're unsure about or would like more clarification on?
