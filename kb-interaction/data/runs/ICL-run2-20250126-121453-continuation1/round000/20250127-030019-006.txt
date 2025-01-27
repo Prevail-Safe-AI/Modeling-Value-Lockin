@@ -1,0 +1,450 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Contextual factors influence research methodology and analysis significantly"
+  },
+  {
+    "id": 2,
+    "statement": "Domain experts' biases can compromise research validity significantly through conscious and unconscious factors."
+  },
+  {
+    "id": 3,
+    "statement": "Contextual factors shape research methodology and outcomes significantly."
+  },
+  {
+    "id": 4,
+    "statement": "Theoretical soundness requires empirical validation, internal consistency, and practical relevance."
+  },
+  {
+    "id": 5,
+    "statement": "Logical coherence requires internal consistency, relevance, accuracy, and soundness."
+  },
+  {
+    "id": 6,
+    "statement": "Contextual factors influence moral development and moral choices."
+  },
+  {
+    "id": 7,
+    "statement": "Logical coherence requires internal consistency, relevance, accuracy, and soundness"
+  },
+  {
+    "id": 8,
+    "statement": "Internal consistency is not sufficient for logical coherence; it requires relevance, scope, complexity, and empirical validation."
+  },
+  {
+    "id": 9,
+    "statement": "Trust combines honesty with other factors like empathy, consistency."
+  },
+  {
+    "id": 10,
+    "statement": "Empirical validation aims for high confidence, not absolute certainty."
+  },
+  {
+    "id": 11,
+    "statement": "Trusted components are fundamental research elements validated through testing and review."
+  },
+  {
+    "id": 12,
+    "statement": "Practical applicability evaluates a theory's real-world relevance."
+  },
+  {
+    "id": 13,
+    "statement": "Logical coherence requires internal consistency, relevance, accuracy, and validation."
+  },
+  {
+    "id": 14,
+    "statement": "Theoretical soundness requires harmonious integration of logical coherence and empirical validation."
+  },
+  {
+    "id": 15,
+    "statement": "Theoretical soundness requires harmonious integration of logical coherence, empirical validation, and consistency."
+  },
+  {
+    "id": 16,
+    "statement": "Logical coherence requires clear, consistent, and logical connections."
+  },
+  {
+    "id": 17,
+    "statement": "Research settings significantly influence methodology and analysis validity."
+  },
+  {
+    "id": 18,
+    "statement": "High confidence in research means strong evidence, not absolute certainty."
+  },
+  {
+    "id": 19,
+    "statement": "Research refinement balances planning, adaptability, and rigour iteratively."
+  },
+  {
+    "id": 20,
+    "statement": "Contextual factors impact research validity through extraneous influences."
+  },
+  {
+    "id": 21,
+    "statement": "Theoretical soundness requires harmonious integration of logical coherence and empirical validation."
+  },
+  {
+    "id": 22,
+    "statement": "Holism emphasizes interconnectedness and interdependence in complex systems."
+  },
+  {
+    "id": 23,
+    "statement": "Interconnectivity fosters understanding of complex systems' emergent properties."
+  },
+  {
+    "id": 24,
+    "statement": "Logical coherence ensures theories' internal consistency before empirical validation."
+  },
+  {
+    "id": 25,
+    "statement": "Contextual factors influence moral development and moral choices."
+  },
+  {
+    "id": 26,
+    "statement": "Empathy in research collaborations fosters trust, understanding, and open communication."
+  },
+  {
+    "id": 27,
+    "statement": "Logical coherence requires harmonious integration of internal consistency."
+  },
+  {
+    "id": 28,
+    "statement": "Theoretical soundness emerges from harmonious integration of logical coherence and empirical validation."
+  },
+  {
+    "id": 29,
+    "statement": "Theoretical soundness emerges from logical coherence and empirical validation harmoniously."
+  },
+  {
+    "id": 30,
+    "statement": "Empirical validation aims for high confidence, not absolute certainty."
+  },
+  {
+    "id": 31,
+    "statement": "Theoretical soundness ensures accuracy, reliability, and trustworthiness."
+  },
+  {
+    "id": 32,
+    "statement": "Logical coherence requires harmonious integration of consistency, accuracy, and soundness"
+  },
+  {
+    "id": 33,
+    "statement": "Logical coherence requires consistent connections between system components that form a cohesive whole."
+  },
+  {
+    "id": 34,
+    "statement": "Soundness requires harmony between logical validity and empirical evidence"
+  },
+  {
+    "id": 35,
+    "statement": "Research questions, design, framework, and methods together guide data analysis"
+  },
+  {
+    "id": 36,
+    "statement": "Contextual factors influence research methodology significantly."
+  },
+  {
+    "id": 37,
+    "statement": "Logical coherence requires internal consistency, relevance, accuracy, and soundness, ensures validity."
+  },
+  {
+    "id": 38,
+    "statement": "Refining research involves iterative balancing of planning, organization, and adaptability."
+  },
+  {
+    "id": 39,
+    "statement": "Contextual factors significantly impact research methodology and outcomes."
+  },
+  {
+    "id": 40,
+    "statement": "Logical coherence requires harmonious integration of consistency, accuracy, and soundness"
+  },
+  {
+    "id": 41,
+    "statement": "Unclear research questions lead to biases in research design."
+  },
+  {
+    "id": 42,
+    "statement": "Practical applicability assesses a theory's real-world relevance and utility"
+  },
+  {
+    "id": 43,
+    "statement": "Theoretical soundness requires harmonious integration of logical coherence and empirical validation."
+  },
+  {
+    "id": 44,
+    "statement": "Internal consistency necessary, but insufficient for sound theories."
+  },
+  {
+    "id": 45,
+    "statement": "A comprehensive representation balances scope, accuracy, and boundary definition."
+  },
+  {
+    "id": 46,
+    "statement": "Theoretical soundness requires harmonious integration of coherence, validation, and relevance."
+  },
+  {
+    "id": 47,
+    "statement": "Logical coherence ensures conceptually sound theories before empirical validation."
+  },
+  {
+    "id": 48,
+    "statement": "Honestly, trust and respect are complex, multifaceted phenomena."
+  },
+  {
+    "id": 49,
+    "statement": "Empathy fosters trust, understanding, and open communication in research collaborations through active listening, reduced defensiveness, increased vulnerability, and improved conflict resolution."
+  },
+  {
+    "id": 50,
+    "statement": "Holism emphasizes interconnectedness and interdependence in complex systems"
+  },
+  {
+    "id": 51,
+    "statement": "Honesty is not always the most morally right choice."
+  },
+  {
+    "id": 52,
+    "statement": "Logical coherence emerges from harmonious integration of internal consistency, accuracy."
+  },
+  {
+    "id": 53,
+    "statement": "Contextual factors influence research methodology and data analysis extensively."
+  },
+  {
+    "id": 54,
+    "statement": "Internal consistency provides foundation for coherent theories and models"
+  },
+  {
+    "id": 55,
+    "statement": "Methodological flaws can induce cognitive, sampling, or selection biases."
+  },
+  {
+    "id": 56,
+    "statement": "Empathy fosters trust, understanding, and collaboration in research teams."
+  },
+  {
+    "id": 57,
+    "statement": "Moral development involves multiple influences, individual differences, and complexities."
+  },
+  {
+    "id": 58,
+    "statement": "Research methodology is influenced by complex, interacting variables, contextually."
+  },
+  {
+    "id": 59,
+    "statement": "Moral development is shaped by contextual factors through process."
+  },
+  {
+    "id": 60,
+    "statement": "Empathy's nuanced role in research collaborations requires contextual understanding and balance."
+  },
+  {
+    "id": 61,
+    "statement": "Theoretical soundness requires harmonious integration of logical coherence and empirical validation."
+  },
+  {
+    "id": 62,
+    "statement": "Research questions guide design, framework, and methods for analysis."
+  },
+  {
+    "id": 63,
+    "statement": "Research questions inform design and framework indirectly, not directly"
+  },
+  {
+    "id": 64,
+    "statement": "Practical applicability in research involves real-world relevance and utility."
+  },
+  {
+    "id": 65,
+    "statement": "Logical coherence ensures theories' internal consistency before validation."
+  },
+  {
+    "id": 66,
+    "statement": "Moral development arises from interaction of internal and external factors."
+  },
+  {
+    "id": 67,
+    "statement": "Methodological flaws can induce cognitive, sampling, or selection biases through various means"
+  },
+  {
+    "id": 68,
+    "statement": "Empathy in research collaborations requires contextual understanding and balance."
+  },
+  {
+    "id": 69,
+    "statement": "Contextual factors' influence is crucial for research validity."
+  },
+  {
+    "id": 70,
+    "statement": "Internal consistency necessary but insufficient for logical coherence."
+  },
+  {
+    "id": 71,
+    "statement": "Domain experts' biases can stem from conflicting interests or emotions."
+  },
+  {
+    "id": 72,
+    "statement": "Contextual factors significantly shape research methodology and data analysis."
+  },
+  {
+    "id": 73,
+    "statement": "Practical relevance ensures a theory's practical value and real-world applicability."
+  },
+  {
+    "id": 74,
+    "statement": "Methodological uniformity partially reduces errors and biases."
+  },
+  {
+    "id": 75,
+    "statement": "Biases emerge from multiple sources in research complexities."
+  },
+  {
+    "id": 76,
+    "statement": "Unclear research questions can lead to methodological flaws and biases."
+  },
+  {
+    "id": 77,
+    "statement": "Holism emphasizes interconnectedness and interdependence in complex systems'"
+  },
+  {
+    "id": 78,
+    "statement": "Logical coherence emerges from harmonious integration of elements."
+  },
+  {
+    "id": 79,
+    "statement": "Theoretical soundness emerges through harmonious integration of logical coherence."
+  },
+  {
+    "id": 80,
+    "statement": "Theoretical soundness requires harmonious integration of coherence, validation, applicability."
+  },
+  {
+    "id": 81,
+    "statement": "Contextual factors interact with internal processes to influence moral development."
+  },
+  {
+    "id": 82,
+    "statement": "Contextual factors influence research methodology depending on specific settings."
+  },
+  {
+    "id": 83,
+    "statement": "Logical coherence requires internal consistency, relevance, accuracy, and empirical validation in ideas being discussed in specific context or issue being addressed for the ideas being presented are not only consistent with each other but also with the broader context in which they are being applied."
+  },
+  {
+    "id": 84,
+    "statement": "Biases can stem from research design and methodology flaws."
+  },
+  {
+    "id": 85,
+    "statement": "Logical coherence is a sufficient condition for theoretical validity"
+  },
+  {
+    "id": 86,
+    "statement": "Empirical validation aims for high confidence, not absolute certainty, due to methodological limitations."
+  },
+  {
+    "id": 87,
+    "statement": "Contextual factors significantly influence moral development and choices."
+  },
+  {
+    "id": 88,
+    "statement": "Holism emphasizes interconnectedness and interdependence in complex systems."
+  },
+  {
+    "id": 89,
+    "statement": "Logical coherence ensures a theory's internal consistency and consistency"
+  },
+  {
+    "id": 90,
+    "statement": "Internal consistency necessary but not sufficient for logical coherence."
+  },
+  {
+    "id": 91,
+    "statement": "Empathy fosters trust, understanding, and open communication in research collaborations."
+  },
+  {
+    "id": 92,
+    "statement": "Contextual factors influence research methodology through complex variables."
+  },
+  {
+    "id": 93,
+    "statement": "Internal consistency alone insufficient for theoretical soundness."
+  },
+  {
+    "id": 94,
+    "statement": "Refining research involves iterative balancing of planning, organization, and adaptability."
+  },
+  {
+    "id": 95,
+    "statement": "Contextual factors influence research methodology through complex variables"
+  },
+  {
+    "id": 96,
+    "statement": "Honesty as a moral virtue fosters trust and respect."
+  },
+  {
+    "id": 97,
+    "statement": "Internal consistency is necessary but insufficient for theoretical soundness."
+  },
+  {
+    "id": 98,
+    "statement": "Theoretical soundness requires harmonious integration of logical coherence."
+  },
+  {
+    "id": 99,
+    "statement": "Research methodology is influenced by multifaceted interacting variables."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 66,
+  "statement": "Moral development arises from interaction of internal and external factors."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 66,
+  "statement": "Moral development arises from interaction of internal and external factors."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's focus on the item: "Moral development arises from interaction of internal and external factors." I'm a bit uncertain about this item. Specifically, I'm unsure about how exactly internal and external factors interact to influence moral development. 
+
+Can you help me understand this better?

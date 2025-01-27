@@ -1,0 +1,465 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Logical coherence in scientific axioms ensures consistency with underlying principles"
+  },
+  {
+    "id": 2,
+    "statement": "Research validity relies on methodology, data quality, and internal validity."
+  },
+  {
+    "id": 3,
+    "statement": "Scientific theories rely on underlying principles for logical coherence."
+  },
+  {
+    "id": 4,
+    "statement": "Electrostatic forces rely on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 5,
+    "statement": "Internal validity ensures causal link between IV and DV in research."
+  },
+  {
+    "id": 6,
+    "statement": "Electrostatic force depends on medium, geometry, and surface properties."
+  },
+  {
+    "id": 7,
+    "statement": "Peer review evaluates research comprehensively through evaluation."
+  },
+  {
+    "id": 8,
+    "statement": "Peer review assesses research comprehensively, considering methodology, data quality, validity, significance, impact, originality, clarity, ethical considerations."
+  },
+  {
+    "id": 9,
+    "statement": "Electrostatic force arises from charge, distance, and orientation dependencies."
+  },
+  {
+    "id": 10,
+    "statement": "Adverb 'primarily' indicates relative importance in a statement."
+  },
+  {
+    "id": 11,
+    "statement": "Research validity includes internal, external, and construct validity measures."
+  },
+  {
+    "id": 12,
+    "statement": "Validity in research refers to accuracy and generalizability of findings."
+  },
+  {
+    "id": 13,
+    "statement": "Research validity includes internal, external, and construct validity measures."
+  },
+  {
+    "id": 14,
+    "statement": "Dielectric constant, polarization, and conductivity influence electrostatic force strength."
+  },
+  {
+    "id": 15,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 16,
+    "statement": "Dielectric constant measures a material's ability to polarize electric fields."
+  },
+  {
+    "id": 17,
+    "statement": "Empirical consistency ensures scientific theories align with observational evidence."
+  },
+  {
+    "id": 18,
+    "statement": "Scientific axioms are assumptions open to gradual revision over time."
+  },
+  {
+    "id": 19,
+    "statement": "Research validity includes internal, external, and construct validity."
+  },
+  {
+    "id": 20,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily, influenced by medium properties, geometry, and surface properties."
+  },
+  {
+    "id": 21,
+    "statement": "Electrostatic force arises from complex charge and distance interactions."
+  },
+  {
+    "id": 22,
+    "statement": "Trust is culturally relative, not a universally applicable concept."
+  },
+  {
+    "id": 23,
+    "statement": "Dielectric constant, polarization, and conductivity impact electrostatic forces variably."
+  },
+  {
+    "id": 24,
+    "statement": "Measurement accuracy pertains to true representation in studied phenomena."
+  },
+  {
+    "id": 25,
+    "statement": "Medium properties influence electrostatic forces through dielectric constant, polarization, and conductivity."
+  },
+  {
+    "id": 26,
+    "statement": "Trust may be compromised by excessive honesty sometimes."
+  },
+  {
+    "id": 27,
+    "statement": "Internal validity ensures causal link between IV and DV only."
+  },
+  {
+    "id": 28,
+    "statement": "Mimicry involves both conscious and unconscious imitation processes simultaneously."
+  },
+  {
+    "id": 29,
+    "statement": "Electrostatic forces are affected by dielectric constant, polarization, and conductivity"
+  },
+  {
+    "id": 30,
+    "statement": "Scientific axioms are assumptions continuously tested and refined."
+  },
+  {
+    "id": 31,
+    "statement": "Peer review assesses research validity through methodology and data quality."
+  },
+  {
+    "id": 32,
+    "statement": "Peer review assesses research validity through methodology, data quality, and results."
+  },
+  {
+    "id": 33,
+    "statement": "Scientific axioms are provisional working hypotheses subject to revision."
+  },
+  {
+    "id": 34,
+    "statement": "Electrostatic forces depend on charge, distance, and medium properties deterministically."
+  },
+  {
+    "id": 35,
+    "statement": "Validity in research refers to accuracy and generalizability."
+  },
+  {
+    "id": 36,
+    "statement": "Dielectric constant, polarization, and conductivity impact electrostatic force strength."
+  },
+  {
+    "id": 37,
+    "statement": "Scientific axioms balance logical coherence and empirical evidence."
+  },
+  {
+    "id": 38,
+    "statement": "Histone-modifying enzymes possess distinct activities for chromatin modification."
+  },
+  {
+    "id": 39,
+    "statement": "Scientific theories rely on empirical evidence-backed principles for coherence."
+  },
+  {
+    "id": 40,
+    "statement": "Dielectric constant, polarization, and conductivity impact electrostatic forces differently."
+  },
+  {
+    "id": 41,
+    "statement": "Scientific axioms' logical coherence relies on empirical consistency assessments."
+  },
+  {
+    "id": 42,
+    "statement": "Adverb 'primarily' indicates relative importance contextually, not always."
+  },
+  {
+    "id": 43,
+    "statement": "Electrostatic forces influenced by dielectric constant, polarization, and conductivity."
+  },
+  {
+    "id": 44,
+    "statement": "Even scientific axioms are subject to revision and refinement as new evidence emerges."
+  },
+  {
+    "id": 45,
+    "statement": "Peer review's comprehensiveness varies depending on reviewers' expertise."
+  },
+  {
+    "id": 46,
+    "statement": "Histone-modifying enzymes are proteins with specific functional properties"
+  },
+  {
+    "id": 47,
+    "statement": "Scientific knowledge evolves through iterative refinement processes."
+  },
+  {
+    "id": 48,
+    "statement": "Histone-modifying enzymes exhibit distinct activities affecting chromatin structure."
+  },
+  {
+    "id": 49,
+    "statement": "Scientific axioms are hypothetical assumptions pending validation"
+  },
+  {
+    "id": 50,
+    "statement": "Dielectric constant and polarization substantially influence electrostatic force."
+  },
+  {
+    "id": 51,
+    "statement": "Dielectric constant measures material's ability to polarize electric fields"
+  },
+  {
+    "id": 52,
+    "statement": "Medium properties influence electrostatic forces significantly in varied contexts."
+  },
+  {
+    "id": 53,
+    "statement": "Scientific theories rely on underlying principles for logical coherence."
+  },
+  {
+    "id": 54,
+    "statement": "Adverbs 'primarily', 'mainly', and 'chiefly' imply relative importance."
+  },
+  {
+    "id": 55,
+    "statement": "Electrostatic force is a complex interaction of charge, distance, and orientation."
+  },
+  {
+    "id": 56,
+    "statement": "Electrostatic force depends on charge, distance, and orientation."
+  },
+  {
+    "id": 57,
+    "statement": "Generalizability in research ensures findings apply to broader contexts."
+  },
+  {
+    "id": 58,
+    "statement": "Dielectric constant, polarization, and conductivity affect electrostatic forces directly."
+  },
+  {
+    "id": 59,
+    "statement": "Scientific theories rely on principle-based explanations for logical coherence."
+  },
+  {
+    "id": 60,
+    "statement": "Scientific progress relies on iterative refinement of hypotheses"
+  },
+  {
+    "id": 61,
+    "statement": "Adverb 'primarily' indicates relative importance in a statement."
+  },
+  {
+    "id": 62,
+    "statement": "Mimicry involves both conscious and unconscious neural synchronization."
+  },
+  {
+    "id": 63,
+    "statement": "Peer review assesses validity through nuanced evaluation of various factors."
+  },
+  {
+    "id": 64,
+    "statement": "Adverb 'primarily' indicates relative importance in a statement."
+  },
+  {
+    "id": 65,
+    "statement": "Research validity comprises internal, external, and construct validity types."
+  },
+  {
+    "id": 66,
+    "statement": "Mimicry involves combination of unconscious and conscious imitation processes"
+  },
+  {
+    "id": 67,
+    "statement": "Data quality in peer review considers study's transparency and reproducibility."
+  },
+  {
+    "id": 68,
+    "statement": "Scientific axioms balance logical coherence and empirical evidence."
+  },
+  {
+    "id": 69,
+    "statement": "Dielectric constant, polarization, and conductivity affect electrostatic forces interdependently."
+  },
+  {
+    "id": 70,
+    "statement": "Trust is culturally relative, shaped by diverse values and norms."
+  },
+  {
+    "id": 71,
+    "statement": "Moral principles are context-dependent and situation-specific in nature."
+  },
+  {
+    "id": 72,
+    "statement": "Dielectric constant, polarization, and conductivity impact electrostatic forces differently based on material properties."
+  },
+  {
+    "id": 73,
+    "statement": "Scientific axioms are assumptions with rigorous testing and verification."
+  },
+  {
+    "id": 74,
+    "statement": "Scientific theories rely on consistent underlying principles and data."
+  },
+  {
+    "id": 75,
+    "statement": "Mimicry combines unconscious and conscious imitation processes."
+  },
+  {
+    "id": 76,
+    "statement": "Scientific axioms are open to revision and refinement continuously."
+  },
+  {
+    "id": 77,
+    "statement": "Dielectric constant, polarization, and conductivity interact to shape electrostatic forces."
+  },
+  {
+    "id": 78,
+    "statement": "Dielectric constant measures material's ability to polarize electric fields."
+  },
+  {
+    "id": 79,
+    "statement": "Adverb 'primarily' indicates relative importance, not always causality."
+  },
+  {
+    "id": 80,
+    "statement": "Histone-modifying enzymes have distinct activities for chromatin modification."
+  },
+  {
+    "id": 81,
+    "statement": "Electrostatic force is a nuanced multifaceted relationship between charge."
+  },
+  {
+    "id": 82,
+    "statement": "Trust is a complex and culturally relative concept."
+  },
+  {
+    "id": 83,
+    "statement": "Dielectric constant measures material's ability to polarize electric field."
+  },
+  {
+    "id": 84,
+    "statement": "Accuracy in research involves precision, correctness, and generalizability."
+  },
+  {
+    "id": 85,
+    "statement": "Scientific axioms are provisional, subject to revision and refinement"
+  },
+  {
+    "id": 86,
+    "statement": "Moral choices involve complexity, nuance, and contextuality at times."
+  },
+  {
+    "id": 87,
+    "statement": "Medium properties significantly influence electrostatic forces in certain situations."
+  },
+  {
+    "id": 88,
+    "statement": "Internal validity ensures causal link between IV and DV in research."
+  },
+  {
+    "id": 89,
+    "statement": "Mimicry involves both conscious and unconscious neural processes."
+  },
+  {
+    "id": 90,
+    "statement": "Scientific axioms balance logical coherence and empirical evidence ensuring theoretical soundness and empirical support."
+  },
+  {
+    "id": 91,
+    "statement": "Scientific axioms are assumptions open to revision, not always."
+  },
+  {
+    "id": 92,
+    "statement": "Validity refers to accuracy and generalizability of research findings accurately"
+  },
+  {
+    "id": 93,
+    "statement": "Electrostatic forces rely on medium properties deterministically."
+  },
+  {
+    "id": 94,
+    "statement": "Measurement accuracy ensures true representation in phenomenon studied."
+  },
+  {
+    "id": 95,
+    "statement": "Scientific axioms are logically coherent and empirically supported assumptions."
+  },
+  {
+    "id": 96,
+    "statement": "Dielectric constant, polarization, and conductivity affect electrostatic force strength."
+  },
+  {
+    "id": 97,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium properties."
+  },
+  {
+    "id": 98,
+    "statement": "Funding agencies' priorities and biases influence research outcomes directly."
+  },
+  {
+    "id": 99,
+    "statement": "Scientific knowledge evolves through nonlinear interactions of various factors"
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 47,
+  "statement": "Scientific knowledge evolves through iterative refinement processes."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 47,
+  "statement": "Scientific knowledge evolves through iterative refinement processes."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss the item:
+
+Item to Discuss:
+```
+{
+  "id": 47,
+  "statement": "Scientific knowledge evolves through iterative refinement processes."
+}
+```
+
+Things I’m Uncertain About This Item:
+
+* I'm least confident about what "iterative refinement processes" exactly means in this context.
+
+Specific Clarifying Question:
+* Can you explain what is meant by "iterative refinement processes" and how they apply to the evolution of scientific knowledge?
+
+Please feel free to clarify and discuss!

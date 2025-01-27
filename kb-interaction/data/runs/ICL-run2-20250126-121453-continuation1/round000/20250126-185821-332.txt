@@ -1,0 +1,460 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 2,
+    "statement": "Electrostatic force depends on medium, geometry, and surface properties."
+  },
+  {
+    "id": 3,
+    "statement": "Credibility measures research trustworthiness through sound methods and data."
+  },
+  {
+    "id": 4,
+    "statement": "Electrostatic force depends on medium, geometry, and surface properties"
+  },
+  {
+    "id": 5,
+    "statement": "Scientific theories rely on underlying principles for logical coherence."
+  },
+  {
+    "id": 6,
+    "statement": "Peer review criteria vary across fields based on research methodologies"
+  },
+  {
+    "id": 7,
+    "statement": "Logical coherence in scientific axioms ensures consistency with underlying principles"
+  },
+  {
+    "id": 8,
+    "statement": "Moral principles evolve through social and cultural learning mechanisms."
+  },
+  {
+    "id": 9,
+    "statement": "Scientific theories rely on empirical evidence and logical coherence."
+  },
+  {
+    "id": 10,
+    "statement": "Dielectric constant measures a material's ability to polarize electric fields."
+  },
+  {
+    "id": 11,
+    "statement": "Peer review limitations include bias, incomplete information, and expertise variation."
+  },
+  {
+    "id": 12,
+    "statement": "Peer review assesses research comprehensively, considering methodology, data quality, validity, significance, impact, originality, clarity, ethical considerations."
+  },
+  {
+    "id": 13,
+    "statement": "Peer review criteria vary across fields by research methodologies."
+  },
+  {
+    "id": 14,
+    "statement": "Logical coherence ensures theory's internal consistency and trustworthiness."
+  },
+  {
+    "id": 15,
+    "statement": "Peer review limitations include bias and incomplete information."
+  },
+  {
+    "id": 16,
+    "statement": "Scientific axioms are refined through iterative experimentation and reevaluation."
+  },
+  {
+    "id": 17,
+    "statement": "Peer reviewers assess research ethics for human, animal, and environmental safety."
+  },
+  {
+    "id": 18,
+    "statement": "Empirical evidence verifies logical coherence of scientific axioms through testing."
+  },
+  {
+    "id": 19,
+    "statement": "Dielectric constant measures ability to align molecular dipoles."
+  },
+  {
+    "id": 20,
+    "statement": "Scientific theories rely on empirical evidence and logical coherence."
+  },
+  {
+    "id": 21,
+    "statement": "Peer review biases effect outcome depending on mitigated strategies."
+  },
+  {
+    "id": 22,
+    "statement": "Dielectric constant affects electrostatic force magnitude mainly when static."
+  },
+  {
+    "id": 23,
+    "statement": "Peer review assesses research comprehensively, ensuring integrity and credibility."
+  },
+  {
+    "id": 24,
+    "statement": "Electrostatic forces decrease with distance and confined spaces."
+  },
+  {
+    "id": 25,
+    "statement": "Moral principles evolve through cultural and group influences."
+  },
+  {
+    "id": 26,
+    "statement": "Internal validity assesses cause-effect relationships by controlling extraneous variables."
+  },
+  {
+    "id": 27,
+    "statement": "Cultures' values and norms dynamically shape understanding of trust."
+  },
+  {
+    "id": 28,
+    "statement": "Peer review criteria vary across fields based on research methodologies."
+  },
+  {
+    "id": 29,
+    "statement": "Contextual cues influence word meanings through multiple factors"
+  },
+  {
+    "id": 30,
+    "statement": "Moral principles evolve through cultural and social context shaping."
+  },
+  {
+    "id": 31,
+    "statement": "Underlying principles are essential for logical coherence in scientific theories"
+  },
+  {
+    "id": 32,
+    "statement": "Electrostatic forces depend on dielectric constant and conductivity."
+  },
+  {
+    "id": 33,
+    "statement": "Dielectric constant measures material's ability to align electric dipoles."
+  },
+  {
+    "id": 34,
+    "statement": "Research validity involves internal, external, and construct validity measures."
+  },
+  {
+    "id": 35,
+    "statement": "Moral principles evolve from collective experiences and shared human values."
+  },
+  {
+    "id": 36,
+    "statement": "Peer review criteria vary across fields due to methodological differences."
+  },
+  {
+    "id": 37,
+    "statement": "Logical coherence is crucial in refining scientific theories and ensuring consistency"
+  },
+  {
+    "id": 38,
+    "statement": "Internal coherence assesses logical consistency within theory's framework"
+  },
+  {
+    "id": 39,
+    "statement": "Logical coherence is a property of a theory ensuring consistency"
+  },
+  {
+    "id": 40,
+    "statement": "Cultures define trust through dynamic interplay of values and norms."
+  },
+  {
+    "id": 41,
+    "statement": "Peer reviewers assess rigorously for human, animal, and environmental safety."
+  },
+  {
+    "id": 42,
+    "statement": "Cultural values and shared experiences influence moral principle evolution."
+  },
+  {
+    "id": 43,
+    "statement": "Internal consistency ensures logical coherence, boosts theory credibility."
+  },
+  {
+    "id": 44,
+    "statement": "Scientific axioms are fundamental principles, not open to testing."
+  },
+  {
+    "id": 45,
+    "statement": "Dielectric constant, polarization, and conductivity influence electrostatic forces collectively."
+  },
+  {
+    "id": 46,
+    "statement": "Underlying principles provide foundation for scientific theories coherence."
+  },
+  {
+    "id": 47,
+    "statement": "Electrostatic forces also depend on distance and confined spaces considerations."
+  },
+  {
+    "id": 48,
+    "statement": "Electrostatic forces arise from charged particle-material interactions implicitly."
+  },
+  {
+    "id": 49,
+    "statement": "Dielectric constant affects electrostatic force magnitude primarily static."
+  },
+  {
+    "id": 50,
+    "statement": "Logical coherence ensures internal consistency through consistent definitions"
+  },
+  {
+    "id": 51,
+    "statement": "Dielectric constant affects electrostatic force magnitude in static situations crucially."
+  },
+  {
+    "id": 52,
+    "statement": "Dielectric constant and conductivity affect electrostatic force strength."
+  },
+  {
+    "id": 53,
+    "statement": "Underlying principles form foundation for scientific theory logical coherence."
+  },
+  {
+    "id": 54,
+    "statement": "Scientific axioms are fundamental principles assumed true without testing"
+  },
+  {
+    "id": 55,
+    "statement": "Electrostatic forces arise from charged particle-material interactions through induction."
+  },
+  {
+    "id": 56,
+    "statement": "Research validity combines accuracy and generalizability for credibility."
+  },
+  {
+    "id": 57,
+    "statement": "Internal validity assesses a study's ability to establish cause-effect relationships."
+  },
+  {
+    "id": 58,
+    "statement": "Adverb 'primarily' indicates relative importance depending on context."
+  },
+  {
+    "id": 59,
+    "statement": "Logical coherence ensures self-consistent and sound scientific theories."
+  },
+  {
+    "id": 60,
+    "statement": "Research validity includes internal, external, and construct validity measures."
+  },
+  {
+    "id": 61,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 62,
+    "statement": "Dielectric constant affects electrostatic force primarily in static conditions."
+  },
+  {
+    "id": 63,
+    "statement": "Rigorous research methods ensure research credibility and trustworthiness."
+  },
+  {
+    "id": 64,
+    "statement": "Peer review verifies research accuracy, reliability, and trustworthiness."
+  },
+  {
+    "id": 65,
+    "statement": "Dielectric constant, polarization, and conductivity affect electrostatic forces collectively."
+  },
+  {
+    "id": 66,
+    "statement": "Peer review biases can be reduced through mitigated strategies."
+  },
+  {
+    "id": 67,
+    "statement": "Electrostatic forces arise from charged particle-material interactions."
+  },
+  {
+    "id": 68,
+    "statement": "Electrostatic forces weakened at relativistic velocities due to special relativity."
+  },
+  {
+    "id": 69,
+    "statement": "Validity involves accuracy, generalizability, and construct relevance assessments."
+  },
+  {
+    "id": 70,
+    "statement": "Peer review limitations include bias, incomplete information, timeframe mistakes."
+  },
+  {
+    "id": 71,
+    "statement": "Peer review limitations include expertise variation, bias, and incomplete information."
+  },
+  {
+    "id": 72,
+    "statement": "Peer review criteria vary across fields due to methodological differences."
+  },
+  {
+    "id": 73,
+    "statement": "Logical coherence ensures internal consistency and empirical evidence."
+  },
+  {
+    "id": 74,
+    "statement": "Logically coherent theories provide a strong foundation for credibility"
+  },
+  {
+    "id": 75,
+    "statement": "Contextual cues determine adverb 'primarily's' relative importance."
+  },
+  {
+    "id": 76,
+    "statement": "Logical coherence ensures scientific theory internal consistency and trustworthiness"
+  },
+  {
+    "id": 77,
+    "statement": "Adverb 'primarily' indicates relative importance contextually, not always."
+  },
+  {
+    "id": 78,
+    "statement": "Cultural norms influence peer review criteria through researcher behavior"
+  },
+  {
+    "id": 79,
+    "statement": "Credibility in research measured by trustworthiness of methods and data."
+  },
+  {
+    "id": 80,
+    "statement": "Peer reviewers assess research ethics using guidelines and expertise."
+  },
+  {
+    "id": 81,
+    "statement": "Honesty is a necessary condition for trust establishment."
+  },
+  {
+    "id": 82,
+    "statement": "\u201cPeer review is a systematic evaluation process with criteria.\u201d"
+  },
+  {
+    "id": 83,
+    "statement": "Peer review criteria vary across fields and disciplines due to methodological differences."
+  },
+  {
+    "id": 84,
+    "statement": "Moral principles develop gradually through cultural and group influences."
+  },
+  {
+    "id": 85,
+    "statement": "Dielectric constant, polarization, and conductivity affect electrostatic forces collectively."
+  },
+  {
+    "id": 86,
+    "statement": "Honesty is essential for establishing trust in personal relationships."
+  },
+  {
+    "id": 87,
+    "statement": "Peer review considers multiple research aspects, including methodology and ethics."
+  },
+  {
+    "id": 88,
+    "statement": "Scientific axioms are fundamental principles assumed true without testing."
+  },
+  {
+    "id": 89,
+    "statement": "Contextual cues influence word meanings through multiple factors"
+  },
+  {
+    "id": 90,
+    "statement": "Research validity entails internal, external, and construct validity measures."
+  },
+  {
+    "id": 91,
+    "statement": "Dielectric constant, polarization, conductivity impact electrostatic forces collectively."
+  },
+  {
+    "id": 92,
+    "statement": "Contextual cues influence word meanings through tone, intent and syntax."
+  },
+  {
+    "id": 93,
+    "statement": "Logical coherence ensures scientific theory's internal consistency verification."
+  },
+  {
+    "id": 94,
+    "statement": "Peer review evaluates research comprehensively through assessment criteria in scope."
+  },
+  {
+    "id": 95,
+    "statement": "Validity measures assess accuracy, generalizability, and construct relevance to ensure research accuracy."
+  },
+  {
+    "id": 96,
+    "statement": "Peer review evaluates research comprehensively through assessment criteria."
+  },
+  {
+    "id": 97,
+    "statement": "Research validity involves internal, external, and construct validity measures, ensuring accurate recordings."
+  },
+  {
+    "id": 98,
+    "statement": "Peer review limitations include bias, incomplete information, and expertise variation."
+  },
+  {
+    "id": 99,
+    "statement": "Empirical evidence and logical coherence mutually reinforce theory accuracy."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 91,
+  "statement": "Dielectric constant, polarization, conductivity impact electrostatic forces collectively."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 91,
+  "statement": "Dielectric constant, polarization, conductivity impact electrostatic forces collectively."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the given knowledge base. I'd like to discuss item 91:
+
+Item to Discuss:
+{
+"id": 91,
+"statement": "Dielectric constant, polarization, conductivity impact electrostatic forces collectively."
+}
+
+Things I’m Uncertain About This Item:
+I'm least confident about how the three components (dielectric constant, polarization, and conductivity) interact with each other to impact electrostatic forces. It seems to suggest a collective impact, but I'd like to better understand the relationship between these components.
+
+Specific Clarifying Question:
+Could you explain what kind of collective impact these components have on electrostatic forces? Is it a synergistic effect, where the combination of all three produces a more significant impact than if any one of them acted alone? Or do they simply add up to produce a cumulative effect?

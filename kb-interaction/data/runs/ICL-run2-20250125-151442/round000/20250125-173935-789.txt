@@ -1,0 +1,460 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Emotional Intelligence encompasses self-awareness, social awareness, and emotional regulation."
+  },
+  {
+    "id": 2,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 3,
+    "statement": "Emotional intelligence encompasses self-awareness, motivation, and social skills complexity."
+  },
+  {
+    "id": 4,
+    "statement": "Mathematical rigor depends on underlying assumptions and data quality."
+  },
+  {
+    "id": 5,
+    "statement": "Emotional intelligence encompasses self-awareness, motivation, and social skills complexity."
+  },
+  {
+    "id": 6,
+    "statement": "Epigenetic modifications affect chromatin structure, influencing gene expression"
+  },
+  {
+    "id": 7,
+    "statement": "Mathematical modeling accuracy evaluates predictions' validity and other factors."
+  },
+  {
+    "id": 8,
+    "statement": "Mathematical truths are absolute, objective, timeless, and universally applicable."
+  },
+  {
+    "id": 9,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure, histone modification, and DNA methylation."
+  },
+  {
+    "id": 10,
+    "statement": "Epistemology provides framework for understanding mathematical truth claims."
+  },
+  {
+    "id": 11,
+    "statement": "Epigenetic modifications, through histone modification, alter chromatin structure."
+  },
+  {
+    "id": 12,
+    "statement": "Mathematical truths can be absolute and culturally constructed simultaneously."
+  },
+  {
+    "id": 13,
+    "statement": "Epistemology verifies mathematical truths through logical and philosophical justifications."
+  },
+  {
+    "id": 14,
+    "statement": "Epigenetic modifications influence histone modifications regulating gene expression."
+  },
+  {
+    "id": 15,
+    "statement": "Data quality is a complex multifactorial concept"
+  },
+  {
+    "id": 16,
+    "statement": "Epigenetic modifications alter chromatin structure, influencing gene expression through various mechanisms."
+  },
+  {
+    "id": 17,
+    "statement": "Bioinformatics methods analyze genomic data using algorithms."
+  },
+  {
+    "id": 18,
+    "statement": "Emotional Intelligence involves interconnected self-awareness, regulation, and social skills."
+  },
+  {
+    "id": 19,
+    "statement": "Mathematical truths can be absolute and culturally constructed simultaneously."
+  },
+  {
+    "id": 20,
+    "statement": "Logical soundness ensures valid conclusion, not necessarily true one."
+  },
+  {
+    "id": 21,
+    "statement": "Epigenetic modifications alter chromatin structure for gene regulation through histone modifications, chromatin remodeling, and DNA methylation."
+  },
+  {
+    "id": 22,
+    "statement": "Lying can be morally justifiable in self-defense or protection circumstances."
+  },
+  {
+    "id": 23,
+    "statement": "Logical soundness ensures argument validity, not necessarily truth"
+  },
+  {
+    "id": 24,
+    "statement": "Logical soundness ensures a conclusion's truth based on valid premises only."
+  },
+  {
+    "id": 25,
+    "statement": "Logical coherence does not guarantee statement's truth or accuracy."
+  },
+  {
+    "id": 26,
+    "statement": "Computational tools and bioinformatics methods facilitate genome data analysis."
+  },
+  {
+    "id": 27,
+    "statement": "Epigenetic modifications physically alter chromatin structure, regulating gene expression."
+  },
+  {
+    "id": 28,
+    "statement": "Computational tools and bioinformatics methods accelerate biomedicine discovery."
+  },
+  {
+    "id": 29,
+    "statement": "Emotional intelligence involves recognizing and managing emotions effectively."
+  },
+  {
+    "id": 30,
+    "statement": "Mathematical truths depend on social, cultural, and historical contexts."
+  },
+  {
+    "id": 31,
+    "statement": "Philosophy underlies mathematical rigor through epistemology and ontology."
+  },
+  {
+    "id": 32,
+    "statement": "Epigenetic coordination harmonizes chromatin structure and gene expression."
+  },
+  {
+    "id": 33,
+    "statement": "Logical soundness ensures argument validity, not necessarily truth."
+  },
+  {
+    "id": 34,
+    "statement": "Mathematical truths are universally valid and timeless."
+  },
+  {
+    "id": 35,
+    "statement": "Logical soundness doesn't guarantee truth, only valid and reliable conclusions"
+  },
+  {
+    "id": 36,
+    "statement": "Emotional Intelligence shaped by complex genetic, environmental, and experiential factors"
+  },
+  {
+    "id": 37,
+    "statement": "Computational tools and bioinformatics methods streamline genome data analysis."
+  },
+  {
+    "id": 38,
+    "statement": "Epigenetic modifications alter chromatin structure on gene responsiveness."
+  },
+  {
+    "id": 39,
+    "statement": "Logical soundness insufficient for truth or accuracy, validity crucial."
+  },
+  {
+    "id": 40,
+    "statement": "Epistemology provides philosophical framework for mathematical certainty"
+  },
+  {
+    "id": 41,
+    "statement": "Logical soundness does not guarantee premises' truth or conclusion's accuracy"
+  },
+  {
+    "id": 42,
+    "statement": "Mathematical rigor lies on objective truth pursuit through epistemology."
+  },
+  {
+    "id": 43,
+    "statement": "Honesty requires empathy and understanding for genuine trust building."
+  },
+  {
+    "id": 44,
+    "statement": "Logical soundness depends on true premises and valid logical structure."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic modifications alter chromatin structure influencing gene expression"
+  },
+  {
+    "id": 46,
+    "statement": "Logical soundness ensures validity and consistency in mathematical rigor."
+  },
+  {
+    "id": 47,
+    "statement": "Mathematical rigor requires precision, accuracy, and thoroughness jointly."
+  },
+  {
+    "id": 48,
+    "statement": "Computational tools and bioinformatics methods analyze genomic data."
+  },
+  {
+    "id": 49,
+    "statement": "Emotional intelligence encompasses self-awareness, emotional regulation, and social skills complexity."
+  },
+  {
+    "id": 50,
+    "statement": "Epistemology provides philosophical framework for mathematical justification."
+  },
+  {
+    "id": 51,
+    "statement": "Epigenetic modifications occur through histone modifications and interactions."
+  },
+  {
+    "id": 52,
+    "statement": "Mathematical rigor involves methodical, organized problem solving approach."
+  },
+  {
+    "id": 53,
+    "statement": "Mathematical truths are independently true and universally applicable"
+  },
+  {
+    "id": 54,
+    "statement": "Mathematical rigor involves precision, accuracy, thoroughness, and systematic approach."
+  },
+  {
+    "id": 55,
+    "statement": "Logical coherence ensures internal consistency, not absolute mathematical truth."
+  },
+  {
+    "id": 56,
+    "statement": "Mathematical truths are objective, relative, and context-dependent"
+  },
+  {
+    "id": 57,
+    "statement": "Mathematical rigor involves philosophical foundations of epistemology and ontology."
+  },
+  {
+    "id": 58,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 59,
+    "statement": "Data quality consists of accuracy, reliability, and trustworthiness."
+  },
+  {
+    "id": 60,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 61,
+    "statement": "Honesty requires empathy and understanding for genuine trust."
+  },
+  {
+    "id": 62,
+    "statement": "Emotional intelligence encompasses self-awareness, emotional regulation, and social skills."
+  },
+  {
+    "id": 63,
+    "statement": "Epigenetic modifications occur on top of DNA sequence without altering it."
+  },
+  {
+    "id": 64,
+    "statement": "Data quality is affected by various multifactorial influences"
+  },
+  {
+    "id": 65,
+    "statement": "Mathematical truths can be culturally constructed due to cultural influences."
+  },
+  {
+    "id": 66,
+    "statement": "Epigenetics refers to heritable changes in gene function without DNA sequence change."
+  },
+  {
+    "id": 67,
+    "statement": "Data quality encompasses multifactorial influences and weighted components."
+  },
+  {
+    "id": 68,
+    "statement": "Assumptions and data quality are crucial components of mathematical rigor"
+  },
+  {
+    "id": 69,
+    "statement": "Mathematical rigor involves precision, accuracy, thoroughness, and systematic approach."
+  },
+  {
+    "id": 70,
+    "statement": "Logical soundness is essential for building rigorous mathematical arguments."
+  },
+  {
+    "id": 71,
+    "statement": "Emotional Intelligence shaped by genetic, environmental, experiential factors."
+  },
+  {
+    "id": 72,
+    "statement": "Mathematical truths can be both absolute and culturally constructed."
+  },
+  {
+    "id": 73,
+    "statement": "Epigenetic modifications regulate gene responsiveness to environmental signals through chromatin structure."
+  },
+  {
+    "id": 74,
+    "statement": "Computational tools and bioinformatics methods streamline genome data analysis"
+  },
+  {
+    "id": 75,
+    "statement": "Logical coherence ensures internal consistency, not absolute mathematical truth."
+  },
+  {
+    "id": 76,
+    "statement": "Emotional Intelligence encompasses multiple facets, including empathy, motivation."
+  },
+  {
+    "id": 77,
+    "statement": "Emotional intelligence involves recognizing and managing emotions effectively."
+  },
+  {
+    "id": 78,
+    "statement": "LncRNAs regulate gene expression through chromatin modification mechanisms."
+  },
+  {
+    "id": 79,
+    "statement": "Epigenetics refers to heritable changes in gene function without DNA sequence change."
+  },
+  {
+    "id": 80,
+    "statement": "Logical soundness ensures mathematical rigor through consistent logic"
+  },
+  {
+    "id": 81,
+    "statement": "Logical soundness guarantees premises' truth, conclusion's validity, and consistency."
+  },
+  {
+    "id": 82,
+    "statement": "Logical soundness ensures validity, reliability, and consistency in arguments."
+  },
+  {
+    "id": 83,
+    "statement": "Epistemology provides foundation for mathematical knowledge certainty."
+  },
+  {
+    "id": 84,
+    "statement": "Epistemology frames mathematical justification with logical consistency and evidence."
+  },
+  {
+    "id": 85,
+    "statement": "Computational tools streamline genome data analysis through automation."
+  },
+  {
+    "id": 86,
+    "statement": "Emotional intelligence incorporates self-awareness, emotional regulation, and social skills complexity."
+  },
+  {
+    "id": 87,
+    "statement": "Epigenetic modifications alter chromatin structure through histone modification."
+  },
+  {
+    "id": 88,
+    "statement": "Mathematical truths are simultaneously absolute and culturally constructed."
+  },
+  {
+    "id": 89,
+    "statement": "Logical consistency is necessary condition for argument validity."
+  },
+  {
+    "id": 90,
+    "statement": "Logical soundness ensures correctness and non-contradiction in reasoning."
+  },
+  {
+    "id": 91,
+    "statement": "Data quality involves multiple interacting factors and variables."
+  },
+  {
+    "id": 92,
+    "statement": "Philosophy underlies mathematical rigor through epistemology and ontology."
+  },
+  {
+    "id": 93,
+    "statement": "Data quality involves complex interactions of multifactorial influences"
+  },
+  {
+    "id": 94,
+    "statement": "Data quality depends on multiple interacting factors and variables"
+  },
+  {
+    "id": 95,
+    "statement": "Mathematical rigor requires interconnected qualities of precision, accuracy, and thoroughness."
+  },
+  {
+    "id": 96,
+    "statement": "Logical consistency is necessary but not sufficient for argument validity"
+  },
+  {
+    "id": 97,
+    "statement": "Logical soundness guarantees conclusions' necessary truth, validity, and reliability."
+  },
+  {
+    "id": 98,
+    "statement": "Emotional intelligence motivates individuals by understanding needs and emotions"
+  },
+  {
+    "id": 99,
+    "statement": "Epigenetic modifications alter chromatin structure for gene regulation."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 34,
+  "statement": "Mathematical truths are universally valid and timeless."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 34,
+  "statement": "Mathematical truths are universally valid and timeless."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I've chosen an item from the knowledge base that I'd like to discuss, and it's item 34: "Mathematical truths are universally valid and timeless."
+
+I have to admit that I'm a bit uncertain about this statement. It seems too absolute, and I'm not sure if it's entirely accurate.
+
+Things I'm uncertain about this item:
+
+* How can we define "universally valid"? What kind of contexts would make a mathematical truth not universally valid?
+* What does "timeless" even mean in this context? Is it saying that mathematical truths will never change or evolve?
+
+Specific clarifying question:
+Can you elaborate on what you mean by "universally valid" and "timeless" in the context of mathematical truths?
+
+What are your thoughts on this statement?

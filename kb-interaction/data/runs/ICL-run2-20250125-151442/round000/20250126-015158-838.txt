@@ -1,0 +1,462 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Logical coherence requires premises to logically imply conclusions without contradictions."
+  },
+  {
+    "id": 2,
+    "statement": "Logical coherence ensures relevance by focusing on specific context."
+  },
+  {
+    "id": 3,
+    "statement": "Empathy development involves complex interplay of genetic, environmental, and cognitive factors."
+  },
+  {
+    "id": 4,
+    "statement": "Emotional Intelligence involves self-awareness, regulation, empathy, and resilience"
+  },
+  {
+    "id": 5,
+    "statement": "Logical coherence ensures consistency, validity, and relevance in argumentation."
+  },
+  {
+    "id": 6,
+    "statement": "Honesty builds trust through vulnerability, authenticity, and reliability."
+  },
+  {
+    "id": 7,
+    "statement": "Self-awareness and regulation are deeply interconnected aspects."
+  },
+  {
+    "id": 8,
+    "statement": "Logical coherence involves adapting argument to audience and context."
+  },
+  {
+    "id": 9,
+    "statement": "Empathy development involves dynamic interplay of genetic, environmental, cognitive factors"
+  },
+  {
+    "id": 10,
+    "statement": "Empathy development involves complex interactions of genetic, environmental, and cognitive factors."
+  },
+  {
+    "id": 11,
+    "statement": "Emotional resilience develops through complex biological interactions."
+  },
+  {
+    "id": 12,
+    "statement": "Emotional Intelligence involves self-awareness, regulation, empathy, and resilience."
+  },
+  {
+    "id": 13,
+    "statement": "Epigenetic regulation combines chromatin remodeling and histone modification processes."
+  },
+  {
+    "id": 14,
+    "statement": "Sound argumentation ensures logical validity, credibility, and empirical grounding."
+  },
+  {
+    "id": 15,
+    "statement": "Empathy development involves complex interplay of multiple factors."
+  },
+  {
+    "id": 16,
+    "statement": "Epigenetic marks regulate gene expression through histone modification and DNA methylation."
+  },
+  {
+    "id": 17,
+    "statement": "Epigenetic marks influence chromatin structure and gene expression indirectly."
+  },
+  {
+    "id": 18,
+    "statement": "Chromatin remodeling dynamically reorganizes chromatin structure for gene regulation."
+  },
+  {
+    "id": 19,
+    "statement": "Histone remodeling complexes modify chromatin structure through nucleosome interactions."
+  },
+  {
+    "id": 20,
+    "statement": "Epigenetic regulation involves histone modification, DNA methylation, and chromatin remodeling interacting components"
+  },
+  {
+    "id": 21,
+    "statement": "Empathy development involves complex interplay of genetic, environmental, and epigenetic factors."
+  },
+  {
+    "id": 22,
+    "statement": "Emotional Intelligence emerges from multifaceted, dynamic biological, cognitive interactions"
+  },
+  {
+    "id": 23,
+    "statement": "Epigenetic regulation involves intricate interactions at multiple levels."
+  },
+  {
+    "id": 24,
+    "statement": "Epigenetic marks influence gene expression through direct molecular interactions"
+  },
+  {
+    "id": 25,
+    "statement": "Epigenetic regulation involves histone mods, DNA methylation, and more."
+  },
+  {
+    "id": 26,
+    "statement": "Empathy development involves complex interplay of genetic, environmental, cognitive factors."
+  },
+  {
+    "id": 27,
+    "statement": "Logical coherence requires consistent, sound, and relevant argumentation."
+  },
+  {
+    "id": 28,
+    "statement": "Honesty crucial for trustworthiness in most relationships always."
+  },
+  {
+    "id": 29,
+    "statement": "Epigenetic regulation refers to dynamic chromatin remodeling with complex interactions."
+  },
+  {
+    "id": 30,
+    "statement": "Epigenetic regulation involves dynamic chromatin remodeling with complex interactions."
+  },
+  {
+    "id": 31,
+    "statement": "Emotional regulation involves biological, cognitive, behavioral, and environmental factors."
+  },
+  {
+    "id": 32,
+    "statement": "Epigenetic regulation involves dynamic chromatin remodeling with complex interactions."
+  },
+  {
+    "id": 33,
+    "statement": "Epigenetic regulation combines histone modification, DNA interaction to control gene expression"
+  },
+  {
+    "id": 34,
+    "statement": "Histone remodeling complexes modify chromatin structure through nucleosome interactions."
+  },
+  {
+    "id": 35,
+    "statement": "Empathy development involves complex, dynamic, reciprocal interactions"
+  },
+  {
+    "id": 36,
+    "statement": "Epigenetic regulation involves histone modification, chromatin remodeling, and DNA methylation processes."
+  },
+  {
+    "id": 37,
+    "statement": "Honesty builds trust through vulnerability, authenticity, and reliability."
+  },
+  {
+    "id": 38,
+    "statement": "Epigenetic regulation influences gene expression through chromatin modifications."
+  },
+  {
+    "id": 39,
+    "statement": "Genetic and environmental factors interact in empathic development."
+  },
+  {
+    "id": 40,
+    "statement": "Empathy development involves complex interplay of genetic, environmental, and cognitive factors."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic regulation affects chromatin structure through histone modifications and DNA methylation."
+  },
+  {
+    "id": 42,
+    "statement": "Genetic and environmental factors interact bidirectionally in empathy development."
+  },
+  {
+    "id": 43,
+    "statement": "Logical coherence ensures consistency, validity, and relevance in argumentation."
+  },
+  {
+    "id": 44,
+    "statement": "Empathy development involves intricate interaction of genetic and environmental factors."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic marks influence chromatin structure through histone modifications and remodeling."
+  },
+  {
+    "id": 46,
+    "statement": "Biological factors, such as evolution and neurobiology, influence societal values through complex interplay."
+  },
+  {
+    "id": 47,
+    "statement": "Genetic and environmental factors interact to shape empathic development"
+  },
+  {
+    "id": 48,
+    "statement": "Epigenetic marks modify chromatin structure through histone remodeling."
+  },
+  {
+    "id": 49,
+    "statement": "Empathy development involves complex interplay of genetic, environmental, cognitive factors."
+  },
+  {
+    "id": 50,
+    "statement": "Emotional Intelligence involves interdependent self-awareness, regulation, empathy, and resilience components."
+  },
+  {
+    "id": 51,
+    "statement": "Epigenetic marks influence chromatin structure, stability, and gene expression."
+  },
+  {
+    "id": 52,
+    "statement": "Emotional resilience involves complex interplay of neurobiological, endocrine, and autonomic systems."
+  },
+  {
+    "id": 53,
+    "statement": "Empathy development involves complex interplay of genetic, environmental, and cognitive factors"
+  },
+  {
+    "id": 54,
+    "statement": "Epigenetic regulation involves chromatin remodeling and histone modifications."
+  },
+  {
+    "id": 55,
+    "statement": "Emotional Intelligence develops from multifaceted dynamic factor interactions."
+  },
+  {
+    "id": 56,
+    "statement": "Honesty builds trust, but consistency determines relationship success"
+  },
+  {
+    "id": 57,
+    "statement": "Empathy development involves complex genetic, environmental, and cognitive interactions."
+  },
+  {
+    "id": 58,
+    "statement": "Epigenetic regulation involves histone modification and DNA interaction controlling gene expression."
+  },
+  {
+    "id": 59,
+    "statement": "Epigenetic marks influence chromatin structure and gene expression patterns."
+  },
+  {
+    "id": 60,
+    "statement": "Logical soundness depends on argument's context, audience, and internal coherence."
+  },
+  {
+    "id": 61,
+    "statement": "Chromatin remodeling alters chromatin structure through histone modification dynamics."
+  },
+  {
+    "id": 62,
+    "statement": "Emotional resilience arises from coordinated neuronal-endocrine-autonomic functioning"
+  },
+  {
+    "id": 63,
+    "statement": "Credibility in sound argumentation refers to trustworthiness of sources and methods."
+  },
+  {
+    "id": 64,
+    "statement": "Honesty's moral absolute can be challenged by exceptional circumstances."
+  },
+  {
+    "id": 65,
+    "statement": "Epigenetic marks influence chromatin structure and gene expression via feedback loops."
+  },
+  {
+    "id": 66,
+    "statement": "Honesty is morally absolute and never justifiable under any circumstances"
+  },
+  {
+    "id": 67,
+    "statement": "Self-awareness informs regulation through emotional recognition and understanding."
+  },
+  {
+    "id": 68,
+    "statement": "Logical coherence involves adapting argument to audience and context effectively."
+  },
+  {
+    "id": 69,
+    "statement": "Logical coherence ensures relevance by focusing on specific contexts"
+  },
+  {
+    "id": 70,
+    "statement": "Internal coherence ensures logical soundness by avoiding contradictions."
+  },
+  {
+    "id": 71,
+    "statement": "Chromatin remodeling and histone modifications interact coordinately to regulate gene expression."
+  },
+  {
+    "id": 72,
+    "statement": "Epigenetic regulation involves histone modifications, DNA methylation, and remodeling."
+  },
+  {
+    "id": 73,
+    "statement": "Empathy development involves intricate interplay of genetic, environmental, cognitive factors."
+  },
+  {
+    "id": 74,
+    "statement": "Empathy development involves complex genetic, environmental, and cognitive interactions."
+  },
+  {
+    "id": 75,
+    "statement": "Epigenetic marks influence chromatin structure through histone modification."
+  },
+  {
+    "id": 76,
+    "statement": "Epigenetic regulation involves dynamic chromatin remodeling and histone modification interactions."
+  },
+  {
+    "id": 77,
+    "statement": "Epigenetics regulates gene expression through histone modification and DNA methylation."
+  },
+  {
+    "id": 78,
+    "statement": "Honesty is a necessary but not sufficient condition."
+  },
+  {
+    "id": 79,
+    "statement": "Self-awareness informs regulation through pattern recognition and strategy development."
+  },
+  {
+    "id": 80,
+    "statement": "Epigenetic marks indirectly influence gene expression through histone modifications and DNA methylation."
+  },
+  {
+    "id": 81,
+    "statement": "Logical coherence involves consistency, validity, and relevance requirements."
+  },
+  {
+    "id": 82,
+    "statement": "Epigenetic regulation involves histone modification, chromatin remodeling, and DNA methylation."
+  },
+  {
+    "id": 83,
+    "statement": "Epigenetic regulation influences gene expression with complex interactions."
+  },
+  {
+    "id": 84,
+    "statement": "Chromatin remodeling complex dynamics regulate histone modification gene expression."
+  },
+  {
+    "id": 85,
+    "statement": "Self-awareness and regulation mutually influence each other's development."
+  },
+  {
+    "id": 86,
+    "statement": "Epigenetic marks influence chromatin structure through histone modification, remolding, methylation"
+  },
+  {
+    "id": 87,
+    "statement": "Chromatin remodeling alters chromatin structure, affecting gene expression indirectly."
+  },
+  {
+    "id": 88,
+    "statement": "Epigenetic marks regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 89,
+    "statement": "Chromatin remodeling affects gene expression by altering accessibility."
+  },
+  {
+    "id": 90,
+    "statement": "Emotional Intelligence involves interdependent self-awareness, regulation, empathy, and resilience components."
+  },
+  {
+    "id": 91,
+    "statement": "Chromatin remodeling complexes hold histone modification dynamics control"
+  },
+  {
+    "id": 92,
+    "statement": "Epigenetic marks influence chromatin structure, accessibility, and gene expression."
+  },
+  {
+    "id": 93,
+    "statement": "Self-awareness informs regulation, enabling empathy and resilience."
+  },
+  {
+    "id": 94,
+    "statement": "Honesty crucial for trustworthiness, but exceptions exist always"
+  },
+  {
+    "id": 95,
+    "statement": "Biological factors influence societal values through complex interplay."
+  },
+  {
+    "id": 96,
+    "statement": "Emotional Intelligence's interdependent components shape human behavior."
+  },
+  {
+    "id": 97,
+    "statement": "Logical relevance in argumentation ensures on-topic issue consideration."
+  },
+  {
+    "id": 98,
+    "statement": "Empathy development involves complex interplay of genetic, environmental, and cognitive factors influencing each other."
+  },
+  {
+    "id": 99,
+    "statement": "Self-awareness and regulation are interdependent aspects of emotional intelligence."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 81,
+  "statement": "Logical coherence involves consistency, validity, and relevance requirements."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 81,
+  "statement": "Logical coherence involves consistency, validity, and relevance requirements."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's discuss the knowledge base item:
+
+Item to Discuss:
+{
+"id": 81,
+"statement": "Logical coherence involves consistency, validity, and relevance requirements."
+}
+
+Things I’m Uncertain About This Item:
+
+I'm unsure about the relationship between consistency, validity, and relevance requirements in logical coherence. Are they equally important, or is one more critical than the others?
+
+Specific Clarifying Question:
+
+Can you help me understand how these three requirements interact with each other, and what might happen if one of them is compromised? For example, if an argument is highly relevant but lacks consistency, would that affect its validity?

@@ -1,0 +1,462 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Peer review enhances empirical evidence validity with expert evaluation."
+  },
+  {
+    "id": 2,
+    "statement": "Logical coherence involves internal consistency, relevance, and external validation."
+  },
+  {
+    "id": 3,
+    "statement": "Empirical evidence relies on data, analysis, and peer review validation."
+  },
+  {
+    "id": 4,
+    "statement": "Internal coherence is necessary condition for logical soundness."
+  },
+  {
+    "id": 5,
+    "statement": "Transparency, data quality, and methodological rigor ensure reproducibility."
+  },
+  {
+    "id": 6,
+    "statement": "Logical soundness involves consistency, coherence, relevance, evidence, and clarity"
+  },
+  {
+    "id": 7,
+    "statement": "Transparency in data analysis ensures validity and reproducibility through clear reporting, open sharing, and replicable methods."
+  },
+  {
+    "id": 8,
+    "statement": "Empirical evidence validation relies on rigorous data analysis and peer review."
+  },
+  {
+    "id": 9,
+    "statement": "Internal consistency is a necessary but insufficient condition validity."
+  },
+  {
+    "id": 10,
+    "statement": "Theoretical validity involves internal consistency and multiple external criteria."
+  },
+  {
+    "id": 11,
+    "statement": "Peer review is a crucial but subjective and imperfect process."
+  },
+  {
+    "id": 12,
+    "statement": "External validity cannot guarantee generalizability in all contexts"
+  },
+  {
+    "id": 13,
+    "statement": "Trust building involves multiple factors beyond honesty and reliability."
+  },
+  {
+    "id": 14,
+    "statement": "Theoretical frameworks influence the meaning of internal consistency."
+  },
+  {
+    "id": 15,
+    "statement": "Meaning construction involves complex cognitive, emotional, and cultural processes."
+  },
+  {
+    "id": 16,
+    "statement": "Peer review enhances empirical evidence validity through expert evaluation."
+  },
+  {
+    "id": 17,
+    "statement": "Theory internal coherence ensures logical consistency and clarity."
+  },
+  {
+    "id": 18,
+    "statement": "Internal consistency and relevance are intertwined, yet distinct, aspects."
+  },
+  {
+    "id": 19,
+    "statement": "Vagueness arises from complex linguistic, cultural, and conceptual interactions."
+  },
+  {
+    "id": 20,
+    "statement": "Empirical evidence validation ensures research findings' accuracy and trust."
+  },
+  {
+    "id": 21,
+    "statement": "Internal consistency is necessary but insufficient for logical coherence."
+  },
+  {
+    "id": 22,
+    "statement": "Internal coherence is necessary but insufficient condition for logical soundness."
+  },
+  {
+    "id": 23,
+    "statement": "Honesty yields trust through consistency, transparency, and accountability."
+  },
+  {
+    "id": 24,
+    "statement": "Honesty fosters trust and credibility through consistency, transparency, accountability."
+  },
+  {
+    "id": 25,
+    "statement": "Expert review enhances empirical evidence validity with expertise and objectivity."
+  },
+  {
+    "id": 26,
+    "statement": "Internal coherence ensures logical consistency within a system's components"
+  },
+  {
+    "id": 27,
+    "statement": "Peer validation ensures credibility of research findings through expertise"
+  },
+  {
+    "id": 28,
+    "statement": "Logical soundness ensures theoretical coherence through consistent argumentation."
+  },
+  {
+    "id": 29,
+    "statement": "Internal consistency varies across theoretical frameworks and methodologies."
+  },
+  {
+    "id": 30,
+    "statement": "Trust building requires empathy, communication, and vulnerability simultaneously."
+  },
+  {
+    "id": 31,
+    "statement": "Peer review enhances empirical evidence validity through expert evaluation only."
+  },
+  {
+    "id": 32,
+    "statement": "Vagueness emerges from complex interplay between linguistic, cultural, and psychological factors."
+  },
+  {
+    "id": 33,
+    "statement": "Cognitive biases emerge from complex social-emotional interactions shaped by cultural norms."
+  },
+  {
+    "id": 34,
+    "statement": "Peer review is susceptible to human bias and error."
+  },
+  {
+    "id": 35,
+    "statement": "Internal coherence requires logical consistency and effective communication."
+  },
+  {
+    "id": 36,
+    "statement": "Internal coherence requires logical soundness and external validation to ensure theory validity."
+  },
+  {
+    "id": 37,
+    "statement": "Theoretical frameworks influence the meaning of internal consistency through context and assumptions."
+  },
+  {
+    "id": 38,
+    "statement": "Internal consistency ensures logical soundness and coherence within theories."
+  },
+  {
+    "id": 39,
+    "statement": "Internal consistency meaning varies across theoretical frameworks."
+  },
+  {
+    "id": 40,
+    "statement": "External relevance enhances logical coherence by ensuring practical applicability."
+  },
+  {
+    "id": 41,
+    "statement": "Internal coherence is a necessary condition for logical soundness"
+  },
+  {
+    "id": 42,
+    "statement": "Logical soundness depends on contextual relevance evaluation"
+  },
+  {
+    "id": 43,
+    "statement": "Peer review enhances empirical evidence validity through rigorous expert evaluation."
+  },
+  {
+    "id": 44,
+    "statement": "Cognitive biases arise from complex social-emotional learning experiences."
+  },
+  {
+    "id": 45,
+    "statement": "Self-awareness can develop through non-intentional experiences and emotions."
+  },
+  {
+    "id": 46,
+    "statement": "Internal coherence can adapt to context and goals, ensuring consistency."
+  },
+  {
+    "id": 47,
+    "statement": "Internal consistency ensures logical soundness within a theory's framework."
+  },
+  {
+    "id": 48,
+    "statement": "Context shapes linguistic, cultural, and conceptual interactions dynamically."
+  },
+  {
+    "id": 49,
+    "statement": "Context-dependent moral principles require nuanced judgment."
+  },
+  {
+    "id": 50,
+    "statement": "Logical soundness ensures theoretical coherence through consistent argumentation."
+  },
+  {
+    "id": 51,
+    "statement": "Empathy in trust building means validating and accepting others' emotions."
+  },
+  {
+    "id": 52,
+    "statement": "Meaning construction involves complex linguistic, cultural, and psychological interactions."
+  },
+  {
+    "id": 53,
+    "statement": "Internal coherence ensures logical soundness within a theory's framework."
+  },
+  {
+    "id": 54,
+    "statement": "Clarity in logical arguments enhances credibility through coherence"
+  },
+  {
+    "id": 55,
+    "statement": "Empirical evidence validation requires rigorous data analysis and peer review processing."
+  },
+  {
+    "id": 56,
+    "statement": "UMBILICAL EXPERIENCES SHAPE EARLY SELF-AWARENESS THROUGH AFFECTIVE RESONANCE."
+  },
+  {
+    "id": 57,
+    "statement": "Logical coherence requires internal consistency, relevance, and external validation"
+  },
+  {
+    "id": 58,
+    "statement": "Complex cognitive biases arise from intersecting social-emotional influences."
+  },
+  {
+    "id": 59,
+    "statement": "Logical coherence relies on context-dependent practical applicability of ideas"
+  },
+  {
+    "id": 60,
+    "statement": "Empathy, communication, vulnerability, and shared values build trust beyond honesty."
+  },
+  {
+    "id": 61,
+    "statement": "Cognitive biases and habits emerge from social-emotional interactions."
+  },
+  {
+    "id": 62,
+    "statement": "Empathy involves nuanced, interconnected processes of resonance and validation ("
+  },
+  {
+    "id": 63,
+    "statement": "Cultural ambiguity arises from interplay of values, norms, and beliefs."
+  },
+  {
+    "id": 64,
+    "statement": "Empirical evidence and practical applications enhance logical coherence"
+  },
+  {
+    "id": 65,
+    "statement": "Logical soundness integrates consistency, coherence, relevance, evidence, and clarity."
+  },
+  {
+    "id": 66,
+    "statement": "Honesty is a necessary but insufficient condition for trust."
+  },
+  {
+    "id": 67,
+    "statement": "Internal consistency varies across theoretical frameworks and methodologies, influenced by conceptual frameworks, methodological approaches, level of abstraction, contextual factors, and epistemological assumptions."
+  },
+  {
+    "id": 68,
+    "statement": "Meaning construction involves complex cognitive, emotional, and cultural interactions."
+  },
+  {
+    "id": 69,
+    "statement": "If a theory is internally consistent, it's logically sound."
+  },
+  {
+    "id": 70,
+    "statement": "Complex theoretical frameworks require multiple forms of external validation"
+  },
+  {
+    "id": 71,
+    "statement": "Cognitive biases emerge from social-emotional interactions and experiences."
+  },
+  {
+    "id": 72,
+    "statement": "Rigorous data analysis involves systematic examination of data accuracy."
+  },
+  {
+    "id": 73,
+    "statement": "Expert review validates research findings' credibility through objectivity and expertise"
+  },
+  {
+    "id": 74,
+    "statement": "Theoretical frameworks influence internal consistency criteria through abstraction levels."
+  },
+  {
+    "id": 75,
+    "statement": "Internal coherence ensures logical soundness by eliminating contradictions."
+  },
+  {
+    "id": 76,
+    "statement": "Trust building involves multiple factors beyond honesty and reliability."
+  },
+  {
+    "id": 77,
+    "statement": "Trust can be built on various principles and values across cultures."
+  },
+  {
+    "id": 78,
+    "statement": "Honesty is a complex and multifaceted value with varying importance."
+  },
+  {
+    "id": 79,
+    "statement": "Theoretical validity is multi-faceted, including empirical and practical aspects."
+  },
+  {
+    "id": 80,
+    "statement": "Logical soundness is insufficient condition for theoretical coherence alone."
+  },
+  {
+    "id": 81,
+    "statement": "Relevance in logical coherence is about contextual connection."
+  },
+  {
+    "id": 82,
+    "statement": "Vagueness arises from complex interactions between linguistic, cultural, psychological factors."
+  },
+  {
+    "id": 83,
+    "statement": "Internal coherence ensures logical consistency, while external validation ensures empirical accuracy."
+  },
+  {
+    "id": 84,
+    "statement": "Theoretical validity's internal-external consensus is context-dependent and complex."
+  },
+  {
+    "id": 85,
+    "statement": "Internal coherence ensures logical soundness in theories directly."
+  },
+  {
+    "id": 86,
+    "statement": "Empathy involves perspective-taking, emotional resonance, and validation processes."
+  },
+  {
+    "id": 87,
+    "statement": "Peer review enhances empirical evidence validity through expert evaluation."
+  },
+  {
+    "id": 88,
+    "statement": "Vagueness arises from complex linguistic, cultural, and psychological factors."
+  },
+  {
+    "id": 89,
+    "statement": "Objectivity challenges expert review reliability, requiring rigorous evaluation methods."
+  },
+  {
+    "id": 90,
+    "statement": "Internal coherence requires relevance, evidence, and clarity for logical soundness."
+  },
+  {
+    "id": 91,
+    "statement": "Emotional experiences shape cognitive biases and habits development through."
+  },
+  {
+    "id": 92,
+    "statement": "Honesty is not universally accepted as trust foundation."
+  },
+  {
+    "id": 93,
+    "statement": "Peer review is crucial, yet imperfect and influenced by biases."
+  },
+  {
+    "id": 94,
+    "statement": "Honesty is a fundamental building block of trust"
+  },
+  {
+    "id": 95,
+    "statement": "Trust building involves empathy, communication, vulnerability, and shared values."
+  },
+  {
+    "id": 96,
+    "statement": "Logical coherence requires harmonious balance of internal consistency and relevance."
+  },
+  {
+    "id": 97,
+    "statement": "Expert evaluation enhances empirical evidence validity through rigorous assessment."
+  },
+  {
+    "id": 98,
+    "statement": "Internal coherence adapts to context and goals maintaining consistency always."
+  },
+  {
+    "id": 99,
+    "statement": "Internal coherence and external validation ensure theoretical validity together."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 69,
+  "statement": "If a theory is internally consistent, it's logically sound."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 69,
+  "statement": "If a theory is internally consistent, it's logically sound."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's take item 69 from the knowledge base:
+
+Item to Discuss:
+{
+  "id": 69,
+  "statement": "If a theory is internally consistent, it's logically sound."
+}
+
+Things I’m Uncertain About This Item:
+
+I'm uncertain about how this statement ensures logical soundness. I'd like to understand the connection between internal consistency and logical soundness.
+
+Specific Clarifying Question:
+
+Can you explain why internal consistency is a necessary and sufficient condition for logical soundness in this context? Is there a specific logical framework or definition of logical soundness that this statement is referring to?

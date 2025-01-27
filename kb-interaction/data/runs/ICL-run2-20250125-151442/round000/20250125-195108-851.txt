@@ -1,0 +1,448 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Structured research frameworks ensure rigorous and transparent investigation."
+  },
+  {
+    "id": 2,
+    "statement": "Biological factors, such as genetics and brain structure, influence moral development."
+  },
+  {
+    "id": 3,
+    "statement": "Emotional intelligence involves interconnected self-awareness, empathy, and social skills."
+  },
+  {
+    "id": 4,
+    "statement": "Logical soundness depends on accurate and true premises only."
+  },
+  {
+    "id": 5,
+    "statement": "Logical argument validity depends on sound argument form, not truth of premises."
+  },
+  {
+    "id": 6,
+    "statement": "Honesty necessary for trust, but not sufficient condition"
+  },
+  {
+    "id": 7,
+    "statement": "Emotional awareness involves recognizing, understanding, regulating, and managing emotions."
+  },
+  {
+    "id": 8,
+    "statement": "Logical soundness relies on accurate and true premises only."
+  },
+  {
+    "id": 9,
+    "statement": "Logical argument validity depends on sound argument form, not truth of premises."
+  },
+  {
+    "id": 10,
+    "statement": "Accurate and true premises are essential for logical soundness."
+  },
+  {
+    "id": 11,
+    "statement": "Post-translational modification occurs during protein synthesis, folding, and processing."
+  },
+  {
+    "id": 12,
+    "statement": "Structured research frameworks provide frameworks for rigorous and transparent investigation."
+  },
+  {
+    "id": 13,
+    "statement": "Accuracy in premises is evaluated through truth, relevance, clarity, consistency."
+  },
+  {
+    "id": 14,
+    "statement": "Covalent modifications reversible or irreversible depending on enzymes and contexts."
+  },
+  {
+    "id": 15,
+    "statement": "Structured research frameworks may not eliminate investigator bias completely."
+  },
+  {
+    "id": 16,
+    "statement": "Enzymes modulate chemical reactions in real-time to achieve specific outcomes."
+  },
+  {
+    "id": 17,
+    "statement": "Logical soundness depends on validity and accurate true premises."
+  },
+  {
+    "id": 18,
+    "statement": "Emotional awareness includes recognizing and understanding one's own emotions."
+  },
+  {
+    "id": 19,
+    "statement": "Enzymes catalyze chemical reactions in post-translational protein modification processes."
+  },
+  {
+    "id": 20,
+    "statement": "Post-translational modification occurs during various cellular processes and stages."
+  },
+  {
+    "id": 21,
+    "statement": "Structured research frameworks require expert implementation for accuracy."
+  },
+  {
+    "id": 22,
+    "statement": "Structured research frameworks ensure rigorous investigation through organization and standardization."
+  },
+  {
+    "id": 23,
+    "statement": "Enzymes recognize substrates through chemical and physical interactions."
+  },
+  {
+    "id": 24,
+    "statement": "Logical soundness demands both argument validity and true premises."
+  },
+  {
+    "id": 25,
+    "statement": "Structured research frameworks ensure rigor and transparency through systematic methods"
+  },
+  {
+    "id": 26,
+    "statement": "Moral development influenced by interconnected biological, environmental, and social factors."
+  },
+  {
+    "id": 27,
+    "statement": "Logical soundness requires both validity and accurate true premises."
+  },
+  {
+    "id": 28,
+    "statement": "Emotional awareness necessitates contextual self-reflection and cultural understanding."
+  },
+  {
+    "id": 29,
+    "statement": "Post-translational modifications alter protein structure, function, and interactions dynamically."
+  },
+  {
+    "id": 30,
+    "statement": "Biological factors influence moral development through genetic and brain structure variations."
+  },
+  {
+    "id": 31,
+    "statement": "Structured research frameworks vary across contexts and domains."
+  },
+  {
+    "id": 32,
+    "statement": "Honesty as a foundation for trust requires additional components"
+  },
+  {
+    "id": 33,
+    "statement": "Logical soundness relies on accurate and true premises."
+  },
+  {
+    "id": 34,
+    "statement": "Chromatin remodeling involves complex protein-protein interactions and enzyme recruitment"
+  },
+  {
+    "id": 35,
+    "statement": "Post-translational modification can occur during protein synthesis folding."
+  },
+  {
+    "id": 36,
+    "statement": "Epigenetic modifications regulate gene expression by modifying chromatin structure."
+  },
+  {
+    "id": 37,
+    "statement": "Structured research frameworks rely on systematic methodology implementation"
+  },
+  {
+    "id": 38,
+    "statement": "Chromatin remodeling involves coordinated enzyme action and structure"
+  },
+  {
+    "id": 39,
+    "statement": "Honesty is necessary condition for building trust."
+  },
+  {
+    "id": 40,
+    "statement": "Post-translational protein modification involves enzyme-catalyzed chemical reactions."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 42,
+    "statement": "Epigenetic modifications alter chromatin structure, regulating gene expression."
+  },
+  {
+    "id": 43,
+    "statement": "Post-translational modification occurs during protein synthesis or folding."
+  },
+  {
+    "id": 44,
+    "statement": "Biological factors influence moral development through complex interactions."
+  },
+  {
+    "id": 45,
+    "statement": "Structured research frameworks ensure rigorous and transparent investigation through organization and standardization."
+  },
+  {
+    "id": 46,
+    "statement": "Honesty is essential for trust, but not sufficient on its own"
+  },
+  {
+    "id": 47,
+    "statement": "Emotional intelligence requires interconnected self-awareness for empathy and social skills."
+  },
+  {
+    "id": 48,
+    "statement": "Post-translational modification can occur during protein synthesis or folding."
+  },
+  {
+    "id": 49,
+    "statement": "Site-directed modification: Enzymes bind and modify specific amino acid sites."
+  },
+  {
+    "id": 50,
+    "statement": "Chromatin remodeling involves multiple enzymes working in a sequence."
+  },
+  {
+    "id": 51,
+    "statement": "Post-translational modification (PTM) alters protein structure and function."
+  },
+  {
+    "id": 52,
+    "statement": "Genetic and brain structural variations influence moral development through epigenetics."
+  },
+  {
+    "id": 53,
+    "statement": "Logical soundness requires accurate, true, and relevant premises."
+  },
+  {
+    "id": 54,
+    "statement": "Bioinformatics integrates computer science, biology, physics, and engineering principles."
+  },
+  {
+    "id": 55,
+    "statement": "Enzyme specificity requires accurate and flexible amino acid sequence matching."
+  },
+  {
+    "id": 56,
+    "statement": "Emotional awareness involves recognizing and understanding emotions through reflection."
+  },
+  {
+    "id": 57,
+    "statement": "Systematic methods ensure consistency, accuracy, and transparency in research."
+  },
+  {
+    "id": 58,
+    "statement": "Honesty is a necessary but insufficient foundation for trust."
+  },
+  {
+    "id": 59,
+    "statement": "Structured research frameworks ensure consistency, transparency, and reproducibility."
+  },
+  {
+    "id": 60,
+    "statement": "Biological factors complement environmental influences in moral development process"
+  },
+  {
+    "id": 61,
+    "statement": "True and accurate premises important for logical soundness"
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic changes result from complex dynamic molecular interactions."
+  },
+  {
+    "id": 63,
+    "statement": "Structured research frameworks adapt to evolving knowledge collaboratively."
+  },
+  {
+    "id": 64,
+    "statement": "Enzymes coordinate to reorganize chromatin structure and function."
+  },
+  {
+    "id": 65,
+    "statement": "Expertise and execution are crucial for high-quality research outcomes."
+  },
+  {
+    "id": 66,
+    "statement": "Emotional intelligence involves interconnected self-awareness, empathy, and social skills."
+  },
+  {
+    "id": 67,
+    "statement": "Lying can be justified in extreme and rare circumstances."
+  },
+  {
+    "id": 68,
+    "statement": "Enzymes recognize single specific amino acid sequences or structures through chemical interactions."
+  },
+  {
+    "id": 69,
+    "statement": "Logical soundness primarily relies on validity and consistency."
+  },
+  {
+    "id": 70,
+    "statement": "Cultural context influences moral principles and practices extensively across cultures."
+  },
+  {
+    "id": 71,
+    "statement": "Honesty is necessary but not sufficient for trust building."
+  },
+  {
+    "id": 72,
+    "statement": "Bioinformatics combines computer science, biology, physics, and engineering for data analysis."
+  },
+  {
+    "id": 73,
+    "statement": "Emotional awareness involves recognizing and understanding one's emotions through self-reflection."
+  },
+  {
+    "id": 74,
+    "statement": "Logical soundness requires accurate, true, and relevant premises to support."
+  },
+  {
+    "id": 75,
+    "statement": "Cultural context influences moral principles and practices largely."
+  },
+  {
+    "id": 76,
+    "statement": "Bioinformatics combines computer science, biology, physics, and engineering for data analysis."
+  },
+  {
+    "id": 77,
+    "statement": "Emotional awareness involves recognizing, understanding, and regulating emotions."
+  },
+  {
+    "id": 78,
+    "statement": "Post-translational modifications alter protein structure, function, and interactions dynamically."
+  },
+  {
+    "id": 79,
+    "statement": "Structured research frameworks can minimize investigator bias through clear objectives."
+  },
+  {
+    "id": 80,
+    "statement": "Structured research relies on systematic methodology for consistency"
+  },
+  {
+    "id": 81,
+    "statement": "Cultural context influences moral principles and practices widely."
+  },
+  {
+    "id": 82,
+    "statement": "Enzymes recognize substrates through shape complementarity and chemical properties."
+  },
+  {
+    "id": 83,
+    "statement": "Honesty is necessary but not sufficient for building trust."
+  },
+  {
+    "id": 84,
+    "statement": "Systematic methodology ensures rigor through deliberate and organized research approach"
+  },
+  {
+    "id": 85,
+    "statement": "Structured research frameworks cannot completely eliminate investigator bias."
+  },
+  {
+    "id": 86,
+    "statement": "Post-translational protein modification involves enzyme-catalyzed chemical reactions."
+  },
+  {
+    "id": 87,
+    "statement": "Expert implementation requires deep understanding of research process and methods."
+  },
+  {
+    "id": 88,
+    "statement": "Structured research frameworks vary by research field or discipline."
+  },
+  {
+    "id": 89,
+    "statement": "Context influences Post-Translational Modification precision in specific cellular conditions"
+  },
+  {
+    "id": 90,
+    "statement": "Genetic and brain structural variations influence moral development through epigenetics."
+  },
+  {
+    "id": 91,
+    "statement": "Epigenetic changes can be reversible with environmental manipulation."
+  },
+  {
+    "id": 92,
+    "statement": "Post-translational modifications can dynamically alter protein interactions and signaling pathways."
+  },
+  {
+    "id": 93,
+    "statement": "Epigenetic modifications influence chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 94,
+    "statement": "Logical soundness relies on validity, consistency, and relevance too."
+  },
+  {
+    "id": 95,
+    "statement": "Systematic methodology implementation ensures thorough and reliable research procedures"
+  },
+  {
+    "id": 96,
+    "statement": "Emotional awareness combines automatic and intentional emotional processing."
+  },
+  {
+    "id": 97,
+    "statement": "Enzymes catalyze protein modification by altering chemical reactions dynamically."
+  },
+  {
+    "id": 98,
+    "statement": "Post-translational modification precision depends on cellular location and state."
+  },
+  {
+    "id": 99,
+    "statement": "Honesty not always necessary for trust establishment."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 85,
+  "statement": "Structured research frameworks cannot completely eliminate investigator bias."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 85,
+  "statement": "Structured research frameworks cannot completely eliminate investigator bias."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'm going to start with the item we're discussing: "Structured research frameworks cannot completely eliminate investigator bias." Can you elaborate on why you're uncertain about this aspect? What specifically is unclear or confusing to you about this statement?

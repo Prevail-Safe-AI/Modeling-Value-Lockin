@@ -1,0 +1,462 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Emotional Intelligence consists of interdependent components that influence each other."
+  },
+  {
+    "id": 2,
+    "statement": "Emotional Intelligence involves recognizing, understanding, and regulating emotions effectively."
+  },
+  {
+    "id": 3,
+    "statement": "Data quality depends on internal and external factors, affecting accuracy."
+  },
+  {
+    "id": 4,
+    "statement": "Genetic makeup refers to unique combinations and expressions of genes."
+  },
+  {
+    "id": 5,
+    "statement": "Emotional Intelligence encompasses interconnected self-awareness, emotional regulation, motivation, and social skills."
+  },
+  {
+    "id": 6,
+    "statement": "Emotional Intelligence (EI) encompasses self-awareness, emotional regulation, motivation, and social skills."
+  },
+  {
+    "id": 7,
+    "statement": "Bioinformatics is interdisciplinary, combining computer science, biology, mathematics."
+  },
+  {
+    "id": 8,
+    "statement": "Epigenetic modifications influence gene expression through histone and DNA modifications."
+  },
+  {
+    "id": 9,
+    "statement": "Honesty requires truthfulness regardless of empathy or understanding."
+  },
+  {
+    "id": 10,
+    "statement": "Emotional Intelligence involves interconnected self-awareness, emotional regulation, and social skills."
+  },
+  {
+    "id": 11,
+    "statement": "Logical soundness guarantees validity, not necessary truth, empirically verifying premises."
+  },
+  {
+    "id": 12,
+    "statement": "Bioinformatics combines computer science, biology, and mathematics for data analysis"
+  },
+  {
+    "id": 13,
+    "statement": "Genetic makeup unique combination of gene expressions inherited."
+  },
+  {
+    "id": 14,
+    "statement": "Emotional intelligence develops through complex interactions of factors."
+  },
+  {
+    "id": 15,
+    "statement": "Bioinformatics combines computer science, biology, and mathematics concepts"
+  },
+  {
+    "id": 16,
+    "statement": "Honesty encompasses both factual accuracy and emotional authenticity."
+  },
+  {
+    "id": 17,
+    "statement": "Epigenetic modifications indirectly influence chromatin structure through mechanisms."
+  },
+  {
+    "id": 18,
+    "statement": "Bioinformatics combines computer science, biology, and mathematics concepts."
+  },
+  {
+    "id": 19,
+    "statement": "Self-awareness enables emotional regulation and social skills enhancement."
+  },
+  {
+    "id": 20,
+    "statement": "Emotional intelligence development influenced by complex individual and contextual factors."
+  },
+  {
+    "id": 21,
+    "statement": "Bioinformatics combines computer science, biology, mathematics, and statistics concepts"
+  },
+  {
+    "id": 22,
+    "statement": "Chronic chromatin changes denote persistent alterations in gene expression."
+  },
+  {
+    "id": 23,
+    "statement": "Chronic chromatin changes can influence gene expression through modification."
+  },
+  {
+    "id": 24,
+    "statement": "Emotional Intelligence emerges from complex interactions of genetic, environmental, and experiential factors."
+  },
+  {
+    "id": 25,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression through histone modifications, chromatin remodeling, DNA methylation, non-coding RNAs, chromatin looping, and compaction."
+  },
+  {
+    "id": 26,
+    "statement": "Epigenetic modifications involve histone modifications to regulate gene expression."
+  },
+  {
+    "id": 27,
+    "statement": "Genetic makeup comprises unique gene combinations, expressions, interactions, and epigenetic modifications"
+  },
+  {
+    "id": 28,
+    "statement": "Logical soundness guarantees validity, but not necessarily truth, empirically."
+  },
+  {
+    "id": 29,
+    "statement": "Bioinformatics combines computer science, biology, and mathematics for data analysis"
+  },
+  {
+    "id": 30,
+    "statement": "LncRNAs regulate gene expression by modifying chromatin structure."
+  },
+  {
+    "id": 31,
+    "statement": "Genetic makeup refers to unique gene combinations and expressions levels"
+  },
+  {
+    "id": 32,
+    "statement": "Emotional intelligence's role in complex trait influenced by diverse factors."
+  },
+  {
+    "id": 33,
+    "statement": "Genetic makeup refers to the unique combination and expression of inherited genes."
+  },
+  {
+    "id": 34,
+    "statement": "Honesty's importance depends on context and values in extreme situations."
+  },
+  {
+    "id": 35,
+    "statement": "Epigenetic modifications regulate gene expression via chromatin structure alteration"
+  },
+  {
+    "id": 36,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression through histone modifications, chromatin looping and compaction."
+  },
+  {
+    "id": 37,
+    "statement": "Honesty builds trust through empathy and understanding in dialogue"
+  },
+  {
+    "id": 38,
+    "statement": "Honesty fosters empathy and understanding through active listening."
+  },
+  {
+    "id": 39,
+    "statement": "Emotional intelligence involves self-awareness, emotional regulation, and social skills."
+  },
+  {
+    "id": 40,
+    "statement": "Genetic makeup refers to unique combinations of expressed genes."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic modifications influence chromatin structure through chromatin remodeling."
+  },
+  {
+    "id": 42,
+    "statement": "Epigenetic modifications mediate chromatin structure alterations and gene expression."
+  },
+  {
+    "id": 43,
+    "statement": "Emotional Intelligence develops through dynamic interactions of genetic, environmental, and experiential factors."
+  },
+  {
+    "id": 44,
+    "statement": "Cultural influences shape mathematical representation, understanding, and application."
+  },
+  {
+    "id": 45,
+    "statement": "Logical soundness guarantees validity, not truth, through empirical verification."
+  },
+  {
+    "id": 46,
+    "statement": "Emotional Intelligence involves recognizing, understanding, and regulating emotions effectively."
+  },
+  {
+    "id": 47,
+    "statement": "Emotional Intelligence involves interconnected self-awareness and regulation harmoniously"
+  },
+  {
+    "id": 48,
+    "statement": "Emotional intelligence development influenced by individual and contextual factors."
+  },
+  {
+    "id": 49,
+    "statement": "Epigenetic modifications alter chromatin structure via histone modifications and remolding."
+  },
+  {
+    "id": 50,
+    "statement": "Chronic chromatin changes occur due to epigenetic modifications, stress."
+  },
+  {
+    "id": 51,
+    "statement": "Emotional intelligence develops through complex, dynamic interactions between components."
+  },
+  {
+    "id": 52,
+    "statement": "Emotional intelligence encompasses self-awareness, motivation, and social skills complexity."
+  },
+  {
+    "id": 53,
+    "statement": "Epigenetic modifications, through histone modification, alter chromatin structure."
+  },
+  {
+    "id": 54,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes through histone modification, DNA methylation, and chromatin remodeling."
+  },
+  {
+    "id": 55,
+    "statement": "Empirical evidence verifies truth through systematic observation and testing."
+  },
+  {
+    "id": 56,
+    "statement": "Epigenetic modifications alter chromatin structure, controlling gene expression."
+  },
+  {
+    "id": 57,
+    "statement": "Epigenetic modifications can also alter chromatin structure through looping."
+  },
+  {
+    "id": 58,
+    "statement": "Honesty encompasses emotional authenticity for deeper connections."
+  },
+  {
+    "id": 59,
+    "statement": "Self-awareness informs emotional regulation, motivation, and social skills harmoniously."
+  },
+  {
+    "id": 60,
+    "statement": "Cultural contexts influence human perception and expression of mathematical truths."
+  },
+  {
+    "id": 61,
+    "statement": "Genetic makeup is the unique combination and expression of inherited genes."
+  },
+  {
+    "id": 62,
+    "statement": "Genetic makeup refers to unique gene combinations, expressions, and interactions."
+  },
+  {
+    "id": 63,
+    "statement": "Individual and contextual factors combined influence emotional intelligence development."
+  },
+  {
+    "id": 64,
+    "statement": "Chromatin structure altered by epigenetic modifications and stress responses."
+  },
+  {
+    "id": 65,
+    "statement": "Honesty's moral importance may be context-dependent and evolving."
+  },
+  {
+    "id": 66,
+    "statement": "Logical soundness ensures arguments follows rules of logic without fallacies."
+  },
+  {
+    "id": 67,
+    "statement": "Logical soundness guarantees validity, not necessarily empirical truth."
+  },
+  {
+    "id": 68,
+    "statement": "Genetic makeup consists of unique gene combinations, expressions, and interactions."
+  },
+  {
+    "id": 69,
+    "statement": "Honesty's effectiveness in building trust depends on complexity."
+  },
+  {
+    "id": 70,
+    "statement": "Cultural contexts influence how people understand and apply mathematical concepts."
+  },
+  {
+    "id": 71,
+    "statement": "Empirical verification confirms truth of premises in logical argument."
+  },
+  {
+    "id": 72,
+    "statement": "Emotional intelligence self-awareness informs effective emotional regulation processes"
+  },
+  {
+    "id": 73,
+    "statement": "Emotional intelligence foundations involve interconnected self-awareness and regulation"
+  },
+  {
+    "id": 74,
+    "statement": "Self-awareness informs emotional regulation, motivation, and social skills."
+  },
+  {
+    "id": 75,
+    "statement": "Honesty involves being truthful regardless of emotional state or situation."
+  },
+  {
+    "id": 76,
+    "statement": "Honesty involves acknowledging and validating emotions through active listening."
+  },
+  {
+    "id": 77,
+    "statement": "Emotional Intelligence encompasses emotional awareness, recognition, understanding, regulation, and motivation."
+  },
+  {
+    "id": 78,
+    "statement": "Cultural context influences mathematical notation and representation worldwide."
+  },
+  {
+    "id": 79,
+    "statement": "Emotional regulation involves recognizing, understanding, and managing emotions effectively."
+  },
+  {
+    "id": 80,
+    "statement": "Honesty often requires empathy and understanding to establish trust."
+  },
+  {
+    "id": 81,
+    "statement": "Epigenetic modifications influence chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 82,
+    "statement": "Emotional intelligence involves interconnected self-awareness, emotional regulation, and social complexity."
+  },
+  {
+    "id": 83,
+    "statement": "Logical soundness validates arguments, but truth depends on premises accuracy."
+  },
+  {
+    "id": 84,
+    "statement": "Mathematical truths are influenced by cultural representation and interpretation."
+  },
+  {
+    "id": 85,
+    "statement": "Bioinformatics combines computer science, biology, and mathematics algorithms."
+  },
+  {
+    "id": 86,
+    "statement": "Emotional Intelligence involves harmonious integration of self-awareness, social awareness"
+  },
+  {
+    "id": 87,
+    "statement": "Genetic makeup is a unique combination of genes and their expression."
+  },
+  {
+    "id": 88,
+    "statement": "Genetic makeup refers to unique combinations and expressions of genes."
+  },
+  {
+    "id": 89,
+    "statement": "Epigenetic modifications change chromatin structure without altering DNA sequence content."
+  },
+  {
+    "id": 90,
+    "statement": "Logical soundness is necessary but not sufficient for argument validity."
+  },
+  {
+    "id": 91,
+    "statement": "Honesty alone is not always sufficient for establishing trust"
+  },
+  {
+    "id": 92,
+    "statement": "Chromatin changes can lead to persistent alterations in gene expression."
+  },
+  {
+    "id": 93,
+    "statement": "Genetic makeup comprises unique combinations and expressions of genes."
+  },
+  {
+    "id": 94,
+    "statement": "Emotional intelligence development influenced by various genetic and environmental factors"
+  },
+  {
+    "id": 95,
+    "statement": "Honesty fosters empathy and understanding through active listening."
+  },
+  {
+    "id": 96,
+    "statement": "Genetic makeup includes gene presence, expression levels, and interactions."
+  },
+  {
+    "id": 97,
+    "statement": "Logical soundness guarantees validity, not necessarily truth, empirically."
+  },
+  {
+    "id": 98,
+    "statement": "Nuanced moral evaluations require empathy, humility, and integrity."
+  },
+  {
+    "id": 99,
+    "statement": "Emotional intelligence emerges from interactive genetic, environmental, and experiential factors."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 90,
+  "statement": "Logical soundness is necessary but not sufficient for argument validity."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 90,
+  "statement": "Logical soundness is necessary but not sufficient for argument validity."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to Discuss Item 90:
+
+Item to Discuss:
+```
+{
+  "id": 90,
+  "statement": "Logical soundness is necessary but not sufficient for argument validity."
+}
+```
+
+Things I’m Uncertain About This Item:
+
+I'm not completely confident about what "logical soundness" means in this context. Could you help me understand what it entails? Is it related to the rules of logic, or is it something more specific?
+
+What's your take on this statement?

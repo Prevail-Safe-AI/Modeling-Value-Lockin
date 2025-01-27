@@ -1,0 +1,460 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Cultural context influences moral principles and their applications."
+  },
+  {
+    "id": 2,
+    "statement": "Emotional Intelligence encompasses self-awareness, empathy, and social skills"
+  },
+  {
+    "id": 3,
+    "statement": "Bioinformatics combines computer science, biology, and mathematics with physics and engineering insights."
+  },
+  {
+    "id": 4,
+    "statement": "Logical soundness ensures an argument's internal coherence and validity."
+  },
+  {
+    "id": 5,
+    "statement": "Bioinformatics combines biology, computer science, mathematics, and statistics"
+  },
+  {
+    "id": 6,
+    "statement": "Cultural context influences moral principles and their applications"
+  },
+  {
+    "id": 7,
+    "statement": "Chromatin remodeling dynamically reorganizes chromatin structure for gene regulation."
+  },
+  {
+    "id": 8,
+    "statement": "Honesty's unconditional requirement can be overridden in specific contexts."
+  },
+  {
+    "id": 9,
+    "statement": "Epigenetic modifications involve dynamic, reversible, and adaptable changes."
+  },
+  {
+    "id": 10,
+    "statement": "Bioinformatics combines computer science, biology, and mathematics with physics and engineering insights."
+  },
+  {
+    "id": 11,
+    "statement": "Honesty is not always the foundation of trust."
+  },
+  {
+    "id": 12,
+    "statement": "Bioinformatics combines computer science, biology, and statistics"
+  },
+  {
+    "id": 13,
+    "statement": "Logical soundness ensures validity, not truth or accuracy, in arguments."
+  },
+  {
+    "id": 14,
+    "statement": "Bioinformatics is multidisciplinary field combining computer science, biology, statistics."
+  },
+  {
+    "id": 15,
+    "statement": "Epigenetics involves complex molecular interactions regulating gene expression dynamically."
+  },
+  {
+    "id": 16,
+    "statement": "Epigenetic changes result from complex interactions between multiple factors."
+  },
+  {
+    "id": 17,
+    "statement": "DNA methylation and histone modification interact to regulate gene expression."
+  },
+  {
+    "id": 18,
+    "statement": "Epigenetic regulation involves complex molecular interactions dynamically."
+  },
+  {
+    "id": 19,
+    "statement": "Moral development involves complex interplay among multiple factors."
+  },
+  {
+    "id": 20,
+    "statement": "Epigenetic changes result from genetic-environmental interaction dynamics."
+  },
+  {
+    "id": 21,
+    "statement": "Post-translational modification affects protein structure, function, and interactions."
+  },
+  {
+    "id": 22,
+    "statement": "Mathematics is essential in bioinformatics sequence analysis techniques through algebraic geometry, combinatorics, linear algebra, probability theory and statistics."
+  },
+  {
+    "id": 23,
+    "statement": "Structured research frameworks facilitate collaboration through clear guidelines"
+  },
+  {
+    "id": 24,
+    "statement": "Harmonious integration of multiple disciplines defines bioinformatics."
+  },
+  {
+    "id": 25,
+    "statement": "Bioinformatics is a multidisciplinary field combining multiple disciplines."
+  },
+  {
+    "id": 26,
+    "statement": "Bioinformatics integrates computer science, biology, and statistics synergistically."
+  },
+  {
+    "id": 27,
+    "statement": "Epigenetic modifications involve complex molecular interactions dynamically."
+  },
+  {
+    "id": 28,
+    "statement": "Structured research frameworks' effectiveness varies across contexts."
+  },
+  {
+    "id": 29,
+    "statement": "Logical soundness ensures validity, not truth or accuracy in arguments."
+  },
+  {
+    "id": 30,
+    "statement": "Epigenetic modifications alter chromatin structure for gene regulation."
+  },
+  {
+    "id": 31,
+    "statement": "Logical soundness ensures internal coherence, not necessary truth."
+  },
+  {
+    "id": 32,
+    "statement": "Multi-component molecular interactions underlie epigenetic regulation mechanisms."
+  },
+  {
+    "id": 33,
+    "statement": "Epigenetic modifications regulate gene expression through histone, DNA interactions."
+  },
+  {
+    "id": 34,
+    "statement": "Cultural context influences moral principles and their applications."
+  },
+  {
+    "id": 35,
+    "statement": "Epigenetic modifications involve intricate multilayered molecular interactions dynamically."
+  },
+  {
+    "id": 36,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure alteration."
+  },
+  {
+    "id": 37,
+    "statement": "Bioinformatics combines computer science, biology, and statistics synergistically."
+  },
+  {
+    "id": 38,
+    "statement": "Epigenetic marks interact to regulate gene expression dynamically"
+  },
+  {
+    "id": 39,
+    "statement": "Interdisciplinary collaboration requires flexibility and knowledge sharing."
+  },
+  {
+    "id": 40,
+    "statement": "Epigenetic modifications regulate gene expression through histone modifications and DNA interactions."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic modifications involve complex dynamic molecular interactions."
+  },
+  {
+    "id": 42,
+    "statement": "Epigenetic modifications involve histone, DNA, chromatin interactions."
+  },
+  {
+    "id": 43,
+    "statement": "Logical soundness ensures valid conclusions from true premises, not accuracy."
+  },
+  {
+    "id": 44,
+    "statement": "Mathematics is essential in bioinformatics sequence analysis techniques."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic modifications involve complex molecular interactions of proteins, DNA, histones, and RNAs."
+  },
+  {
+    "id": 46,
+    "statement": "Epigenetic modifications involve histone, DNA interactions, and chromatin remodeling."
+  },
+  {
+    "id": 47,
+    "statement": "Epigenetic modifications regulate gene expression through histone-DNA interactions."
+  },
+  {
+    "id": 48,
+    "statement": "Chromatin remodeling dynamically reorganizes chromatin structure for gene regulation."
+  },
+  {
+    "id": 49,
+    "statement": "Seamless integration of computer science, biology, and math defines bioinformatics."
+  },
+  {
+    "id": 50,
+    "statement": "Emotional Intelligence encompasses interdependent components influencing each other"
+  },
+  {
+    "id": 51,
+    "statement": "Cultural context influences moral principles and their applications."
+  },
+  {
+    "id": 52,
+    "statement": "Honesty is not always the foundation of trust; context matters."
+  },
+  {
+    "id": 53,
+    "statement": "Emotional Intelligence develops through dynamic, interconnected component growth."
+  },
+  {
+    "id": 54,
+    "statement": "Emotional Intelligence comprises four interdependent components: Self-Awareness, Self-Regulation, Motivation, and Empathy."
+  },
+  {
+    "id": 55,
+    "statement": "Epigenetic regulation involves intricate interplay of multiple factors determining gene expression."
+  },
+  {
+    "id": 56,
+    "statement": "Emotional Intelligence consists of four interconnected branches: self-awareness, self-regulation, motivation, and empathy."
+  },
+  {
+    "id": 57,
+    "statement": "Interdisciplinary collaboration requires flexibility and knowledge sharing."
+  },
+  {
+    "id": 58,
+    "statement": "Epigenetics involves complex molecular interactions regulating gene expression dynamically."
+  },
+  {
+    "id": 59,
+    "statement": "Logical validity ensures conclusion's necessity from true premises."
+  },
+  {
+    "id": 60,
+    "statement": "Emotional Intelligence encompasses interconnected components influencing each other."
+  },
+  {
+    "id": 61,
+    "statement": "Epigenetic modifications involve histone, DNA interactions, and chromatin remodeling."
+  },
+  {
+    "id": 62,
+    "statement": "Emotional Intelligence integrates self-awareness, empathy, regulation, and motivation."
+  },
+  {
+    "id": 63,
+    "statement": "Emotional Intelligence consists of four interconnected components: self-awareness, self-regulation, motivation, and empathy."
+  },
+  {
+    "id": 64,
+    "statement": "Integrating multiple disciplines fosters effective data analysis."
+  },
+  {
+    "id": 65,
+    "statement": "Epigenetic changes result from intricate genetic-environmental interactions."
+  },
+  {
+    "id": 66,
+    "statement": "Logical soundness ensures validity, not accuracy or truth in arguments."
+  },
+  {
+    "id": 67,
+    "statement": "Cultural context influences moral principles and their applications."
+  },
+  {
+    "id": 68,
+    "statement": "Stochastic interactions refer to random epigenetic change agents."
+  },
+  {
+    "id": 69,
+    "statement": "Logical soundness ensures validity, not truth or accuracy in arguments."
+  },
+  {
+    "id": 70,
+    "statement": "Interdisciplinary collaboration requires flexibility, active knowledge sharing, and adaptation."
+  },
+  {
+    "id": 71,
+    "statement": "Bioinformatics is an interdisciplinary field combining multiple STEM disciplines."
+  },
+  {
+    "id": 72,
+    "statement": "Structured research guidelines enhance collaboration's efficiency and quality effectively"
+  },
+  {
+    "id": 73,
+    "statement": "Bioinformatics combines biology, computer science, math, and stats smoothly."
+  },
+  {
+    "id": 74,
+    "statement": "Bioinformatics combines computer science, biology, and statistics for data analysis."
+  },
+  {
+    "id": 75,
+    "statement": "Epigenetic changes occur due to genetic, environmental, and stochastic interactions."
+  },
+  {
+    "id": 76,
+    "statement": "Bioinformatics integrates computer science, biology, math, and statistics."
+  },
+  {
+    "id": 77,
+    "statement": "Epigenetic modifications alter chromatin structure through covalent or non-covalent interactions."
+  },
+  {
+    "id": 78,
+    "statement": "Post-translational modification is a protein's various alterations."
+  },
+  {
+    "id": 79,
+    "statement": "Epigenetic changes result from interplay of genetic, environmental, stochastic factors."
+  },
+  {
+    "id": 80,
+    "statement": "Bioinformatics combines computer science, biology, and statistics synergistically."
+  },
+  {
+    "id": 81,
+    "statement": "Logical soundness ensures conclusions follow from true premises faithfully."
+  },
+  {
+    "id": 82,
+    "statement": "Structured research guidelines promote clear communication in interdisciplinary collaborations."
+  },
+  {
+    "id": 83,
+    "statement": "Computer science, biology, statistics, and mathematics interact in bioinformatics."
+  },
+  {
+    "id": 84,
+    "statement": "Structured research frameworks provide clear guidelines for consistency."
+  },
+  {
+    "id": 85,
+    "statement": "Epigenetic modifications involve histone, DNA, chromatin complex interactions."
+  },
+  {
+    "id": 86,
+    "statement": "Chromatin remodeling dynamically reorganizes chromatin structure for gene regulation."
+  },
+  {
+    "id": 87,
+    "statement": "Logical soundness ensures valid conclusions from true premises only."
+  },
+  {
+    "id": 88,
+    "statement": "Epigenetic modifications involve histone-DNA, histone-histone, and chromatin remodeling interactions."
+  },
+  {
+    "id": 89,
+    "statement": "Epigenetic regulation involves complex molecular interactions dynamically regulating gene expression."
+  },
+  {
+    "id": 90,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 91,
+    "statement": "Bioinformatics combines multiple STEM disciplines for data analysis seamlessly."
+  },
+  {
+    "id": 92,
+    "statement": "Epigenetic changes result from dynamic genetic-environmental interactions."
+  },
+  {
+    "id": 93,
+    "statement": "Post-translational modification affects protein structure, function, and interactions."
+  },
+  {
+    "id": 94,
+    "statement": "Honesty's requirement can be overridden in specific culturally contextual situations."
+  },
+  {
+    "id": 95,
+    "statement": "Post-translational modification alters protein structure, function, and interactions."
+  },
+  {
+    "id": 96,
+    "statement": "Structured research frameworks facilitate interdisciplinary collaboration's efficiency."
+  },
+  {
+    "id": 97,
+    "statement": "Structured research guidelines promote clear communication in collaborations."
+  },
+  {
+    "id": 98,
+    "statement": "Bioinformatics combines biology, computer science, mathematics, and statistics seamlessly."
+  },
+  {
+    "id": 99,
+    "statement": "Bioinformatics integrates computer science, biology, statistics, and mathematics."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 25,
+  "statement": "Bioinformatics is a multidisciplinary field combining multiple disciplines."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 25,
+  "statement": "Bioinformatics is a multidisciplinary field combining multiple disciplines."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'll start by saying that I'm going to choose item 25:
+
+Item to Discuss:
+{
+"id": 25,
+"statement": "Bioinformatics is a multidisciplinary field combining multiple disciplines."
+}
+
+Things I’m Uncertain About This Item:
+I'm uncertain about what "multiple disciplines" specifically means in this context.
+
+Specific Clarifying Question:
+What does "multiple disciplines" encompass in the field of bioinformatics? Does it refer to biology, computer science, mathematics, statistics, and other relevant fields?

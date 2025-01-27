@@ -1,0 +1,457 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Mathematical rigor involves precision, accuracy, thoroughness, and systematic approach."
+  },
+  {
+    "id": 2,
+    "statement": "Cultural and historical contexts shape moral objectivity through relativism."
+  },
+  {
+    "id": 3,
+    "statement": "Mathematical rigor's foundation relies on explicit assumptions and data quality."
+  },
+  {
+    "id": 4,
+    "statement": "Mathematical rigor requires precision, accuracy, and thoroughness jointly."
+  },
+  {
+    "id": 5,
+    "statement": "Emotional intelligence involves self-awareness, social awareness, and motivation control"
+  },
+  {
+    "id": 6,
+    "statement": "Mathematical rigor depends on underlying assumptions and data quality."
+  },
+  {
+    "id": 7,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 8,
+    "statement": "Mathematical rigor's foundation involves philosophical concepts of objectivity, certainty, universality, and logical coherence."
+  },
+  {
+    "id": 9,
+    "statement": "Long non-coding RNAs regulate gene expression through histone modification."
+  },
+  {
+    "id": 10,
+    "statement": "Epigenetic modifications like histone methylation compact chromatin, inhibiting gene expression."
+  },
+  {
+    "id": 11,
+    "statement": "Logical soundness ensures validity, reliability, and consistency in mathematical rigor."
+  },
+  {
+    "id": 12,
+    "statement": "Emotional intelligence involves perceiving, reasoning, understanding, applying, and regulating emotions."
+  },
+  {
+    "id": 13,
+    "statement": "Data replicability is a necessary but insufficient condition for reliability"
+  },
+  {
+    "id": 14,
+    "statement": "Mathematical modeling accuracy refers to model's predictions validity."
+  },
+  {
+    "id": 15,
+    "statement": "Moral objectivity is relative and influenced by cultural context."
+  },
+  {
+    "id": 16,
+    "statement": "Questioning language clarifies important concepts in technical writing."
+  },
+  {
+    "id": 17,
+    "statement": "Logical soundness ensures mathematical rigor's validity, reliability, and consistency."
+  },
+  {
+    "id": 18,
+    "statement": "Emotional intelligence involves self-awareness, social awareness, and motivation control."
+  },
+  {
+    "id": 19,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 20,
+    "statement": "Logical soundness ensures mathematical proof's validity and accuracy."
+  },
+  {
+    "id": 21,
+    "statement": "Mathematical rigor combines precision, accuracy, and thoroughness"
+  },
+  {
+    "id": 22,
+    "statement": "Mathematical rigor encompasses precision, accuracy, thoroughness, and systematic approach"
+  },
+  {
+    "id": 23,
+    "statement": "Data replicability relies on robust methodology for accuracy and reliability."
+  },
+  {
+    "id": 24,
+    "statement": "Moral objectivity is shaped by complex cultural and historical contexts."
+  },
+  {
+    "id": 25,
+    "statement": "Accurate and reliable data is crucial for mathematical modeling and analytics."
+  },
+  {
+    "id": 26,
+    "statement": "Mathematical rigor is a combination of precision, accuracy, thoroughness, and system."
+  },
+  {
+    "id": 27,
+    "statement": "Universality in math refers to truths being applicable everywhere."
+  },
+  {
+    "id": 28,
+    "statement": "Histone modifications alter chromatin structure through epigenetic inheritance."
+  },
+  {
+    "id": 29,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure definition"
+  },
+  {
+    "id": 30,
+    "statement": "Cultural and social norms shape honesty standards development positively."
+  },
+  {
+    "id": 31,
+    "statement": "Philosophical underpinnings shape mathematical rigor through objectivity, certainty, universality, and logical coherence."
+  },
+  {
+    "id": 32,
+    "statement": "Epigenetic inheritance ensures gene expression patterns are passed to cells through inherited epigenetic marks."
+  },
+  {
+    "id": 33,
+    "statement": "Logical soundness is necessary but insufficient for mathematical rigor's validity."
+  },
+  {
+    "id": 34,
+    "statement": "Epigenetic modifications fine-tune gene expression through multiple mechanisms."
+  },
+  {
+    "id": 35,
+    "statement": "Mathematical assumptions can be implicit or explicit, but justifiable."
+  },
+  {
+    "id": 36,
+    "statement": "Emotional intelligence incorporates self-awareness, emotional regulation, and social skills complexity."
+  },
+  {
+    "id": 37,
+    "statement": "Genome analysis requires combination of computer science, biology, mathematics."
+  },
+  {
+    "id": 38,
+    "statement": "Mathematical rigor relies on explicit assumptions and high-quality data"
+  },
+  {
+    "id": 39,
+    "statement": "Mathematical rigor's foundation involves philosophical underpinnings."
+  },
+  {
+    "id": 40,
+    "statement": "Mathematical rigor involves precision, accuracy, thoroughness, and systematic approach holistically."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic modifications influence gene expression through chromatin, histone modification, methylation"
+  },
+  {
+    "id": 42,
+    "statement": "Epigenetic modifications influence chromatin structure through histone modifications."
+  },
+  {
+    "id": 43,
+    "statement": "Rigorous proof in math ensures validity and accuracy precisely."
+  },
+  {
+    "id": 44,
+    "statement": "Logical soundness ensures validity, reliability, and consistency in mathematical rigor through logical coherence."
+  },
+  {
+    "id": 45,
+    "statement": "Logical soundness in math ensures validity and accuracy through rigorous proof"
+  },
+  {
+    "id": 46,
+    "statement": "Logical soundness is a prerequisite for formal proof or modeling accuracy."
+  },
+  {
+    "id": 47,
+    "statement": "Epigenetic modifications regulate chromatin structure through enzymes mediating histone modifications."
+  },
+  {
+    "id": 48,
+    "statement": "Logical soundness ensures validity, reliability, and consistency in mathematical rigor."
+  },
+  {
+    "id": 49,
+    "statement": "Mathematical assumptions' transparency is crucial for model's robustness and reliability."
+  },
+  {
+    "id": 50,
+    "statement": "Epigenetic modifications regulate chromatin structure through various mechanisms."
+  },
+  {
+    "id": 51,
+    "statement": "Cultural, social, and situational factors influence honesty norms development."
+  },
+  {
+    "id": 52,
+    "statement": "Lying may be morally justified to prevent extreme harm"
+  },
+  {
+    "id": 53,
+    "statement": "Emotional intelligence involves self-awareness, social awareness, and regulation."
+  },
+  {
+    "id": 54,
+    "statement": "Mathematical assumptions can be explicit, implicit, or a combination, requiring transparent documentation."
+  },
+  {
+    "id": 55,
+    "statement": "Moral objectivity balances relativity and absolutism."
+  },
+  {
+    "id": 56,
+    "statement": "Mathematical rigor relies on explicit assumptions justification."
+  },
+  {
+    "id": 57,
+    "statement": "Mathematical rigor combines precision, accuracy, and systematic approach synergistically."
+  },
+  {
+    "id": 58,
+    "statement": "Epigenetic modifications physically alter chromatin structure, regulating gene expression."
+  },
+  {
+    "id": 59,
+    "statement": "Mathematical model reliability depends on accuracy and assumption transparency."
+  },
+  {
+    "id": 60,
+    "statement": "Data replicability increases confidence in findings' accuracy and consistency."
+  },
+  {
+    "id": 61,
+    "statement": "Mathematical rigor's foundation involves philosophical underpinnings and influences"
+  },
+  {
+    "id": 62,
+    "statement": "Emotional intelligence encompasses self-awareness, motivation, and social skills complexity."
+  },
+  {
+    "id": 63,
+    "statement": "Lying may be morally justified in some situations to avoid harm"
+  },
+  {
+    "id": 64,
+    "statement": "Data replicability is a necessary but insufficient condition for validity."
+  },
+  {
+    "id": 65,
+    "statement": "Assumptions in math modeling must be explicitly justified for accuracy."
+  },
+  {
+    "id": 66,
+    "statement": "Transparency is essential for mathematical model's robustness."
+  },
+  {
+    "id": 67,
+    "statement": "Logical soundness ensures mathematical proof's validity and accuracy through rigorous proof."
+  },
+  {
+    "id": 68,
+    "statement": "Emotional intelligence incorporates self-awareness, social awareness, and motivation control."
+  },
+  {
+    "id": 69,
+    "statement": "Cultural relativism challenges moral objectivity's universality."
+  },
+  {
+    "id": 70,
+    "statement": "Mathematical modeling accuracy ensures predictions validity through reliability and robustness."
+  },
+  {
+    "id": 71,
+    "statement": "Mathematical rigor's philosophical foundations ensure objective, certain, and universal truth pursuit"
+  },
+  {
+    "id": 72,
+    "statement": "Histone modifications alter chromatin structure through epigenetic inheritance mechanisms."
+  },
+  {
+    "id": 73,
+    "statement": "Epigenetic chromatin structure is influenced by histone modifications and enzymes."
+  },
+  {
+    "id": 74,
+    "statement": "In mathematical rigor, objectivity, certainty, and universality shape foundations."
+  },
+  {
+    "id": 75,
+    "statement": "Mathematical rigor rooted in philosophical foundations of epistemology."
+  },
+  {
+    "id": 76,
+    "statement": "Lying can be morally justified in extreme harm-avoidance situations."
+  },
+  {
+    "id": 77,
+    "statement": "Moral objectivity challenged by cultural relativism's context-dependent morality."
+  },
+  {
+    "id": 78,
+    "statement": "Cultural and social contexts shape honesty norms through beliefs."
+  },
+  {
+    "id": 79,
+    "statement": "Mathematical rigor relies on accurate, reliable, and relevant data quality"
+  },
+  {
+    "id": 80,
+    "statement": "Mathematical rigor relies on philosophical concepts of objectivity, certainty, universality, logical coherence."
+  },
+  {
+    "id": 81,
+    "statement": "Data replicability is a necessary but insufficient condition for accuracy"
+  },
+  {
+    "id": 82,
+    "statement": "Epigenetic modifications regulate chromatin structure through multiple mechanisms."
+  },
+  {
+    "id": 83,
+    "statement": "Logical soundness ensures mathematical proof's validity and reliability."
+  },
+  {
+    "id": 84,
+    "statement": "Philosophical underpinnings of mathematical rigor include objectivity, certainty, universality, and coherence."
+  },
+  {
+    "id": 85,
+    "statement": "Logical soundness ensures conclusions follow necessarily from premises."
+  },
+  {
+    "id": 86,
+    "statement": "Epigenetic modifications affect chromatin structure which regulates gene expression"
+  },
+  {
+    "id": 87,
+    "statement": "Epigenetic inheritance ensures gene expression patterns are passed from cells."
+  },
+  {
+    "id": 88,
+    "statement": "Moral objectivity is challenged by cultural relativism's context-dependent morality."
+  },
+  {
+    "id": 89,
+    "statement": "Cultural and historical contexts shape moral objectivity through relativism."
+  },
+  {
+    "id": 90,
+    "statement": "Mathematical rigor relies on philosophical underpinnings like objectivity, certainty, universality, and logical coherence."
+  },
+  {
+    "id": 91,
+    "statement": "Logical soundness ensures mathematical proof's validity, reliability, consistency."
+  },
+  {
+    "id": 92,
+    "statement": "Epigenetic modifications regulate chromatin structure through enzyme-mediated histone modifications"
+  },
+  {
+    "id": 93,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure."
+  },
+  {
+    "id": 94,
+    "statement": "Lying may be morally justifiable in extreme harm-avoidance situations."
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic changes occur synchronously through histone modifications and compaction."
+  },
+  {
+    "id": 96,
+    "statement": "Emotional intelligence involves self-awareness, social awareness, and motivation control."
+  },
+  {
+    "id": 97,
+    "statement": "Mathematical models can be reliable without explicit assumptions stated."
+  },
+  {
+    "id": 98,
+    "statement": "Objectivity, certainty, and universality shape mathematical rigor foundations."
+  },
+  {
+    "id": 99,
+    "statement": "Genome data analysis requires computational power and expertise."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 14,
+  "statement": "Mathematical modeling accuracy refers to model's predictions validity."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 14,
+  "statement": "Mathematical modeling accuracy refers to model's predictions validity."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base item. I've chosen item #14:
+
+{
+"id": 14,
+"statement": "Mathematical modeling accuracy refers to model's predictions validity."
+}
+
+I'm least confident about the term "predictions validity". Can you explain to me what exactly is meant by "validity" in this context? I'm not sure if it refers to how well the model matches reality, or if there's something else at play.
+
+What are your thoughts on this?

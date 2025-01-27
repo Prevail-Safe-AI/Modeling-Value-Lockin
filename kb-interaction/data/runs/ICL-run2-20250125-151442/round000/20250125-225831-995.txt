@@ -1,0 +1,462 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Trust building involves shared experiences, empathy, and consistent actions."
+  },
+  {
+    "id": 2,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 3,
+    "statement": "Consistency and empathy foster trust through reliable honesty."
+  },
+  {
+    "id": 4,
+    "statement": "Cultural norms shape individual attitudes towards honesty through socialization."
+  },
+  {
+    "id": 5,
+    "statement": "Consistency, empathy, and shared values build trust beyond honesty."
+  },
+  {
+    "id": 6,
+    "statement": "Logical soundness relies on accurate, complete, and relevant premises."
+  },
+  {
+    "id": 7,
+    "statement": "Histone modifications regulate chromatin structure and gene expression by altering nucleosome positioning and accessibility."
+  },
+  {
+    "id": 8,
+    "statement": "Epigenetic regulation involves intricate, dynamic interplay of multiple factors."
+  },
+  {
+    "id": 9,
+    "statement": "Epigenetic modifications play crucial roles in gene regulation."
+  },
+  {
+    "id": 10,
+    "statement": "Consistency, empathy, and shared values cumulatively build trust."
+  },
+  {
+    "id": 11,
+    "statement": "Accountability fosters trust by demonstrating responsibility and transparency."
+  },
+  {
+    "id": 12,
+    "statement": "Formal validity only cares about logical structure, not truth accuracy"
+  },
+  {
+    "id": 13,
+    "statement": "Logical soundness demands accurate, true, and contextually relevant premises."
+  },
+  {
+    "id": 14,
+    "statement": "Cultural norms shape honesty through subtle influence on attitudes."
+  },
+  {
+    "id": 15,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 16,
+    "statement": "Chromatin structure and histone modifications regulate gene expression pathways"
+  },
+  {
+    "id": 17,
+    "statement": "Epigenetic regulators modify chromatin for gene expression control."
+  },
+  {
+    "id": 18,
+    "statement": "Epigenetic regulators modify chromatin structure through histone modifications, DNA methylation, and chromatin remodeling interactions."
+  },
+  {
+    "id": 19,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 20,
+    "statement": "Cultural norms shape honesty through subtle social learning mechanisms."
+  },
+  {
+    "id": 21,
+    "statement": "Emotional Intelligence involves developing resilience in coping with adversity."
+  },
+  {
+    "id": 22,
+    "statement": "Formal validity ensures logical correctness regardless of premise truth."
+  },
+  {
+    "id": 23,
+    "statement": "Epigenetic modifications control chromatin structure, regulating gene expression."
+  },
+  {
+    "id": 24,
+    "statement": "Cultural norms shape honesty attitudes through socialization and internalization."
+  },
+  {
+    "id": 25,
+    "statement": "Histone modifications regulate chromatin structure and gene expression delicately."
+  },
+  {
+    "id": 26,
+    "statement": "Cultural norms shape honesty through subtle social learning mechanisms."
+  },
+  {
+    "id": 27,
+    "statement": "Formal validity ensures logical correctness, regardless of premise truth."
+  },
+  {
+    "id": 28,
+    "statement": "Epigenetic modifications alter DNA chemical changes to regulate gene expression."
+  },
+  {
+    "id": 29,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone modifications and DNA methylation."
+  },
+  {
+    "id": 30,
+    "statement": "Epigenetic modifications directly regulate gene expression patterns through chromatin structure alteration."
+  },
+  {
+    "id": 31,
+    "statement": "Trust building involves shared experiences, interactions, and relationships"
+  },
+  {
+    "id": 32,
+    "statement": "Logical soundness relies on accurate, true, and relevant premises for validity."
+  },
+  {
+    "id": 33,
+    "statement": "Mutual understanding in trust building involves empathy, shared knowledge, and open communication."
+  },
+  {
+    "id": 34,
+    "statement": "Formal validity ensures logical soundness, regardless of premise truth accuracy."
+  },
+  {
+    "id": 35,
+    "statement": "Enzyme recruitment facilitates epigenetic modification and chromatin structure regulation."
+  },
+  {
+    "id": 36,
+    "statement": "Cultural norms shape honesty attitudes through social learning indirectly."
+  },
+  {
+    "id": 37,
+    "statement": "Formal validity assesses logical structure, ignoring premise truth's accuracy."
+  },
+  {
+    "id": 38,
+    "statement": "Formal validity ensures logical correctness despite premise truth accuracy."
+  },
+  {
+    "id": 39,
+    "statement": "Consistency and authenticity build trust through reliable honesty."
+  },
+  {
+    "id": 40,
+    "statement": "Epigenetic regulators modify chromatin structure through histone modifications, DNA methylation, and chromatin remodeling interactions."
+  },
+  {
+    "id": 41,
+    "statement": "Oncogenes promote uncontrolled cell growth while activating apoptosis."
+  },
+  {
+    "id": 42,
+    "statement": "Epigenetic modifications influence gene expression and cancer development."
+  },
+  {
+    "id": 43,
+    "statement": "Trust building involves harmonious integration of shared experiences, empathy, and consistency."
+  },
+  {
+    "id": 44,
+    "statement": "Honesty is a necessary but insufficient condition for trust."
+  },
+  {
+    "id": 45,
+    "statement": "Mutual understanding fosters empathy, rapport, and stronger relationships through collaboration."
+  },
+  {
+    "id": 46,
+    "statement": "Honesty is a necessary but insufficient condition for trust."
+  },
+  {
+    "id": 47,
+    "statement": "Trust building involves shared experiences, mutual understanding, and long-term connections."
+  },
+  {
+    "id": 48,
+    "statement": "Trust is built through empathy, shared values, and open communication."
+  },
+  {
+    "id": 49,
+    "statement": "Epigenetic modifications occur via enzyme recruitment to specific genomic regions"
+  },
+  {
+    "id": 50,
+    "statement": "Emotional Intelligence involves interdependent self-awareness, recognition, and flourishing habits."
+  },
+  {
+    "id": 51,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression.awaiting"
+  },
+  {
+    "id": 52,
+    "statement": "Epigenetic regulators control gene expression through chromatin modification and accessibility"
+  },
+  {
+    "id": 53,
+    "statement": "Epigenetic modifications alter chromatin structure, affecting gene expression."
+  },
+  {
+    "id": 54,
+    "statement": "Oncogenes promote cell growth by disrupting normal cell cycle regulation"
+  },
+  {
+    "id": 55,
+    "statement": "Logical soundness demands accurate, true and relevant premises."
+  },
+  {
+    "id": 56,
+    "statement": "Chromatin structure and histone modifications regulate gene expression patterns."
+  },
+  {
+    "id": 57,
+    "statement": "Mutual understanding fosters empathy, rapport, and stronger relationships through shared comprehension."
+  },
+  {
+    "id": 58,
+    "statement": "Trust building involves shared values, empathy, and open communication."
+  },
+  {
+    "id": 59,
+    "statement": "Consistency, empathy, and shared values synergistically build trust"
+  },
+  {
+    "id": 60,
+    "statement": "Expertise builds trust through credibility, consistency, objectivity, and problem-solving."
+  },
+  {
+    "id": 61,
+    "statement": "Cancer development involves complex interactions of multiple genetic and environmental factors."
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic modifications alter chromatin structure, regulating gene expression access."
+  },
+  {
+    "id": 63,
+    "statement": "Epigenetic modifications alter chromatin structure regulating gene expression dynamically."
+  },
+  {
+    "id": 64,
+    "statement": "Open communication fosters understanding, empathy, and transparency in trust building."
+  },
+  {
+    "id": 65,
+    "statement": "Formal validity evaluates logical structure, ignoring truth accuracy."
+  },
+  {
+    "id": 66,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structural changes."
+  },
+  {
+    "id": 67,
+    "statement": "Logical soundness demands context-relevant premises for validity to ensure correctness"
+  },
+  {
+    "id": 68,
+    "statement": "Honesty, consistency, and empathy combined build strong trust relationships"
+  },
+  {
+    "id": 69,
+    "statement": "Cancer development involves complex interactions of genetic and environmental factors."
+  },
+  {
+    "id": 70,
+    "statement": "Cancer outcomes depend on complex interactions between genetic and environmental factors."
+  },
+  {
+    "id": 71,
+    "statement": "Epigenetic modifications alter chromatin structure and gene expression patterns."
+  },
+  {
+    "id": 72,
+    "statement": "Cultural norms shape honesty attitudes through complex interplay"
+  },
+  {
+    "id": 73,
+    "statement": "Consistency, empathy, shared values synergize to build strong trust relationships."
+  },
+  {
+    "id": 74,
+    "statement": "Cultural norms shape individual values through social learning process"
+  },
+  {
+    "id": 75,
+    "statement": "Accountability fosters trust through transparency, responsibility, and credibility."
+  },
+  {
+    "id": 76,
+    "statement": "Logical soundness demands accurate, true, and contextually relevant premises."
+  },
+  {
+    "id": 77,
+    "statement": "Emotional Intelligence fosters emotional well-being through evidence-based practices"
+  },
+  {
+    "id": 78,
+    "statement": "Formal validity ensures logical correctness regardless of premise truth accuracy."
+  },
+  {
+    "id": 79,
+    "statement": "Trust building involves synergy of shared experiences, empathy, and actions."
+  },
+  {
+    "id": 80,
+    "statement": "Cultural norms shape honesty attitudes through social learning mechanisms."
+  },
+  {
+    "id": 81,
+    "statement": "Histone modifications alter chromatin structure to regulate gene expression access"
+  },
+  {
+    "id": 82,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure through histone modifications, DNA methylation, and chromatin remodeling complexes."
+  },
+  {
+    "id": 83,
+    "statement": "Lying can be morally justifiable in extreme circumstances."
+  },
+  {
+    "id": 84,
+    "statement": "Trust building involves multiple factors beyond honesty and shared values."
+  },
+  {
+    "id": 85,
+    "statement": "Cultural norms shape honesty attitudes through socialization mechanisms."
+  },
+  {
+    "id": 86,
+    "statement": "Cultural norms subtly shape honesty attitudes through social learning."
+  },
+  {
+    "id": 87,
+    "statement": "Epigenetic modifications influence chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 88,
+    "statement": "Accountability, responsibility, and transparency build trust through ownership."
+  },
+  {
+    "id": 89,
+    "statement": "Internalization refers to the process of absorbing cultural norms and values."
+  },
+  {
+    "id": 90,
+    "statement": "Logical soundness demands accurate and relevant premises for validity."
+  },
+  {
+    "id": 91,
+    "statement": "Formal validity assesses logical structure, independent of premise truth."
+  },
+  {
+    "id": 92,
+    "statement": "Cultural norms shape honesty attitudes through internalization and socialization."
+  },
+  {
+    "id": 93,
+    "statement": "DNA methylation compacts chromatin, recruiting proteins for gene silencing."
+  },
+  {
+    "id": 94,
+    "statement": "Cultural norms shape individual attitudes towards honesty through socialization."
+  },
+  {
+    "id": 95,
+    "statement": "Histone modifications regulate chromatin structure and gene expression with precision."
+  },
+  {
+    "id": 96,
+    "statement": "Consistency, empathy, and shared values strengthen trust relationships."
+  },
+  {
+    "id": 97,
+    "statement": "Trust building involves shared knowledge, empathy, and open communication harmoniously."
+  },
+  {
+    "id": 98,
+    "statement": "Consistency, empathy, and shared values build trust over time."
+  },
+  {
+    "id": 99,
+    "statement": "Emotional Intelligence involves interdependent self-awareness, recognition, and flourishing habits."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 71,
+  "statement": "Epigenetic modifications alter chromatin structure and gene expression patterns."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 71,
+  "statement": "Epigenetic modifications alter chromatin structure and gene expression patterns."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base. I've chosen a statement that caught my attention: 
+
+Item to Discuss:
+```
+{
+  "id": 71,
+  "statement": "Epigenetic modifications alter chromatin structure and gene expression patterns."
+}
+```
+
+Things I’m Uncertain About This Item:
+* I'm not entirely sure how epigenetic modifications specifically alter chromatin structure to regulate gene expression.
+* I'd like clarification on the relationship between epigenetic modifications and chromatin structure in determining gene expression patterns.
+
+Can you help me understand these aspects better? Maybe you can provide some insights or guide me with some specific clarifying questions to ask a tutor?

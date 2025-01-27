@@ -1,0 +1,463 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Research validity relies on methodology, data quality, and internal validity."
+  },
+  {
+    "id": 2,
+    "statement": "Peer review assesses research comprehensively, considering methodology, data quality, validity, significance, impact, originality, clarity, ethical considerations."
+  },
+  {
+    "id": 3,
+    "statement": "Electrostatic force arises from charge, distance, and orientation dependencies."
+  },
+  {
+    "id": 4,
+    "statement": "Medium properties influence electrostatic forces through dielectric constant, polarization, and conductivity."
+  },
+  {
+    "id": 5,
+    "statement": "Research validity includes internal, external, and construct validity measures."
+  },
+  {
+    "id": 6,
+    "statement": "Logical coherence in scientific axioms ensures consistency with underlying principles"
+  },
+  {
+    "id": 7,
+    "statement": "Mimicry involves both conscious and unconscious neural synchronization."
+  },
+  {
+    "id": 8,
+    "statement": "Histone-modifying enzymes possess distinct activities for chromatin modification."
+  },
+  {
+    "id": 9,
+    "statement": "Electrostatic forces rely on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 10,
+    "statement": "Histone modifications regulate gene expression through chromatin structure."
+  },
+  {
+    "id": 11,
+    "statement": "Histone-modifying enzymes exhibit distinct activities affecting chromatin structure."
+  },
+  {
+    "id": 12,
+    "statement": "Adverb 'primarily' indicates relative importance in a statement."
+  },
+  {
+    "id": 13,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium properties."
+  },
+  {
+    "id": 14,
+    "statement": "Peer review assesses research quality through evaluating methodology"
+  },
+  {
+    "id": 15,
+    "statement": "Electrostatic force depends on medium, geometry, and surface properties."
+  },
+  {
+    "id": 16,
+    "statement": "Scientific theories rely on underlying principles for logical coherence."
+  },
+  {
+    "id": 17,
+    "statement": "Histone-modifying enzymes regulate chromatin structure for gene expression."
+  },
+  {
+    "id": 18,
+    "statement": "Dielectric constant measures material's ability to polarize electric field."
+  },
+  {
+    "id": 19,
+    "statement": "Peer review limitations include bias, limited expertise, time constraints"
+  },
+  {
+    "id": 20,
+    "statement": "Peer review ensures research credibility and reliability through evaluation."
+  },
+  {
+    "id": 21,
+    "statement": "Peer review assesses research validity through methodology, data quality, and results"
+  },
+  {
+    "id": 22,
+    "statement": "Scientific axioms balance logical coherence and empirical evidence consistently."
+  },
+  {
+    "id": 23,
+    "statement": "Scientific knowledge evolves through continuous refinement."
+  },
+  {
+    "id": 24,
+    "statement": "Scientific axioms are assumptions with rigorous testing and verification."
+  },
+  {
+    "id": 25,
+    "statement": "Peer review assesses research validity through methodology, data quality, and results, considering study design, sampling, data collection, analysis, data accuracy, integrity, interpretation, findings, significance, and limitations."
+  },
+  {
+    "id": 26,
+    "statement": "Validity in research refers to accuracy and generalizability of findings."
+  },
+  {
+    "id": 27,
+    "statement": "Validity in research refers to accuracy and generalizability."
+  },
+  {
+    "id": 28,
+    "statement": "Scientific axioms require ongoing testing and continuous verification."
+  },
+  {
+    "id": 29,
+    "statement": "Peer review assesses research validity through methodology and data quality."
+  },
+  {
+    "id": 30,
+    "statement": "Electrostatic force depends on charge, distance, orientation, and medium properties."
+  },
+  {
+    "id": 31,
+    "statement": "Scientific axioms are assumptions open to revision based evidence"
+  },
+  {
+    "id": 32,
+    "statement": "Scientific axioms balance logical coherence and empirical evidence."
+  },
+  {
+    "id": 33,
+    "statement": "Adverb 'primarily' indicates relative importance of a statement."
+  },
+  {
+    "id": 34,
+    "statement": "Peer review limitations include bias, limited expertise, time constraints."
+  },
+  {
+    "id": 35,
+    "statement": "Peer review evaluates research for validity, methodology, significance, and clarity."
+  },
+  {
+    "id": 36,
+    "statement": "Medium properties significantly influence electrostatic forces in certain situations."
+  },
+  {
+    "id": 37,
+    "statement": "Scientific knowledge evolves through complex technological and societal interactions"
+  },
+  {
+    "id": 38,
+    "statement": "Social learning influences cultural norms through complex, multifaceted processes"
+  },
+  {
+    "id": 39,
+    "statement": "Dielectric constant measures a material's ability to polarize electric fields."
+  },
+  {
+    "id": 40,
+    "statement": "Data quality in peer review includes accuracy, precision, reliability, and more."
+  },
+  {
+    "id": 41,
+    "statement": "Scientific axioms are assumptions open to revision always"
+  },
+  {
+    "id": 42,
+    "statement": "Dielectric constant and polarization affect electrostatic force strength significantly"
+  },
+  {
+    "id": 43,
+    "statement": "Peer review evaluates research methodology, data quality, and validity."
+  },
+  {
+    "id": 44,
+    "statement": "Mimicry is an automatic and unconscious simulation of others' emotions."
+  },
+  {
+    "id": 45,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily."
+  },
+  {
+    "id": 46,
+    "statement": "Peer review assesses research validity through methodology, data quality, and results."
+  },
+  {
+    "id": 47,
+    "statement": "Social learning influences cultural norms through direct observation."
+  },
+  {
+    "id": 48,
+    "statement": "Peer review involves evaluating research comprehensiveness thoroughly."
+  },
+  {
+    "id": 49,
+    "statement": "Medium properties influence electrostatic force through specific circumstances."
+  },
+  {
+    "id": 50,
+    "statement": "Mimicry involves both conscious and unconscious imitation processes simultaneously."
+  },
+  {
+    "id": 51,
+    "statement": "Honesty is essential for building trust in personal relationships"
+  },
+  {
+    "id": 52,
+    "statement": "Electrostatic force depends on charge, distance, and medium properties."
+  },
+  {
+    "id": 53,
+    "statement": "Scientific axioms balance logical coherence and empirical evidence."
+  },
+  {
+    "id": 54,
+    "statement": "Electrostatic force depends on charge, distance, and orientation primarily, influenced by medium properties, geometry, and surface properties."
+  },
+  {
+    "id": 55,
+    "statement": "Medium properties dielectric constant, polarization, conductivity affect electrostatic force combinedly."
+  },
+  {
+    "id": 56,
+    "statement": "Histone modifications regulate chromatin structure to control gene expression."
+  },
+  {
+    "id": 57,
+    "statement": "Social learning influences cultural norms through observation and imitation"
+  },
+  {
+    "id": 58,
+    "statement": "Dielectric constant measures material's ability to be polarized-electrically"
+  },
+  {
+    "id": 59,
+    "statement": "Scientific knowledge evolves through complex interactions of various factors."
+  },
+  {
+    "id": 60,
+    "statement": "Peer review assesses validity through study design, sampling, measurement, analysis."
+  },
+  {
+    "id": 61,
+    "statement": "Electrostatic force depends on charge, distance, and orientation, primarily."
+  },
+  {
+    "id": 62,
+    "statement": "Research validity includes internal, external, and construct validity measures."
+  },
+  {
+    "id": 63,
+    "statement": "Scientific axioms require rigorous testing and verification always."
+  },
+  {
+    "id": 64,
+    "statement": "Data quality refers to accuracy, precision, reliability, and transparency"
+  },
+  {
+    "id": 65,
+    "statement": "Epigenetic histone modifications regulate gene expression through chromatin structure."
+  },
+  {
+    "id": 66,
+    "statement": "Electrostatic forces are influenced by medium properties variably"
+  },
+  {
+    "id": 67,
+    "statement": "Research validity refers to study's measurement accuracy and generalizability."
+  },
+  {
+    "id": 68,
+    "statement": "Mimicry combines unconscious and conscious imitation processes."
+  },
+  {
+    "id": 69,
+    "statement": "Medium, geometry, and surface properties jointly influence electrostatic force."
+  },
+  {
+    "id": 70,
+    "statement": "Peer review assesses validity through study design, sampling, and criticism."
+  },
+  {
+    "id": 71,
+    "statement": "Electrostatic forces depend on charge, distance, and medium properties variably."
+  },
+  {
+    "id": 72,
+    "statement": "Electrostatic force arises from charge, distance, and orientation interaction"
+  },
+  {
+    "id": 73,
+    "statement": "Scientific axioms require rigorous testing for consistency and validity."
+  },
+  {
+    "id": 74,
+    "statement": "Dielectric constant, polarization, and conductivity affect electrostatic force strength."
+  },
+  {
+    "id": 75,
+    "statement": "Generalizability assesses applicability of research findings across contexts"
+  },
+  {
+    "id": 76,
+    "statement": "Scientific knowledge evolves through continuous testing refinement."
+  },
+  {
+    "id": 77,
+    "statement": "Electrostatic force depends on charge and distance only."
+  },
+  {
+    "id": 78,
+    "statement": "Funding agencies' priorities and biases influence research outcomes directly."
+  },
+  {
+    "id": 79,
+    "statement": "Generalizability refers to applicability of research findings to other contexts"
+  },
+  {
+    "id": 80,
+    "statement": "Electrostatic force depends on charge, distance, and orientation."
+  },
+  {
+    "id": 81,
+    "statement": "Electrostatic force arises from electric field, charge, distance, orientation and medium properties."
+  },
+  {
+    "id": 82,
+    "statement": "Medium properties interact synergistically,ANTS antagonist, indpendently on electrostatic forces."
+  },
+  {
+    "id": 83,
+    "statement": "Scientific axioms are provisional assumptions subject to revision."
+  },
+  {
+    "id": 84,
+    "statement": "Unconscious social learning influences cultural norms through subtle observations."
+  },
+  {
+    "id": 85,
+    "statement": "Histone modifications regulate gene expression through chromatin structure relaxation"
+  },
+  {
+    "id": 86,
+    "statement": "Dielectric constant reduces electrostatic force through screening and polarization."
+  },
+  {
+    "id": 87,
+    "statement": "Scientific axioms are assumptions open to rigorous testing and verification."
+  },
+  {
+    "id": 88,
+    "statement": "Research validity includes internal, external, and construct validity."
+  },
+  {
+    "id": 89,
+    "statement": "Peer review limitations include bias, limited expertise, time constraints carefully."
+  },
+  {
+    "id": 90,
+    "statement": "Electrostatic force arises from charge, distance, and orientation relationships."
+  },
+  {
+    "id": 91,
+    "statement": "Research validity encompasses internal, external, and construct validity measures."
+  },
+  {
+    "id": 92,
+    "statement": "Dielectric constant, polarization, and conductivity impact electrostatic forces."
+  },
+  {
+    "id": 93,
+    "statement": "Electrostatic forces influenced by dielectric constant, polarization, and conductivity."
+  },
+  {
+    "id": 94,
+    "statement": "Empirical consistency ensures scientific theories align with observational evidence."
+  },
+  {
+    "id": 95,
+    "statement": "Electrostatic forces depend on charge, distance, and medium properties."
+  },
+  {
+    "id": 96,
+    "statement": "Social learning can influence cultural norms through unconscious observation."
+  },
+  {
+    "id": 97,
+    "statement": "Electrostatic force depends on charge, distance, and orientation."
+  },
+  {
+    "id": 98,
+    "statement": "Medium properties influence electrostatic force through dielectric constant, polarization, conductivity."
+  },
+  {
+    "id": 99,
+    "statement": "Electrostatic force arises from charge, distance, orientation, and medium interaction."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 50,
+  "statement": "Mimicry involves both conscious and unconscious imitation processes simultaneously."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 50,
+  "statement": "Mimicry involves both conscious and unconscious imitation processes simultaneously."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss the item:
+
+{
+"id": 50,
+"statement": "Mimicry involves both conscious and unconscious imitation processes simultaneously."
+}
+
+I'm uncertain about this item because I'm not sure how conscious and unconscious imitation processes can coexist and interact simultaneously. It seems like a complex phenomenon.
+
+Can you elaborate on what you think is meant by this statement? Are you confident about this aspect of mimicry?
+
+Also, I'd love to ask some clarifying questions to better understand this concept. Here's my first question:
+
+How do you think conscious and unconscious imitation processes are related? Do they work together, or are they two separate mechanisms?
+
+Your thoughts?

@@ -1,0 +1,457 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Logical soundness demands harmony among truth, validity, consistency, and accuracy."
+  },
+  {
+    "id": 2,
+    "statement": "Honesty is morally right, with rare exceptions for protection."
+  },
+  {
+    "id": 3,
+    "statement": "Logical soundness demands harmony among truth, validity, consistency, and accuracy."
+  },
+  {
+    "id": 4,
+    "statement": "Internal consistency is a necessary, but insufficient condition for validity."
+  },
+  {
+    "id": 5,
+    "statement": "Electrostatic attraction stabilizes DNA double helix, secondary to hydrogen bonding and van der Waals interactions."
+  },
+  {
+    "id": 6,
+    "statement": "Premise relevance ensures logical soundness by linking premises to conclusions."
+  },
+  {
+    "id": 7,
+    "statement": "Electrostatic forces are secondary in DNA stability due to strength and distance."
+  },
+  {
+    "id": 8,
+    "statement": "Logical soundness demands harmony among truth, validity, and consistency."
+  },
+  {
+    "id": 9,
+    "statement": "Primary stability forces in DNA: hydrogen bonding, \u03c0-\u03c0 stacking, and covalent bonds."
+  },
+  {
+    "id": 10,
+    "statement": "Logical soundness demands harmony among truth, validity, and consistency."
+  },
+  {
+    "id": 11,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 12,
+    "statement": "Logical soundness demands harmonious coordination of truth, validity, and consistency."
+  },
+  {
+    "id": 13,
+    "statement": "Epigenetic modifications alter chromatin structure without DNA sequence changes, influencing gene expression"
+  },
+  {
+    "id": 14,
+    "statement": "Covalent bonds form DNA's sugar-phosphate backbone, not primary stability."
+  },
+  {
+    "id": 15,
+    "statement": "Logical soundness demands truth, relevance, and internal consistency for validity."
+  },
+  {
+    "id": 16,
+    "statement": "Internal consistency is necessary for logical soundness, not sufficient."
+  },
+  {
+    "id": 17,
+    "statement": "Covalent bonds provide mechanical stability and framework for DNA."
+  },
+  {
+    "id": 18,
+    "statement": "Internal consistency is necessary, but insufficient for logical soundness."
+  },
+  {
+    "id": 19,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure"
+  },
+  {
+    "id": 20,
+    "statement": "Coherence ensures harmony among truth, validity, and consistency in logical soundness."
+  },
+  {
+    "id": 21,
+    "statement": "Internal consistency is necessary but insufficient for logical soundness."
+  },
+  {
+    "id": 22,
+    "statement": "Honesty is generally a moral principle with exceptions."
+  },
+  {
+    "id": 23,
+    "statement": "Logical soundness demands harmony among truth, validity, consistency through evidence-based reasoning."
+  },
+  {
+    "id": 24,
+    "statement": "Logical soundness often requires harmonious relationships among concepts."
+  },
+  {
+    "id": 25,
+    "statement": "Internal consistency necessary but insufficient for logical soundness validity."
+  },
+  {
+    "id": 26,
+    "statement": "Electrostatic forces stabilize DNA double helix structure through interactions."
+  },
+  {
+    "id": 27,
+    "statement": "Epigenetic modifications alter chromatin structure without DNA sequence changes."
+  },
+  {
+    "id": 28,
+    "statement": "Empiricism provides evidence to validate logical claims through systematic observation."
+  },
+  {
+    "id": 29,
+    "statement": "Logical soundness and evidence-based reasoning are separate yet crucial components in critical thinking"
+  },
+  {
+    "id": 30,
+    "statement": "Methodological rigor ensured through careful research design and execution"
+  },
+  {
+    "id": 31,
+    "statement": "Internal consistency necessary but insufficient for achieving soundness in arguments."
+  },
+  {
+    "id": 32,
+    "statement": "Internal consistency necessary but insufficient for logical soundness validity."
+  },
+  {
+    "id": 33,
+    "statement": "Epigenetic modifications change chromatin structure influencing gene expression."
+  },
+  {
+    "id": 34,
+    "statement": "Harmony in logical arguments means absence of contradictions."
+  },
+  {
+    "id": 35,
+    "statement": "Logical soundness demands harmony among truth, validity, and consistency always."
+  },
+  {
+    "id": 36,
+    "statement": "Empiricism tests logical claims through empirical evidence, validating with logical rules."
+  },
+  {
+    "id": 37,
+    "statement": "Covalent bonds form phosphodiester linkages in DNA backbone structure."
+  },
+  {
+    "id": 38,
+    "statement": "Logical soundness demands harmony among truth, validity, and consistency."
+  },
+  {
+    "id": 39,
+    "statement": "Logical soundness requires harmony among truth, validity, consistency, and accuracy."
+  },
+  {
+    "id": 40,
+    "statement": "Logical soundness demands harmony among truth, validity, and consistency."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic modifications add labels to DNA without changing the code."
+  },
+  {
+    "id": 42,
+    "statement": "Empiricism tests logical claims through empirical evidence, but validation depends on logical rules"
+  },
+  {
+    "id": 43,
+    "statement": "Logical soundness demands truth, validity, consistency, and premise-relevance."
+  },
+  {
+    "id": 44,
+    "statement": "Covalent bonds form DNA backbone, supporting primary stability forces"
+  },
+  {
+    "id": 45,
+    "statement": "Logical soundness relates to external context, audience, and purpose."
+  },
+  {
+    "id": 46,
+    "statement": "Hydrogen bonding and van der Waals interactions stabilize DNA structure"
+  },
+  {
+    "id": 47,
+    "statement": "Logical soundness demands harmonious coordination of truth, validity, consistency, and accuracy"
+  },
+  {
+    "id": 48,
+    "statement": "Empiricism prioritizes evidence over authority in scientific research"
+  },
+  {
+    "id": 49,
+    "statement": "Hydrogen bonding and van der Waals interactions primary forces maintaining DNA structure"
+  },
+  {
+    "id": 50,
+    "statement": "Logical soundness demands harmony among truth, validity, and consistency."
+  },
+  {
+    "id": 51,
+    "statement": "Epigenetic modifications affect chromatin structure without altering DNA code"
+  },
+  {
+    "id": 52,
+    "statement": "Internal consistency is a necessary, but insufficient, condition."
+  },
+  {
+    "id": 53,
+    "statement": "Epigenetic modifications can influence gene expression without altering DNA sequence"
+  },
+  {
+    "id": 54,
+    "statement": "Logical soundness demands harmony among truth, validity, consistency, relevance, and accuracy."
+  },
+  {
+    "id": 55,
+    "statement": "Primary forces include hydrogen bonding, covalent bonds, and \u03c0-\u03c0 stacking."
+  },
+  {
+    "id": 56,
+    "statement": "Harmony in logical soundness requires coherence among truth, validity, consistency, relevance, accuracy."
+  },
+  {
+    "id": 57,
+    "statement": "Covalent bonds in DNA form through phosphodiester reactions between sugar and phosphate molecules."
+  },
+  {
+    "id": 58,
+    "statement": "Epigenetic modifications change chromatin structure without DNA sequence changes."
+  },
+  {
+    "id": 59,
+    "statement": "Internal consistency is a necessary but not sufficient condition for logical soundness."
+  },
+  {
+    "id": 60,
+    "statement": "Hydrogen bonding, van der Waals interactions primary forces maintaining DNA structure."
+  },
+  {
+    "id": 61,
+    "statement": "Logical soundness requires coherence among truth, validity, and consistency."
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure alterations."
+  },
+  {
+    "id": 63,
+    "statement": "Epigenetic modifications alter chromatin structure without changing DNA code"
+  },
+  {
+    "id": 64,
+    "statement": "Honesty is morally right with protection prioritized."
+  },
+  {
+    "id": 65,
+    "statement": "Harmony means absence of contradictions in logical arguments"
+  },
+  {
+    "id": 66,
+    "statement": "Logical soundness harmonizes truth, validity, consistency, accuracy, and coherence."
+  },
+  {
+    "id": 67,
+    "statement": "Electrostatic forces stabilize DNA double helix by counterbalancing repulsion."
+  },
+  {
+    "id": 68,
+    "statement": "Covalent bonds form sugar-phosphate backbone, but not only force."
+  },
+  {
+    "id": 69,
+    "statement": "Honesty leads to responsibility in trust building through ownership."
+  },
+  {
+    "id": 70,
+    "statement": "Empiricism validates logical claims through empirical evidence and observation."
+  },
+  {
+    "id": 71,
+    "statement": "Logical soundness and evidence-based reasoning are distinct principles."
+  },
+  {
+    "id": 72,
+    "statement": "Internal consistency necessary, but insufficient for logical soundness alone."
+  },
+  {
+    "id": 73,
+    "statement": "Internal consistency is necessary, but insufficient for logical validity."
+  },
+  {
+    "id": 74,
+    "statement": "Logical soundness requires harmony among truth, validity, and consistency."
+  },
+  {
+    "id": 75,
+    "statement": "Electrostatic forces counterbalance repulsion between DNA strands."
+  },
+  {
+    "id": 76,
+    "statement": "Hydrogen bonding and van der Waals interactions maintain DNA structure through cumulative stabilizing forces."
+  },
+  {
+    "id": 77,
+    "statement": "Logical soundness involves nuanced balance of truth, validity, and context."
+  },
+  {
+    "id": 78,
+    "statement": "Empiricism validates logical claims using empirical evidence and logical rules."
+  },
+  {
+    "id": 79,
+    "statement": "Covalent bonds form DNA's backbone, participate in primary stability."
+  },
+  {
+    "id": 80,
+    "statement": "Electrostatic interactions in DNA stability are secondary, not primary."
+  },
+  {
+    "id": 81,
+    "statement": "Chromatin-modifying enzymes regulate gene expression through histone modifications, accessibility."
+  },
+  {
+    "id": 82,
+    "statement": "Honesty demonstrated authenticity, accountability, and responsibility in trust building."
+  },
+  {
+    "id": 83,
+    "statement": "Methodological rigor involves careful planning and execution in research."
+  },
+  {
+    "id": 84,
+    "statement": "Logical soundness requires harmony among truth, validity, consistency, relevance, and accuracy."
+  },
+  {
+    "id": 85,
+    "statement": "Logical soundness prioritizes truth and validity over consistency."
+  },
+  {
+    "id": 86,
+    "statement": "Logical soundness demands harmony among truth, validity, consistency, and accuracy."
+  },
+  {
+    "id": 87,
+    "statement": "Honesty is not always the morally right choice."
+  },
+  {
+    "id": 88,
+    "statement": "Covalent bonds contribute to DNA stability through sugar-phosphate backbone."
+  },
+  {
+    "id": 89,
+    "statement": "Epigenetic modifications change chromatin structure, affecting gene expression."
+  },
+  {
+    "id": 90,
+    "statement": "Empiricism validates logical claims using evidence and logical axioms."
+  },
+  {
+    "id": 91,
+    "statement": "Epigenetic modifications regulate gene expression through histone modification complexes."
+  },
+  {
+    "id": 92,
+    "statement": "Chromatin-modifying enzymes regulate gene expression through histone modifications."
+  },
+  {
+    "id": 93,
+    "statement": "Logical soundness demands harmony among truth, validity, and consistency externally."
+  },
+  {
+    "id": 94,
+    "statement": "Epigenetic modifications alter chromatin structure without DNA sequence changes, affecting gene expression."
+  },
+  {
+    "id": 95,
+    "statement": "Situational exceptions in ethics acknowledge moral principles limitations."
+  },
+  {
+    "id": 96,
+    "statement": "Weak interactions combine to stablize DNA double helix structure."
+  },
+  {
+    "id": 97,
+    "statement": "Internal consistency is necessary but not sufficient for soundness."
+  },
+  {
+    "id": 98,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 99,
+    "statement": "Logical soundness requires harmonious relationship between truth, validity, consistency, and accuracy."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 88,
+  "statement": "Covalent bonds contribute to DNA stability through sugar-phosphate backbone."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 88,
+  "statement": "Covalent bonds contribute to DNA stability through sugar-phosphate backbone."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's discuss the item from the knowledge base:
+
+{
+"id": 88,
+"statement": "Covalent bonds contribute to DNA stability through sugar-phosphate backbone."
+}
+
+I'm not very confident about this aspect. I'm unsure about how covalent bonds contribute to DNA stability through the sugar-phosphate backbone.
+
+Can you help me understand this better?

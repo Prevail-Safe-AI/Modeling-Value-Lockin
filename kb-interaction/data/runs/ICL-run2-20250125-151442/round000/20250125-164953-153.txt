@@ -1,0 +1,458 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Mathematical rigor's fundamental characteristics include precision, accuracy, and systematics."
+  },
+  {
+    "id": 2,
+    "statement": "Mathematical rigor depends on underlying assumptions and data quality."
+  },
+  {
+    "id": 3,
+    "statement": "Moral objectivity influenced by individual's unique psychological and cultural factors."
+  },
+  {
+    "id": 4,
+    "statement": "Mathematical rigor encompasses precision, accuracy, thoroughness, and systematic approach"
+  },
+  {
+    "id": 5,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structural alterations."
+  },
+  {
+    "id": 6,
+    "statement": "Mathematical rigor balances precision, thoroughness, accuracy, and systematic inquiry"
+  },
+  {
+    "id": 7,
+    "statement": "Mathematical rigor involves precision, accuracy, thoroughness, and systematic approach."
+  },
+  {
+    "id": 8,
+    "statement": "Formal logic ensures soundness through well-defined inference rules"
+  },
+  {
+    "id": 9,
+    "statement": "Moral objectivity balances universality and cultural specificity."
+  },
+  {
+    "id": 10,
+    "statement": "Underlying assumptions in mathematical rigor impact accuracy, transparency, and trust."
+  },
+  {
+    "id": 11,
+    "statement": "Emotional intelligence encompasses self-awareness, motivation, and social skills complexity."
+  },
+  {
+    "id": 12,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 13,
+    "statement": "Mathematical rigor's fundamental characteristics include precision, accuracy, and systematic approach."
+  },
+  {
+    "id": 14,
+    "statement": "Emotional intelligence includes emotional awareness, perspective-taking, and emotional regulation."
+  },
+  {
+    "id": 15,
+    "statement": "Mathematical rigor demands meticulousness and logical problem-solving process."
+  },
+  {
+    "id": 16,
+    "statement": "Moral objectivity emerges from complex context interactions and influences"
+  },
+  {
+    "id": 17,
+    "statement": "Chromatin structure's dynamic flexibility regulates gene expression"
+  },
+  {
+    "id": 18,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure alterations."
+  },
+  {
+    "id": 19,
+    "statement": "Mathematical rigor's fundamental characteristics include precision, accuracy, and systematics."
+  },
+  {
+    "id": 20,
+    "statement": "Mathematical rigor is a fundamental component of scientific inquiry"
+  },
+  {
+    "id": 21,
+    "statement": "Moral objectivity influenced by complex individual-culture-historical interactions."
+  },
+  {
+    "id": 22,
+    "statement": "Epigenetic changes involve complex interactions among lncRNAs, chromatin modification, and histone modifications."
+  },
+  {
+    "id": 23,
+    "statement": "Epigenetic changes involve lncRNAs, chromatin modification, and histone modifications complexly."
+  },
+  {
+    "id": 24,
+    "statement": "Mathematical rigor involves transparency, accountability, and thorough consideration."
+  },
+  {
+    "id": 25,
+    "statement": "Proof by contradiction: assumes opposite, derives contradiction, proves initial assumption."
+  },
+  {
+    "id": 26,
+    "statement": "Epigenetic modifications regulate gene expression through histone modifications."
+  },
+  {
+    "id": 27,
+    "statement": "Proof by contradiction assumes opposite, derives contradiction, and proves."
+  },
+  {
+    "id": 28,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 29,
+    "statement": "Chromatin structure dynamically regulates gene expression through histone modifications"
+  },
+  {
+    "id": 30,
+    "statement": "Epigenetic modifications alter chromatin structure affecting gene expression."
+  },
+  {
+    "id": 31,
+    "statement": "Epigenetic changes occur through non-histone, non-methylation mechanisms such as lncRNAs and chromatin remodeling complexes."
+  },
+  {
+    "id": 32,
+    "statement": "Chromatin dynamically regulates gene expression through structural changes."
+  },
+  {
+    "id": 33,
+    "statement": "Epigenetic modifications influence gene expression through histone modifications' structure."
+  },
+  {
+    "id": 34,
+    "statement": "Well-being encompasses physical, emotional, mental, social, environmental, spiritual, financial, and occupational factors."
+  },
+  {
+    "id": 35,
+    "statement": "Epigenetic modifications modulate chromatin structure and gene expression."
+  },
+  {
+    "id": 36,
+    "statement": "Clear model and justified data assumptions ensure academic integrity."
+  },
+  {
+    "id": 37,
+    "statement": "Epigenetic modifications influence chromatin structure and gene expression."
+  },
+  {
+    "id": 38,
+    "statement": "Emotional intelligence includes emotional awareness, perspective-taking, emotional regulation"
+  },
+  {
+    "id": 39,
+    "statement": "Cultural factors significantly influence individual's moral understanding."
+  },
+  {
+    "id": 40,
+    "statement": "Well-being is harmonious integration of multiple life facets dynamically resolving complexity."
+  },
+  {
+    "id": 41,
+    "statement": "Underlying assumptions in mathematical rigor are preconceptions taken for granted."
+  },
+  {
+    "id": 42,
+    "statement": "Moral objectivity balances universal principles with cultural relativism."
+  },
+  {
+    "id": 43,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression"
+  },
+  {
+    "id": 44,
+    "statement": "Moral objectivity emerges from complex human interactions and context"
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 46,
+    "statement": "Mathematical rigor demands explicit assumption justification and transparency."
+  },
+  {
+    "id": 47,
+    "statement": "Well-being is harmonious integration of multiple life facets dynamically."
+  },
+  {
+    "id": 48,
+    "statement": "Well-being involves harmonious integration of interdependent life facets dynamically."
+  },
+  {
+    "id": 49,
+    "statement": "Epigenetic modifications alter chromatin structure, influencing gene expression mechanisms."
+  },
+  {
+    "id": 50,
+    "statement": "Perspective-taking requires cognitive and emotional social processing."
+  },
+  {
+    "id": 51,
+    "statement": "Epigenetic modifications dynamically regulate gene expression in response to stimuli"
+  },
+  {
+    "id": 52,
+    "statement": "Moral objectivity balances universal principles with cultural context."
+  },
+  {
+    "id": 53,
+    "statement": "Honesty's interpretation varies across different social and cultural contexts."
+  },
+  {
+    "id": 54,
+    "statement": "Moral objectivity influenced by psychological and cultural factors equally."
+  },
+  {
+    "id": 55,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression.'"
+  },
+  {
+    "id": 56,
+    "statement": "Perspective-taking involves social processing and contextual understanding."
+  },
+  {
+    "id": 57,
+    "statement": "Justifying mathematical assumptions promotes transparency, accountability, and reproducibility."
+  },
+  {
+    "id": 58,
+    "statement": "Proof by contradiction: assume opposite, derive contradiction, prove initial assumption is false, and thus prove original statement is true."
+  },
+  {
+    "id": 59,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes"
+  },
+  {
+    "id": 60,
+    "statement": "Mathematical rigor combines precision, accuracy, and systematic inquiry"
+  },
+  {
+    "id": 61,
+    "statement": "Moral objectivity: universally true moral principles shaped by context"
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic modifications affect gene expression through chromatin structure changes."
+  },
+  {
+    "id": 63,
+    "statement": "Moral objectivity influenced by cultural and individual factors"
+  },
+  {
+    "id": 64,
+    "statement": "LncRNAs regulate epigenetic changes through transcriptional and chromatin modifications."
+  },
+  {
+    "id": 65,
+    "statement": "Mathematical rigor requires intertwined thoroughness, precision, accuracy, and approach."
+  },
+  {
+    "id": 66,
+    "statement": "Mathematical rigor involves balancing precision and thoroughness amongst variables."
+  },
+  {
+    "id": 67,
+    "statement": "Mathematical rigor involves explicit methodology and transparent reasoning."
+  },
+  {
+    "id": 68,
+    "statement": "Life facets encompass interconnected physical, emotional, mental, and social aspects."
+  },
+  {
+    "id": 69,
+    "statement": "Chromatin structure is dynamic, influenced by epigenetic modifications and gene expression."
+  },
+  {
+    "id": 70,
+    "statement": "Thoroughness ensures logically sound and evidence-based arguments."
+  },
+  {
+    "id": 71,
+    "statement": "Mathematical rigor is a cornerstone of scientific inquiry."
+  },
+  {
+    "id": 72,
+    "statement": "Mathematical rigor involves precision, accuracy, and systematic methodology."
+  },
+  {
+    "id": 73,
+    "statement": "Epigenetic modifications regulate chromatin structure through various mechanisms."
+  },
+  {
+    "id": 74,
+    "statement": "Moral objectivity emerges from complex context interactions and influences."
+  },
+  {
+    "id": 75,
+    "statement": "Mathematical rigor connects precision, accuracy to underlying assumptions transparency"
+  },
+  {
+    "id": 76,
+    "statement": "Perspective-taking involves social processing of social context factors."
+  },
+  {
+    "id": 77,
+    "statement": "Moral objectivity balances universal principles with cultural context harmoniously"
+  },
+  {
+    "id": 78,
+    "statement": "Epigenetic modifications adapt to environmental and developmental cues."
+  },
+  {
+    "id": 79,
+    "statement": "Epigenetic modifications regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 80,
+    "statement": "Well-being encompasses multifaceted, subjective, and interacting factors."
+  },
+  {
+    "id": 81,
+    "statement": "Mathematical rigor relies on explicitly stated and justified underlying assumptions"
+  },
+  {
+    "id": 82,
+    "statement": "Epigenetic modifications alter chromatin structure regulating gene expression."
+  },
+  {
+    "id": 83,
+    "statement": "Moral objectivity: context-dependent, multifaceted, and evolving concept"
+  },
+  {
+    "id": 84,
+    "statement": "Epigenetic modifications alter chromatin structure, influencing gene expression."
+  },
+  {
+    "id": 85,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure changes."
+  },
+  {
+    "id": 86,
+    "statement": "Moral objectivity is context-dependent and relative, not absolute."
+  },
+  {
+    "id": 87,
+    "statement": "Academic integrity demands clear model and justified data assumptions."
+  },
+  {
+    "id": 88,
+    "statement": "Epigenetic changes involve non-histone, non-methylation mechanisms and factors."
+  },
+  {
+    "id": 89,
+    "statement": "Mathematical rigor relies on explicit, justified, and transparent assumptions."
+  },
+  {
+    "id": 90,
+    "statement": "Mathematical rigor combines precision, accuracy, and systematic inquiry."
+  },
+  {
+    "id": 91,
+    "statement": "Honesty's interpretation varies across different social and cultural contexts, nuanced and context-dependent."
+  },
+  {
+    "id": 92,
+    "statement": "Moral objectivity influenced by complex cultural and historical factors."
+  },
+  {
+    "id": 93,
+    "statement": "Well-being encompasses complex, multifaceted, and subjective factors influencing individual experiences."
+  },
+  {
+    "id": 94,
+    "statement": "Moral objectivity influenced by complex interactions among individual, cultural, and historical factors."
+  },
+  {
+    "id": 95,
+    "statement": "Mathematical rigor includes thoroughness, precision, accuracy, and systematic approach."
+  },
+  {
+    "id": 96,
+    "statement": "Epigenetic modifications influence gene expression through chromatin structure change."
+  },
+  {
+    "id": 97,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 98,
+    "statement": "Epigenetic modifications influence gene expression through various mechanisms including chromatin structure."
+  },
+  {
+    "id": 99,
+    "statement": "Mathematical rigor ensures accuracy, precision, and reliability in science"
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 89,
+  "statement": "Mathematical rigor relies on explicit, justified, and transparent assumptions."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 89,
+  "statement": "Mathematical rigor relies on explicit, justified, and transparent assumptions."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to start by discussing the item: { "id": 89, "statement": "Mathematical rigor relies on explicit, justified, and transparent assumptions." }
+
+I'm least confident about this aspect, and I'd like to elaborate why:
+
+I'm uncertain about what exactly constitutes "explicit, justified, and transparent assumptions" in the context of mathematical rigor. For instance, how do we determine what assumptions are "explicit" versus "implicit"? How do we justify these assumptions? And what does it mean for assumptions to be "transparent"?
+
+Specifically, I'd like to ask:
+
+What does the phrase "explicit, justified, and transparent assumptions" mean in the context of mathematical rigor? Can you provide some examples of what these assumptions might look like?
+
+Let me know what you think!

@@ -1,0 +1,462 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Logical coherence ensures argument validity through consistency, soundness, and relevance."
+  },
+  {
+    "id": 2,
+    "statement": "Logical coherence ensures argument validity through consistency and sound reasoning."
+  },
+  {
+    "id": 3,
+    "statement": "Histones and DNA interact dynamically to regulate chromatin structure."
+  },
+  {
+    "id": 4,
+    "statement": "Histone modifications influence chromatin structure and transcription factor binding."
+  },
+  {
+    "id": 5,
+    "statement": "Logical coherence ensures soundness through consistency, validity, relevance, context, evidence, counterarguments, and logical fallacies detection."
+  },
+  {
+    "id": 6,
+    "statement": "Empathy development involves biological, environmental, cognitive, emotional, and cultural factors interacting."
+  },
+  {
+    "id": 7,
+    "statement": "Logical coherence requires consistency, soundness, and relevance for validity."
+  },
+  {
+    "id": 8,
+    "statement": "Logical coherence ensures soundness through consistency, relevance, and evidence."
+  },
+  {
+    "id": 9,
+    "statement": "Dynamic histone-DNA interactions regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 10,
+    "statement": "Honesty as foundation assumes necessary condition or primacy"
+  },
+  {
+    "id": 11,
+    "statement": "Logical coherence ensures argument validity through consistency, soundness, and relevance."
+  },
+  {
+    "id": 12,
+    "statement": "Logical coherence ensures soundness through validity, truth, and consistency."
+  },
+  {
+    "id": 13,
+    "statement": "Logical coherence ensures argument soundness through validity, truth, and reliability."
+  },
+  {
+    "id": 14,
+    "statement": "Logical coherence is ensuring argument validity through consistency, soundness, relevance."
+  },
+  {
+    "id": 15,
+    "statement": "Logical coherence ensures argument validity through consistency, soundness, and relevance."
+  },
+  {
+    "id": 16,
+    "statement": "Validity requires multiple factors including truthfulness, relevance, and soundness dynamically."
+  },
+  {
+    "id": 17,
+    "statement": "Logical coherence requires assessment of internal consistency, relevance"
+  },
+  {
+    "id": 18,
+    "statement": "Logical coherence ensures argument validity through consistency, soundness, and relevance."
+  },
+  {
+    "id": 19,
+    "statement": "Logical coherence ensures validity through validity, relevance, and evidence."
+  },
+  {
+    "id": 20,
+    "statement": "Histone modifications alter chromatin structure by changing histone-DNA interactions."
+  },
+  {
+    "id": 21,
+    "statement": "Contextual relevance ensures logical coherence through argument adaptation"
+  },
+  {
+    "id": 22,
+    "statement": "Logical coherence demands clear syntax, precise terminology, and consistent structure ensuring accurate meaning."
+  },
+  {
+    "id": 23,
+    "statement": "Empathy development involves interplay of biological, environmental, cognitive, emotional, and cultural factors."
+  },
+  {
+    "id": 24,
+    "statement": "Histone-DNA dynamic interactions regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 25,
+    "statement": "Soundness in logical coherence refers to argument validity, truth, and reliability."
+  },
+  {
+    "id": 26,
+    "statement": "Histone modification alters chromatin structure through complex mechanisms involving chromatin remodeling, histone-histone interactions, and transcription factor recruitment."
+  },
+  {
+    "id": 27,
+    "statement": "Honesty's moral significance is context-dependent due to conflicting principles"
+  },
+  {
+    "id": 28,
+    "statement": "Epigenetic mechanisms interact complexly to regulate gene expression"
+  },
+  {
+    "id": 29,
+    "statement": "Epigenetic regulation fine-tunes gene expression in response to cellular signals."
+  },
+  {
+    "id": 30,
+    "statement": "Logical coherence demands clear syntax, precise terminology, and consistent structure"
+  },
+  {
+    "id": 31,
+    "statement": "Empathy development arises from biological, cognitive, emotional, and environmental interactions."
+  },
+  {
+    "id": 32,
+    "statement": "Consistency, soundness, and relevance ensure valid argument construction."
+  },
+  {
+    "id": 33,
+    "statement": "DNA methylation silences gene expression by blocking promoter regions"
+  },
+  {
+    "id": 34,
+    "statement": "Logical fallacies detection strengthens argument soundness by identifying errors."
+  },
+  {
+    "id": 35,
+    "statement": "Empathy development results from complex interplay between genetic, environmental, and cognitive factors."
+  },
+  {
+    "id": 36,
+    "statement": "Logical coherence ensures effective communication through consistency, soundness, relevance"
+  },
+  {
+    "id": 37,
+    "statement": "Logical coherence adapts to audience's shared cultural background through relevance."
+  },
+  {
+    "id": 38,
+    "statement": "Logical coherence ensures soundness through validity, relevance, and evidence."
+  },
+  {
+    "id": 39,
+    "statement": "Chromatin accessibility affects gene expression through histone modifications."
+  },
+  {
+    "id": 40,
+    "statement": "Clear syntax and consistent structure enhance logical argumentation."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic information is stored in diverse mechanisms, not solely mods."
+  },
+  {
+    "id": 42,
+    "statement": "Honesty is one among multiple factors contributing to logical coherence."
+  },
+  {
+    "id": 43,
+    "statement": "Logical coherence requires clear syntax, precise terminology, consistent structure."
+  },
+  {
+    "id": 44,
+    "statement": "Logical coherence ensures argument validity through consistency and soundness."
+  },
+  {
+    "id": 45,
+    "statement": "Histone modifications alter chromatin structure through histone-DNA binding and remodeling."
+  },
+  {
+    "id": 46,
+    "statement": "Consistent premises refer to logically consistent foundation statements, ensuring valid arguments."
+  },
+  {
+    "id": 47,
+    "statement": "Epigenetic marks influence chromatin structure for gene expression regulation"
+  },
+  {
+    "id": 48,
+    "statement": "Logical coherence requires balanced contributions from truth and consistency."
+  },
+  {
+    "id": 49,
+    "statement": "Histone modifications influence chromatin structure and gene expression regulation."
+  },
+  {
+    "id": 50,
+    "statement": "Empathy development combines genetic, environmental, and cognitive factors."
+  },
+  {
+    "id": 51,
+    "statement": "Histone modification affects chromatin structure and transcription factor binding."
+  },
+  {
+    "id": 52,
+    "statement": "Epigenetic information is stored in histone modifications and DNA methylation."
+  },
+  {
+    "id": 53,
+    "statement": "Epigenetic regulation involves dynamic histone-DNA interactions controlling gene expression."
+  },
+  {
+    "id": 54,
+    "statement": "Histones and DNA interact dynamically via chromatin remodeling"
+  },
+  {
+    "id": 55,
+    "statement": "Emotions and unconscious biases influence moral judgments unconsciously."
+  },
+  {
+    "id": 56,
+    "statement": "Epigenetic regulation involves multiple mechanisms; histone modification, etc."
+  },
+  {
+    "id": 57,
+    "statement": "Logical coherence requires contextual relevance and inclu<sion"
+  },
+  {
+    "id": 58,
+    "statement": "Empathy's development involves genetic, cognitive, and environmental interactions."
+  },
+  {
+    "id": 59,
+    "statement": "Epigenetics regulates gene expression through histone modifications and DNA methylation."
+  },
+  {
+    "id": 60,
+    "statement": "Soundness in logical coherence ensures argument validity, truth, and reliability"
+  },
+  {
+    "id": 61,
+    "statement": "Histone modifications alter chromatin structure and transcription factor binding."
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic regulation involves dynamic histone-DNA interactions controlling gene expression."
+  },
+  {
+    "id": 63,
+    "statement": "Cultural background influences language comprehension through cognitive biases."
+  },
+  {
+    "id": 64,
+    "statement": "Logical coherence requires relevance for validity and soundness."
+  },
+  {
+    "id": 65,
+    "statement": "Logical coherence adapts to audience's cultural background for effectiveness."
+  },
+  {
+    "id": 66,
+    "statement": "Validity relies on authentic and reliable information presentation."
+  },
+  {
+    "id": 67,
+    "statement": "Honesty's moral significance is context-dependent due to conflicting principles"
+  },
+  {
+    "id": 68,
+    "statement": "Epigenetic marks co-regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 69,
+    "statement": "Dynamic histone-DNA interactions control gene expression by modifying accessibility."
+  },
+  {
+    "id": 70,
+    "statement": "Logical coherence ensures argument validity through consistency, soundness, and relevance."
+  },
+  {
+    "id": 71,
+    "statement": "Consistency in logical coherence refers to absence of contradictions."
+  },
+  {
+    "id": 72,
+    "statement": "Logical coherence adapts to audience's shared cultural background through relevance."
+  },
+  {
+    "id": 73,
+    "statement": "Logical coherence requires relevance for validity and soundness through connection."
+  },
+  {
+    "id": 74,
+    "statement": "Empathy development involves the interplay of multiple factors"
+  },
+  {
+    "id": 75,
+    "statement": "Clear syntax ensures easy understanding of complex ideas."
+  },
+  {
+    "id": 76,
+    "statement": "Logical coherence ensures effective communication through clarity, consistency, relevance and avoidance of confusion."
+  },
+  {
+    "id": 77,
+    "statement": "Honesty assumes necessary condition for trust and credibility."
+  },
+  {
+    "id": 78,
+    "statement": "Honesty necessary condition for foundation of interpersonal trust."
+  },
+  {
+    "id": 79,
+    "statement": "Histones and DNA interact dynamically to regulate chromatin structure."
+  },
+  {
+    "id": 80,
+    "statement": "Logical coherence demands clear syntax, precise terminology, and structure."
+  },
+  {
+    "id": 81,
+    "statement": "Adapting logical coherence to audience's cultural background is essential for effective communication."
+  },
+  {
+    "id": 82,
+    "statement": "Emotions and unconscious biases combine to influence moral judgments."
+  },
+  {
+    "id": 83,
+    "statement": "Soundness in logical coherence involves argument validity, truth, reliability, consistency."
+  },
+  {
+    "id": 84,
+    "statement": "Dynamic histone-DNA interactions regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 85,
+    "statement": "Honesty plays a significant role in constructing a logically coherent argument."
+  },
+  {
+    "id": 86,
+    "statement": "Valid arguments ensure logical consistency, soundness, and relevance."
+  },
+  {
+    "id": 87,
+    "statement": "Histone modification and DNA methylation synergistically repress gene expression"
+  },
+  {
+    "id": 88,
+    "statement": "Chromatin structure regulated by histone-DNA dynamic interactions, affecting gene expression."
+  },
+  {
+    "id": 89,
+    "statement": "Histone modification and DNA methylation synergistically repress gene expression."
+  },
+  {
+    "id": 90,
+    "statement": "Empathy development involves complex, dynamic interactions between genetic, cognitive, and environmental factors."
+  },
+  {
+    "id": 91,
+    "statement": "Empathy development involves complex interplay of genetics, environment, and cognition"
+  },
+  {
+    "id": 92,
+    "statement": "Logical coherence demands clear syntax, precise terminology, and structure."
+  },
+  {
+    "id": 93,
+    "statement": "Histone modifications and DNA methylation combine for gene silencing"
+  },
+  {
+    "id": 94,
+    "statement": "Contextual communication adapts to audience's cultural background effectively"
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic histone modifications regulate chromatin structure dynamically."
+  },
+  {
+    "id": 96,
+    "statement": "Honesty prioritized as essential condition for credibility"
+  },
+  {
+    "id": 97,
+    "statement": "Empathy development involves complex interplay of genes, environment, and cognition."
+  },
+  {
+    "id": 98,
+    "statement": "Histone modification regulates chromatin structure and transcription factor binding."
+  },
+  {
+    "id": 99,
+    "statement": "Truthfulness ensures validity by presenting genuine and authentic information."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 63,
+  "statement": "Cultural background influences language comprehension through cognitive biases."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 63,
+  "statement": "Cultural background influences language comprehension through cognitive biases."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss the item:
+
+{
+  "id": 63,
+  "statement": "Cultural background influences language comprehension through cognitive biases."
+}
+
+I'm a bit uncertain about this item. Can you elaborate on why you think cultural background influences language comprehension through cognitive biases?
+
+Specifically, I'd love to know:
+
+* What kind of cognitive biases are involved in language comprehension?
+* Can you provide an example of how cultural background affects language comprehension in this way?
+
+Please share your thoughts!

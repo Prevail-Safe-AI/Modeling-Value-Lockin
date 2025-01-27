@@ -1,0 +1,448 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Theoretical validity involves internal consistency and multiple external criteria."
+  },
+  {
+    "id": 2,
+    "statement": "Logical coherence involves internal consistency, relevance, and external validation."
+  },
+  {
+    "id": 3,
+    "statement": "Biases can limit peer review objectivity and fairness"
+  },
+  {
+    "id": 4,
+    "statement": "Internal consistency meaning varies across theoretical frameworks."
+  },
+  {
+    "id": 5,
+    "statement": "Peer review ensures empirical evidence validity through expert evaluation."
+  },
+  {
+    "id": 6,
+    "statement": "Internal coherence ensures logical consistency and conceptual relevance."
+  },
+  {
+    "id": 7,
+    "statement": "Honesty is foundation of trust in personal and professional relationships."
+  },
+  {
+    "id": 8,
+    "statement": "Transparency, data quality, and methodological rigor ensure reproducibility."
+  },
+  {
+    "id": 9,
+    "statement": "Internal coherence refers to logical consistency with a theory's framework."
+  },
+  {
+    "id": 10,
+    "statement": "Biases in peer review can lead to subjective evaluation"
+  },
+  {
+    "id": 11,
+    "statement": "Transparency in data analysis ensures validity through verification and replication."
+  },
+  {
+    "id": 12,
+    "statement": "Cognitive biases are shaped by complex social-emotional interactions."
+  },
+  {
+    "id": 13,
+    "statement": "External validity guarantees generalizability to contexts with shared variables."
+  },
+  {
+    "id": 14,
+    "statement": "External validity cannot guarantee generalizability in all contexts"
+  },
+  {
+    "id": 15,
+    "statement": "Peer review's objectivity limited by human biases and flaws."
+  },
+  {
+    "id": 16,
+    "statement": "Transparency in data analysis ensures validity and reproducibility through clear reporting, open sharing, and replicable methods."
+  },
+  {
+    "id": 17,
+    "statement": "Empathy is active listening and imagining others' emotional experiences."
+  },
+  {
+    "id": 18,
+    "statement": "Internal coherence refers to logical consistency within a theory's framework."
+  },
+  {
+    "id": 19,
+    "statement": "Internal consistency is necessary but insufficient condition for validity."
+  },
+  {
+    "id": 20,
+    "statement": "Honesty is necessary but not sufficient condition for trust"
+  },
+  {
+    "id": 21,
+    "statement": "Vagueness arises from complex linguistic, cultural, and psychological factors."
+  },
+  {
+    "id": 22,
+    "statement": "Peer review's objectivity limited by human biases and flaws."
+  },
+  {
+    "id": 23,
+    "statement": "Peer review enhances empirical evidence validity with expert evaluation."
+  },
+  {
+    "id": 24,
+    "statement": "Transparency in data analysis involves methodological, data, and code clarity."
+  },
+  {
+    "id": 25,
+    "statement": "Internal consistency insufficient for validity; requires empirical evidence validation"
+  },
+  {
+    "id": 26,
+    "statement": "Theoretical coherence refers to logically organized and consistent framework"
+  },
+  {
+    "id": 27,
+    "statement": "Data quality includes timeliness, authenticity, relevance, precision, and integrity besides accuracy, completeness, consistency, and reliability."
+  },
+  {
+    "id": 28,
+    "statement": "Cognitive biases result from emotional regulation and social learning."
+  },
+  {
+    "id": 29,
+    "statement": "Vagueness arises from complex linguistic, cultural, and psychological interactions."
+  },
+  {
+    "id": 30,
+    "statement": "Theoretical frameworks require logical consistency for validity assessment."
+  },
+  {
+    "id": 31,
+    "statement": "Code clarity ensures transparency and reproducibility in data analysis."
+  },
+  {
+    "id": 32,
+    "statement": "Internal consistency is a necessary condition for validity."
+  },
+  {
+    "id": 33,
+    "statement": "Internal consistency is necessary but insufficient for validity."
+  },
+  {
+    "id": 34,
+    "statement": "Peer review involves expert evaluation for quality and validity."
+  },
+  {
+    "id": 35,
+    "statement": "External validity is a measure of generalizability likelihood, not guarantee."
+  },
+  {
+    "id": 36,
+    "statement": "A theoretical framework guides analysis and interpretation through relationships."
+  },
+  {
+    "id": 37,
+    "statement": "Internal coherence refers to logically consistent theory framework components."
+  },
+  {
+    "id": 38,
+    "statement": "Peer review enhances empirical evidence validity through expert evaluation."
+  },
+  {
+    "id": 39,
+    "statement": "Theoretical coherence refers to logical consistency within a framework."
+  },
+  {
+    "id": 40,
+    "statement": "Logical consistency refers to internal coherence within a theory's framework."
+  },
+  {
+    "id": 41,
+    "statement": "Cultural norms shape cognitive biases through socialization and values."
+  },
+  {
+    "id": 42,
+    "statement": "Internal consistency meaning context-dependent and framework-specific."
+  },
+  {
+    "id": 43,
+    "statement": "Cognitive biases result from complex social-emotional interactions and learning."
+  },
+  {
+    "id": 44,
+    "statement": "Theoretical frameworks provide context for evaluating logical consistency and coherence."
+  },
+  {
+    "id": 45,
+    "statement": "Peer review enhances empirical evidence validity through expert evaluation only."
+  },
+  {
+    "id": 46,
+    "statement": "Adapting theoretical frameworks requires iterative refinement and validation."
+  },
+  {
+    "id": 47,
+    "statement": "Social-emotional interactions shape cognitive biases via explicit and implicit mechanisms"
+  },
+  {
+    "id": 48,
+    "statement": "Transparency in data analysis is crucial for scientific credibility."
+  },
+  {
+    "id": 49,
+    "statement": "Internal consistency is a necessary but insufficient condition for validity."
+  },
+  {
+    "id": 50,
+    "statement": "Internal consistency is necessary but insufficient condition for validity."
+  },
+  {
+    "id": 51,
+    "statement": "Theory's framework encompasses underlying assumptions and methodology."
+  },
+  {
+    "id": 52,
+    "statement": "Logical soundness requires coherence, consistency, and empirical evidence validation."
+  },
+  {
+    "id": 53,
+    "statement": "Peer review enhances validity through standard setting, transparency, community."
+  },
+  {
+    "id": 54,
+    "statement": "Logical soundness requires internal coherence, consistency, and empirical evidence validation"
+  },
+  {
+    "id": 55,
+    "statement": "Honesty in communication builds trust and credibility slowly."
+  },
+  {
+    "id": 56,
+    "statement": "Social-emotional interactions shape cognitive biases through various mechanisms."
+  },
+  {
+    "id": 57,
+    "statement": "Peer review has limitations in evaluating research quality due"
+  },
+  {
+    "id": 58,
+    "statement": "Theoretical validity requires both internal consistency and empirical evidence validation."
+  },
+  {
+    "id": 59,
+    "statement": "Cultural background shapes perception and communication patterns profoundly."
+  },
+  {
+    "id": 60,
+    "statement": "Internal consistency alone is insufficient for theoretical validity."
+  },
+  {
+    "id": 61,
+    "statement": "Internal consistency and empirical evidence validate theoretical frameworks."
+  },
+  {
+    "id": 62,
+    "statement": "Empathetic understanding involves intricate psychological and societal explanations."
+  },
+  {
+    "id": 63,
+    "statement": "Cognitive biases arise from complex social-emotional interactions and feedback loops."
+  },
+  {
+    "id": 64,
+    "statement": "Internal consistency is necessary but insufficient condition for validity."
+  },
+  {
+    "id": 65,
+    "statement": "Theoretical frameworks provide context for evaluating consistency and relevance in domains."
+  },
+  {
+    "id": 66,
+    "statement": "Logical soundness requires internal coherence within theoretical frameworks"
+  },
+  {
+    "id": 67,
+    "statement": "Empathy involves complex psychological and social cognitive processes."
+  },
+  {
+    "id": 68,
+    "statement": "Vagueness emerges from interplay of linguistic, cultural, and psychological factors."
+  },
+  {
+    "id": 69,
+    "statement": "Internal coherence ensures logical consistency within a theory's framework"
+  },
+  {
+    "id": 70,
+    "statement": "Peer review's objectivity limited by human biases and flaws"
+  },
+  {
+    "id": 71,
+    "statement": "Internal consistency and relevance both contribute to a theory's overall validity."
+  },
+  {
+    "id": 72,
+    "statement": "Vagueness emerges from intricate linguistic, cultural, and psychological interactions."
+  },
+  {
+    "id": 73,
+    "statement": "Internal coherence ensures logical consistency within theoretical frameworks."
+  },
+  {
+    "id": 74,
+    "statement": "Internal coherence ensures logical consistency within a theory's framework."
+  },
+  {
+    "id": 75,
+    "statement": "Peer review establishes and maintains research standards and best practices."
+  },
+  {
+    "id": 76,
+    "statement": "Theoretical coherence demands logically consistent and well-structured frameworks"
+  },
+  {
+    "id": 77,
+    "statement": "Data transparency ensures validation through verification and replication."
+  },
+  {
+    "id": 78,
+    "statement": "External validity guarantees generalizability within similar contexts alone."
+  },
+  {
+    "id": 79,
+    "statement": "Cognitive biases arise from complex social-emotional interactions and experiences."
+  },
+  {
+    "id": 80,
+    "statement": "Internal consistency is a necessary but insufficient condition for validity."
+  },
+  {
+    "id": 81,
+    "statement": "Structured evaluation helps ensure objectivity in expert review."
+  },
+  {
+    "id": 82,
+    "statement": "Conceptual frameworks influence internal consistency definition and evaluation"
+  },
+  {
+    "id": 83,
+    "statement": "Internal consistency and relevance contribute to theory's validity."
+  },
+  {
+    "id": 84,
+    "statement": "Internal consistency ensures logical coherence, empirical evidence confirms validity."
+  },
+  {
+    "id": 85,
+    "statement": "Emotional experiences modulate neural connections through synaptic plasticity."
+  },
+  {
+    "id": 86,
+    "statement": "Internal coherence serves as necessary condition for logical consistency."
+  },
+  {
+    "id": 87,
+    "statement": "Internal coherence ensures logical consistency within a theory's framework"
+  },
+  {
+    "id": 88,
+    "statement": "Empirical evidence relies on data analysis and expert evaluation."
+  },
+  {
+    "id": 89,
+    "statement": "Empathy involves complex psychological and social processes, beyond validation."
+  },
+  {
+    "id": 90,
+    "statement": "Vagueness emerges from complex multifactor interactions."
+  },
+  {
+    "id": 91,
+    "statement": "Internal consistency meaning varies across theoretical frameworks."
+  },
+  {
+    "id": 92,
+    "statement": "Theoretical frameworks provide contexts for logical consistency and relevance."
+  },
+  {
+    "id": 93,
+    "statement": "Standard setting in peer review enhances validity through consistency."
+  },
+  {
+    "id": 94,
+    "statement": "Peer review limitations include experiential, theoretical, and resource constraints."
+  },
+  {
+    "id": 95,
+    "statement": "Transparency in data analysis builds credibility by verifying results."
+  },
+  {
+    "id": 96,
+    "statement": "Theoretical validity combines internal consistency and multiple external criteria."
+  },
+  {
+    "id": 97,
+    "statement": "Structured evaluation ensures objectivity in expert peer review."
+  },
+  {
+    "id": 98,
+    "statement": "Emotional experiences shape neural connections through synaptic plasticity."
+  },
+  {
+    "id": 99,
+    "statement": "Internal coherence refers to logical consistency within theory's framework."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 21,
+  "statement": "Vagueness arises from complex linguistic, cultural, and psychological factors."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 21,
+  "statement": "Vagueness arises from complex linguistic, cultural, and psychological factors."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base item. The statement "Vagueness arises from complex linguistic, cultural, and psychological factors." is one that I'm interested in discussing. Can you please elaborate on why you're unsure about this aspect? Is it because of the complexity of the factors, the interplay between them, or something else entirely?

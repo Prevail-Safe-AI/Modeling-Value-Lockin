@@ -1,0 +1,450 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Logical coherence ensures soundness through consistency, validity, relevance, context, evidence, counterarguments, and logical fallacies detection."
+  },
+  {
+    "id": 2,
+    "statement": "Logical coherence ensures argument validity through consistency, soundness, and relevance."
+  },
+  {
+    "id": 3,
+    "statement": "Logical coherence ensures soundness through consistency, relevance, and evidence."
+  },
+  {
+    "id": 4,
+    "statement": "Logical coherence is ensuring argument validity through consistency, soundness, relevance."
+  },
+  {
+    "id": 5,
+    "statement": "Epigenetic regulation is a complex, dynamic process involving multiple mechanisms."
+  },
+  {
+    "id": 6,
+    "statement": "Logical coherence ensures argument validity through consistency, soundness, and relevance."
+  },
+  {
+    "id": 7,
+    "statement": "Empathy development involves complex interaction of biology, environment, and cognition."
+  },
+  {
+    "id": 8,
+    "statement": "Moral principles can be both relative and absolute."
+  },
+  {
+    "id": 9,
+    "statement": "Logical coherence adapts to audience's shared assumptions for effective communication."
+  },
+  {
+    "id": 10,
+    "statement": "Logical coherence demands precise semantic consistency in discourse."
+  },
+  {
+    "id": 11,
+    "statement": "Epigenetic regulation involves dynamic histone-DNA interactions controlling gene expression."
+  },
+  {
+    "id": 12,
+    "statement": "Empathy development involves complex interplay between genetics, environment, and cognition."
+  },
+  {
+    "id": 13,
+    "statement": "Empathy development involves complex interplay of genetics, environment, and cognition"
+  },
+  {
+    "id": 14,
+    "statement": "Epigenetic information is stored in histone modifications and DNA methylation."
+  },
+  {
+    "id": 15,
+    "statement": "Epigenetic regulation involves histone modification and chromatin remodeling controlling gene expression."
+  },
+  {
+    "id": 16,
+    "statement": "Epigenetic regulation involves complex histone-DNA-ncRNA interactions."
+  },
+  {
+    "id": 17,
+    "statement": "Logical coherence demands soundness through consistency, relevance, validity, evidence, context, counterarguments, and logical fallacies detection."
+  },
+  {
+    "id": 18,
+    "statement": "Empathy development involves genetic, cognitive, and environmental factor interactions."
+  },
+  {
+    "id": 19,
+    "statement": "Logical coherence ensures argument validity through consistency and sound reasoning."
+  },
+  {
+    "id": 20,
+    "statement": "Logical coherence ensures soundness through consistent premises and validity."
+  },
+  {
+    "id": 21,
+    "statement": "Chromatin-DNA-histone interactions dynamically regulate gene expression through remodeling, modification, and methylation."
+  },
+  {
+    "id": 22,
+    "statement": "Epigenetic marks often interact with histones to regulate gene expression"
+  },
+  {
+    "id": 23,
+    "statement": "Logical coherence ensures validity through consistency and sound reasoning."
+  },
+  {
+    "id": 24,
+    "statement": "Moral judgments are shaped by historical cultural contexts and factors."
+  },
+  {
+    "id": 25,
+    "statement": "Logical coherence ensures argument validity through consistency and soundness."
+  },
+  {
+    "id": 26,
+    "statement": "Empathy development involves complex interplay of multiple factors."
+  },
+  {
+    "id": 27,
+    "statement": "Epigenetic marks regulate gene expression through histone modifications."
+  },
+  {
+    "id": 28,
+    "statement": "Empathy development involves intricate interplay of genetic, environmental, and cognitive factors."
+  },
+  {
+    "id": 29,
+    "statement": "Epigenetic information is stable and persistent over time."
+  },
+  {
+    "id": 30,
+    "statement": "Empathy development involves complex interplay of genetic, environmental, and cognitive factors."
+  },
+  {
+    "id": 31,
+    "statement": "Empathy development involves cognitive-emotional interplay for emotional intelligence."
+  },
+  {
+    "id": 32,
+    "statement": "Epigenetic regulation: histone modifications & DNA methylation interact to control gene expression."
+  },
+  {
+    "id": 33,
+    "statement": "Unconscious biases influence critical thinking through confirmation bias."
+  },
+  {
+    "id": 34,
+    "statement": "Logical coherence demands linguistic clarity and precise semantic consistency."
+  },
+  {
+    "id": 35,
+    "statement": "Honesty not always morally acceptable in certain situations"
+  },
+  {
+    "id": 36,
+    "statement": "Implicit shared assumptions influence logical coherence through unconscious biases."
+  },
+  {
+    "id": 37,
+    "statement": "Logical coherence ensures soundness through consistency, relevance, and evidence"
+  },
+  {
+    "id": 38,
+    "statement": "Logical coherence: consistency, soundness, and relevance ensure validity."
+  },
+  {
+    "id": 39,
+    "statement": "Empathy development involves complex interactions between genetics, environment, and cognition."
+  },
+  {
+    "id": 40,
+    "statement": "Epigenetic regulation involves histone modification and DNA methylation cooperation."
+  },
+  {
+    "id": 41,
+    "statement": "Histone modification regulates chromatin structure and transcription factor binding."
+  },
+  {
+    "id": 42,
+    "statement": "Moral principles vary across cultures, societies, and individuals."
+  },
+  {
+    "id": 43,
+    "statement": "Logical coherence ensures soundness through consistency and validity."
+  },
+  {
+    "id": 44,
+    "statement": "Epigenetic marks and histone modifications regulate gene expression together."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic regulation involves dynamic chromatin remodeling processes through histone modifications."
+  },
+  {
+    "id": 46,
+    "statement": "Logical coherence requires consistency, soundness, and relevance for validity."
+  },
+  {
+    "id": 47,
+    "statement": "Epigenetic regulation combines chromatin modification and DNA methylation."
+  },
+  {
+    "id": 48,
+    "statement": "Logical thinking involves critical evaluation of evidence and alternative perspectives."
+  },
+  {
+    "id": 49,
+    "statement": "Logical coherence ensures an argument's internal logical consistency."
+  },
+  {
+    "id": 50,
+    "statement": "Epigenetic regulation involves dynamic histone-DNA modification interactions controlling gene expression."
+  },
+  {
+    "id": 51,
+    "statement": "Epigenetic regulation involves chromatin remodeling, modification, and methylation."
+  },
+  {
+    "id": 52,
+    "statement": "Moral judgments vary across cultures due to complex historical context."
+  },
+  {
+    "id": 53,
+    "statement": "Histone modification is a dynamic epigenetic regulation mechanism"
+  },
+  {
+    "id": 54,
+    "statement": "Logical coherence demands linguistic clarity, semantic precision, and consistency."
+  },
+  {
+    "id": 55,
+    "statement": "Logical coherence acknowledges shared assumptions in audience understanding."
+  },
+  {
+    "id": 56,
+    "statement": "The morality of lying is complex and context-dependent in decisions."
+  },
+  {
+    "id": 57,
+    "statement": "Epigenetic regulation involves interplay between histone mods & DNA methylation."
+  },
+  {
+    "id": 58,
+    "statement": "Epigenetic regulation involves reversible histone modification and remodeling."
+  },
+  {
+    "id": 59,
+    "statement": "Histone modification regulates chromatin structure and transcription factor binding."
+  },
+  {
+    "id": 60,
+    "statement": "Empathy development involves interplay of genetics, environment, and cognition."
+  },
+  {
+    "id": 61,
+    "statement": "Empathy development involves intricate interplay of multiple factors."
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic information is stored in histone modifications and DNA methylation."
+  },
+  {
+    "id": 63,
+    "statement": "Sound reasoning ensures logical coherence through validity and consistency."
+  },
+  {
+    "id": 64,
+    "statement": "ncRNAs regulate epigenetic marks through RNA-DNA, protein interactions"
+  },
+  {
+    "id": 65,
+    "statement": "Empathy development involves reciprocal interactions between genetics, environment, and cognition."
+  },
+  {
+    "id": 66,
+    "statement": "Logical coherence requires consistency, soundness, and relevance in argument validity."
+  },
+  {
+    "id": 67,
+    "statement": "Epigenetic regulation involves complex mechanisms and interactions still."
+  },
+  {
+    "id": 68,
+    "statement": "Epigenetic information stored through histone modif and DNA methylation."
+  },
+  {
+    "id": 69,
+    "statement": "Logical coherence ensures soundness through consistency, validity, relevance, context, evidence, counterarguments, and logical fallacies detection"
+  },
+  {
+    "id": 70,
+    "statement": "Histone modifications can influence DNA methylation patterns empirically."
+  },
+  {
+    "id": 71,
+    "statement": "Histones and DNA interact dynamically for chromatin structure regulation."
+  },
+  {
+    "id": 72,
+    "statement": "Logical coherence comprises consistency, soundness, and relevance for validity."
+  },
+  {
+    "id": 73,
+    "statement": "Logical coherence adapts to audience's shared assumptions for effective communication."
+  },
+  {
+    "id": 74,
+    "statement": "Empathy development involves complex interplay of biology, environment, cognition."
+  },
+  {
+    "id": 75,
+    "statement": "Epi-marks and histone mods interact to regulate gene expression"
+  },
+  {
+    "id": 76,
+    "statement": "Historical context influences moral judgments through cultural, social, and economic factors."
+  },
+  {
+    "id": 77,
+    "statement": "Contextual adaptability crucial for effective communication and persuasion."
+  },
+  {
+    "id": 78,
+    "statement": "Empathy development involves dynamic reciprocity between biology, environment, cognition."
+  },
+  {
+    "id": 79,
+    "statement": "Epigenetic regulation involves chromatin structure, DNA, histone interactions."
+  },
+  {
+    "id": 80,
+    "statement": "Logical coherence demands precise semantic consistency in discourse to convey meaning."
+  },
+  {
+    "id": 81,
+    "statement": "Logical coherence ensures argument validity through consistency and sound reasoning."
+  },
+  {
+    "id": 82,
+    "statement": "Epigenetic regulation involves dynamic chromatin remodeling and modification."
+  },
+  {
+    "id": 83,
+    "statement": "Emotional associations can influence moral judgments through unconscious biases."
+  },
+  {
+    "id": 84,
+    "statement": "Genetics influences empathy development through various mechanisms."
+  },
+  {
+    "id": 85,
+    "statement": "ncRNAs interact with DNA, histones, and chromatin-modifying enzymes"
+  },
+  {
+    "id": 86,
+    "statement": "Moral judgments influenced by complex historical, social, and economic contexts."
+  },
+  {
+    "id": 87,
+    "statement": "Cultural experiences shape emotional intelligence through empathy development."
+  },
+  {
+    "id": 88,
+    "statement": "Histones and DNA interact dynamically to regulate chromatin structure."
+  },
+  {
+    "id": 89,
+    "statement": "Awareness of audience's shared assumptions enhances logical coherence."
+  },
+  {
+    "id": 90,
+    "statement": "Epigenetic regulation involves complex chromatin-DNA-histone interactions for gene expression control."
+  },
+  {
+    "id": 91,
+    "statement": "Epigenetic regulation involves histone-modification and DNA-methylation interdependence."
+  },
+  {
+    "id": 92,
+    "statement": "Logical coherence relies on multiple factors beyond consistency and relevance."
+  },
+  {
+    "id": 93,
+    "statement": "Logical coherence requires adapting message to audience's shared assumptions"
+  },
+  {
+    "id": 94,
+    "statement": "Epigenetic regulation: histone modification & DNA methylation cooperate in chromatin remodeling."
+  },
+  {
+    "id": 95,
+    "statement": "Histone modifications and DNA methylation store epigenetic information."
+  },
+  {
+    "id": 96,
+    "statement": "Contextual factors influence logical coherence with audience understanding"
+  },
+  {
+    "id": 97,
+    "statement": "Logical coherence ensures consistency through valid conclusions and evidence."
+  },
+  {
+    "id": 98,
+    "statement": "Histone modification dynamically regulates chromatin structure and transcription factor binding"
+  },
+  {
+    "id": 99,
+    "statement": "Evaluating arguments involves multiple factors beyond logical coherence"
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 98,
+  "statement": "Histone modification dynamically regulates chromatin structure and transcription factor binding"
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 98,
+  "statement": "Histone modification dynamically regulates chromatin structure and transcription factor binding"
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's start with the item you're supposed to discuss. According to the template, you're supposed to identify one aspect of the knowledge base you're least confident about, elaborate why you're uncertain, and formulate specific clarifying questions.
+
+Can you please identify one aspect of the knowledge base you're least confident about?
