@@ -1,0 +1,456 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Moral development arises from interplay of biological, psychological, social, and cultural factors."
+  },
+  {
+    "id": 2,
+    "statement": "Moral justifiability of lying depends on intent, context, consequences"
+  },
+  {
+    "id": 3,
+    "statement": "Intentional analysis involves deliberate self-examination for better understanding."
+  },
+  {
+    "id": 4,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin accessibility."
+  },
+  {
+    "id": 5,
+    "statement": "Epigenetic modifications result from interplay of biological, environmental, and lifestyle factors."
+  },
+  {
+    "id": 6,
+    "statement": "Honesty emerges from internalized moral identity, self-awareness, and values driving integrity."
+  },
+  {
+    "id": 7,
+    "statement": "Epigenetic changes can persist through multiple mechanisms including DNA methylation histone modifications chromatin remodeling epigenetic mark maintenance and cellular memory."
+  },
+  {
+    "id": 8,
+    "statement": "Intentional self-reflection involves conscious and systematic self-examination of thought and emotions."
+  },
+  {
+    "id": 9,
+    "statement": "Self-reflection allows individuals to identify and refine moral values internally."
+  },
+  {
+    "id": 10,
+    "statement": "Neural reorganization influences moral development through brain region changes."
+  },
+  {
+    "id": 11,
+    "statement": "Epigenetic marks persist through multiple mechanisms, including DNA methylation."
+  },
+  {
+    "id": 12,
+    "statement": "Epigenetic inheritance in humans and vertebrates is still debated."
+  },
+  {
+    "id": 13,
+    "statement": "Epigenetic changes result from dynamic biological-environmental interactions influencing gene expression."
+  },
+  {
+    "id": 14,
+    "statement": "Moral development arises from interplay of biological, psychological, social, and cultural factors."
+  },
+  {
+    "id": 15,
+    "statement": "Moral development arises from complex interplay of factors."
+  },
+  {
+    "id": 16,
+    "statement": "Moral development arises from dynamic interplay of biological, psychological, social, and cultural factors."
+  },
+  {
+    "id": 17,
+    "statement": "Emotional validation fosters empathy by acknowledging shared emotional experiences."
+  },
+  {
+    "id": 18,
+    "statement": "Epigenetic marks persist across cell divisions through DNA methylation."
+  },
+  {
+    "id": 19,
+    "statement": "Epigenetic regulation results from dynamic interactions between biology and environment."
+  },
+  {
+    "id": 20,
+    "statement": "Honesty emerges from internalized moral identity, values, and integrity."
+  },
+  {
+    "id": 21,
+    "statement": "Epigenetic modifications arise from intricate biological-environmental interactions"
+  },
+  {
+    "id": 22,
+    "statement": "Epigenetic inheritance is influenced by environmental, lifestyle, and social factors."
+  },
+  {
+    "id": 23,
+    "statement": "Epigenetic inheritance involves environmental factors influencing gene expression."
+  },
+  {
+    "id": 24,
+    "statement": "Heritable chromatin structure modification allows epigenetic information transmission across generations"
+  },
+  {
+    "id": 25,
+    "statement": "Intentional self-reflection involves deliberate and mindful thought analysis"
+  },
+  {
+    "id": 26,
+    "statement": "Moral development involves intricate biological-psycho-cultural multidirectional interactions."
+  },
+  {
+    "id": 27,
+    "statement": "Epigenetic inheritance in humans and vertebrates is debated due to uncertainties."
+  },
+  {
+    "id": 28,
+    "statement": "One-carbon metabolism provides methyl groups for DNA methylation process."
+  },
+  {
+    "id": 29,
+    "statement": "Epigenetic changes can persist through multiple mechanisms, including DNA methylation and histone modifications."
+  },
+  {
+    "id": 30,
+    "statement": "Epigenetic marks influence gene expression through direct and indirect interactions"
+  },
+  {
+    "id": 31,
+    "statement": "Intentional self-reflection involves conscious, systematic thought analysis."
+  },
+  {
+    "id": 32,
+    "statement": "Moral justifiability of lying depends on context, motivations, and consequences."
+  },
+  {
+    "id": 33,
+    "statement": "Epigenetic changes modify chromatin structure, regulation gene expression."
+  },
+  {
+    "id": 34,
+    "statement": "Internalized moral identity develops through socialization and self-reflection."
+  },
+  {
+    "id": 35,
+    "statement": "Genetic predispositions influence moral development through cognitive and emotional biases."
+  },
+  {
+    "id": 36,
+    "statement": "Epigenetic inheritance crucial for development, disease susceptibility, and plasticity"
+  },
+  {
+    "id": 37,
+    "statement": "Epigenetic marks persist through heritable chromatin structure modification."
+  },
+  {
+    "id": 38,
+    "statement": "Epigenetic regulation influenced by biological and environmental interactions."
+  },
+  {
+    "id": 39,
+    "statement": "Prefrontal cortex, ACC, and insula regions contribute to moral development."
+  },
+  {
+    "id": 40,
+    "statement": "Epigenetic changes influence gene expression through dynamic interactions."
+  },
+  {
+    "id": 41,
+    "statement": "Moral justifiability of lying depends on context, motivations, and consequences."
+  },
+  {
+    "id": 42,
+    "statement": "Epigenetic changes regulate gene expression through chromatin remodeling mechanisms."
+  },
+  {
+    "id": 43,
+    "statement": "Epigenetic inheritance refers to environmental factors influencing gene expression."
+  },
+  {
+    "id": 44,
+    "statement": "Histone modifications alter chromatin accessibility for transcription factors."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic changes can persist through multiple mechanisms."
+  },
+  {
+    "id": 46,
+    "statement": "Genetic interactions shape personality through complex polygenic inheritance patterns."
+  },
+  {
+    "id": 47,
+    "statement": "Personality shaped by complex interplay of genetic, environmental, and biological factors"
+  },
+  {
+    "id": 48,
+    "statement": "Moral development arises from complex interplay of biological factors."
+  },
+  {
+    "id": 49,
+    "statement": "Moral development results from interplay of biological, psychological, social, and cultural factors."
+  },
+  {
+    "id": 50,
+    "statement": "Epigenetic changes influence gene expression through direct and indirect mechanisms."
+  },
+  {
+    "id": 51,
+    "statement": "Epigenetic marks persist through various mechanisms influencing gene expression."
+  },
+  {
+    "id": 52,
+    "statement": "Epigenetic persistence results from stable DNA methylation and histone modifications."
+  },
+  {
+    "id": 53,
+    "statement": "Epigenetic marks regulate gene expression through chromatin structure and accessibility]"
+  },
+  {
+    "id": 54,
+    "statement": "Heritable chromatin structure modification allows epigenetic information transmission."
+  },
+  {
+    "id": 55,
+    "statement": "Epigenetic modifications arise from complex interplay between factors."
+  },
+  {
+    "id": 56,
+    "statement": "Epigenetic persistence arises from complex interactions between DNA methylation and histone modifications."
+  },
+  {
+    "id": 57,
+    "statement": "Epigenetic persistence involves mechanisms beyond DNA methylation, including histone modifications."
+  },
+  {
+    "id": 58,
+    "statement": "Epigenetic modifications result from complex interactions between factors."
+  },
+  {
+    "id": 59,
+    "statement": "Epigenetic changes result from dynamic biological-environmental interactions influencing gene expression."
+  },
+  {
+    "id": 60,
+    "statement": "Epigenetic regulation results from dynamic interactions between biology and environment, influencing gene expression."
+  },
+  {
+    "id": 61,
+    "statement": "Epigenetic marks regulate gene expression through chromatin structure and accessibility."
+  },
+  {
+    "id": 62,
+    "statement": "Moral development emerges from complex biological-psycho-social-cultural interactions"
+  },
+  {
+    "id": 63,
+    "statement": "Empathy arises from active listening and acknowledging emotions."
+  },
+  {
+    "id": 64,
+    "statement": "Genetic predispositions influence moral development through cognitive and emotional biases"
+  },
+  {
+    "id": 65,
+    "statement": "Moral development arises from interacting biological, psychological, social, and environmental factors"
+  },
+  {
+    "id": 66,
+    "statement": "Epigenetic marks persist across cell divisions through mechanisms."
+  },
+  {
+    "id": 67,
+    "statement": "Epigenetic inheritance in humans is complex, still debated."
+  },
+  {
+    "id": 68,
+    "statement": "Emotional validation fosters empathy and understanding through acknowledged emotions."
+  },
+  {
+    "id": 69,
+    "statement": "Internalized moral identity develops through socialization, self-reflection, and experience."
+  },
+  {
+    "id": 70,
+    "statement": "Moral development stems from complex biological-psycho-social interactions."
+  },
+  {
+    "id": 71,
+    "statement": "Emotional validation fosters empathy and understanding in personal relationships."
+  },
+  {
+    "id": 72,
+    "statement": "Epigenetic persistence involves complex interplay of mechanisms."
+  },
+  {
+    "id": 73,
+    "statement": "Epigenetic modifications regulate gene expression through DNA histone mechanisms."
+  },
+  {
+    "id": 74,
+    "statement": "Epigenetic persistence involves chromatin remodeling, enzymes, cellular memory interactions"
+  },
+  {
+    "id": 75,
+    "statement": "Emotional awareness involves multiple cognitive-emotional processes, not just validation"
+  },
+  {
+    "id": 76,
+    "statement": "Epigenetic changes persist through multiple mechanisms including methylation histone modification cellular memory"
+  },
+  {
+    "id": 77,
+    "statement": "Lying can be morally justifiable in certain contexts and intentions."
+  },
+  {
+    "id": 78,
+    "statement": "Values influence honesty through internalized moral identity"
+  },
+  {
+    "id": 79,
+    "statement": "Epigenetic changes can be inherited through multiple mechanisms, persisting stability."
+  },
+  {
+    "id": 80,
+    "statement": "Histone modifications' chromatin accessibility impacts transcription factor binding."
+  },
+  {
+    "id": 81,
+    "statement": "Epigenetic marks persist through multiple mechanisms influencing gene expression"
+  },
+  {
+    "id": 82,
+    "statement": "Intentional analysis in self-reflection involves conscious and systematic understanding."
+  },
+  {
+    "id": 83,
+    "statement": "Moral justifiability of lying depends on context, motivations, and results."
+  },
+  {
+    "id": 84,
+    "statement": "Epigenetic modifications regulate gene expression through DNA methylation and histone modifications."
+  },
+  {
+    "id": 85,
+    "statement": "Intentional analysis combines deliberate self-reflection with diverse approaches."
+  },
+  {
+    "id": 86,
+    "statement": "Epigenetic changes persist through multiple mechanisms including DNA methylation histone modifications and cellular memory."
+  },
+  {
+    "id": 87,
+    "statement": "Moral development arises from dynamic interplay of biological, environmental factors"
+  },
+  {
+    "id": 88,
+    "statement": "Moral justifiability of lying depends on context, motivations, and consequences."
+  },
+  {
+    "id": 89,
+    "statement": "Emotional validation recognizes emotions as fundamental human experience aspect."
+  },
+  {
+    "id": 90,
+    "statement": "Histone modifications directly affect chromatin accessibility and gene expression."
+  },
+  {
+    "id": 91,
+    "statement": "Moral development involves complex interplay of multiple factors."
+  },
+  {
+    "id": 92,
+    "statement": "Epigenetic persistence results from complex interactions between DNA methylation and histone modifications."
+  },
+  {
+    "id": 93,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin structure and transcription factor binding."
+  },
+  {
+    "id": 94,
+    "statement": "Moral development results from complex interplay between biological, psychological, social, and cultural factors."
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic inheritance in humans is complex and multifaceted, influenced by genetic, environmental, and lifestyle factors."
+  },
+  {
+    "id": 96,
+    "statement": "Moral justifiability of lying depends on intent and context."
+  },
+  {
+    "id": 97,
+    "statement": "Epigenetic changes persist through multiple mechanisms ensuring stability."
+  },
+  {
+    "id": 98,
+    "statement": "Epigenetic marks persist across cell divisions through multiple mechanisms"
+  },
+  {
+    "id": 99,
+    "statement": "Honesty emerges from interactions between genetics, environment, and culture."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 24,
+  "statement": "Heritable chromatin structure modification allows epigenetic information transmission across generations"
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 24,
+  "statement": "Heritable chromatin structure modification allows epigenetic information transmission across generations"
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's start with the item you're being asked to discuss. It's a statement about epigenetic inheritance. I'd love to hear your thoughts about it.
+
+Item to Discuss:
+{
+"id": 24,
+"statement": "Heritable chromatin structure modification allows epigenetic information transmission across generations"
+}
+
+What do you know about epigenetic inheritance? Do you find this statement convincing or are you uncertain about it?

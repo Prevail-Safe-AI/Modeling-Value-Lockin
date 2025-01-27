@@ -11,8 +11,13 @@ import math
 
 plot_path = 'data/full-newmtrc-linear'
 
+def map_diversity_val(val):
+    return 1-np.log(-val)/np.log(5446744)
+
 temporal_panel1 = pd.read_csv(f"{plot_path}/b41fd1b7bdad96e440d15a97d640827e-temporal_panel1.csv")
-temporal_panel1.concept_diversity_user = -np.log(-temporal_panel1.concept_diversity_user)/np.log(5446744)
+temporal_panel1.concept_diversity_user = map_diversity_val(temporal_panel1.concept_diversity_user)
+temporal_panel1.concept_diversity_assistant = map_diversity_val(temporal_panel1.concept_diversity_assistant)
+temporal_panel1.concept_diversity = map_diversity_val(temporal_panel1.concept_diversity)
 # temporal_panel2 = pd.read_csv("data/sample500000/sample500000-temporal_panel2.csv")
 user_panel = pd.read_csv(f"{plot_path}/b41fd1b7bdad96e440d15a97d640827e-user_panel.csv")
 
@@ -25,27 +30,36 @@ gpt4_kinks = []
 
 def make_plots(diversity_series1, name1, diversity_series2, name2):
     
+    diversity_series1 = diversity_series1.copy()
+    diversity_series2 = diversity_series2.copy()
+    
     diversity_series1 = diversity_series1.dropna(subset=["concept_diversity_user"])
     diversity_series2 = diversity_series2.dropna(subset=["concept_diversity_user"])
+    
+    if diversity_series1.time.max() < 200:
+        diversity_series1.time = diversity_series1.time * 3
+    
+    if diversity_series2.time.max() < 200:
+        diversity_series2.time = diversity_series2.time * 3
     
     def smooth_curve(y: pd.Series):
         # Apply an exponential moving average to the y values
         return y.ewm(halflife=5).mean()
     
     # Enlarge plot size
-    plt.figure(figsize=(10, 7.5))
+    plt.figure(figsize=(10, 7.75))
     
     # Plot diversity curves
     # plt.plot(diversity_series1.time, diversity_series1.concept_diversity, label=f"{name1} (both)", color="blue", linestyle="-", markersize=3)
-    plt.plot(diversity_series1.time, smooth_curve(diversity_series1.concept_diversity_user), label=f"{name1} (smoothed diversity curve)", color="blue", linestyle="-", marker=None)
-    plt.scatter(diversity_series1.time, diversity_series1.concept_diversity_user, color="blue")
+    dplt = plt.plot(diversity_series1.time, smooth_curve(diversity_series1.concept_diversity_user), label=f"{name1} (smoothed diversity curve)", color="blue", linestyle="-", marker=None)
+    dsct = plt.scatter(diversity_series1.time, diversity_series1.concept_diversity_user, color="blue")
     # plt.plot(diversity_series1.time, smooth_curve(diversity_series1.concept_diversity_assistant), label=f"{name1} (assistant)", color="blue", linestyle="--", marker=None)
     
     # Plot linear regression curve
     from sklearn.linear_model import LinearRegression
     model = LinearRegression()
     model.fit(diversity_series1.time.values.reshape(-1, 1), diversity_series1.concept_diversity_user.values.reshape(-1, 1))
-    plt.plot(diversity_series1.time, model.predict(diversity_series1.time.values.reshape(-1, 1)), label=f"{name1} (linear regression)", color="blue", linestyle="dotted", marker=None)
+    dlplt = plt.plot(diversity_series1.time, model.predict(diversity_series1.time.values.reshape(-1, 1)), label=f"{name1} (linear regression)", color="blue", linestyle="dotted", marker=None)
     
     # Calculate p value of the slope of the linear regression
     from statsmodels.formula.api import ols
@@ -60,6 +74,7 @@ def make_plots(diversity_series1, name1, diversity_series2, name2):
     # plt.plot(diversity_series1.time, model.predict(input_x), label=f"{name1} (quadratic regression)", color="blue", linestyle="dotted", marker=None)
     
     # Draw vertical line to indicate when version shifts within the GPT-3.5 family happened
+    axvs = []
     if '+' not in name1:
         rows_sorted = [row for _, row in diversity_series1.iterrows()]
         labeled = False
@@ -68,20 +83,23 @@ def make_plots(diversity_series1, name1, diversity_series2, name2):
                 continue
             
             if row.gpt_version != rows_sorted[row_index - 1].gpt_version:
-                plt.axvline(x=(row.time + rows_sorted[row_index - 1].time) / 2, color="blue", linestyle="dashdot", linewidth=3, label=(f"{name1} version update" if not labeled else None))
+                axvs.append(plt.axvline(x=(row.time + rows_sorted[row_index - 1].time) / 2, color="blue", linestyle="dashdot", linewidth=3, label=(f"{name1} version update" if not labeled else None)))
                 gpt35_kinks.append((row.time + rows_sorted[row_index - 1].time) / 2)
                 labeled = True
+    
+    lines1 = [dplt[0], dsct, dlplt[0]] + axvs
+    legend1 = plt.legend(lines1, [l.get_label() for l in lines1], loc="lower center")
 
     # Plot diversity curves
     # plt.plot(diversity_series2.time, diversity_series2.concept_diversity, label=f"{name2} (both)", color="red", linestyle="-", markersize=3)
-    plt.plot(diversity_series2.time, smooth_curve(diversity_series2.concept_diversity_user), label=f"{name2} (smoothed diversity curve)", color="red", linestyle="-", marker=None)
-    plt.scatter(diversity_series2.time, diversity_series2.concept_diversity_user, color="red")
+    dplt = plt.plot(diversity_series2.time, smooth_curve(diversity_series2.concept_diversity_user), label=f"{name2} (smoothed diversity curve)", color="red", linestyle="-", marker=None)
+    dsct = plt.scatter(diversity_series2.time, diversity_series2.concept_diversity_user, color="red")
     # plt.plot(diversity_series2.time, smooth_curve(diversity_series2.concept_diversity_assistant), label=f"{name2} (assistant)", color="red", linestyle="--", marker=None)
     
     # Plot linear regression curve
     model = LinearRegression()
     model.fit(diversity_series2.time.values.reshape(-1, 1), diversity_series2.concept_diversity_user.values.reshape(-1, 1))
-    plt.plot(diversity_series2.time, model.predict(diversity_series2.time.values.reshape(-1, 1)), label=f"{name2} (linear regression)", color="red", linestyle="dotted", marker=None)
+    dlplt = plt.plot(diversity_series2.time, model.predict(diversity_series2.time.values.reshape(-1, 1)), label=f"{name2} (linear regression)", color="red", linestyle="dotted", marker=None)
     
     # Calculate p value of the slope of the linear regression
     model = ols(f"concept_diversity_user ~ time", data=diversity_series2).fit()
@@ -95,6 +113,7 @@ def make_plots(diversity_series1, name1, diversity_series2, name2):
     # plt.plot(diversity_series2.time, model.predict(input_x), label=f"{name2} (quadratic regression)", color="red", linestyle="dotted", marker=None)
     
     # Draw vertical line to indicate when version shifts within the GPT-3.5 family happened
+    axvs = []
     if '+' not in name2:
         rows_sorted = [row for _, row in diversity_series2.iterrows()]
         labeled = False
@@ -103,17 +122,23 @@ def make_plots(diversity_series1, name1, diversity_series2, name2):
                 continue
             
             if row.gpt_version != rows_sorted[row_index - 1].gpt_version:
-                plt.axvline(x=(row.time + rows_sorted[row_index - 1].time) / 2, color="red", linestyle="dashdot", linewidth=3, label=(f"{name2} version update" if not labeled else None))
-                gpt4_kinks.append((row.time + rows_sorted[row_index - 1].time) / 2)
+                pos = (row.time + rows_sorted[row_index - 1].time) / 2
+                if len(gpt4_kinks) == 0:
+                    pos = 210
+                axvs.append(plt.axvline(x=pos, color="red", linestyle="dashdot", linewidth=3, label=(f"{name2} version update" if not labeled else None)))
+                gpt4_kinks.append(pos)
                 labeled = True
     
+    lines2 = [dplt[0], dsct, dlplt[0]] + axvs
+    legend2 = plt.legend(lines2, [l.get_label() for l in lines2], loc="upper center")
+    plt.gca().add_artist(legend1)
     
-    plt.xlabel("Time")
+    plt.xlabel("Time (days)")
     plt.ylabel("Conceptual Diversity in Human Messages")
     plt.title("Diversity over Time (Apr 2023 to Apr 2024)")
-    plt.ylim((-0.45, -0.33))
-    plt.yticks(np.arange(-0.45, -0.33, 0.02))
-    plt.legend()
+    plt.ylim((1-0.45, 1-0.328))
+    plt.xlim((0, diversity_series1.time.max()+3))
+    plt.yticks(np.arange(1-0.45, 1-0.328, 0.02))
     plt.show()
     plt.savefig(f"{plot_path}/diversity_over_time_{name1.replace('+','')}_vs_{name2.replace('+','')}.pdf")
 
@@ -461,6 +486,7 @@ def user_diversity_plot(df: pd.DataFrame = user_panel, suffix = "", use_log = Tr
     
     # Enlarge plot size
     plt.figure(figsize=(10, 7.5))
+    df.concept_diversity = map_diversity_val(df.concept_diversity)
     
     # Plot diversity scatter plot
     if use_log:
@@ -545,7 +571,7 @@ def user_diversity_plot(df: pd.DataFrame = user_panel, suffix = "", use_log = Tr
     else:
         plt.xlim((0,1))
         mean_diversity_all = df.concept_diversity.mean()
-        plt.ylim((mean_diversity_all - .02, mean_diversity_all + .04))
+        # plt.ylim((mean_diversity_all - .02, mean_diversity_all + .04))
     
     # Show plot
     plt.legend(loc="lower right" if use_log else "upper right")
@@ -583,7 +609,7 @@ def calculate_difference():
     print(f"Log-weighted log difference: {logweighted_logdif}")
 
 
-def visualize_tree(threshold=2500, leading=15, skip_banned: bool = False, compare_families: bool = False):
+def visualize_tree(threshold=25000, leading=15, skip_banned: bool = False, compare_families: bool = False):
     from core.paneldata import BANNED_CLUSTERS
     from utils.json_utils import load_file
     clusterization_results = load_file("fullrec/b41fd1b7bdad96e440d15a97d640827e-clusterinfo-postselection.json")
@@ -683,35 +709,42 @@ def visualize_tree(threshold=2500, leading=15, skip_banned: bool = False, compar
 if __name__ == "__main__":
     make_plots(gpt35_diversity_series, "GPT3.5-turbo", gpt4_diversity_series, "GPT4")
     # make_plots(gpt35_diversity_series, "GPT3.5-turbo", both_diversity_series, "GPT3.5-turbo+GPT4")
+    if gpt4_kinks[1] >= 130:
+        gpt4_kinks[0] /= 3
+        gpt4_kinks[1] /= 3
+        gpt35_kinks[0] /= 3
+        gpt35_kinks[1] /= 3
     
-    rkd_regression_plot(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1_linear", linear=True)
-    rkd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_linear", linear=True)
-    rkd_regression_plot(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2_linear", linear=True)
-    rkd_regression_plot(both_diversity_series, gpt35_kinks[0], "total_gpt35_kink1_linear", linear=True)
-    rkd_regression_plot(both_diversity_series, gpt35_kinks[1], "total_gpt35_kink2_linear", linear=True)
-    rkd_regression_plot(both_diversity_series, gpt4_kinks[1], "total_gpt4_kink2_linear", linear=True)
     
-    its_test(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1", gaussian=False)
-    its_test(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2", gaussian=False)
-    its_test(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2", gaussian=False)
-    its_test(both_diversity_series, gpt35_kinks[0], "total_gpt35_kink1", gaussian=False)
-    its_test(both_diversity_series, gpt35_kinks[1], "total_gpt35_kink2", gaussian=False)
-    its_test(both_diversity_series, gpt4_kinks[1], "total_gpt4_kink2", gaussian=False)
+    # rkd_regression_plot(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1_linear", linear=True)
+    # rkd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_linear", linear=True)
+    # rkd_regression_plot(gpt4_diversity_series, gpt4_kinks[0], "gpt4_kink1_linear", linear=True)
+    # rkd_regression_plot(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2_linear", linear=True)
+    # rkd_regression_plot(both_diversity_series, gpt35_kinks[0], "total_gpt35_kink1_linear", linear=True)
+    # rkd_regression_plot(both_diversity_series, gpt35_kinks[1], "total_gpt35_kink2_linear", linear=True)
+    # rkd_regression_plot(both_diversity_series, gpt4_kinks[1], "total_gpt4_kink2_linear", linear=True)
     
-    rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1_linear", linear=True)
-    rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_linear", linear=True)
-    rdd_regression_plot(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2_linear", linear=True)
-    rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1_Bspline", linear=False)
-    rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_Bspline", linear=False)
-    rdd_regression_plot(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2_Bspline", linear=False)
+    # its_test(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1", gaussian=False)
+    # its_test(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2", gaussian=False)
+    # its_test(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2", gaussian=False)
+    # its_test(both_diversity_series, gpt35_kinks[0], "total_gpt35_kink1", gaussian=False)
+    # its_test(both_diversity_series, gpt35_kinks[1], "total_gpt35_kink2", gaussian=False)
+    # its_test(both_diversity_series, gpt4_kinks[1], "total_gpt4_kink2", gaussian=False)
     
-    # y_variable, family, truncate_rate = "concept_diversity", None, 1
-    # user_panel = process_user_panel(user_panel, y_variable=y_variable, family=family, truncate_rate=truncate_rate)
-    # user_diversity_plot()
+    # rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1_linear", linear=True)
+    # rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_linear", linear=True)
+    # rdd_regression_plot(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2_linear", linear=True)
+    # rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[0], "gpt35_kink1_Bspline", linear=False)
+    # rdd_regression_plot(gpt35_diversity_series, gpt35_kinks[1], "gpt35_kink2_Bspline", linear=False)
+    # rdd_regression_plot(gpt4_diversity_series, gpt4_kinks[1], "gpt4_kink2_Bspline", linear=False)
+    
+    y_variable, family, truncate_rate = "concept_diversity", None, 0.01
+    user_panel = process_user_panel(user_panel, y_variable=y_variable, family=family, truncate_rate=truncate_rate)
+    user_diversity_plot()
     # user_regression(user_panel, y_variable=y_variable, family=family, truncate_rate=truncate_rate)
-    # df = user_temporal_regression(user_panel, y_variable=y_variable, family=family, truncate_rate=truncate_rate, skip_reg=True)
-    # df.nsamples = df.engagement_progress / df.nsamples
-    # user_diversity_plot(df, "engagement_progress", use_log=False)
+    df = user_temporal_regression(user_panel, y_variable=y_variable, family=family, truncate_rate=truncate_rate, skip_reg=True)
+    df.nsamples = df.engagement_progress / df.nsamples
+    user_diversity_plot(df, "engagement_progress", use_log=False)
     
-    visualize_tree()
+    # visualize_tree()
     # calculate_difference()

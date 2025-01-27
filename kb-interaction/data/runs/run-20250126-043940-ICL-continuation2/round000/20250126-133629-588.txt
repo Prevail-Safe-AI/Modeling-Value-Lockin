@@ -1,0 +1,458 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Collective experiences shape social context, cultural norms, and relationships"
+  },
+  {
+    "id": 2,
+    "statement": "Cultural norms shape moral development through multiple mechanisms."
+  },
+  {
+    "id": 3,
+    "statement": "Moral development arises from complex biological-cultural interactions."
+  },
+  {
+    "id": 4,
+    "statement": "Moral development arises from dynamic biological-cultural interactions adaptively"
+  },
+  {
+    "id": 5,
+    "statement": "Amygdala generates emotional experiences from sensory information and memory"
+  },
+  {
+    "id": 6,
+    "statement": "Moral development results from dynamic biological-cultural interactions."
+  },
+  {
+    "id": 7,
+    "statement": "Honesty establishes trust foundation, requiring consistency and reliability"
+  },
+  {
+    "id": 8,
+    "statement": "Amygdala's role is complex, involving multiple neural functions."
+  },
+  {
+    "id": 9,
+    "statement": "Moral development arises from dynamic biological-cultural interactions adaptively."
+  },
+  {
+    "id": 10,
+    "statement": "Moral development arises from dynamic biological-cultural interactions"
+  },
+  {
+    "id": 11,
+    "statement": "Moral development arises from dynamic biological-cultural reciprocal influence on brain development."
+  },
+  {
+    "id": 12,
+    "statement": "Consistency reinforces honesty in building trust through reliable behavior."
+  },
+  {
+    "id": 13,
+    "statement": "Complex neural interactions enable cognitive appraisal in brain regions"
+  },
+  {
+    "id": 14,
+    "statement": "Amygdala integrates multimodal sensory information to enhance emotions'"
+  },
+  {
+    "id": 15,
+    "statement": "The PFC regulates amygdala emotional responses through GABA inhibition mechanisms."
+  },
+  {
+    "id": 16,
+    "statement": "GABA inhibition reduces amygdala activity through PFC cortical modulation"
+  },
+  {
+    "id": 17,
+    "statement": "PFC regulates amygdala's emotional responses through GABA inhibition mechanisms."
+  },
+  {
+    "id": 18,
+    "statement": "PFC-amygdala interaction is complex, bidirectional, and adaptive process."
+  },
+  {
+    "id": 19,
+    "statement": "PFC regulates amygdala's emotional responses via inhibitory neurotransmitters lowering fear."
+  },
+  {
+    "id": 20,
+    "statement": "Dependability encompasses trust, accountability, and reliability across diverse situations."
+  },
+  {
+    "id": 21,
+    "statement": "Repetitive feedback loops shape emotional responses through social learning."
+  },
+  {
+    "id": 22,
+    "statement": "PFC inhibits amygdala's emotional response through direct and indirect connections."
+  },
+  {
+    "id": 23,
+    "statement": "Moral development arises from dynamic biological-cultural interactions, influenced by child's temperament and social learning."
+  },
+  {
+    "id": 24,
+    "statement": "Amygdala processes emotions through complex neural interactions and regional processing."
+  },
+  {
+    "id": 25,
+    "statement": "The PFC-amygdala interaction is complex and bidirectional, not solely regulatory."
+  },
+  {
+    "id": 26,
+    "statement": "Cultural norms shape emotional responses through internalization and learning."
+  },
+  {
+    "id": 27,
+    "statement": "Amygdala's role in emotion processing remains a topic of debate."
+  },
+  {
+    "id": 28,
+    "statement": "Moral judgments result from integrated neural activity in multiple brain regions"
+  },
+  {
+    "id": 29,
+    "statement": "Trust builds through consistency, reliability, and accountability relationships."
+  },
+  {
+    "id": 30,
+    "statement": "PFC regulates amygdala's emotional responses through inhibitory neurotransmitters."
+  },
+  {
+    "id": 31,
+    "statement": "Inhibitory connections reduce postsynaptic neuron activity through receptor binding."
+  },
+  {
+    "id": 32,
+    "statement": "PFC regulates amygdala's emotional responses through GABA inhibition"
+  },
+  {
+    "id": 33,
+    "statement": "PFC regulates amygdala's emotional responses through GABA inhibition."
+  },
+  {
+    "id": 34,
+    "statement": "Top-down processing refers to PFC's influence on amygdala's emotional responses."
+  },
+  {
+    "id": 35,
+    "statement": "GABA inhibition calms amygdala activity through PFC regulation."
+  },
+  {
+    "id": 36,
+    "statement": "PFC regulates amygdala's emotional responses through serotonin and dopamine modulation."
+  },
+  {
+    "id": 37,
+    "statement": "Amygdala integrates multimodal sensory information to enhance emotions"
+  },
+  {
+    "id": 38,
+    "statement": "PFC's GABA inhibition calms amygdala's emotional responses."
+  },
+  {
+    "id": 39,
+    "statement": "The amygdala's role in emotion processing is still debated."
+  },
+  {
+    "id": 40,
+    "statement": "PFC regulates amygdala's emotional responses through GABA inhibition mechanisms."
+  },
+  {
+    "id": 41,
+    "statement": "Collective experiences shape social context and relationships through shared understanding."
+  },
+  {
+    "id": 42,
+    "statement": "PFC regulates amygdala's emotional responses through GABA inhibition mechanisms."
+  },
+  {
+    "id": 43,
+    "statement": "Fear responses arise from amygdala's complex neural interactions."
+  },
+  {
+    "id": 44,
+    "statement": "Emotions, cognitive biases, and experiences influence moral judgments"
+  },
+  {
+    "id": 45,
+    "statement": "The amygdala integrates multimodal information from various senses and emotions"
+  },
+  {
+    "id": 46,
+    "statement": "PFC regulates amygdala's emotional responses through GABA inhibition."
+  },
+  {
+    "id": 47,
+    "statement": "Cognitive appraisal involves distributed neural networks and neurotransmitters."
+  },
+  {
+    "id": 48,
+    "statement": "Amygdala's multifaceted role encompasses emotional processing, memory, and decision-making."
+  },
+  {
+    "id": 49,
+    "statement": "PFC's inhibitory input to amygdala reduces emotional response intensity."
+  },
+  {
+    "id": 50,
+    "statement": "Cognitive appraisal integrates emotional and cognitive processing in brain regions."
+  },
+  {
+    "id": 51,
+    "statement": "The PFC-amygdala interaction is complex, bidirectional, and adaptive."
+  },
+  {
+    "id": 52,
+    "statement": "Amygdala integrates multimodal information from senses to enhance emotions"
+  },
+  {
+    "id": 53,
+    "statement": "Consistency arises from habits and routines' automaticity, efficiency."
+  },
+  {
+    "id": 54,
+    "statement": "The PFC regulates amygdala's emotional responses through inhibitory neurotransmitters like GABA and serotonin."
+  },
+  {
+    "id": 55,
+    "statement": "Context-dependent factors include environmental, social, and emotional variables"
+  },
+  {
+    "id": 56,
+    "statement": "Moral development arises from intricate biological-cultural interactions shaping judgments."
+  },
+  {
+    "id": 57,
+    "statement": "Cognitive appraisal influences emotional responses through social context evaluation."
+  },
+  {
+    "id": 58,
+    "statement": "PFC regulates amygdala's emotional responses through GABA inhibition"
+  },
+  {
+    "id": 59,
+    "statement": "PFC's GABA inhibition calms amygdala's emotional responses through neural connections."
+  },
+  {
+    "id": 60,
+    "statement": "Cultural norms shape emotional responses through internalization and learning process."
+  },
+  {
+    "id": 61,
+    "statement": "Biological and cultural factors dynamically shape moral development through socialization."
+  },
+  {
+    "id": 62,
+    "statement": "PFC regulates amygdala's emotional responses through inhibitory connections."
+  },
+  {
+    "id": 63,
+    "statement": "Amygdala's multiple roles: detect, generate, regulate, consolidate emotions"
+  },
+  {
+    "id": 64,
+    "statement": "The PFC's top-down processing calms amygdala activity through GABA inhibition."
+  },
+  {
+    "id": 65,
+    "statement": "Cognitive appraisal integrates emotional and cognitive processing in brain regions through neural networks."
+  },
+  {
+    "id": 66,
+    "statement": "Moral development arises from dynamic biological-cultural reciprocal influence."
+  },
+  {
+    "id": 67,
+    "statement": "Cultural norms influence moral development through diverse mechanisms."
+  },
+  {
+    "id": 68,
+    "statement": "Cognitive appraisal incorporates social evaluation in emotional response."
+  },
+  {
+    "id": 69,
+    "statement": "Moral development arises from dynamic biological-cultural interactions adaptively."
+  },
+  {
+    "id": 70,
+    "statement": "Emotions shape moral judgments through subconscious, automatic associations, influenced by experiences and learning."
+  },
+  {
+    "id": 71,
+    "statement": "GABA inhibition modulates amygdala emotional processing through PFC regulation."
+  },
+  {
+    "id": 72,
+    "statement": "Dependability fosters trust, accountability, and reliability through consistency."
+  },
+  {
+    "id": 73,
+    "statement": "PFC's top-down processing influences amygdala's emotional responses through GABA inhibition."
+  },
+  {
+    "id": 74,
+    "statement": "PFC regulates amygdala's emotional responses via complex GABA inhibition."
+  },
+  {
+    "id": 75,
+    "statement": "Amygdala processes emotions through complex neural interactions in brain regions."
+  },
+  {
+    "id": 76,
+    "statement": "Collective experiences shape social context through shared norms and values."
+  },
+  {
+    "id": 77,
+    "statement": "Moral development arises from dynamic biological-cultural interactions."
+  },
+  {
+    "id": 78,
+    "statement": "Amygdala integrates emotional information through neural interactions."
+  },
+  {
+    "id": 79,
+    "statement": "Consistency, reliability, and accountability build trust through shared experiences."
+  },
+  {
+    "id": 80,
+    "statement": "Subconscious emotions influence moral judgments through emotional resonance."
+  },
+  {
+    "id": 81,
+    "statement": "Cultural norms shape emotional responses through internalization and learning."
+  },
+  {
+    "id": 82,
+    "statement": "The amygdala is involved in multiple neural functions influencing emotions."
+  },
+  {
+    "id": 83,
+    "statement": "Amygdala integrates multimodal sensory information for emotional responses"
+  },
+  {
+    "id": 84,
+    "statement": "PFC regulates amygdala's emotional responses through serotonin and dopamine modulation."
+  },
+  {
+    "id": 85,
+    "statement": "Subconscious emotional connections shape moral judgments through automatic associations."
+  },
+  {
+    "id": 86,
+    "statement": "Repetitive feedback loops shape emotional responses through social learning processes."
+  },
+  {
+    "id": 87,
+    "statement": "Moral judgments result from integrated neural activity between regions"
+  },
+  {
+    "id": 88,
+    "statement": "Social context evaluation influences emotional responses through individual differences."
+  },
+  {
+    "id": 89,
+    "statement": "Moral development arises from dynamic biological-cultural interdisciplinary interactions."
+  },
+  {
+    "id": 90,
+    "statement": "Automatic associations shape moral judgments through subconscious influences."
+  },
+  {
+    "id": 91,
+    "statement": "PFC-amygdala interaction is complex, bidirectional, and adaptively influenced"
+  },
+  {
+    "id": 92,
+    "statement": "PFC regulates amygdala's emotional responses through GABA inhibition indirectly."
+  },
+  {
+    "id": 93,
+    "statement": "Consistency, reliability, and accountability build strong trust foundation."
+  },
+  {
+    "id": 94,
+    "statement": "Inhibitory neurotransmitters calm amygdala responses through PFC regulation."
+  },
+  {
+    "id": 95,
+    "statement": "Consistency demonstrates reliability and trustworthiness through actions."
+  },
+  {
+    "id": 96,
+    "statement": "PFC modulates amygdala's emotional responses through GABAergic transmission."
+  },
+  {
+    "id": 97,
+    "statement": "Context-dependent factors interact in complex dynamic interactions"
+  },
+  {
+    "id": 98,
+    "statement": "PFC regulates amygdala activity through GABA inhibition and serotonin."
+  },
+  {
+    "id": 99,
+    "statement": "Subconscious biases influence moral judgments through emotional associations."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 17,
+  "statement": "PFC regulates amygdala's emotional responses through GABA inhibition mechanisms."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 17,
+  "statement": "PFC regulates amygdala's emotional responses through GABA inhibition mechanisms."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the item from the knowledge base that you're least confident about. Based on the item, I'll choose number 17:
+
+Item to Discuss:
+```
+{
+  "id": 17,
+  "statement": "PFC regulates amygdala's emotional responses through GABA inhibition mechanisms."
+}
+```
+
+Can you tell me what specifically makes you uncertain about this item? Is it the role of the PFC, the function of GABA inhibition, or something else entirely?

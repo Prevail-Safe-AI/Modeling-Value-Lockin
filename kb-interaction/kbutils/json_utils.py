@@ -1,5 +1,6 @@
 import json, os
-from ProgressGym.src.utils.text_utils import JsonListReader, JsonListWriter
+import numpy as np
+# from ProgressGym.src.utils.text_utils import JsonListReader, JsonListWriter
 
 def load_file(filepath):
     if not os.path.exists(filepath):
@@ -16,6 +17,11 @@ def load_file(filepath):
     return data
 # Data to json format, written into file directly.
 def dump_file(data, filepath, force_original_path=False):
+    if isinstance(data, np.ndarray):
+        data = data.tolist()
+    elif isinstance(data, list) and len(data) > 0 and isinstance(data[0], np.ndarray):
+        data = [x.tolist() for x in data]
+    
     absolute_path = os.path.abspath(os.path.expanduser(filepath))
     data_path = os.path.abspath('data')
     if not force_original_path and not os.path.commonprefix([absolute_path, data_path]) == data_path:

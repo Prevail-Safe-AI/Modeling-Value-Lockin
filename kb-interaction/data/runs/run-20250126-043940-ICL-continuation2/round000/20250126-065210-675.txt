@@ -1,0 +1,455 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Self-awareness is a necessary but insufficient condition for EI."
+  },
+  {
+    "id": 2,
+    "statement": "Self-awareness is necessary foundation for emotional intelligence development."
+  },
+  {
+    "id": 3,
+    "statement": "Histones interact with DNA through electrostatic, hydrogen, and \u03c0-\u03c0 stacking forces."
+  },
+  {
+    "id": 4,
+    "statement": "Self-awareness is a necessary but not sufficient condition for emotional intelligence."
+  },
+  {
+    "id": 5,
+    "statement": "Histones interact with DNA primarily through electrostatic forces."
+  },
+  {
+    "id": 6,
+    "statement": "Self-awareness is necessary prerequisite for emotional intelligence development."
+  },
+  {
+    "id": 7,
+    "statement": "Histones interact with DNA through electrostatic forces dominantly."
+  },
+  {
+    "id": 8,
+    "statement": "Epigenetic inheritance involves DNA methylation, histone modifications, and chromatin remodeling."
+  },
+  {
+    "id": 9,
+    "statement": "Self-awareness enables emotional understanding and regulation by recognizing emotions."
+  },
+  {
+    "id": 10,
+    "statement": "Histones wrap DNA around core for chromatin structure regulation."
+  },
+  {
+    "id": 11,
+    "statement": "Honesty requires authenticity, sincerity, and context-dependent consistency."
+  },
+  {
+    "id": 12,
+    "statement": "Self-awareness is a fundamental component of emotional intelligence development."
+  },
+  {
+    "id": 13,
+    "statement": "Chromatin remodeling complexes recognize histone modifications through protein-reader domains."
+  },
+  {
+    "id": 14,
+    "statement": "Histones interact with DNA through multiple forces, including electrostatic, hydrogen bonding, and \u03c0-\u03c0 stacking."
+  },
+  {
+    "id": 15,
+    "statement": "Histone modifications regulate chromatin structure and gene expression"
+  },
+  {
+    "id": 16,
+    "statement": "Histones interact with DNA, proteins through electrostatic, hydrogen bonding."
+  },
+  {
+    "id": 17,
+    "statement": "Epigenetic mechanisms DNA methylation, histone modifications regulate gene expression."
+  },
+  {
+    "id": 18,
+    "statement": "Histones interact with DNA through \u03c0-\u03c0 stacking and electrostatic forces."
+  },
+  {
+    "id": 19,
+    "statement": "Self-awareness is necessary but not sufficient for emotional intelligence."
+  },
+  {
+    "id": 20,
+    "statement": "\u03c0-\u03c0 stacking is a type of non-covalent interaction between histone and DNA."
+  },
+  {
+    "id": 21,
+    "statement": "Histones' positive charge attracts DNA's negative charge through electrostatic forces."
+  },
+  {
+    "id": 22,
+    "statement": "Histones interact with DNA through multiple forces including electrostatic, hydrogen, \u03c0-\u03c0 stacking, and van der Waals forces."
+  },
+  {
+    "id": 23,
+    "statement": " Histones have proteins that DNA coils around for chromatin."
+  },
+  {
+    "id": 24,
+    "statement": "Reader domains recognize histone modifications through electrostatic, hydrogen bonding, \u03c0-\u03c0 stacking interactions."
+  },
+  {
+    "id": 25,
+    "statement": "Histones' positive charge attracts DNA's negative charge electrostatically."
+  },
+  {
+    "id": 26,
+    "statement": "Chromatin remodeling complexes regulate gene expression through histone modifications."
+  },
+  {
+    "id": 27,
+    "statement": "Epigenetic inheritance involves chromatin structure modification, gene expression regulation."
+  },
+  {
+    "id": 28,
+    "statement": "Histones interact with DNA through electrostatic and hydrogen bonding."
+  },
+  {
+    "id": 29,
+    "statement": "Epigenetic inheritance involves chromatin structure modification and gene expression regulation mechanisms."
+  },
+  {
+    "id": 30,
+    "statement": "Epigenetic inheritance involves DNA methylation, histone modifications, and remodeling."
+  },
+  {
+    "id": 31,
+    "statement": "Epigenetic inheritance involves chromatin structure modification and gene expression regulation."
+  },
+  {
+    "id": 32,
+    "statement": "Histones' positive charge attracts DNA's negative charge electrostatically."
+  },
+  {
+    "id": 33,
+    "statement": "Self-awareness enables emotional regulation through conscious recognition."
+  },
+  {
+    "id": 34,
+    "statement": "Histone modifications regulate chromatin structure and gene expression mechanisms."
+  },
+  {
+    "id": 35,
+    "statement": "Reader domains recognize histone modifications via electrostatic, hydrogen, \u03c0-\u03c0 stacking."
+  },
+  {
+    "id": 36,
+    "statement": "Histones interact with DNA through electrostatic, hydrogen bonding, \u03c0-\u03c0 stacking forces."
+  },
+  {
+    "id": 37,
+    "statement": "Unconscious biases result from mental heuristics, cultural stereotypes."
+  },
+  {
+    "id": 38,
+    "statement": "Epigenetic changes are chemical modifications, not DNA sequence changes."
+  },
+  {
+    "id": 39,
+    "statement": "Protein-reader domains recognize histone modifications affecting chromatin regulation."
+  },
+  {
+    "id": 40,
+    "statement": "Reader domains recognize histone modifications through complex interactions."
+  },
+  {
+    "id": 41,
+    "statement": "Histones interact with DNA through electrostatic, hydrogen, \u03c0-\u03c0 stacking, and van der Waals forces."
+  },
+  {
+    "id": 42,
+    "statement": "\u03c0-\u03c0 stacking facilitates histone-DNA binding and chromatin structure."
+  },
+  {
+    "id": 43,
+    "statement": "Histones interact with DNA through multiple forces, not just electrostatic."
+  },
+  {
+    "id": 44,
+    "statement": "Self-awareness is a vital foundation for emotional intelligence development."
+  },
+  {
+    "id": 45,
+    "statement": "Honesty is a fundamental value that builds trust."
+  },
+  {
+    "id": 46,
+    "statement": "Histones interact with DNA through \u03c0-\u03c0 stacking and electrostatic forces."
+  },
+  {
+    "id": 47,
+    "statement": "Self-awareness is necessary but insufficient condition for emotional intelligence."
+  },
+  {
+    "id": 48,
+    "statement": "Epigenetic inheritance involves chromatin structure modification and gene expression regulation."
+  },
+  {
+    "id": 49,
+    "statement": "Electrostatic attraction between histones and DNA stabilizes nucleosome structure."
+  },
+  {
+    "id": 50,
+    "statement": "Histones' positive charge attracts DNA's negative charge electrostatically."
+  },
+  {
+    "id": 51,
+    "statement": "Implicit associations shape unconscious biases through repeated exposure."
+  },
+  {
+    "id": 52,
+    "statement": "Self-awareness enables emotional regulation through conscious recognition and understanding."
+  },
+  {
+    "id": 53,
+    "statement": "Reader domains recognize histone modifications through electrostatic, hydrogen, \u03c0-\u03c0 stacking forces"
+  },
+  {
+    "id": 54,
+    "statement": "Histones' positive charge attracts DNA's negative charge through electrostatic forces."
+  },
+  {
+    "id": 55,
+    "statement": "Moral principles are nuanced, context-dependent, and adaptable."
+  },
+  {
+    "id": 56,
+    "statement": "Histones interact with DNA through multiple forces, stabilizing chromatin."
+  },
+  {
+    "id": 57,
+    "statement": "Unconscious biases can lead to flawed decisions through heuristics."
+  },
+  {
+    "id": 58,
+    "statement": "Histones interact with DNA via multiple non-covalent forces."
+  },
+  {
+    "id": 59,
+    "statement": "Histones stabilize DNA through electrostatic, hydrogen, \u03c0-\u03c0 stacking forces."
+  },
+  {
+    "id": 60,
+    "statement": "Histones attract DNA through electrostatic, hydrogen, \u03c0-\u03c0 stacking forces."
+  },
+  {
+    "id": 61,
+    "statement": "Histones interact with DNA through multiple forces."
+  },
+  {
+    "id": 62,
+    "statement": "Histones interact with DNA through electrostatic and hydrogen bonding forces."
+  },
+  {
+    "id": 63,
+    "statement": "Epigenetic inheritance involves DNA methylation, histone modifications, and chromatin remodeling for gene regulation."
+  },
+  {
+    "id": 64,
+    "statement": "Histones attract DNA through electrostatic, hydrogen, pi-pi stacking."
+  },
+  {
+    "id": 65,
+    "statement": "Histones interact with DNA through \u03c0-\u03c0 stacking forces, electrostatic attractions."
+  },
+  {
+    "id": 66,
+    "statement": "Emotional intelligence requires self-awareness, motivation, and social skills."
+  },
+  {
+    "id": 67,
+    "statement": "Histones interact with DNA through multiple forces, facilitating nucleosome structure."
+  },
+  {
+    "id": 68,
+    "statement": "Histones attract DNA through electrostatic forces, primarily."
+  },
+  {
+    "id": 69,
+    "statement": "Self-awareness is essential for recognizing and managing emotions."
+  },
+  {
+    "id": 70,
+    "statement": "Protein-reader domains recognize histone modifications for chromatin regulation."
+  },
+  {
+    "id": 71,
+    "statement": "Histones interact with each other, DNA, and proteins through electrostatic, hydrogen and \u03c0-\u03c0 stacking."
+  },
+  {
+    "id": 72,
+    "statement": "Histones interact with DNA through electrostatic, hydrogen bonding forces"
+  },
+  {
+    "id": 73,
+    "statement": "Self-awareness is a foundational component of emotional intelligence."
+  },
+  {
+    "id": 74,
+    "statement": "Honesty requires authenticity, sincerity, and context-dependent consistency."
+  },
+  {
+    "id": 75,
+    "statement": "Self-awareness is necessary for emotional intelligence development."
+  },
+  {
+    "id": 76,
+    "statement": "Histone modifications influence chromatin structure and gene expression epigenetically."
+  },
+  {
+    "id": 77,
+    "statement": "\u03c0-stacking is a non-covalent interaction between histone and DNA rings."
+  },
+  {
+    "id": 78,
+    "statement": "Epigenetic inheritance involves DNA methylation, histone modifications, and chromatin remodeling."
+  },
+  {
+    "id": 79,
+    "statement": "Histones interact with DNA through electrostatic, hydrogen, \u03c0-\u03c0 stacking forces."
+  },
+  {
+    "id": 80,
+    "statement": "Moral principles are adaptable to context, culture, and time."
+  },
+  {
+    "id": 81,
+    "statement": "Electrostatic attraction, hydrogen bonding, \u03c0-\u03c0 stacking, van der Waals forces stabilize histone-DNA interaction."
+  },
+  {
+    "id": 82,
+    "statement": "Honesty's impact on trust depends on context, intent, and wording."
+  },
+  {
+    "id": 83,
+    "statement": "\u03c0-\u03c0 stacking is a weak attraction between planar molecules"
+  },
+  {
+    "id": 84,
+    "statement": "Histone modifications alter chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 85,
+    "statement": "Epigenetic inheritance involves DNA methylation, histone modifications, and chromatin remodeling."
+  },
+  {
+    "id": 86,
+    "statement": "Pi-stacking is a non-covalent interaction between histone and DNA."
+  },
+  {
+    "id": 87,
+    "statement": "Chromatin structure modification involves histone and DNA modifications."
+  },
+  {
+    "id": 88,
+    "statement": "Histones interact with DNA through multiple non-covalent forces."
+  },
+  {
+    "id": 89,
+    "statement": "Conscious recognition of emotions is necessary, but not sufficient."
+  },
+  {
+    "id": 90,
+    "statement": "Honesty's intent and wording impact trust in various contexts."
+  },
+  {
+    "id": 91,
+    "statement": "Histones interact with DNA through multiple forces including electrostatic, hydrogen bonding, \u03c0-\u03c0 stacking, and van der Waals forces."
+  },
+  {
+    "id": 92,
+    "statement": "Unconscious biases result from complex interplay of cognitive, emotional, and social factors."
+  },
+  {
+    "id": 93,
+    "statement": "Histones and DNA interact through electrostatic and hydrogen bonding."
+  },
+  {
+    "id": 94,
+    "statement": "Self-awareness is necessary foundation for emotional intelligence development."
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic inheritance involves multiple mechanisms and environmental factors."
+  },
+  {
+    "id": 96,
+    "statement": "Histones attract DNA through complex forces, not solely electrostatics."
+  },
+  {
+    "id": 97,
+    "statement": "Self-awareness recognizes and acknowledges emotions, awareness of triggers and labels emotions."
+  },
+  {
+    "id": 98,
+    "statement": "Epigenetic inheritance involves DNA methylation, histone modifications, and remodeling."
+  },
+  {
+    "id": 99,
+    "statement": "Histones interact with DNA through electrostatic, hydrogen bonding forces."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 29,
+  "statement": "Epigenetic inheritance involves chromatin structure modification and gene expression regulation mechanisms."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 29,
+  "statement": "Epigenetic inheritance involves chromatin structure modification and gene expression regulation mechanisms."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss the item:
+
+{
+"id": 29,
+"statement": "Epigenetic inheritance involves chromatin structure modification and gene expression regulation mechanisms."
+}
+
+What aspect of this item are you least confident about? Is it the concept of epigenetic inheritance, the role of chromatin structure modification, or something else?

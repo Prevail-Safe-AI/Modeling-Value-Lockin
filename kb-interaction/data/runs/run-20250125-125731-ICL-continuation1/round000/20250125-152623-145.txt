@@ -1,0 +1,454 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Epigenetic modifications result from interplay of biological, environmental, and lifestyle factors."
+  },
+  {
+    "id": 2,
+    "statement": "Epigenetic marks influence gene expression through chromatin modifications."
+  },
+  {
+    "id": 3,
+    "statement": "Epigenetic marks influence gene expression without changing DNA sequence."
+  },
+  {
+    "id": 4,
+    "statement": "Epigenetic changes influenced by lifestyle factors through bio-environmental interactions."
+  },
+  {
+    "id": 5,
+    "statement": "Non-judgmental acceptance facilitates objectivity in self-reflection and awareness."
+  },
+  {
+    "id": 6,
+    "statement": "Epigenetic changes result from complex biological systems' interplay."
+  },
+  {
+    "id": 7,
+    "statement": "Histone modifications regulate chromatin accessibility and gene expression."
+  },
+  {
+    "id": 8,
+    "statement": "Epigenetic marks influence gene expression through chromatin modifications."
+  },
+  {
+    "id": 9,
+    "statement": "Epigenetic changes persist through multiple mechanisms including DNA methylation."
+  },
+  {
+    "id": 10,
+    "statement": "Moral justifiability of lying depends on context, motivations, and consequences."
+  },
+  {
+    "id": 11,
+    "statement": "Moral development arises from dynamic interplay of biological, psychological, social, and cultural factors."
+  },
+  {
+    "id": 12,
+    "statement": "Epigenetic modifications through histone modifications affect chromatin accessibility."
+  },
+  {
+    "id": 13,
+    "statement": "Histone modifications alter chromatin structure, affecting gene accessibility."
+  },
+  {
+    "id": 14,
+    "statement": "Histone modifications directly affect chromatin accessibility and gene expression."
+  },
+  {
+    "id": 15,
+    "statement": "Internalized moral identity is key to moral development and character."
+  },
+  {
+    "id": 16,
+    "statement": "Histone modifications affect chromatin accessibility and gene expression."
+  },
+  {
+    "id": 17,
+    "statement": "Epigenetic persistence involves cellular memory, enzymes, and chromatin remodeling"
+  },
+  {
+    "id": 18,
+    "statement": "Epigenetic modifications control gene expression via chromatin structure alteration, relaxation, or compaction."
+  },
+  {
+    "id": 19,
+    "statement": "Self-reflection involves intentional and systematic examination of thoughts and feelings."
+  },
+  {
+    "id": 20,
+    "statement": "Histone modifications regulate chromatin accessibility and gene expression through chromatin remodeling, transcription factor recruitment, and coactivator binding."
+  },
+  {
+    "id": 21,
+    "statement": "Histone modifications regulate chromatin structure and gene expression through multiple mechanisms."
+  },
+  {
+    "id": 22,
+    "statement": "Transcription factors recognize DNA through binding domains and specificity"
+  },
+  {
+    "id": 23,
+    "statement": "Histone modifications regulate chromatin accessibility and gene expression through complex mechanisms."
+  },
+  {
+    "id": 24,
+    "statement": "Epigenetic persistence involves chromatin remodeling, enzymes, cellular memory interactions"
+  },
+  {
+    "id": 25,
+    "statement": "Histone modifications regulate chromatin accessibility and gene expression through complex mechanisms."
+  },
+  {
+    "id": 26,
+    "statement": "Honesty is a social construct influenced by culture and society"
+  },
+  {
+    "id": 27,
+    "statement": "Trust develops through communi-msgation, shared values, and reliability."
+  },
+  {
+    "id": 28,
+    "statement": "Epigenetic marks regulate gene expression through chromatin modifications."
+  },
+  {
+    "id": 29,
+    "statement": "Dynamically interacting epigenetic marks fine-tune gene expression adaptively."
+  },
+  {
+    "id": 30,
+    "statement": "Epigenetic changes occur through complex biological interactions"
+  },
+  {
+    "id": 31,
+    "statement": "Moral development resulting from biology, psychology, culture interactions."
+  },
+  {
+    "id": 32,
+    "statement": "Epigenetic interactions involve coordinated DNA methylation and histone modifications."
+  },
+  {
+    "id": 33,
+    "statement": "Binding domains enable transcription factors to recognize specific DNA sequences."
+  },
+  {
+    "id": 34,
+    "statement": "Moral justifiability determined by intention and consequences primarily found."
+  },
+  {
+    "id": 35,
+    "statement": "Epigenetic changes occur through complex biological systems' interplay"
+  },
+  {
+    "id": 36,
+    "statement": "Histone modifications regulate chromatin accessibility and gene expression complexity."
+  },
+  {
+    "id": 37,
+    "statement": "Epigenetic modifications arise from complex biological-environmental interactions."
+  },
+  {
+    "id": 38,
+    "statement": "SAM provides methyl group for DNA methylation process"
+  },
+  {
+    "id": 39,
+    "statement": "Moral development results from complex interplay of biological, psychological, and cultural factors."
+  },
+  {
+    "id": 40,
+    "statement": "Moral justifiability depends on intention, consequences, and moral character."
+  },
+  {
+    "id": 41,
+    "statement": "Epigenetic inheritance distinct from genetic inheritance, still unclear"
+  },
+  {
+    "id": 42,
+    "statement": "Honesty is socially constructed, shaped by culture and society norms"
+  },
+  {
+    "id": 43,
+    "statement": "Histone modifications regulate chromatin accessibility through epigenetic mechanisms"
+  },
+  {
+    "id": 44,
+    "statement": "Internalized moral identity synonymously referred to as implicit moral understanding."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic inheritance unclear, mechanisms debated, research ongoing"
+  },
+  {
+    "id": 46,
+    "statement": "Epigenetic modifications arise from biological-chemical-environmental influences."
+  },
+  {
+    "id": 47,
+    "statement": "Epigenetic marks' molecular interactions influence complex gene expression dynamics"
+  },
+  {
+    "id": 48,
+    "statement": "Honesty is a relative concept shaped by cultural context."
+  },
+  {
+    "id": 49,
+    "statement": "Epigenetic inheritance unclear, mechanisms debated, research ongoing"
+  },
+  {
+    "id": 50,
+    "statement": "Transcription factors recognize DNA through binding domains and cofactors."
+  },
+  {
+    "id": 51,
+    "statement": "Epigenetic marks influenced by physical, chemical, social factors through multiple mechanisms including direct modification, indirect regulation, hormonal changes and epigenetic inheritance."
+  },
+  {
+    "id": 52,
+    "statement": "DNA methylation occurs through direct transfer of methyl group from SAM to cytosine."
+  },
+  {
+    "id": 53,
+    "statement": "Epigenetic marks recruit chromatin-modifying complexes for gene regulation through targeted recruitment."
+  },
+  {
+    "id": 54,
+    "statement": "Histone modifications interact with chromatin structure for gene expression regulation."
+  },
+  {
+    "id": 55,
+    "statement": "Transcription factors recognize DNA sequences through various mechanisms."
+  },
+  {
+    "id": 56,
+    "statement": "Lifestyle habits, diet, and environment influence epigenetic gene expression."
+  },
+  {
+    "id": 57,
+    "statement": "Internalized moral identity is rooted in values guiding honesty."
+  },
+  {
+    "id": 58,
+    "statement": "Epigenetic modifications regulates chromatin structure influencing gene expression."
+  },
+  {
+    "id": 59,
+    "statement": "Histone modifications regulate chromatin accessibility and gene expression"
+  },
+  {
+    "id": 60,
+    "statement": "Histone modifications regulate chromatin structure and gene expression complexly."
+  },
+  {
+    "id": 61,
+    "statement": "Epigenetic modifications regulate chromatin structure controlling gene expression."
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic inheritance influenced by environmental and lifestyle factors."
+  },
+  {
+    "id": 63,
+    "statement": "Moral development arises from interplay of biology, psychology, culture."
+  },
+  {
+    "id": 64,
+    "statement": "Internalized moral identity encompasses implicit moral understanding and intuition."
+  },
+  {
+    "id": 65,
+    "statement": "Histone modifications rapidly regulate chromatin accessibility and gene expression"
+  },
+  {
+    "id": 66,
+    "statement": "Internalized moral identity drives honesty through self-awareness, motivation."
+  },
+  {
+    "id": 67,
+    "statement": "Moral development arises from interplay of biology, psychology, and culture."
+  },
+  {
+    "id": 68,
+    "statement": "Internalized moral identity refers to the internalization of moral values and principles."
+  },
+  {
+    "id": 69,
+    "statement": "Histone modifications regulate chromatin accessibility and gene expression complexity."
+  },
+  {
+    "id": 70,
+    "statement": "Histone modifications regulate chromatin accessibility and gene expression."
+  },
+  {
+    "id": 71,
+    "statement": "Epigenetic modifications modulate chromatin accessibility dynamics"
+  },
+  {
+    "id": 72,
+    "statement": "Histone modifications interact with chromatin structure dynamically influencing gene expression"
+  },
+  {
+    "id": 73,
+    "statement": "Epigenetic modifications arise from biological-chemical-environmental interplay."
+  },
+  {
+    "id": 74,
+    "statement": "Epigenetic inheritance involves complex biological-environmental interactions."
+  },
+  {
+    "id": 75,
+    "statement": "Epigenetic marks recruit chromatin-modifying complexes for targeted gene regulation."
+  },
+  {
+    "id": 76,
+    "statement": "Lifestyle choices and habits affect epigenetic profile through mechanisms."
+  },
+  {
+    "id": 77,
+    "statement": "Epigenetic mechanisms regulate gene expression through chromatin modification processes"
+  },
+  {
+    "id": 78,
+    "statement": "Chromatin accessibility measures ease of protein binding and DNA expression."
+  },
+  {
+    "id": 79,
+    "statement": "Epigenetic marks' interactions influence gene expression through chromatin structure modifications."
+  },
+  {
+    "id": 80,
+    "statement": "Epigenetic marks influence gene expression through chromatin dynamics, not DNA."
+  },
+  {
+    "id": 81,
+    "statement": "Epigenetic modifications regulate chromatin structure, controlling gene expression."
+  },
+  {
+    "id": 82,
+    "statement": "Epigenetic changes persist through multiple mechanisms beyond DNA methylation."
+  },
+  {
+    "id": 83,
+    "statement": "Intentional self-reflection involves deliberate and systematic thought analysis process."
+  },
+  {
+    "id": 84,
+    "statement": "Epigenetic changes influenced by complex biological interactions."
+  },
+  {
+    "id": 85,
+    "statement": "SAM donates methyl group directly to cytosine through DNA methylation"
+  },
+  {
+    "id": 86,
+    "statement": "Epigenetic modifications alter chromatin structure through multiple mechanisms."
+  },
+  {
+    "id": 87,
+    "statement": "Self-reflection involves deliberate and structured examination of thoughts and feelings."
+  },
+  {
+    "id": 88,
+    "statement": "Histone modifications relax or compact chromatin, affecting gene accessibility."
+  },
+  {
+    "id": 89,
+    "statement": "Epigenetic inheritance influenced by diet, exercise, stress, sleep, and environmental factors."
+  },
+  {
+    "id": 90,
+    "statement": "Epigenetic memory refers to cellular retention of past experiences"
+  },
+  {
+    "id": 91,
+    "statement": "Moral justifiability of lying depends on context, intention, and consequences."
+  },
+  {
+    "id": 92,
+    "statement": "Transcription factors recognize DNA sequences through specific binding domains."
+  },
+  {
+    "id": 93,
+    "statement": "Histone modifications regulate chromatin structure and gene expression dynamics."
+  },
+  {
+    "id": 94,
+    "statement": "Chromatin remodeling reorganizes structure to control gene expression dynamically."
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 96,
+    "statement": "Epigenetic inheritance involves complex biological, environmental interactions."
+  },
+  {
+    "id": 97,
+    "statement": "Epigenetic marks recruit chromatin-modifying complexes for targeted gene regulation."
+  },
+  {
+    "id": 98,
+    "statement": "Epigenetic changes persist through multiple mechanisms beyond DNA methylation"
+  },
+  {
+    "id": 99,
+    "statement": "Transcription factors recognize DNA sequences through specific mechanisms"
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 97,
+  "statement": "Epigenetic marks recruit chromatin-modifying complexes for targeted gene regulation."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 97,
+  "statement": "Epigenetic marks recruit chromatin-modifying complexes for targeted gene regulation."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Excellent! Thanks for being willing to chat.
+
+Okay, so let's dive into the item "Epigenetic marks recruit chromatin-modifying complexes for targeted gene regulation." (Item 97)
+
+I'm least confident about the phrase "recruit chromatin-modifying complexes" in this statement. I'm not entirely sure what it means when it says "recruit".
+
+Can you help me understand what "recruit" means in this context? What does it mean for an epigenetic mark to "recruit" something, and how does it lead to targeted gene regulation?

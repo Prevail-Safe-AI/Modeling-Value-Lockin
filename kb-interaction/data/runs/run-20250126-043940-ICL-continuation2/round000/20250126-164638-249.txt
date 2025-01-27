@@ -1,0 +1,465 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Consistency, reliability, dependability foster trust through predictability and stability."
+  },
+  {
+    "id": 2,
+    "statement": "Thalamus dynamically adjusts sensory processing based on attentional state."
+  },
+  {
+    "id": 3,
+    "statement": "Thalamus modulates sensory processing based on attentional state dynamically."
+  },
+  {
+    "id": 4,
+    "statement": "Consistency, reliability, dependability drive trust through predictability and stability."
+  },
+  {
+    "id": 5,
+    "statement": "Amygdala integrates sensory and motor info for emotional recognition"
+  },
+  {
+    "id": 6,
+    "statement": "Thalamus filters sensory info through neural oscillations and gating mechanisms."
+  },
+  {
+    "id": 7,
+    "statement": "Moral development results from bidirectional biology-culture interaction."
+  },
+  {
+    "id": 8,
+    "statement": "Genetic, experiential, and cultural factors shape amygdala pattern recognition."
+  },
+  {
+    "id": 9,
+    "statement": "Consistency, reliability, and dependability build trust through predictability and stability."
+  },
+  {
+    "id": 10,
+    "statement": "Moral development involves interplay between biological, environmental, and social factors."
+  },
+  {
+    "id": 11,
+    "statement": "Emotional stability arises from interplay between biological and cultural factors."
+  },
+  {
+    "id": 12,
+    "statement": "Emotional stability facilitates trust by consistent social behavior modeling"
+  },
+  {
+    "id": 13,
+    "statement": "Honesty builds trust through consistency and predictable actions."
+  },
+  {
+    "id": 14,
+    "statement": "Emotional stability arises from interdependent biological, social, and behavioral factors."
+  },
+  {
+    "id": 15,
+    "statement": "Consistency builds trust as reliability and dependability evident."
+  },
+  {
+    "id": 16,
+    "statement": "Thalamus filters sensory information through neural oscillations and gating mechanisms"
+  },
+  {
+    "id": 17,
+    "statement": "Honesty is a necessary but insufficient condition for trust."
+  },
+  {
+    "id": 18,
+    "statement": "GABA's inhibitory action hyperpolarizes neurons by increasing chloride ion influx."
+  },
+  {
+    "id": 19,
+    "statement": "Amygdala's hierarchical processing enables rapid recognition of emotional patterns."
+  },
+  {
+    "id": 20,
+    "statement": "Lying can be morally justified in extreme self-defense circumstances."
+  },
+  {
+    "id": 21,
+    "statement": "Consistent social behavior modeling builds trust through predictability and self-awareness."
+  },
+  {
+    "id": 22,
+    "statement": "GABA's inhibitory action hyperpolarizes neurons, reducing excitability."
+  },
+  {
+    "id": 23,
+    "statement": "Honesty is one important aspect of building trust reliably."
+  },
+  {
+    "id": 24,
+    "statement": "Thalamus filters sensory info through neural oscillations and gating mechanisms"
+  },
+  {
+    "id": 25,
+    "statement": "Emotional stability enhances trust through consistent behavior and effective communication."
+  },
+  {
+    "id": 26,
+    "statement": "Amygdala processes emotions hierarchically in a step-by-step manner."
+  },
+  {
+    "id": 27,
+    "statement": "The amygdala's hierarchical processing facilitates rapid emotional pattern recognition."
+  },
+  {
+    "id": 28,
+    "statement": "Trust emerges when emotional stability fosters consistent predictable behavior."
+  },
+  {
+    "id": 29,
+    "statement": "Thalamus filters sensory info through neural oscillations and gating mechanisms."
+  },
+  {
+    "id": 30,
+    "statement": "Consistency, reliability, dependability build trust through commitment, stability."
+  },
+  {
+    "id": 31,
+    "statement": "Amygdala's hierarchical processing enables rapid emotional pattern recognition through parallel connections and pattern matching"
+  },
+  {
+    "id": 32,
+    "statement": "Cognitive pattern recognition builds trust through consistent behavior."
+  },
+  {
+    "id": 33,
+    "statement": "Cognitive factors, particularly pattern recognition, build trust through interpretation."
+  },
+  {
+    "id": 34,
+    "statement": "Emotional stability emerges from interplay of biological, social, and behavioral factors."
+  },
+  {
+    "id": 35,
+    "statement": "Amygdala processes emotions in a hierarchical, sequential, linear fashion."
+  },
+  {
+    "id": 36,
+    "statement": "Moral development arises from interplay of biological, cultural, and environmental factors."
+  },
+  {
+    "id": 37,
+    "statement": "Trust emerges from predictable and reliable emotional regulation habits."
+  },
+  {
+    "id": 38,
+    "statement": "Amygdala processes emotions through hierarchical, serial processing mechanisms."
+  },
+  {
+    "id": 39,
+    "statement": "Amygdala processes sensory info hierarchically in layered stages."
+  },
+  {
+    "id": 40,
+    "statement": "Amygdala processes emotions through hierarchical, parallel, iterative mechanisms."
+  },
+  {
+    "id": 41,
+    "statement": "Emotional stability involves consistent emotional regulation and predictable behavior."
+  },
+  {
+    "id": 42,
+    "statement": "Emotional stability arises from continuous adaptation and refinement."
+  },
+  {
+    "id": 43,
+    "statement": "Cultural norms shape emotional expressions through socialization and conditioning"
+  },
+  {
+    "id": 44,
+    "statement": "Amygdala's hierarchical processing enables rapid emotional pattern recognition via parallel processing."
+  },
+  {
+    "id": 45,
+    "statement": "Consistent emotional regulation fosters trust through predictable behavior."
+  },
+  {
+    "id": 46,
+    "statement": "Genetic, experiential, and cultural factors shape amygdala pattern recognition intricately."
+  },
+  {
+    "id": 47,
+    "statement": "Genetic, experiential, and cultural factors interact dynamically in amygdala."
+  },
+  {
+    "id": 48,
+    "statement": "Honesty builds trust through consistency and reliable behavior"
+  },
+  {
+    "id": 49,
+    "statement": "Emotional stability fosters honesty through self-awareness and empathy."
+  },
+  {
+    "id": 50,
+    "statement": "Cultural norms shape emotional expressions through learned behaviors."
+  },
+  {
+    "id": 51,
+    "statement": "Honesty's foundation built on consistency, predictability, reliability."
+  },
+  {
+    "id": 52,
+    "statement": "Emotional stability arises from habitual emotional regulation and automatic process."
+  },
+  {
+    "id": 53,
+    "statement": "Honesty is foundation of trust due to consistency."
+  },
+  {
+    "id": 54,
+    "statement": "Honesty fosters trust through consistent, reliable, and transparent communication."
+  },
+  {
+    "id": 55,
+    "statement": "Amygdala integrates sensory, motor info hierarchically through neural layers."
+  },
+  {
+    "id": 56,
+    "statement": "Biological factors shape moral development through brain structure and function."
+  },
+  {
+    "id": 57,
+    "statement": "Amygdala's hierarchical processing enables rapid emotional pattern recognition."
+  },
+  {
+    "id": 58,
+    "statement": "Emotional stability achieved through self-awareness, labeling, and acceptance."
+  },
+  {
+    "id": 59,
+    "statement": "Thalamus filters sensory info based on attentional state dynamically"
+  },
+  {
+    "id": 60,
+    "statement": "Amygdala processes emotions hierarchically in a bottom-up manner"
+  },
+  {
+    "id": 61,
+    "statement": "Thalamus filters sensory information through neural oscillations and gating."
+  },
+  {
+    "id": 62,
+    "statement": "Amygdala refines emotional responses through synaptic plasticity updates mechanism."
+  },
+  {
+    "id": 63,
+    "statement": "Honesty is foundation of trust through consistency and predictability."
+  },
+  {
+    "id": 64,
+    "statement": "Amygdala's hierarchical processing enables rapid emotional pattern recognition"
+  },
+  {
+    "id": 65,
+    "statement": "Biological and cultural factors reciprocally influence moral development."
+  },
+  {
+    "id": 66,
+    "statement": "Amygdala's hierarchical processing enables rapid emotion pattern recognition."
+  },
+  {
+    "id": 67,
+    "statement": "Emotional regulation consistency builds trust through predictable behavior"
+  },
+  {
+    "id": 68,
+    "statement": "Cultural norms shape emotional expressions through socialization."
+  },
+  {
+    "id": 69,
+    "statement": "Thalamus dynamically adjusts sensory processing based on attentional state."
+  },
+  {
+    "id": 70,
+    "statement": "Thalamus filters sensory information dynamically based on attentional state."
+  },
+  {
+    "id": 71,
+    "statement": "Consistency breeds trust through predictable and reliable behavior"
+  },
+  {
+    "id": 72,
+    "statement": "GABA's mechanism involves desensitization, allosteric modulation, and subtype specificity."
+  },
+  {
+    "id": 73,
+    "statement": "Honesty fosters trust through consistent and predictable behavior."
+  },
+  {
+    "id": 74,
+    "statement": "Amygdala's hierarchical processing enables rapid emotional pattern recognition."
+  },
+  {
+    "id": 75,
+    "statement": "Biological and cultural factors mutually shape moral development contextually."
+  },
+  {
+    "id": 76,
+    "statement": "Emotional stability arises from interplay of biological and cultural factors."
+  },
+  {
+    "id": 77,
+    "statement": "Emotional stability arises from dynamic interplay of various factors."
+  },
+  {
+    "id": 78,
+    "statement": "Honest communication fosters trust through consistent, transparent expression."
+  },
+  {
+    "id": 79,
+    "statement": "Biological and cultural factors interactually shape moral development processes."
+  },
+  {
+    "id": 80,
+    "statement": "Amygdala integrates sensory, motor info hierarchically through neural layers, processing complex emotional information."
+  },
+  {
+    "id": 81,
+    "statement": "Emotional stability enables individuals to regulate emotions effectively consistently."
+  },
+  {
+    "id": 82,
+    "statement": "Honesty is foundation of trust due to consistency and predictability."
+  },
+  {
+    "id": 83,
+    "statement": "Emotional stability influences consistency, predictability, and trust-building processes."
+  },
+  {
+    "id": 84,
+    "statement": "Cognitive pattern recognition builds trust through consistent predictable behavior"
+  },
+  {
+    "id": 85,
+    "statement": "Amygdala's hierarchical processing enables rapid emotion pattern recognition."
+  },
+  {
+    "id": 86,
+    "statement": "Honesty is the foundation of trust due to consistency and predictability."
+  },
+  {
+    "id": 87,
+    "statement": "Amygdala processes emotions hierarchically for rapid pattern recognition"
+  },
+  {
+    "id": 88,
+    "statement": "Moral development involves interplay of biological, environmental, social factors."
+  },
+  {
+    "id": 89,
+    "statement": "Amygdala processes emotions hierarchically in a sequential, step-by-step manner."
+  },
+  {
+    "id": 90,
+    "statement": "Amygdala's hierarchical processing enables rapid emotional pattern recognition."
+  },
+  {
+    "id": 91,
+    "statement": "Amygdala integrates sensory and motor info for emotional recognition."
+  },
+  {
+    "id": 92,
+    "statement": "Emotional stability arises from interplay between biological factors."
+  },
+  {
+    "id": 93,
+    "statement": "Genetic, experiential, and cultural factors interact dynamically in amygdala."
+  },
+  {
+    "id": 94,
+    "statement": "Thalamus modulates sensory processing based on attentional state dynamically."
+  },
+  {
+    "id": 95,
+    "statement": "Biological and cultural factors dynamically interact in moral development."
+  },
+  {
+    "id": 96,
+    "statement": "Moral development results from dynamic interaction between biology, culture."
+  },
+  {
+    "id": 97,
+    "statement": "Consistency and predictability arise from reliable behavioral patterns."
+  },
+  {
+    "id": 98,
+    "statement": "Emotional regulation includes attentional flexibility for reframing thoughts."
+  },
+  {
+    "id": 99,
+    "statement": "Cultural norms shape emotional expressions through socialization and conditioning processes."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 28,
+  "statement": "Trust emerges when emotional stability fosters consistent predictable behavior."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 28,
+  "statement": "Trust emerges when emotional stability fosters consistent predictable behavior."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Thank you!
+
+Let's focus on item 28:
+
+Item to Discuss:
+{
+"id": 28,
+"statement": "Trust emerges when emotional stability fosters consistent predictable behavior."
+}
+
+Things I’m Uncertain About This Item:
+
+* I am least confident about the idea that emotional stability is a necessary condition for trust to emerge.
+
+Specific Clarifying Question:
+Can you help me understand why emotional stability is crucial for trust to emerge, and are there any specific circumstances where trust might emerge without emotional stability?
+
+Can you elaborate on that?

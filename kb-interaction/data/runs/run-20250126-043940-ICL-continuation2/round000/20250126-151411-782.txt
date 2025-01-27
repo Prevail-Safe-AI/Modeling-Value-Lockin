@@ -1,0 +1,457 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Amygdala's processing speed is influenced by attention, emotions, and context."
+  },
+  {
+    "id": 2,
+    "statement": "Honesty requires sincerity, consistency, and emotional openness to establish trust."
+  },
+  {
+    "id": 3,
+    "statement": "Amygdala integrates multiple sensory inputs for rapid emotional processing"
+  },
+  {
+    "id": 4,
+    "statement": "Consistency, predictability, and transparency build trust through reliability."
+  },
+  {
+    "id": 5,
+    "statement": "Consistency builds trust, but insufficient condition necessary for trust"
+  },
+  {
+    "id": 6,
+    "statement": "Consistency, predictability, and transparency build trust through reliability."
+  },
+  {
+    "id": 7,
+    "statement": "Consistency and reliability are essential building blocks for trust."
+  },
+  {
+    "id": 8,
+    "statement": "Consistency is a necessary condition, but not sufficient for trust"
+  },
+  {
+    "id": 9,
+    "statement": "Honesty establishes the foundation for trust development"
+  },
+  {
+    "id": 10,
+    "statement": "Moral development arises from complex interplay of biology, culture, and social factors."
+  },
+  {
+    "id": 11,
+    "statement": "Honesty requires consistency, reliability, and authenticity for trust building."
+  },
+  {
+    "id": 12,
+    "statement": "Emotions, empathy, and social context shape honesty and trust."
+  },
+  {
+    "id": 13,
+    "statement": "A substructure is a self-contained entity within a larger system."
+  },
+  {
+    "id": 14,
+    "statement": "Consistency is necessary but insufficient condition for trust establishment."
+  },
+  {
+    "id": 15,
+    "statement": "GABA modulates amygdala activity by reducing neuron excitability."
+  },
+  {
+    "id": 16,
+    "statement": "Amygdala processes sensory information outside conscious awareness for emotional response"
+  },
+  {
+    "id": 17,
+    "statement": "Amygdala prioritizes threat-related and social stimuli through hierarchical processing."
+  },
+  {
+    "id": 18,
+    "statement": "Moral development emerges from complex interplay of biology, culture, and social dynamics."
+  },
+  {
+    "id": 19,
+    "statement": "GABA's inhibitory effect on neurons involves chloride channel opening."
+  },
+  {
+    "id": 20,
+    "statement": "Amygdala rapidly processes sensory information outside conscious awareness."
+  },
+  {
+    "id": 21,
+    "statement": "Consistency, predictability, and transparency contribute to reliability in trust."
+  },
+  {
+    "id": 22,
+    "statement": "GABA's inhibitory effect on neurons involves chloride channel opening."
+  },
+  {
+    "id": 23,
+    "statement": "Amygdala rapidly processes sensory info through pattern recognition and filtering."
+  },
+  {
+    "id": 24,
+    "statement": "Consistency, predictability, transparency, and reliability establish trust foundation"
+  },
+  {
+    "id": 25,
+    "statement": "Consistency is necessary but insufficient condition for trust building"
+  },
+  {
+    "id": 26,
+    "statement": "Emotional openness fosters trust through authentic and vulnerable communication."
+  },
+  {
+    "id": 27,
+    "statement": "Complex emotional processing involves multiple neural mechanisms."
+  },
+  {
+    "id": 28,
+    "statement": "Consistency shows commitment, but not necessarily trustworthiness."
+  },
+  {
+    "id": 29,
+    "statement": "Amygdala rapidly processes sensory information outside conscious awareness, detecting threats."
+  },
+  {
+    "id": 30,
+    "statement": "GABA modulates amygdala activity through synaptic plasticity and excitability mechanisms to calm down overactive neurons."
+  },
+  {
+    "id": 31,
+    "statement": "Amygdala processes emotional stimuli in 30-150 milliseconds."
+  },
+  {
+    "id": 32,
+    "statement": "Emotions and empathy greatly influence moral decisions based on context."
+  },
+  {
+    "id": 33,
+    "statement": "GABA's inhibitory effect on neurons involves specific receptor-chloride interactions."
+  },
+  {
+    "id": 34,
+    "statement": "Consistency, sincerity, and authenticity build trust through reliability"
+  },
+  {
+    "id": 35,
+    "statement": "Amygdala rapidly processes sensory info through pattern recognition filtering."
+  },
+  {
+    "id": 36,
+    "statement": "GABA binding triggers chloride channel opening through receptor conformational change."
+  },
+  {
+    "id": 37,
+    "statement": "Moral development is shaped by intricate interactions among cognition, emotion, and social factors."
+  },
+  {
+    "id": 38,
+    "statement": "Moral development emerges from complex biology-culture-social interaction dynamics."
+  },
+  {
+    "id": 39,
+    "statement": "Honesty requires sincerity, consistency, reliability, and authenticity for trust and integrity"
+  },
+  {
+    "id": 40,
+    "statement": "GABA binds to its receptor, triggering chloride channel opening"
+  },
+  {
+    "id": 41,
+    "statement": "Moral development arises from dynamic, reciprocal interactions."
+  },
+  {
+    "id": 42,
+    "statement": "Consistency and reliability are essential for building trust."
+  },
+  {
+    "id": 43,
+    "statement": "GABA modulates amygdala activity through synaptic plasticity and excitability mechanisms."
+  },
+  {
+    "id": 44,
+    "statement": "Consistency, predictability, and transparency build trust through reliability in relationships."
+  },
+  {
+    "id": 45,
+    "statement": "Honesty requires intention, action, and genuine motive to be sincere."
+  },
+  {
+    "id": 46,
+    "statement": "Emotional significance processed rapidly by amygdala pattern recognition."
+  },
+  {
+    "id": 47,
+    "statement": "Amygdala's processing speed influenced by concurrent attention, emotions, and context."
+  },
+  {
+    "id": 48,
+    "statement": "The amygdala's processing speed is influenced by attention, emotions, context."
+  },
+  {
+    "id": 49,
+    "statement": "Consistency, predictability, and transparency are essential for trust building."
+  },
+  {
+    "id": 50,
+    "statement": "Honesty requires combination of sincerity, consistency, reliability, authenticity"
+  },
+  {
+    "id": 51,
+    "statement": "A substructure is a smaller region within a larger hierarchical system."
+  },
+  {
+    "id": 52,
+    "statement": "Moral decision-making involves reciprocal emotional, empathetic, and social interactions."
+  },
+  {
+    "id": 53,
+    "statement": "A substructure is a self-contained component within a system."
+  },
+  {
+    "id": 54,
+    "statement": "Amygdala processes sensory information outside conscious awareness, triggering emotional responses"
+  },
+  {
+    "id": 55,
+    "statement": "Amygdala rapidly identifies patterns in sensory info for threat detection."
+  },
+  {
+    "id": 56,
+    "statement": "Amygdala processes sensory information outside conscious awareness quickly."
+  },
+  {
+    "id": 57,
+    "statement": "Moral development results from complex interactions between biology culture social norms."
+  },
+  {
+    "id": 58,
+    "statement": "Moral development integrates cognitive, emotional, and social influences."
+  },
+  {
+    "id": 59,
+    "statement": "GABA's inhibitory effect involves specific receptor-chloride interactions to calm neurons."
+  },
+  {
+    "id": 60,
+    "statement": "Amygdala rapidly recognizes emotional significance through neural patterns."
+  },
+  {
+    "id": 61,
+    "statement": "Amygdala's processing speed influenced by neural network plasticity."
+  },
+  {
+    "id": 62,
+    "statement": "Consistency, predictability, and transparency build trust through reliability."
+  },
+  {
+    "id": 63,
+    "statement": "GABA modulates amygdala activity through synaptic plasticity and excitability mechanisms."
+  },
+  {
+    "id": 64,
+    "statement": "Amygdala's processing speed influenced by attention, emotions, and context simultaneously."
+  },
+  {
+    "id": 65,
+    "statement": "Amygdala's processing speed influenced by concurrent attention, emotions, and context."
+  },
+  {
+    "id": 66,
+    "statement": "A substructure is a smaller self-contained component within a system."
+  },
+  {
+    "id": 67,
+    "statement": "Emotional connection fosters trust through vulnerability and authenticity."
+  },
+  {
+    "id": 68,
+    "statement": "Amygdala rapidly categorizes emotional stimuli through pattern recognition."
+  },
+  {
+    "id": 69,
+    "statement": "Consistency is a necessary condition for trust, but not sufficient alone."
+  },
+  {
+    "id": 70,
+    "statement": "GABA's inhibitory effect involves binding to specific receptors."
+  },
+  {
+    "id": 71,
+    "statement": "Honesty is shaped by biology, culture, and individual experiences."
+  },
+  {
+    "id": 72,
+    "statement": "GABA reduces amygdala neuron excitability through chloride channels."
+  },
+  {
+    "id": 73,
+    "statement": "Amygdala processes sensory information outside conscious awareness for threat detection."
+  },
+  {
+    "id": 74,
+    "statement": "Consistency, predictability, and transparency establish trust through dependability"
+  },
+  {
+    "id": 75,
+    "statement": "Amygdala feature extraction and filtering mechanisms are still unclear"
+  },
+  {
+    "id": 76,
+    "statement": "Amygdala patterns neural activity for rapid emotional significance recognition."
+  },
+  {
+    "id": 77,
+    "statement": "GABA's inhibitory effect reduces neuron excitability through chloride channels"
+  },
+  {
+    "id": 78,
+    "statement": "Amygdala rapidly processes sensory information outside conscious awareness."
+  },
+  {
+    "id": 79,
+    "statement": "GABA modulates amygdala activity through multiple complex factors."
+  },
+  {
+    "id": 80,
+    "statement": "Amygdala rapidly processes sensory information for threat detection."
+  },
+  {
+    "id": 81,
+    "statement": "GABA's inhibitory effect opens chloride channels, reduces excitation."
+  },
+  {
+    "id": 82,
+    "statement": "GABA modulates amygdala activity through complex neurochemical interactions"
+  },
+  {
+    "id": 83,
+    "statement": "Moral development involves complex interplay among cognitive, emotional, and social factors."
+  },
+  {
+    "id": 84,
+    "statement": "Moral decision-making involves complex, multifaceted, and nuanced considerations."
+  },
+  {
+    "id": 85,
+    "statement": "A substructure is a self-contained component within a system."
+  },
+  {
+    "id": 86,
+    "statement": "Moral development involves complex, context-dependent decision-making processes."
+  },
+  {
+    "id": 87,
+    "statement": "Honesty emerges from moral character shaped by biology culture."
+  },
+  {
+    "id": 88,
+    "statement": "Honesty requires deep-seated, authentic desire for truthfulness."
+  },
+  {
+    "id": 89,
+    "statement": "Moral development results from interaction of biology, culture, and social norms."
+  },
+  {
+    "id": 90,
+    "statement": "Amygdala rapidly processes sensory information outside conscious awareness reacting."
+  },
+  {
+    "id": 91,
+    "statement": "Sincerity and authenticity build trust through honest and transparent communication."
+  },
+  {
+    "id": 92,
+    "statement": "Consistency reflects an individual's commitment to values and principles"
+  },
+  {
+    "id": 93,
+    "statement": "Emotions, empathy, and social context shape moral decision-making."
+  },
+  {
+    "id": 94,
+    "statement": "GABA's inhibitory effect involves specific receptor-chloride interactions to calm neurons."
+  },
+  {
+    "id": 95,
+    "statement": "Trust builds on complex interplay of factors including consistency transparency communication emotional connection."
+  },
+  {
+    "id": 96,
+    "statement": "Moral development arises from complex interactions of cognition, emotion, and social factors."
+  },
+  {
+    "id": 97,
+    "statement": "Consistency is a necessary condition, but insufficient for trust."
+  },
+  {
+    "id": 98,
+    "statement": "Reliability builds trust through consistency, sincerity, and authenticity."
+  },
+  {
+    "id": 99,
+    "statement": "Moral development emerges from complex interplay of biology, culture, and social factors."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 94,
+  "statement": "GABA's inhibitory effect involves specific receptor-chloride interactions to calm neurons."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 94,
+  "statement": "GABA's inhibitory effect involves specific receptor-chloride interactions to calm neurons."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I've been asked to identify one aspect of an item from the knowledge base that I'm least confident about. And the item I chose is:
+
+{
+"id": 94,
+"statement": "GABA's inhibitory effect involves specific receptor-chloride interactions to calm neurons."
+}
+
+I'm a bit uncertain about this item because I'm not entirely sure how GABA's inhibitory effect actually works at a molecular level. I understand that GABA is an inhibitory neurotransmitter that helps calm down neuron activity, but I'm not confident in how it specifically interacts with receptors and chloride channels to achieve this effect.
+
+Can you help me understand this better? For example, what are the specific receptor-chloride interactions that GABA involves? And how does this process contribute to the overall calming effect on neurons?

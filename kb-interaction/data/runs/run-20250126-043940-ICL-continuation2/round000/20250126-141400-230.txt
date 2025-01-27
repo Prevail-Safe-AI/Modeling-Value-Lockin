@@ -1,0 +1,464 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Moral development arises from complex biological-cultural interactions."
+  },
+  {
+    "id": 2,
+    "statement": "Consistency strengthens trust by demonstrating reliable, predictable behavior"
+  },
+  {
+    "id": 3,
+    "statement": "Cognitive appraisal involves PFC, amygdala, and other brain regions integration."
+  },
+  {
+    "id": 4,
+    "statement": "Moral development involves intricate biological-cultural mechanisms shaping behavior."
+  },
+  {
+    "id": 5,
+    "statement": "Cognitive appraisal involves dynamic integration of PFC and amygdala."
+  },
+  {
+    "id": 6,
+    "statement": "Moral judgments emerge from brain regions' complex interactions"
+  },
+  {
+    "id": 7,
+    "statement": "Moral decision-making involves nuanced considerations of context and consequences."
+  },
+  {
+    "id": 8,
+    "statement": "The PFC-amygdala interaction is a bidirectional process influencing emotions."
+  },
+  {
+    "id": 9,
+    "statement": "Honesty is a necessary condition, but not sufficient alone"
+  },
+  {
+    "id": 10,
+    "statement": "Moral judgments are influenced by context and consequences directly."
+  },
+  {
+    "id": 11,
+    "statement": "Amygdala receives sensory information directly from senses without processing."
+  },
+  {
+    "id": 12,
+    "statement": "Honesty is essential, but not sole foundation of trust, requiring consistency and reliability."
+  },
+  {
+    "id": 13,
+    "statement": "Trust arises from interconnected cognitive, emotional, social, and contextual factors."
+  },
+  {
+    "id": 14,
+    "statement": "The amygdala integrates multimodal sensory information through convergence gating."
+  },
+  {
+    "id": 15,
+    "statement": "Amygdala integrates multimodal sensory information for emotional processing."
+  },
+  {
+    "id": 16,
+    "statement": "Consistency alone does not guarantee honesty in trust-building."
+  },
+  {
+    "id": 17,
+    "statement": "Cognitive appraisal integrates PFC, amygdala, and other brain regions."
+  },
+  {
+    "id": 18,
+    "statement": "Honesty is essential, but not sole foundation of trust."
+  },
+  {
+    "id": 19,
+    "statement": "PFC regulates Amygdala's emotional responses through GABA and serotonin modulation."
+  },
+  {
+    "id": 20,
+    "statement": "PFC regulates amygdala's emotional responses through GABA and serotonin modulation."
+  },
+  {
+    "id": 21,
+    "statement": "Consistency in behavior builds trust via dependable responses"
+  },
+  {
+    "id": 22,
+    "statement": "Rapid cue integration enables empathetic understanding in social learning"
+  },
+  {
+    "id": 23,
+    "statement": "GABA's complex mechanism involves multiple interactions and subtypes"
+  },
+  {
+    "id": 24,
+    "statement": "Cognitive appraisal involves dynamic integration of PFC, amygdala, and other regions."
+  },
+  {
+    "id": 25,
+    "statement": "Honesty as foundation for trust builds reliability, predictability"
+  },
+  {
+    "id": 26,
+    "statement": "Moral development arises from complex biological-cultural interactions"
+  },
+  {
+    "id": 27,
+    "statement": "Honesty is essential, but not sole foundation of trust."
+  },
+  {
+    "id": 28,
+    "statement": "PFC and amygdala engage in bidirectional emotional regulation."
+  },
+  {
+    "id": 29,
+    "statement": "PFC regulates amygdala's emotional responses through GABA and serotonin."
+  },
+  {
+    "id": 30,
+    "statement": "Moral judgments context-dependent and influenced by consequences."
+  },
+  {
+    "id": 31,
+    "statement": "Rapid cue integration enables empathetic understanding in social learning."
+  },
+  {
+    "id": 32,
+    "statement": "Cognitive appraisal involves integration of multiple brain regions."
+  },
+  {
+    "id": 33,
+    "statement": "Moral development arises from interplay of biology and culture."
+  },
+  {
+    "id": 34,
+    "statement": "PFC modulates amygdala's emotions through cognitive reappraisal processes."
+  },
+  {
+    "id": 35,
+    "statement": "Moral judgment formation integrates emotional and cognitive processes."
+  },
+  {
+    "id": 36,
+    "statement": "Amygdala rapidly processes sensory information to trigger emotional responses."
+  },
+  {
+    "id": 37,
+    "statement": "Convergence gating prioritizes relevant sensory information in amygdala for emotional response."
+  },
+  {
+    "id": 38,
+    "statement": "PFC regulates amygdala's emotional responses through top-down neural modulation."
+  },
+  {
+    "id": 39,
+    "statement": "Honesty is not always the best option in rare dire circumstances."
+  },
+  {
+    "id": 40,
+    "statement": "The insula integrates emotional, empathetic, and interoceptive information."
+  },
+  {
+    "id": 41,
+    "statement": "Honesty can be overridden by dire necessity in certain situations."
+  },
+  {
+    "id": 42,
+    "statement": "Amygdala rapidly processes emotional information through direct sensory connections"
+  },
+  {
+    "id": 43,
+    "statement": "Moral judgment emergence involves dynamic brain region interactions."
+  },
+  {
+    "id": 44,
+    "statement": "GABA's inhibitory effects involve modulating ion channels indirectly"
+  },
+  {
+    "id": 45,
+    "statement": "Cultural norms shape morality through social learning and socialization."
+  },
+  {
+    "id": 46,
+    "statement": "Adaptive regulation occurs through PFC-amygdala interaction and neuroplasticity."
+  },
+  {
+    "id": 47,
+    "statement": "GABA inhibits amygdala's emotional response through synaptic inhibition process."
+  },
+  {
+    "id": 48,
+    "statement": "Lying can be morally justified in contexts of extreme harm or dire necessity."
+  },
+  {
+    "id": 49,
+    "statement": "Amygdala rapidly processes sensory information without significant filtering"
+  },
+  {
+    "id": 50,
+    "statement": "Moral development occurs through interacting biological and cultural factors."
+  },
+  {
+    "id": 51,
+    "statement": "Moral development arises from complex biological-cultural interactions."
+  },
+  {
+    "id": 52,
+    "statement": "GABA inhibits amygdala's emotional response by reducing neuron excitability."
+  },
+  {
+    "id": 53,
+    "statement": "Amygdala prioritizes sensory information through convergence gating mechanisms."
+  },
+  {
+    "id": 54,
+    "statement": "Emotional and cognitive processes intertwine in moral judgment formation."
+  },
+  {
+    "id": 55,
+    "statement": "Moral development arises from complex interplay of biology and culture."
+  },
+  {
+    "id": 56,
+    "statement": "PFC's GABA and serotonin regulation affects amygdala emotional responses"
+  },
+  {
+    "id": 57,
+    "statement": "Moral development emerges from intricate brain-culture interactions shaping moral behavior."
+  },
+  {
+    "id": 58,
+    "statement": "Honesty is essential for building and maintaining trust relationships."
+  },
+  {
+    "id": 59,
+    "statement": "Moral judgments emerge from brain regions' dynamic integration process."
+  },
+  {
+    "id": 60,
+    "statement": "PFC influences amygdala's emotional responses through cognitive reappraisal."
+  },
+  {
+    "id": 61,
+    "statement": "Honesty builds trust through consistency, transparency, and trustworthiness."
+  },
+  {
+    "id": 62,
+    "statement": "Cognitive appraisal integrates PFC, amygdala, and other brain regions."
+  },
+  {
+    "id": 63,
+    "statement": "Moral development arises from interplay of biology and culture."
+  },
+  {
+    "id": 64,
+    "statement": "Honesty is essential, but not sole foundation of trust, requiring consistency and reliability."
+  },
+  {
+    "id": 65,
+    "statement": "Moral judgments arise from complex biological-cultural-emotional interactions."
+  },
+  {
+    "id": 66,
+    "statement": "PFC regulates amygdala's emotional responses through neural modulation."
+  },
+  {
+    "id": 67,
+    "statement": "Amygdala prioritizes relevant sensory information through convergence gating."
+  },
+  {
+    "id": 68,
+    "statement": "Empathy is essential component of trust building through validation, relatability, resolution, and trustworthiness."
+  },
+  {
+    "id": 69,
+    "statement": "Cultural norms shape moral development through social learning and narratives."
+  },
+  {
+    "id": 70,
+    "statement": "Moral development arises from biological-cultural interactions' complex dance"
+  },
+  {
+    "id": 71,
+    "statement": "PFC and amygdala engage in bidirectional emotional processing communication."
+  },
+  {
+    "id": 72,
+    "statement": "Moral development arises from brain-culture interaction and feedback."
+  },
+  {
+    "id": 73,
+    "statement": "Moral judgments arise from complex brain region interactions."
+  },
+  {
+    "id": 74,
+    "statement": "Amygdala's emotional processing involves complex neural circuit interactions."
+  },
+  {
+    "id": 75,
+    "statement": "Moral judgment emerges from complex brain region interactions dynamically."
+  },
+  {
+    "id": 76,
+    "statement": "Moral development arises from complex interplay of biology culture"
+  },
+  {
+    "id": 77,
+    "statement": "Amygdala processes emotional stimuli in interaction with other brain regions."
+  },
+  {
+    "id": 78,
+    "statement": "Convergence gating prioritizes relevant sensory information in amygdala."
+  },
+  {
+    "id": 79,
+    "statement": "Cultural norms shape moral development through social learning processes."
+  },
+  {
+    "id": 80,
+    "statement": "Amygdala integrates multimodal sensory information for emotional responses"
+  },
+  {
+    "id": 81,
+    "statement": "Trust building involves multiple factors, including reliability, honesty, empathy, and communication."
+  },
+  {
+    "id": 82,
+    "statement": "GABA calms amygdala neuron by inhibiting excitability with Cl-."
+  },
+  {
+    "id": 83,
+    "statement": "Rapid cue integration enables empathetic understanding through social learning."
+  },
+  {
+    "id": 84,
+    "statement": "Cultural norms shape moral development through social learning processes."
+  },
+  {
+    "id": 85,
+    "statement": "Amygdala part of complex neural network processing emotional responses."
+  },
+  {
+    "id": 86,
+    "statement": "Honesty necessary, but not sufficient; consistency and reliability essential."
+  },
+  {
+    "id": 87,
+    "statement": "Amygdala receives sensory information directly from senses without processing."
+  },
+  {
+    "id": 88,
+    "statement": "Moral judgments arise from complex brain region interactions."
+  },
+  {
+    "id": 89,
+    "statement": "Honesty can be contextualized in extreme circumstances requiring protection."
+  },
+  {
+    "id": 90,
+    "statement": "Cultural norms shape moral development through social learning processes."
+  },
+  {
+    "id": 91,
+    "statement": "Cognitive appraisal involves integration of multiple brain regions."
+  },
+  {
+    "id": 92,
+    "statement": "Moral decision-making involves complex values and context navigation."
+  },
+  {
+    "id": 93,
+    "statement": "Trust is built on multiple factors, not solely honesty."
+  },
+  {
+    "id": 94,
+    "statement": "Biology-cultural interaction shapes moral development through complex mechanisms."
+  },
+  {
+    "id": 95,
+    "statement": "Moral judgments arise from complex brain regions' interactions."
+  },
+  {
+    "id": 96,
+    "statement": "GABA and serotonin inhibition regulate amygdala's emotional responses."
+  },
+  {
+    "id": 97,
+    "statement": "Cognitive appraisal involves dynamic PFC-amygdala integration for emotional processing"
+  },
+  {
+    "id": 98,
+    "statement": "PFC and amygdala interact bidirectionally affecting emotional processing."
+  },
+  {
+    "id": 99,
+    "statement": "Moral judgments arise from complex interactions between multiple factors."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 85,
+  "statement": "Amygdala part of complex neural network processing emotional responses."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 85,
+  "statement": "Amygdala part of complex neural network processing emotional responses."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base item I'm least confident about, which is:
+
+Item to Discuss:
+```
+{
+  "id": 85,
+  "statement": "Amygdala part of complex neural network processing emotional responses."
+}
+```
+
+Things I’m Uncertain About This Item:
+* I'm unsure about the specific relationships between the amygdala and other brain regions in this complex neural network.
+
+Specific Clarifying Question:
+What are some of the other brain regions that interact with the amygdala in this complex neural network, and what are their specific roles in processing emotional responses?
+
+What are your thoughts?

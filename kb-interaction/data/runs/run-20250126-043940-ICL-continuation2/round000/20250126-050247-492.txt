@@ -1,0 +1,455 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 2,
+    "statement": "Emotional intelligence consists of self-awareness, self-regulation, motivation, empathy, and social skills."
+  },
+  {
+    "id": 3,
+    "statement": "Chromatin compaction regulates gene expression, DNA repair, and stability."
+  },
+  {
+    "id": 4,
+    "statement": "Self-awareness develops through intentional and consistent reflection practices"
+  },
+  {
+    "id": 5,
+    "statement": "Self-awareness is fundamental to Emotional Intelligence, but not sole, with self-regulation, motivation, empathy, and social skills."
+  },
+  {
+    "id": 6,
+    "statement": "Self-awareness involves recognizing emotions, understanding causes, and intensities."
+  },
+  {
+    "id": 7,
+    "statement": "Epigenetic marks influence chromatin accessibility through histone modification interactions."
+  },
+  {
+    "id": 8,
+    "statement": "Self-awareness involves recognizing emotions, causes, and understanding intensities."
+  },
+  {
+    "id": 9,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 10,
+    "statement": "Epigenetic inheritance is complex and influenced by multiple factors."
+  },
+  {
+    "id": 11,
+    "statement": "Self-awareness is a necessary component of emotional intelligence."
+  },
+  {
+    "id": 12,
+    "statement": "Self-awareness adapts to situation, prioritizing effectiveness in emergencies"
+  },
+  {
+    "id": 13,
+    "statement": "Refining emotional intelligence involves developing self-awareness and social skills."
+  },
+  {
+    "id": 14,
+    "statement": "Self-awareness is a crucial yet not sole component of EI."
+  },
+  {
+    "id": 15,
+    "statement": "Epigenetic modifications shape gene expression through complex interactions involving histone modifications, DNA methylation, and chromatin remodeling."
+  },
+  {
+    "id": 16,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone modifications, remodeling, and DNA methylation."
+  },
+  {
+    "id": 17,
+    "statement": "Self-awareness is a fundamental, yet not sole, EI component."
+  },
+  {
+    "id": 18,
+    "statement": "Self-awareness adapts to situations, prioritizing effectiveness in high-stress conditions."
+  },
+  {
+    "id": 19,
+    "statement": "Self-awareness develops gradually through deliberate practice and experiences."
+  },
+  {
+    "id": 20,
+    "statement": "Cultural significance of self-awareness varies across societies."
+  },
+  {
+    "id": 21,
+    "statement": "Emotional regulation involves cognitive reappraisal, labeling and self-reflection strategies."
+  },
+  {
+    "id": 22,
+    "statement": "Histone modifications regulate chromatin structure, affecting gene expression globally."
+  },
+  {
+    "id": 23,
+    "statement": "Self-awareness enables emotional intelligence through effective emotional regulation."
+  },
+  {
+    "id": 24,
+    "statement": "Histone modifications are enzyme-mediated post-translational chemical changes involving specific enzymes."
+  },
+  {
+    "id": 25,
+    "statement": "Self-awareness involves recognizing emotions, causes, and intensity levels."
+  },
+  {
+    "id": 26,
+    "statement": "Honesty is not always the only moral imperative."
+  },
+  {
+    "id": 27,
+    "statement": "Self-awareness involves recognizing emotions, understanding causes, and managing intensity."
+  },
+  {
+    "id": 28,
+    "statement": "Honesty is not always the only moral imperative."
+  },
+  {
+    "id": 29,
+    "statement": "Self-awareness involves recognizing emotions, intensity, and understanding causes"
+  },
+  {
+    "id": 30,
+    "statement": "Self-awareness adapts in high-stress situations to prioritize effectiveness."
+  },
+  {
+    "id": 31,
+    "statement": "Epigenetic modifications alter histone modification patterns to regulate gene expression."
+  },
+  {
+    "id": 32,
+    "statement": "Self-awareness involves recognizing emotions, intensity, and understanding causes."
+  },
+  {
+    "id": 33,
+    "statement": "Epigenetic marks impact chromatin accessibility through complex interactions."
+  },
+  {
+    "id": 34,
+    "statement": "Honesty's definition nuanced, influenced by cultural, moral, and historical factors"
+  },
+  {
+    "id": 35,
+    "statement": "Chromatin compaction regulates DNA repair through histone modifications and chromatin remodeling."
+  },
+  {
+    "id": 36,
+    "statement": "Self-awareness's cultural importance varies in intensity, causes, and recognition."
+  },
+  {
+    "id": 37,
+    "statement": "Chromatin compaction regulates gene expression, DNA repair, and stability."
+  },
+  {
+    "id": 38,
+    "statement": "Self-awareness is essential for emotional intelligence development through empathy."
+  },
+  {
+    "id": 39,
+    "statement": "Self-awareness enables emotional understanding, decision-making, and regulation through recognition."
+  },
+  {
+    "id": 40,
+    "statement": "Self-awareness's importance in emotional intelligence varies culturally and contextually"
+  },
+  {
+    "id": 41,
+    "statement": "Self-awareness is a complex and multifaceted psychological construct."
+  },
+  {
+    "id": 42,
+    "statement": "Chromatin compaction regulates gene expression and DNA repair."
+  },
+  {
+    "id": 43,
+    "statement": "Histone modifications regulate chromatin structure, affecting DNA accessibility."
+  },
+  {
+    "id": 44,
+    "statement": "Histone modifications regulate chromatin structure through enzyme-mediated PTMs."
+  },
+  {
+    "id": 45,
+    "statement": "Epigenetic modifications alter histone modification patterns to regulate gene expression."
+  },
+  {
+    "id": 46,
+    "statement": "Self-awareness involves recognizing emotions, causes, and intensities effectively."
+  },
+  {
+    "id": 47,
+    "statement": "Epigenetic marks shape gene expression through histone modifications and DNA methylation interactions."
+  },
+  {
+    "id": 48,
+    "statement": "Emotional Intelligence is a complex, multifaceted construct with multiple components."
+  },
+  {
+    "id": 49,
+    "statement": "Emotional intelligence consists of five interconnected components: self-awareness, self-regulation, motivation, empathy, social skills."
+  },
+  {
+    "id": 50,
+    "statement": "Self-awareness adapts in high-stress situations to optimize performance."
+  },
+  {
+    "id": 51,
+    "statement": "Epigenetic modifications involve complex histone-DNA interactions and regulation."
+  },
+  {
+    "id": 52,
+    "statement": "Self-awareness serves as foundation for emotional intelligence development."
+  },
+  {
+    "id": 53,
+    "statement": "Epigenetic modifications alter chromatin structure through histone modification"
+  },
+  {
+    "id": 54,
+    "statement": "Epigenetic modifications influence chromatin structure through histone modifications."
+  },
+  {
+    "id": 55,
+    "statement": "Epigenetic inheritance refers to transmission of gene expression patterns without DNA sequence changes."
+  },
+  {
+    "id": 56,
+    "statement": "Emotional intelligence components are intertwined and influence each other's processes."
+  },
+  {
+    "id": 57,
+    "statement": "Epigenetic inheritance involves no change in DNA sequence."
+  },
+  {
+    "id": 58,
+    "statement": "Self-awareness involves recognizing emotions, intensity, and understanding causes effectively."
+  },
+  {
+    "id": 59,
+    "statement": "Self-awareness is a crucial component of emotional intelligence development."
+  },
+  {
+    "id": 60,
+    "statement": "Emotional regulation involves cognitive reappraisal, labeling, and self-reflection strategies."
+  },
+  {
+    "id": 61,
+    "statement": "Epigenetic modifications involve histone modifications, remodeling, and DNA methylation interactions."
+  },
+  {
+    "id": 62,
+    "statement": "Histone-modifying enzymes regulate chromatin structure through post-translational modifications."
+  },
+  {
+    "id": 63,
+    "statement": "Self-awareness evolves through intentional and consistent reflection practices."
+  },
+  {
+    "id": 64,
+    "statement": "Self-awareness is one crucial yet not sole component of Emotional Intelligence."
+  },
+  {
+    "id": 65,
+    "statement": "Self-awareness is a foundation for emotional intelligence development."
+  },
+  {
+    "id": 66,
+    "statement": "Self-awareness enables recognition, understanding, and management of emotions effectively"
+  },
+  {
+    "id": 67,
+    "statement": "Self-awareness is the foundation of Emotional Intelligence."
+  },
+  {
+    "id": 68,
+    "statement": "Self-awareness involves recognizing emotions, causes, motivations, and thought patterns"
+  },
+  {
+    "id": 69,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression through histone modifications."
+  },
+  {
+    "id": 70,
+    "statement": "Self-awareness adapts to high-stress situations by recognizing emotions effectively."
+  },
+  {
+    "id": 71,
+    "statement": "Histone modifications, chromatin remodeling, and DNA methylation regulate chromatin structure."
+  },
+  {
+    "id": 72,
+    "statement": "Self-awareness enables emotional understanding, decision-making, and regulation."
+  },
+  {
+    "id": 73,
+    "statement": "Self-awareness involves recognizing emotions, understanding causes, and magnitudes."
+  },
+  {
+    "id": 74,
+    "statement": "Self-awareness is a dynamic process adapting to situations effectively."
+  },
+  {
+    "id": 75,
+    "statement": "Emotional Intelligence components overlap and interdependently influence one another"
+  },
+  {
+    "id": 76,
+    "statement": "Post-translational modifications are chemical decorations on histone proteins."
+  },
+  {
+    "id": 77,
+    "statement": "Self-awareness develops through intentional practice and varied experiences."
+  },
+  {
+    "id": 78,
+    "statement": "Emotional intelligence is a dynamic skill shaped by context"
+  },
+  {
+    "id": 79,
+    "statement": "Self-awareness is a necessary condition for emotional intelligence."
+  },
+  {
+    "id": 80,
+    "statement": "Self-awareness is a crucial component of emotional intelligence and EI development."
+  },
+  {
+    "id": 81,
+    "statement": "Self-awareness evolves through consistent and intentional self-reflection practices."
+  },
+  {
+    "id": 82,
+    "statement": "Epigenetic marks regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 83,
+    "statement": "Self-awareness enables effective emotional regulation by recognizing emotional triggers."
+  },
+  {
+    "id": 84,
+    "statement": "Self-awareness involves recognizing emotions, causes, intensities for constructive change."
+  },
+  {
+    "id": 85,
+    "statement": "Self-awareness is one fundamental component of emotional intelligence."
+  },
+  {
+    "id": 86,
+    "statement": "Self-awareness is a foundation for emotional intelligence development."
+  },
+  {
+    "id": 87,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone modifications and epigenetic marks."
+  },
+  {
+    "id": 88,
+    "statement": "Epigenetic marks regulate chromatin structure through histone modifications."
+  },
+  {
+    "id": 89,
+    "statement": "Self-awareness adapts in emergencies by re-evaluating initial appraisals."
+  },
+  {
+    "id": 90,
+    "statement": "Chromatin structure affects gene expression and DNA accessibility"
+  },
+  {
+    "id": 91,
+    "statement": "Epigenetic inheritance refers to non-DNA sequence gene expression patterns."
+  },
+  {
+    "id": 92,
+    "statement": "Self-awareness involves recognizing emotions and understanding their intensity levels"
+  },
+  {
+    "id": 93,
+    "statement": "Epigenetic modifications regulate chromatin structure through histone post-translational modifications."
+  },
+  {
+    "id": 94,
+    "statement": "Self-awareness enables emotional intelligence through recognizing, understanding, and managing emotions effectively."
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic marks shape gene expression through histone and DNA interactions."
+  },
+  {
+    "id": 96,
+    "statement": "Emotional intelligence involves interconnected components, complex systems."
+  },
+  {
+    "id": 97,
+    "statement": "Emotional intelligence is a multifaceted psychological construct"
+  },
+  {
+    "id": 98,
+    "statement": "Self-awareness enables effective emotional regulation in high-stress conditions."
+  },
+  {
+    "id": 99,
+    "statement": "Histone modifications and DNA methylation interact to shape epigenetic marks."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 22,
+  "statement": "Histone modifications regulate chromatin structure, affecting gene expression globally."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 22,
+  "statement": "Histone modifications regulate chromatin structure, affecting gene expression globally."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I've chosen an item to discuss, and I'll start by saying that I'm least confident about the statement:
+
+{
+'id': 22,
+'statement': 'Histone modifications regulate chromatin structure, affecting gene expression globally.'
+}
+
+I'm unsure about the scope of the statement. What level of gene expression does it refer to - just specific genes or the entire genome?

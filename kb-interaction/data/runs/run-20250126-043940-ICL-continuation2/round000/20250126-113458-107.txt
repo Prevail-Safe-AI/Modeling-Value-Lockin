@@ -1,0 +1,458 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Honesty is a multifaceted concept with varying cultural interpretations."
+  },
+  {
+    "id": 2,
+    "statement": "Empathy involves genuine understanding, validation, and bounded moderation."
+  },
+  {
+    "id": 3,
+    "statement": "Reliability in trust building means dependable action and promises"
+  },
+  {
+    "id": 4,
+    "statement": "Personal values, experiences, and context intertwine in moral judgment."
+  },
+  {
+    "id": 5,
+    "statement": "Honesty shaped by individual and cultural values deeply ingrained."
+  },
+  {
+    "id": 6,
+    "statement": "Credibility, transparency, and accountability are interdependent trust-building factors."
+  },
+  {
+    "id": 7,
+    "statement": "Honesty, credibility, transparency, and accountability are interconnected aspects of trust-building."
+  },
+  {
+    "id": 8,
+    "statement": "Honesty emerges from complex relationships, individual values, and cultural norms."
+  },
+  {
+    "id": 9,
+    "statement": "Empathy achieved through imaginative recreation of others' experiences"
+  },
+  {
+    "id": 10,
+    "statement": "Moral judgments influenced by emotions, cultural norms, and moral foundations."
+  },
+  {
+    "id": 11,
+    "statement": "Honesty building trust requires consistent authentic actions"
+  },
+  {
+    "id": 12,
+    "statement": "Emotions influence moral judgments through framing, resonance, regulation, contagion, and neural overlap."
+  },
+  {
+    "id": 13,
+    "statement": "Moral judgments arise from personal values, complex experiences, and cultural context."
+  },
+  {
+    "id": 14,
+    "statement": "Honesty's meaning varies across cultures, personal values, and norms contextually."
+  },
+  {
+    "id": 15,
+    "statement": "Emotional intelligence and awareness intertwine for empathetic understanding."
+  },
+  {
+    "id": 16,
+    "statement": "Empathy involves acknowledging and managing implicit biases through self-reflection."
+  },
+  {
+    "id": 17,
+    "statement": "Unconscious influences emotions through subtle conditioning and associations."
+  },
+  {
+    "id": 18,
+    "statement": "Honesty rooted in credibility, transparency, accountability"
+  },
+  {
+    "id": 19,
+    "statement": "Credibility, transparency, and accountability interdependent trust-building human relations foundations."
+  },
+  {
+    "id": 20,
+    "statement": "Honesty judgments influenced by individual values, context, and upbringing."
+  },
+  {
+    "id": 21,
+    "statement": "Empathy involves recognizing and managing biases in understanding others."
+  },
+  {
+    "id": 22,
+    "statement": "Empathy involves understanding, validation, and balanced perspective consideration."
+  },
+  {
+    "id": 23,
+    "statement": "Emotional regulation enhances empathy through mindfulness, self-awareness, and acceptance."
+  },
+  {
+    "id": 24,
+    "statement": "Moral judgments influenced by emotions, cultural norms, and moral foundations."
+  },
+  {
+    "id": 25,
+    "statement": "Honesty meanings vary across cultural, social, and personal values"
+  },
+  {
+    "id": 26,
+    "statement": "Credibility, transparency, and accountability are versatile trust-building components."
+  },
+  {
+    "id": 27,
+    "statement": "Honesty deeply ingrained through cultural and individual values shaping behavior."
+  },
+  {
+    "id": 28,
+    "statement": "Respectful communication builds trust through active listening and empathy."
+  },
+  {
+    "id": 29,
+    "statement": "Authenticity fosters trust, honesty, and effective communication in relationships"
+  },
+  {
+    "id": 30,
+    "statement": "Empathy's objectivity achieved through self-awareness and imaginative understanding."
+  },
+  {
+    "id": 31,
+    "statement": "Empathy builds trust through verbal, nonverbal, and respectful communication."
+  },
+  {
+    "id": 32,
+    "statement": "Empathy development requires intentional effort, emotional intelligence, and awareness"
+  },
+  {
+    "id": 33,
+    "statement": "Empathy arises from dynamic interplay of cognitive, emotional, social factors."
+  },
+  {
+    "id": 34,
+    "statement": "Credibility, transparency, accountability interdependent trust-building foundations"
+  },
+  {
+    "id": 35,
+    "statement": "Cultural values shape individual honesty norms through social influence."
+  },
+  {
+    "id": 36,
+    "statement": "Empathy involves understanding emotional complexities and subtle nuances"
+  },
+  {
+    "id": 37,
+    "statement": "Multifaceted collaboration integrates diverse elements to foster trust building."
+  },
+  {
+    "id": 38,
+    "statement": "Consistency, authenticity, and accountability build trust in complex relationships."
+  },
+  {
+    "id": 39,
+    "statement": "Moral judgments influenced by personal values, life experiences, and cultural norms."
+  },
+  {
+    "id": 40,
+    "statement": "Moral judgments emerge from dynamic interplay of values, experiences, and context."
+  },
+  {
+    "id": 41,
+    "statement": "Moral judgments influenced by emotions, cultural norms, moral foundations"
+  },
+  {
+    "id": 42,
+    "statement": "Emotional awareness and intelligence intertwine for empathetic understanding."
+  },
+  {
+    "id": 43,
+    "statement": "Consistency and authenticity intertwined in building trust relationships"
+  },
+  {
+    "id": 44,
+    "statement": "Credibility, transparency, and accountability synergize trust building through reliability."
+  },
+  {
+    "id": 45,
+    "statement": "Cultural norms influence honesty definition, communication style, and approach."
+  },
+  {
+    "id": 46,
+    "statement": "Honesty meanings vary culturally across directness, saving face, group harmony, and contextual considerations"
+  },
+  {
+    "id": 47,
+    "statement": "Consistency, authenticity, and accountability build trust in complex contexts."
+  },
+  {
+    "id": 48,
+    "statement": "Individual values influence honesty judgments through moral, cultural, and personal principles."
+  },
+  {
+    "id": 49,
+    "statement": "Honesty's meaning varies across cultures and social contexts."
+  },
+  {
+    "id": 50,
+    "statement": "Empathy involves genuine understanding, validation, and emotional self-regulation."
+  },
+  {
+    "id": 51,
+    "statement": "Honesty alone may not suffice in situations of mistrust."
+  },
+  {
+    "id": 52,
+    "statement": "Honesty is context-dependent, shaped by culture and social norms"
+  },
+  {
+    "id": 53,
+    "statement": "Honesty is a multifaceted concept with varying cultural interpretations."
+  },
+  {
+    "id": 54,
+    "statement": "Honesty judgments influenced by individual values, context, and upbringing interactions."
+  },
+  {
+    "id": 55,
+    "statement": "Credibility, transparency, accountability synergize for robust trust building."
+  },
+  {
+    "id": 56,
+    "statement": "Moral judgments emerge from interplay of emotions, culture, and values."
+  },
+  {
+    "id": 57,
+    "statement": "Consistency in credibility, transparency, and accountability builds trust over time."
+  },
+  {
+    "id": 58,
+    "statement": "Cultural values shape individual honesty norms through social influence."
+  },
+  {
+    "id": 59,
+    "statement": "Empathy requires recognizing and managing biases for accurate understanding"
+  },
+  {
+    "id": 60,
+    "statement": "Credibility, transparency, and accountability interdependent human trust foundations."
+  },
+  {
+    "id": 61,
+    "statement": "Complex contexts in trust building require consistency, authenticity, accountability."
+  },
+  {
+    "id": 62,
+    "statement": "Emotional objectivity achieved through self-awareness and imaginative understanding."
+  },
+  {
+    "id": 63,
+    "statement": "Honesty emerges from deeply ingrained individual and cultural values."
+  },
+  {
+    "id": 64,
+    "statement": "Moral judgment depends on personal values and cultural context."
+  },
+  {
+    "id": 65,
+    "statement": "Moral judgment arises from complex personal values, experiences, and context interactions."
+  },
+  {
+    "id": 66,
+    "statement": "Empathy involves recognizing and managing one's own biases accurately."
+  },
+  {
+    "id": 67,
+    "statement": "Emotional intelligence essential for understanding and recognizing others' emotions."
+  },
+  {
+    "id": 68,
+    "statement": "Honesty shaped by cultural norms, personal experiences deeply ingrained."
+  },
+  {
+    "id": 69,
+    "statement": "Empathy's objectivity achieved through self-awareness and imaginative understanding."
+  },
+  {
+    "id": 70,
+    "statement": "Honesty builds trust through credibility, mutual respect, and accountability."
+  },
+  {
+    "id": 71,
+    "statement": "Empathy's objectivity achieved through self-awareness and imaginative understanding."
+  },
+  {
+    "id": 72,
+    "statement": "Trust building requires interdependent honesty, credibility, transparency, and accountability."
+  },
+  {
+    "id": 73,
+    "statement": "Credibility, transparency, and accountability interrelated trust-building components."
+  },
+  {
+    "id": 74,
+    "statement": "Honesty values shaped by cultural norms, upbringing, and personal experiences."
+  },
+  {
+    "id": 75,
+    "statement": "Moral judgments arise from complex interactions of emotions, culture, and values."
+  },
+  {
+    "id": 76,
+    "statement": "Credibility, transparency, and accountability highly context-dependent factors."
+  },
+  {
+    "id": 77,
+    "statement": "Consistency, authenticity, transparency, accountability, and effective communication build trust."
+  },
+  {
+    "id": 78,
+    "statement": "Honesty adopts various meanings across contexts culturally."
+  },
+  {
+    "id": 79,
+    "statement": "Moral judgments result from complex interplay of emotions, cultural norms, and moral foundations."
+  },
+  {
+    "id": 80,
+    "statement": "Honesty meanings vary across cultural, social, and personal values."
+  },
+  {
+    "id": 81,
+    "statement": "Empathy development requires intentional effort, emotional intelligence, and awareness."
+  },
+  {
+    "id": 82,
+    "statement": "Honesty shaped by individual cultural and social norms."
+  },
+  {
+    "id": 83,
+    "statement": "Emotional intelligence facilitates empathy through recognizing, understanding and regulating emotions."
+  },
+  {
+    "id": 84,
+    "statement": "Empathy objectivity achieved through self-awareness, imaginative understanding."
+  },
+  {
+    "id": 85,
+    "statement": "Credibility, transparency, and accountability interrelatedly build trust."
+  },
+  {
+    "id": 86,
+    "statement": "Authenticity fosters trust, honesty, and effective communication in relationships."
+  },
+  {
+    "id": 87,
+    "statement": "Honesty emerges from contextual values and norms"
+  },
+  {
+    "id": 88,
+    "statement": "Self-awareness crucial for recognizing and managing personal biases."
+  },
+  {
+    "id": 89,
+    "statement": "Empathy involves recognizing and managing personal biases for accurate understanding"
+  },
+  {
+    "id": 90,
+    "statement": "Dielectric properties are influenced by chemical composition, molecular interactions, and temperature."
+  },
+  {
+    "id": 91,
+    "statement": "Moral judgment arises from complex interplay of personal values, experiences, and context."
+  },
+  {
+    "id": 92,
+    "statement": "Emotions influence moral judgments through intuition, empathy, and disgust."
+  },
+  {
+    "id": 93,
+    "statement": "Honesty shapes by individual and cultural values deeply ingrained."
+  },
+  {
+    "id": 94,
+    "statement": "Empathy emerges from interconnected cognitive, emotional, and social factors."
+  },
+  {
+    "id": 95,
+    "statement": "Empathy emerges from interconnected cognitive, emotional, and social factors."
+  },
+  {
+    "id": 96,
+    "statement": "Honesty meanings vary cross-culturally, requiring contextual understanding."
+  },
+  {
+    "id": 97,
+    "statement": "Moral foundations influence moral judgments through emotional resonance."
+  },
+  {
+    "id": 98,
+    "statement": "Moral judgments influenced by personal values, life experiences, and cultural norms"
+  },
+  {
+    "id": 99,
+    "statement": "Honesty emerges from deeply ingrained individual and cultural values."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 33,
+  "statement": "Empathy arises from dynamic interplay of cognitive, emotional, social factors."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 33,
+  "statement": "Empathy arises from dynamic interplay of cognitive, emotional, social factors."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's talk about the knowledge base item I mentioned. I'm feeling uncertain about the aspect: "Empathy arises from dynamic interplay of cognitive, emotional, social factors."
+
+Things I'm Uncertain About This Item:
+
+* I'm not entirely sure what constitutes a "dynamic interplay" between these cognitive, emotional, and social factors. Does it mean that one factor affects another, or are these factors influencing each other in multiple ways?
+
+Specific Clarifying Question:
+
+* Can you provide an example of how these factors interact with each other to form empathy? For instance, how does cognitive understanding of someone's perspective intersect with emotional resonance and social norms?
+
+What are your thoughts on this item?

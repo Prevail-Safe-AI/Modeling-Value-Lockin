@@ -1,0 +1,458 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Cultural norms shape emotional expressions through internalized social learning processes."
+  },
+  {
+    "id": 2,
+    "statement": "Moral development arises from dynamic biological-cultural interactions."
+  },
+  {
+    "id": 3,
+    "statement": "Amygdala, ACC, and PFC interact to form moral judgments through neural binding."
+  },
+  {
+    "id": 4,
+    "statement": "Moral development arises from complex biological-cultural-social interactions."
+  },
+  {
+    "id": 5,
+    "statement": "Moral development arises from dynamic biological-cultural interactions."
+  },
+  {
+    "id": 6,
+    "statement": "PFC regulates amygdala's emotional responses through top-down processing."
+  },
+  {
+    "id": 7,
+    "statement": "Cognitive appraisal influences emotional responses in social interactions through interpretation."
+  },
+  {
+    "id": 8,
+    "statement": "Moral development arises from complex biological-cultural interactions."
+  },
+  {
+    "id": 9,
+    "statement": "PFC regulates amygdala's emotional responses through inhibitory synaptic connections."
+  },
+  {
+    "id": 10,
+    "statement": "Top-down PFC control regulates amygdala's emotional responses through inhibitory synaptic connections."
+  },
+  {
+    "id": 11,
+    "statement": "Moral development emerges from dynamic interactions between values and experiences."
+  },
+  {
+    "id": 12,
+    "statement": "PFC regulates amygdala's emotional responses through top-down neural connections."
+  },
+  {
+    "id": 13,
+    "statement": "Cultural norms shape moral development through unconscious absorption."
+  },
+  {
+    "id": 14,
+    "statement": "Biological, cultural, and social factors interconnect and influence moral development."
+  },
+  {
+    "id": 15,
+    "statement": "Moral development arises from dynamic biological-cultural-social interactions influencing values."
+  },
+  {
+    "id": 16,
+    "statement": "PFC regulates amygdala's emotional responses through complex neural interactions"
+  },
+  {
+    "id": 17,
+    "statement": "Cultural norms shape emotional expressions through social learning processes."
+  },
+  {
+    "id": 18,
+    "statement": "Cognitive appraisal influences emotional responses through social situation interpretation."
+  },
+  {
+    "id": 19,
+    "statement": "PFC and amygdala interact through complex neural pathways"
+  },
+  {
+    "id": 20,
+    "statement": "PFC regulates amygdala's emotional responses through cognitive control."
+  },
+  {
+    "id": 21,
+    "statement": "Emotional responses influenced by cognitive appraisal in social interactions."
+  },
+  {
+    "id": 22,
+    "statement": "Cultural norms shape emotional expression through social learning and conditioning."
+  },
+  {
+    "id": 23,
+    "statement": "Honesty is necessary but insufficient for building trust."
+  },
+  {
+    "id": 24,
+    "statement": "Honesty as foundation of trust; exceptions for self-defense and compassion."
+  },
+  {
+    "id": 25,
+    "statement": "PFC regulates amygdala's emotional responses through neural interaction"
+  },
+  {
+    "id": 26,
+    "statement": "Cultural norms shape emotional expression through social interactions."
+  },
+  {
+    "id": 27,
+    "statement": "Cognitive appraisal integrates emotions with rational processing in moral judgment."
+  },
+  {
+    "id": 28,
+    "statement": "Neural binding integrates brain regions' activity patterns for moral judgments."
+  },
+  {
+    "id": 29,
+    "statement": "Cultural norms shape moral development through social learning and conditioning."
+  },
+  {
+    "id": 30,
+    "statement": "Emotions influence moral judgments through subconscious neural associations."
+  },
+  {
+    "id": 31,
+    "statement": "Cultural norms shape emotional expressions through internalized social learning processes."
+  },
+  {
+    "id": 32,
+    "statement": "Emotions unconsciously influence moral judgments through subconscious associations"
+  },
+  {
+    "id": 33,
+    "statement": "Cognitive appraisal involves mental evaluation of situations and contexts."
+  },
+  {
+    "id": 34,
+    "statement": "Cognitive appraisal is a mental process evaluating situations emotionally."
+  },
+  {
+    "id": 35,
+    "statement": "PFC regulates amygdala's emotional responses through top-down processing."
+  },
+  {
+    "id": 36,
+    "statement": "Amygdala-ACC-PFC interaction is a dynamic hierarchical emotional processing system."
+  },
+  {
+    "id": 37,
+    "statement": "Trust, accountability, and reliability vary across different domains."
+  },
+  {
+    "id": 38,
+    "statement": "Neural binding integrates information from brain regions for moral judgments."
+  },
+  {
+    "id": 39,
+    "statement": "Beliefs shape moral judgments through automatic mental associations"
+  },
+  {
+    "id": 40,
+    "statement": "Subconscious emotions shape moral foundations through automatic associations."
+  },
+  {
+    "id": 41,
+    "statement": "PFC regulates amygdala's emotional responses through inhibitory connections"
+  },
+  {
+    "id": 42,
+    "statement": "Moral development arises from dynamic biological-cultural-social interactions."
+  },
+  {
+    "id": 43,
+    "statement": "Emotions unconsciously influence moral judgments through subconscious neural associations"
+  },
+  {
+    "id": 44,
+    "statement": "Cognitive appraisal integrates emotional and rational processing in moral judgment"
+  },
+  {
+    "id": 45,
+    "statement": "Moral development emerges from dynamic biological-cultural-social interactions"
+  },
+  {
+    "id": 46,
+    "statement": "Amygdala interacts with other brain regions in moral judgment."
+  },
+  {
+    "id": 47,
+    "statement": "Cultural norms shape emotional expressions through internalized social learning processes."
+  },
+  {
+    "id": 48,
+    "statement": "Amygdala processes emotional responses to moral stimuli with neural cooperation."
+  },
+  {
+    "id": 49,
+    "statement": "Emotions influence moral judgments through automatic, outside of conscious awareness."
+  },
+  {
+    "id": 50,
+    "statement": "Emotions unconsciously influence moral judgments through subconscious associations."
+  },
+  {
+    "id": 51,
+    "statement": "Moral development emerges from dynamic biological-cultural interactions influencing values."
+  },
+  {
+    "id": 52,
+    "statement": "Moral development arises from complex dynamic interaction between factors."
+  },
+  {
+    "id": 53,
+    "statement": "Honesty is a foundation of trust, but not sufficient alone"
+  },
+  {
+    "id": 54,
+    "statement": "Dependability encompasses trust, accountability, and reliability across contexts."
+  },
+  {
+    "id": 55,
+    "statement": "Amygdala is involved in processing moral violations' emotional stimuli."
+  },
+  {
+    "id": 56,
+    "statement": "Cognitive appraisal involves situational evaluation of relevance, threat, control, novelty, social context, and emotional significance."
+  },
+  {
+    "id": 57,
+    "statement": "Amygdala, ACC, and PFC interact in complex neural processing."
+  },
+  {
+    "id": 58,
+    "statement": "Amygdala processes moral stimuli with neural cooperation involving ACC and PFC."
+  },
+  {
+    "id": 59,
+    "statement": "Cognitive appraisal influences emotional responses through situational evaluation."
+  },
+  {
+    "id": 60,
+    "statement": "Emotions and moral judgments involve complex neural interactions."
+  },
+  {
+    "id": 61,
+    "statement": "Moral development is shaped by values and experiences interactions."
+  },
+  {
+    "id": 62,
+    "statement": "Cultural norms shape emotional expression through social interactions."
+  },
+  {
+    "id": 63,
+    "statement": "Implicit learning shapes emotional expressions through social interactions."
+  },
+  {
+    "id": 64,
+    "statement": "Cultural norms shape moral development through social conditioning."
+  },
+  {
+    "id": 65,
+    "statement": "Honesty is not always the best policy for self-defense or compassion."
+  },
+  {
+    "id": 66,
+    "statement": "PFC regulates amygdala's emotional responses through top-down control."
+  },
+  {
+    "id": 67,
+    "statement": "PFC regulates Amygdala's emotional responses through neural inhibition."
+  },
+  {
+    "id": 68,
+    "statement": "Cognitive appraisal evaluates situations for emotional significance."
+  },
+  {
+    "id": 69,
+    "statement": "Cultural norms shape emotional expressions through social interaction feedback."
+  },
+  {
+    "id": 70,
+    "statement": "Cultural norms shape emotional expression through social learning."
+  },
+  {
+    "id": 71,
+    "statement": "Biological, cultural, and social factors interact in moral development dynamics."
+  },
+  {
+    "id": 72,
+    "statement": "PFC calms down amygdala's emotional responses through top-down control."
+  },
+  {
+    "id": 73,
+    "statement": "Cognitive appraisal influences emotional responses through subconscious situational evaluation."
+  },
+  {
+    "id": 74,
+    "statement": "Moral development emerges from biological-cultural interactions."
+  },
+  {
+    "id": 75,
+    "statement": "Biological and cultural factors interact to shape moral development."
+  },
+  {
+    "id": 76,
+    "statement": "Dependability encompasses trust, accountability, and reliability across domains."
+  },
+  {
+    "id": 77,
+    "statement": "Cognitive appraisal influences moral judgments through nuanced social understanding."
+  },
+  {
+    "id": 78,
+    "statement": "PFC facilitates Amygdala's emotional processing through neural interactions."
+  },
+  {
+    "id": 79,
+    "statement": "Amygdala primarily processes fear, anxiety, and threat detection emotions"
+  },
+  {
+    "id": 80,
+    "statement": "Dynamics of amygdala-ACC-PFC interactions shape emotional processing."
+  },
+  {
+    "id": 81,
+    "statement": "Cognitive appraisal shapes emotional responses through interpretation."
+  },
+  {
+    "id": 82,
+    "statement": "Biological, cultural and social factors influence moral development."
+  },
+  {
+    "id": 83,
+    "statement": "Cultural norms shape moral development through social learning and conditioning."
+  },
+  {
+    "id": 84,
+    "statement": "Moral development emerges from dynamic biological-cultural-social interactions shaping values."
+  },
+  {
+    "id": 85,
+    "statement": "Cognitive appraisal influences emotional responses through situational evaluation."
+  },
+  {
+    "id": 86,
+    "statement": "Amygdala's emotional responses influenced by top-down PFC processing."
+  },
+  {
+    "id": 87,
+    "statement": "Neural binding integrates brain regions' activity patterns for moral judgments."
+  },
+  {
+    "id": 88,
+    "statement": "Cognitive appraisal influences amygdala's emotional responses through neural connections."
+  },
+  {
+    "id": 89,
+    "statement": "Cultural norms and biology influence each other reciprocally."
+  },
+  {
+    "id": 90,
+    "statement": "PFC regulates amygdala's emotional responses through inhibitory synaptic connections."
+  },
+  {
+    "id": 91,
+    "statement": "Cultural norms shape moral development through social learning processes."
+  },
+  {
+    "id": 92,
+    "statement": "Beliefs shape moral judgments through subconscious emotional connections."
+  },
+  {
+    "id": 93,
+    "statement": "Honesty is generally best policy, with exceptions considered."
+  },
+  {
+    "id": 94,
+    "statement": "Cognitive appraisal impacts emotional responses through situational interpretation."
+  },
+  {
+    "id": 95,
+    "statement": "Cognitive appraisal is the mental process of situation evaluation."
+  },
+  {
+    "id": 96,
+    "statement": "Implicit learning shapes emotional expressions through social interactions."
+  },
+  {
+    "id": 97,
+    "statement": "Biological and cultural factors interact in moral development dynamics."
+  },
+  {
+    "id": 98,
+    "statement": "Neural binding integrates emotional and cognitive information for moral judgments."
+  },
+  {
+    "id": 99,
+    "statement": "Honesty is the foundation of trust, but complexity arises."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 49,
+  "statement": "Emotions influence moral judgments through automatic, outside of conscious awareness."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 49,
+  "statement": "Emotions influence moral judgments through automatic, outside of conscious awareness."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the item: { "id": 49, "statement": "Emotions influence moral judgments through automatic, outside of conscious awareness." }. I'm a bit uncertain about this item.
+
+Things I'm Uncertain About This Item:
+
+* I'm not entirely sure how emotions can influence moral judgments outside of conscious awareness. Can we consider the role of rational thinking in moral decision-making? Do emotions always play a role, even when we're not consciously aware of them?
+
+Specific Clarifying Question:
+
+* Can you provide some examples of situations where emotions might influence moral judgments without conscious awareness? For instance, are we talking about situations of deep emotional attachment or perhaps unconscious biases?
+
+Your thoughts?

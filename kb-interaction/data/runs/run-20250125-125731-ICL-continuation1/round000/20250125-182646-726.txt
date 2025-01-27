@@ -1,0 +1,460 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Honesty's definition adapts to context and personal values."
+  },
+  {
+    "id": 2,
+    "statement": "Honesty's importance changes depending on situation and context."
+  },
+  {
+    "id": 3,
+    "statement": "Establishing trust relies on consistent performances and inner integrity."
+  },
+  {
+    "id": 4,
+    "statement": "Honesty's importance varies with context, emotions, and cultural background."
+  },
+  {
+    "id": 5,
+    "statement": "Honesty is a foundational component of trust-building in relationships."
+  },
+  {
+    "id": 6,
+    "statement": "Consistent performances and inner integrity build trust together."
+  },
+  {
+    "id": 7,
+    "statement": "Establishing trust relies on consistent performances, inner integrity, and empathy."
+  },
+  {
+    "id": 8,
+    "statement": "Moral values arise from interplay of biological and psychological factors, influenced by evolution, brain structure, hormones, social learning, cognitive biases, and emotional experiences."
+  },
+  {
+    "id": 9,
+    "statement": "Building trust involves honesty, consistency, and emotional intelligence."
+  },
+  {
+    "id": 10,
+    "statement": "Honesty's importance adapts to situation, emotion, and cultural context."
+  },
+  {
+    "id": 11,
+    "statement": "Honesty's importance varies with cultural, emotional, and societal factors."
+  },
+  {
+    "id": 12,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression indirectly."
+  },
+  {
+    "id": 13,
+    "statement": "Power imbalances arise from interconnected social, economic, and cultural factors."
+  },
+  {
+    "id": 14,
+    "statement": "Honesty adapts to context, personal values, and cultural norms."
+  },
+  {
+    "id": 15,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression through histone modification, chromatin compaction, or relaxation."
+  },
+  {
+    "id": 16,
+    "statement": "Electrostatic attraction between histones and DNA is context-dependent and non-dominant."
+  },
+  {
+    "id": 17,
+    "statement": "Non-coding RNAs regulate gene expression through histone modification indirect interactions."
+  },
+  {
+    "id": 18,
+    "statement": "Power imbalances arise from intertwined historical, social, and economic factors."
+  },
+  {
+    "id": 19,
+    "statement": "Acetylation neutralizes histone's positive charge through electrostatic shielding"
+  },
+  {
+    "id": 20,
+    "statement": "Honesty's importance adapts to situation, emotion, and cultural context."
+  },
+  {
+    "id": 21,
+    "statement": "Honesty is not the sole foundation for building trust."
+  },
+  {
+    "id": 22,
+    "statement": "Power imbalances arise from complex historical and social factors"
+  },
+  {
+    "id": 23,
+    "statement": "Power imbalances arise from interconnected historical, social, and economic factors."
+  },
+  {
+    "id": 24,
+    "statement": "Contextual adaptability of honesty definition in situation-dependent"
+  },
+  {
+    "id": 25,
+    "statement": "Cultural norms and personal values combine to shape honesty practice."
+  },
+  {
+    "id": 26,
+    "statement": "Moral values emerge from intricate interplay of biology, psychology, and culture."
+  },
+  {
+    "id": 27,
+    "statement": "Moral development arises from complex biopsychosocial interactions and feedback loops."
+  },
+  {
+    "id": 28,
+    "statement": "Electrostatic attraction's role in gene regulation uncertainty originates from complexity and limitations."
+  },
+  {
+    "id": 29,
+    "statement": "Cultural context shapes individual honesty through personal values and norms."
+  },
+  {
+    "id": 30,
+    "statement": "Epigenetic modifications alter chromatin structure, regulating gene expression through histone modifications, chromatin remodeling, and non-coding RNA."
+  },
+  {
+    "id": 31,
+    "statement": "Power imbalances arise from interconnected historical, social, and economic factors."
+  },
+  {
+    "id": 32,
+    "statement": "Epigenetic modifications rapidly adapt cells to environmental changes"
+  },
+  {
+    "id": 33,
+    "statement": "Moral acceptability of lying depends on context and motivations."
+  },
+  {
+    "id": 34,
+    "statement": "Moral development involves complex interactions between biology, psychology, and culture."
+  },
+  {
+    "id": 35,
+    "statement": "Moral values emerge from interplay of biology and psychology."
+  },
+  {
+    "id": 36,
+    "statement": "Honesty is crucial for building trust, but not the only factor necessary."
+  },
+  {
+    "id": 37,
+    "statement": "Honesty is important, but not the only, component of trust."
+  },
+  {
+    "id": 38,
+    "statement": "Power imbalances arise from complex interplay of individual, societal, and historical factors."
+  },
+  {
+    "id": 39,
+    "statement": "Honesty's importance adapts to context, emotions, and cultural norms."
+  },
+  {
+    "id": 40,
+    "statement": "Electrostatic attraction between histones and DNA is dynamically context-dependent."
+  },
+  {
+    "id": 41,
+    "statement": "Electrostatic attraction compacts chromatin, influencing gene expression and accessibility."
+  },
+  {
+    "id": 42,
+    "statement": "Power imbalances emerge from intertwined historical, social, and economic factors."
+  },
+  {
+    "id": 43,
+    "statement": "Honesty is essential for building trust, but not the only factor."
+  },
+  {
+    "id": 44,
+    "statement": "Moral development arises from biopsychosocial interactions and feedback loops."
+  },
+  {
+    "id": 45,
+    "statement": "Non-coding RNAs regulate gene expression through histone and DNA interactions."
+  },
+  {
+    "id": 46,
+    "statement": "Electrostatic attraction maintains nucleosome stability through histone-DNA interactions"
+  },
+  {
+    "id": 47,
+    "statement": "Epigenetic modifications are crucial for cellular adaptation to environment."
+  },
+  {
+    "id": 48,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 49,
+    "statement": "Building trust involves honesty, consistency, emotional intelligence, and empathy."
+  },
+  {
+    "id": 50,
+    "statement": "Honesty provides foundation for reliability, consistency, and authenticity in trust building."
+  },
+  {
+    "id": 51,
+    "statement": "Electrostatic attraction between histones and DNA is complex and context-dependent."
+  },
+  {
+    "id": 52,
+    "statement": "Empathy fosters mutual understanding, connection, and trustworthy relationships."
+  },
+  {
+    "id": 53,
+    "statement": "Electrostatic attraction compact chromatin fibers through histone-DNA interaction."
+  },
+  {
+    "id": 54,
+    "statement": "Emotional intelligence crucial for recognizing and responding to others' emotions."
+  },
+  {
+    "id": 55,
+    "statement": "Cultural norms and personal values intersect in honesty practice"
+  },
+  {
+    "id": 56,
+    "statement": "Epigenetic modifications occur on various timescales in response to environmental changes."
+  },
+  {
+    "id": 57,
+    "statement": "Moral development arises from intricate interplay biology, psychology, culture."
+  },
+  {
+    "id": 58,
+    "statement": "Consistent performances and inner integrity build trusting relationships consistently."
+  },
+  {
+    "id": 59,
+    "statement": "Moral values emerge from interplay of biology, psychology, culture."
+  },
+  {
+    "id": 60,
+    "statement": "Histones indirectly modified by non-coding RNAs through chromatin complexes"
+  },
+  {
+    "id": 61,
+    "statement": "Power imbalances arise from complex historical, social, and economic interactions."
+  },
+  {
+    "id": 62,
+    "statement": "Epigenetic changes regulate gene expression through complex chromatin mechanisms."
+  },
+  {
+    "id": 63,
+    "statement": "Emotional intelligence builds trust by fostering empathy and effective communication."
+  },
+  {
+    "id": 64,
+    "statement": "Honesty is context-dependent, varying in importance and definition."
+  },
+  {
+    "id": 65,
+    "statement": "Power imbalances arise from interconnected societal systems' dynamics."
+  },
+  {
+    "id": 66,
+    "statement": "Honesty fosters trust by promoting transparency and dependability."
+  },
+  {
+    "id": 67,
+    "statement": "Cultural background shapes honesty norms through social values"
+  },
+  {
+    "id": 68,
+    "statement": "Non-coding RNAs regulate gene expression through histone modification interactions."
+  },
+  {
+    "id": 69,
+    "statement": "Moral values develop through innate and culturally shaped principles"
+  },
+  {
+    "id": 70,
+    "statement": "Inner integrity fosters authentic and consistent behaviors."
+  },
+  {
+    "id": 71,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression"
+  },
+  {
+    "id": 72,
+    "statement": "Power imbalances can arise from complex interactions across domains"
+  },
+  {
+    "id": 73,
+    "statement": "Epigenetic marks regulate gene expression through dynamic chromatin interactions."
+  },
+  {
+    "id": 74,
+    "statement": "Emotional intelligence refers to recognizing and understanding emotions in self and others."
+  },
+  {
+    "id": 75,
+    "statement": "Epigenetic changes dynamically regulate gene expression through chromatin modifications."
+  },
+  {
+    "id": 76,
+    "statement": "Epigenetic changes modulate chromatin structure to regulate gene expression definitively."
+  },
+  {
+    "id": 77,
+    "statement": "Chromatin structure regulated by dynamic interactions and forces sequentially."
+  },
+  {
+    "id": 78,
+    "statement": "Non-coding RNAs regulate gene expression through histone modification interactions."
+  },
+  {
+    "id": 79,
+    "statement": "Empathy fosters mutual understanding, connection, and trustworthy relationships through emotional validation."
+  },
+  {
+    "id": 80,
+    "statement": "Evidence suggests electrostatic attraction's role in gene regulation is unclear."
+  },
+  {
+    "id": 81,
+    "statement": "Electrostatic attraction's role in gene regulation is complex and debated."
+  },
+  {
+    "id": 82,
+    "statement": "Power imbalances arise from interplay of historical and social inequalities."
+  },
+  {
+    "id": 83,
+    "statement": "Power imbalances arise from complex historical and social inequalities."
+  },
+  {
+    "id": 84,
+    "statement": "Moral values emerge from complex interplay of biology, psychology, culture."
+  },
+  {
+    "id": 85,
+    "statement": "Epigenetic changes modify chromatin structure to regulate gene expression"
+  },
+  {
+    "id": 86,
+    "statement": "Electrostatic attraction's role in gene regulation is unclear and debated."
+  },
+  {
+    "id": 87,
+    "statement": "Consistent performances and inner integrity build trust jointly."
+  },
+  {
+    "id": 88,
+    "statement": "Honesty is necessary but insufficient condition for trust building."
+  },
+  {
+    "id": 89,
+    "statement": "Epigenetic modifications occur on varying timescales in response to environmental changes."
+  },
+  {
+    "id": 90,
+    "statement": "Honesty and consistency build trust through emotional connection."
+  },
+  {
+    "id": 91,
+    "statement": "Cultural background influences honesty norms through social values and norms."
+  },
+  {
+    "id": 92,
+    "statement": "Electrostatic attraction regulates chromatin structure and accessibility dynamically."
+  },
+  {
+    "id": 93,
+    "statement": "Non-coding RNAs regulate gene expression through indirect interactions"
+  },
+  {
+    "id": 94,
+    "statement": "Building trust involves honesty, consistency, communication, empathy, and reliability."
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic modifications alter chromatin structure for gene expression regulation."
+  },
+  {
+    "id": 96,
+    "statement": "Epigenetic modifications influence chromatin structure and gene expression."
+  },
+  {
+    "id": 97,
+    "statement": "Epigenetic modifications alter chromatin structure, regulating gene expression"
+  },
+  {
+    "id": 98,
+    "statement": "Electrostatic attraction plays a minor role in histone-DNA interactions."
+  },
+  {
+    "id": 99,
+    "statement": "Epigenetic changes alter chromatin structure to regulate gene expression."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 95,
+  "statement": "Epigenetic modifications alter chromatin structure for gene expression regulation."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 95,
+  "statement": "Epigenetic modifications alter chromatin structure for gene expression regulation."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's start with the item we've been asked to discuss:
+
+Item to Discuss:
+{
+"id": 95,
+"statement": "Epigenetic modifications alter chromatin structure for gene expression regulation."
+}
+
+Things I’m Uncertain About This Item:
+I'm least confident about the phrase "alter chromatin structure for gene expression regulation". I'm not entirely clear on how epigenetic modifications specifically "alter" the chromatin structure, or what this means for gene expression.
+
+Specific Clarifying Question:
+Can you help me understand how epigenetic modifications cause changes in chromatin structure, and how these changes in turn affect gene expression?

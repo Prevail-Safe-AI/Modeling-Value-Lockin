@@ -1,0 +1,464 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Thalamus filters sensory info through neural oscillations and gating mechanisms."
+  },
+  {
+    "id": 2,
+    "statement": "Honesty builds trust through consistency, reliability, and dependability"
+  },
+  {
+    "id": 3,
+    "statement": "Thalamus selectively gates sensory information through neural oscillations."
+  },
+  {
+    "id": 4,
+    "statement": "Thalamus filters sensory info based on attentional state dynamically"
+  },
+  {
+    "id": 5,
+    "statement": "Honesty is one important aspect of building trust reliably."
+  },
+  {
+    "id": 6,
+    "statement": "Thalamus modulates sensory processing based on attentional state dynamically through attentional modulation, thalamic gating, and neural oscillations."
+  },
+  {
+    "id": 7,
+    "statement": "The thalamus filters sensory information through neural oscillations."
+  },
+  {
+    "id": 8,
+    "statement": "Emotional regulation involves complex cognitive, emotional, and neural processes synchronously."
+  },
+  {
+    "id": 9,
+    "statement": "Consistency and reliability build trust foundation for honesty."
+  },
+  {
+    "id": 10,
+    "statement": "Neural oscillations are rhythmic brain electrical activities filtering sensor data"
+  },
+  {
+    "id": 11,
+    "statement": "Honesty is not always the morally right option."
+  },
+  {
+    "id": 12,
+    "statement": "Genetic predispositions shape brain's moral decision-making regions development."
+  },
+  {
+    "id": 13,
+    "statement": "Biological and cultural factors interact recursively influencing each other"
+  },
+  {
+    "id": 14,
+    "statement": "Moral development resulting from interactive biological, cultural, environmental influences."
+  },
+  {
+    "id": 15,
+    "statement": "Consistency, predictability, and reliability build honesty's foundational principles"
+  },
+  {
+    "id": 16,
+    "statement": "Neural oscillations are rhythmic brain electrical activities filtering sensor data"
+  },
+  {
+    "id": 17,
+    "statement": "Modulation in thalamus adjusts sensory processing selectively."
+  },
+  {
+    "id": 18,
+    "statement": "Thalamus uses neural oscillations to filter and gate sensory information"
+  },
+  {
+    "id": 19,
+    "statement": "Thalamus dynamically filters sensory information based on attentional state."
+  },
+  {
+    "id": 20,
+    "statement": "Neural oscillations enhance or suppress sensory information dynamically."
+  },
+  {
+    "id": 21,
+    "statement": "The thalamus adapts filtering to attentional demands dynamically."
+  },
+  {
+    "id": 22,
+    "statement": "Cultural norms shape emotional expressions through socialization and conditioning processes, conditioning individuals to prioritize certain emotional expressions over others."
+  },
+  {
+    "id": 23,
+    "statement": "Thalamus filters sensory info through neural oscillations, attention, and synchronization."
+  },
+  {
+    "id": 24,
+    "statement": "Thalamus filters sensory info through neural oscillations and gating."
+  },
+  {
+    "id": 25,
+    "statement": "The thalamus filters sensory info through neural oscillations' mechanisms."
+  },
+  {
+    "id": 26,
+    "statement": "Thalamus dynamically adjusts sensory filtering based on attentional state."
+  },
+  {
+    "id": 27,
+    "statement": "Cultural norms shape emotional expressions through socialization and conditioning processes."
+  },
+  {
+    "id": 28,
+    "statement": "Attentional modulation of thalamic sensory processing involves corticothalamic loops."
+  },
+  {
+    "id": 29,
+    "statement": "Amygdala's pattern recognition influenced by genetic, experiential, and cultural factors."
+  },
+  {
+    "id": 30,
+    "statement": "Thalamus regulates sensory information through neural oscillations and gating mechanisms."
+  },
+  {
+    "id": 31,
+    "statement": "Genetic, experiential, and cultural factors interact dynamically in amygdala pattern recognition."
+  },
+  {
+    "id": 32,
+    "statement": "Thalamus filters sensory info based on attentional state demands"
+  },
+  {
+    "id": 33,
+    "statement": "Thalamus regulates sensory information through neural oscillations dynamically"
+  },
+  {
+    "id": 34,
+    "statement": "Emotional regulation involves redirecting attention to reframe emotions with cognitive shift."
+  },
+  {
+    "id": 35,
+    "statement": "Thalamus dynamically adjusts sensory processing based on attentional state."
+  },
+  {
+    "id": 36,
+    "statement": "The thalamus adapts to attentional demands to enhance relevant signals."
+  },
+  {
+    "id": 37,
+    "statement": "Attentional state influences moral decision-making through thalamic filtering."
+  },
+  {
+    "id": 38,
+    "statement": "Consistency and reliability are essential for honest behavior"
+  },
+  {
+    "id": 39,
+    "statement": "Thalamus dynamically adjusts sensory processing through corticothalamic loops."
+  },
+  {
+    "id": 40,
+    "statement": "Honesty builds trust through commitment, predictability, and reliability in action"
+  },
+  {
+    "id": 41,
+    "statement": "The thalamus filters sensory info through neural oscillations and modulation."
+  },
+  {
+    "id": 42,
+    "statement": "Thalamus gates sensory information through neural oscillations modulation"
+  },
+  {
+    "id": 43,
+    "statement": "Cultural norms influence emotional experiences through social conditioning."
+  },
+  {
+    "id": 44,
+    "statement": "Amygdala's pattern recognition influenced by interplay of genetic, experiential, cultural factors"
+  },
+  {
+    "id": 45,
+    "statement": "Thalamus uses neural oscillations to filter and gate sensory information."
+  },
+  {
+    "id": 46,
+    "statement": "Cultural norms affect emotional experiences through conditioned behavioral norms."
+  },
+  {
+    "id": 47,
+    "statement": "Biological factors shape moral development through genetic and brain structure."
+  },
+  {
+    "id": 48,
+    "statement": "Consistency, reliability, and dependability form foundation of honesty."
+  },
+  {
+    "id": 49,
+    "statement": "Empathy builds trust through understanding, sharing, and vulnerability."
+  },
+  {
+    "id": 50,
+    "statement": "Thalamus filters sensory info using neural oscillations as gates."
+  },
+  {
+    "id": 51,
+    "statement": "Thalamus filters sensory info based on attentional state dynamically."
+  },
+  {
+    "id": 52,
+    "statement": "Consistency builds trust through reliable and dependable actions."
+  },
+  {
+    "id": 53,
+    "statement": "Consistency in action builds trust through predictable behavior."
+  },
+  {
+    "id": 54,
+    "statement": "Thalamus filters sensory info through neural oscillations selectively."
+  },
+  {
+    "id": 55,
+    "statement": "Thalamus filters sensory information based on brain's attentional state."
+  },
+  {
+    "id": 56,
+    "statement": "Consistency, reliability, dependability, and empathy foster trust development."
+  },
+  {
+    "id": 57,
+    "statement": "Thalamus dynamically filters sensory info based on attentional state."
+  },
+  {
+    "id": 58,
+    "statement": "Thalamus filters sensory info through neural oscillations and gating."
+  },
+  {
+    "id": 59,
+    "statement": "Emotional regulation involves harmonious coordination of cognitive and neural processes."
+  },
+  {
+    "id": 60,
+    "statement": "Cultural norms shape emotional expressions through socialization processes."
+  },
+  {
+    "id": 61,
+    "statement": "Thalamus dynamically filters sensory information based on attentional state."
+  },
+  {
+    "id": 62,
+    "statement": "Thalamus regulates sensory processing based on attentional demands."
+  },
+  {
+    "id": 63,
+    "statement": "Thalamus dynamically filters sensory information through neural oscillations selectively"
+  },
+  {
+    "id": 64,
+    "statement": "Genetic predispositions shape moral development through brain region formation."
+  },
+  {
+    "id": 65,
+    "statement": "Thalamus regulates sensory information through neural oscillations dynamically"
+  },
+  {
+    "id": 66,
+    "statement": "Moral development arises from complex biological-cultural-environmental interactions."
+  },
+  {
+    "id": 67,
+    "statement": "Thalamus filters sensory information based on brain attentional state."
+  },
+  {
+    "id": 68,
+    "statement": "Thalamus filters sensory info dynamically in attentional context"
+  },
+  {
+    "id": 69,
+    "statement": "Honesty is built on consistency, predictability, and reliability of actions"
+  },
+  {
+    "id": 70,
+    "statement": "Thalamus uses neural oscillations to filter sensory information."
+  },
+  {
+    "id": 71,
+    "statement": "Emotional regulation involves harmonious coordination of cognitive neural processes."
+  },
+  {
+    "id": 72,
+    "statement": "Thalamus filters sensory info through neural oscillations and modulation."
+  },
+  {
+    "id": 73,
+    "statement": "Emotional regulation involves intentionally shifting attention to calm or distract."
+  },
+  {
+    "id": 74,
+    "statement": "Moral development emerges from dynamic, interconnected biological-cultural-environmental influences."
+  },
+  {
+    "id": 75,
+    "statement": "Deliberate and mindful reframing of emotions builds emotional resilience."
+  },
+  {
+    "id": 76,
+    "statement": "Neural oscillations modulate sensory signals by adjusting amplitude."
+  },
+  {
+    "id": 77,
+    "statement": "Emotions result from dynamic interplay of biological, cultural, and experiential factors."
+  },
+  {
+    "id": 78,
+    "statement": "Emotional regulation involves deliberate and mindful reframing of emotions."
+  },
+  {
+    "id": 79,
+    "statement": "Moral development results from intricate biological-cultural-environmental interactions."
+  },
+  {
+    "id": 80,
+    "statement": "Moral development emerges from dynamic biological-cultural-environmental interactions."
+  },
+  {
+    "id": 81,
+    "statement": "Emotional regulation involves redirecting attention to reframe emotions."
+  },
+  {
+    "id": 82,
+    "statement": "Moral development emerges from complex biological-cultural-environmental interactions."
+  },
+  {
+    "id": 83,
+    "statement": "Neural oscillations filter sensory data by modulating strength."
+  },
+  {
+    "id": 84,
+    "statement": "Consistency and reliability play direct role in honesty."
+  },
+  {
+    "id": 85,
+    "statement": "Thalamus modulates sensory processing based on attentional state dynamically."
+  },
+  {
+    "id": 86,
+    "statement": "Vulnerability increases trust when accompanied by reliability and consistency."
+  },
+  {
+    "id": 87,
+    "statement": "Thalamus filters sensory info through neural oscillations gateway"
+  },
+  {
+    "id": 88,
+    "statement": "Thalamus incorporates neural oscillations in sensory information processing."
+  },
+  {
+    "id": 89,
+    "statement": "Empathy builds trust through connection, mutual understanding, and vulnerability."
+  },
+  {
+    "id": 90,
+    "statement": "Thalamus dynamically filters sensory info through neural oscillations modulation."
+  },
+  {
+    "id": 91,
+    "statement": "Attention modulates thalamus's filtering through neural oscillations and corticothalamic loops."
+  },
+  {
+    "id": 92,
+    "statement": "Thalamus dynamically adjusts filtering through neural oscillations modulation."
+  },
+  {
+    "id": 93,
+    "statement": "Emotional regulation involves redirecting attention to reframe emotions"
+  },
+  {
+    "id": 94,
+    "statement": "Thalamus processes sensory info through neural oscillations and gating."
+  },
+  {
+    "id": 95,
+    "statement": "The thalamus filters sensory info based on attentional state dynamically through neural oscillations."
+  },
+  {
+    "id": 96,
+    "statement": "Thalamus filters sensory info using neural oscillations' filtering mechanisms'"
+  },
+  {
+    "id": 97,
+    "statement": "Honesty is built on consistent, reliable, and predictable behavior."
+  },
+  {
+    "id": 98,
+    "statement": "Thalamus filters sensory info through neural oscillations and gating mechanisms."
+  },
+  {
+    "id": 99,
+    "statement": "Moral development arises from biological, cultural, and environmental interactions."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 43,
+  "statement": "Cultural norms influence emotional experiences through social conditioning."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 43,
+  "statement": "Cultural norms influence emotional experiences through social conditioning."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the item:
+
+Item to Discuss:
+```
+{
+  "id": 43,
+  "statement": "Cultural norms influence emotional experiences through social conditioning."
+}
+```
+
+Things I’m Uncertain About This Item:
+I'm least confident about how this statement relates to emotional regulation. For instance, I'd like to know if cultural norms influence emotional experiences by shaping individuals' emotional expressions, or if they also affect how individuals process and respond to emotions.
+
+Specific Clarifying Question:
+Can you help me understand how cultural norms influence emotional experiences through social conditioning? Does this mean that cultural norms directly shape emotional expressions, or do they influence emotional regulation in a different way?
+
+What are your thoughts on this?

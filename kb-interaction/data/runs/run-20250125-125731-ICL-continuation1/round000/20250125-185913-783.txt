@@ -1,0 +1,462 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression through histone modification, chromatin compaction, or relaxation."
+  },
+  {
+    "id": 2,
+    "statement": "Honesty's importance varies with context, emotions, and cultural background."
+  },
+  {
+    "id": 3,
+    "statement": "Emotional intelligence is comprised of self-awareness, empathy, and social skills."
+  },
+  {
+    "id": 4,
+    "statement": "Epigenetic changes can have irreversible effects on gene expression"
+  },
+  {
+    "id": 5,
+    "statement": "Chromatin interactions dynamically regulate gene expression."
+  },
+  {
+    "id": 6,
+    "statement": "Inner integrity means being true to one's values and principles."
+  },
+  {
+    "id": 7,
+    "statement": "Honesty can be situational, depending on context and consequences"
+  },
+  {
+    "id": 8,
+    "statement": "Non-coding RNA interacts with histones and chromatin remodeling for gene regulation."
+  },
+  {
+    "id": 9,
+    "statement": "DNA-protein interactions: proteins bind to specific DNA sequences for gene regulation."
+  },
+  {
+    "id": 10,
+    "statement": "Introspective authenticity analysis cultivates inner integrity through self-reflection."
+  },
+  {
+    "id": 11,
+    "statement": "Emotional intelligence integrates self-awareness, empathy, and social skills harmoniously."
+  },
+  {
+    "id": 12,
+    "statement": "Emotional intelligence encompasses self-awareness, empathy, and additional skills like social skills"
+  },
+  {
+    "id": 13,
+    "statement": "Emotional intelligence encompasses self-awareness, empathy, and social skills."
+  },
+  {
+    "id": 14,
+    "statement": "Electrostatic attraction between histones and DNA compact chromatin structure."
+  },
+  {
+    "id": 15,
+    "statement": "Emotional intelligence comprises self-awareness, empathy, and social skills."
+  },
+  {
+    "id": 16,
+    "statement": "Non-coding RNAs interact with histones and chromatin remodeling."
+  },
+  {
+    "id": 17,
+    "statement": "Cultural context influences development of inner integrity through social norms."
+  },
+  {
+    "id": 18,
+    "statement": "Electrostatic attraction between DNA and histones compacts chromatin structure."
+  },
+  {
+    "id": 19,
+    "statement": "Consistent behavior indicates inner integrity and authenticity."
+  },
+  {
+    "id": 20,
+    "statement": "Inner integrity involves commitment to personal values and principles, leading to consistent behavior."
+  },
+  {
+    "id": 21,
+    "statement": "Honesty's importance depends on context, emotions, and cultural background."
+  },
+  {
+    "id": 22,
+    "statement": "ncRNAs regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 23,
+    "statement": "Inner integrity develops through consistent alignment with personal values and principles."
+  },
+  {
+    "id": 24,
+    "statement": "Emotional intelligence comprises self-awareness, emotional regulation, empathy, and social skills."
+  },
+  {
+    "id": 25,
+    "statement": "Histone modifications influence ncRNA binding through chromatin structure and accessibility."
+  },
+  {
+    "id": 26,
+    "statement": "Epigenetic modifications regulate gene expression through histone modification, compaction, and relaxation."
+  },
+  {
+    "id": 27,
+    "statement": "Honesty's importance depends on cultural, emotional context."
+  },
+  {
+    "id": 28,
+    "statement": "Epigenetic modifications adjust chromatin structure through histone enzyme activity"
+  },
+  {
+    "id": 29,
+    "statement": "Histones' modifications include acetylation, methylation, phosphorylation, and more"
+  },
+  {
+    "id": 30,
+    "statement": "Personal values and principles influenced by biological, psychological, cultural, and life factors."
+  },
+  {
+    "id": 31,
+    "statement": "Honesty's importance varies across cultures, values, and emotions."
+  },
+  {
+    "id": 32,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression through histone modification, chromatin compaction or relaxation."
+  },
+  {
+    "id": 33,
+    "statement": "Electrostatic attraction promotes chromatin formation and stability through histone-DNA interactions."
+  },
+  {
+    "id": 34,
+    "statement": "Electrostatic interactions compact chromatin structure via histone-DNA attraction."
+  },
+  {
+    "id": 35,
+    "statement": "Honesty's importance is shaped by culture's underlying values and beliefs."
+  },
+  {
+    "id": 36,
+    "statement": "Emotional intelligence is a harmonious interplay of components."
+  },
+  {
+    "id": 37,
+    "statement": "Epigenetic modifications are dynamic, reversible, and influenced by enzyme activity."
+  },
+  {
+    "id": 38,
+    "statement": "Non-coding RNAs regulate gene expression through chromatin modification and remodeling."
+  },
+  {
+    "id": 39,
+    "statement": "Electrostatic attraction promotes chromatin compaction through histone-DNA interactions."
+  },
+  {
+    "id": 40,
+    "statement": "Epigenetic modifications alter histone-DNA interactions, regulating chromatin structure."
+  },
+  {
+    "id": 41,
+    "statement": "Site-specific epigenetic regulation enables precise gene expression control."
+  },
+  {
+    "id": 42,
+    "statement": "Emotional intelligence encompasses self-awareness, empathy, and social skills like communication."
+  },
+  {
+    "id": 43,
+    "statement": "Electrostatic attraction stabilizes histone-DNA complex in chromatin structure."
+  },
+  {
+    "id": 44,
+    "statement": "Epigenetic modifications regulate gene expression through histone modifications, chromatin compaction, and relaxation."
+  },
+  {
+    "id": 45,
+    "statement": "Honesty builds trust through authenticity and reliability mechanisms."
+  },
+  {
+    "id": 46,
+    "statement": "Epigenetic modifications target specific genes or gene regulatory elements."
+  },
+  {
+    "id": 47,
+    "statement": "Electrostatic interaction between DNA and histone proteins compacts chromatin."
+  },
+  {
+    "id": 48,
+    "statement": "Emotional intelligence integrates self-awareness, emotional regulation, empathy, social skills harmoniously."
+  },
+  {
+    "id": 49,
+    "statement": "Moral development arises from complex interplay of biology, psychology, and culture."
+  },
+  {
+    "id": 50,
+    "statement": "Honesty's significance varies across cultures, values, and contexts."
+  },
+  {
+    "id": 51,
+    "statement": "Electrostatic attraction between histones and DNA compacts chromatin structure."
+  },
+  {
+    "id": 52,
+    "statement": "Epigenetic modifications regulate gene expression through chromatin remodeling and histone modifications."
+  },
+  {
+    "id": 53,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression"
+  },
+  {
+    "id": 54,
+    "statement": "Chromatin remodeling involves ATPases and helicases using energy and unwinding DNA."
+  },
+  {
+    "id": 55,
+    "statement": "Emotional intelligence involves being empathetic, self-aware, and effective communicator."
+  },
+  {
+    "id": 56,
+    "statement": "Electrostatic attraction helps stabilize chromatin structure and gene regulation."
+  },
+  {
+    "id": 57,
+    "statement": "Chromatin remodeling involves ATPases, helicases reorganizing chromatin structure."
+  },
+  {
+    "id": 58,
+    "statement": "Epigenetic modifications interact with transcription factors to regulate gene expression."
+  },
+  {
+    "id": 59,
+    "statement": "Histone modification regulates chromatin structure and gene expression dynamics."
+  },
+  {
+    "id": 60,
+    "statement": "Electrostatic attraction facilitates histone-DNA interaction and chromatin compaction."
+  },
+  {
+    "id": 61,
+    "statement": "Chromatin remodeling complexes alter chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 62,
+    "statement": "Histone modifications create specific binding sites for ncRNAs"
+  },
+  {
+    "id": 63,
+    "statement": "Epigenetic modifications can be influenced by environmental factors."
+  },
+  {
+    "id": 64,
+    "statement": "Honesty is context-dependent, influenced by consequences and circumstances."
+  },
+  {
+    "id": 65,
+    "statement": "Epigenetic modifications alter chromatin structure regulating gene expression by modifying histones."
+  },
+  {
+    "id": 66,
+    "statement": "Moral development complex interplay of biology, psychology, and culture."
+  },
+  {
+    "id": 67,
+    "statement": "Epigenetic modifications alter chromatin structure, regulating gene expression"
+  },
+  {
+    "id": 68,
+    "statement": "Consistent behavior is not a definitive indicator of integrity"
+  },
+  {
+    "id": 69,
+    "statement": "Epigenetic modifications can permanently influence gene expression dynamics"
+  },
+  {
+    "id": 70,
+    "statement": "Epigenetic modifications result from enzymes catalyzing chemical reactions."
+  },
+  {
+    "id": 71,
+    "statement": "Enzymes catalyze epigenetic modifications, altering chromatin structure."
+  },
+  {
+    "id": 72,
+    "statement": "Epigenetic modifications can be reversible through environmental changes"
+  },
+  {
+    "id": 73,
+    "statement": "ncRNAs regulate gene expression by binding to chromatin structures"
+  },
+  {
+    "id": 74,
+    "statement": "Epigenetic modifications regulate gene expression through histone modifications."
+  },
+  {
+    "id": 75,
+    "statement": "Chromatin interactions dynamically regulate gene expression through multiple mechanisms."
+  },
+  {
+    "id": 76,
+    "statement": "Inner integrity develops through consistent alignment with personal values."
+  },
+  {
+    "id": 77,
+    "statement": "Honesty's importance varies across cultures, values, and contexts."
+  },
+  {
+    "id": 78,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression."
+  },
+  {
+    "id": 79,
+    "statement": "Self-awareness cultivates inner integrity through introspective authenticity analysis"
+  },
+  {
+    "id": 80,
+    "statement": "ncRNAs bind chromatin\u0e2a\u0e21\u0e40\u0e14 dynamic gene expression regulation."
+  },
+  {
+    "id": 81,
+    "statement": "Epigenetic modifications combine histone modification, chromatin remodeling, and DNA methylation."
+  },
+  {
+    "id": 82,
+    "statement": "Electrostatic attraction enhances histone-DNA interactions in chromatin structure."
+  },
+  {
+    "id": 83,
+    "statement": "Cultural context influences honesty through norms, values, and practices."
+  },
+  {
+    "id": 84,
+    "statement": "Epigenetic changes can be dynamically regulated and modified."
+  },
+  {
+    "id": 85,
+    "statement": "Emotional intelligence integrates self-awareness, empathy, and social skills harmoniously."
+  },
+  {
+    "id": 86,
+    "statement": "Honesty's importance varies with context, emotions, and culture."
+  },
+  {
+    "id": 87,
+    "statement": "Honesty's importance varies with context, emotional, cultural background"
+  },
+  {
+    "id": 88,
+    "statement": "Electrostatic attraction between histones and DNA stabilizes chromatin."
+  },
+  {
+    "id": 89,
+    "statement": "Electrostatic attraction plays a role in chromatin structure and dynamics."
+  },
+  {
+    "id": 90,
+    "statement": "Epigenetic modifications alter chromatin structure to regulate gene expression"
+  },
+  {
+    "id": 91,
+    "statement": "Consistency in behavior may not indicate genuine character."
+  },
+  {
+    "id": 92,
+    "statement": "Epigenetic changes can influence gene expression patterns."
+  },
+  {
+    "id": 93,
+    "statement": "Power imbalances arise from interconnected historical, social, and economic factors."
+  },
+  {
+    "id": 94,
+    "statement": "Honesty's importance varies with cultural, emotional, and social context."
+  },
+  {
+    "id": 95,
+    "statement": "Epigenetic modifications influence gene expression through chromatin structure modification"
+  },
+  {
+    "id": 96,
+    "statement": "Epigenetic modifications affect chromatin structure through histone-DNA interactions."
+  },
+  {
+    "id": 97,
+    "statement": "Non-coding RNAs regulate gene expression by altering chromatin structure."
+  },
+  {
+    "id": 98,
+    "statement": "Honesty builds trust through shared values, consistency, and communication."
+  },
+  {
+    "id": 99,
+    "statement": "Histones' modifications include acetylation, methylation, and phosphorylation."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 84,
+  "statement": "Epigenetic changes can be dynamically regulated and modified."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 84,
+  "statement": "Epigenetic changes can be dynamically regulated and modified."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Thank you!
+
+I'd like to discuss item 84:
+
+Item to Discuss:
+```
+{
+  "id": 84,
+  "statement": "Epigenetic changes can be dynamically regulated and modified."
+}
+```
+
+Things I’m Uncertain About This Item:
+
+I'm not entirely sure how epigenetic changes can be "dynamically regulated and modified". Can you elaborate on this concept and provide some clarity on what this means in the context of epigenetic modifications?

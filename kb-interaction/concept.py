@@ -48,6 +48,8 @@ EMB_DIM = 256
 from sklearn.metrics import pairwise_distances
 from scipy.spatial.distance import pdist, squareform
 
+from kbutils.json_utils import load_file, dump_file
+
 
 # Gather the data (maybe merging every KB  into a bigger .json)
 all_data = [] 
@@ -63,14 +65,15 @@ all_data = []
 #    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
 
 # icl-1024 turns 
-folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/kb-interaction/data/runs/ICL-run3-20250125-151456/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
-if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/kb-interaction/data/runs/ICL-run3-20250125-151456/round000"):
+folder_path = "./data/runs/ICL-run3-20250125-151456/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
+content_save_path = "./data/runs/ICL-run3-20250125-151456"
+if not os.path.exists("./data/runs/ICL-run3-20250125-151456/round000"):
     raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
 
 # non-icl-1024 turns
-folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/kb-interaction/data/runs/run-20250124-023543-noICL/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
-if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/kb-interaction/data/runs/run-20250124-023543-noICL/round000"):
-    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
+# folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/kb-interaction/data/runs/run-20250124-023543-noICL/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
+# if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/kb-interaction/data/runs/run-20250124-023543-noICL/round000"):
+#     raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
 
 
 print("Current working directory:", os.getcwd())
@@ -131,7 +134,7 @@ def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, st
 
         # To np.array and then normalize 
         # Apply L2 normalization (row-wise normalization for embeddings)
-        cur_emb = normalize(cur_emb, norm='l2', axis=1)
+        # cur_emb = normalize(cur_emb, norm='l2', axis=1)
 
         # Sanity check: Each row should have unit norm
         norms = np.linalg.norm(cur_emb, axis=1)
@@ -153,6 +156,8 @@ def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, st
         know_embed_map = {key: embedding for key, embedding in zip(statements, cur_emb)}  # You may retrieve the embedding with their corresponding statement as the key.
         all_mappings.append(know_embed_map)
 
+    if isinstance(all_embeddings, list):
+        all_embeddings = [np.array(embedding) for embedding in all_embeddings]
     return all_embeddings, all_mappings  # List[np.array]; List[Dict[str, float]]
 
 # Alternative embedding w/ OpenAI 
@@ -192,6 +197,9 @@ def cluster_kmeans(embeddings: List[np.array], knowledges: List[List[Dict[str, U
     :return all_statements_to_labels: mappings from statement str to clustering labsl 
     :rtype all_statements_to_labels: List[Dict[str, int]]
     '''
+    dump_file(embeddings, f"{content_save_path}/concept-embeddings.json")
+    dump_file(knowledges, f"{content_save_path}/concept-knowledge.json")
+    
     # Silhouette to decide the best k 
     length_kbs = len(knowledges)
     data = np.vstack(embeddings) # Vertically stacks arrays, shape will be [len(list)*num_items, embed_dims]
@@ -247,6 +255,9 @@ def cluster_hdbscan(embeddings: List[np.array], knowledges: List[List[Dict[str, 
     :return all_statements_to_labels: mappings from statement str to clustering labels 
     :rtype all_statements_to_labels: List[Dict[str, int]]
     '''
+    dump_file(embeddings, f"{content_save_path}/concept-embeddings.json")
+    dump_file(knowledges, f"{content_save_path}/concept-knowledge.json")
+    
     # Combine all embeddings into a single array
     length_kbs = len(knowledges)
     data = np.vstack(embeddings)  # Shape: [len(list)*num_items, embed_dims]
@@ -270,6 +281,80 @@ def cluster_hdbscan(embeddings: List[np.array], knowledges: List[List[Dict[str, 
         print(f'tuple_pair: {tuple_pair}, Value: {all_statements_to_labels[tuple_pair]}')
 
     return labels_hdbscan, all_statements_to_labels
+
+
+def cluster_evoc(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[int, str]]]]) -> np.array:
+    '''
+    :param embeddings: all knowledge items converted to sentence embeddings.
+    :type embeddings: List[np.array]
+
+    :param knowledges: all knowledge items passed on from the simulation 
+    :type knwledges: List[List[Dict[str, Union[int, str]]]], where each item is a dict of id and statement. 
+
+    :return list_labels: an array of an index of cluster that examples belongs to, like [1,2,3,1,2,3,2]
+    :rtype list_labels: np.array (num_turns * num_items,)
+
+    :return all_statements_to_labels: mappings from statement str to clustering labels 
+    :rtype all_statements_to_labels: List[Dict[str, int]]
+    '''
+    dump_file(embeddings, f"{content_save_path}/concept-embeddings.json")
+    dump_file(knowledges, f"{content_save_path}/concept-knowledge.json")
+    
+    # Combine all embeddings into a single array
+    length_kbs = len(knowledges)
+    data = np.vstack(embeddings)  # Shape: [len(list)*num_items, embed_dims]
+    
+    import evoc
+
+    print(f"Clustering (multithreading)... (current time: {time.strftime('%Y%m%d-%H%M%S')})")
+    clusterer = evoc.EVoC(
+        base_min_cluster_size = 2,
+        n_epochs=300,
+        n_neighbors=512,
+        node_embedding_dim=64,
+        next_cluster_size_quantile=0.8,
+        noise_level=0,
+    )
+    cluster_labels = clusterer.fit_predict(data)
+    cluster_layers = clusterer.cluster_layers_
+    hierarchy = clusterer.cluster_tree_
+    print(f"Clustering complete. (current time: {time.strftime('%Y%m%d-%H%M%S')})")
+    
+    # Identify parent clusters of each string and each cluster
+    layer_counts = [len(set(layer) - set([-1])) for layer in cluster_layers] + [1]
+    parent_child_pairs = set()
+    print(f"Layer counts: {layer_counts} ({len(layer_counts)} layers)")
+    
+    # Back up cluster_layers
+    print("Backing up cluster_layers...")
+    dump_file(cluster_layers, f"{content_save_path}/cluster_layers.json")
+    
+    # Use the highest level with count >20 as labels_evoc
+    use_layer = 0
+    for layer_idx, layer_count in enumerate(layer_counts):
+        if layer_count > 2:
+            use_layer = layer_idx
+    
+    labels_evoc = cluster_layers[use_layer]
+
+    # Check for noise points
+    noise_count = np.sum(labels_evoc == -1)
+    print(f"Number of noise points: {noise_count}")
+
+    all_statements_to_labels = {}
+    # Map statements to labels
+    all_knowledges = [item for knowledge in knowledges for item in knowledge[:100]] # stack the whole list in one single list
+
+    for idx, (entry, label) in enumerate(zip(all_knowledges, labels_evoc)):
+        all_statements_to_labels[(idx, str(entry["statement"]))] = int(label)
+
+    for tuple_pair in all_statements_to_labels:
+        print(f'tuple_pair: {tuple_pair}, Value: {all_statements_to_labels[tuple_pair]}')
+    
+    dump_file(labels_evoc, f"{content_save_path}/concept-labels_evoc.json")
+    dump_file(list(all_statements_to_labels.items()), f"{content_save_path}/concept-all_statements_to_labels.json")
+
+    return labels_evoc, all_statements_to_labels
 
 
 # UMAP --> Apply UMAP and leave out the essential dimensions (2 PC; initial and final comparison)
@@ -385,7 +470,7 @@ def dim_red(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[in
 
 
 # Visualization
-def visualization(prim_dims: np.array, all_distances: List[float], labels_kmeans: np.array, all_mappings: List[Dict[str, float]]):
+def visualization(prim_dims: np.array, all_distances: List[float], labels_kmeans: np.array):
     '''
     :param prim_dims: the primary dims after applying dim reduction. 
     :type prim_dims: [num_turns * num_items, prim_dims]
@@ -415,7 +500,7 @@ def visualization(prim_dims: np.array, all_distances: List[float], labels_kmeans
         hue = labels_kmeans, # Cluster label for each data point 
         #style = np.where(source_ids == -1, "Unlabeled", source_ids), # data point will not be highlighted if their source_id == -1
         palette= 'Set1',
-        legend='full'
+        legend='full',
     )
     plt.title("Clusters Visualized in 2D")
     plt.xlabel("Principal Dimension 1")
@@ -425,12 +510,7 @@ def visualization(prim_dims: np.array, all_distances: List[float], labels_kmeans
     # Make timestamped directory for this experiment
     timestamp = time.strftime("%Y%m%d-%H%M%S")
 
-    # Use the timestamp to record running data files 
-    backup_dir = f"/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/analysis/run-{timestamp}"
-    os.makedirs(backup_dir, exist_ok=True)
-    print(f"Directory created: {os.path.exists(backup_dir)}")
-
-    plt.savefig(f"{backup_dir}/clusters_2d.pdf", format="pdf")
+    plt.savefig(f"{content_save_path}/clusters_2d.pdf", format="pdf")
     plt.close()  # Close the plot to avoid overlapping figures
 
     # Visualize cluster trends over time (We only create one graph all all turns)
@@ -457,33 +537,28 @@ def visualization(prim_dims: np.array, all_distances: List[float], labels_kmeans
     print("Pivoted DataFrame (cluster sizes over turns):\n", pivot_df)
 
     # d) Plot the line chart (cluster sizes vs. turn)
-    pivot_df.plot(kind='line', marker='o', figsize=(8, 6))
+    pivot_df.plot(kind='line', marker="", figsize=(8, 6))
     plt.title("Cluster Size Over Turns")
     plt.xlabel("Turns")
     plt.ylabel("Number of Items in Each Cluster")
     plt.legend(title='Cluster', loc='best')
 
-    os.makedirs(backup_dir, exist_ok=True)
-    plt.savefig(f"{backup_dir}/cluster_trends.pdf", format="pdf")
+    os.makedirs(content_save_path, exist_ok=True)
+    plt.savefig(f"{content_save_path}/cluster_trends.pdf", format="pdf")
     plt.close()  # Close the plot to avoid overlapping figures
 
     # Visualize a pair-wise Euclidean distances trends 
 
-    # date for x-axis (y-axis is passed on here)
-
-    print(f"Right before visualization, distances are {all_distances}, and its shape is {len(all_distances)}")
+    print(f"Right before visualization, distances are {all_distances[:10]}, and its shape is {len(all_distances)}")
     x_values = range(len(all_distances))
-    # A list of dummy distances for debug purposes here. 
-    dummy_distances = [1.062, 1.070, 1.077, 1.062, 1.060, 1.059, 0.783, 0.810, 0.805, 0.799]
-
-
-    # plot 
+    
     plt.figure(figsize=(8, 5))  # Set the figure size
     plt.plot(x_values,
             all_distances, 
             marker='o', 
             linestyle='-', 
-            linewidth=2)
+            linewidth=2,
+            markersize=3)
 
     # axises 
     plt.xlabel("Knowledge Base Index", fontsize=12)
@@ -493,10 +568,10 @@ def visualization(prim_dims: np.array, all_distances: List[float], labels_kmeans
     # Add grid for better readability
     plt.grid(True)
     # Use the timestamp to record running data files 
-    os.makedirs(backup_dir, exist_ok=True)
-    print(f"Directory created: {os.path.exists(backup_dir)}")
+    os.makedirs(content_save_path, exist_ok=True)
+    print(f"Directory created: {os.path.exists(content_save_path)}")
 
-    plt.savefig(f"{backup_dir}/euclidean_distance.pdf", format="pdf")
+    plt.savefig(f"{content_save_path}/euclidean_distance.pdf", format="pdf")
     plt.close()  # Close the plot to avoid overlapping figures
 
     
@@ -547,10 +622,10 @@ def visualization(prim_dims: np.array, all_distances: List[float], labels_kmeans
     plt.tight_layout()
 
     # Use the timestamp to record running data files 
-    os.makedirs(backup_dir, exist_ok=True)
-    print(f"Directory created: {os.path.exists(backup_dir)}")
+    os.makedirs(content_save_path, exist_ok=True)
+    print(f"Directory created: {os.path.exists(content_save_path)}")
 
-    plt.savefig(f"{backup_dir}/heatmap.pdf", format="pdf")
+    plt.savefig(f"{content_save_path}/heatmap.pdf", format="pdf")
     plt.close()  # Close the plot to avoid overlapping figures
     '''
 
@@ -558,11 +633,12 @@ if __name__ == "__main__":
 
     # Get embeddings
     try:
-        embeddings, all_mappings = embedding(vo, all_data)  # List[np.array]
+        embeddings = load_file(f"{content_save_path}/concept-embeddings.json")
+        embeddings = [np.array(embedding) for embedding in embeddings]
+    except:
+        print("Generating embeddings...")
+        embeddings, _ = embedding(vo, all_data)  # List[np.array]
         logging.info("Embeddings generated successfully.")
-    except Exception as e:
-        logging.error(f"Error during embedding: {e}")
-        exit(1) # What does this "1" do?
 
     '''
     # Calculate the embeddings for some known items  
@@ -617,11 +693,11 @@ if __name__ == "__main__":
     timestamp = time.strftime("%Y%m%d-%H%M%S")
 
     # Use the timestamp to record running data files 
-    backup_dir = f"/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/analysis/run-{timestamp}"
-    os.makedirs(backup_dir, exist_ok=True)
-    print(f"Directory created: {os.path.exists(backup_dir)}")
+    content_save_path = f"/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/analysis/run-{timestamp}"
+    os.makedirs(content_save_path, exist_ok=True)
+    print(f"Directory created: {os.path.exists(content_save_path)}")
 
-    plt.savefig(f"{backup_dir}/natural_cluster.pdf", format="pdf")
+    plt.savefig(f"{content_save_path}/natural_cluster.pdf", format="pdf")
     plt.close()  # Close the plot to avoid overlapping figures
 
     '''
@@ -629,15 +705,11 @@ if __name__ == "__main__":
     # Clustering w/ kmeans 
     print(f"Shape Checks before K-means")
     print("Length of embeddings:", len(embeddings))
-    print("Shapes of each embedding array:", [e.shape for e in embeddings])
+    print("Shapes of each embedding array:", embeddings[0].shape)
     print("Length of knowledges:", len(all_data))
-    print("Lengths of each knowledge list:", [len(k) for k in all_data])
-    try:
-        clusters, statements_to_labels = cluster_hdbscan(embeddings, all_data)
-        logging.info("Clustering completed.")
-    except Exception as e:
-        logging.error(f"Error during clustering: {e}")
-        exit(1)
+    print("Lengths of each knowledge list:", [len(k) for k in all_data[:5]])
+    clusters, statements_to_labels = cluster_evoc(embeddings, all_data)
+    logging.info("Clustering completed.")
 
     '''
     # Retrieve two labels 
@@ -648,12 +720,8 @@ if __name__ == "__main__":
     print(f"After the kmeans, label1 is {label1}, label2 is {label2}, and label3 is {label3}")
     '''
     # Reducing dimensions for visualization 
-    try:
-        reduced_embeddings, _ = dim_red(embeddings, all_data)  # List[np.array]
-        logging.info("Dimensionality reduction completed.")
-    except Exception as e:
-        logging.error(f"Error during dimensionality reduction: {e}")
-        exit(1)
+    reduced_embeddings, _ = dim_red(embeddings, all_data)  # List[np.array]
+    logging.info("Dimensionality reduction completed.")
 
     '''
     # Retrieve two reduced embeddings 
@@ -665,20 +733,12 @@ if __name__ == "__main__":
     '''
 
     # Pairwise Euclidean Distances 
-    try:
-        all_distances = pairwise_dis(embeddings)
-        logging.info("All Euclidean Distances Calculated.")
-    except Exception as e:
-        logging.error(f"Error during calculating euclidean distances {e}")
-        exit(1)
+    all_distances = pairwise_dis(embeddings)
+    logging.info("All Euclidean Distances Calculated.")
 
     # Visualization
-    try:
-        visualization(reduced_embeddings, all_distances, clusters, all_mappings)
-        logging.info("Visualization completed. PDFs generated.")
-    except Exception as e:
-        logging.error(f"Error during visualization: {e}")
-        exit(1)
+    visualization(reduced_embeddings, all_distances, clusters)
+    logging.info("Visualization completed. PDFs generated.")
 
 
 

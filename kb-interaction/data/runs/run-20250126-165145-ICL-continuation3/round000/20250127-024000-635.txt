@@ -1,0 +1,454 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "PFC top-down signals modulate thalamus's attentional filtering through corticothalamic connections."
+  },
+  {
+    "id": 1,
+    "statement": "Thalamus extracts sensory features through hierarchical processing to prioritize information."
+  },
+  {
+    "id": 2,
+    "statement": "The thalamus hierarchically processes sensory information through multiple stages refining it."
+  },
+  {
+    "id": 3,
+    "statement": "Cortical predictions modulate thalamus's filtering through corticothalamic connections."
+  },
+  {
+    "id": 4,
+    "statement": "Cortical predictions modulate thalamic filtering through corticothalamic connections."
+  },
+  {
+    "id": 5,
+    "statement": "The thalamus integrates sensory info hierarchically through feedforward & feedback connections."
+  },
+  {
+    "id": 6,
+    "statement": "Thalamus acts as a crucial relay station for sensory processing."
+  },
+  {
+    "id": 7,
+    "statement": "Thalamus hierarchically processes sensory info before transmission."
+  },
+  {
+    "id": 8,
+    "statement": "Cortical predictions shape thalamus's filtering through corticothalamic connections."
+  },
+  {
+    "id": 9,
+    "statement": "Corticothalamic connections modulate thalamus's filtering through gamma oscillations."
+  },
+  {
+    "id": 10,
+    "statement": "The thalamus is a complex processing structure, not just a relay station."
+  },
+  {
+    "id": 11,
+    "statement": "Neural oscillations regulate sensory processing through thalamocortical connections"
+  },
+  {
+    "id": 12,
+    "statement": "Thalamocortical interactions involve bidirectional communication between structures."
+  },
+  {
+    "id": 13,
+    "statement": "Thalamus is a complex processing structure not just relay station."
+  },
+  {
+    "id": 14,
+    "statement": "Gamma oscillations synchronize thalamic neurons for attentional filtering."
+  },
+  {
+    "id": 15,
+    "statement": "Thalamus refines sensory info by filtering, modifying, and enhancing it."
+  },
+  {
+    "id": 16,
+    "statement": "Thalamus filters sensory info based on cortical predictions dynamically."
+  },
+  {
+    "id": 17,
+    "statement": "Thalamus refines sensory info dynamically through neural feedback loops."
+  },
+  {
+    "id": 18,
+    "statement": "Glutamate facilitates top-down signal transmission through synchronized gamma oscillations."
+  },
+  {
+    "id": 19,
+    "statement": "Top-down signals convey information from PFC to thalamus through glutamate"
+  },
+  {
+    "id": 20,
+    "statement": "Corticothalamic connections enable top-down modulation of sensory processing."
+  },
+  {
+    "id": 21,
+    "statement": "Thalamus filters sensory info based on top-down predictions."
+  },
+  {
+    "id": 22,
+    "statement": "Thalamus integrates sensory info through dynamic hierarchical processing."
+  },
+  {
+    "id": 23,
+    "statement": "PFC generates top-down predictions based on past experiences and expectations."
+  },
+  {
+    "id": 24,
+    "statement": "Thalamus processes sensory info hierarchically through beta oscillations."
+  },
+  {
+    "id": 25,
+    "statement": "Self-awareness and ToM underlie effective social cognition and communication."
+  },
+  {
+    "id": 26,
+    "statement": "Thalamus filters sensory information automatically and hierarchically."
+  },
+  {
+    "id": 27,
+    "statement": "Cortical predictions guide thalamic filtering based on past experiences."
+  },
+  {
+    "id": 28,
+    "statement": "Thalamus filters sensory info based on cortical predictions dynamically."
+  },
+  {
+    "id": 29,
+    "statement": "Thalamus uses automatic, unconscious neural pathways to filter senses."
+  },
+  {
+    "id": 30,
+    "statement": "Thalamus hierarchically processes sensory information before transmitting to cortex."
+  },
+  {
+    "id": 31,
+    "statement": "Thalamus refines sensory info in real-time with cortical predictions."
+  },
+  {
+    "id": 32,
+    "statement": "Theory of Mind involves multiple cognitive mechanisms, not just imagination."
+  },
+  {
+    "id": 33,
+    "statement": "Thalamus refines sensory info in real-time with cortical predictions continuously."
+  },
+  {
+    "id": 34,
+    "statement": "Brain network coordination enables ToM through synchronized neural activity."
+  },
+  {
+    "id": 35,
+    "statement": "Thalamus refines sensory info through neural oscillations and synaptic plasticity."
+  },
+  {
+    "id": 36,
+    "statement": "Thalamus's automatic filtering relies on robust neural connections."
+  },
+  {
+    "id": 37,
+    "statement": "Cortical predictions are anticipatory simulations triggered by experience."
+  },
+  {
+    "id": 38,
+    "statement": "Thalamocortical connections regulate sensory processing through neural oscillations."
+  },
+  {
+    "id": 39,
+    "statement": "Thalamus integrates sensory information through hierarchical neural circuits."
+  },
+  {
+    "id": 40,
+    "statement": "Thalamus integrates sensory info with cortical predictions through recurrent connections."
+  },
+  {
+    "id": 41,
+    "statement": "Synaptic plasticity is the brain's ability to adapt to experience"
+  },
+  {
+    "id": 42,
+    "statement": "Thalamus processes sensory info hierarchically through neural layers refining information"
+  },
+  {
+    "id": 43,
+    "statement": "Thalamus refines sensory info through corticothalamic connections dynamically."
+  },
+  {
+    "id": 44,
+    "statement": "PFC top-down signals modulate thalamus's attentional filtering robustly."
+  },
+  {
+    "id": 45,
+    "statement": "Thalamus hierarchically processes sensory information for cortical interpretation."
+  },
+  {
+    "id": 46,
+    "statement": "Thalamus refines sensory info through cortical predictions dynamically"
+  },
+  {
+    "id": 47,
+    "statement": "Thalamocortical connections regulate sensory processing through neural oscillations."
+  },
+  {
+    "id": 48,
+    "statement": "PFC generates predictions about sensory input based on past experiences."
+  },
+  {
+    "id": 49,
+    "statement": "PFC's top-down signals modulate thalamus's attentional processing."
+  },
+  {
+    "id": 50,
+    "statement": "Thalamus extracts sensory features hierarchically, refining information."
+  },
+  {
+    "id": 51,
+    "statement": "Thalamus processes sensory info through nested neural network connections."
+  },
+  {
+    "id": 52,
+    "statement": "Thalamus integrates sensory features through corticothalamic interactions."
+  },
+  {
+    "id": 53,
+    "statement": "Gamma oscillations enable synchronized neural activity for attentional filtering"
+  },
+  {
+    "id": 54,
+    "statement": "Top-down signals convey information from PFC to other brain regions."
+  },
+  {
+    "id": 55,
+    "statement": "Self-awareness and ToM are crucial for effective social cognition."
+  },
+  {
+    "id": 56,
+    "statement": "Thalamus filters sensory info based on attention, expectation, and past experiences."
+  },
+  {
+    "id": 57,
+    "statement": "The thalamus hierarchically processes sensory information through multiple stages refining it."
+  },
+  {
+    "id": 58,
+    "statement": "The thalamus processes sensory info through hierarchical layers."
+  },
+  {
+    "id": 59,
+    "statement": "PFC's top-down control modulates thalamus's sensory processing through corticothalamic connections."
+  },
+  {
+    "id": 60,
+    "statement": "PFC generates top-down predictions through hierarchical processing and synchronization."
+  },
+  {
+    "id": 61,
+    "statement": "Gamma oscillations regulate thalamocortical connection strength and efficacy."
+  },
+  {
+    "id": 62,
+    "statement": "Thalamus filters sensory info through automatic, robust neural connections."
+  },
+  {
+    "id": 63,
+    "statement": "The thalamus dynamically filters sensory info based on attentional modulation."
+  },
+  {
+    "id": 64,
+    "statement": "Cortical expectations modulate thalamus's filtering through gain, Hebbian learning, and synchronized neural activity."
+  },
+  {
+    "id": 65,
+    "statement": "Thalamus filters sensory info based on cortical predictions dynamically."
+  },
+  {
+    "id": 66,
+    "statement": "Cortical predictions modulate thalamic filtering through top-down attention."
+  },
+  {
+    "id": 67,
+    "statement": "Complex cognitive mechanisms integrate attention, working memory, executive functions, and social cognition to infer mental states."
+  },
+  {
+    "id": 68,
+    "statement": "Gamma oscillations synchronize thalamic neurons for sensory processing refinement."
+  },
+  {
+    "id": 69,
+    "statement": "Thalamus refines sensory info through hierarchical processing layers."
+  },
+  {
+    "id": 70,
+    "statement": "Thalamus integrates sensory information hierarchically into meaningful patterns."
+  },
+  {
+    "id": 71,
+    "statement": "Cortical predictions modulate thalamic filtering through glutamate and neural oscillations."
+  },
+  {
+    "id": 72,
+    "statement": "Gamma oscillations synchronize thalamic neurons for attentional filtering."
+  },
+  {
+    "id": 73,
+    "statement": "Thalamus role is not solely processing, but relay and refinement."
+  },
+  {
+    "id": 74,
+    "statement": "Thalamus integrates sensory info through bidirectional corticothalamic interactions."
+  },
+  {
+    "id": 75,
+    "statement": "Thalamus integrates sensory information through hierarchical processing mechanisms."
+  },
+  {
+    "id": 76,
+    "statement": "Cortical predictions arise from anticipatory simulations based on experience."
+  },
+  {
+    "id": 77,
+    "statement": "Top-down signals from PFC modulate sensory processing and filtering."
+  },
+  {
+    "id": 78,
+    "statement": "Thalamus integrates sensory features through hierarchical automatic processing."
+  },
+  {
+    "id": 79,
+    "statement": "Thalamus uses internal models and expectations to filter sensory info."
+  },
+  {
+    "id": 80,
+    "statement": "Thalamus dynamically filters sensory info using hierarchical processing mechanisms."
+  },
+  {
+    "id": 81,
+    "statement": "Corticothalamic connections enable top-down modulation of sensory processing dynamically."
+  },
+  {
+    "id": 82,
+    "statement": "PFC generates predictions about sensory input based on past experiences."
+  },
+  {
+    "id": 83,
+    "statement": "Gamma oscillations synchronize thalamic neurons to filter sensory information"
+  },
+  {
+    "id": 84,
+    "statement": "Thalamus refines sensory info through corticothalamic feedback and synchronization."
+  },
+  {
+    "id": 85,
+    "statement": "Self-awareness and ToM enable effective empathy and social understanding."
+  },
+  {
+    "id": 86,
+    "statement": "Cortical predictions are generated by past experiences and expectations."
+  },
+  {
+    "id": 87,
+    "statement": "Thalamus refines sensory info through corticothalamic feedback loops."
+  },
+  {
+    "id": 88,
+    "statement": "Corticothalamic connections enable top-down modulation of sensory processing through neural oscillations."
+  },
+  {
+    "id": 89,
+    "statement": "Self-awareness and ToM essential for effective social cognition."
+  },
+  {
+    "id": 90,
+    "statement": "Thalamus processes raw sensory data hierarchically, refining features."
+  },
+  {
+    "id": 91,
+    "statement": "The thalamus dynamically filters sensory information based on attention."
+  },
+  {
+    "id": 92,
+    "statement": "Thalamus integrates sensory features through corticothalamic interactions."
+  },
+  {
+    "id": 93,
+    "statement": "The thalamus refines sensory info in real-time through predictive coding."
+  },
+  {
+    "id": 94,
+    "statement": "Complex cognitive mechanisms involved in Theory of Mind processing."
+  },
+  {
+    "id": 95,
+    "statement": "PFC processes and refines sensory information dynamically."
+  },
+  {
+    "id": 96,
+    "statement": "Thalamus integrates sensory info dynamically through hierarchical processing."
+  },
+  {
+    "id": 97,
+    "statement": "Thalamus refines sensory info through hierarchical processing mechanisms."
+  },
+  {
+    "id": 98,
+    "statement": "Neural oscillations enable synchronized thalamocortical processing for sensory information."
+  },
+  {
+    "id": 99,
+    "statement": "Thalamus filters sensory info through attentional modulation and prediction."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 76,
+  "statement": "Cortical predictions arise from anticipatory simulations based on experience."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 76,
+  "statement": "Cortical predictions arise from anticipatory simulations based on experience."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss item 76:
+
+"Cortical predictions arise from anticipatory simulations based on experience."
+
+What are your thoughts on this statement? Do you find it straightforward or are there some aspects of it that you're unsure about?
+
+(Note: I'll wait for your response and then share my own thoughts and questions)

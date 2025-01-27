@@ -1,0 +1,462 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "PFC top-down signals modulate thalamus's attentional filtering through corticothalamic connections."
+  },
+  {
+    "id": 1,
+    "statement": "PFC's predictive abilities rely on pattern separation, completion, and coding mechanisms."
+  },
+  {
+    "id": 2,
+    "statement": "Moderate confidence reflects uncertainty in PFC's pattern separation mechanisms."
+  },
+  {
+    "id": 3,
+    "statement": "PFC's predictive abilities rely on pattern separation and completion mechanisms."
+  },
+  {
+    "id": 4,
+    "statement": "Gamma oscillations synchronize neural activity through entrainment and phase-locking"
+  },
+  {
+    "id": 5,
+    "statement": "PFC's predictive abilities rely on neural pattern separation, completion, and coding mechanisms."
+  },
+  {
+    "id": 6,
+    "statement": "ToM integrates social cognition, working memory, and attention."
+  },
+  {
+    "id": 7,
+    "statement": "PFC's predictive abilities rely on pattern separation, completion, and coding mechanisms."
+  },
+  {
+    "id": 8,
+    "statement": "LTP/LTD regulate synaptic strength through opposing NMDA/mGluR pathways."
+  },
+  {
+    "id": 9,
+    "statement": "Theory of Mind integrates social cognition and working memory indirectly"
+  },
+  {
+    "id": 10,
+    "statement": "Corticothalamic connections' adaptivity in attentional filtering is not well established."
+  },
+  {
+    "id": 11,
+    "statement": "LTP/LTD regulate synaptic strength through opposing signaling pathways due opposing signals"
+  },
+  {
+    "id": 12,
+    "statement": "Hebbian learning and synaptic pruning refine thalamus's sensory processing."
+  },
+  {
+    "id": 13,
+    "statement": "Corticothalamic connections modulate attentional filtering through bidirectional interactions"
+  },
+  {
+    "id": 14,
+    "statement": "Thalamus filters sensory info, not actively categorizes."
+  },
+  {
+    "id": 15,
+    "statement": "PFC generates predictions through pattern separation, completion, coding."
+  },
+  {
+    "id": 16,
+    "statement": "Moderate confidence in PFC's pattern separation and completion mechanisms."
+  },
+  {
+    "id": 17,
+    "statement": "PFC's predictive processing involves pattern separation, completion, and coding."
+  },
+  {
+    "id": 18,
+    "statement": "PFC generates predictions through pattern separation, completion, and coding."
+  },
+  {
+    "id": 19,
+    "statement": "Corticothalamic connections modulate attentional filtering through reciprocal connections."
+  },
+  {
+    "id": 20,
+    "statement": "Homeostatic plasticity adjusts synaptic strength for neural circuit stability."
+  },
+  {
+    "id": 21,
+    "statement": "PFC uses pattern separation and completion for predictive processing."
+  },
+  {
+    "id": 22,
+    "statement": "ToM integrates social cognition, working memory, and attention through hierarchical processing."
+  },
+  {
+    "id": 23,
+    "statement": "The thalamus refines sensory info through hierarchical processing."
+  },
+  {
+    "id": 24,
+    "statement": "Thalamus processes sensory information hierarchically through filtering and modulation."
+  },
+  {
+    "id": 25,
+    "statement": "Theory of Mind involves interplay of social cognition, working memory, and attention."
+  },
+  {
+    "id": 26,
+    "statement": "PFC's predictive abilities rely on pattern separation completion mechanisms."
+  },
+  {
+    "id": 27,
+    "statement": "LTP and LTD regulate synaptic strength through opposing processes."
+  },
+  {
+    "id": 28,
+    "statement": "Pattern separation involves limited neural resources competition."
+  },
+  {
+    "id": 29,
+    "statement": "Gamma oscillations entrain and phase-lock neural activity for coherence."
+  },
+  {
+    "id": 30,
+    "statement": "LTP and LTD regulate synaptic strength through oppositional processes."
+  },
+  {
+    "id": 31,
+    "statement": "Confidence levels reflect author's subjective understanding uncertainty"
+  },
+  {
+    "id": 32,
+    "statement": "Entrainment and phase-locking synchronize neural activity through pattern alignment."
+  },
+  {
+    "id": 33,
+    "statement": "Thalamus refines sensory info through hierarchical processing mechanisms' specificity."
+  },
+  {
+    "id": 34,
+    "statement": "Corticothalamic connections modulate attentional filtering through neural interactions."
+  },
+  {
+    "id": 35,
+    "statement": "LTP and LTD regulate synaptic strength through opposing processes."
+  },
+  {
+    "id": 36,
+    "statement": "ToM integrates social cognition, working memory through neural processing."
+  },
+  {
+    "id": 37,
+    "statement": "Neural populations compete for limited synaptic plasticity resources during development."
+  },
+  {
+    "id": 38,
+    "statement": "LTP and LTD regulate synaptic strength through oppositional processes."
+  },
+  {
+    "id": 39,
+    "statement": "PFC's predictive abilities rely on pattern separation, completion, and coding."
+  },
+  {
+    "id": 40,
+    "statement": "Gamma oscillations synchronize neural activity through entrainment and phase-locking."
+  },
+  {
+    "id": 41,
+    "statement": "Thalamus refines sensory info through hierarchical processing mechanisms."
+  },
+  {
+    "id": 42,
+    "statement": "PFC's pattern separation/completion enables accurate decision-making through disentanglement and inference."
+  },
+  {
+    "id": 43,
+    "statement": "PFC's predictive abilities rely on neural pattern separation, completion."
+  },
+  {
+    "id": 44,
+    "statement": "Thalamus refines sensory info through hierarchical processing mechanisms."
+  },
+  {
+    "id": 45,
+    "statement": "The thalamus filters sensory input through top-down cortical predictions."
+  },
+  {
+    "id": 46,
+    "statement": "PFC generates predictions through pattern separation, completion, and coding."
+  },
+  {
+    "id": 47,
+    "statement": "Confidence levels reflect subjective author's understanding variation"
+  },
+  {
+    "id": 48,
+    "statement": "Homeostatic plasticity regulates neural connection strength through activity-dependent mechanisms."
+  },
+  {
+    "id": 49,
+    "statement": "Thalamus modulates sensory info through corticothalamic connections"
+  },
+  {
+    "id": 50,
+    "statement": "Moderate confidence reflects level of uncertainty in PFC's pattern separation."
+  },
+  {
+    "id": 51,
+    "statement": "Thalamus refines sensory information through hierarchical processing mechanisms."
+  },
+  {
+    "id": 52,
+    "statement": "Synaptic plasticity involves diverse mechanisms for learning and memory."
+  },
+  {
+    "id": 53,
+    "statement": "LTP and LTD regulate synaptic strength through opposing processes."
+  },
+  {
+    "id": 54,
+    "statement": "PFC predicts outcomes through integrating sensory and internal information."
+  },
+  {
+    "id": 55,
+    "statement": "Corticothalamic connections modulate attentional filtering adaptively."
+  },
+  {
+    "id": 56,
+    "statement": "LTP/LTD regulate synaptic strength through opposing NMDA/mGluR mechanisms."
+  },
+  {
+    "id": 57,
+    "statement": "Thalamus filters sensory info through attentional modulation and processing."
+  },
+  {
+    "id": 58,
+    "statement": "The thalamus amplifies, filters, and modifies sensory signals before cortex processing"
+  },
+  {
+    "id": 59,
+    "statement": "Ongoing research refines understanding of PFC's predictive abilities."
+  },
+  {
+    "id": 60,
+    "statement": "Moderate confidence reflects uncertainty in scientific understanding refinement."
+  },
+  {
+    "id": 61,
+    "statement": "Thalamus's sensory processing involves complex interactions with cortex."
+  },
+  {
+    "id": 62,
+    "statement": "Hierarchical thalamocortical processing underlies sensory information refinement."
+  },
+  {
+    "id": 63,
+    "statement": "Gamma oscillations synchronize neural activity for efficient processing."
+  },
+  {
+    "id": 64,
+    "statement": "Pattern separation, completion, and coding govern PFC's predictive abilities."
+  },
+  {
+    "id": 65,
+    "statement": "Thalamus separates and categorizes sensory information before sending it to cortex"
+  },
+  {
+    "id": 66,
+    "statement": "LTP strengthens, LTD weakens synaptic connections through opposition."
+  },
+  {
+    "id": 67,
+    "statement": "Neural growth and synaptic consolidation involve coordinated Hebbian learning."
+  },
+  {
+    "id": 68,
+    "statement": "Corticothalamic connections modulate attentional filtering through synchronized activity."
+  },
+  {
+    "id": 69,
+    "statement": "Thalamus actively filters and refines sensory information hierarchically."
+  },
+  {
+    "id": 70,
+    "statement": "Hebbian learning, LTD, and homeostasis refine thalamus's filtering mechanisms cooperatively."
+  },
+  {
+    "id": 71,
+    "statement": "PFC's predictive abilities involve ongoing research refinement."
+  },
+  {
+    "id": 72,
+    "statement": "PFC's predictive abilities rely on pattern separation, completion, coding."
+  },
+  {
+    "id": 73,
+    "statement": "Hebbian learning and synaptic pruning refine thalamus's sensory processing through strengthening and pruning neural connections."
+  },
+  {
+    "id": 74,
+    "statement": "Homeostatic plasticity regulates LTP/LTD for neural circuit stability"
+  },
+  {
+    "id": 75,
+    "statement": "Gamma oscillations synchronize neural activity through entrainment and phase-locking."
+  },
+  {
+    "id": 76,
+    "statement": "PFC's predictive abilities rely on neural pattern processing mechanisms."
+  },
+  {
+    "id": 77,
+    "statement": "LTP and LTD regulate synaptic strength through opposing mechanisms"
+  },
+  {
+    "id": 78,
+    "statement": "Thalamus filters and prioritizes sensory information for cortex processing."
+  },
+  {
+    "id": 79,
+    "statement": "PFC uses pattern separation to refine predictive processing accuracy."
+  },
+  {
+    "id": 80,
+    "statement": "LTP and LTD regulate synaptic strength through opposing signals"
+  },
+  {
+    "id": 81,
+    "statement": "LTP/LTD regulate synaptic strength through opposing NMDA/mGluR pathways dynamically."
+  },
+  {
+    "id": 82,
+    "statement": "Neural coding refers to neural activity's information representation."
+  },
+  {
+    "id": 83,
+    "statement": "Hebbian learning strengthens thalamic connections for sensory processing refinement"
+  },
+  {
+    "id": 84,
+    "statement": "Neural competition: limited resources shape brain's learning and adaptation."
+  },
+  {
+    "id": 85,
+    "statement": "Thalamus filters and refines sensory information hierarchically through gating."
+  },
+  {
+    "id": 86,
+    "statement": "LTP/LTD regulate synaptic strength through opposing NMDA/mGluR mechanisms."
+  },
+  {
+    "id": 87,
+    "statement": "LTP and LTD are opposing forms of synaptic plasticity."
+  },
+  {
+    "id": 88,
+    "statement": "ToM integrates social cognition and working memory through dynamic coordination"
+  },
+  {
+    "id": 89,
+    "statement": "Thalamus filters and refines sensory information through hierarchical processing."
+  },
+  {
+    "id": 90,
+    "statement": "Synaptic pruning refines thalamus's sensory processing by reducing noise."
+  },
+  {
+    "id": 91,
+    "statement": "LTP/LTD regulate synaptic strength through opposing signaling pathways."
+  },
+  {
+    "id": 92,
+    "statement": "Pattern separation mechanisms may refine PFC's predictive processing."
+  },
+  {
+    "id": 93,
+    "statement": "PFC pattern separation reduces uncertainty for accurate predictions by noise reduction"
+  },
+  {
+    "id": 94,
+    "statement": "Thalamus refines sensory information hierarchically through filtering."
+  },
+  {
+    "id": 95,
+    "statement": "PFC uses pattern separation to distinguish similar neural patterns"
+  },
+  {
+    "id": 96,
+    "statement": "PFC's pattern separation distinguishes related predictions through neural coding."
+  },
+  {
+    "id": 97,
+    "statement": "Hebbian learning, LTD, and homeostasis refine thalamus's filtering."
+  },
+  {
+    "id": 98,
+    "statement": "The thalamus refines sensory information through hierarchical processing."
+  },
+  {
+    "id": 99,
+    "statement": "PFC's predictive abilities rely on pattern separation, completion, and coding mechanisms."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 91,
+  "statement": "LTP/LTD regulate synaptic strength through opposing signaling pathways."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 91,
+  "statement": "LTP/LTD regulate synaptic strength through opposing signaling pathways."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base. I'd like to discuss Item 91:
+
+Item to Discuss:
+{
+"id": 91,
+"statement": "LTP/LTD regulate synaptic strength through opposing signaling pathways."
+}
+
+Things I’m Uncertain About This Item:
+I'm unsure about how LTP (Long-Term Potentiation) and LTD (Long-Term Depression) exactly regulate synaptic strength through opposing signaling pathways.
+
+Specific Clarifying Question:
+What are some specific examples of opposing signaling pathways that LTP and LTD use to regulate synaptic strength?
+
+What are your thoughts on this item? Can you elaborate on the concept or provide more information?

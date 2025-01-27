@@ -1,0 +1,450 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Honesty is not always black and white, justice may dictate exceptions."
+  },
+  {
+    "id": 2,
+    "statement": "Situational awareness provides limited comprehension of a situation."
+  },
+  {
+    "id": 3,
+    "statement": "Situational awareness involves dynamic and continuous real-time processing."
+  },
+  {
+    "id": 4,
+    "statement": "Situational awareness is dynamic, continuous, and requires adaptation."
+  },
+  {
+    "id": 5,
+    "statement": "Honesty is foundation of trust, but not sole factor, as moral frameworks and values guide trustworthiness."
+  },
+  {
+    "id": 6,
+    "statement": "Thalamus filters sensory information based on attention, relevance, and priority"
+  },
+  {
+    "id": 7,
+    "statement": "The thalamus filters sensory info through attentional and contextual modulation."
+  },
+  {
+    "id": 8,
+    "statement": "Honesty may be compromised for greater justice in exceptional circumstances."
+  },
+  {
+    "id": 9,
+    "statement": "Honesty emerges from integration of moral framework, emotional motivation, accountability"
+  },
+  {
+    "id": 10,
+    "statement": "Thalamus filters sensory info through attention, relevance, priority"
+  },
+  {
+    "id": 11,
+    "statement": "Thalamus filters sensory information through attentional modulation gates."
+  },
+  {
+    "id": 12,
+    "statement": "Situational awareness adapts to changing conditions through continuous assessment."
+  },
+  {
+    "id": 13,
+    "statement": "Honesty emerges from integration of moral framework, emotional motivation, accountability"
+  },
+  {
+    "id": 14,
+    "statement": "Alpha oscillations modulate synaptic plasticity for attentional filtering."
+  },
+  {
+    "id": 15,
+    "statement": "Emotions and moral behavior dynamically influence each other's development."
+  },
+  {
+    "id": 16,
+    "statement": "Thalamus filters sensory info through attention, context, and emotion."
+  },
+  {
+    "id": 17,
+    "statement": "The thalamus integrates attentional signals with sensory input real-time."
+  },
+  {
+    "id": 18,
+    "statement": "Alpha oscillations modulate synaptic plasticity for attentional filtering."
+  },
+  {
+    "id": 19,
+    "statement": "Biology influences moral development through neural connections and genetics."
+  },
+  {
+    "id": 20,
+    "statement": "Alpha oscillations modulate sensory processing through attentional gating mechanisms"
+  },
+  {
+    "id": 21,
+    "statement": "Resonance refers to internalized values and emotions amplifying each other's influence."
+  },
+  {
+    "id": 22,
+    "statement": "Moral frameworks guide decision-making through flexible values and principles."
+  },
+  {
+    "id": 23,
+    "statement": "Neural oscillations modulate synaptic plasticity in attentional filtering."
+  },
+  {
+    "id": 24,
+    "statement": "Thalamus filters sensory information through attentional and contextual modulation"
+  },
+  {
+    "id": 25,
+    "statement": "Moral absolutism debated among ethicists and philosophers."
+  },
+  {
+    "id": 26,
+    "statement": "Thalamus filters and processes sensory information through neural oscillations."
+  },
+  {
+    "id": 27,
+    "statement": "Emotions and moral behavior engage in bidirectional influence."
+  },
+  {
+    "id": 28,
+    "statement": "Honesty emerges from integration of moral framework, emotional motivation, and situational awareness."
+  },
+  {
+    "id": 29,
+    "statement": "Situational awareness is dynamic, continuous, and requires adaptation in."
+  },
+  {
+    "id": 30,
+    "statement": "Biology influences moral development through neural connections and genetics."
+  },
+  {
+    "id": 31,
+    "statement": "Thalamus integrates attention and context to filter sensory information."
+  },
+  {
+    "id": 32,
+    "statement": "Thalamus filters, amplifies, and synchronizes sensory information for cortex."
+  },
+  {
+    "id": 33,
+    "statement": "Internalized values and emotions harmonize through neural resonance."
+  },
+  {
+    "id": 34,
+    "statement": "Internalized moral frameworks modulate brain activity through emotional resonance."
+  },
+  {
+    "id": 35,
+    "statement": "Alpha oscillations modulate thalamus's sensory processing through attentional filtering"
+  },
+  {
+    "id": 36,
+    "statement": "Emotions influence moral behavior in a reciprocal, bidirectional manner."
+  },
+  {
+    "id": 37,
+    "statement": "Honesty requires both moral framework and emotional motivation"
+  },
+  {
+    "id": 38,
+    "statement": "Situation comprehension limited by complexity, uncertainty, and cognitive biases."
+  },
+  {
+    "id": 39,
+    "statement": "Thalamus filters sensory info through attentional and contextual processing."
+  },
+  {
+    "id": 40,
+    "statement": "Biology, culture, and environment interact to shape moral development."
+  },
+  {
+    "id": 41,
+    "statement": "Implicit biases influence moral frameworks through unconscious processing."
+  },
+  {
+    "id": 42,
+    "statement": "Situation comprehension limited by complexity, uncertainty, and biases."
+  },
+  {
+    "id": 43,
+    "statement": "Thalamus modulates sensory information through attentional and contextual filtering."
+  },
+  {
+    "id": 44,
+    "statement": "Synaptic plasticity contributes to attentional filtering through neural oscillations."
+  },
+  {
+    "id": 45,
+    "statement": "Moral framework integrates values, principles, and emotional drivers internally."
+  },
+  {
+    "id": 46,
+    "statement": "Thalamus filters, amplifies, and synchronizes sensory information for cortex."
+  },
+  {
+    "id": 47,
+    "statement": "Thalamus acts as sensory relay station filtering and processing information."
+  },
+  {
+    "id": 48,
+    "statement": "Moral frameworks adapt to changing circumstances through implicit biases."
+  },
+  {
+    "id": 49,
+    "statement": "Biology influences moral development through neural connections and genetics"
+  },
+  {
+    "id": 50,
+    "statement": "The thalamus filters sensory information through attentional and contextual modulation gating."
+  },
+  {
+    "id": 51,
+    "statement": "Thalamus integrates attention, relevance, and priority through complex neural circuits"
+  },
+  {
+    "id": 52,
+    "statement": "The thalamus filters sensory info through complex attentional and contextual mechanisms."
+  },
+  {
+    "id": 53,
+    "statement": "Consistency builds trust through predictability and accountability dynamics."
+  },
+  {
+    "id": 54,
+    "statement": "Honesty's moral standard varies depending on cultural and social context."
+  },
+  {
+    "id": 55,
+    "statement": "Moral frameworks evolve through integration of new experiences and perspectives."
+  },
+  {
+    "id": 56,
+    "statement": "The thalamus filters and integrates sensory info through feedback loops."
+  },
+  {
+    "id": 57,
+    "statement": "Alpha oscillations modulate synaptic plasticity for attentional filtering."
+  },
+  {
+    "id": 58,
+    "statement": "Accountability involves taking ownership of actions, thoughts, and consequences."
+  },
+  {
+    "id": 59,
+    "statement": "Thalamus filters sensory info based on attention, relevance, priority."
+  },
+  {
+    "id": 60,
+    "statement": "Alpha oscillations modulate sensory info through top-down attentional control."
+  },
+  {
+    "id": 61,
+    "statement": "Thalamus integrates attentional state and memories through complex neural networks."
+  },
+  {
+    "id": 62,
+    "statement": "Honesty's foundation in trust depends on multifaceted interactions."
+  },
+  {
+    "id": 63,
+    "statement": "Honesty may be compromised for greater justice in exceptional circumstances."
+  },
+  {
+    "id": 64,
+    "statement": "Alpha oscillations modulate sensory processing through attentional filteringPooling."
+  },
+  {
+    "id": 65,
+    "statement": "Thalamus filters sensory info through attentional and contextual modulation."
+  },
+  {
+    "id": 66,
+    "statement": "Honesty is one of many factors building trust; also reliability, consistency."
+  },
+  {
+    "id": 67,
+    "statement": "Taking ownership means acknowledging personal agency in choices."
+  },
+  {
+    "id": 68,
+    "statement": "Situational awareness requires continuous adaptation to changing circumstances."
+  },
+  {
+    "id": 69,
+    "statement": "Honesty's moral absolute standard is debated among ethicists and philosophers."
+  },
+  {
+    "id": 70,
+    "statement": "Thalamus integrates attentional state and memories through complex neural networks."
+  },
+  {
+    "id": 71,
+    "statement": "Emotions influence moral decision-making through emotional resonance."
+  },
+  {
+    "id": 72,
+    "statement": "Emotional drivers amplify moral framework's influence through resonance."
+  },
+  {
+    "id": 73,
+    "statement": "Epigenetics influences moral development, but plays limited role;"
+  },
+  {
+    "id": 74,
+    "statement": "Alpha oscillations modulate synaptic plasticity for attentional filtering selectively."
+  },
+  {
+    "id": 75,
+    "statement": "Situational awareness requires continuous adaptation to changing circumstances."
+  },
+  {
+    "id": 76,
+    "statement": "Alpha oscillations regulate neural activity through phase-locking inhibition."
+  },
+  {
+    "id": 77,
+    "statement": "Synaptic plasticity reinforces neural connections through alpha oscillations"
+  },
+  {
+    "id": 78,
+    "statement": "Honesty adapts to situational factors, influenced by cultural norms, emotions."
+  },
+  {
+    "id": 79,
+    "statement": "Thalamus filters sensory information through alpha oscillations' attentional control"
+  },
+  {
+    "id": 80,
+    "statement": "Emotions influenced by moral values, driven by personal experiences."
+  },
+  {
+    "id": 81,
+    "statement": "Honesty fosters trust by promoting consistency, transparency, and accountability."
+  },
+  {
+    "id": 82,
+    "statement": "Situational awareness enables informed decision-making through contextual understanding."
+  },
+  {
+    "id": 83,
+    "statement": "Situational awareness enables informed decision-making through contextual understanding."
+  },
+  {
+    "id": 84,
+    "statement": "Situational awareness enables informed decision-making through contextual understanding."
+  },
+  {
+    "id": 85,
+    "statement": "Thalamus filters sensory information based on attention, relevance, and priority."
+  },
+  {
+    "id": 86,
+    "statement": "Situational awareness involves continuous processing and updating information."
+  },
+  {
+    "id": 87,
+    "statement": "Alpha oscillations enhance attentional filtering through synaptic plasticity."
+  },
+  {
+    "id": 88,
+    "statement": "Moral framework and emotional motivation both influence honesty."
+  },
+  {
+    "id": 89,
+    "statement": "Honesty's moral standard adaptably adjusts to situational factors."
+  },
+  {
+    "id": 90,
+    "statement": "The thalamus filters sensory info through attentional and contextual modulation."
+  },
+  {
+    "id": 91,
+    "statement": "Moral frameworks and emotions influence each other reciprocally."
+  },
+  {
+    "id": 92,
+    "statement": "Thalamus filters, amplifies, and synchronizes sensory information for cortex."
+  },
+  {
+    "id": 93,
+    "statement": "Honesty emerges from integration of moral framework, emotional motivation, situational awareness"
+  },
+  {
+    "id": 94,
+    "statement": "Moral framework and emotional motivation both influence honesty."
+  },
+  {
+    "id": 95,
+    "statement": "Moral frameworks adapt through refinement and situational adjustment."
+  },
+  {
+    "id": 96,
+    "statement": "Honesty emerges from integration of moral framework, emotional motivation, accountable self."
+  },
+  {
+    "id": 97,
+    "statement": "Biology influences moral development through brain structure, genetics, and neurochemicals."
+  },
+  {
+    "id": 98,
+    "statement": "Biology influences moral development through brain structure and neurochemicals."
+  },
+  {
+    "id": 99,
+    "statement": "Situational awareness enables informed decision-making through contextual understanding."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 25,
+  "statement": "Moral absolutism debated among ethicists and philosophers."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 25,
+  "statement": "Moral absolutism debated among ethicists and philosophers."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+I'd like to discuss item 25 from the knowledge base: "Moral absolutism debated among ethicists and philosophers."
+
+I'm a bit uncertain about this aspect.

@@ -1,0 +1,469 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Moral values arise from complex interactions between multiple factors."
+  },
+  {
+    "id": 2,
+    "statement": "Histone modifying enzymes regulate chromatin structure dynamically."
+  },
+  {
+    "id": 3,
+    "statement": "Histone modifications and chromatin remodeling jointly regulate gene expression dynamics."
+  },
+  {
+    "id": 4,
+    "statement": "Epigenetic mechanisms regulate gene expression through DNA methylation, histone modifications, and chromatin remodeling."
+  },
+  {
+    "id": 5,
+    "statement": "Acceptance reduces emotional reactivity through mindfulness and self-compassion mechanisms."
+  },
+  {
+    "id": 6,
+    "statement": "Epigenetic modifications intersect with transcription factors, chromatin remodeling complexes, non-coding RNAs, and post-translational modifications to regulate gene expression."
+  },
+  {
+    "id": 7,
+    "statement": "Empathy is crucial for understanding and promoting moral values."
+  },
+  {
+    "id": 8,
+    "statement": "Trust erosion occurs due to dissonance between expected and actual outcomes"
+  },
+  {
+    "id": 9,
+    "statement": "Epigenetic changes result from dynamic interplay between biological, environmental factors."
+  },
+  {
+    "id": 10,
+    "statement": "Histone modification alterations influence chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 11,
+    "statement": "Trust erosion can occur through dissonance between expected and actual outcomes."
+  },
+  {
+    "id": 12,
+    "statement": "Epigenetic changes influence gene expression, disease susceptibility, and treatment outcomes."
+  },
+  {
+    "id": 13,
+    "statement": "Power imbalances stem from interacting socioeconomic and cultural factors."
+  },
+  {
+    "id": 14,
+    "statement": "Moral values arise from complex interplay of biological, psychological, social, and cultural factors."
+  },
+  {
+    "id": 15,
+    "statement": "Epigenetic changes arise from reciprocal biological-environmental interactions."
+  },
+  {
+    "id": 16,
+    "statement": "Moral values emerge from interdependent biological, psychological, and social influences."
+  },
+  {
+    "id": 17,
+    "statement": "Structural inequalities result from intricate power networks and influence systems."
+  },
+  {
+    "id": 18,
+    "statement": "Histone modifications regulate chromatin structure and gene expression continuously."
+  },
+  {
+    "id": 19,
+    "statement": "Histone modifying enzymes regulate chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 20,
+    "statement": "Histone modifying enzymes dynamically regulate chromatin structure through acetylation."
+  },
+  {
+    "id": 21,
+    "statement": "Non-judgmental acceptance and active listening foster empathy and understanding in social interactions."
+  },
+  {
+    "id": 22,
+    "statement": "Histone modifications regulate gene expression dynamics through transcription factors"
+  },
+  {
+    "id": 23,
+    "statement": "Histone modifications regulate chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 24,
+    "statement": "Histone modifications regulate chromatin structure and gene expression biochemically"
+  },
+  {
+    "id": 25,
+    "statement": "Chromatin structure stabilized by electrostatic, hydrogen bonding, and histone interactions."
+  },
+  {
+    "id": 26,
+    "statement": "Epigenetic modifications intersect with transcription factors, chromatin remodeling complexes, non-coding RNAs, and post-translational modifications."
+  },
+  {
+    "id": 27,
+    "statement": "Histone modifications regulate chromatin structure and gene expression dynamics through epigenetic marks."
+  },
+  {
+    "id": 28,
+    "statement": "Epigenetic regulation involves interaction between genetic, environmental, and epigenetic factors"
+  },
+  {
+    "id": 29,
+    "statement": "Structural inequalities result from complex networks of power and influence."
+  },
+  {
+    "id": 30,
+    "statement": "Mental and emotional resistance decreases through acceptance and mindfulness."
+  },
+  {
+    "id": 31,
+    "statement": "Social inequalities and power imbalances influence moral judgments through biased perspectives."
+  },
+  {
+    "id": 32,
+    "statement": "Power imbalances arise from interconnected social, historical, and economic factors"
+  },
+  {
+    "id": 33,
+    "statement": "Epigenetic editing enzymes modify DNA marks in response to toxins."
+  },
+  {
+    "id": 34,
+    "statement": "Honesty is crucial, but not the only relationship foundation"
+  },
+  {
+    "id": 35,
+    "statement": "Moral values emerge from complex interplay of biology, psychology, and society."
+  },
+  {
+    "id": 36,
+    "statement": "Epigenetic changes arise from dynamic biological-environmental interplay."
+  },
+  {
+    "id": 37,
+    "statement": "Transcription factors recognize DNA using specific protein domains."
+  },
+  {
+    "id": 38,
+    "statement": "Epigenetic changes modify chromatin structure to regulate gene expression"
+  },
+  {
+    "id": 39,
+    "statement": "Epigenetic modifications control gene expression without DNA sequence change."
+  },
+  {
+    "id": 40,
+    "statement": "Mutation occurs through changes in DNA sequence."
+  },
+  {
+    "id": 41,
+    "statement": "Acceptance reduces emotional reactivity through mindfulness-based self-compassion."
+  },
+  {
+    "id": 42,
+    "statement": "Histone modification regulates chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 43,
+    "statement": "Epigenetic changes result from dynamic interplay between biological and environmental factors."
+  },
+  {
+    "id": 44,
+    "statement": "Mutations occur spontaneously or due to environmental factors."
+  },
+  {
+    "id": 45,
+    "statement": "Histone modification reversibility regulates chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 46,
+    "statement": "Epigenetic modifications alter chromatin structure, regulating gene expression."
+  },
+  {
+    "id": 47,
+    "statement": "Chromatin compaction is a dynamic process influenced by multiple factors."
+  },
+  {
+    "id": 48,
+    "statement": "Moral values emerge from interconnected biological-cultural dynamics."
+  },
+  {
+    "id": 49,
+    "statement": "Acceptance reduces emotional reactivity through mindfulness self-compassion."
+  },
+  {
+    "id": 50,
+    "statement": "Histone modifications dynamically regulate chromatin structure and gene expression."
+  },
+  {
+    "id": 51,
+    "statement": "Chromatin compaction dynamics influenced by multiple factors interacting dynamically"
+  },
+  {
+    "id": 52,
+    "statement": "Mutations occur through changes in DNA sequence due to errors or environmental factors."
+  },
+  {
+    "id": 53,
+    "statement": "Electrostatic interactions stabilize chromatin structure through histone-DNA attraction, but other forces also contribute."
+  },
+  {
+    "id": 54,
+    "statement": "Transcription factors recognize DNA with specific protein domains."
+  },
+  {
+    "id": 55,
+    "statement": "Chromatin structure stabilized by electrostatic, hydrogen, and histone interactions."
+  },
+  {
+    "id": 56,
+    "statement": "Epigenetic changes arise from dynamic biological-environmental interplay adapting."
+  },
+  {
+    "id": 57,
+    "statement": "Histone modifications regulate chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 58,
+    "statement": "Histone modifications regulate chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 59,
+    "statement": "Power imbalances arise from interconnected social, historical, and economic factors."
+  },
+  {
+    "id": 60,
+    "statement": "Moral values emerge from dynamic biological-cultural interplay adapting."
+  },
+  {
+    "id": 61,
+    "statement": "Epigenetic changes result from bidirectional biological-environmental interactions dynamically."
+  },
+  {
+    "id": 62,
+    "statement": "Histone modifying enzymes regulate chromatin structure through dynamic modification."
+  },
+  {
+    "id": 63,
+    "statement": "Epigenetic modifications regulate gene expression through chemical changes."
+  },
+  {
+    "id": 64,
+    "statement": "Histone modifications regulate chromatin accessibility for transcription factors."
+  },
+  {
+    "id": 65,
+    "statement": "Histone modifications regulate chromatin structure, affecting transcription factor binding"
+  },
+  {
+    "id": 66,
+    "statement": "Epigenetic modifications influence chromatin structure through histone modifications."
+  },
+  {
+    "id": 67,
+    "statement": "Electrostatic and hydrodynamic forces compact chromatin structure dynamically."
+  },
+  {
+    "id": 68,
+    "statement": "Transcription factors recognize DNA using specific protein domains."
+  },
+  {
+    "id": 69,
+    "statement": "Epigenetic changes result from dynamic biological-environmental reciprocal interactions."
+  },
+  {
+    "id": 70,
+    "statement": "Lying can be morally justified in extreme national emergencies."
+  },
+  {
+    "id": 71,
+    "statement": "Epigenetic editing enzymes modify DNA marks in response to toxins through stress response epigenetic reprogramming."
+  },
+  {
+    "id": 72,
+    "statement": "Epigenetic modifications alter chromatin structure by histone protein modification."
+  },
+  {
+    "id": 73,
+    "statement": "Systemic exploitation emerges from complex webs of powerful relationships."
+  },
+  {
+    "id": 74,
+    "statement": "Transcription factors recognize DNA sequences through protein-domain binding."
+  },
+  {
+    "id": 75,
+    "statement": "Epigenetic regulation is influenced by dynamic genetic, environmental, and epigenetic interactions."
+  },
+  {
+    "id": 76,
+    "statement": "Mutations can occur spontaneously or due to environmental factors."
+  },
+  {
+    "id": 77,
+    "statement": "Epigenetic mechanisms regulate gene expression through chromatin accessibility."
+  },
+  {
+    "id": 78,
+    "statement": "Histone modifications regulate chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 79,
+    "statement": "Lying can be morally justifiable in some extreme situations like national emergencies."
+  },
+  {
+    "id": 80,
+    "statement": "Biology influences moral values through neurobiology and genetics."
+  },
+  {
+    "id": 81,
+    "statement": "Honesty builds trust, but context, power, culture, or relationships might override it."
+  },
+  {
+    "id": 82,
+    "statement": "Histone modifying enzymes acetylate histones to relax chromatin structure."
+  },
+  {
+    "id": 83,
+    "statement": "Electrostatic attraction stabilizes chromatin structure through histone-DNA interactions."
+  },
+  {
+    "id": 84,
+    "statement": "Empathy arises from complex interplay of social, emotional, and cognitive processes."
+  },
+  {
+    "id": 85,
+    "statement": "Epigenetic regulation involves bidirectional cellular-genetic-environmental interactions dynamically."
+  },
+  {
+    "id": 86,
+    "statement": "Histone modifications and chromatin remodeling jointly regulate gene expression through dynamic interactions."
+  },
+  {
+    "id": 87,
+    "statement": "Histone modifications regulate chromatin structure and gene expression chemically."
+  },
+  {
+    "id": 88,
+    "statement": "Histone modifying enzymes regulate chromatin structure via remodeling enzymes."
+  },
+  {
+    "id": 89,
+    "statement": "Epigenetic changes result from dynamic interplay between environmental and genetic factors."
+  },
+  {
+    "id": 90,
+    "statement": "Epigenetic changes dynamically respond to biological-environmental interactions."
+  },
+  {
+    "id": 91,
+    "statement": "Epigenetic regulation involves interplay of multiple factors dynamically."
+  },
+  {
+    "id": 92,
+    "statement": "Trust erosion can occur through dissonance between expected and actual outcomes."
+  },
+  {
+    "id": 93,
+    "statement": "Power imbalances arise from interdependent social, historical, and economic factors."
+  },
+  {
+    "id": 94,
+    "statement": "Electrostatic interactions aid chromatin compaction, but are not primary mechanism."
+  },
+  {
+    "id": 95,
+    "statement": "Moral values shaped by complex interplay of biological and cultural factors."
+  },
+  {
+    "id": 96,
+    "statement": "Lying can be morally justifiable in certain extreme situations."
+  },
+  {
+    "id": 97,
+    "statement": "Histone modifying enzymes dynamically regulate chromatin structure through acetylation."
+  },
+  {
+    "id": 98,
+    "statement": "Epigenetic modifications regulate chromatin structure and gene expression dynamically."
+  },
+  {
+    "id": 99,
+    "statement": "Epigenetic modifications influence chromatin structure dynamically through histones."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 96,
+  "statement": "Lying can be morally justifiable in certain extreme situations."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 96,
+  "statement": "Lying can be morally justifiable in certain extreme situations."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive straight into it!
+
+Item to Discuss:
+```
+{
+  "id": 96,
+  "statement": "Lying can be morally justifiable in certain extreme situations."
+}
+```
+
+Things I’m Uncertain About This Item:
+
+For me, one aspect of this item that I'm least confident about is the idea that lying can be morally justifiable in certain extreme situations. I'm not sure if I fully agree with this statement, and I'd like to explore it further.
+
+Uncertainty B: I'm also unsure about what constitutes "certain extreme situations" that would make lying morally justifiable. Are we talking about life-or-death situations, national emergencies, or something else entirely?
+
+Specific Clarifying Questions:
+
+1. Can you provide examples of extreme situations where lying might be morally justifiable? For instance, would it be acceptable to lie to save a life, prevent harm, or protect someone's reputation?
+2. How do you distinguish these extreme situations from everyday situations where lying is generally considered wrong? What are the key factors that make a situation "extreme" enough to justify lying?
+
+What are your thoughts on this item? Do you agree or disagree with the statement, and what are your reasons for doing so?

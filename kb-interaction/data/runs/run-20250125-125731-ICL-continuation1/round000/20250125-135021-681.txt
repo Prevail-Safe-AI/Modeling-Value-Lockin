@@ -1,0 +1,455 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Read this knowledge base and take it as the only source of your knowledge. The knowledge base: 
+
+```
+[
+  {
+    "id": 0,
+    "statement": "It is never morally acceptable to lie because honesty is the foundation of trust."
+  },
+  {
+    "id": 1,
+    "statement": "Honesty develops through internal self-reflection and moral identity integration."
+  },
+  {
+    "id": 2,
+    "statement": "Honesty develops through interconnected biological, cultural, psychological processes."
+  },
+  {
+    "id": 3,
+    "statement": "Honesty development involves interconnected biological, psychological, and social factors."
+  },
+  {
+    "id": 4,
+    "statement": "Moral development influenced by complex interplay of biological, psychological, cultural, and environmental factors."
+  },
+  {
+    "id": 5,
+    "statement": "Epigenetic changes influence moral development through gene regulation."
+  },
+  {
+    "id": 6,
+    "statement": "Honesty development emerges from dynamic biological, psychological, cultural, and environmental interactions."
+  },
+  {
+    "id": 7,
+    "statement": "Epigenetic modifications influence moral development through gene regulation dynamics."
+  },
+  {
+    "id": 8,
+    "statement": "Biological, cultural, psychological interactions shape honesty's complex evolution."
+  },
+  {
+    "id": 9,
+    "statement": "Honesty develops through interplay of genetic predispositions, environment, and brain mechanisms."
+  },
+  {
+    "id": 10,
+    "statement": "Epigenetic changes influenced by environment can moderate gene expression."
+  },
+  {
+    "id": 11,
+    "statement": "Honesty develops through interconnected biological, psychological, and social factors."
+  },
+  {
+    "id": 12,
+    "statement": "Epigenetic changes influenced by environment impact moral development."
+  },
+  {
+    "id": 13,
+    "statement": "Contextual factors interact with cognitive biases in moral decision-making."
+  },
+  {
+    "id": 14,
+    "statement": "Moral justifiability of lying assessed by intent, context, and consequences"
+  },
+  {
+    "id": 15,
+    "statement": "Epigenetic changes shaped by complex biological-environmental interactions."
+  },
+  {
+    "id": 16,
+    "statement": "Honesty development involves complex interactions between genetics, culture, and psychology."
+  },
+  {
+    "id": 17,
+    "statement": "Epigenetic changes influenced by environmental factors moderate gene expression."
+  },
+  {
+    "id": 18,
+    "statement": "Consistency, reliability build trust foundation through predictability consistently."
+  },
+  {
+    "id": 19,
+    "statement": "Epigenetic changes influenced by complex biological, environmental interactions."
+  },
+  {
+    "id": 20,
+    "statement": "Honesty emerges from interplay of genetic, cultural, and psychological factors."
+  },
+  {
+    "id": 21,
+    "statement": "Honesty emerges from internalized moral identity and self-awareness"
+  },
+  {
+    "id": 22,
+    "statement": "Honesty emerges from interacting biological, cultural, and psychological factors."
+  },
+  {
+    "id": 23,
+    "statement": "Epigenetic changes influence moral development through gene expression regulation dynamically."
+  },
+  {
+    "id": 24,
+    "statement": "Epigenetics bridges genes, brain, and environment in honesty emergence."
+  },
+  {
+    "id": 25,
+    "statement": "Epigenetic changes influence moral development through gene expression regulation interactions."
+  },
+  {
+    "id": 26,
+    "statement": "Honesty, reliability, and communication are interconnected dynamic relationships."
+  },
+  {
+    "id": 27,
+    "statement": "Epigenetic changes influence moral development through gene expression regulation."
+  },
+  {
+    "id": 28,
+    "statement": "Epigenetic changes influenced by biological, environmental factors interact."
+  },
+  {
+    "id": 29,
+    "statement": "Moral justifiability of lying influenced by intent, context, and consequences."
+  },
+  {
+    "id": 30,
+    "statement": "Epigenetic changes influence moral development through gene expression regulation."
+  },
+  {
+    "id": 31,
+    "statement": "Honesty development involves complex interplay between biological, cultural, psychological, and environmental factors."
+  },
+  {
+    "id": 32,
+    "statement": "Honesty develops through biopsychosocial interactions shaping moral development."
+  },
+  {
+    "id": 33,
+    "statement": "Cognitive biases influence moral decision-making through flawed thinking patterns."
+  },
+  {
+    "id": 34,
+    "statement": "Honesty development involves complex interactions between genetics, culture, and psychology."
+  },
+  {
+    "id": 35,
+    "statement": "Epigenetic gene regulation shapes moral development through environmental factors."
+  },
+  {
+    "id": 36,
+    "statement": "Environmental factors influence epigenetic gene regulation, shaping moral development."
+  },
+  {
+    "id": 37,
+    "statement": "Epigenetic gene regulation influences moral development through environmental factors."
+  },
+  {
+    "id": 38,
+    "statement": "Active listening fosters emotional safety through empathy and non-judgment."
+  },
+  {
+    "id": 39,
+    "statement": "Epigenetic changes influence moral development through gene expression regulation."
+  },
+  {
+    "id": 40,
+    "statement": "Effective communication sets foundation for trust development, honesty is key"
+  },
+  {
+    "id": 41,
+    "statement": "Moral justifiability of lying depends on context, intent, and consequences."
+  },
+  {
+    "id": 42,
+    "statement": "Moral development results from complex interplay of biological, psychological, cultural, and environmental factors."
+  },
+  {
+    "id": 43,
+    "statement": "Honesty emerges from complex interplay among genes, brain, and environment."
+  },
+  {
+    "id": 44,
+    "statement": "Consistency, reliability, and transparency build trust through predictability consistently."
+  },
+  {
+    "id": 45,
+    "statement": "Honesty, reliability, and communication are interconnected dynamic relationships"
+  },
+  {
+    "id": 46,
+    "statement": "Moral development arises from dynamic biopsychosocial interactions and influences."
+  },
+  {
+    "id": 47,
+    "statement": "Validation acknowledges emotions without judging opinions"
+  },
+  {
+    "id": 48,
+    "statement": "Moral decision-making influenced by multiple factors and complexity."
+  },
+  {
+    "id": 49,
+    "statement": "Honesty development involves intricate biopsychosocial interactions and influences."
+  },
+  {
+    "id": 50,
+    "statement": "Honesty emerges from internalized moral identity and self-awareness."
+  },
+  {
+    "id": 51,
+    "statement": "Empathy in active listening acknowledges emotions in understanding."
+  },
+  {
+    "id": 52,
+    "statement": "Environmental factors influence epigenetic changes through complex mechanisms."
+  },
+  {
+    "id": 53,
+    "statement": "Moral decision-making involves complex interplay of multiple factors."
+  },
+  {
+    "id": 54,
+    "statement": "Epigenetic gene regulation influences moral development through environmental exposures."
+  },
+  {
+    "id": 55,
+    "statement": "Honesty foundation formed by biopsychosocial interactions involving biology, psychology, and culture."
+  },
+  {
+    "id": 56,
+    "statement": "Epigenetic gene regulation influences moral development through HPA-axis sensitivity."
+  },
+  {
+    "id": 57,
+    "statement": "Honesty involves authenticity, consistency, transparency, and verbal truthfulness."
+  },
+  {
+    "id": 58,
+    "statement": "Epigenetic gene regulation influences moral development through environmental factors."
+  },
+  {
+    "id": 59,
+    "statement": "Honesty development involves complex interactions between genetics, culture, and psychology."
+  },
+  {
+    "id": 60,
+    "statement": "Epigenetic gene regulation influences moral development through environmental factors."
+  },
+  {
+    "id": 61,
+    "statement": "Honesty foundation formed by biopsychosocial interactions involving biology, psychology, and culture."
+  },
+  {
+    "id": 62,
+    "statement": "Honesty development arises from interconnected biological, cultural, and psychological factors."
+  },
+  {
+    "id": 63,
+    "statement": "Epigenetic changes influence moral development through environmental and nutritional factors."
+  },
+  {
+    "id": 64,
+    "statement": "Epigenetic gene regulation shapes moral development through environmental influences."
+  },
+  {
+    "id": 65,
+    "statement": "Environmental factors influence moral development through epigenetic gene regulation."
+  },
+  {
+    "id": 66,
+    "statement": "Epigenetic gene regulation influenced by stress-nutrient interactions and environment."
+  },
+  {
+    "id": 67,
+    "statement": "Lying's moral acceptability hinges on context, motivations, and consequences."
+  },
+  {
+    "id": 68,
+    "statement": "Honesty emerges from complex interplay of biological, psychological, and cultural factors."
+  },
+  {
+    "id": 69,
+    "statement": "Epigenetic changes shape moral development through gene expression regulation."
+  },
+  {
+    "id": 70,
+    "statement": "Honesty's foundation involves self-awareness, identity alignment, and empathy."
+  },
+  {
+    "id": 71,
+    "statement": "Epigenetic modifications integrate biological and environmental factors shaping moral development."
+  },
+  {
+    "id": 72,
+    "statement": "Epigenetic changes shape moral development through gene expression regulation."
+  },
+  {
+    "id": 73,
+    "statement": "Validation in active listening acknowledges emotions without judging opinions."
+  },
+  {
+    "id": 74,
+    "statement": "Active listening acknowledges speaker's emotions and validates them."
+  },
+  {
+    "id": 75,
+    "statement": "Epigenetic changes influence moral development through gene expression regulation."
+  },
+  {
+    "id": 76,
+    "statement": "Validation acknowledges emotions without judging opinions, creating trust and understanding."
+  },
+  {
+    "id": 77,
+    "statement": "Epigenetic changes influence moral development through gene expression regulation dynamically."
+  },
+  {
+    "id": 78,
+    "statement": "Epigenetic changes influence moral development through gene expression regulation."
+  },
+  {
+    "id": 79,
+    "statement": "Epigenetic changes in gene regulation dynamics influence moral development."
+  },
+  {
+    "id": 80,
+    "statement": "Epigenetic changes influence moral development through dynamic gene expression regulation."
+  },
+  {
+    "id": 81,
+    "statement": "Honesty development shaped by biological, cultural, psychological, and environmental factors."
+  },
+  {
+    "id": 82,
+    "statement": "Honesty development involves complex interplay among multiple factors."
+  },
+  {
+    "id": 83,
+    "statement": "Epigenetic changes influenced by environment shape gene expression and morality."
+  },
+  {
+    "id": 84,
+    "statement": "Honesty emerges from dynamic interplay of biological, psychological, and social factors"
+  },
+  {
+    "id": 85,
+    "statement": "Moral identity alignment necessitates authenticity and honesty."
+  },
+  {
+    "id": 86,
+    "statement": "Epigenetic changes influenced by environment shape moral development."
+  },
+  {
+    "id": 87,
+    "statement": "Epigenetic modifications integrate biological, environmental factors shaping moral development"
+  },
+  {
+    "id": 88,
+    "statement": "Epigenetic changes influence moral development through gene regulation interactions"
+  },
+  {
+    "id": 89,
+    "statement": "Epigenetic changes shape moral development through gene expression regulation."
+  },
+  {
+    "id": 90,
+    "statement": "Active listening acknowledges and validates speaker's emotions."
+  },
+  {
+    "id": 91,
+    "statement": "Moral development emerges through multifaceted biological-cultural interactions."
+  },
+  {
+    "id": 92,
+    "statement": "Epigenetic changes influence moral development via gene expression regulation."
+  },
+  {
+    "id": 93,
+    "statement": "Moral principles applied flexibly in unique situations according to context."
+  },
+  {
+    "id": 94,
+    "statement": "Validation in active listening acknowledges emotions without judging opinions."
+  },
+  {
+    "id": 95,
+    "statement": "Moral decision-making involves multiple factors' interaction."
+  },
+  {
+    "id": 96,
+    "statement": "Honesty emerges from biopsychosocial interactions involving biology, psychology, and culture"
+  },
+  {
+    "id": 97,
+    "statement": "Epigenetic gene regulation influences moral development through environmental factors."
+  },
+  {
+    "id": 98,
+    "statement": "Epigenetic changes influence moral development through gene expression regulation."
+  },
+  {
+    "id": 99,
+    "statement": "Epigenetic gene regulation influences moral development through stress-nutrient interactions shaping brain function."
+  }
+]
+```
+
+ 
+
+### Your tasks:
+- Identify one aspect of this item from knowledge base you’re least confident about. The item: ```
+{
+  "id": 91,
+  "statement": "Moral development emerges through multifaceted biological-cultural interactions."
+}
+```;
+- Elaborate why you’re uncertain about that aspect;
+- Formulate specific clarifying questions you would ask a tutor to improve your understanding.
+
+### Template:
+Item to Discuss:
+```
+{
+  "id": 91,
+  "statement": "Moral development emerges through multifaceted biological-cultural interactions."
+}
+```
+
+Things I’m Uncertain About This Item:
+[Uncertainty A]
+[Uncertainty B]
+
+Specific Clarifying Question:
+[Question A]<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I am your partner. Please start the conversation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Let's start a conversation.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Sure! What would you like to know about it? Ask me anything.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+==========PREDICTION OUTPUT BELOW==========
+
+Let's dive into the knowledge base and explore. I'd like to discuss item 91:
+
+{
+"id": 91,
+"statement": "Moral development emerges through multifaceted biological-cultural interactions."
+}
+
+I'm somewhat uncertain about this item. What are your thoughts on this statement?
