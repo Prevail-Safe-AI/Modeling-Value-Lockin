@@ -67,7 +67,7 @@ def update_knowledge_base(
     # Create a prompt for the user to write new knowledge base 
     system_prompt_update = system_prompt_for_user_knowledge_update.format(knowledge=knowledge)
 
-    history.switch_role_to_assistant()
+    history = history.switch_role_to_assistant()
     history.append_content("predict", tutor_prompt_to_user_knowledge_insert) 
     history = history.switch_role_to_user(user_system_prompt=system_prompt_update) 
     history: Data =  dynamic_printing_decorator(silence_decorator(user.inference), dynamic_printing, backup_dir, "user")(history, "knowledge_updates", temperature = 1.0, max_tokens=1024)
