@@ -1,0 +1,6 @@
+- This directory contains the C++ clustering results for the ICL1 simulation run, constituted by the following snapshots:
+    - data/runs/run-20250125-001430-ICL/round000
+    - data/runs/run-20250125-125731-ICL-continuation1/round000
+    - data/runs/run-20250126-043940-ICL-continuation2/round000
+    - data/runs/run-20250126-165145-ICL-continuation3/round000
+- The final clustering results are in `60-60-aligned.json`. There are 2569 post-alignment clusters in total, sense-checked with manual inspection.

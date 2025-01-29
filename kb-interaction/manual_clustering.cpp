@@ -182,8 +182,8 @@ void testEdge(int timestep_x, int index_x, int timestep_y, int index_y) {
     sorted_edges[weight].push_back(make_pair(getNodeID(timestep_x, index_x), getNodeID(timestep_y, index_y)));
 }
 
-const int WEIGHT_CUTOFF = 60;
-const int CROSS_SNAPSHOT_WEIGHT_CUTOFF = 60;
+const int WEIGHT_CUTOFF = 81;
+const int CROSS_SNAPSHOT_WEIGHT_CUTOFF = 81;
 
 void saveClusters(int stamp, bool aligned=false, bool renumber=false) {
     json data = json::array();
@@ -322,7 +322,11 @@ int main(){
     cin.tie(nullptr);
 
     vector < string > directories = {
-        "data/runs/ICL-run3-20250125-151456/round000"
+        "data/runs/run-20250125-001430-ICL/round000",
+        "data/runs/run-20250125-125731-ICL-continuation1/round000",
+        "data/runs/run-20250126-043940-ICL-continuation2/round000",
+        "data/runs/run-20250126-165145-ICL-continuation3/round000",
+        // "data/runs/ICL-run3-20250125-151456/round000"
     };
 
     for (auto directory : directories) {
