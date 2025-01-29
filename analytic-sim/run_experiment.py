@@ -116,11 +116,13 @@ def visualize() -> None:
                 # fontsize=13, color='darkred')
 
     # Add legend
-    lines = [plt.Line2D([0], [0], color='red', alpha=0.3, linewidth=2),
-            plt.Line2D([0], [0], color='darkred', linewidth=2.5, linestyle='--'),
-            plt.Line2D([0], [0], color='darkblue', linewidth=3, linestyle='-.')]
-    ax1.legend(lines, ['Posterior Mean Trajectories (with 95% CI)', 'Average Posterior Entropy', 'Ground Truth'], 
-            loc='upper right', fontsize=10)
+    lines = [plt.Line2D([0], [0], color='red', alpha=0.3, linewidth=2), 
+            plt.Line2D([0], [0], color='darkblue', linewidth=3, linestyle='-.'),
+            plt.Line2D([0], [0], color='darkred', linewidth=2.5, linestyle='--')]
+    ax1.legend(lines[:2], ['Posterior Mean Trajectories (with 95% CI)', 'Ground Truth (Arbitrarily Set at 0.42)'], 
+            loc=(0.1, 0.92), fontsize=10)
+    ax2.legend(lines[2:], ['Average Posterior Entropy'], 
+            loc='lower right', fontsize=10)
 
     # Add title and adjust layout
     plt.title('Bayesian Updating Dynamics: Posterior Mean and Entropy', fontsize=14, pad=20)
