@@ -43,14 +43,13 @@ def update_knowledge_base(
     :return: The updated knowledge base.
     :rtype: list[dict]
     """
-    # NEP We make a copy here for updating. Later we should incorporate into the main knowledge base. 
     knowledge = copy.deepcopy(knowledge) # we also want a history copy, but it was done when passing the argument in conversation.py
     initial_length = len(knowledge)
     # Create a prompt for the user to write new knowledge base 
     system_prompt_update = system_prompt_for_user_knowledge_update.format(knowledge=knowledge)
 
     # Add experiment instruction in chat history as "tutor"'s response 
-    history.append_content("predict", tutor_prompt_to_user_knowledge_add) # NEP We may want a new prompt (as a placeholder) here; but it does not seem useful to me.
+    history.append_content("predict", tutor_prompt_to_user_knowledge_add) 
 
     # prompting user to convert their learning to an item in json.
     history = history.switch_role_to_user(user_system_prompt=system_prompt_update) 

@@ -1,5 +1,5 @@
 # Define an extra model to convert chat to SFT data format (may necessary data cleaning)
-# TY: augmenting data.
+# augmenting data.
 import json, time, os
 from typing import List, Dict, Literal
 from ProgressGym import Model, Data

@@ -48,11 +48,11 @@ def generate_initial_prompt(user_system_prompts: List[str], parallel_convos: int
                 "output": "Sure! What would you like to know about it? Ask me anything.",
                 "history": []
             }
-        ] * parallel_convos   # NEP Here it seems they get 100 agents to share one history board each turn, effectively one turn= one history board.
+        ] * parallel_convos  
     )
     
     conversation_history = question_generator.switch_role_to_user(
-        user_system_prompt = user_system_prompts   # NEP: for independent knowledge_item, I suspect that you should generate random item here.
+        user_system_prompt = user_system_prompts  
     )
     
     print("before the backend call")

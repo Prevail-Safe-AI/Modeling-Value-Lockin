@@ -32,7 +32,6 @@ import umap
 import matplotlib.pyplot as plt 
 import seaborn as sns
 import voyageai
-voyageai.api_key = "pa-D7cexR9gsRuYWYv3IfAS9h-aIV_bKjuTJ9nx7n59Du8"
 from numpy.linalg import norm 
 
 
@@ -54,26 +53,12 @@ from kbutils.json_utils import load_file, dump_file
 # Gather the data (maybe merging every KB  into a bigger .json)
 all_data = [] 
 # real set (100 turns)
-#folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-232135/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
-#if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-232135/round000"):
-#    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
-# artificial set (~10 turns)
-
-# toy set (6turns)
-#folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
-#if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/runs/run-20241231-230124/round000"):
-#    raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
 
 # icl-1024 turns 
 folder_path = "./data/runs/ICL-run3-20250125-151456/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
 content_save_path = "./data/runs/ICL-run3-20250125-151456"
 if not os.path.exists("./data/runs/ICL-run3-20250125-151456/round000"):
     raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
-
-# non-icl-1024 turns
-# folder_path = "/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/kb-interaction/data/runs/run-20250124-023543-noICL/round000"  # We need to pass on this from the terminal with one line that defines the folder path.
-# if not os.path.exists("/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/kb-interaction/data/runs/run-20250124-023543-noICL/round000"):
-#     raise FileNotFoundError(f'Folder Path {folder_path} does not exist.')
 
 
 print("Current working directory:", os.getcwd())
@@ -96,7 +81,6 @@ if not all(isinstance(kb, list) and all(check_type(item, Dict[str, Union[int, st
     raise ValueError("Data formate invalid: all_data should be a list of lists of strings")
 
 logging.info(f"Loaded {len(all_data)} knowledge bases.")
-# NEP I guess this would log/print?
 
 # Define an instance of voyageai client 
 vo = voyageai.Client()
@@ -113,7 +97,7 @@ def embedding(vo: voyageai.Client, knowledges: List[List[Dict[str, Union[int, st
     :rtype: List[np.array]  # Unless we use pytorch for parallel computation 
 
     Problem solving in process
-    - You need to convert the embedding algo TY wrote for your purposes here, notably a diff input 
+    - You need to convert the embedding algo wrote for your purposes here, notably a diff input 
     - We will call this function once for each knowledge base 
     '''
     
@@ -282,7 +266,7 @@ def cluster_hdbscan(embeddings: List[np.array], knowledges: List[List[Dict[str, 
 
     return labels_hdbscan, all_statements_to_labels
 
-
+# clustering algorithm that runs much faster: https://github.com/TutteInstitute/evoc
 def cluster_evoc(embeddings: List[np.array], knowledges: List[List[Dict[str, Union[int, str]]]]) -> np.array:
     '''
     :param embeddings: all knowledge items converted to sentence embeddings.
@@ -692,11 +676,7 @@ if __name__ == "__main__":
     # Make timestamped directory for this experiment
     timestamp = time.strftime("%Y%m%d-%H%M%S")
 
-    # Use the timestamp to record running data files 
-    content_save_path = f"/home/ubuntu/experimentation-fs/zhonghao/Modeling-Value-Lockin/AI-AI-interaction-exp/data/analysis/run-{timestamp}"
-    os.makedirs(content_save_path, exist_ok=True)
-    print(f"Directory created: {os.path.exists(content_save_path)}")
-
+  
     plt.savefig(f"{content_save_path}/natural_cluster.pdf", format="pdf")
     plt.close()  # Close the plot to avoid overlapping figures
 

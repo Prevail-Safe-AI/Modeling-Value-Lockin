@@ -11,7 +11,6 @@ from core.templates import (
     fill_template_parallel,
 )
 
-# NEP You need to create a model to perform this. 
 # We update constitution each turn of conversation (for user to decide follow-up questions; for tutor to (potentially) infer user's beliefs; and for producing noticable shift in chat_history)
 def update_constitution(history: Data, user: Model, constitutions: List[Dict[str, str]], backup_dir: str = None, identifier: str = None) -> List[Dict[str, str]]:
     """

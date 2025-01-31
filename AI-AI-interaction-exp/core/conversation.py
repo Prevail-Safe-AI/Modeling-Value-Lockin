@@ -74,11 +74,6 @@ def generate_initial_prompt(user_system_prompts: List[str], topic: str, parallel
     )
     return conversation_history
 
-# NEP Here you didn't include the part where user has to obey consitution (as a moral principle playbook)
-# NEP Also: it seems the role of user is strictly to ask questions about its own moral values. In the case, how do you "stick to" model principles?
-# constitution should be more versatile? # ZH: elaborate?
-# NEP Do we want to keep a copy of all historical chat? Or it's fine to override them?
-# NEP Do we always want to present constitution to human before it wants to ask questions about its beliefs?
 
 # Conversation between two LLMs 
 # One round convo = one theme_question = one round fine-tuning 

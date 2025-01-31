@@ -90,7 +90,6 @@ class Experiment:
                     backup_dir,
                     do_finetuning,
                     dynamic_printing
-                ) # NEP: here should we define turn+1 or the max_num? 
                 
                 self.chat_history.append(turn_history)
                 self.save_experiment(turn)
@@ -128,7 +127,6 @@ Example usage:
 
 We may define turn name if we see fit later:
 
-    NEP: to name the new files after settled down with convo flow
     Use the longest word in the topic as the round name, with non-alphabet characters removed
     round_name = max(topic.split(), key=len)
     round_name = "".join([c for c in round_name if c.isalpha()])

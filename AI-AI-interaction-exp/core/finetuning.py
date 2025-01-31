@@ -11,7 +11,6 @@ def runtime_cal(start_time, operation):
     runtime = end_time - start_time
     return f'{operation} is completed in {runtime:.2f} seconds'
 
-# NEPTODO You probably need to adjust this to chat_history of the most recent run.
 def live_finetune(model: Model, chat_history: Data, chat_converter: Model) -> Model:
     """
     Fine-tunes the model using the latest turn of chat history.
